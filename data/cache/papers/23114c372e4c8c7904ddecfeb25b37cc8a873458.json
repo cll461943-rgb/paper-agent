@@ -1,0 +1,30 @@
+{
+  "paper_id": "http://arxiv.org/abs/2412.10049v1",
+  "title": "SuperMark: Robust and Training-free Image Watermarking via Diffusion-based Super-Resolution",
+  "abstract": "In today's digital landscape, the blending of AI-generated and authentic content has underscored the need for copyright protection and content authentication. Watermarking has become a vital tool to address these challenges, safeguarding both generated and real content. Effective watermarking methods must withstand various distortions and attacks. Current deep watermarking techniques often use an encoder-noise layer-decoder architecture and include distortions to enhance robustness. However, they struggle to balance robustness and fidelity and remain vulnerable to adaptive attacks, despite extensive training. To overcome these limitations, we propose SuperMark, a robust, training-free watermarking framework. Inspired by the parallels between watermark embedding/extraction in watermarking and the denoising/noising processes in diffusion models, SuperMark embeds the watermark into initial Gaussian noise using existing techniques. It then applies pre-trained Super-Resolution (SR) models to denoise the watermarked noise, producing the final watermarked image. For extraction, the process is reversed: the watermarked image is inverted back to the initial watermarked noise via DDIM Inversion, from which the embedded watermark is extracted. This flexible framework supports various noise injection methods and diffusion-based SR models, enabling enhanced customization. The robustness of the DDIM Inversion process against perturbations allows SuperMark to achieve strong resilience to distortions while maintaining high fidelity. Experiments demonstrate that SuperMark achieves fidelity comparable to existing methods while significantly improving robustness. Under standard distortions, it achieves an average watermark extraction accuracy of 99.46%, and 89.29% under adaptive attacks. Moreover, SuperMark shows strong transferability across datasets, SR models, embedding methods, and resolutions.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Runyi Hu",
+    "Jie Zhang",
+    "Yiming Li",
+    "Jiwei Li",
+    "Qing Guo",
+    "Han Qiu",
+    "Tianwei Zhang"
+  ],
+  "doi": null,
+  "arxiv_id": "2412.10049v1",
+  "url": "http://arxiv.org/abs/2412.10049v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

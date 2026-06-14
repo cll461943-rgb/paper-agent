@@ -1,0 +1,76 @@
+{
+  "paper_id": "https://openalex.org/W4393146641",
+  "title": "OUTFOX: LLM-Generated Essay Detection Through In-Context Learning with Adversarially Generated Examples",
+  "abstract": "Large Language Models (LLMs) have achieved human-level fluency in text generation, making it difficult to distinguish between human-written and LLM-generated texts. This poses a growing risk of misuse of LLMs and demands the development of detectors to identify LLM-generated texts. However, existing detectors lack robustness against attacks: they degrade detection accuracy by simply paraphrasing LLM-generated texts. Furthermore, a malicious user might attempt to deliberately evade the detectors based on detection results, but this has not been assumed in previous studies. In this paper, we propose OUTFOX, a framework that improves the robustness of LLM-generated-text detectors by allowing both the detector and the attacker to consider each other's output. In this framework, the attacker uses the detector's prediction labels as examples for in-context learning and adversarially generates essays that are harder to detect, while the detector uses the adversarially generated essays as examples for in-context learning to learn to detect essays from a strong attacker. Experiments in the domain of student essays show that the proposed detector improves the detection performance on the attacker-generated texts by up to +41.3 points F1-score. Furthermore, the proposed detector shows a state-of-the-art detection performance: up to 96.9 points F1-score, beating existing detectors on non-attacked texts. Finally, the proposed attacker drastically degrades the performance of detectors by up to -57.0 points F1-score, massively outperforming the baseline paraphrasing method for evading detection.",
+  "year": 2024,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+    "Ryuto Koike",
+    "Masahiro Kaneko",
+    "Naoaki Okazaki"
+  ],
+  "doi": "https://doi.org/10.1609/aaai.v38i19.30120",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1609/aaai.v38i19.30120",
+  "citation_count": 37,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [
+    "https://openalex.org/W204891295",
+    "https://openalex.org/W2152575748",
+    "https://openalex.org/W2406990858",
+    "https://openalex.org/W2499568709",
+    "https://openalex.org/W2969958763",
+    "https://openalex.org/W3021153741",
+    "https://openalex.org/W3034287667",
+    "https://openalex.org/W3101891351",
+    "https://openalex.org/W3205068155",
+    "https://openalex.org/W4225959163",
+    "https://openalex.org/W4226278401",
+    "https://openalex.org/W4283026156",
+    "https://openalex.org/W4287889356",
+    "https://openalex.org/W4288334893",
+    "https://openalex.org/W4292779060",
+    "https://openalex.org/W4317553041",
+    "https://openalex.org/W4318149317",
+    "https://openalex.org/W4318351452",
+    "https://openalex.org/W4324299222",
+    "https://openalex.org/W4353007481",
+    "https://openalex.org/W4360891421",
+    "https://openalex.org/W4366342860",
+    "https://openalex.org/W4377865296",
+    "https://openalex.org/W4378771612",
+    "https://openalex.org/W4383751019",
+    "https://openalex.org/W4383987308",
+    "https://openalex.org/W4386136032",
+    "https://openalex.org/W6682799413"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Context (archaeology)",
+      "Sociology",
+      "Psychology",
+      "Computer science",
+      "History",
+      "Archaeology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W2382290278",
+      "https://openalex.org/W2478288626",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2350741829",
+      "https://openalex.org/W2530322880"
+    ]
+  }
+}

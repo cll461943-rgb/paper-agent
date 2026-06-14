@@ -1,0 +1,59 @@
+{
+  "paper_id": "https://openalex.org/W7139144343",
+  "title": "Towards Fair and Robust Volumetric CT Classification via KL-Regularised Group Distributionally Robust Optimisation",
+  "abstract": "Automated diagnosis from chest computed tomography (CT) scans faces two persistent challenges in clinical deployment: distribution shift across acquisition sites and performance disparity across demographic subgroups. We address both simultaneously across two complementary tasks: binary COVID-19 classification from multi-site CT volumes (Task 1) and four-class lung pathology recognition with gender-based fairness constraints (Task 2). Our framework combines a lightweight MobileViT-XXS slice encoder with a two-layer SliceTransformer aggregator for volumetric reasoning, and trains with a KL-regularised Group Distributionally Robust Optimisation (Group DRO) objective that adaptively upweights underperforming acquisition centres and demographic subgroups. Unlike standard Group DRO, the KL penalty prevents group weight collapse, providing a stable balance between worst-case protection and average performance. For Task 2, we define groups at the granularity of gender class, directly targeting severely underrepresented combinations such as female Squamous cell carcinoma. On Task 1, our best configuration achieves a challenge F1 of 0.835, surpassing the best published challenge entry by +5.9. On Task 2, Group DRO with α = 0.5 achieves a mean per-gender macro F1 of 0.815, outperforming the best challenge entry by +11.1 pp and improving Female Squamous F1 by +17.4 over the Focal Loss baseline.",
+  "year": 2026,
+  "venue": "ArXiv.org",
+  "authors": [
+    "Samuel Ebimobowei Johnny",
+    "Blessed Guda",
+    "Frank Ebeledike",
+    "Goodness Obasi",
+    "Moise Busogi"
+  ],
+  "doi": null,
+  "arxiv_id": null,
+  "url": "https://arxiv.org/abs/2603.15941",
+  "citation_count": 0,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Task (project management)",
+      "Computer science",
+      "Artificial intelligence",
+      "News aggregator",
+      "Group (periodic table)",
+      "Truncated mean",
+      "Encoder",
+      "Pattern recognition (psychology)",
+      "Task group",
+      "Binary number",
+      "Robustness (evolution)",
+      "Sorting",
+      "Data mining",
+      "Machine learning",
+      "Granularity",
+      "Distribution (mathematics)",
+      "Stability (learning theory)",
+      "Linear programming",
+      "Macro",
+      "Medical imaging",
+      "Mathematical optimization",
+      "Computed tomography",
+      "Mathematics",
+      "Computer vision",
+      "Robust optimization",
+      "Voxel",
+      "Encoding (memory)"
+    ],
+    "cited_by_api_url": null,
+    "related_works": []
+  }
+}

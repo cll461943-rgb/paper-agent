@@ -1,0 +1,869 @@
+[
+  {
+    "paper_id": "pubmed:42271921",
+    "title": "Dual-beam differential optical imaging for atmospheric turbulence mitigation in free-space propagation.",
+    "abstract": "Atmospheric turbulence imposes a fundamental barrier to reliable object detection in consumer-grade free-space optical (FSO) systems, degrading performance in applications such as drone navigation, smart surveillance, and portable satellite terminals. Current approaches, exemplified by the hybrid adversarial contrastive framework (HACF), operate in the post-acquisition domain, treating turbulence as irrecoverable stochastic noise and relying on statistical pseudo-label refinement to mitigate its effects. We introduce differential beam imaging (DBI), a physics-driven, acquisition-layer paradigm that transcends this limitation by physically isolating object reflectance at the moment of signal capture. DBI exploits the spatial correlation of atmospheric turbulence through simultaneous dual-beam probing; one beam illuminates the object, while an adjacent reference beam captures only the turbulence field. By differencing these measurements, DBI cancels turbulence at its source, preserving the object's structural integrity before any information loss occurs. We formalize and solve four non-incremental scientific problems: (P1) establishing the wave-optics-based spatial correlation regime for valid cancellation, (P2) optimizing beam separation under turbulence crosstalk trade-offs, (P3) designing a Siamese-cross attention network (SCAN) that learns turbulence-invariant features from differential image pairs, and (P4) co-designing a real-time, low-power (<1 W, <100 cm",
+    "year": 2026,
+    "venue": "Optics express",
+    "authors": [
+      "Tanzeel Ur Rahman",
+      "Guijun Li",
+      "Adnan Daud Khan",
+      "Farman Ali",
+      "Saeed Iqbal",
+      "Ahmed Al Nuaim",
+      "Zhengbiao Ouyang",
+      "Omar Alruwaili",
+      "Shahid Kamal"
+    ],
+    "doi": "10.1364/OE.584795",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42271921/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42271921"
+    }
+  },
+  {
+    "paper_id": "pubmed:42255696",
+    "title": "Counterfeit ",
+    "abstract": "The expanding market demand and high commercial value of ",
+    "year": 2026,
+    "venue": "Food science & nutrition",
+    "authors": [
+      "Chao Ma",
+      "Mingkun Zhang",
+      "Jianwei Ma",
+      "Sudan Chen",
+      "Yunxia Yuan",
+      "Mingtong Du",
+      "Zhiyong Dai"
+    ],
+    "doi": "10.1002/fsn3.71975",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42255696/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42255696"
+    }
+  },
+  {
+    "paper_id": "pubmed:42246091",
+    "title": "MATGAN: A generative adversarial network with multi-scale attention and Huber loss for brain MRI registration.",
+    "abstract": "Brain magnetic resonance image registration is a fundamental task in medical image analysis. However, achieving fine-grained alignment remains challenging, particularly in brain regions with small volumes or complex anatomical structures. Generative adversarial networks (GANs) have provided new opportunities to improve registration accuracy through adversarial learning. In this study, we propose MATGAN, a novel GAN-based registration framework that integrates a multi-scale attention mechanism and Huber loss into the adversarial learning process to achieve more robust and accurate image alignment. Specifically, a multi-scale attention module is embedded into the discriminator to extract semantic representations at different resolutions, thereby enhancing its ability to distinguish real deformations from generated ones. The similarity feedback provided by the discriminator is further transferred to the registration network, guiding it to generate deformation fields with improved anatomical consistency. In addition, Huber loss is incorporated into the similarity constraint to reduce the influence of outliers during optimization and improve the robustness and stability of network training. Through the adversarial interaction between the registration network and the discriminator, MATGAN enables more precise deformation estimation and better structural alignment. Experimental results on three public brain MRI datasets demonstrate that MATGAN achieves effective registration performance.",
+    "year": 2026,
+    "venue": "Biomedical physics & engineering express",
+    "authors": [
+      "Fuchun Zhang",
+      "Meng Li"
+    ],
+    "doi": "10.1088/2057-1976/ae7806",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42246091/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42246091"
+    }
+  },
+  {
+    "paper_id": "pubmed:42243446",
+    "title": "Byzantine robust federated learning for heterogeneous brain MRI using multisignal gradient fingerprinting and adaptive trust aggregation.",
+    "abstract": "Federated learning enables collaborative training across institutions without centralizing patient data, but remains vulnerable to malicious clients and severe non-IID data heterogeneity. We propose a trust-aware federated learning framework for brain MRI that combines multi-signal gradient fingerprinting with adaptive aggregation to achieve Byzantine robustness. Each client update is characterized by a six-dimensional fingerprint (variational-autoencoder reconstruction error, cosine similarity to a server reference, peer similarity, gradient norm, sign consistency, and Monte Carlo Shapley contribution). A dual-attention module and a reinforcement-learning controller map these signals into trust weights and integrate with FedBN-P (Federated Batch Normalization with Proximal regularization), an optimizer co-designed for stability under heterogeneous and adversarial conditions. We evaluate on MNIST, CIFAR-10, Alzheimer's MRI, and the OASIS brain-MRI cohort (approximately 87 test samples, used strictly as proof-of-concept) under both standard and strengthened threat models (up to 40% malicious clients). Attack-specific ablation confirms a defense-in-depth design: VAE fingerprinting is the primary noise-attack defense (3.60 pp accuracy drop upon removal), Shapley values safeguard accuracy under scaling (10.16 pp drop), and reinforcement learning improves detection consistency under dynamic attack schedules. Three-seed paired-test validation further shows detection F1 outperforms FLTrust by up to 44 pp on Non-IID Gaussian noise; a white-box adaptive attacker degrades the detector but not model accuracy, confirming the layered design. End-to-end wall-clock overhead is + 8.8% over FedAvg with identical communication volume. The framework achieves F1 above 0.98 for gradient-scaling attacks while preserving accuracy under magnitude-preserving attacks where explicit detection remains limited. Multi-site validation on larger federated cohorts (e.g., ADNI, UK Biobank, FeTS) is required before any clinical-deployment claim can be made.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Mohammad Karami",
+      "Hamed Kebriaei",
+      "Fatemeh Ghassemi",
+      "Hamid Azadegan"
+    ],
+    "doi": "10.1038/s41598-026-55855-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42243446/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42243446"
+    }
+  },
+  {
+    "paper_id": "pubmed:42229484",
+    "title": "RaGAN-Seg: A relativistic adversarial enhancement and segmentation framework for nucleus segmentation in IHC images.",
+    "abstract": "&#xD;&#xD;Objective: Accurate nucleus segmentation in immunohistochemistry (IHC) images is essential for quantitative analysis in digital pathology. However, segmentation remains challenging due to heterogeneous tissue types, staining differences, and multi-modal imaging variations. Existing segmentation models exhibit poor generalization across diverse IHC tissues. This study aims to develop a robust and generalizable framework for nucleus segmentation across diverse IHC image types.&#xD;&#xD;Methods: We propose RaGAN-Seg, a two-stage segmentation framework comprising an image enhancement module and a segmentation module. The enhancement stage employs R3GAN, a lightweight generative adversarial network with grouped convolutions, residual connections, and interpolative upsampling, optimized with relativistic adversarial loss and R1/R2 gradient penalties. The segmentation stage utilizes U-Net for classification combined with watershed post-processing for contour refinement. The framework was evaluated on a comprehensive private IHC dataset encompassing 480 images across 8 tissue types (4 seen and 4 unseen) with both brightfield and fluorescence imaging modalities.&#xD;&#xD;Results: RaGAN-Seg achieves significant performance improvements over state-of-the-art methods. On brightfield images, RaGAN-Seg outperforms DistSeg-Net by 11.7% in AJI, 14.4% in AJI+, 2.8% in Dice, 4.0% in DQ, and 7.9% in PQ. On fluorescence images, corresponding improvements are 12.9%, 12.1%, 1.2%, 13.1%, and 11.5%, respectively. Ablation studies confirm the necessity of relativistic adversarial loss design. The framework demonstrates strong generalization to unseen tissue types.&#xD;&#xD;Conclusion: RaGAN-Seg effectively combines adversarial enhancement with U-Net segmentation to address IHC image heterogeneity. The two-stage design enhances adaptability to complex histological variations, providing a robust and generalizable solution for nuclear segmentation in both research and clinical digital pathology applications.",
+    "year": 2026,
+    "venue": "Biomedical physics & engineering express",
+    "authors": [
+      "Xiuling Hu",
+      "Qingyao Xiong",
+      "Jiangang Chen",
+      "Min Guo",
+      "Hongzhu Yan"
+    ],
+    "doi": "10.1088/2057-1976/ae7604",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42229484/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42229484"
+    }
+  },
+  {
+    "paper_id": "pubmed:42227503",
+    "title": "Multimodal Fusion of Endoscopic and Histopathological Images for Lesion Detection Using Hybrid Deep Learning.",
+    "abstract": "The classification of endoscopic lesions and the early diagnosis of gastrointestinal (GI) disorders rely heavily on precise lesion identification. However, subtle lesion appearances and considerable interobserver variability among clinicians often hinder accurate diagnosis. These challenges emphasize the need for robust, automated diagnostic systems that can integrate diverse image features to improve diagnostic accuracy and reliability. To address these limitations, a novel deep learning framework, the Spatio-Histological Fusion Network (SHF-Net), was developed to enhance lesion detection by integrating multiple feature-extraction approaches. CNNs were used to capture local spatial characteristics from endoscopic images, ViTs to model long-range dependencies, and GNNs to incorporate structural histopathological information. A multi-channel attention mechanism was employed to fuse these features effectively. The model was trained on the HyperKvasir dataset, which contains 111,079 labeled endoscopic images and corresponding histopathological data across five lesion categories-normal, polyp, ulcer, cancer, and erosion. Preprocessing steps included stain normalization, and Generative Adversarial Networks (GANs) were used to overcome data scarcity. The training process combined cross-entropy and topological loss functions, optimized with AdamW using transfer learning. SHF-Net achieved exceptional classification performance with an accuracy of 98.84%, precision of 98.57%, recall of 98.21%, and an F1-score of 98.46% across the five lesion categories. Qualitative analysis using attention heatmaps showed that the model consistently focused on clinically significant lesion regions in both endoscopic and histopathological images, confirming its interpretability and clinical relevance. The integration of CNNs, ViTs, and GNNs in SHF-Net enabled the model to capture complementary spatial, contextual, and structural features, effectively addressing the challenges posed by subtle lesion patterns and interobserver variability. The multi-channel attention mechanism enhanced interpretability, an important factor for clinical adoption. These results demonstrate the advantages of combining multi-modal data and diverse network architectures for accurate and reliable GI lesion classification. SHF-Net represents a significant advancement in automated GI diagnosis through the integration of spatial and histological imaging modalities. Its high accuracy, strong interpretability, and multi-modal design make it suitable for real-time deployment in clinical workflows. Future research will aim to extend SHF-Net to additional imaging modalities, validate it across diverse clinical datasets, and ensure its scalability for broader healthcare applications.",
+    "year": 2026,
+    "venue": "Current medical imaging",
+    "authors": [
+      "Premananda Sahu",
+      "Salil Bharany",
+      "Jaibir Singh",
+      "Heba G Mohamed",
+      "Ateeq Ur Rehman"
+    ],
+    "doi": "10.2174/0115734056437477260427145329",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42227503/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42227503"
+    }
+  },
+  {
+    "paper_id": "pubmed:42225699",
+    "title": "Empirical analysis of adversarial robustness in 3D Gaussian Splatting under multi-view inconsistency attacks.",
+    "abstract": "3D Gaussian Splatting has emerged as a promising technique for real-time novel view synthesis, achieving rendering quality comparable to neural radiance fields while enabling significantly faster inference. Despite its growing adoption in various applications including autonomous driving, robotics, and augmented reality, the adversarial robustness of 3D Gaussian Splatting remains largely unexplored. This paper presents a comprehensive empirical analysis of 3D Gaussian Splatting robustness against multi-view inconsistency attacks, which inject imperceptible perturbations into training images to disrupt the reconstruction process. We propose an adversarial attack framework that maximizes view-dependent inconsistencies while preserving visual imperceptibility through semantic-aware perturbation constraints. Our extensive experiments on the Mip-NeRF 360 dataset reveal that 3D Gaussian Splatting exhibits strong robustness to multi-view photometric inconsistency attacks, with quality degradation limited to less than one percent across standard metrics including Peak Signal-to-Noise Ratio, Structural Similarity Index, and Learned Perceptual Image Patch Similarity. We identify three key factors contributing to this robustness: multi-view averaging during optimization, the explicit Gaussian primitive representation, and the gradient-based optimization dynamics that naturally suppress view-dependent artifacts. These findings provide important insights for deploying 3D Gaussian Splatting in security-sensitive applications and suggest directions for developing more effective adversarial attack strategies.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Hyun Kwon",
+      "Jang-Woon Baek"
+    ],
+    "doi": "10.1038/s41598-026-53843-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42225699/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42225699"
+    }
+  },
+  {
+    "paper_id": "pubmed:42225639",
+    "title": "Universal and transferable attacks on pathology foundation models using microscopic perturbations.",
+    "abstract": "The advent of foundation models initiated a paradigm shift in pathology and optical microscopy. However, these powerful systems also introduce vulnerabilities, making them susceptible to adversarial attacks. To shed light on these potential threats, here we introduce Universal and Transferable Adversarial Perturbations (UTAP) for pathology foundation models that reveal critical vulnerabilities. Optimized using deep learning, UTAP comprises a fixed and weak microscopic noise pattern that, when added to a pathology image, systematically disrupts the feature representation capabilities of foundation models. Therefore, UTAP induces performance drops in downstream tasks that utilize foundation models, including misclassification across a wide range of unseen data distributions. We demonstrate two key features of UTAP: (1) universality: its microscopic perturbation can be applied across diverse field-of-views independent of the dataset that UTAP was developed on, and (2) transferability: its perturbation can successfully degrade the performance of various external, black-box pathology foundation models-never seen before. These indicate that UTAP is not a dedicated attack associated with a specific foundation model or microscopy image dataset, but rather constitutes a broad threat to pathology foundation models and their applications. We evaluated UTAP across various state-of-the-art pathology foundation models on multiple datasets, causing significant drops in their performance with visually imperceptible microscopic modifications to the input images using a fixed noise pattern. The development of these potent attacks establishes a benchmark for model robustness evaluation, highlighting a need for advancing defense mechanisms to ensure the safe/reliable deployment of AI in pathology and optical microscopy.",
+    "year": 2026,
+    "venue": "Light, science & applications",
+    "authors": [
+      "Yuntian Wang",
+      "Xilin Yang",
+      "Che-Yung Shen",
+      "Shuhang Dong",
+      "Nir Pillar",
+      "Aydogan Ozcan"
+    ],
+    "doi": "10.1038/s41377-026-02347-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42225639/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42225639"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224364",
+    "title": "Residual-guided hybrid framework for adversarially robust deep learning-based network intrusion detection.",
+    "abstract": "The growing sophistication of cyber threats and adversarial attacks poses critical challenges to the security and robustness of machine learning models deployed in real-world systems. While traditional deep learning architectures excel in clean data classification, they often fail under adversarial perturbations, exposing vulnerabilities in sensitive domains such as healthcare, finance, and industrial control. In this paper, we introduce a novel hybrid adversarially-trained deep learning framework that integrates reinforcement learning-inspired robustness adaptation with knowledge-driven regularization to achieve improved resilience against fast gradient sign method (FGSM) and projected gradient descent (PGD) attacks. Our approach simultaneously optimizes clean accuracy and adversarial robustness by balancing cross-entropy and adversarial loss components, while monitoring calibration error, gradient dynamics, and generalization gap to ensure stable convergence. Extensive experiments on reconnaissance, shellcode, and worms datasets demonstrate that the proposed model achieves up to 97.88% accuracy on clean data and maintains 84.9% accuracy under FGSM and 81.75% under PGD attacks, outperforming convolutional neural network (CNN) and long short-term memory (LSTM) baselines by more than 6-10 percentage points in adversarial robustness. Furthermore, the training curves reveal consistent improvements in convergence stability, runtime efficiency, gradient norm decay, and a 30% reduction in expected calibration error, validating the scalability of the framework. This work contributes not only a novel adversarial defense paradigm but also provides insights into the trade-offs between robustness, efficiency, and generalization.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Sudip Saha",
+      "Muhammad Arslan Pervaiz",
+      "Muhammad Safwat Rahman",
+      "Shahriar Ahmmed",
+      "Jannatul Maua"
+    ],
+    "doi": "10.1371/journal.pone.0350737",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224364/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224364"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224183",
+    "title": "A Reproducible AI-Assisted Workflow for Concept Development in Stage Art Design and Lighting Optimization through the GSAD Framework.",
+    "abstract": "Artificial intelligence (AI) is fundamentally reshaping creative design processes by enabling rapid ideation and consistent visualization, particularly within stage art and scenography. However, existing workflows remain heavily dependent on manual sketching and subjective interpretation, limiting scalability and reducing reproducibility across design teams. This gap underscores the need for a structured, AI-assisted generative stage art design (GSAD) framework that integrates deep learning, generative modeling, and optimization techniques to support systematic and repeatable concept development. The core objective of the GSAD framework is to combine diffusion models for initial concept generation, generative adversarial networks (GANs) for texture and lighting refinement, and intelligent elephant clan optimization (IECO) for optimizing stage layout and lighting placement. The Stage Art Design Dataset, comprising 2,500 high-resolution images, includes annotated theater scripts, lighting diagrams, and 3D layouts to facilitate multimodal learning. Experimental evaluation demonstrates substantial improvements in qualitative metrics, including improved semantic alignment between script content and generated visuals, and greater layout optimization efficiency achieved through IECO-driven spatial analysis. Implementing the framework in a Python-based environment resulted in 98.88% predictive accuracy, 26.58 mega floating-point operations per second (MFPOs), and a parameter quantity of 1.08 M. The GSAD framework presents a scalable, reproducible, and technically robust AI-assisted workflow that enhances creative output, ensures visual consistency, and supports efficient concept development in modern stage art design.",
+    "year": 2026,
+    "venue": "Journal of visualized experiments : JoVE",
+    "authors": [
+      "Jin Cui"
+    ],
+    "doi": "10.3791/70737",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224183/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224183"
+    }
+  },
+  {
+    "paper_id": "pubmed:42217428",
+    "title": "ED-SAM: Sharpness-aware minimization with energy-adjusted perturbations and direction-corrected updates.",
+    "abstract": "Sharpness-aware minimization (SAM) improves the generalization of deep neural networks by seeking flat minima via simultaneously minimizing the training loss and loss sharpness. However, previous SAM variants often neglect gradient magnitudes when adjusting perturbation directions, which may lead to harmful perturbations. Moreover, relying solely on perturbed gradients during parameter updates may fail to capture the true descent direction of the original loss. Both issues negatively affect generalization. This paper develops ED-SAM, a novel SAM-based algorithm that integrates an energy-adjusted perturbation mechanism with a direction-corrected parameter update strategy. Specifically, in the adversarial perturbation step, ED-SAM constructs an energy-adjusted perturbation that explicitly models gradient energy. By leveraging the second moment of gradients, it captures the energy along each coordinate dimension, which suppresses the excessive influence of high-energy components and allows perturbations to adapt to both gradient direction and energy. During the parameter update step, ED-SAM introduces a direction-corrected parameter update strategy that combines the clean gradients with the perturbed gradients. This enables the optimizer to follow the true descent direction while benefiting from the flatness information of the adversarial neighborhood. By jointly regulating perturbation energy and parameter update direction, ED-SAM achieves better generalization and robustness. Moreover, we theoretically analyze its convergence under certain conditions. Experiments across multiple datasets and different network architectures reveal the superiority of ED-SAM over existing SAM variants.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Hailiang Ye",
+      "Xinyi Fang",
+      "Ming Li",
+      "Feilong Cao"
+    ],
+    "doi": "10.1016/j.neunet.2026.109185",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42217428/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42217428"
+    }
+  },
+  {
+    "paper_id": "pubmed:42200970",
+    "title": "AI-Driven Hybrid Detection and Classification Framework for Secure Sleep Health IoT Networks.",
+    "abstract": "Sleep disorders, such as insomnia, obstructive sleep apnea (OSA), narcolepsy, REM sleep behavior disorder, and circadian rhythm disturbances, represent a rapidly expanding global health burden that is strongly associated with cardiovascular, metabolic, neurological, and psychiatric diseases. Advancements in wearable sensing technologies and Internet of Medical Things (IoMT) infrastructures have expanded the possibilities for continuous, home-based sleep assessment beyond conventional polysomnography laboratories. These Sleep Health Internet of Things (S-HIoT) systems combine multimodal physiological sensing (EEG, ECG, SpO",
+    "year": 2026,
+    "venue": "Clocks & sleep",
+    "authors": [
+      "Prajoona Valsalan",
+      "Mohammad Maroof Siddiqui"
+    ],
+    "doi": "10.3390/clockssleep8020023",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42200970/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42200970"
+    }
+  },
+  {
+    "paper_id": "pubmed:42198079",
+    "title": "Query-Efficient Hard-Label Attack: A Prior-Guided Adam Ray Search Optimization.",
+    "abstract": "Deep neural networks are vulnerable to adversarial examples, even in hard-label black-box settings where only the top-1 prediction is available. To address the challenges of high-dimensional optimization under limited query budgets, we propose two query-efficient attack methods: Adam-OPT, which integrates Adam-based adaptive optimization into the ray-search framework to stabilize and accelerate zeroth-order gradient updates; Prior-Adam-OPT, which further incorporates transfer-based priors from surrogate models to enhance gradient estimation. Adam-OPT leverages historical gradient information and per-parameter adaptive updates to improve convergence, while Prior-Adam-OPT constructs a prior-guided orthogonal search basis that combines surrogate and random directions, enhancing both gradient accuracy and query efficiency. Our approach demonstrates superior performance across CIFAR-10, ImageNet, and zero-shot CLIP models, consistently reducing perturbation magnitudes and improving attack efficiency compared to state-of-the-art hard-label attacks. Ablation studies highlight the importance of the number of vectors used for gradient estimation and the quality of surrogate models, showing that combining adaptive optimization with transfer-based priors provides a scalable and robust framework for generating high-quality adversarial examples in challenging black-box scenarios.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Tianyi Ding",
+      "Xinjie Xu",
+      "Qi Xuan",
+      "Hanzhe Yu",
+      "Chen Ma"
+    ],
+    "doi": "10.3390/s26103272",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42198079/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42198079"
+    }
+  },
+  {
+    "paper_id": "pubmed:42191756",
+    "title": "Self-defending 6G networks through AI-driven adaptive decoy generation at the edge.",
+    "abstract": "The advent of 6G networks is that , they promise to deliver high connectivity as well as a much larger attack surface, traditional security models are found to be wanting. In this paper, we propose an Adaptive Decoy Generation Framework that is able to deliver proactive, intelligent, as well as adaptive security solutions at the network edge. The proposed framework comprises three main intelligent components that include a Conditional Generative Adversarial Network (cGAN), a Reinforcement Learning (RL) agent that is based on Proximal Policy Optimization (PPO), as well as an adversarial feedback mechanism that allows the system to learn as well as adapt to new attacks. The simulation results using the CIC-IoT-2023 dataset showed that the proposed framework is able to deliver robust security solutions since it is able to achieve a 97.9% detection rate with a 1.3% false positive rate as well as a 15 ms detection latency on average. The system has a positive Adaptability Index (+5.2%), thereby demonstrating that it is able to defend against intelligent as well as learning-based attacks, thereby being more secure than traditional security models. The proposed framework is able to create a new paradigm in delivering intelligent as well as adaptive security solutions that will be able to cater to 6G networks.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Ranil Mukesh M J",
+      "Pandiya Rajan G",
+      "Prabhu Gopal",
+      "Malathy Sathyamoorthy",
+      "Aniket S Nagane",
+      "Rakesh Keshava"
+    ],
+    "doi": "10.1038/s41598-026-52368-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42191756/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42191756"
+    }
+  },
+  {
+    "paper_id": "pubmed:42180133",
+    "title": "VideoPASTA: 7K Preference Pairs That Matter for Video-LLM Alignment.",
+    "abstract": "Video-language models (Video-LLMs) excel at understanding video content but struggle with spatial relationships, temporal ordering, and cross-frame continuity. To address these limitations, we introduce ",
+    "year": 2025,
+    "venue": "Proceedings of the Conference on Empirical Methods in Natural Language Processing. Conference on Empirical Methods in Natural Language Processing",
+    "authors": [
+      "Yogesh Kulkarni",
+      "Pooyan Fazli"
+    ],
+    "doi": "10.18653/v1/2025.emnlp-main.1647",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42180133/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42180133"
+    }
+  },
+  {
+    "paper_id": "pubmed:42179834",
+    "title": "Generative AI-Driven CNN Framework for Enhanced Lung Cancer Detection, Prediction, and Treatment: A Novel Approach to Overcoming AI Limitations.",
+    "abstract": "Lung cancer remains one of the most common and deadly diseases globally, necessitating swift and precise detection to enhance patient prognosis. Conventional radiological techniques, including CT scans and X-rays, often exhibit high false positive rates, low sensitivity, and reliance on radiologist interpretation, leading to potential diagnostic inconsistencies. This research presents a generative AI-driven convolutional neural network (CNN) framework aimed at improving lung cancer detection, risk prediction, and treatment planning. The proposed approach integrates deep learning, CNN-based feature extraction, and generative adversarial networks (GANs) for data augmentation, effectively overcoming limitations in AI-powered diagnostics. A dataset comprising lung cancer-patient information, CT scan characteristics, and cancer risk scores was utilized for model training and evaluation. The abstract has been updated to clearly highlight the quantitative improvements, showing an increase in accuracy from 94.5% to 100% and an improvement in AUC from 0.95 to 1.00 compared with existing models. The CNN model extracts crucial features from medical images, whereas GAN-generated synthetic data enhances learning efficiency and robustness. The model was implemented using TensorFlow and Keras, optimized with Adam and trained over 30 epochs, achieving an unparalleled 100% accuracy, precision, recall, and F1-score on the validation dataset. A comparative analysis with state-of-the-art AI methodologies, including Transformers and hybrid deep learning architectures, demonstrated the superior efficacy of the proposed framework. The findings highlight that generative AI significantly refines lung cancer diagnostics by minimizing false positives and optimizing treatment recommendations. The novelty of this work lies in its unified framework that brings together synthetic data generation, advanced feature extraction, attention-based classification, and a probabilistic risk prediction approach into a single system, an integration that has not been comprehensively explored in existing studies. The ROC-AUC score of 1.00 further validates the model's ability to accurately differentiate between malignant and benign cases. Future advancements will focus on clinical deployment, explainable AI (XAI) for improved interpretability, and integration into real-world healthcare systems.",
+    "year": 2026,
+    "venue": "International journal of biomedical imaging",
+    "authors": [
+      "Siva Sankar Bodicherla",
+      "D Natarajasivan",
+      "M Purushotham Reddy"
+    ],
+    "doi": "10.1155/ijbi/8726222",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42179834/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42179834"
+    }
+  },
+  {
+    "paper_id": "pubmed:42156856",
+    "title": "Attention-augmented hybrid framework with evolutionary optimization for robust deepfake detection.",
+    "abstract": "The widespread availability of powerful generative models, such as Generative Adversarial Networks (GANs) and Autoencoders, has led to a dramatic surge in deepfake content production. These synthetically generated videos, often indistinguishable from authentic ones, pose a growing threat to digital trust and can facilitate misinformation, identity fraud, and social manipulation. While various deepfake detection models have been proposed, many struggle to maintain consistent performance across datasets and unseen video formats, revealing a clear research gap in generalizability and temporal feature modeling. In this proposed work, we introduce a novel deepfake detection framework that incorporates a customized Gated Recurrent Unit (GRU) architecture enhanced with a deep-fake-specific gating mechanism. This newly designed gate modifies the candidate hidden state update, enabling the network to more effectively capture temporal inconsistencies and facial dynamics in manipulated video sequences. The objective of this study is to design a deepfake detection system that not only performs with high accuracy but also generalizes well across varying datasets and video conditions. The proposed methodology employs a multi-stage pipeline. Vision Transformers (ViTs) are used initially to extract frame-level spatial features, followed by pretrained Convolutional Neural Networks (CNNs) such as MobileNetV2 to refine feature representations. These features are then given to a hybrid GRU architecture, combining both the standard and custom GRU unit, thereby enhancing sequential learning. The performance of the model is maximized by employing a Genetic Algorithm for optimizing GRU, number of layers and hyperparameter tuning. Benchmark datasets such as Celeb-DF V2 and FaceForensics + + have been utilized to train and test the system. Experimental results demonstrate that the proposed model outperforms existing state-of-the-art methods, achieving superior accuracy, precision, recall, F1-score, and ROC-AUC compared to all evaluated models. The proposed framework demonstrates strong generalization to unseen data and significantly reduces false positive rates. This provides a scalable and adaptive approach to deepfake detection by combining novel recurrent neural architecture with evolutionary optimization algorithms, demonstrating effectiveness on diverse datasets such as digital forensics, content verification system and policy enforcement platforms aimed at mitigating deepfake threats.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "S J Shivaprakash",
+      "Sabireen H",
+      "Akshat Chauhan",
+      "Abdul Quadir Md"
+    ],
+    "doi": "10.1038/s41598-026-51284-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42156856/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42156856"
+    }
+  },
+  {
+    "paper_id": "pubmed:42151299",
+    "title": "An innovative hybrid ANN inception model for detecting and preventing man-in-the-middle attacks in smart networks for shielding sensitive data.",
+    "abstract": "Man-in-the-Middle (MitM) attacks represent a significant cybersecurity challenge, particularly within the rapidly growing domain of smart networks and Internet of Things (IoT) environments. These attacks involve an adversary intercepting and potentially altering the communication between two parties who believe they are communicating directly with each other. As the deployment of smart devices and autonomous systems increases, the risk of MitM attacks escalates, given the sensitive nature of the data being transmitted and the critical functions these systems perform. This paper presents a novel approach to detecting and preventing MitM attacks by leveraging a Hybrid ANN-Inception Model (HAINet). The proposed model integrates the dynamic feature extraction capabilities of Inception modules with the flexibility of Artificial Neural Networks (ANNs) to identify and mitigate these sophisticated cyber threats. Using the Smart Home Intrusion Detection Dataset from Kaggle, the methodology involves advanced data preprocessing, feature extraction via AutoEncoders, and optimization through hybrid learning algorithms. The HAINet model executed in Jupyter Notebook and achieved an outstanding accuracy of 98.69%, outperforming traditional models in both detection accuracy and robustness across various network conditions. The results demonstrate the model's efficacy in shielding sensitive data from interception and manipulation, making it a valuable tool for enhancing security in smart networks.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "V Kandasamy",
+      "A Ameelia Roseline"
+    ],
+    "doi": "10.1038/s41598-026-52513-8",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42151299/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42151299"
+    }
+  },
+  {
+    "paper_id": "pubmed:42148953",
+    "title": "High throughput generation of high-",
+    "abstract": "The pursuit of designing high-performance thermoelectric (TE) materials is often hindered by the complex coupling between structural composition and transport properties. In this study, we present TE-Diffusion, an inverse design framework combining a generative diffusion model with a novel three-channel doping representation designed to capture subtle stoichiometric variations intrinsic to complex doping. Comprehensive evaluations demonstrate that TE-Diffusion significantly outperforms traditional generative adversarial networks (GANs). Specifically, the generated materials achieve a thermodynamic stability rate of 95% and a ",
+    "year": 2026,
+    "venue": "Nanoscale",
+    "authors": [
+      "Yuelin Wang",
+      "Chengquan Zhong",
+      "Jingzi Zhang",
+      "Kailong Hu",
+      "Junjie Chen",
+      "Xi Lin"
+    ],
+    "doi": "10.1039/d6nr00269b",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42148953/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42148953"
+    }
+  },
+  {
+    "paper_id": "pubmed:42135009",
+    "title": "Addressing domain shift via imbalance-aware domain adaptation in embryo development assessment.",
+    "abstract": "Deep learning models in medical imaging face dual challenges: domain shift, where models perform poorly when deployed in settings different from their training environment, and class imbalance, where certain disease conditions are naturally underrepresented. We have presented imbalance-aware domain adaptation (IADA), a novel framework that simultaneously tackles both challenges through three key components: (1) adaptive feature learning with class-specific attention mechanisms, (2) balanced domain alignment with dynamic weighting, and (3) adaptive threshold optimization. Our theoretical analysis established convergence guarantees and complexity bounds. Through extensive experiments on embryo development assessment across four imaging modalities, IADA demonstrated significant improvements over existing methods, achieving up to 25.19% higher accuracy while maintaining balanced performance across classes. In challenging scenarios with low-quality imaging systems, IADA showed robust generalization with AUC improvements of up to 12.56%. These results demonstrate IADA's potential for developing reliable and equitable medical imaging systems for diverse clinical settings. The code is publicly available at https://github.com/yinghemedical/imbalance-aware_domain_adaptation.",
+    "year": 2026,
+    "venue": "Mathematical biosciences and engineering : MBE",
+    "authors": [
+      "Lei Li",
+      "Xinglin Zhang",
+      "Jun Liang",
+      "Mengqian Huang",
+      "Tao Chen"
+    ],
+    "doi": "10.3934/mbe.2026051",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42135009/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42135009"
+    }
+  },
+  {
+    "paper_id": "pubmed:42134409",
+    "title": "CT-Less TOF PET: challenges and innovations for quantitative imaging.",
+    "abstract": "More than a decade has passed since the seminal work of Defrise",
+    "year": 2026,
+    "venue": "Physics in medicine and biology",
+    "authors": [
+      "Mohammadreza Teimoorisichani",
+      "Vladimir Panin",
+      "Hasan Sari"
+    ],
+    "doi": "10.1088/1361-6560/ae6e15",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42134409/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42134409"
+    }
+  },
+  {
+    "paper_id": "pubmed:42120605",
+    "title": "Conveyor belt foreign object detection method based on improved YOLOv11 and ESRGAN.",
+    "abstract": "Traditional conveyor belt object detection methods often lack robustness and adaptability under challenging conditions such as low-light and low-resolution environments. This study proposes an improved detection method specifically designed for conveyor belt environments, built upon the YOLOv11 object detection framework. A custom dataset was created to support foreign object detection on factory conveyor belts. To overcome the low resolution of image recognition, the Enhanced Super- Resolution Generative Adversarial Network (ESRGAN) was employed to improve the input image clarity. Additionally, to enhance the performance under low-illumination conditions, several architectural improvements were embedded in the YOLOv11 framework, leading to the proposed Conveyor Belt Foreign Object Detection (YOLOv11-CBFD) algorithm. These enhancements included an optimized upsampling module, integrated attention mechanisms, a modified convolution module, an improved loss function, and a modified convolution module. Experimental results demonstrated that the proposed YOLOv11-CBFD algorithm significantly enhanced the accuracy of foreign object recognition. Based on a dataset collected from a factory conveyor belt, YOLOv11-CBFD achieved an accuracy of 86.1%, a recall of 86.7%, an [Formula: see text] of 89.1%, and a model size of only 2.17 M parameters. Compared to the original YOLOv11n model, the proposed method reduced the parameter count by 16.2% while demonstrating no significant degradation in recognition capabilities. In terms of computational efficiency, the optimized architecture demonstrated a 12.4% increase in the number of frames per second when deployed on a Jetson Orin NX-embedded AI computer. Field experiments conducted in industrial inspection scenarios validated the practical effectiveness of the system, demonstrating continuous operation over 48 h under real-time constraints (average latency <33 ms/frame), while consistently maintaining an accuracy of 86.1% across multiple deployment cycles. The experimental results highlight the ability of the model to effectively balance computational efficiency and detection performance on embedded AI platforms.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Qiang Li",
+      "Ruocheng Zeng",
+      "Guohua Wang",
+      "Dong Shen",
+      "Jiahao Wang",
+      "Tengfei Yang"
+    ],
+    "doi": "10.1038/s41598-026-51729-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42120605/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42120605"
+    }
+  },
+  {
+    "paper_id": "pubmed:42115644",
+    "title": "An optimized graph neural network approach for robust and explainable IoT intrusion detection against adversarial attacks.",
+    "abstract": "The swift incorporation of cutting edge technologies has expanded the range for a potential adversary to conduct adaptive attacks against systems and despite progress in detection, machine learning based security remains vulnerable, highlighting the need for more robust and reliable defense methods. Existing DDoS detection techniques are not resilient against adaptive adversarial manipulation and instead concentrate on accuracy under benign circumstances. To defend against adversarial attacks, this paper presents a reliable and comprehensible intrusion detection paradigm and to improve detection transparency and reliability, the suggested method utilizes Graph Neural Networks (GNNs), Deep Neural Network (DNN), DeepFool, First Gradient Sign Method (FGSM) and an ensemble-based (DeepFool with FGSM) adversarial training procedure, we introduce a novel adversarial dataset, AdvCICDDoS2019, constructed by injecting four types of adversarial attacks, Adversarial Perturbation (AP), Adversarial Outlier Injection (AOI), Adversarial Noise Injection (ANI), and Adversarial Benign (AB), into the original CICDDoS2019 dataset. During training, adversarial perturbations based on DeepFool and FGSM are combined to improve robustness, while SHAP and LIME are utilized to offer both extensive and instance-level interpretability and the extensive experimental tests show that the proposed framework threefold exceeds current methods by between 4% and 12% in a range of attack scenarios. The model is quite resilient against smartly constructed traffic, with a detection accuracy of up to 97% under hostile settings. The results further demonstrate that the reliability of the model is improved by adding explainable adversarial defense mechanisms and adding graph-aware learning improves the system's ability to recognize complex traffic connections, leading to more transparent and robust IoT intrusion detection.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Uzma Ghulam Mohammad",
+      "Adil Afzal",
+      "Saleh Alghamdi",
+      "Anila Amjad",
+      "Saud Yonbawi",
+      "Muhammad Rizwan",
+      "Ovidiu Bagdasar",
+      "Kadar Manuella"
+    ],
+    "doi": "10.1038/s41598-026-48715-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42115644/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42115644"
+    }
+  },
+  {
+    "paper_id": "pubmed:42100835",
+    "title": "Individualized Prediction of Radiation Pneumonitis Using RP-GAN: Leveraging Global Lung Features and Explainable Artificial Intelligence.",
+    "abstract": "IntroductionThis study aims to develop an individualized risk prediction model for radiation pneumonitis (RP) based on unsupervised image feature learning. A deep convolutional generative adversarial network (DCGAN) was utilized to automatically extract features from computed tomography (CT) images.MethodsA retrospective analysis was conducted on 180 lung cancer patients treated with volumetric modulated arc therapy (VMAT) at Kaohsiung Veterans General Hospital between 2015 and 2022. To mitigate clinical sample size limitations, rotation-based augmentation was employed to expand the training dataset. The pretreatment CT images were processed into three input configurations: whole-lung, V",
+    "year": 2026,
+    "venue": "Technology in cancer research & treatment",
+    "authors": [
+      "Yang-Wei Hsieh",
+      "Pei-Ju Chao",
+      "Yi-Lun Liao",
+      "Wen-Ping Yun",
+      "Ling-Chuan Chang-Chien",
+      "Cheng-Shie Wuu",
+      "Yu-Wei Lin",
+      "Tsair-Fwu Lee"
+    ],
+    "doi": "10.1177/15330338261450065",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42100835/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42100835"
+    }
+  },
+  {
+    "paper_id": "pubmed:42091374",
+    "title": "Resilient prescribed performance optimal control for underactuated unmanned surface vehicle: A differential game guidance strategy based on control barrier functions.",
+    "abstract": "This paper investigates the predefined optimal control problem for underactuated unmanned surface vehicles (USVs) in non-cooperative adversarial scenarios, with a focus on enabling defending USVs to achieve effective collision avoidance in obstacle environments while performing optimal interception of attacking USVs. In the guidance stage, the Nash equilibrium point of the game is solved analytically using geometric methods as the expected interception point for both parties. To ensure that USVs maintain a safe distance from obstacles during the game, control barrier functions (CBFs) are introduced to formulate a quadratic programming problem, which strictly enforces safety constraints while minimizing adjustments to the game strategy. In the controller design stage, in order to satisfy the transient and steady state performance constraints of the system states, a robust controller based on predefined time functions and error transformation is designed. By incorporating an elastic term mechanism, this controller enhances the flexibility of error constraints while meeting the prescribed performance bounds. Theoretical analysis proves the optimality of the guidance strategy and the semi-globally uniformly ultimately bounded (SGUUB) stability of the closed-loop system. Finally, simulation results demonstrate the effectiveness, safety and superiority of the proposed algorithm in complex adversarial scenarios.",
+    "year": 2026,
+    "venue": "ISA transactions",
+    "authors": [
+      "Junji Feng",
+      "Guoqing Zhang",
+      "Shilin Yin",
+      "Jinhui Jiang"
+    ],
+    "doi": "10.1016/j.isatra.2026.04.035",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42091374/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42091374"
+    }
+  },
+  {
+    "paper_id": "pubmed:42086661",
+    "title": "Hierarchical proof of trust a Byzantine fault tolerant federated learning framework for industrial IoT applications.",
+    "abstract": "The Industrial Internet of Things (IIoT) presents significant challenges for training machine learning models due to data privacy concerns, heterogeneous data distributions, and limited bandwidth. This paper proposes HPoT (Hierarchical Proof-of-Trust), a novel federated learning-based consensus algorithm for IIoT infrastructure that addresses these limitations while ensuring data integrity and model fidelity. HPoT integrates blockchain technology with federated learning to create a decentralized, privacy-preserving framework enabling collaborative model training without raw data sharing. The algorithm features: (1) robust aggregation with weighted averaging and anomaly detection for heterogeneous datasets, (2) adaptive weighting prioritizing updates from trustworthy devices, (3) reputation scoring to detect malicious nodes, and (4) hierarchical three-tier architecture optimized for IIoT constraints. Using Byzantine fault tolerance principles, HPoT tolerates up to [Formula: see text] malicious participants while maintaining convergence. Experimental evaluation demonstrates [Formula: see text] reduction in communication rounds, [Formula: see text] decrease in per-node energy consumption, and [Formula: see text] lower consensus latency compared to traditional federated learning, while maintaining comparable accuracy ([Formula: see text] vs [Formula: see text]). The algorithm effectively handles data heterogeneity, communication constraints, and adversarial attacks common in IIoT environments. HPoT provides a scalable, secure, and energy-efficient solution for privacy-preserving machine learning on resource-constrained IIoT devices, advancing practical deployment of collaborative AI in industrial settings.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Amit Chaurasia",
+      "Sandeep Kumar Sharma",
+      "Pramod Singh Rathore"
+    ],
+    "doi": "10.1038/s41598-026-49902-4",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42086661/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42086661"
+    }
+  },
+  {
+    "paper_id": "pubmed:42082552",
+    "title": "TrustFed-RHIO: an optimization-driven differential privacy federated learning framework for secure and explainable IIoT attack detection.",
+    "abstract": "A rapid proliferation of industrial internet of things (IIoT) systems has increased the vulnerability of interconnected devices for sophisticated cyberattacks, which necessitates intelligent and privacy-preserving solution for security. This paper presents TrustFed-RHIO, a novel hybrid model which integrates rock hyrax intelligence optimization (RHIO) for optimal selection of feature with a trustworthy differential privacy-enhanced federated learning (TrustFed) scheme for the collaborative detection of attack. The algorithm of RHIO mimics collective intelligence of rock hyrax colonies for identifying most discriminative features, thus reducing dimensionality and enhancing efficiency of classifier. The proposed TrustFed-RHIO scheme ensures, secure, distributed learning over multiple IIoT nodes on embedding differential privacy mechanisms thus mitigating the data leakage risks and adversarial inference. A suggested scheme is thus empowered with explainable artificial intelligence (XAI) scheme termed SHAP and LIME for enhancing interpretability and trust in model predictions. Experimental estimation on benchmark IIoT dataset shows that TrustFed-RHIO attains superior performance on detection accuracy, robustness against adversarial attacks, and privacy preservation on comparing existing schemes. At last, this framework supports secure storage of cloud on detection outcomes, thus enabling scalable deployment in the real-world IIoT framework. The performance evaluation is carried on benchmark dataset CCIoT2024-DIAD and performance is estimated for various metrics like latency, accuracy, precision, recall, F1-score, specificity, training time, and so on. Overall analysis shows that the proposed model is effective in detecting IIoT attacks.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Linda Joseph",
+      "B Prabha",
+      "M Sambath"
+    ],
+    "doi": "10.1038/s41598-026-45277-8",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42082552/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42082552"
+    }
+  },
+  {
+    "paper_id": "pubmed:42076272",
+    "title": "Deep Learning-Based Prediction and Compensation of Performance Degradation in Flexible Sensors.",
+    "abstract": "Flexible deformation sensors inevitably suffer from sensitivity degradation and severe measurement errors during long-term cyclic stretching due to structural fatigue. Traditional material-level optimizations are costly and lack dynamic adaptability. Herein, we propose an artificial intelligence (AI)-driven predict-and-compensate framework for the online calibration of flexible sensors. To overcome training sample scarcity, a generative adversarial network (GAN) performs temporal data augmentation. Subsequently, a hybrid deep learning framework integrating long short-term memory (LSTM) networks and a Sequence Attention mechanism is employed. This architecture accurately captures both local signal fluctuations and multiscale long-term decay trends, enabling precise multi-step prediction and output compensation. Experimental evaluations validate that this strategy significantly suppresses sensor response drift. Under cyclic loading, an initially substantial relative measurement error of 48.63% plummets to 7.16% post-calibration, with typical errors consistently reduced to the ~1% level. Furthermore, when deployed in a smart glove gesture recognition system, this method successfully restores the recognition accuracy from a fatigue-induced low of 75.73% (after 200 stretch cycles) back to 97.70%. This generative and attention-based deep learning paradigm offers robust, real-time error calibration, providing a highly viable solution for extending the long-term reliability and stability of flexible sensor systems.",
+    "year": 2026,
+    "venue": "Micromachines",
+    "authors": [
+      "Zhiyuan Wang",
+      "Tong Zhang",
+      "Luyang Zhang",
+      "Xiao Wang",
+      "Youli Yao",
+      "Qiang Liu",
+      "Yijian Liu",
+      "Da Chen"
+    ],
+    "doi": "10.3390/mi17040496",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42076272/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42076272"
+    }
+  },
+  {
+    "paper_id": "pubmed:42070482",
+    "title": "Multi-view semi-supervised adversarial attention network for drug repurposing.",
+    "abstract": "Drug repositioning represents an efficient strategy for uncovering new therapeutic indications for approved drugs. However, most existing prediction methods rely on similarity data and overlook biological and chemical information. In addition, data sparsity and randomly selected negative samples further limit predictive performance. We propose the Multi-view Semi-Supervised Adversarial Attention Network (M-SSAAN) for drug-disease association prediction. M-SSAAN combines structural and similarity embeddings to generate multi-view representations, and employs attention mechanisms along with semi-supervised adversarial learning to alleviate data sparsity and enhance robustness. The effectiveness of M-SSAAN was evaluated through comparative experiments, ablation studies, and strategy analyses. In addition, case studies on ibuprofen indications and zero-shot predictions for lung cancer further demonstrate the model's ability to identify reliable drug-disease associations. These results highlight the strong potential of M-SSAAN as a powerful and reliable tool for drug discovery.",
+    "year": 2026,
+    "venue": "Computer methods and programs in biomedicine",
+    "authors": [
+      "Mengmeng Fan",
+      "Dakuo He",
+      "Qian Liu",
+      "Qing Liu",
+      "Feng Wang",
+      "He Li",
+      "Hao Wang",
+      "Siqi Shan",
+      "Jinghao Zhang",
+      "Yue Hou"
+    ],
+    "doi": "10.1016/j.cmpb.2026.109406",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42070482/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42070482"
+    }
+  },
+  {
+    "paper_id": "pubmed:42068633",
+    "title": "AIIT: An adjustable integration adversarial attack based on image transformation.",
+    "abstract": "Deep neural networks (DNNs) are strongly vulnerable to adversarial attacks, which brings a large threat in safety-critical applications such as autonomous driving and facial recognition. The model integration technique, which adopts gradient information from many surrogate models, is commonly regarded as a powerful black-box attack method. But existing black-box attack methods using an integration model tend to average the outputs of several surrogate models. Such an approach ignores the gradient differences among these different models and the migrating characteristic of adversarial examples. In this way, the above method limits the diversity of adversarial examples, thus leads to low attack success rates across different models of different architectures. In order to solve these limitations, in this paper, we propose the hybrid method of model integration and input transformation, called AIIT. In AIIT, we consider image transform method to generate various adversarial examples and also consider dynamic gradient adjustment to promote model integration. Moreover, we present the gradient optimal algorithm to alleviate the overfitting of surrogate models.Extensive experiments on various datasets show that our approach can improve attack success rates by 13% to 35% compared to the existing methods and can achieve an average attack success rate of 90%, which proves effective in improving the transferability.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Yunong Guo",
+      "Yang Wu",
+      "Jing Liu"
+    ],
+    "doi": "10.1016/j.neunet.2026.109032",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42068633/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42068633"
+    }
+  }
+]

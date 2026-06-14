@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42038673",
+  "title": "Self-supervised contrastive learning enables robust electrocardiogram-based cardiac classification.",
+  "abstract": "Self-supervised contrastive learning has emerged as a powerful paradigm for learning generalizable representations from unlabeled data. In the context of electrocardiogram (ECG) analysis, such pre-training can significantly enhance classification performance, especially when labeled data is scarce. We aimed to investigate and improve contrastive self-supervised learning techniques for ECGs by systematically combining recent methodological advances in augmentation design, contrastive loss formulation, and encoder architectures. We implemented a contrastive pre-training framework combining vectorcardiography (VCG)-based physiologically-inspired augmentations, interlead, intersegment, contrastive loss, and patient-aware positive sampling. In addition, we developed a dual-stream architecture, extending the TemporalNet model by processing grouped ECG leads independently. Pretraining was conducted on a large corpus of approximately 1 million unlabeled ECGs. We evaluated performance on 2 downstream classification tasks-low left ventricular ejection fraction (LVEF) and high serum potassium chloride-using various levels of labeled supervision (1%, 5%, 10%, 50%, and 100%). The pre-trained models were compared with the randomly initialized models under both frozen and finetuned conditions. Contrastive pre-training consistently improved performance across all supervision levels. In low-label settings (1%-10% supervision), the pre-trained model achieved 3%-4% higher area under the receiver operator curve on the LVEF task and 5%-7% higher area under the receiver operator curve on the potassium chloride task compared with the baseline. The performance gap narrowed with increased supervision but remained favorable toward pre-trained models. Our findings demonstrate that contrastive pre-training can substantially enhance ECG classification, especially when labeled data is limited. By unifying and extending ideas from recent literature into a scalable framework trained on 1 million ECGs, we provide practical guidance and architectural innovations for building strong ECG foundation models applicable to a broad range of clinical prediction tasks.",
+  "year": 2026,
+  "venue": "Heart rhythm O2",
+  "authors": [
+    "Deekshith Dade",
+    "Jake A Bergquist",
+    "Rob S MacLeod",
+    "Benjamin A Steinberg",
+    "Tolga Tasdizen"
+  ],
+  "doi": "10.1016/j.hroo.2026.01.016",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42038673/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42038673"
+  }
+}

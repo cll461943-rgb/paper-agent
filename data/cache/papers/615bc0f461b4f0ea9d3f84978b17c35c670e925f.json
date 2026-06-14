@@ -1,0 +1,83 @@
+{
+  "paper_id": "https://openalex.org/W2108183412",
+  "title": "The design and implementation of a log-structured file system",
+  "abstract": "This paper presents a new technique for disk storage management called a log-structured file system . A log-structured file system writes all modifications to disk sequentially in a log-like structure, thereby speeding up both file writing and crash recovery. The log is the only structure on disk; it contains indexing information so that files can be read back from the log efficiently. In order to maintain large free areas on disk for fast writing, we divide the log into segments and use a segment cleaner to compress the live information from heavily fragmented segments. We present a series of simulations that demonstrate the efficiency of a simple cleaning policy based on cost and benefit. We have implemented a prototype log-structured file system called Sprite LFS; it outperforms current Unix file systems by an order of magnitude for small-file writes while matching or exceeding Unix performance for reads and large writes. Even when the overhead for cleaning is included, Sprite LFS can use 70% of the disk bandwidth for writing, whereas Unix file systems typically can use only 5–10%.",
+  "year": 1992,
+  "venue": "ACM Transactions on Computer Systems",
+  "authors": [
+    "Mendel Rosenblum",
+    "John K. Ousterhout"
+  ],
+  "doi": "https://doi.org/10.1145/146941.146943",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1145/146941.146943",
+  "citation_count": 1266,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:broad_synonym"
+  ],
+  "references": [
+    "https://openalex.org/W161642043",
+    "https://openalex.org/W178848230",
+    "https://openalex.org/W1595924276",
+    "https://openalex.org/W1661326830",
+    "https://openalex.org/W1967141605",
+    "https://openalex.org/W1972855212",
+    "https://openalex.org/W1973507662",
+    "https://openalex.org/W1984252352",
+    "https://openalex.org/W2007415020",
+    "https://openalex.org/W2012426216",
+    "https://openalex.org/W2028080565",
+    "https://openalex.org/W2035379912",
+    "https://openalex.org/W2043934800",
+    "https://openalex.org/W2096611364",
+    "https://openalex.org/W2106887953",
+    "https://openalex.org/W2108783024",
+    "https://openalex.org/W2114167330",
+    "https://openalex.org/W2115600841",
+    "https://openalex.org/W2127402998",
+    "https://openalex.org/W2147504831",
+    "https://openalex.org/W2157737097",
+    "https://openalex.org/W2161531345",
+    "https://openalex.org/W2465660011",
+    "https://openalex.org/W4240171681",
+    "https://openalex.org/W4243477111",
+    "https://openalex.org/W4248578633",
+    "https://openalex.org/W4254126235"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Unix file types",
+      "Operating system",
+      "Versioning file system",
+      "Stub file",
+      "Computer file",
+      "File system fragmentation",
+      "File system",
+      "Unix",
+      "File Control Block",
+      "Virtual file system",
+      "Indexed file",
+      "Device file",
+      "Database",
+      "Software"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4313226861",
+      "https://openalex.org/W4247882433",
+      "https://openalex.org/W2097829252",
+      "https://openalex.org/W2053136373",
+      "https://openalex.org/W2342627122",
+      "https://openalex.org/W2023412278",
+      "https://openalex.org/W4233195927",
+      "https://openalex.org/W4250364891",
+      "https://openalex.org/W4229654780",
+      "https://openalex.org/W2108183412"
+    ]
+  }
+}

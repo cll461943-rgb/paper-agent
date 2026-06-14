@@ -1,0 +1,811 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2604.24911v1",
+    "title": "Learning with Embedded Linear Equality Constraints via Variational Bayesian Inference",
+    "abstract": "Machine Learning is becoming more prevalent in science and engineering, but many approaches do not provide meaningful uncertainty estimates and predictions may also violate known physical knowledge. We propose a Bayesian framework to embed linear relationships across inputs and outputs into the learning process, whilst characterizing full predictive uncertainty over both the model parameters and the domain knowledge. We evaluated our method on learning the single particle battery model subject to voltage and energy balances, showing its ability to provide reduced credible intervals and constraint violations compared to standard Bayesian neural networks based on variational inference.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Matthew Marsh",
+      "Benoît Chachuat",
+      "Antonio del Rio Chanona"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.24911v1",
+    "url": "http://arxiv.org/abs/2604.24911v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.13440v2",
+    "title": "Approximate Inference for Fully Bayesian Gaussian Process Regression",
+    "abstract": "Learning in Gaussian Process models occurs through the adaptation of hyperparameters of the mean and the covariance function. The classical approach entails maximizing the marginal likelihood yielding fixed point estimates (an approach called \\textit{Type II maximum likelihood} or ML-II). An alternative learning procedure is to infer the posterior over hyperparameters in a hierarchical specification of GPs we call \\textit{Fully Bayesian Gaussian Process Regression} (GPR). This work considers two approximation schemes for the intractable hyperparameter posterior: 1) Hamiltonian Monte Carlo (HMC) yielding a sampling-based approximation and 2) Variational Inference (VI) where the posterior over hyperparameters is approximated by a factorized Gaussian (mean-field) or a full-rank Gaussian accounting for correlations between hyperparameters. We analyze the predictive performance for fully Bayesian GPR on a range of benchmark data sets.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Vidhi Lalchand",
+      "Carl Edward Rasmussen"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.13440v2",
+    "url": "http://arxiv.org/abs/1912.13440v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1309.1799v4",
+    "title": "Bayesian Nonparametric Weighted Sampling Inference",
+    "abstract": "It has historically been a challenge to perform Bayesian inference in a design-based survey context. The present paper develops a Bayesian model for sampling inference in the presence of inverse-probability weights. We use a hierarchical approach in which we model the distribution of the weights of the nonsampled units in the population and simultaneously include them as predictors in a nonparametric Gaussian process regression. We use simulation studies to evaluate the performance of our procedure and compare it to the classical design-based estimator. We apply our method to the Fragile Family and Child Wellbeing Study. Our studies find the Bayesian nonparametric finite population estimator to be more robust than the classical design-based estimator without loss in efficiency, which works because we induce regularization for small cells and thus this is a way of automatically smoothing the highly variable weights.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Yajuan Si",
+      "Natesh S. Pillai",
+      "Andrew Gelman"
+    ],
+    "doi": null,
+    "arxiv_id": "1309.1799v4",
+    "url": "http://arxiv.org/abs/1309.1799v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.13192v3",
+    "title": "On Preference Learning Based on Sequential Bayesian Optimization with Pairwise Comparison",
+    "abstract": "User preference learning is generally a hard problem. Individual preferences are typically unknown even to users themselves, while the space of choices is infinite. Here we study user preference learning from information-theoretic perspective. We model preference learning as a system with two interacting sub-systems, one representing a user with his/her preferences and another one representing an agent that has to learn these preferences. The user with his/her behaviour is modeled by a parametric preference function. To efficiently learn the preferences and reduce search space quickly, we propose the agent that interacts with the user to collect the most informative data for learning. The agent presents two proposals to the user for evaluation, and the user rates them based on his/her preference function. We show that the optimum agent strategy for data collection and preference learning is a result of maximin optimization of the normalized weighted Kullback-Leibler (KL) divergence between true and agent-assigned predictive user response distributions. The resulting value of KL-divergence, which we also call remaining system uncertainty (RSU), provides an efficient performance metric in the absence of the ground truth. This metric characterises how well the agent can predict user and, thus, the quality of the underlying learned user (preference) model. Our proposed agent comprises sequential mechanisms for user model inference and proposal generation. To infer the user model (preference function), Bayesian approximate inference is used in the agent. The data collection strategy is to generate proposals, responses to which help resolving uncertainty associated with prediction of the user responses the most. The efficiency of our approach is validated by numerical simulations. Also a real-life example of preference learning application is provided.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tanya Ignatenko",
+      "Kirill Kondrashov",
+      "Marco Cox",
+      "Bert de Vries"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.13192v3",
+    "url": "http://arxiv.org/abs/2103.13192v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1811.10041v1",
+    "title": "BDLOB: Bayesian Deep Convolutional Neural Networks for Limit Order Books",
+    "abstract": "We showcase how dropout variational inference can be applied to a large-scale deep learning model that predicts price movements from limit order books (LOBs), the canonical data source representing trading and pricing movements. We demonstrate that uncertainty information derived from posterior predictive distributions can be utilised for position sizing, avoiding unnecessary trades and improving profits. Further, we test our models by using millions of observations across several instruments and markets from the London Stock Exchange. Our results suggest that those Bayesian techniques not only deliver uncertainty information that can be used for trading but also improve predictive performance as stochastic regularisers. To the best of our knowledge, we are the first to apply Bayesian networks to LOBs.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Zihao Zhang",
+      "Stefan Zohren",
+      "Stephen Roberts"
+    ],
+    "doi": null,
+    "arxiv_id": "1811.10041v1",
+    "url": "http://arxiv.org/abs/1811.10041v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1811.09385v2",
+    "title": "On the Importance of Strong Baselines in Bayesian Deep Learning",
+    "abstract": "Like all sub-fields of machine learning Bayesian Deep Learning is driven by empirical validation of its theoretical proposals. Given the many aspects of an experiment it is always possible that minor or even major experimental flaws can slip by both authors and reviewers. One of the most popular experiments used to evaluate approximate inference techniques is the regression experiment on UCI datasets. However, in this experiment, models which have been trained to convergence have often been compared with baselines trained only for a fixed number of iterations. We find that a well-established baseline, Monte Carlo dropout, when evaluated under the same experimental settings shows significant improvements. In fact, the baseline outperforms or performs competitively with methods that claimed to be superior to the very same baseline method when they were introduced. Hence, by exposing this flaw in experimental procedure, we highlight the importance of using identical experimental setups to evaluate, compare, and benchmark methods in Bayesian Deep Learning.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jishnu Mukhoti",
+      "Pontus Stenetorp",
+      "Yarin Gal"
+    ],
+    "doi": null,
+    "arxiv_id": "1811.09385v2",
+    "url": "http://arxiv.org/abs/1811.09385v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.06446v1",
+    "title": "A fast asynchronous MCMC sampler for sparse Bayesian inference",
+    "abstract": "We propose a very fast approximate Markov Chain Monte Carlo (MCMC) sampling framework that is applicable to a large class of sparse Bayesian inference problems, where the computational cost per iteration in several models is of order $O(ns)$, where $n$ is the sample size, and $s$ the underlying sparsity of the model. This cost can be further reduced by data sub-sampling when stochastic gradient Langevin dynamics are employed. The algorithm is an extension of the asynchronous Gibbs sampler of Johnson et al. (2013), but can be viewed from a statistical perspective as a form of Bayesian iterated sure independent screening (Fan et al. (2009)). We show that in high-dimensional linear regression problems, the Markov chain generated by the proposed algorithm admits an invariant distribution that recovers correctly the main signal with high probability under some statistical assumptions. Furthermore we show that its mixing time is at most linear in the number of regressors. We illustrate the algorithm with several models.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Yves Atchadé",
+      "Liwei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.06446v1",
+    "url": "http://arxiv.org/abs/2108.06446v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.15492v1",
+    "title": "Deep Learning and Bayesian inference for Inverse Problems",
+    "abstract": "Inverse problems arise anywhere we have indirect measurement. As, in general they are ill-posed, to obtain satisfactory solutions for them needs prior knowledge. Classically, different regularization methods and Bayesian inference based methods have been proposed. As these methods need a great number of forward and backward computations, they become costly in computation, in particular, when the forward or generative models are complex and the evaluation of the likelihood becomes very costly. Using Deep Neural Network surrogate models and approximate computation can become very helpful. However, accounting for the uncertainties, we need first understand the Bayesian Deep Learning and then, we can see how we can use them for inverse problems. In this work, we focus on NN, DL and more specifically the Bayesian DL particularly adapted for inverse problems. We first give details of Bayesian DL approximate computations with exponential families, then we will see how we can use them for inverse problems. We consider two cases: First the case where the forward operator is known and used as physics constraint, the second more general data driven DL methods. keyword: Neural Network, Variational Bayesian inference, Bayesian Deep Learning (DL), Inverse problems, Physics based DL.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ali Mohammad-Djafari",
+      "Ning Chu",
+      "Li Wang",
+      "Liang Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.15492v1",
+    "url": "http://arxiv.org/abs/2308.15492v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1902.06494v1",
+    "title": "A Unifying Bayesian View of Continual Learning",
+    "abstract": "Some machine learning applications require continual learning - where data comes in a sequence of datasets, each is used for training and then permanently discarded. From a Bayesian perspective, continual learning seems straightforward: Given the model posterior one would simply use this as the prior for the next task. However, exact posterior evaluation is intractable with many models, especially with Bayesian neural networks (BNNs). Instead, posterior approximations are often sought. Unfortunately, when posterior approximations are used, prior-focused approaches do not succeed in evaluations designed to capture properties of realistic continual learning use cases. As an alternative to prior-focused methods, we introduce a new approximate Bayesian derivation of the continual learning loss. Our loss does not rely on the posterior from earlier tasks, and instead adapts the model itself by changing the likelihood term. We call these approaches likelihood-focused. We then combine prior- and likelihood-focused methods into one objective, tying the two views together under a single unifying framework of approximate Bayesian continual learning.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Sebastian Farquhar",
+      "Yarin Gal"
+    ],
+    "doi": null,
+    "arxiv_id": "1902.06494v1",
+    "url": "http://arxiv.org/abs/1902.06494v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.20732v1",
+    "title": "Bayesian Inference in Quantum Programs",
+    "abstract": "Conditioning is a key feature in probabilistic programming to enable modeling the influence of data (also known as observations) to the probability distribution described by such programs. Determining the posterior distribution is also known as Bayesian inference. This paper equips a quantum while-language with conditioning, defines its denotational and operational semantics over infinite-dimensional Hilbert spaces, and shows their equivalence. We provide sufficient conditions for the existence of weakest (liberal) precondition-transformers and derive inductive characterizations of these transformers. It is shown how w(l)p-transformers can be used to assess the effect of Bayesian inference on (possibly diverging) quantum programs.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Christina Gehnen",
+      "Dominique Unruh",
+      "Joost-Pieter Katoen"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.20732v1",
+    "url": "http://arxiv.org/abs/2504.20732v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1811.12335v1",
+    "title": "Bayesian Adversarial Spheres: Bayesian Inference and Adversarial Examples in a Noiseless Setting",
+    "abstract": "Modern deep neural network models suffer from adversarial examples, i.e. confidently misclassified points in the input space. It has been shown that Bayesian neural networks are a promising approach for detecting adversarial points, but careful analysis is problematic due to the complexity of these models. Recently Gilmer et al. (2018) introduced adversarial spheres, a toy set-up that simplifies both practical and theoretical analysis of the problem. In this work, we use the adversarial sphere set-up to understand the properties of approximate Bayesian inference methods for a linear model in a noiseless setting. We compare predictions of Bayesian and non-Bayesian methods, showcasing the advantages of the former, although revealing open challenges for deep learning applications.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Artur Bekasov",
+      "Iain Murray"
+    ],
+    "doi": null,
+    "arxiv_id": "1811.12335v1",
+    "url": "http://arxiv.org/abs/1811.12335v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.00793v1",
+    "title": "Is In-Context Learning in Large Language Models Bayesian? A Martingale Perspective",
+    "abstract": "In-context learning (ICL) has emerged as a particularly remarkable characteristic of Large Language Models (LLM): given a pretrained LLM and an observed dataset, LLMs can make predictions for new data points from the same distribution without fine-tuning. Numerous works have postulated ICL as approximately Bayesian inference, rendering this a natural hypothesis. In this work, we analyse this hypothesis from a new angle through the martingale property, a fundamental requirement of a Bayesian learning system for exchangeable data. We show that the martingale property is a necessary condition for unambiguous predictions in such scenarios, and enables a principled, decomposed notion of uncertainty vital in trustworthy, safety-critical systems. We derive actionable checks with corresponding theory and test statistics which must hold if the martingale property is satisfied. We also examine if uncertainty in LLMs decreases as expected in Bayesian learning when more data is observed. In three experiments, we provide evidence for violations of the martingale property, and deviations from a Bayesian scaling behaviour of uncertainty, falsifying the hypothesis that ICL is Bayesian.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Fabian Falck",
+      "Ziyu Wang",
+      "Chris Holmes"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.00793v1",
+    "url": "http://arxiv.org/abs/2406.00793v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09921v4",
+    "title": "Meta-Learning Probabilistic Inference For Prediction",
+    "abstract": "This paper introduces a new framework for data efficient and versatile learning. Specifically: 1) We develop ML-PIP, a general framework for Meta-Learning approximate Probabilistic Inference for Prediction. ML-PIP extends existing probabilistic interpretations of meta-learning to cover a broad class of methods. 2) We introduce VERSA, an instance of the framework employing a flexible and versatile amortization network that takes few-shot learning datasets as inputs, with arbitrary numbers of shots, and outputs a distribution over task-specific parameters in a single forward pass. VERSA substitutes optimization at test time with forward passes through inference networks, amortizing the cost of inference and relieving the need for second derivatives during training. 3) We evaluate VERSA on benchmark datasets where the method sets new state-of-the-art results, handles arbitrary numbers of shots, and for classification, arbitrary numbers of classes at train and test time. The power of the approach is then demonstrated through a challenging few-shot ShapeNet view reconstruction task.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jonathan Gordon",
+      "John Bronskill",
+      "Matthias Bauer",
+      "Sebastian Nowozin",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09921v4",
+    "url": "http://arxiv.org/abs/1805.09921v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/physics/0110093v1",
+    "title": "Bayesian inference for inverse problems",
+    "abstract": "Traditionally, the MaxEnt workshops start by a tutorial day. This paper summarizes my talk during 2001'th workshop at John Hopkins University. The main idea in this talk is to show how the Bayesian inference can naturally give us all the necessary tools we need to solve real inverse problems: starting by simple inversion where we assume to know exactly the forward model and all the input model parameters up to more realistic advanced problems of myopic or blind inversion where we may be uncertain about the forward model and we may have noisy data. Starting by an introduction to inverse problems through a few examples and explaining their ill posedness nature, I briefly presented the main classical deterministic methods such as data matching and classical regularization methods to show their limitations. I then presented the main classical probabilistic methods based on likelihood, information theory and maximum entropy and the Bayesian inference framework for such problems. I show that the Bayesian framework, not only generalizes all these methods, but also gives us natural tools, for example, for inferring the uncertainty of the computed solutions, for the estimation of the hyperparameters or for handling myopic or blind inversion problems. Finally, through a deconvolution problem example, I presented a few state of the art methods based on Bayesian inference particularly designed for some of the mass spectrometry data processing problems.",
+    "year": 2001,
+    "venue": null,
+    "authors": [
+      "Ali Mohammad-Djafari"
+    ],
+    "doi": null,
+    "arxiv_id": "0110093v1",
+    "url": "http://arxiv.org/abs/physics/0110093v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08355v3",
+    "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+    "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jacob Beck",
+      "Shikha Surana",
+      "Manus McAuliffe",
+      "Oliver Bent",
+      "Thomas D. Barrett",
+      "Juan Jose Garau Luis",
+      "Paul Duckworth"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08355v3",
+    "url": "http://arxiv.org/abs/2410.08355v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1605.08636v4",
+    "title": "PAC-Bayesian Theory Meets Bayesian Inference",
+    "abstract": "We exhibit a strong link between frequentist PAC-Bayesian risk bounds and the Bayesian marginal likelihood. That is, for the negative log-likelihood loss function, we show that the minimization of PAC-Bayesian generalization risk bounds maximizes the Bayesian marginal likelihood. This provides an alternative explanation to the Bayesian Occam's razor criteria, under the assumption that the data is generated by an i.i.d distribution. Moreover, as the negative log-likelihood is an unbounded loss function, we motivate and propose a PAC-Bayesian theorem tailored for the sub-gamma loss family, and we show that our approach is sound on classical Bayesian linear regression tasks.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Pascal Germain",
+      "Francis Bach",
+      "Alexandre Lacoste",
+      "Simon Lacoste-Julien"
+    ],
+    "doi": null,
+    "arxiv_id": "1605.08636v4",
+    "url": "http://arxiv.org/abs/1605.08636v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.01361v2",
+    "title": "Stabilizing Temporal Difference Learning via Implicit Stochastic Recursion",
+    "abstract": "Temporal difference (TD) learning is a foundational algorithm in reinforcement learning (RL). For nearly forty years, TD learning has served as a workhorse for applied RL as well as a building block for more complex and specialized algorithms. However, despite its widespread use, TD procedures are generally sensitive to step size specification. A poor choice of step size can dramatically increase variance and slow convergence in both on-policy and off-policy evaluation tasks. In practice, researchers use trial and error to identify stable step sizes, but these approaches tend to be ad hoc and inefficient. As an alternative, we propose implicit TD algorithms that reformulate TD updates into fixed point equations. Such updates are more stable and less sensitive to step size without sacrificing computational efficiency. Moreover, we derive asymptotic convergence guarantees and finite-time error bounds for our proposed implicit TD algorithms, which include implicit TD(0), TD($λ$), and TD with gradient correction (TDC). Our results show that implicit TD algorithms are applicable to a much broader range of step sizes, and thus provide a robust and versatile framework for policy evaluation and value approximation in modern RL tasks. We demonstrate these benefits empirically through extensive numerical examples spanning both on-policy and off-policy tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hwanwoo Kim",
+      "Panos Toulis",
+      "Eric Laber"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.01361v2",
+    "url": "http://arxiv.org/abs/2505.01361v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1811.12535v1",
+    "title": "The Relevance of Bayesian Layer Positioning to Model Uncertainty in Deep Bayesian Active Learning",
+    "abstract": "One of the main challenges of deep learning tools is their inability to capture model uncertainty. While Bayesian deep learning can be used to tackle the problem, Bayesian neural networks often require more time and computational power to train than deterministic networks. Our work explores whether fully Bayesian networks are needed to successfully capture model uncertainty. We vary the number and position of Bayesian layers in a network and compare their performance on active learning with the MNIST dataset. We found that we can fully capture the model uncertainty by using only a few Bayesian layers near the output of the network, combining the advantages of deterministic and Bayesian networks.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jiaming Zeng",
+      "Adam Lesnikowski",
+      "Jose M. Alvarez"
+    ],
+    "doi": null,
+    "arxiv_id": "1811.12535v1",
+    "url": "http://arxiv.org/abs/1811.12535v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.11554v1",
+    "title": "Normalizing Flow Regression for Bayesian Inference with Offline Likelihood Evaluations",
+    "abstract": "Bayesian inference with computationally expensive likelihood evaluations remains a significant challenge in many scientific domains. We propose normalizing flow regression (NFR), a novel offline inference method for approximating posterior distributions. Unlike traditional surrogate approaches that require additional sampling or inference steps, NFR directly yields a tractable posterior approximation through regression on existing log-density evaluations. We introduce training techniques specifically for flow regression, such as tailored priors and likelihood functions, to achieve robust posterior and model evidence estimation. We demonstrate NFR's effectiveness on synthetic benchmarks and real-world applications from neuroscience and biology, showing superior or comparable performance to existing methods. NFR represents a promising approach for Bayesian inference when standard methods are computationally prohibitive or existing model evaluations can be recycled.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chengkun Li",
+      "Bobby Huggins",
+      "Petrus Mikkola",
+      "Luigi Acerbi"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.11554v1",
+    "url": "http://arxiv.org/abs/2504.11554v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1210.5371v8",
+    "title": "Bayesian Structure Learning in Sparse Gaussian Graphical Models",
+    "abstract": "Decoding complex relationships among large numbers of variables with relatively few observations is one of the crucial issues in science. One approach to this problem is Gaussian graphical modeling, which describes conditional independence of variables through the presence or absence of edges in the underlying graph. In this paper, we introduce a novel and efficient Bayesian framework for Gaussian graphical model determination which is a trans-dimensional Markov Chain Monte Carlo (MCMC) approach based on a continuous-time birth-death process. We cover the theory and computational details of the method. It is easy to implement and computationally feasible for high-dimensional graphs. We show our method outperforms alternative Bayesian approaches in terms of convergence, mixing in the graph space and computing time. Unlike frequentist approaches, it gives a principled and, in practice, sensible approach for structure learning. We illustrate the efficiency of the method on a broad range of simulated data. We then apply the method on large-scale real applications from human and mammary gland gene expression studies to show its empirical usefulness. In addition, we implemented the method in the R package BDgraph which is freely available at http://CRAN.R-project.org/package=BDgraph",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "A. Mohammadi",
+      "E. C. Wit"
+    ],
+    "doi": null,
+    "arxiv_id": "1210.5371v8",
+    "url": "http://arxiv.org/abs/1210.5371v8",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1403.7471v3",
+    "title": "Approximate Decentralized Bayesian Inference",
+    "abstract": "This paper presents an approximate method for performing Bayesian inference in models with conditional independence over a decentralized network of learning agents. The method first employs variational inference on each individual learning agent to generate a local approximate posterior, the agents transmit their local posteriors to other agents in the network, and finally each agent combines its set of received local posteriors. The key insight in this work is that, for many Bayesian models, approximate inference schemes destroy symmetry and dependencies in the model that are crucial to the correct application of Bayes' rule when combining the local posteriors. The proposed method addresses this issue by including an additional optimization step in the combination procedure that accounts for these broken dependencies. Experiments on synthetic and real data demonstrate that the decentralized method provides advantages in computational performance and predictive test likelihood over previous batch and distributed methods.",
+    "year": 2014,
+    "venue": null,
+    "authors": [
+      "Trevor Campbell",
+      "Jonathan P. How"
+    ],
+    "doi": null,
+    "arxiv_id": "1403.7471v3",
+    "url": "http://arxiv.org/abs/1403.7471v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.06055v1",
+    "title": "Function-Space Regularization for Deep Bayesian Classification",
+    "abstract": "Bayesian deep learning approaches assume model parameters to be latent random variables and infer posterior distributions to quantify uncertainty, increase safety and trust, and prevent overconfident and unpredictable behavior. However, weight-space priors are model-specific, can be difficult to interpret and are hard to specify. Instead, we apply a Dirichlet prior in predictive space and perform approximate function-space variational inference. To this end, we interpret conventional categorical predictions from stochastic neural network classifiers as samples from an implicit Dirichlet distribution. By adapting the inference, the same function-space prior can be combined with different models without affecting model architecture or size. We illustrate the flexibility and efficacy of such a prior with toy experiments and demonstrate scalability, improved uncertainty quantification and adversarial robustness with large-scale image classification experiments.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jihao Andreas Lin",
+      "Joe Watson",
+      "Pascal Klink",
+      "Jan Peters"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.06055v1",
+    "url": "http://arxiv.org/abs/2307.06055v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.04221v1",
+    "title": "Uncertain Bayesian Networks: Learning from Incomplete Data",
+    "abstract": "When the historical data are limited, the conditional probabilities associated with the nodes of Bayesian networks are uncertain and can be empirically estimated. Second order estimation methods provide a framework for both estimating the probabilities and quantifying the uncertainty in these estimates. We refer to these cases as uncer tain or second-order Bayesian networks. When such data are complete, i.e., all variable values are observed for each instantiation, the conditional probabilities are known to be Dirichlet-distributed. This paper improves the current state-of-the-art approaches for handling uncertain Bayesian networks by enabling them to learn distributions for their parameters, i.e., conditional probabilities, with incomplete data. We extensively evaluate various methods to learn the posterior of the parameters through the desired and empirically derived strength of confidence bounds for various queries.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Conrad D. Hougen",
+      "Lance M. Kaplan",
+      "Federico Cerutti",
+      "Alfred O. Hero"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.04221v1",
+    "url": "http://arxiv.org/abs/2208.04221v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.00535v3",
+    "title": "Adaptive quadrature schemes for Bayesian inference via active learning",
+    "abstract": "Numerical integration and emulation are fundamental topics across scientific fields. We propose novel adaptive quadrature schemes based on an active learning procedure. We consider an interpolative approach for building a surrogate posterior density, combining it with Monte Carlo sampling methods and other quadrature rules. The nodes of the quadrature are sequentially chosen by maximizing a suitable acquisition function, which takes into account the current approximation of the posterior and the positions of the nodes. This maximization does not require additional evaluations of the true posterior. We introduce two specific schemes based on Gaussian and Nearest Neighbors (NN) bases. For the Gaussian case, we also provide a novel procedure for fitting the bandwidth parameter, in order to build a suitable emulator of a density function. With both techniques, we always obtain a positive estimation of the marginal likelihood (a.k.a., Bayesian evidence). An equivalent importance sampling interpretation is also described, which allows the design of extended schemes. Several theoretical results are provided and discussed. Numerical results show the advantage of the proposed approach, including a challenging inference problem in an astronomic dynamical model, with the goal of revealing the number of planets orbiting a star.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "F. Llorente",
+      "L. Martino",
+      "V. Elvira",
+      "D. Delgado",
+      "J. López-Santiago"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.00535v3",
+    "url": "http://arxiv.org/abs/2006.00535v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1910.04420v1",
+    "title": "Learning beyond Predefined Label Space via Bayesian Nonparametric Topic Modelling",
+    "abstract": "In real world machine learning applications, testing data may contain some meaningful new categories that have not been seen in labeled training data. To simultaneously recognize new data categories and assign most appropriate category labels to the data actually from known categories, existing models assume the number of unknown new categories is pre-specified, though it is difficult to determine in advance. In this paper, we propose a Bayesian nonparametric topic model to automatically infer this number, based on the hierarchical Dirichlet process and the notion of latent Dirichlet allocation. Exact inference in our model is intractable, so we provide an efficient collapsed Gibbs sampling algorithm for approximate posterior inference. Extensive experiments on various text data sets show that: (a) compared with parametric approaches that use pre-specified true number of new categories, the proposed nonparametric approach can yield comparable performance; and (b) when the exact number of new categories is unavailable, i.e. the parametric approaches only have a rough idea about the new categories, our approach has evident performance advantages.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Changying Du",
+      "Fuzhen Zhuang",
+      "Jia He",
+      "Qing He",
+      "Guoping Long"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.04420v1",
+    "url": "http://arxiv.org/abs/1910.04420v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.17535v5",
+    "title": "PFNs4BO: In-Context Learning for Bayesian Optimization",
+    "abstract": "In this paper, we use Prior-data Fitted Networks (PFNs) as a flexible surrogate for Bayesian Optimization (BO). PFNs are neural processes that are trained to approximate the posterior predictive distribution (PPD) through in-context learning on any prior distribution that can be efficiently sampled from. We describe how this flexibility can be exploited for surrogate modeling in BO. We use PFNs to mimic a naive Gaussian process (GP), an advanced GP, and a Bayesian Neural Network (BNN). In addition, we show how to incorporate further information into the prior, such as allowing hints about the position of optima (user priors), ignoring irrelevant dimensions, and performing non-myopic BO by learning the acquisition function. The flexibility underlying these extensions opens up vast possibilities for using PFNs for BO. We demonstrate the usefulness of PFNs for BO in a large-scale evaluation on artificial GP samples and three different hyperparameter optimization testbeds: HPO-B, Bayesmark, and PD1. We publish code alongside trained models at github.com/automl/PFNs4BO.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Samuel Müller",
+      "Matthias Feurer",
+      "Noah Hollmann",
+      "Frank Hutter"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.17535v5",
+    "url": "http://arxiv.org/abs/2305.17535v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2111.02080v6",
+    "title": "An Explanation of In-context Learning as Implicit Bayesian Inference",
+    "abstract": "Large language models (LMs) such as GPT-3 have the surprising ability to do in-context learning, where the model learns to do a downstream task simply by conditioning on a prompt consisting of input-output examples. The LM learns from these examples without being explicitly pretrained to learn. Thus, it is unclear what enables in-context learning. In this paper, we study how in-context learning can emerge when pretraining documents have long-range coherence. Here, the LM must infer a latent document-level concept to generate coherent next tokens during pretraining. At test time, in-context learning occurs when the LM also infers a shared latent concept between examples in a prompt. We prove when this occurs despite a distribution mismatch between prompts and pretraining data in a setting where the pretraining distribution is a mixture of HMMs. In contrast to messy large-scale datasets used to train LMs capable of in-context learning, we generate a small-scale synthetic dataset (GINC) where Transformers and LSTMs both exhibit in-context learning. Beyond the theory, experiments on GINC exhibit large-scale real-world phenomena including improved in-context performance with model scaling (despite the same pretraining loss), sensitivity to example order, and instances where zero-shot is better than few-shot in-context learning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sang Michael Xie",
+      "Aditi Raghunathan",
+      "Percy Liang",
+      "Tengyu Ma"
+    ],
+    "doi": null,
+    "arxiv_id": "2111.02080v6",
+    "url": "http://arxiv.org/abs/2111.02080v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.05472v2",
+    "title": "Compute and Energy Consumption Trends in Deep Learning Inference",
+    "abstract": "The progress of some AI paradigms such as deep learning is said to be linked to an exponential growth in the number of parameters. There are many studies corroborating these trends, but does this translate into an exponential increase in energy consumption? In order to answer this question we focus on inference costs rather than training costs, as the former account for most of the computing effort, solely because of the multiplicative factors. Also, apart from algorithmic innovations, we account for more specific and powerful hardware (leading to higher FLOPS) that is usually accompanied with important energy efficiency optimisations. We also move the focus from the first implementation of a breakthrough paper towards the consolidated version of the techniques one or two year later. Under this distinctive and comprehensive perspective, we study relevant models in the areas of computer vision and natural language processing: for a sustained increase in performance we see a much softer growth in energy consumption than previously anticipated. The only caveat is, yet again, the multiplicative factor, as future AI increases penetration and becomes more pervasive.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Radosvet Desislavov",
+      "Fernando Martínez-Plumed",
+      "José Hernández-Orallo"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.05472v2",
+    "url": "http://arxiv.org/abs/2109.05472v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1504.06523v1",
+    "title": "Objective Bayesian Inference for Bilateral Data",
+    "abstract": "This paper presents three objective Bayesian methods for analyzing bilateral data under Dallal's model and the saturated model. Three parameters are of interest, namely, the risk difference, the risk ratio, and the odds ratio. We derive Jeffreys' prior and Bernardo's reference prior associated with the three parameters that characterize Dallal's model. We derive the functional forms of the posterior distributions of the risk difference and the risk ratio and discuss how to sample from their posterior distributions. We demonstrate the use of the proposed methodology with two real data examples. We also investigate small, moderate, and large sample properties of the proposed methodology and the frequentist counterpart via simulations.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Cyr Emile M'lan",
+      "Ming-Hui Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "1504.06523v1",
+    "url": "http://arxiv.org/abs/1504.06523v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

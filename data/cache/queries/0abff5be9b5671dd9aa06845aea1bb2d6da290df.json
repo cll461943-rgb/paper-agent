@@ -1,0 +1,866 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2601.11584v1",
+    "title": "Cost-Aware Logging: Measuring the Financial Impact of Excessive Log Retention in Small-Scale Cloud Deployments",
+    "abstract": "Log data plays a critical role in observability, debugging, and performance monitoring in modern cloud-native systems. In small and early-stage cloud deployments, however, log retention policies are frequently configured far beyond operational requirements, often defaulting to 90 days or more, without explicit consideration of their financial and performance implications. As a result, excessive log retention becomes a hidden and recurring cost. This study examines the financial and operational impact of log retention window selection from a cost-aware perspective. Using synthetic log datasets designed to reflect real-world variability in log volume and access patterns, we evaluate retention windows of 7, 14, 30, and 90 days. The analysis focuses on three metrics: storage cost, operationally useful log ratio, and cost per useful log. Operational usefulness is defined as log data accessed during simulated debugging and incident analysis tasks. The results show that reducing log retention from 90 days to 14 days can lower log storage costs by up to 78 percent while preserving more than 97 percent of operationally useful logs. Longer retention windows provide diminishing operational returns while disproportionately increasing storage cost and query overhead. These findings suggest that modest configuration changes can yield significant cost savings without compromising system reliability. Rather than proposing new logging mechanisms, this work offers a lightweight and accessible framework to help small engineering teams reason about log retention policies through a cost-effectiveness lens. The study aims to encourage more deliberate observability configurations, particularly in resource-constrained cloud environments.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jody Almaida Putra"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.11584v1",
+    "url": "http://arxiv.org/abs/2601.11584v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.19731v2",
+    "title": "ViR: Towards Efficient Vision Retention Backbones",
+    "abstract": "Vision Transformers (ViTs) have attracted a lot of popularity in recent years, due to their exceptional capabilities in modeling long-range spatial dependencies and scalability for large scale training. Although the training parallelism of self-attention mechanism plays an important role in retaining great performance, its quadratic complexity baffles the application of ViTs in many scenarios which demand fast inference. This effect is even more pronounced in applications in which autoregressive modeling of input features is required. In Natural Language Processing (NLP), a new stream of efforts has proposed parallelizable models with recurrent formulation that allows for efficient inference in generative applications. Inspired by this trend, we propose a new class of computer vision models, dubbed Vision Retention Networks (ViR), with dual parallel and recurrent formulations, which strike an optimal balance between fast inference and parallel training with competitive performance. In particular, ViR scales favorably for image throughput and memory consumption in tasks that require higher-resolution images due to its flexible formulation in processing large sequence lengths. The ViR is the first attempt to realize dual parallel and recurrent equivalency in a general vision backbone for recognition tasks. We have validated the effectiveness of ViR through extensive experiments with different dataset sizes and various image resolutions and achieved competitive performance. Code: https://github.com/NVlabs/ViR",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ali Hatamizadeh",
+      "Michael Ranzinger",
+      "Shiyi Lan",
+      "Jose M. Alvarez",
+      "Sanja Fidler",
+      "Jan Kautz"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.19731v2",
+    "url": "http://arxiv.org/abs/2310.19731v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.05960v2",
+    "title": "Distilling Feedback into Memory-as-a-Tool",
+    "abstract": "We propose a framework that amortizes the cost of inference-time reasoning by converting transient critiques into retrievable guidelines, through a file-based memory system and agent-controlled tool calls. We evaluate this method on the Rubric Feedback Bench, a novel dataset for rubric-based learning. Experiments demonstrate that our augmented LLMs rapidly match the performance of test-time refinement pipelines while drastically reducing inference cost.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Víctor Gallego"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.05960v2",
+    "url": "http://arxiv.org/abs/2601.05960v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:core_topic",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.03102v2",
+    "title": "Structured Token Retention and Computational Memory Paths in Large Language Models",
+    "abstract": "Memory retention mechanisms play a central role in determining the efficiency of computational architectures designed for processing extended sequences. Conventional methods for token management often impose fixed retention thresholds or rely on uniform attention weight distributions, leading to inefficient memory utilization and premature information loss in extended sequence modeling. Structured Token Retention (STR) introduces a probabilistic selection framework that dynamically adjusts token persistence based on contextual significance, ensuring that computational resources are allocated to semantically relevant elements. Computational Memory Paths (CMP) extend this framework through hierarchical memory allocation, refining retention efficiency through structured reallocation of token embeddings. Comparative assessments against baseline models demonstrate that STR and CMP improve token survival rates across long input sequences while reducing cumulative error propagation across processing layers. Experimental results further indicate reductions in computational overhead, improving inference speed without degrading contextual coherence. Token distribution analyses reveal that structured memory allocation prevents excessive redundancy in attention weight calculations, optimizing information retrieval efficiency in large-scale generative architectures. The integration of STR and CMP into an open-source model illustrates the adaptability of structured memory retention methodologies, highlighting their applicability in generative text processing, long-context comprehension, and scalable sequence modeling.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jonathan Delena",
+      "Augustin Moreau",
+      "Dominic Ravensdale",
+      "Frederick Chatterton"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.03102v2",
+    "url": "http://arxiv.org/abs/2502.03102v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.16774v2",
+    "title": "Retention Consequence in Lifecycle Memory Control",
+    "abstract": "Persistent memory can fail after successful admission: a premise is written, then becomes a silent assumption, and later maintenance treats it as ordinary residue to be compressed, demoted, or evicted. We study this post-admission failure as a lifecycle-control problem. Existing memory systems already perform admission, update, compression, retrieval, and eviction. Our claim is not that such systems lack maintenance, but that retention consequence is often operationalized only indirectly through validity, similarity, recency, frequency, importance, or summarization signals rather than exposed as a separate lifecycle state. We therefore treat confidence as carried-forward validity/support evidence, and introduce strength as an explicit lifecycle state for retention consequence. We operationalize this distinction in StageMem, a small staged controller whose transient, working, and durable stores expose promotion, compression, and eviction pressure points. Across controlled premise-realization, compression, pressure, and implicit-heuristic diagnostics, the experiments separate writing too little, retaining the wrong high-cue content, forgetting costly premises, and preserving everything by saturation. Explicit retention consequence, used through lifecycle settlement, provides a control surface between omission and hoarding. For the targeted post-admission failure mode, the results support a lifecycle view of persistent memory: reliability depends not only on what enters memory, but on whether admission validity and retention consequence remain available during maintenance.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jiarui Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.16774v2",
+    "url": "http://arxiv.org/abs/2604.16774v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.15086v1",
+    "title": "Memory Retention Is Not Enough to Master Memory Tasks in Reinforcement Learning",
+    "abstract": "Effective decision-making in the real world depends on memory that is both stable and adaptive: environments change over time, and agents must retain relevant information over long horizons while also updating or overwriting outdated content when circumstances shift. Existing Reinforcement Learning (RL) benchmarks and memory-augmented agents focus primarily on retention, leaving the equally critical ability of memory rewriting largely unexplored. To address this gap, we introduce a benchmark that explicitly tests continual memory updating under partial observability, i.e. the natural setting where an agent must rely on memory rather than current observations, and use it to compare recurrent, transformer-based, and structured memory architectures. Our experiments reveal that classic recurrent models, despite their simplicity, demonstrate greater flexibility and robustness in memory rewriting tasks than modern structured memories, which succeed only under narrow conditions, and transformer-based agents, which often fail beyond trivial retention cases. These findings expose a fundamental limitation of current approaches and emphasize the necessity of memory mechanisms that balance stable retention with adaptive updating. Our work highlights this overlooked challenge, introduces benchmarks to evaluate it, and offers insights for designing future RL agents with explicit and trainable forgetting mechanisms. Code: https://quartz-admirer.github.io/Memory-Rewriting/",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Oleg Shchendrigin",
+      "Egor Cherepanov",
+      "Alexey K. Kovalev",
+      "Aleksandr I. Panov"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.15086v1",
+    "url": "http://arxiv.org/abs/2601.15086v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1509.00070v1",
+    "title": "In-Line-Test of Variability and Bit-Error-Rate of HfOx-Based Resistive Memory",
+    "abstract": "Spatial and temporal variability of HfOx-based resistive random access memory (RRAM) are investigated for manufacturing and product designs. Manufacturing variability is characterized at different levels including lots, wafers, and chips. Bit-error-rate (BER) is proposed as a holistic parameter for the write cycle resistance statistics. Using the electrical in-line-test cycle data, a method is developed to derive BERs as functions of the design margin, to provide guidance for technology evaluation and product design. The proposed BER calculation can also be used in the off-line bench test and build-in-self-test (BIST) for adaptive error correction and for the other types of random access memories.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "B. L. Ji",
+      "H. Li",
+      "Q. Ye",
+      "S. Gausepohl",
+      "S. Deora",
+      "D. Veksler",
+      "S. Vivekanand",
+      "H. Chong",
+      "H. Stamper",
+      "T. Burroughs",
+      "C. Johnson",
+      "M. Smalley",
+      "S. Bennett",
+      "V. Kaushik",
+      "J. Piccirillo",
+      "M. Rodgers",
+      "M. Passaro",
+      "M. Liehr"
+    ],
+    "doi": null,
+    "arxiv_id": "1509.00070v1",
+    "url": "http://arxiv.org/abs/1509.00070v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.14292v2",
+    "title": "Minimal-Intervention KV Retention via Set-Conditioned Diversity",
+    "abstract": "KV-cache compression at small budgets is a crowded design space spanning cache representation, head-wise routing, compression cadence, decoding behavior, and within-budget scoring. We study seven mechanisms across these five families under matched mean cache on long-form mathematical reasoning (MATH-500~\\cite{hendrycks2021math}) with two distilled-reasoning models (Qwen-7B and Llama-8B variants of DeepSeek-R1-Distill~\\cite{deepseek2025r1}) at budgets $b \\in \\{64, 128\\}$. All seven were rejected. We then propose $α$, a one-function modification to the TriAttention~\\cite{mao2026triattention} retention scorer that replaces argmax-top-$k$ with greedy facility-location-inspired selection under a V-space redundancy penalty controlled by a single weight $λ$. A pre-registered protocol tunes $λ$ on a frozen development split and confirms on a disjoint held-out split; with $λ= 0.5$, $α$ clears Bonferroni on two of the four (model, budget) cells (Qwen $b{=}128$ and Llama $b{=}64$), no cell is significantly negative, and the pre-registered Branch~A triggers. The finding is asymmetric: a minimal scoring modification beat heavier structural redesigns in this regime, and the combined matched-memory, sympy-graded, held-out confirmation protocol is the evidence standard that made the asymmetry visible.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Libo Sun",
+      "Po-wei Harn",
+      "Peixiong He",
+      "Xiao Qin"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.14292v2",
+    "url": "http://arxiv.org/abs/2605.14292v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.18755v1",
+    "title": "Operational Memory Architecture for Kubernetes:Preserving Causal Context Across the Evidence Horizon",
+    "abstract": "Kubernetes clusters generate rich operational events during pod lifecycle transitions, yet the platform's native event retention model discards the most diagnostically valuable context. The LastTerminationState field, which records a container's last failure, is overwritten shortly after a pod restart. We define this as the evidence horizon. During high-frequency crash loops, this horizon may be crossed multiple times before inspection, permanently losing critical evidence. This paper introduces the Operational Memory Architecture (OMA) to preserve causal failure evidence before event rotation. OMA encodes evidence retention and causal reconstruction as explicit architectural requirements. It captures operational events into causal chains using three patterns: P001 (OOMKill chain), P002 (ConfigMap variable misconfiguration), and P003 (ConfigMap volume mount propagation). We implement OMA as an open-source system with a Go-based Kubernetes watcher, SQLite operational memory store, and a simple query interface. Experiments on Minikube and AKS include a 30-run latency analysis and stress tests with up to 20 crash-looping pods. Causal edges are built with mean latency below 1 ms. The collector processes ~2.8 events/sec while using under 10 MB memory, showing minimal overhead and effective evidence preservation.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Shamsher Khan"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.18755v1",
+    "url": "http://arxiv.org/abs/2605.18755v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1308.2881v1",
+    "title": "Opacity of Memory Management in Software Transactional Memory",
+    "abstract": "Opacity of Transactional Memory is proposed to be established by incremental validation. Quiescence in terms of epoch-based memory reclamation is applied to deal with doomed transactions causing memory access violations. This method unfortunately involves increased memory consumption and does not cover reclamations outside of transactions. This paper introduces a different method which combines incremental validation with elements of sandboxing to solve these issues.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Holger Machens",
+      "Volker Turau"
+    ],
+    "doi": null,
+    "arxiv_id": "1308.2881v1",
+    "url": "http://arxiv.org/abs/1308.2881v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.14522v1",
+    "title": "Methodology of safety evaluation of In-Vessel Retention",
+    "abstract": "Molten corium stabilization following a severe accident is of crucial importance in order to ensure containment integrity on a long-term basis and minimizing radioactive elements releases outside the plant. Among the possible options, In-Vessel Retention (IVR) through external cooling appears as an attractive solution that would limit the dispersion of corium in the plant and minimize the risks of containment failure. Nevertheless its feasibility has to be proved.The IVR strategy is already adopted in Europe for some VVER 440 type 213 reactors thanks to thorough research work started in the '90s for the Finnish Loviisa power plant, and subsequently extended to Bohunice and Mochovce (Slovakia), Dukovany (Czech Republic) and Paks (Hungary) power plants. The strategy is also included in the design of some high power new Gen.III reactors such as AP1000, APR 1400 and Chinese HPR1000 and CAP1400. It has also been studied in the past for other reactor concepts like KERENA (1250 MWe - BWR), AP600 or VVER-640.Current approaches for reactors with relatively small power, such as VVER 440 or AP600, use conservative assumptions for the safety demonstration. However, for higher power reactors (around 1000 MWe), the safety margin is reduced and it is necessary to evaluate the IVR strategy with best-estimate methods in order to reduce the uncertainties associated with the involved phenomena. Additional R&D as well as a revision of the methodology are needed to ensure and demonstrate adequate safety margins, including, in particular, best-estimate evaluations of thermal load applied on the vessel and mechanical resistance of the ablated vessel.The IVMR project (In-Vessel Melt Retention) was built with the goal of providing new knowledge (experimental, theoretical and technical) and a new methodology able to provide a best-estimate evaluation of IVR strategy for large power reactors. The main objective of Task 2.1 within WP2 was to define a common methodology to analyse IVR Severe Accident Management (SAM) strategy for the different types of EU NPPs. It started by reviewing the status of existing methodology and aimed at elaborating a more general, updated and less conservative one applicable to several types of reactors.This paper describes the proposed new methodology. It starts with the identification of the deficiencies of the standard methodology when it is applied to a high power reactor. It introduces the minimum vessel thickness as a parameter representing the cumulated imbalance between internal heat load and external cooling. Then it explains how to use that parameter in the evaluation of the safety margin. Although some examples are given as illustrations, it must be kept in mind that this paper proposes a generic methodology but there cannot be any generic conclusion: any reactor design must be evaluated independently.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Florian Fichot",
+      "Laure Carénini",
+      "Stephan Brumm",
+      "Marco Sangiorgi"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.14522v1",
+    "url": "http://arxiv.org/abs/2408.14522v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.02136v1",
+    "title": "A Review on understanding Brain, and Memory Retention and Recall Processes using EEG and fMRI techniques",
+    "abstract": "Human memory -- the learning of new information involves changes at the synaptic level between neurons dedicated for storage of in-formation. Generally, memory is classified as Long-Term Memory and Short-Term Memory. The various types of the memory and their disorder are widely studied using neuroimaging techniques like Electroencephalography (EEG) and functional Magnetic Resonance Imaging (fMRI). Brain is effectively occupied with the capabilities of learning, retention and recall. The brain regions (pre-frontal cortex, associated hippocampus cortices and their interactions with other lobes) involved in memory recall tasks focuses on understanding the memory retention and recall processes. However, due to highly complicated and dynamic mechanisms of brain, the specific regions where information may reside are not completely explored. In this research paper, recent memory literature using EEG and fMRI studies is reviewed to understand the memory retention and recall processes as well as the various brain regions associated with these processes. A number of stimuli which are reported in previous studies are evaluated and discussed. Furthermore, the challenges which are being faced by researchers in EEG and fMRI methodologies are also presented. Recommendations for the future research related to memory retention and recall are also discussed at the end.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Qazi Emad-Ul-Haq",
+      "Muhammad Hussain",
+      "Hatim Aboalsamh",
+      "Saeed Bamatraf",
+      "Aamir Saeed Malik",
+      "Hafeez Ullah Amin"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.02136v1",
+    "url": "http://arxiv.org/abs/1905.02136v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.13197v1",
+    "title": "Stochastic Analysis of Retention Time of Coupled Memory Topology",
+    "abstract": "Recently, it has been experimentally demonstrated that individual memory units coupled in certain topology can provide the intended performance. However, experimental or simulation based evaluation of different coupled memory topologies and materials are costly and time consuming. In this paper, inspired by Glauber dynamics models in non-equilibrium statistical mechanics, we propose a physically accurate generic mathematical framework for analyzing retention times of various coupled memory topologies and materials. We demonstrate efficacy of the proposed framework by deriving closed form expressions for a few popular coupled and uncoupled memory topologies, which match simulations. Our analysis also offers analytical insights helping us estimate the impact of materials and topologies on retention time.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Anirudh Bangalore Shankar",
+      "Avhishek Chatterjee",
+      "Bhaswar Chakrabarti",
+      "Anjan Chakravorty"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.13197v1",
+    "url": "http://arxiv.org/abs/2412.13197v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.02819v1",
+    "title": "Experimental Characterization, Optimization, and Recovery of Data Retention Errors in MLC NAND Flash Memory",
+    "abstract": "This paper summarizes our work on experimentally characterizing, mitigating, and recovering data retention errors in multi-level cell (MLC) NAND flash memory, which was published in HPCA 2015, and examines the work's significance and future potential. Retention errors, caused by charge leakage over time, are the dominant source of flash memory errors. Understanding, characterizing, and reducing retention errors can significantly improve NAND flash memory reliability and endurance. In this work, we first characterize, with real 2Y-nm MLC NAND flash chips, how the threshold voltage distribution of flash memory changes with different retention ages -- the length of time since a flash cell was programmed. We observe from our characterization results that 1) the optimal read reference voltage of a flash cell, using which the data can be read with the lowest raw bit error rate (RBER), systematically changes with its retention age, and 2) different regions of flash memory can have different retention ages, and hence different optimal read reference voltages. Based on our findings, we propose two new techniques. First, Retention Optimized Reading (ROR) adaptively learns and applies the optimal read reference voltage for each flash memory block online. The key idea of ROR is to periodically learn a tight upper bound of the optimal read reference voltage, and from there approach the optimal read reference voltage. Our evaluations show that ROR can extend flash memory lifetime by 64% and reduce average error correction latency by 10.1%. Second, Retention Failure Recovery (RFR) recovers data with uncorrectable errors offline by identifying and probabilistically correcting flash cells with retention errors. Our evaluation shows that RFR essentially doubles the error correction capability.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Yu Cai",
+      "Yixin Luo",
+      "Erich F. Haratsch",
+      "Ken Mai",
+      "Saugata Ghose",
+      "Onur Mutlu"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.02819v1",
+    "url": "http://arxiv.org/abs/1805.02819v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.15290v1",
+    "title": "Analysis of critical points of the In-Vessel Retention safety evaluation",
+    "abstract": "In-Vessel Retention (IVR) strategy for nuclear reactors in case of a Severe Accident (SA) intends to stabilize and retain the corium in the vessel by using the vessel wall as a heat exchanger with an external water loop. This strategy relies on simple actions to be passively taken as soon as SA signal is raised: vessel depressurization and reactor pit flooding. Then, the strategy is successful if the vessel keeps it integrity, which means that the heat flux coming from the corium pool does not exceed the cooling capacity of the External Reactor Vessel Cooling (ERVC) at each location along the vessel wall (no vessel melt-through) and the ablated vessel wall is mechanically resistant. The main uncertainties in this IVR safety evaluation are associated to the thermal load applied from the corium pool to the vessel wall and the resulting minimum vessel thickness after ablation. Indeed, the heat fluxes distribution along the vessel wall is directly dependent on the corium stratification which occurs as aresult of thermochemical interactions in the pool: when liquid steel is mixed with UO2 and partially oxidized Zr coming from the degradation of the fuel and claddings, there is a phase separation between oxide and metal phases due to a gap of miscibility. The primordial impact of the corium behaviour in the lower plenum of the reactor vessel on the IVR safety evaluation was clearly highlighted in the Phenomena Identification Ranking Table (PIRT) on IVR performed in the frame of the European IVMR (In-Vessel Melt Retention) project (Fichot et al., 2019). As a result, the focus is made in this paper on the critical points which impact the value of the minimum vessel thickness orequivalently the maximum heat flux reached at the outer surface of the vessel wall. Efficiency of the ERVC and mechanical resistance of the vessel wall are consequently not discussed here.The main objective is to identify the generic critical situations leading to an excessive heat flux to the vessel wall and the investigation of possible means to avoid them. In this perspective, the calculations of IVR strategy done by the project partners for different reactor designs and accident scenarios were used as a database to identify and understand the occurrence of critical configurations with excessive heat flux to the vessel wall. The results of 25 sequences are used, which correspond to 9 different reactor designs: a generic PWR 900MWe, a PWR 1100MWe with heavy reflector, a generic PWR 1300MWe, a generic Konvoi 1300MWe, a generic German BWR69, aNordic BWR, a BWR-5 Mark II, a VVER1000 and a VVER440/v213. In addition, different SA integral codes (ASTEC, ATHLET-CD, MAAP -combined with MAAP_EDF and PROCOR codes for simulation of lower plenum behavior-, MELCOR and RELAP/SCDAPSIM codes) are used.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Laure Carénini",
+      "Florian Fichot"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.15290v1",
+    "url": "http://arxiv.org/abs/2408.15290v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1910.09591v2",
+    "title": "Contextuality and the fundamental theorems of quantum mechanics",
+    "abstract": "Contextuality is a key feature of quantum mechanics, as was first brought to light by Bohr and later realised more technically by Kochen and Specker. Isham and Butterfield put contextuality at the heart of their topos-based formalism and gave a reformulation of the Kochen-Specker theorem in the language of presheaves. Here, we broaden this perspective considerably (partly drawing on existing, but scattered results) and show that apart from the Kochen-Specker theorem, also Wigner's theorem, Gleason's theorem, and Bell's theorem relate fundamentally to contextuality. We provide reformulations of the theorems using the language of presheaves over contexts and give general versions valid for von Neumann algebras. This shows that a very substantial part of the structure of quantum theory is encoded by contextuality.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Andreas Döring",
+      "Markus Frembs"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.09591v2",
+    "url": "http://arxiv.org/abs/1910.09591v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.05388v1",
+    "title": "ATLAS: Universal Function Approximator for Memory Retention",
+    "abstract": "Artificial neural networks (ANNs), despite their universal function approximation capability and practical success, are subject to catastrophic forgetting. Catastrophic forgetting refers to the abrupt unlearning of a previous task when a new task is learned. It is an emergent phenomenon that hinders continual learning. Existing universal function approximation theorems for ANNs guarantee function approximation ability, but do not predict catastrophic forgetting. This paper presents a novel universal approximation theorem for multi-variable functions using only single-variable functions and exponential functions. Furthermore, we present ATLAS: a novel ANN architecture based on the new theorem. It is shown that ATLAS is a universal function approximator capable of some memory retention, and continual learning. The memory of ATLAS is imperfect, with some off-target effects during continual learning, but it is well-behaved and predictable. An efficient implementation of ATLAS is provided. Experiments are conducted to evaluate both the function approximation and memory retention capabilities of ATLAS.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Heinrich van Deventer",
+      "Anna Bosman"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.05388v1",
+    "url": "http://arxiv.org/abs/2208.05388v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.02046v2",
+    "title": "Contextual Memory Reweaving in Large Language Models Using Layered Latent State Reconstruction",
+    "abstract": "Memory retention challenges in deep neural architectures have ongoing limitations in the ability to process and recall extended contextual information. Token dependencies degrade as sequence length increases, leading to a decline in coherence and factual consistency across longer outputs. A structured approach is introduced to mitigate this issue through the reweaving of latent states captured at different processing layers, reinforcing token representations over extended sequences. The proposed Contextual Memory Reweaving framework incorporates a Layered Latent State Reconstruction mechanism to systematically integrate past contextual embeddings without introducing external memory modules. Experimental results demonstrate improvements in recall accuracy across a range of sequence lengths, with notable gains in the retention of rarely occurring tokens and numerical reasoning consistency. Further analysis of computational efficiency indicates that the additional processing overhead remains within acceptable thresholds, enabling scalability across different model sizes. Evaluations in long-form text generation and ambiguous query resolution highlight the capacity of memory reweaving to enhance continuity and reduce inconsistencies over extended outputs. Attention weight distributions reveal more structured allocation patterns, suggesting that reweaved latent states contribute to improved contextual awareness. The findings establish a framework for refining memory retention mechanisms in language models, addressing long-standing challenges in handling complex, multi-step reasoning tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Frederick Dillon",
+      "Gregor Halvorsen",
+      "Simon Tattershall",
+      "Magnus Rowntree",
+      "Gareth Vanderpool"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.02046v2",
+    "url": "http://arxiv.org/abs/2502.02046v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.29194v1",
+    "title": "Multi-Layered Memory Architectures for LLM Agents: An Experimental Evaluation of Long-Term Context Retention",
+    "abstract": "Long-horizon dialogue systems suffer from semanticdrift and unstable memory retention across extended sessions. This paper presents a Multi-Layer Memory Framework that decomposes dialogue history into working, episodic, and semantic layers with adaptive retrieval gating and retention regularization. The architecture controls cross-session drift while maintaining bounded context growth and computational efficiency. Experiments on LOCOMO, LOCCO, and LoCoMo show improved performance, achieving 46.85 Success Rate, 0.618 overall F1 with 0.594 multi-hop F1, and 56.90% six-period retention while reducing false memory rate to 5.1% and context usage to 58.40%. Results confirm enhanced long-term retention and reasoning stability under constrained context budgets.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Sunil Tiwari",
+      "Payal Fofadiya"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.29194v1",
+    "url": "http://arxiv.org/abs/2603.29194v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.10699v2",
+    "title": "Exploring Synaptic Resonance in Large Language Models: A Novel Approach to Contextual Memory Integration",
+    "abstract": "Contextual memory integration remains a high challenge in the development of language models, particularly in tasks that require maintaining coherence over extended sequences. Traditional approaches, such as self-attention mechanisms and memory-augmented architectures, often prioritize short-term dependencies, leading to fragmentation and inconsistency in long-range contextual understanding. Inspired by principles of synaptic plasticity observed in biological neural systems, a novel mechanism, Synaptic Resonance, is introduced to dynamically reinforce relevant memory pathways during training and inference. Unlike static memory representations, this mechanism continuously adjusts synaptic weight matrices based on contextual relevance, allowing for improved information retention without excessive computational overhead. Evaluations conducted on an open-source language model demonstrate reductions in perplexity, enhancements in contextual coherence, and increased robustness against input noise, highlighting the effectiveness of reinforcement-driven memory modulation. Comparative analysis against baseline models further reveals that the proposed approach achieves higher memory retention efficiency while maintaining computational feasibility. The architectural modifications integrate seamlessly into existing transformer-based frameworks, ensuring stable convergence and efficient inference without sacrificing scalability. Applications benefiting from improved long-term contextual consistency, such as dialogue systems and document summarization, stand to gain from this approach. Empirical findings suggest that dynamically reinforced memory pathways offer a promising alternative to conventional memory mechanisms, addressing longstanding limitations in extended sequence modeling.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "George Applegarth",
+      "Christian Weatherstone",
+      "Maximilian Hollingsworth",
+      "Henry Middlebrook",
+      "Marcus Irvin"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.10699v2",
+    "url": "http://arxiv.org/abs/2502.10699v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.28762v2",
+    "title": "On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers",
+    "abstract": "Modern Text-to-Image (T2I) diffusion models have achieved remarkable semantic alignment, yet they often suffer from a significant lack of variety, converging on a narrow set of visual solutions for any given prompt. This typicality bias presents a challenge for creative applications that require a wide range of generative outcomes. We identify a fundamental trade-off in current approaches to diversity: modifying model inputs requires costly optimization to incorporate feedback from the generative path. In contrast, acting on spatially-committed intermediate latents tends to disrupt the forming visual structure, leading to artifacts. In this work, we propose to apply repulsion in the Contextual Space as a novel framework for achieving rich diversity in Diffusion Transformers. By intervening in the multimodal attention channels, we apply on-the-fly repulsion during the transformer's forward pass, injecting the intervention between blocks where text conditioning is enriched with emergent image structure. This allows for redirecting the guidance trajectory after it is structurally informed but before the composition is fixed. Our results demonstrate that repulsion in the Contextual Space produces significantly richer diversity without sacrificing visual fidelity or semantic adherence. Furthermore, our method is uniquely efficient, imposing a small computational overhead while remaining effective even in modern \"Turbo\" and distilled models where traditional trajectory-based interventions typically fail.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Omer Dahary",
+      "Benaya Koren",
+      "Daniel Garibi",
+      "Daniel Cohen-Or"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.28762v2",
+    "url": "http://arxiv.org/abs/2603.28762v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.17557v1",
+    "title": "Recognition, recall, and retention of few-shot memories in large language models",
+    "abstract": "The training of modern large language models (LLMs) takes place in a regime where most training examples are seen only a few times by the model during the course of training. What does a model remember about such examples seen only a few times during training and how long does that memory persist in the face of continuous training with new examples? Here, we investigate these questions through simple recognition, recall, and retention experiments with LLMs. In recognition experiments, we ask if the model can distinguish the seen example from a novel example; in recall experiments, we ask if the model can correctly recall the seen example when cued by a part of it; and in retention experiments, we periodically probe the model's memory for the original examples as the model is trained continuously with new examples. We find that a single exposure is generally sufficient for a model to achieve near perfect accuracy even in very challenging recognition experiments. We estimate that the recognition performance of even small language models easily exceeds human recognition performance reported in similar experiments with humans (Shepard, 1967). Achieving near perfect recall takes more exposures, but most models can do it in just 3 exposures. The flip side of this remarkable capacity for fast learning is that precise memories are quickly overwritten: recall performance for the original examples drops steeply over the first 10 training updates with new examples, followed by a more gradual decline. Even after 100K updates, however, some of the original examples are still recalled near perfectly. A qualitatively similar retention pattern has been observed in human long-term memory retention studies before (Bahrick, 1984). Finally, recognition is much more robust to interference than recall and memory for natural language sentences is generally superior to memory for stimuli without structure.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "A. Emin Orhan"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.17557v1",
+    "url": "http://arxiv.org/abs/2303.17557v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1191v1",
+    "title": "Unidirectional Error Correcting Codes for Memory Systems: A Comparative Study",
+    "abstract": "In order to achieve fault tolerance, highly reliable system often require the ability to detect errors as soon as they occur and prevent the speared of erroneous information throughout the system. Thus, the need for codes capable of detecting and correcting byte errors are extremely important since many memory systems use b-bit-per-chip organization. Redundancy on the chip must be put to make fault-tolerant design available. This paper examined several methods of computer memory systems, and then a proposed technique is designed to choose a suitable method depending on the organization of memory systems. The constructed codes require a minimum number of check bits with respect to codes used previously, then it is optimized to fit the organization of memory systems according to the requirements for data and byte lengths.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "Muzhir Al-Ani",
+      "Qeethara Al-Shayea"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1191v1",
+    "url": "http://arxiv.org/abs/1002.1191v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.06757v1",
+    "title": "MTMCS-Bench: Evaluating Contextual Safety of Multimodal Large Language Models in Multi-Turn Dialogues",
+    "abstract": "Multimodal large language models (MLLMs) are increasingly deployed as assistants that interact through text and images, making it crucial to evaluate contextual safety when risk depends on both the visual scene and the evolving dialogue. Existing contextual safety benchmarks are mostly single-turn and often miss how malicious intent can emerge gradually or how the same scene can support both benign and exploitative goals. We introduce the Multi-Turn Multimodal Contextual Safety Benchmark (MTMCS-Bench), a benchmark of realistic images and multi-turn conversations that evaluates contextual safety in MLLMs under two complementary settings, escalation-based risk and context-switch risk. MTMCS-Bench offers paired safe and unsafe dialogues with structured evaluation. It contains over 30 thousand multimodal (image+text) and unimodal (text-only) samples, with metrics that separately measure contextual intent recognition, safety-awareness on unsafe cases, and helpfulness on benign ones. Across eight open-source and seven proprietary MLLMs, we observe persistent trade-offs between contextual safety and utility, with models tending to either miss gradual risks or over-refuse benign dialogues. Finally, we evaluate five current guardrails and find that they mitigate some failures but do not fully resolve multi-turn contextual risks.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Zheyuan Liu",
+      "Dongwhi Kim",
+      "Yixin Wan",
+      "Xiangchi Yuan",
+      "Zhaoxuan Tan",
+      "Fengran Mo",
+      "Meng Jiang"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.06757v1",
+    "url": "http://arxiv.org/abs/2601.06757v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.19113v1",
+    "title": "Integration of Contextual Descriptors in Ontology Alignment for Enrichment of Semantic Correspondence",
+    "abstract": "This paper proposes a novel approach to semantic ontology alignment using contextual descriptors. A formalization was developed that enables the integration of essential and contextual descriptors to create a comprehensive knowledge model. The hierarchical structure of the semantic approach and the mathematical apparatus for analyzing potential conflicts between concepts, particularly in the example of \"Transparency\" and \"Privacy\" in the context of artificial intelligence, are demonstrated. Experimental studies showed a significant improvement in ontology alignment metrics after the implementation of contextual descriptors, especially in the areas of privacy, responsibility, and freedom & autonomy. The application of contextual descriptors achieved an average overall improvement of approximately 4.36%. The results indicate the effectiveness of the proposed approach for more accurately reflecting the complexity of knowledge and its contextual dependence.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Eduard Manziuk",
+      "Oleksander Barmak",
+      "Pavlo Radiuk",
+      "Vladislav Kuznetsov",
+      "Iurii Krak",
+      "Sergiy Yakovlev"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.19113v1",
+    "url": "http://arxiv.org/abs/2411.19113v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.07239v3",
+    "title": "Contextual Gesture: Co-Speech Gesture Video Generation through Context-aware Gesture Representation",
+    "abstract": "Co-speech gesture generation is crucial for creating lifelike avatars and enhancing human-computer interactions by synchronizing gestures with speech. Despite recent advancements, existing methods struggle with accurately identifying the rhythmic or semantic triggers from audio for generating contextualized gesture patterns and achieving pixel-level realism. To address these challenges, we introduce Contextual Gesture, a framework that improves co-speech gesture video generation through three innovative components: (1) a chronological speech-gesture alignment that temporally connects two modalities, (2) a contextualized gesture tokenization that incorporate speech context into motion pattern representation through distillation, and (3) a structure-aware refinement module that employs edge connection to link gesture keypoints to improve video generation. Our extensive experiments demonstrate that Contextual Gesture not only produces realistic and speech-aligned gesture videos but also supports long-sequence generation and video gesture editing applications, shown in Fig.1.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Pinxin Liu",
+      "Pengfei Zhang",
+      "Hyeongwoo Kim",
+      "Pablo Garrido",
+      "Ari Shapiro",
+      "Kyle Olszewski"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.07239v3",
+    "url": "http://arxiv.org/abs/2502.07239v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.03324v2",
+    "title": "Cache What Lasts: Token Retention for Memory-Bounded KV Cache in LLMs",
+    "abstract": "Memory and computation remain core bottlenecks in long-horizon LLM inference due to the quadratic cost of self-attention and the ever-growing key-value (KV) cache. Existing strategies for memory-bounded inference, such as quantization, offloading, or heuristic KV eviction, either incur high orchestration costs or rely on unreliable attention-based proxies of importance. We propose TRIM-KV, a novel approach that learns each token's intrinsic importance at creation time via a lightweight retention gate. Each gate predicts a scalar retention score that decays over time, reflecting the long-term utility of the token for a specific layer and head. Tokens with low scores are evicted when the memory budget is exceeded, ensuring that the cache always contains the most critical tokens. TRIM-KV is trained efficiently through distillation from a frozen LLM combined with a capacity loss, requiring only gate fine-tuning and adding negligible inference overhead. Across mathematical reasoning (GSM8K, MATH-500, AIME24), procedural generation (LongProc), conversational long-memory benchmarks (LongMemEval), and long-context understanding (LongBenchV2 and SCBench), TRIM-KV consistently outperforms strong eviction and learnable retrieval baselines, especially in low-memory regimes. Remarkably, it even surpasses full-cache models in some settings, showing that selective retention can serve as a form of regularization, suppressing noise from uninformative tokens. Qualitative analyses further reveal that learned retention scores align with human intuition, naturally recovering heuristics such as sink tokens, sliding windows, and gist compression without explicit design. Beyond efficiency, retention scores provide insights into layer- and head-specific roles, suggesting a new path toward LLM interpretability.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ngoc Bui",
+      "Shubham Sharma",
+      "Simran Lamba",
+      "Saumitra Mishra",
+      "Rex Ying"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.03324v2",
+    "url": "http://arxiv.org/abs/2512.03324v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.05140v2",
+    "title": "Improving 3D NAND Flash Memory Lifetime by Tolerating Early Retention Loss and Process Variation",
+    "abstract": "Compared to planar (i.e., two-dimensional) NAND flash memory, 3D NAND flash memory uses a new flash cell design, and vertically stacks dozens of silicon layers in a single chip. This allows 3D NAND flash memory to increase storage density using a much less aggressive manufacturing process technology than planar NAND flash memory. The circuit-level and structural changes in 3D NAND flash memory significantly alter how different error sources affect the reliability of the memory. In this paper, through experimental characterization of real, state-of-the-art 3D NAND flash memory chips, we find that 3D NAND flash memory exhibits three new error sources that were not previously observed in planar NAND flash memory: (1) layer-to-layer process variation, where the average error rate of each 3D-stacked layer in a chip is significantly different; (2) early retention loss, a new phenomenon where the number of errors due to charge leakage increases quickly within several hours after programming; and (3) retention interference, a new phenomenon where the rate at which charge leaks from a flash cell is dependent on the data value stored in the neighboring cell. Based on our experimental results, we develop new analytical models of layer-to-layer process variation and retention loss in 3D NAND flash memory. Motivated by our new findings and models, we develop four new techniques to mitigate process variation and early retention loss in 3D NAND flash memory. These four techniques are complementary, and can be combined together to significantly improve flash memory reliability. Compared to a state-of-the-art baseline, our techniques, when combined, improve flash memory lifetime by 1.85x. Alternatively, if a NAND flash vendor wants to keep the lifetime of the 3D NAND flash memory device constant, our techniques reduce the storage overhead required to hold error correction information by 78.9%.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Yixin Luo",
+      "Saugata Ghose",
+      "Yu Cai",
+      "Erich F. Haratsch",
+      "Onur Mutlu"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.05140v2",
+    "url": "http://arxiv.org/abs/1807.05140v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.09605v1",
+    "title": "Managed-Retention Memory: A New Class of Memory for the AI Era",
+    "abstract": "AI clusters today are one of the major uses of High Bandwidth Memory (HBM). However, HBM is suboptimal for AI workloads for several reasons. Analysis shows HBM is overprovisioned on write performance, but underprovisioned on density and read bandwidth, and also has significant energy per bit overheads. It is also expensive, with lower yield than DRAM due to manufacturing complexity. We propose a new memory class: Managed-Retention Memory (MRM), which is more optimized to store key data structures for AI inference workloads. We believe that MRM may finally provide a path to viability for technologies that were originally proposed to support Storage Class Memory (SCM). These technologies traditionally offered long-term persistence (10+ years) but provided poor IO performance and/or endurance. MRM makes different trade-offs, and by understanding the workload IO patterns, MRM foregoes long-term data retention and write performance for better potential performance on the metrics important for these workloads.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Sergey Legtchenko",
+      "Ioan Stefanovici",
+      "Richard Black",
+      "Antony Rowstron",
+      "Junyi Liu",
+      "Paolo Costa",
+      "Burcu Canakci",
+      "Dushyanth Narayanan",
+      "Xingbo Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.09605v1",
+    "url": "http://arxiv.org/abs/2501.09605v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1808.01874v1",
+    "title": "Reasoning with Justifiable Exceptions in Contextual Hierarchies (Appendix)",
+    "abstract": "This paper is an appendix to the paper \"Reasoning with Justifiable Exceptions in Contextual Hierarchies\" by Bozzato, Serafini and Eiter, 2018. It provides further details on the language, the complexity results and the datalog translation introduced in the main paper.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Loris Bozzato",
+      "Luciano Serafini",
+      "Thomas Eiter"
+    ],
+    "doi": null,
+    "arxiv_id": "1808.01874v1",
+    "url": "http://arxiv.org/abs/1808.01874v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

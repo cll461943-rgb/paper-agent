@@ -1,0 +1,59 @@
+{
+  "paper_id": "https://openalex.org/W4376167141",
+  "title": "Fast Distributed Inference Serving for Large Language Models",
+  "abstract": "Large language models (LLMs) power a new generation of interactive AI applications exemplified by ChatGPT. The interactive nature of these applications demands low latency for LLM inference. Existing LLM serving systems use run-to-completion processing for inference jobs, which suffers from head-of-line blocking and long latency. We present FastServe, a distributed inference serving system for LLMs. FastServe exploits the autoregressive pattern of LLM inference to enable preemption at the granularity of each output token. FastServe uses preemptive scheduling to minimize latency with a novel skip-join Multi-Level Feedback Queue scheduler. Based on the new semi-information-agnostic setting of LLM inference, the scheduler leverages the input length information to assign an appropriate initial queue for each arrival job to join. The higher priority queues than the joined queue are skipped to reduce demotions. We design an efficient GPU memory management mechanism that proactively offloads and uploads intermediate state between GPU memory and host memory for LLM inference. We build a system prototype of FastServe and experimental results show that compared to the state-of-the-art solution vLLM, FastServe improves the throughput by up to 31.4x and 17.9x under the same average and tail latency requirements, respectively.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Bingyang Wu",
+    "Yinmin Zhong",
+    "Zili Zhang",
+    "Liu, Shengyu",
+    "Liu, Fangyue",
+    "Sun, Yuanhang",
+    "Huang, Gang",
+    "Liu, Xuanzhe",
+    "Jin, Xin"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.05920",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.05920",
+  "citation_count": 23,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Inference",
+      "Queue",
+      "Scheduling (production processes)",
+      "Preemption",
+      "Distributed computing",
+      "Real-time computing",
+      "Computer network",
+      "Operating system",
+      "Artificial intelligence",
+      "Engineering",
+      "Operations management"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3191866865",
+      "https://openalex.org/W840708677",
+      "https://openalex.org/W2361541374",
+      "https://openalex.org/W1439300391",
+      "https://openalex.org/W1970491116",
+      "https://openalex.org/W863118052",
+      "https://openalex.org/W3152620006",
+      "https://openalex.org/W127398521",
+      "https://openalex.org/W4387006201",
+      "https://openalex.org/W4319869621"
+    ]
+  }
+}

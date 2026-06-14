@@ -1,0 +1,52 @@
+{
+  "paper_id": "pubmed:41830877",
+  "title": "PHENO-RAG: An artificial intelligence tool for guideline-informed management decisions in hepatocellular carcinoma.",
+  "abstract": "Management of hepatocellular carcinoma (HCC) poses unique challenges due to its development in the context of chronic liver disease and the availability of multiple treatment options. Although multidisciplinary team (MDT) management improves outcomes, universal MDT discussion is resource-intensive, underscoring the need for effective patient-stratification tools. We developed a novel large language model (LLM) framework, PHENO-RAG, that integrates contemporary HCC management guidelines with patient-specific clinical data. We retrospectively analysed 489 clinical reports from 424 patients treated at a tertiary referral centre between September 2020 and November 2024. Eight locally hosted LLMs were tested: Llama-3-8B/70B, GPT-oss-20B/120B, Qwen-3-8B/80B, and Falcon-7B/40B. Two ablation studies assessed clinical concept extraction (using REGEX, pure LLMs, and hybrid REGEX+LLM pipelines) and decision generation across six configurations (zero-shot/few-shot with unstructured vs. structured notes, with and without retrieval-augmented generation [RAG] using clinical guidelines). The primary outcome was exact-match accuracy against real-world clinical decisions for treatment allocation, clinical complexity, and recommendation for MDT discussion. GPT-oss-120B+REGEX achieved the best overall agreement (median F1 for categorical concepts 0.92 [95% CI 0.85-0.95]; median intraclass correlation coefficient for numerical parameters 0.93 [95% CI 0.85-0.94]). For decision support, accuracy increased with structured inputs, few-shot exemplars, and RAG across all models. Under the strongest configuration (few-shot+RAG on structured notes), GPT-oss-120B reached 86.5% exact match for treatment allocation, 88.6% for clinical complexity, and 66.9% for MDT recommendation; Llama-3-70B achieved 80.8%, 83.4%, and 63.0%, respectively. Performance in the baseline zero-shot, unstructured-note configuration was substantially lower. PHENO-RAG delivers accurate, guideline-concordant support for HCC treatment allocation and complexity grading from real-world notes, with performance driven less by model family alone than by hybrid extraction, input structuring, in-context examples, and evidence retrieval. MDT referral remains the hardest task - appropriate for prioritization rather than automation. Prospective, multi-site and multimodal validation is warranted. Clinical decisions in the management of hepatocellular carcinoma are complex and multiparametric, requiring resource-intensive multidisciplinary care and creating challenges for optimal treatment allocation across different healthcare settings. We developed PHENO-RAG, a large language model-based framework that combines patient phenotyping through automated clinical information extraction from real-world clinical notes with treatment decision support, based on international guidelines. Our framework demonstrated concordance of 86.5% with real-world clinical decisions for treatment allocation and 88.6% for clinical complexity assessment, suggesting potential to enhance decision consistency and quality of care. In clinical practice, this AI-assisted framework could help standardize hepatocellular carcinoma management workflows, support training of hepatology and oncology fellows, assist in quality assurance programs, and facilitate more systematic identification of complex cases requiring multidisciplinary consultation, particularly in resource-constrained settings.",
+  "year": 2026,
+  "venue": "JHEP reports : innovation in hepatology",
+  "authors": [
+    "Ciro Celsa",
+    "Mauro Giuffrè",
+    "Gabriele Di Maria",
+    "Salvatore Gruttadauria",
+    "Ugo Palazzo",
+    "Roberto Miraglia",
+    "Luigi Maruzzelli",
+    "Duilio Pagano",
+    "Roberto Cannella",
+    "Federico Midiri",
+    "Roberta Ciccia",
+    "Mauro Salvato",
+    "Alessandro Grova",
+    "Sofia Rao",
+    "Gaetano Giusino",
+    "Alessio Quartararo",
+    "Guido Cusimano",
+    "Alba Sparacino",
+    "Valeria Gaudioso",
+    "Valeria Genovese",
+    "Rosangela Montenegro",
+    "Claudia La Mantia",
+    "Francesco Mercurio",
+    "Simone Kresevic",
+    "Milos Ajcevic",
+    "Giuseppe Cabibbo",
+    "Giansalvo Cirrincione",
+    "Calogero Cammà"
+  ],
+  "doi": "10.1016/j.jhepr.2025.101715",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41830877/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41830877"
+  }
+}

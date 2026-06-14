@@ -1,0 +1,943 @@
+[
+  {
+    "paper_id": "pubmed:42279817",
+    "title": "Dual-Guided Semi-Supervised Semantic Segmentation for Citrus Quality Evaluation.",
+    "abstract": "Automated defect detection in precision agriculture serves as a critical technology for enhancing the quality of agricultural products. Although supervised-only semantic segmentation has demonstrated remarkable performance in citrus surface defect detection, it relies heavily on training with large-scale labeled data, which results in prohibitive acquisition costs. Semi-supervised learning mitigates reliance on labeled data by generating pseudo-labels. However, existing semi-supervised segmentation methods still face challenges. On the one hand, the instability of pseudo-labels and the propagation of noise can mislead the training of semi-supervised models. On the other hand, due to the lack of semantic constraints in feature learning, models often suffer from insufficient feature discriminability when handling complex samples, such as citrus surface defects characterized by similar textures and blurred boundaries. Therefore, this study proposes UP-ETS, a dual-guided semi-supervised semantic segmentation model based on the Mean Teacher-Student framework, specifically designed for the segmentation of complex citrus surface defects. UP-ETS employs Uncertainty Estimation (UE) based on Kullback-Leibler (KL) divergence to quantify the prediction discrepancy between the teacher and student models on blurred and ambiguous pixels. This mechanism guides the model to dynamically adjust weights, thereby reducing noise propagation and enhancing pseudo-label stability under complex citrus surface textures. Prototype Contrastive Learning (PCL) is utilized to align pixel-level features of difficult samples with class prototypes, optimizing the feature discriminability for complex citrus surfaces. Experimental results demonstrate that the UP-ETS model exhibits superior semi-supervised segmentation performance. Notably, at a labeled data ratio of only 1/16, the dice improved from 85.57% to 87.76% compared to the supervised-only baseline. Furthermore, the model shows significant performance enhancements in segmenting difficult samples, such as small targets, complex boundaries, and blurred regions. The results of ablation studies and t-SNE visualization prove the effectiveness of the proposed UE and PCL. These two methods synergistically guide the model to construct a feature space that is better structured and highly discriminative. Furthermore, UP-ETS outperforms various representative semi-supervised segmentation models in terms of segmentation performance, parameters, and inference speed. In cross-dataset validation, the model exhibits robust generalization capabilities, achieving performance comparable to supervised-only methods trained on the full augmented dataset. Consequently, the framework introduced in this study effectively mitigates the heavy dependency on annotated datasets, providing significant practical value for agricultural deployment.",
+    "year": 2026,
+    "venue": "Foods (Basel, Switzerland)",
+    "authors": [
+      "Xufeng Xu",
+      "Ruokai Guo",
+      "Kai Guo",
+      "Zetong Li",
+      "Zichao Wei",
+      "Xiuqin Rao"
+    ],
+    "doi": "10.3390/foods15112029",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42279817/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42279817"
+    }
+  },
+  {
+    "paper_id": "pubmed:42277359",
+    "title": "Scene-aware contrastive learning with multi-scale domain-invariant feature alignment for robust visual recognition under complex scenes.",
+    "abstract": "Deep learning models trained on curated datasets often fail when deployed in complex visual scenes involving illumination drift, occlusion, adverse weather, and cross-domain sensor variation. We propose an end-to-end framework that jointly addresses representational robustness and domain-invariant transfer through two integrated components. First, a scene-aware contrastive learning strategy generates positive pairs via physically grounded scene transformations-simulating fog, rain, illumination gradients, and structured occlusion-and employs an adaptive difficulty weighting mechanism that steers the contrastive gradient toward degradation conditions the encoder finds hardest to resolve. Second, a multi-scale domain-invariant feature alignment method applies distributional matching at multiple depths of the encoder hierarchy, coupled with a cross-scale consistency regularizer that prevents semantic drift between layers. The framework requires no target-domain data and operates with minimal or no annotation. Experiments on PACS and a cross-domain scene recognition benchmark (BDD-City) demonstrate that our method outperforms representative supervised, self-supervised, domain generalization, and domain adaptation baselines, with average cross-domain accuracy gains of 3.5 and over 4% points, respectively. Gains are most pronounced under severe degradation conditions, where baseline methods suffer the steepest performance drops. Ablation analysis confirms that each component contributes independently and that their interaction is synergistic.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Wenjun Li"
+    ],
+    "doi": "10.1038/s41598-026-57271-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42277359/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42277359"
+    }
+  },
+  {
+    "paper_id": "pubmed:42272749",
+    "title": "Advancing Normal Tissue Complication Probability Modeling with Supervised Contrastive Learning for Predicting Osteoradionecrosis.",
+    "abstract": "Normal tissue complication probability (NTCP) modeling using dose-volume histograms (DVHs) is fundamentally challenged by high dimensionality, severe multicollinearity, and substantial overlap between DVH profiles of patients with differing toxicity outcomes, limiting the effectiveness of classical classification approaches. We introduce SC-NTCP, a supervised contrastive learning framework that transforms DVH data into a compact, separable latent representation optimized for predicting osteoradionecrosis (ORN) in head and neck cancer patients. Rather than relying on raw, high-dimensional DVH features, SC-NTCP explicitly maximizes intra-class similarity and inter-class separability within the embedding space, enabling more accurate downstream classification. Using a cohort of head and neck cancer patients, we benchmarked SC-NTCP against logistic regression, support vector machines, multilayer perceptrons, and convolutional neural networks. SC-NTCP demonstrated superior discrimination (AUC = 0.77), improved calibration, and enhanced interpretability via gradient-based feature attribution, while the integration of clinical covariates further augmented predictive performance. By addressing the inherent limitations of DVH data, SC-NTCP offers a principled and interpretable approach for robust radiation toxicity prediction, with the potential to inform personalized treatment planning and improve clinical outcomes.",
+    "year": 2026,
+    "venue": "Proceedings of the ... Symposium on Applied Computing. Symposium on Applied Computing",
+    "authors": [
+      "Eric Ababio Anyimadu",
+      "Xinhua Zhang",
+      "Clifton David Fuller",
+      "G Elisabeta Marai",
+      "Guadalupe Canahuate"
+    ],
+    "doi": "10.1145/3748522.3779983",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42272749/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42272749"
+    }
+  },
+  {
+    "paper_id": "pubmed:42270722",
+    "title": "A CLIP-based framework for multiclass lung histopathology classification with prompt engineering and class-imbalance-aware focal optimization.",
+    "abstract": "Lung cancer remains one of the leading causes of cancer-related mortality worldwide, and accurate histopathological classification is essential for timely diagnosis and treatment planning. This study presents a Contrastive Language Image Pretraining (CLIP)-based framework for multiclass lung histopathology classification, designed to distinguish among benign lung tissue, lung adenocarcinoma, and lung squamous cell carcinoma. The proposed approach leverages a pretrained CLIP ViT-B/32 backbone, domain-specific prompt engineering, multimodal image text pairing, and similarity-based classification within a shared embedding space. To strengthen convergence and robustness during fine-tuning, the training pipeline incorporates data augmentation, Focal Loss, AdamW optimization, OneCycle learning rate scheduling, mixed-precision training, gradient clipping, and early stopping. The dataset is organized into separate training, validation, and testing splits, with the reported training and validation partitions containing 3,500 and 500 images per class, respectively. Experimental training on a Tesla T4 GPU demonstrated steady performance improvement across epochs, with the best validation accuracy reaching 95.20%, accompanied by a macro AUC of 0.9870 and a micro AUC of 0.9877, before early stopping was triggered at epoch 23. These findings indicate that integrating CLIP with pathology-specific text prompts provides a strong and reliable framework for automated lung cancer histopathology classification, with promising potential for future intelligent digital pathology systems.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sadia Munawar",
+      "Fareeha Hanif",
+      "Ali Raza",
+      "Muhammad Farman",
+      "Evren Hincal"
+    ],
+    "doi": "10.1038/s41598-026-55588-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42270722/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42270722"
+    }
+  },
+  {
+    "paper_id": "pubmed:42268754",
+    "title": "Enhancing Cross-scale Feature Mutual Information via Heterogeneous Graph Contrastive Learning for Drug-Target Binding Affinity Prediction.",
+    "abstract": "Predicting drug-target binding affinity is a crucial step in drug discovery, with the aim of estimating the strength of interactions between unknown drug-target pairs. In recent years, with the advancement of graph neural networks and self-supervised learning, numerous novel approaches have been proposed by researchers. However, these methods still exhibit the following drawbacks: 1) They only consider drug-target interaction information when learning relationship features, resulting in low information density and an inability to obtain high-quality representations. 2) The integration of cross-scale features is rigid, with features across different scales showing no correlation, failing to reflect the consistency of the same entity's features across different perspectives. 3) They employ outdated Graph Contrastive Learning (GCL) strategies, which have been proven to yield highly biased estimates. Therefore, to address these challenges, we propose a method that Enhances cross-scale feature Mutual information via Heterogeneous Graph Contrastive Learning for predicting Drug-Target binding Affinity (EMHGCL-DTA). The proposed model reconstructs the relationship network on the macro scale, incorporating similarity information while preserving drug-target interaction data. Furthermore, to establish a connection between macro-scale and micro-scale features, our similarity information is derived directly from the molecular structures of drugs and targets. In addition, we introduce a pertinent unbiased feature augmentation strategy to enhance the representations of drugs and targets. The novelty and effectiveness of the EMHGCL-DTA model are validated on two datasets, where it outperforms state-of-the-art methods.",
+    "year": 2026,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Xiao Kang",
+      "Licai Zhang",
+      "Zekun Wang",
+      "Xinxing Yang",
+      "Lin Wang",
+      "Genke Yang",
+      "Jian Chu"
+    ],
+    "doi": "10.1109/JBHI.2026.3702061",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42268754/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42268754"
+    }
+  },
+  {
+    "paper_id": "pubmed:42253102",
+    "title": "SpaVGMC: A Unified Representation Learning Framework via Structural and Semantic Alignment in Spatial Transcriptomics.",
+    "abstract": "Spatial transcriptomics technologies profile gene expression within its native spatial context, offering new insights into tissue organization and disease. However, accurate spatial domain identification remains challenging due to local oversmoothing, impaired topological fidelity, and insufficient modeling of global semantic structures. To address these challenges, we propose SpaVGMC, a unified representation learning framework that jointly models structural dependencies and transcriptional semantics. The framework integrates structured variational representation learning, structural information alignment, and semantic alignment, allowing the capture of probabilistic uncertainty, multiscale spatial dependencies, and global transcriptional organization. Specifically, SpaVGMC formulates representation learning as a structured variational inference process with context-aware message-passing. A structural information alignment mechanism preserves topological fidelity by aligning latent embeddings with the spatial graph via mutual information at both the edge and neighborhood levels. In addition, a semantic alignment mechanism organizes representations according to transcriptional similarity through distribution-aware contrastive learning without requiring data augmentation. By jointly modeling representations, structures, and semantics, SpaVGMC learns robust, discriminative, and biologically interpretable embeddings. Extensive experiments across diverse spatial transcriptomics data sets demonstrate that SpaVGMC consistently outperforms state-of-the-art methods in spatial domain identification, showing improved agreement with tissue structures and enhanced detection of fine-grained subdomains. Collectively, these results establish SpaVGMC as a robust and scalable framework for spatial omics analysis.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Aitian Fan",
+      "Junliang Shang",
+      "Xiaohan Zhang",
+      "Wenjing Su",
+      "Defu Qiu",
+      "Hanxiang Wang",
+      "Jin-Xing Liu"
+    ],
+    "doi": "10.1021/acs.jcim.6c01121",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42253102/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42253102"
+    }
+  },
+  {
+    "paper_id": "pubmed:42245942",
+    "title": "Dual contextual learning for semi-supervised medical image classification.",
+    "abstract": "Semi-supervised learning (SSL) has emerged as a promising paradigm for medical image classification, addressing the critical challenge of limited labeled data in healthcare where expert annotation is expensive and time-consuming. Existing pseudo-labeling methods generate labels for each unlabeled sample independently based on model confidence, which often proves unreliable when dealing with ambiguous pathological features in early-stage lesions or borderline cases, leading to error accumulation. However, medical images contain rich contextual information-samples with similar pathological characteristics naturally cluster in feature space, and maintaining consistency within these neighborhoods could provide more robust supervision. In this paper, we propose a Hierarchical Semantic Calibration (HSC) framework that leverages these contextual relationships to enhance pseudo-labeling reliability. We introduce two complementary modules: (1) a local semantic neighborhood alignment that enforces consistency among mutual k-nearest neighbors sharing similar pathological features, reducing isolated labeling errors through collective evidence; and (2) a global cluster-prototype calibration that aligns class-level representations across different augmented views through contrastive learning, ensuring disease categories maintain consistent patterns despite imaging variations. Additionally, we introduce a neighborhood-prototype consistency regularization that bridges these two scales, adaptively weighting the alignment between local neighborhoods and global prototypes based on neighborhood compactness, ensuring hierarchical consistency from local pathological features to global disease patterns. Extensive experiments demonstrate that HSC consistently outperforms state-of-the-art methods, achieving 92.24% accuracy on NCT-CRC-HE with only 200 labeled samples (2.97% improvement over PEFAT) and 94.17% on ISIC2018 with 20% labeled data (2.21% improvement).",
+    "year": 2026,
+    "venue": "Frontiers in medicine",
+    "authors": [
+      "Jiaying Liu",
+      "Chengyang Li",
+      "Sangsha Fang",
+      "Fangfang Deng",
+      "Qinghu He",
+      "Miao Cao"
+    ],
+    "doi": "10.3389/fmed.2026.1810643",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42245942/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42245942"
+    }
+  },
+  {
+    "paper_id": "pubmed:42239199",
+    "title": "Leveraging Lineage Barcodes as Natural Augmentations for Contrastive Learning of Cell Fate in scRNA-seq Data.",
+    "abstract": "Deciphering how cells commit to future fates is essential for developing precision therapeutics that can reprogram stem cells or modulate immune functions. However, isolating these fate-determining signals in single-cell lineage tracing (scLT) remains challenging because differentiation programs are often confounded by unrelated processes like the cell cycle. To address this, we introduce Lineage-aware Contrastive Learning (LCL), a framework that treats inheritable lineage barcodes as a \"natural\" data augmentation to isolate subtle, lineage-specific signals. LCL utilizes a semi-supervised architecture to align unlabeled cells, facilitating the transfer of lineage structures to clinical datasets where explicit barcoding is unavailable. We demonstrate LCL's utility by predicting future cell-type compositions from early-time points, effectively modeling longitudinal fate commitment from cross-sectional data. Benchmarking on hematopoietic and fibroblast systems shows that LCL significantly outperforms standard models like scVI, establishing contrastive learning as a scalable paradigm for understanding and potentially manipulating cellular differentiation.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Shizhao Joshua Yang",
+      "Yixin Wang",
+      "Kevin Z Lin"
+    ],
+    "doi": "10.1101/2024.10.28.620670",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42239199/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42239199"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224305",
+    "title": "Evaluating mobile app performance through sentiment analysis with SimCLR and MobileBERT.",
+    "abstract": "Mobile apps have significantly enhanced user engagement and convenience, providing seamless access to services anytime, anywhere. This paper presents a sentiment analysis (SA) model comprising SimCLR (Simple Contrastive Learning of Representations) and MobileBERT to measure the perceived performance of the mobile apps. The reviews of mobile apps are manually labeled as High and Low based on performance parameters (insightfulness, transparency, pertinence, precision, consistency, elaboration, and practical usability insights). These labels are aligned with attitudinal components, i.e., appreciation and judgment from appraisal theory. Appreciation concerns insightfulness, transparency, and pertinence of mobile app features, while judgment pertains to precision, consistency, elaboration, and practical usability. By integrating appraisal theory into this proposed model, a more comprehensive insight into user sentiment is achieved as compared to traditional SA models, which are heavily dependent on a very limited set of sentiment categories, i.e., positive and negative. The accuracy of manual annotation is ensured by the SHAP (SHapley Additive exPlanations) method of Explainable AI (XAI). In this study, SimCLR, a self-supervised learning framework, is employed to improve feature extraction and enhance the model's ability to generalize across different datasets, while MobileBERT, a lightweight transformer model for sentiment classification, ensures computational efficiency and high performance. The MobileBERT makes the proposed approach scalable, efficient, and highly suitable for real-time SA in resource-limited environments. Knowledge distillation is incorporated to teach a student model that is similar to the teacher model, increasing the robustness of the system. In this work, the Augmentation of data by replacing synonyms in the data using WordNet increases the quantity of the training data to make the model more robust to linguistic variations. The proposed model is optimized using the PCA (Principal Component Analysis) method for dimensionality reduction. The Optuna method is used for hyperparameter optimization, automating the search for the most effective configuration, including learning rate, batch sizes, etc. K-fold stratified cross-validation ensures model robustness. The results demonstrated that the integration of SimCLR, MobileBERT, distillation, data augmentation techniques, and fine-tuning using Optuna provides a highly efficient and accurate SA-based model, with a mean fold accuracy and ROC AUC of 88.63% and 90.91%, respectively. This approach offers a scalable solution for NLP (Natural Language Processing) tasks. The proposed approach will be highly beneficial not only for the developers, yielding a deeper and nuanced understanding of the user feedback to identify specific areas for improvement in app performance, but also to stakeholders like marketers, product managers, and user experience (UX) researchers.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Ruping Zhang",
+      "Aman Ullah",
+      "Khair Ullah Khan",
+      "Muhammad Nawaz Khan",
+      "Rehan Tariq Chohan",
+      "Farhan Aadil"
+    ],
+    "doi": "10.1371/journal.pone.0349555",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224305/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224305"
+    }
+  },
+  {
+    "paper_id": "pubmed:42223026",
+    "title": "MPMFMol: Multitask Self-Supervised Pretraining with Multimodal Fine-Tuning for Molecular Property Prediction.",
+    "abstract": "Molecular property prediction is essential in drug discovery for early-stage compound evaluation. Recently, contrastive learning has demonstrated significant potential under limited labeled data by constructing augmented views. However, current augmentation strategies often disrupt molecular semantics and ignore chemical priors, limiting representation quality. Moreover, molecular data is inherently multimodal, including graphs, fingerprints, and sequences, yet how to effectively integrate their complementary information remains challenging. Therefore, we propose MPMFMol, a unified framework that integrates multitask self-supervised pretraining with multimodal fine-tuning for molecular property prediction. During pretraining, we construct heterogeneous augmented views based on molecular fragments to preserve original molecular semantics, enabling the graph encoder to capture fragment-level information. Meanwhile, fingerprint features are integrated into a multitask learning objective, reducing reliance on negative sampling and enhancing the encoder's representation capability. During fine-tuning, we further incorporate functional group and SMILES sequence information and design a stage-aware modality fusion strategy. Specifically, pretrained graph features are injected into the initial representation of functional groups to guide feature extraction and then fused with SMILES features to enable deep cross-modal interaction and enhance downstream predictive performance. Experimental results on six classification and three regression data sets demonstrate that MPMFMol outperforms state-of-the-art baselines.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Yan Xia",
+      "An Xiong",
+      "Yike Wang",
+      "Junlin Xu",
+      "Yajie Meng",
+      "Leyi Wei",
+      "Quan Zou",
+      "Feifei Cui",
+      "Zilong Zhang",
+      "Xiulai Li"
+    ],
+    "doi": "10.1021/acs.jcim.5c03071",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42223026/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42223026"
+    }
+  },
+  {
+    "paper_id": "pubmed:42204193",
+    "title": "PSCSE: prompt-based contrastive learning with sample filtering for unsupervised sentence embedding.",
+    "abstract": "Unsupervised sentence representation learning is critical in natural language processing. Recently, contrastive learning methods achieved remarkable performance by optimizing the alignment and uniformity of embedding spaces. Nevertheless, the dominant methods mainly focus on the data augmentation for the positive samples but ignore the sampling approach for the negative samples. Most methods rely on the random in-batch sampling approach for the generation of the negative samples. This approach could result in false negatives and create sampling biases for the model's discriminative ability. To address this problem, we propose a new method prompt-based contrastive learning with sample filtering for unsupervised sentence embedding (PSCSE). In the proposed model, we used the synthesized hard negatives generated by the \"NOT\"-style prompts (e.g., \"This sentence: [X] does not mean [MASK]\") to optimize the uniformity of the learned representations. In addition, we used the auxiliary encoder for the sample filtering approach to address the false negatives. We conducted experiments on the semantic textual similarity dataset and achieved remarkable performance by surpassing the dominant methods SimCSE, E-SimCSE, and PromptBERT by up to 1.0 points in the average Spearman's correlation score.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Biao Li",
+      "Xuebing Yang",
+      "LiPing Xie"
+    ],
+    "doi": "10.1038/s41598-026-52560-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42204193/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42204193"
+    }
+  },
+  {
+    "paper_id": "pubmed:42184117",
+    "title": "Identifying batch-integrated domains from spatial transcriptomics via graph autoencoder with contrastive learning based on cross-modality and data augmentation.",
+    "abstract": "Spatially resolved transcriptomics (SRT) allows for the comprehensive profiling of gene expression while preserving spatial context, advancing the study of tissue architecture. However, existing computational approaches still face key limitations, particularly the insufficient exploitation of histology information and the lack of cross-modal meaningful contrastive strategies for biological analyses. To overcome these challenges, we propose GCAST, a graph contrastive autoencoder framework for spatial transcriptomics that seamlessly integrates multimodal SRT data. GCAST adopts a self-supervised strategy to derive biologically meaningful representations directly from histology images when available. GCAST constructs dual graph views based on data augmentation and introduces a novel contrastive learning designed to leverage histology-weighted and gene-weighted features and improve biological interpretability. In addition, GCAST employs a block-diagonal graph construction to automatically align multiple datasets, achieving batch-effect correction without manual intervention. The framework not only captures spatial gene expression patterns to identify tissue domains but also adapts to datasets with or without histological images and supports the integration of multiple datasets for joint analyses. Overall, GCAST provides a unified and biologically informed framework that has the potential to facilitate deeper analyses of spatial transcriptomics.",
+    "year": 2026,
+    "venue": "Briefings in bioinformatics",
+    "authors": [
+      "Yexuan Mao",
+      "Lijun Quan",
+      "Xiangyu Chen",
+      "Siyuan Wang",
+      "Guozheng Zhang",
+      "Siqi Li",
+      "Yelu Jiang",
+      "Liangpeng Nie",
+      "Tingfang Wu",
+      "Lingkun Meng",
+      "Qiang Lyu"
+    ],
+    "doi": "10.1093/bib/bbag248",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42184117/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42184117"
+    }
+  },
+  {
+    "paper_id": "pubmed:42184115",
+    "title": "KSDiffusion: conditional diffusion for kinase-specific phosphorylation site prediction under data-limited and imbalanced regimes.",
+    "abstract": "Protein phosphorylation governs cellular signaling, making accurate identification of kinase-specific sites essential for understanding regulatory and disease mechanisms. Although computational approaches have shown promise in inferring kinase specificity, most existing methods primarily rely on local sequence patterns and remain limited in their ability to capture broader contextual information. More critically, experimentally validated kinase-substrate data are inherently scarce and highly imbalanced across kinase groups, substantially restricting the generalization performance of purely discriminative models, especially for underrepresented kinases. To address these challenges, we propose KSDiffusion, a unified framework for kinase-specific phosphorylation site prediction explicitly designed for data-limited and imbalanced regimes. KSDiffusion integrates a protein language model with task-aware conditional diffusion-based generative modeling. Specifically, an ESM-2-based encoder is employed to extract context-aware peptide representations enriched with evolutionary and structural information, while supervised contrastive learning further enhances kinase-specific discriminability in the embedding space. To alleviate data scarcity for rare kinase groups, we introduce a conditional diffusion model, termed KS-DiT, which generates biologically plausible and kinase-consistent synthetic representations that directly support downstream prediction. Comprehensive experiments across kinase groups spanning low-, medium-, and large-data regimes demonstrate that KSDiffusion consistently outperforms representative baseline methods. In particular, substantial improvements are achieved for data-scarce kinase groups, with AUC gains of up to $\\sim $15%, while maintaining competitive performance when sufficient training data are available. These results underscore the regime-dependent effectiveness of conditional diffusion-based augmentation and highlight the value of integrating protein language models with task-aware generative modeling for robust kinase-specific phosphorylation site prediction under realistic data constraints.",
+    "year": 2026,
+    "venue": "Briefings in bioinformatics",
+    "authors": [
+      "Shi Qiu",
+      "Chunguo Wu",
+      "Yuxiang Ma",
+      "Songye Gao",
+      "Limin Wang",
+      "Yanchun Liang",
+      "Xiaohu Shi"
+    ],
+    "doi": "10.1093/bib/bbag257",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42184115/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42184115"
+    }
+  },
+  {
+    "paper_id": "pubmed:42151493",
+    "title": "Deep transferable label propagation with prototypical augmentation.",
+    "abstract": "Domain adaptation (DA) seeks to utilize ample labeled data from a source domain to boost the generalization capability of models on an unlabeled target domain with divergent data distributions. Label Propagation (LP) has emerged as an efficient semi-supervised learning paradigm for DA, transferring labels between the source and target domains based on a similarity graph. Nevertheless, existing LP-based DA methods still face significant challenges: (1) Semantic insufficiency in the source training domain impairs the performance of classes with sparse structures, particularly minority classes; (2) Generated pseudo-labels exhibit low reliability due to ambiguous feature distributions; (3) The two-phase architecture decouples domain-invariant feature learning from label propagation, thus failing to achieve mutual enhancement between these two processes for DA tasks; (4) Sample-level graph construction incurs prohibitive computational costs and poor scalability when handling large-scale datasets. To address these issues, we propose a novel DA strategy, Deep Transferable Label Propagation (DTLP), that integrates prototypical augmentation techniques. Specifically, DTLP embeds three core modules into a unified end-to-end system: (1) Prototype-guided feature augmentation, termed Prototypical Augmentation (ProAug), which enriches the semantic content of the source domain by interpolating samples with class prototypes to mitigate semantic deficiency; (2) Prototype graph-based label propagation, which constructs a class-level prototypical graph rather than a sample-level one to reduce computational complexity and alleviate class imbalance; (3) Domain alignment via prototypical contrastive learning, which facilitates dynamic mutual optimization between domain-invariant feature extraction and robust label propagation while narrowing domain discrepancy. Comprehensive experiments on various benchmark datasets demonstrate that the proposed DTLP outperforms state-of-the-art LP-based DA methods, validating its effectiveness and generalizability.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Yufang Dan",
+      "Li Zhu",
+      "Di Zhou"
+    ],
+    "doi": "10.1038/s41598-026-53642-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42151493/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42151493"
+    }
+  },
+  {
+    "paper_id": "pubmed:42143956",
+    "title": "STMamba-GC: Spatiotemporal Mamba with graph contrastive learning for next POI recommendation.",
+    "abstract": "Next Point-of-Interest (POI) recommendation serves as a fundamental task in location-based services, enhancing personalized user engagement and supporting intelligent business decisions. Despite advances in sequential modeling and graph neural networks, two key challenges persist. First, sparse user check-in data and dynamic preference shifts hinder the learning of stable and accurate user representations. Second, conventional sequential models employ static fusion mechanisms for spatiotemporal dependencies, limiting their capacity to adapt to varying mobility contexts where temporal and spatial factors contribute differently. To address these challenges, we propose the Spatiotemporal Mamba with Graph Contrastive learning network (STMamba-GC). Our framework constructs three complementary graph views-user transitions, semantic patterns, and geographic proximity-and employs graph augmentation with contrastive learning to extract robust preference representations from sparse data. We further design a spatiotemporal gated fusion Mamba module that dynamically balances temporal patterns and spatial constraints through hierarchical adaptive gating and distance-weighted historical state updates. A multi-task learning mechanism jointly optimizes POI prediction and graph contrastive objectives, providing complementary supervision for improved accuracy. Experiments on NYC and TKY datasets demonstrate that STMamba-GC achieves substantial improvements over state-of-the-art baselines, with relative gains of 10.065% in top-10 accuracy and 8.663% in top-20 accuracy on NYC, and 9.62% in MRR on TKY.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Yifei Ma",
+      "Ze Wang",
+      "Xianjie Qiu",
+      "Wenlong Liu",
+      "Ji Zhang"
+    ],
+    "doi": "10.1016/j.neunet.2026.109087",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42143956/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42143956"
+    }
+  },
+  {
+    "paper_id": "pubmed:42089688",
+    "title": "Classifying Multistate DNA Origami: An Automated Approach with Minimal Labeling and Confidence-Based Filtering.",
+    "abstract": "DNA origami nanostructures can adopt multiple conformational states, making an accurate and rapid classification essential for advancing nanoscale fabrication. Although atomic force microscopy (AFM) provides indispensable structural validation, manual per-object labeling for classification is a persistent bottleneck. Here, we introduce an automated classification framework that minimizes user annotation while maintaining high accuracy. The pipeline employs a confidence-based filter to flag uncertain or aggregated objects, which are then selectively relabeled and augmented for iterative retraining. This human-in-the-loop refinement enables the classifier to capture greater intraclass morphological diversity without extensive new labeling. With only 20 labeled images per class expanded through strong augmentation, our framework consistently outperforms established few-shot and contrastive learning baselines on two structurally distinct DNA origami data sets, while also shortening analysis time relative to conventional methods, enabling efficient, high-throughput, and objective classification of multistate DNA nanostructure populations.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Hongchang Lee",
+      "Seo Hyun Kwon",
+      "Do-Nyun Kim"
+    ],
+    "doi": "10.1021/acs.jcim.6c00780",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42089688/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42089688"
+    }
+  },
+  {
+    "paper_id": "pubmed:42085835",
+    "title": "Self-supervised multi-scale cloud workload prediction with time series data augmentation.",
+    "abstract": "Accurate cloud workload forecasting is critical for proactive resource provisioning, cost control, and Service Level Agreement (SLA) compliance; however, it is hindered by the scarcity and heterogeneity of labels. We present Time Series Augmentation for Multi-Scale Prediction (TSA-MSP), a self-supervised framework that achieves near-fully supervised accuracy with limited labels. Conceptually, TSA-MSP couples cloud-informed augmentations-multi-scale time warping, frequency-domain mixing, and periodic pattern injection-with a hierarchical multi-scale contrastive objective and efficient fine-tuning using lightweight adapters to capture short- and long-range workload patterns. We conducted an empirical experimental study on real-world traces (Alibaba 2018, Google 2019, Azure 2019): self-supervised pre-training on unlabeled data followed by fine-tuning with small labeled subsets. We evaluated the Mean Absolute Error (MAE), Root Mean Square Error (RMSE), Symmetric Mean Absolute Percentage Error (sMAPE), and a peak-oriented metric (Peak Prediction Accuracy, PPA) and performed ablations (augmentations, scales), label efficiency, and cross-dataset transfer tests. Remarkably, with only 20% labels, TSA-MSP attains RMSE within  ∼ 1.5-1.7% of fully supervised training (100% labels) across all three datasets; for example, on Alibaba, it achieves MAE/RMSE 0.241/0.335 versus 0.238/0.330 for a fully supervised Pathformer. Against the best self-supervised baseline at 20% labels, TSA-MSP reduces RMSE by  ∼ 6.6-6.9%. In a 5%-label setting, it outperformed supervised training from scratch by  ∼ 23-26% RMSE. Cross-dataset transfer further improves the RMSE by  ∼ 2.4-5.2% over direct target-only pre-training. By combining domain-aware augmentations with multi-scale self-supervision and efficient adaptation, TSA-MSP delivers accurate forecasts under scarce labels, improving peak readiness while enabling faster, more cost-effective deployment for real-world cloud resource management.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Chunmao Jiang",
+      "Wei Wu",
+      "Qiaoping Zhong"
+    ],
+    "doi": "10.1016/j.neunet.2026.109034",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42085835/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42085835"
+    }
+  },
+  {
+    "paper_id": "pubmed:42085511",
+    "title": "Intelligent diagnosis of major depressive disorder with edge convolution and contrastive learning.",
+    "abstract": "Based on functional connectivity (FC) matrices derived from resting-state functional magnetic resonance imaging (rs-fMRI) data, graph neural networks (GNNs), as an advanced deep learning technique, have been widely applied in major depressive disorder (MDD) diagnosis. However, conventional GNNs suffer from a critical limitation in preserving the spatial specificity of brain regions, which is attributed to their intrinsic node permutation invariance that ignores the unique order and specific roles of brain regions in neural circuits. To address this limitation, in this paper, we propose a novel deep learning framework, Graph Contrastive Learning based on Edge Convolution (EC-GCL), to analyze resting-state fMRI data from 1,160 participants, including 597 patients with MDD and 563 healthy controls. This framework integrates an edge convolution encoder, specifically designed to preserve the spatial specificity of brain regions, with a learnable graph augmentation module into an adversarial graph contrastive learning, thereby enhancing the extraction of discriminative MDD-related FC features and improving diagnostic classification accuracy. Compared with conventional machine learning and GNN models, our proposed EC-GCL achieved superior performance (AUC = 71.2%) and improved interpretability. In particular, the framework identified several key brain regions, including the dorsolateral superior frontal gyrus, thalamus, and insula, that are closely linked to the pathophysiology of MDD, which is consistent with the findings of prior neuroimaging studies. This study demonstrates that combining edge convolution with contrastive learning provides a robust and explainable method for MDD diagnosis. This provides new insights into depression and may support improvements in clinical practice.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Dan Long",
+      "Chen Zhu",
+      "Lei Xiong",
+      "Zhou Long",
+      "Fangfang Dong"
+    ],
+    "doi": "10.1371/journal.pone.0347870",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42085511/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42085511"
+    }
+  },
+  {
+    "paper_id": "pubmed:42076425",
+    "title": "Multimodal PPG-Based Arrhythmia Detection Using a CLIP-Initialized Multi-Task U-Net and LLM-Assisted Reporting.",
+    "abstract": "Photoplethysmography (PPG) has emerged as an attractive modality for non-invasive cardiovascular monitoring due to its low cost, unobtrusive nature, and ubiquity in consumer wearable devices. Despite its potential, existing PPG-based arrhythmia detection systems remain limited in scope: (i) most target only atrial fibrillation, (ii) temporal localization of abnormal segments is rarely provided, and (iii) deep learning models lack explainability, hindering adoption in clinical workflows. We present a comprehensive and fully integrated framework for multi-class arrhythmia detection, segmentation, and explainability based on PPG waveforms, Heart Rate Variability (HRV), and structured clinical metadata. The proposed system introduces a CLIP-style contrastive learning module aligning PPG waveforms with clinical variables and rhythm-state textual descriptions using BioBERT; a multitask U-Net architecture performing 4-class classification and 1D segmentation; a Retrieval-Augmented Generation (RAG) pipeline leveraging Gemini Flash large language models to produce guideline-grounded diagnostic reports; and a real-time Streamlit-based web platform supporting inference, visualization, and database storage. The system significantly improves classification accuracy (from 86.27% to 91.19%) and segmentation Dice (from 0.5815 to 0.7167). These results demonstrate the feasibility of a robust, multimodal, and explainable PPG-based arrhythmia monitoring system for real-world applications.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Youngho Huh",
+      "Minhwan Noh",
+      "Dongwoo Ji",
+      "Yuna Oh",
+      "Sukkyu Sun"
+    ],
+    "doi": "10.3390/s26082316",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42076425/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42076425"
+    }
+  },
+  {
+    "paper_id": "pubmed:42064004",
+    "title": "Addressing data scarcity in CT imaging: novel approaches for the detection of radiation-induced pneumonitis.",
+    "abstract": "Radiation-induced pneumonitis (RP) is a critical complication of radiotherapy in lung cancer patients, and its early detection remains a challenge due to the limited availability of annotated CT imaging data and the subtle nature of disease evolution. The objective of this study is to enhance the detection and localization of RP in CT by integrating advanced data augmentation, self-supervised learning, and synthetic data generation techniques. A conditional Generative Adversarial Network (cGAN) was used to create synthetic RP images conditioned on lung segmentation masks to create anatomically plausible data for augmenting the training sets. The pipeline was created to possess double-stage self-supervised training with hierarchical pretext tasks to achieve robust features. The performance of the proposed framework, for a 5-fold cross-validation, has an average accuracy of 94.04%, precision of 92.06%, with a recall of 95.1%, an F1-score of 93.56%, and area under the curve of 95.94%. The model was demonstrated to possess superior performance and stability in RP detection and localization, which suggests potential clinical translation. The paper offers a novel fusion of cGAN-generated synthetic data, spatial attention, and contrastive learning to address RP detection in limited data. Interpretability is achieved by introducing Bayesian uncertainty estimation to provide translational value in clinical practice.",
+    "year": 2025,
+    "venue": "BJR artificial intelligence",
+    "authors": [
+      "Sotiris Raptis",
+      "Christos Ilioudis",
+      "Kiki Theodorou"
+    ],
+    "doi": "10.1093/bjrai/ubaf014",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42064004/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42064004"
+    }
+  },
+  {
+    "paper_id": "pubmed:42038673",
+    "title": "Self-supervised contrastive learning enables robust electrocardiogram-based cardiac classification.",
+    "abstract": "Self-supervised contrastive learning has emerged as a powerful paradigm for learning generalizable representations from unlabeled data. In the context of electrocardiogram (ECG) analysis, such pre-training can significantly enhance classification performance, especially when labeled data is scarce. We aimed to investigate and improve contrastive self-supervised learning techniques for ECGs by systematically combining recent methodological advances in augmentation design, contrastive loss formulation, and encoder architectures. We implemented a contrastive pre-training framework combining vectorcardiography (VCG)-based physiologically-inspired augmentations, interlead, intersegment, contrastive loss, and patient-aware positive sampling. In addition, we developed a dual-stream architecture, extending the TemporalNet model by processing grouped ECG leads independently. Pretraining was conducted on a large corpus of approximately 1 million unlabeled ECGs. We evaluated performance on 2 downstream classification tasks-low left ventricular ejection fraction (LVEF) and high serum potassium chloride-using various levels of labeled supervision (1%, 5%, 10%, 50%, and 100%). The pre-trained models were compared with the randomly initialized models under both frozen and finetuned conditions. Contrastive pre-training consistently improved performance across all supervision levels. In low-label settings (1%-10% supervision), the pre-trained model achieved 3%-4% higher area under the receiver operator curve on the LVEF task and 5%-7% higher area under the receiver operator curve on the potassium chloride task compared with the baseline. The performance gap narrowed with increased supervision but remained favorable toward pre-trained models. Our findings demonstrate that contrastive pre-training can substantially enhance ECG classification, especially when labeled data is limited. By unifying and extending ideas from recent literature into a scalable framework trained on 1 million ECGs, we provide practical guidance and architectural innovations for building strong ECG foundation models applicable to a broad range of clinical prediction tasks.",
+    "year": 2026,
+    "venue": "Heart rhythm O2",
+    "authors": [
+      "Deekshith Dade",
+      "Jake A Bergquist",
+      "Rob S MacLeod",
+      "Benjamin A Steinberg",
+      "Tolga Tasdizen"
+    ],
+    "doi": "10.1016/j.hroo.2026.01.016",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42038673/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42038673"
+    }
+  },
+  {
+    "paper_id": "pubmed:41998407",
+    "title": "Orthrus: toward evolutionary and functional RNA foundation models.",
+    "abstract": "In the face of rapidly accumulating genomic data, our ability to predict key mature RNA properties that underlie transcript function and regulation remains limited. Pretrained genomic foundation models offer an avenue to adapt learned RNA representations to biological prediction tasks; however, existing models are trained using strategies borrowed from textual domains that do not leverage biological domain knowledge. Here we introduce Orthrus, a Mamba-based mature RNA foundation model pretrained using a self-supervised contrastive learning objective with biological augmentations. Orthrus is trained by maximizing embedding similarity between pairs of RNA transcripts that are formed from splice isoforms of ten model organisms and transcripts from orthologous genes in 400+ mammalian species. This training objective results in a latent representation that clusters RNA sequences with functional and evolutionary similarities. Orthrus' mature RNA isoform representations outperform genomic foundation models on mRNA property prediction tasks, requiring only a fraction of fine-tuning data. Finally, we show that Orthrus is capable of capturing divergent biological function of individual transcript isoforms.",
+    "year": 2026,
+    "venue": "Nature methods",
+    "authors": [
+      "Philip Fradkin",
+      "Ruian Ian Shi",
+      "Taykhoom Dalal",
+      "Keren Isaev",
+      "Brendan J Frey",
+      "Leo J Lee",
+      "Quaid Morris",
+      "Bo Wang"
+    ],
+    "doi": "10.1038/s41592-026-03064-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41998407/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41998407"
+    }
+  },
+  {
+    "paper_id": "pubmed:41996424",
+    "title": "Pathology-Aligned Contrastive Representation Learning for Gleason Grading.",
+    "abstract": "Gleason grading, the clinical gold standard for prostate cancer assessment, is based on subjective evaluation of glandular architecture, resulting in interobserver variability and limited scalability. This highlights the need for automated grading systems. However, their development is hindered by the scarcity of annotated pathology data. Self-supervised learning (SSL) presents a promising solution by utilizing unlabeled data. Pathology images differ significantly in their diagnostic content, often characterized by subtle glandular structures rather than broad visual patterns. Existing SSL methods, primarily designed for natural images, struggle to capture these pathology-specific cues, as they typically rely on random masking or global augmentations that overlook fine-grained morphological characteristics. To address this, we propose Pathology-Aligned Contrastive Representation Learning (PA-CRL), which adaptively aligns representations with diagnostically relevant glandular architecture. The core component is a diagnostic-aware masking strategy that selectively emphasizes pathology-relevant regions by constructing pathology-aligned contrastive pairs. In addition, a stability-based regularization mechanism, termed mask-driven entropic label smoothing (MDELS), leverages entropy differences between masked and unmasked views to regularize contrastive supervision, explicitly promoting representation stability under directed masking perturbations. This distinguishes MDELS from existing uncertaintyaware or soft-label contrastive learning approaches that do not model masked-unmasked representation consistency. Experiments on a clinical multiphoton microscopy dataset and two public H&E-stained datasets demonstrate that PA-CRL learns pathology-relevant representations and achieves 2.89%F1-score improvement in downstream Gleason Grade Group evaluation over state-of-the-art methods. Code is available at https://github.com/phenixsp/PA-CRL.",
+    "year": 2026,
+    "venue": "IEEE transactions on medical imaging",
+    "authors": [
+      "Maoye Huang",
+      "Jing Zhong",
+      "Jiawei Wu",
+      "Jia He",
+      "Zuoyong Li",
+      "Peng Shi",
+      "Xiaoqin Zhu"
+    ],
+    "doi": "10.1109/TMI.2026.3685011",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41996424/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41996424"
+    }
+  },
+  {
+    "paper_id": "pubmed:41977923",
+    "title": "Spectroscopic Pulse Embeddings by Contrastive Learning from Unlabeled Data for Pile-Up Analysis.",
+    "abstract": "In nuclear spectroscopy, a physical phenomenon known as the pile-up effect distorts direct measurements by causing temporal overlap of detector pulses. Existing deep learning-based pile-up correction methods rely heavily on supervised training with simulated data, which often generalize poorly to real measurements due to simulation-experiment discrepancies. In this work, we propose a contrastive learning framework to learn robust and transferable representations directly from large-scale unlabeled real nuclear pulse signals. The detector output is segmented into physically complete pulse aggregations using a zero-crossing-based strategy, which serve as semantically coherent instances for representation learning. Physics-inspired data augmentations are designed to realistically model detector noise and bandwidth effects while preserving pulse area. A one-dimensional ResNet encoder is employed for efficient representation learning. The learned representations are transferred to pile-up identification and counting-rate estimation tasks. Experimental results on real nuclear radiation detection systems demonstrate that our method achieves strong performance and robustness under high counting-rate conditions, with particularly pronounced advantages in challenging peak pile-up scenarios.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Congyu Lin",
+      "Xiaoying Zheng",
+      "Tom Trigano",
+      "Dima Bykhovsky",
+      "Yongxin Zhu",
+      "Li Tian"
+    ],
+    "doi": "10.3390/s26072138",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41977923/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41977923"
+    }
+  },
+  {
+    "paper_id": "pubmed:41976348",
+    "title": "Machine Learning-Based Fluorescence Assessment for Augmented Imaging and Decision Support in Glioblastoma Resections.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Cancers",
+    "authors": [
+      "Anna Schaufler",
+      "Klaus-Peter Stein",
+      "Sunisha Pamnani",
+      "Claudia A Dumitru",
+      "Belal Neyazi",
+      "Ali Rashidi",
+      "Axel Boese",
+      "I Erol Sandalcioglu"
+    ],
+    "doi": "10.3390/cancers18071125",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41976348/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41976348"
+    }
+  },
+  {
+    "paper_id": "pubmed:41967315",
+    "title": "TrCLIP-VAD : Weak supervised video anomaly detection by improving CLIP training with text rewriting.",
+    "abstract": "The existing video anomaly detection (VAD) methods based on the contrastive language-image pre-training (CLIP) framework primarily rely on spatial-temporal features and label prompts, often overlooking high-level semantic information, such as text descriptions of abnormal behavior. Moreover, while data augmentation techniques are commonly used to expand video frames, text inputs typically remain unchanged throughout the training process, limiting the exposure of different texts to the same image. In this paper, we propose a text rewriting based CLIP model called TrCLIP-VAD. It first generates source caption descriptions for each video and then utilizes the In-Context Learning (ICL) capabilities of large language models (LLMs) to rewrite these captions, thereby enhancing semantic expression. Subsequently, we randomly select a caption and fuse it with visual features to detect anomalies. In addition, we introduce the Local-Global Multi-scale Mamba (LGM-Mamba) module. The LGM-Mamba module aims to capture the local-global temporal dependence of frame sequence and promote the deep fusion of visual and caption features to improve the detection performance. The experimental results show that TrCLIP-VAD achieves state-of-the-art performance on two widely used datasets, XD-Violence and UCF-Crime. Specifically, TrCLIP-VAD achieves 86.05% AP scores on XD-Violence dataset and 88.59% AUC scores on UCF-Crime dataset. The code is released at https://github.com/vpsg-research/TrCLIP-VAD.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Shengjie Shen",
+      "Ziteng Guo",
+      "Yahui Li",
+      "Liejun Wang",
+      "Zhiqing Guo"
+    ],
+    "doi": "10.1016/j.neunet.2026.108951",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41967315/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41967315"
+    }
+  },
+  {
+    "paper_id": "pubmed:41947710",
+    "title": "GatorST: A Versatile Contrastive Meta-Learning Framework for Spatial Transcriptomic Data Analysis.",
+    "abstract": "Recent advances in spatial transcriptomics (ST) have revolutionized the understanding of cellular functions by providing gene expression profiles with rich spatial context. Effectively learning spatial representations is essential for downstream analyses and requires robust integration of spatial and transcriptomic information. Although existing methods show promise, they often fail to capture local (neighbor-level) and global (tissue-wide) contexts, and methods based on contrastive learning often rely on augmentation strategies that introduce noise and instability. GatorST, a novel and versatile framework, explicitly integrates graph-based modeling with advanced meta-learning strategies to generate spatially informed representations of ST data. Locally, a spot-spot graph connects each node to its nearest neighbors, while two-hop subgraphs capture fine-grained spatial context. Globally, gene expression profiles are clustered to produce pseudo-labels, providing weak supervision for representation learning. An episodic training strategy inspired by meta-learning further enhances GatorST's ability to generalize to new spatial contexts, ensuring robust integration of local and global spatial information. Comprehensive comparisons with fifteen state-of-the-art methods demonstrate that GatorST consistently outperforms existing approaches in identifying spatial domains, imputing gene expression, removing batch effects, and inferring spatial trajectories. By integrating local spatial topology with global gene expression patterns, GatorST provides biologically meaningful representations that advance key downstream analyses.",
+    "year": 2026,
+    "venue": "Small methods",
+    "authors": [
+      "Zhenhao Zhang",
+      "Yuxi Liu",
+      "Song Wang",
+      "Qin Ma",
+      "Qianqian Song",
+      "Jiang Bian"
+    ],
+    "doi": "10.1002/smtd.202600006",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41947710/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41947710"
+    }
+  },
+  {
+    "paper_id": "pubmed:41945843",
+    "title": "TopoCL: Topological Contrastive Learning for Time Series.",
+    "abstract": "Universal time-series representation learning is challenging but valuable in real-world applications such as classification, anomaly detection, and forecasting. Recently, contrastive learning (CL) has been actively explored to tackle time-series representation. However, a key challenge is that the data augmentation process in CL can distort seasonal patterns or temporal dependencies, inevitably leading to a loss of semantic information. To address this challenge, we propose topological CL for time series (TopoCL). TopoCL mitigates such information loss by incorporating persistent homology, which captures the topological characteristics of data that remain invariant under transformations. In this article, we treat the temporal and topological properties of time-series data as distinct modalities. Specifically, we compute persistent homology to construct topological features of time-series data, representing them in persistence diagrams (PDs). We then design a neural network to encode these persistent diagrams. Our approach jointly optimizes CL within the time modality and time-topology correspondence, promoting a comprehensive understanding of both temporal semantics and topological properties of time series. We conduct extensive experiments on four downstream tasks-classification, anomaly detection, forecasting, and transfer learning. The results demonstrate that TopoCL achieves state-of-the-art performance.",
+    "year": 2026,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Namwoo Kim",
+      "Hyungryul Baik",
+      "Yoonjin Yoon"
+    ],
+    "doi": "10.1109/TNNLS.2026.3675422",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41945843/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41945843"
+    }
+  },
+  {
+    "paper_id": "pubmed:41942489",
+    "title": "Physics-guided contrastive temporal graph learning for anomaly detection and root-cause localization in industrial control systems.",
+    "abstract": "Industrial control systems generate complex multivariate time series and detecting anomalies without labelled attacks is still difficult. In this work we propose a physics guided contrastive temporal graph learning framework for anomaly detection and root-cause localization in ICS. The method follows three main steps. First, a self-supervised contrastive encoder is trained only on normal data to learn robust representations of sensor windows. Augmented views of the same signal are used so that normal behaviour is pulled together in latent space. Second, a physics guided graph is built from the plant P&ID where sensors and actuators are nodes and physical dependencies form edges. Third, a temporal graph module operates on the learned embeddings to capture both time evolution and cross-sensor relations. Anomaly score is computed from graph representations and node level scores are used to rank possible root causes. Experiments on ICS dataset show higher detection performance than LSTM-AE and CNN-AE baselines. Additional robustness tests such as distribution shift, sensor drift and missing channels are conducted to study practical behaviour. The main innovation of this work is the combination of contrastive learning with physics guided graph reasoning without using any attack labels, and the ability to provide interpretable sensor ranking for operators.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "M Rajalakshmi",
+      "T Velmurugan"
+    ],
+    "doi": "10.1038/s41598-026-45677-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41942489/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41942489"
+    }
+  },
+  {
+    "paper_id": "pubmed:41933929",
+    "title": "INB",
+    "abstract": "Functional peptide discovery, particularly for blood-brain barrier-penetrating peptides (BBBPPs), is strictly limited by extreme data scarcity and the \"black-box\" nature of deep learning. Here, INB",
+    "year": 2026,
+    "venue": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+    "authors": [
+      "Jingwei Lv",
+      "Qianyang Wu",
+      "Jian Liu",
+      "Binlu Yang",
+      "Yuanhao Li",
+      "Junlin Xu",
+      "Yajie Meng",
+      "Leyi Wei",
+      "Zilong Zhang",
+      "Quan Zou",
+      "Xiulai Li",
+      "Feifei Cui"
+    ],
+    "doi": "10.1002/advs.202523984",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41933929/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41933929"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "paper_id": "https://openalex.org/W4412889641",
+  "title": "HiAgent: Hierarchical Working Memory Management for Solving Long-Horizon Agent Tasks with Large Language Model",
+  "abstract": "Large Language Model (LLM)-based agents exhibit significant potential across various domains, operating as interactive systems that process environmental observations to generate executable actions for target tasks.The effectiveness of these agents is significantly influenced by their memory mechanism, which records historical experiences as sequences of actionobservation pairs.We categorize memory into two types: cross-trial memory, accumulated across multiple attempts, and in-trial memory (working memory), accumulated within a single attempt.While considerable research has optimized performance through cross-trial memory, the enhancement of agent performance through improved working memory utilization remains underexplored.Instead, existing approaches often involve directly inputting entire historical action-observation pairs into LLMs, leading to redundancy in long-horizon tasks.Inspired by human problem-solving strategies, this paper introduces HIAGENT, a framework that leverages subgoals as memory chunks to manage the working memory of LLM-based agents hierarchically.Specifically, HIAGENT prompts LLMs to formulate subgoals before generating executable actions and enables LLMs to decide proactively to replace previous subgoals with summarized observations, retaining only the action-observation pairs relevant to the current subgoal.Experimental results across five long-horizon tasks demonstrate that HIAGENT achieves a twofold increase in success rate and reduces the average number of steps required by 3.8.Additionally, our analysis shows that HIAGENT consistently improves performance across various steps, highlighting its robustness and generalizability.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Mengkang Hu",
+    "Tianxing Chen",
+    "Qiguang Chen",
+    "Yi Mu",
+    "Wenqi Shao",
+    "Ping Luo"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2025.acl-long.1575",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2025.acl-long.1575",
+  "citation_count": 5,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Horizon",
+      "Working memory",
+      "Memory management",
+      "Artificial intelligence",
+      "Cognitive science",
+      "Natural language processing",
+      "Programming language",
+      "Cognition",
+      "Psychology",
+      "Mathematics",
+      "Neuroscience",
+      "Overlay",
+      "Geometry"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W1980342602",
+      "https://openalex.org/W430449491",
+      "https://openalex.org/W3161870944",
+      "https://openalex.org/W2104527583",
+      "https://openalex.org/W3213345547",
+      "https://openalex.org/W1518895533",
+      "https://openalex.org/W3004359024",
+      "https://openalex.org/W2107338378",
+      "https://openalex.org/W1994512432",
+      "https://openalex.org/W2034474984"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:42217428",
+  "title": "ED-SAM: Sharpness-aware minimization with energy-adjusted perturbations and direction-corrected updates.",
+  "abstract": "Sharpness-aware minimization (SAM) improves the generalization of deep neural networks by seeking flat minima via simultaneously minimizing the training loss and loss sharpness. However, previous SAM variants often neglect gradient magnitudes when adjusting perturbation directions, which may lead to harmful perturbations. Moreover, relying solely on perturbed gradients during parameter updates may fail to capture the true descent direction of the original loss. Both issues negatively affect generalization. This paper develops ED-SAM, a novel SAM-based algorithm that integrates an energy-adjusted perturbation mechanism with a direction-corrected parameter update strategy. Specifically, in the adversarial perturbation step, ED-SAM constructs an energy-adjusted perturbation that explicitly models gradient energy. By leveraging the second moment of gradients, it captures the energy along each coordinate dimension, which suppresses the excessive influence of high-energy components and allows perturbations to adapt to both gradient direction and energy. During the parameter update step, ED-SAM introduces a direction-corrected parameter update strategy that combines the clean gradients with the perturbed gradients. This enables the optimizer to follow the true descent direction while benefiting from the flatness information of the adversarial neighborhood. By jointly regulating perturbation energy and parameter update direction, ED-SAM achieves better generalization and robustness. Moreover, we theoretically analyze its convergence under certain conditions. Experiments across multiple datasets and different network architectures reveal the superiority of ED-SAM over existing SAM variants.",
+  "year": 2026,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Hailiang Ye",
+    "Xinyi Fang",
+    "Ming Li",
+    "Feilong Cao"
+  ],
+  "doi": "10.1016/j.neunet.2026.109185",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42217428/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42217428"
+  }
+}

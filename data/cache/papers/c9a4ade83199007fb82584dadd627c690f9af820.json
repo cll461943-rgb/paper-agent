@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:41519189",
+  "title": "Beyond Fine-Tuning: Leveraging Domain-Aware In-Context learning with large language models for clinical named entity recognition.",
+  "abstract": "Clinical named entity recognition (NER) is essential for structuring clinical narratives. While large language model (LLM)-based in-context learning (ICL) enables parameter-free adaptation, encoder-based fine-tuning has generally achieved superior performance in practical biomedical NER settings. To systematically compare ICL and encoder-based fine-tuning for clinical NER under realistic constraints, and to determine whether optimizing ICL demonstration selection can close the performance gap. We manually annotated 2,113 clinical notes from hematologic malignancy patients at Seoul National University Hospital and 400 MIMIC-IV notes. ICL configurations were optimized across task instructions, output formats, demonstration selection methods, sorting strategies, and pool sizes, using LLaMA-3.3-70B (open-source) via Ollama. Encoder fine-tuning was performed on both domain-specific and general-domain models, with RoBERTa-large representing the best encoder baseline. All models were evaluated as token-level classification tasks using macro and weighted F1, across in-domain, cross-domain, and cross-institutional scenarios. Demonstration selection played a major role in determining to ICL performance, improving macro F1 by up to 9.4 points over random selection under our experimental settings. In moderate-resource settings (500-sample pool), ICL exceeded RoBERTa-large fine-tuning by 4.7 macro F1 points and remained competitive up to 900 samples. Both ICL and fine-tuning experienced performance degradation in cross-domain evaluations, yet ICL demonstrated superior data efficiency, achieving competitive accuracy with substantially fewer labeled examples. ICL achieved in-domain macro F1 > 0.8 in several domains, outperforming full-data fine-tuned encoders, and delivered 6.3- to 11.6-point gains in cross-institutional transfer without parameter updates. At the largest pool size (∼1,900 samples), encoder-based fine-tuning regained the lead. With optimized domain-aware demonstration selection, open-source LLM-based ICL can match or surpass encoder fine-tuning for clinical NER. Its ease of adaptation and ability to update knowledge via demonstration pools-without retraining-enable continuous improvement in dynamic, resource-limited healthcare settings.",
+  "year": 2026,
+  "venue": "Journal of biomedical informatics",
+  "authors": [
+    "Siun Kim",
+    "David Seung U Lee",
+    "Yujin Kim",
+    "Hyung-Jin Yoon",
+    "Howard Lee"
+  ],
+  "doi": "10.1016/j.jbi.2026.104982",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41519189/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41519189"
+  }
+}

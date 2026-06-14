@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42174029",
+  "title": "A hybrid KF-GAIN framework for dynamic state estimation in islanded microgrids under missing PMU data and line impedance uncertainty.",
+  "abstract": "The similar time constants of voltage source inverter-based distributed generation units and other components in islanded microgrids (IMGs) pose significant challenges for dynamic state estimation (DSE). To address these issues, particularly under conditions of missing measurement data and uncertainties in line impedances, this paper proposes a linear hybrid framework that combines the Kalman Filter (KF) with a deep learning model called the generative adversarial imputation network (GAIN) for DSE in IMGs. GAIN robustly imputes missing data while preserving the statistical properties of the original dataset, aided by a hint mechanism that guides the generator to produce values closely following the true data distribution. The proposed KF-GAIN model is evaluated on an islanded IEEE 33-bus test system equipped with distributed generation units and phasor measurement units (PMUs), incorporating temperature-dependent line impedance variations modeled via Monte Carlo simulation. The IMG is first simulated in MATLAB/Simulink; subsequently, the measurement data are then transferred to Python for missing data imputation using GAIN, followed by linear DSE via the KF. To assess GAIN's performance, autoencoder (AE) and variational autoencoder (VAE) models are employed as baseline methods. Hyperparameters (GAIN, AE, VAE) were selected by grid search; robustness was assessed via sensitivity to single and pairwise PMU outputs. GAIN achieves a significantly lower imputation error (0.02705) compared to AE (0.35872) and VAE (0.20344), demonstrating superior accuracy. Furthermore, the proposed framework maintains high estimation accuracy, with average errors of 0.46% and 0.72% for 20% and 40% missing data, respectively, across multiple scenarios.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Mohammad Reza Masoudi",
+    "Mohammad Mohammadi",
+    "Behrooz Zaker",
+    "Dariush Keihan Asl",
+    "Majid Mostafanezhad"
+  ],
+  "doi": "10.1038/s41598-026-51565-0",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42174029/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42174029"
+  }
+}

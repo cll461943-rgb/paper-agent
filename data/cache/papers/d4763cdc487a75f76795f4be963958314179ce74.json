@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42085835",
+  "title": "Self-supervised multi-scale cloud workload prediction with time series data augmentation.",
+  "abstract": "Accurate cloud workload forecasting is critical for proactive resource provisioning, cost control, and Service Level Agreement (SLA) compliance; however, it is hindered by the scarcity and heterogeneity of labels. We present Time Series Augmentation for Multi-Scale Prediction (TSA-MSP), a self-supervised framework that achieves near-fully supervised accuracy with limited labels. Conceptually, TSA-MSP couples cloud-informed augmentations-multi-scale time warping, frequency-domain mixing, and periodic pattern injection-with a hierarchical multi-scale contrastive objective and efficient fine-tuning using lightweight adapters to capture short- and long-range workload patterns. We conducted an empirical experimental study on real-world traces (Alibaba 2018, Google 2019, Azure 2019): self-supervised pre-training on unlabeled data followed by fine-tuning with small labeled subsets. We evaluated the Mean Absolute Error (MAE), Root Mean Square Error (RMSE), Symmetric Mean Absolute Percentage Error (sMAPE), and a peak-oriented metric (Peak Prediction Accuracy, PPA) and performed ablations (augmentations, scales), label efficiency, and cross-dataset transfer tests. Remarkably, with only 20% labels, TSA-MSP attains RMSE within  ∼ 1.5-1.7% of fully supervised training (100% labels) across all three datasets; for example, on Alibaba, it achieves MAE/RMSE 0.241/0.335 versus 0.238/0.330 for a fully supervised Pathformer. Against the best self-supervised baseline at 20% labels, TSA-MSP reduces RMSE by  ∼ 6.6-6.9%. In a 5%-label setting, it outperformed supervised training from scratch by  ∼ 23-26% RMSE. Cross-dataset transfer further improves the RMSE by  ∼ 2.4-5.2% over direct target-only pre-training. By combining domain-aware augmentations with multi-scale self-supervision and efficient adaptation, TSA-MSP delivers accurate forecasts under scarce labels, improving peak readiness while enabling faster, more cost-effective deployment for real-world cloud resource management.",
+  "year": 2026,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Chunmao Jiang",
+    "Wei Wu",
+    "Qiaoping Zhong"
+  ],
+  "doi": "10.1016/j.neunet.2026.109034",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42085835/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42085835"
+  }
+}

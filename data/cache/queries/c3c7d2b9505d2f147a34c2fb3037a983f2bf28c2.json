@@ -1,0 +1,898 @@
+[
+  {
+    "paper_id": "pubmed:42048554",
+    "title": "Data-Efficient Language Model for Assessing Pulmonary Embolism Diagnostic Certainty From Radiology Reports: Model Development and Validation Study.",
+    "abstract": "Computed tomography pulmonary angiography (CTPA) is the standard imaging modality for diagnosing pulmonary embolism (PE), but diagnostic uncertainty is common due to technical limitations and vague language, leading to inconsistent interpretation and clinician frustration. This study develops a prompt-free, data-efficient method for assessing diagnostic certainty of PE in CTPA reports using small pretrained language models. This study examined 173 consecutive CTPA reports from UMass Memorial Health, each annotated by 3 radiologists for PE diagnostic certainty. We developed PECertainty, a lightweight, prompt-free model, and compared it with advanced large language model (LLM)-based methods under limited supervision settings. Baselines included prompt-free methods (support vector machine, random forest, and RoBERTa [Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach]) and prompt-dependent methods (LLM fine-tuning, in-context learning, and ADAPET [A Densely-Supervised Approach to Pattern Exploiting Training]; UNC Chapel Hill) with open-source Gemma3-4B (Google DeepMind) and Llama3.2-3B (Meta), and the proprietary GPT-3.5 (OpenAI). Sensitivity analyses evaluated performance with 1 to 10 training examples per category for the top performer. Model performance was evaluated against radiologist annotations. External validation on 420 CTPA reports from the Baystate Medical Center, with validation limited to distinguishing certain from uncertain reports. Interpretability of the top-performing models (PECertainty and GPT-3.5) was evaluated using integrated gradients and prompt-based explanations reviewed by radiologists. Among prompt-dependent methods, GPT-3.5 fine-tuning (F1-score 0.86; 95% CI 0.71-1.0) and in-context learning (F1-score 0.87; 95% CI 0.71-1.0) performed best, and the performance of in-context learning consistently outperformed 0-shot learning for Gemma3-4B (F1-score 0.63, 95% CI 0.56-0.79 vs F1-score 0.45; 95% CI 0.29-0.56) and Llama3.2-3B (F1-score 0.54; 95% CI 0.41-0.71 vs F1-score 0.43, 95% CI 0.28-0.62). PECertainty demonstrated numerically better or equivalent performance compared with both the top-performing prompt-dependent methods and all prompt-free baselines. Compared with fine-tuned ClinicalBERT (Bidirectional Encoder Representations From Transformers Pretrained on Clinical Text), PECertainty achieved statistically significant improvements across all metrics (paired bootstrap significance test, P<.05). RoBERTa (Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach) fine-tuning lagged (F1-score 0.52; 95% CI 0.35-0.71), and simple models such as support vector machine underperformed. In few-shot settings (10 examples/category), PECertainty (F1-score 0.80; 95% CI 0.59-0.94) outperformed both GPT-3.5 fine-tuning (F1-score 0.74; 95% CI 0.58-0.88) and in-context learning (F1-score 0.65; 95% CI 0.47-0.83). External validation on the Baystate dataset showed good generalization for distinguishing certain from uncertain cases (F1-score 0.77; 95% CI 0.70-0.83). Despite its strong performance, PECertainty was rated as less interpretable than fine-tuned GPT-3.5 by radiologists (t test, P<.05). PECertainty enables accurate and data-efficient assessment of diagnostic certainty from free-text CTPA reports in low-resource settings. As an open-source, lightweight alternative to proprietary LLMs, it may support more precise communication between radiologists and referring physicians, with interpretability identified as a key direction for improvement.",
+    "year": 2026,
+    "venue": "JMIR medical informatics",
+    "authors": [
+      "Feifan Liu",
+      "Ruofan Hu",
+      "Donghyuk Kim",
+      "Hao Lo",
+      "Yevgeniy Kharonov",
+      "Ansh Johri",
+      "Ben S Gerber",
+      "Elke Rundensteiner",
+      "Lauren M Westafer",
+      "Jeroan Allison",
+      "Catarina Kiefe",
+      "Alexander Bankier",
+      "Max P Rosen"
+    ],
+    "doi": "10.2196/79972",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42048554/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42048554"
+    }
+  },
+  {
+    "paper_id": "pubmed:41912832",
+    "title": "An AI-powered research assistant in the lab: A practical guide for text analysis through iterative collaboration with LLMs.",
+    "abstract": "Analyzing texts such as open-ended responses, headlines, or social media posts is a time- and labor-intensive process highly susceptible to bias. However, large language models (LLMs) are promising tools for text analysis, using either a predefined (top-down) or a data-driven (bottom-up) taxonomy, without sacrificing quality. Here, we present a step-by-step tutorial to efficiently develop, test, and apply taxonomies for analyzing unstructured data through an iterative and collaborative process between researchers and an LLM. Using personal goals provided by participants as an example, we demonstrate how we used this method to write prompts to review datasets and generate a taxonomy of life domains, evaluate and refine the taxonomy through prompt and direct modifications, and apply the taxonomy to categorize an entire dataset with high intercoder reliability, while achieving high levels of human-LLM intercoder agreement, reducing analysis time by approximately 87.5%. This test offers a proof of concept, suggesting that with the right procedures LLMs can be used to generate reliable bottom-up categorizations. We discuss the possibilities and limitations of using LLMs for text analysis.",
+    "year": 2026,
+    "venue": "Behavior research methods",
+    "authors": [
+      "Gino Carmona-Díaz",
+      "William Jiménez-Leal",
+      "María Alejandra Grisales",
+      "Chandra Sripada",
+      "Santiago Amaya",
+      "Michael Inzlicht",
+      "Juan Pablo Bermúdez"
+    ],
+    "doi": "10.3758/s13428-026-02966-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41912832/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41912832"
+    }
+  },
+  {
+    "paper_id": "pubmed:41859030",
+    "title": "Leveraging large language models to populate structured clinical case report forms from unstructured medical notes in radiation oncology.",
+    "abstract": "Large language models (LLMs) have shown growing potential for clinical text processing, but their systematic application in radiation oncology-especially for non-English clinical documentation-remains underexplored. This study investigated whether pretrained LLMs can automatically extract, analyze, and structure radiotherapy-relevant information from routine unstructured medical notes, with the goal of supporting automated population of electronic case report forms (eCRFs). This study examined prostate cancer patients treated with the MR-Linac, for whom ground truth data exist in the MOMENTUM database. A total of 100 patients were included, with 90 used for prompt development and 10 for independent testing. Medical notes were extracted, anonymized, and categorized by time points. The Llama-3.1-8b model was used, with prompts designed using chain-of-thought (CoT) logic with five in-context examples. The model output was post-processed, and extracted data was compared against ground truth. Medical notes were successfully processed, with predicted values generated in an average time of 16 s per note. The LLM achieved matching accuracies of 83.6% and 83.8% on the development and testing datasets. Analysis revealed that the model disagreed with specific values in 8.1% of development dataset cases and 8.6% of testing dataset cases. An independent manual review before model evaluation showed approximately 7.5% of routinely collected test data did not match reviewed values, indicating inaccuracies in the routinely acquired ground truth. This study demonstrated the effectiveness of LLMs in structuring clinical data from medical non-English notes, with high accuracy in extracting and categorizing information. While multi-institutional validation is needed, the results indicate a significant healthcare impact through efficient data management, processing notes in 16 s, and accurately populating CRFs with minimal staff involvement.",
+    "year": 2026,
+    "venue": "Clinical and translational radiation oncology",
+    "authors": [
+      "Marcel Nachbar",
+      "Nianzi Yi",
+      "Marcel Büttner",
+      "Cihan Gani",
+      "Maximilian Niyazi",
+      "Augusto Garcia-Agundez",
+      "Carsten Eickhoff",
+      "Daniela Thorwarth"
+    ],
+    "doi": "10.1016/j.ctro.2026.101143",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41859030/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41859030"
+    }
+  },
+  {
+    "paper_id": "pubmed:41830877",
+    "title": "PHENO-RAG: An artificial intelligence tool for guideline-informed management decisions in hepatocellular carcinoma.",
+    "abstract": "Management of hepatocellular carcinoma (HCC) poses unique challenges due to its development in the context of chronic liver disease and the availability of multiple treatment options. Although multidisciplinary team (MDT) management improves outcomes, universal MDT discussion is resource-intensive, underscoring the need for effective patient-stratification tools. We developed a novel large language model (LLM) framework, PHENO-RAG, that integrates contemporary HCC management guidelines with patient-specific clinical data. We retrospectively analysed 489 clinical reports from 424 patients treated at a tertiary referral centre between September 2020 and November 2024. Eight locally hosted LLMs were tested: Llama-3-8B/70B, GPT-oss-20B/120B, Qwen-3-8B/80B, and Falcon-7B/40B. Two ablation studies assessed clinical concept extraction (using REGEX, pure LLMs, and hybrid REGEX+LLM pipelines) and decision generation across six configurations (zero-shot/few-shot with unstructured vs. structured notes, with and without retrieval-augmented generation [RAG] using clinical guidelines). The primary outcome was exact-match accuracy against real-world clinical decisions for treatment allocation, clinical complexity, and recommendation for MDT discussion. GPT-oss-120B+REGEX achieved the best overall agreement (median F1 for categorical concepts 0.92 [95% CI 0.85-0.95]; median intraclass correlation coefficient for numerical parameters 0.93 [95% CI 0.85-0.94]). For decision support, accuracy increased with structured inputs, few-shot exemplars, and RAG across all models. Under the strongest configuration (few-shot+RAG on structured notes), GPT-oss-120B reached 86.5% exact match for treatment allocation, 88.6% for clinical complexity, and 66.9% for MDT recommendation; Llama-3-70B achieved 80.8%, 83.4%, and 63.0%, respectively. Performance in the baseline zero-shot, unstructured-note configuration was substantially lower. PHENO-RAG delivers accurate, guideline-concordant support for HCC treatment allocation and complexity grading from real-world notes, with performance driven less by model family alone than by hybrid extraction, input structuring, in-context examples, and evidence retrieval. MDT referral remains the hardest task - appropriate for prioritization rather than automation. Prospective, multi-site and multimodal validation is warranted. Clinical decisions in the management of hepatocellular carcinoma are complex and multiparametric, requiring resource-intensive multidisciplinary care and creating challenges for optimal treatment allocation across different healthcare settings. We developed PHENO-RAG, a large language model-based framework that combines patient phenotyping through automated clinical information extraction from real-world clinical notes with treatment decision support, based on international guidelines. Our framework demonstrated concordance of 86.5% with real-world clinical decisions for treatment allocation and 88.6% for clinical complexity assessment, suggesting potential to enhance decision consistency and quality of care. In clinical practice, this AI-assisted framework could help standardize hepatocellular carcinoma management workflows, support training of hepatology and oncology fellows, assist in quality assurance programs, and facilitate more systematic identification of complex cases requiring multidisciplinary consultation, particularly in resource-constrained settings.",
+    "year": 2026,
+    "venue": "JHEP reports : innovation in hepatology",
+    "authors": [
+      "Ciro Celsa",
+      "Mauro Giuffrè",
+      "Gabriele Di Maria",
+      "Salvatore Gruttadauria",
+      "Ugo Palazzo",
+      "Roberto Miraglia",
+      "Luigi Maruzzelli",
+      "Duilio Pagano",
+      "Roberto Cannella",
+      "Federico Midiri",
+      "Roberta Ciccia",
+      "Mauro Salvato",
+      "Alessandro Grova",
+      "Sofia Rao",
+      "Gaetano Giusino",
+      "Alessio Quartararo",
+      "Guido Cusimano",
+      "Alba Sparacino",
+      "Valeria Gaudioso",
+      "Valeria Genovese",
+      "Rosangela Montenegro",
+      "Claudia La Mantia",
+      "Francesco Mercurio",
+      "Simone Kresevic",
+      "Milos Ajcevic",
+      "Giuseppe Cabibbo",
+      "Giansalvo Cirrincione",
+      "Calogero Cammà"
+    ],
+    "doi": "10.1016/j.jhepr.2025.101715",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41830877/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41830877"
+    }
+  },
+  {
+    "paper_id": "pubmed:41726496",
+    "title": "Large Language Model-Powered Conversational Agent Delivering Problem-Solving Therapy (PST) for Family Caregivers: Enhancing Empathy and Therapeutic Alliance Using In-Context Learning.",
+    "abstract": "Family caregivers often face substantial mental health challenges due to their multifaceted roles and limited resources. This study explored the potential of a large language model (LLM)-powered conversational agent to deliver evidence-based mental health support for caregivers, specifically Problem-Solving Therapy (PST) integrated with Motivational Interviewing (MI) and Behavioral Chain Analysis (BCA). A within-subject experiment was conducted with 28 caregivers interacting with four LLM configurations to evaluate empathy and therapeutic alliance. The best-performing models incorporated Few-Shot and Retrieval-Augmented Generation (RAG) prompting techniques, alongside clinician-curated examples. The models showed improved contextual understanding and personalized support, as reflected by qualitative responses and quantitative ratings on perceived empathy and therapeutic alliances. Participants valued the model's ability to validate emotions, explore unexpressed feelings, and provide actionable strategies. However, balancing thorough assessment with efficient advice delivery remains a challenge. This work highlights the potential of LLMs in delivering empathetic and tailored support for family caregivers.",
+    "year": 2024,
+    "venue": "AMIA ... Annual Symposium proceedings. AMIA Symposium",
+    "authors": [
+      "Liying Wang",
+      "Daffodil Carrington",
+      "Daniil Filienko",
+      "Caroline El Jazmi",
+      "Serena Jinchen Xie",
+      "Martine De Cock",
+      "Sarah Iribarren",
+      "Weichao Yuwen"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41726496/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41726496"
+    }
+  },
+  {
+    "paper_id": "pubmed:41702990",
+    "title": "AsynDBT: asynchronous distributed bilevel tuning for efficient in-context learning with large language models.",
+    "abstract": "With the rapid development of large language models (LLMs), an increasing number of applications leverage cloud-based LLM APIs to reduce usage costs. However, since cloud-based models' parameters and gradients are agnostic, users have to manually or use heuristic algorithms to adjust prompts for intervening LLM outputs, which requiring costly optimization procedures. In-context learning (ICL) has recently emerged as a promising paradigm that enables LLMs to adapt to new tasks using examples provided within the input, eliminating the need for parameter updates. Nevertheless, the advancement of ICL is often hindered by the lack of high-quality data, which is often sensitive and different to share. Federated learning (FL) offers a potential solution by enabling collaborative training of distributed LLMs while preserving data privacy. Despite this issues, previous FL approaches that incorporate ICL have struggled with severe straggler problems and challenges associated with heterogeneous non-identically data. To address these problems, we propose an asynchronous distributed bilevel tuning (AsynDBT) algorithm that optimizes both in-context learning samples and prompt fragments based on the feedback from the LLM, thereby enhancing downstream task performance. Benefiting from its distributed architecture, AsynDBT provides privacy protection and adaptability to heterogeneous computing environments. Furthermore, we present a theoretical analysis establishing the convergence guarantees of the proposed algorithm. Extensive experiments conducted on multiple benchmark datasets demonstrate the effectiveness and efficiency of AsynDBT.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Hui Ma",
+      "Shaoyu Dou",
+      "Ya Liu",
+      "Fei Xing",
+      "Li Feng",
+      "Feng Pi"
+    ],
+    "doi": "10.1038/s41598-026-39582-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41702990/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41702990"
+    }
+  },
+  {
+    "paper_id": "pubmed:41628045",
+    "title": "Jailbreak and Guard Aligned Language Models With Only Few In-Context Demonstrations.",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable success across diverse applications, yet their susceptibility to malicious exploitation remains a critical challenge. Notably, LLMs are known to be vulnerable to jailbreaking attacks, where adversaries craft malicious inputs to induce harmful or unethical outputs. In this paper, motivated by the unique effectiveness and scalability of In-Context Learning (ICL) in LLMs, we explore its potential to modulate the safety alignment of LLMs. Specifically, we propose the In-Context Attack (ICA), which employs harmful demonstrations to subvert LLMs' safety, and the In-Context Defense (ICD), which bolsters their resilience through examples that demonstrate refusal to produce harmful responses. By adjusting the distribution of safety in LLM outputs through adversarial demonstrations, our proposed in-context attack and defense facilitate effective manipulation of their alignment. We first provide theoretical insights to illustrate how minimal in-context demonstrations can efficiently alter safety alignment. Empirically, we validate ICA and ICD across multiple models, datasets, and attack baselines, showing their efficacy and scalability for red-teaming evaluations and robust safeguards for real-world deployment. Overall, our work unveils the pivotal yet understudied role of ICL in LLM safety, opening new avenues for understanding and improving them.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Zeming Wei",
+      "Yifei Wang",
+      "Ang Li",
+      "Yichuan Mo",
+      "Yisen Wang"
+    ],
+    "doi": "10.1109/TPAMI.2026.3660147",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41628045/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41628045"
+    }
+  },
+  {
+    "paper_id": "pubmed:41519189",
+    "title": "Beyond Fine-Tuning: Leveraging Domain-Aware In-Context learning with large language models for clinical named entity recognition.",
+    "abstract": "Clinical named entity recognition (NER) is essential for structuring clinical narratives. While large language model (LLM)-based in-context learning (ICL) enables parameter-free adaptation, encoder-based fine-tuning has generally achieved superior performance in practical biomedical NER settings. To systematically compare ICL and encoder-based fine-tuning for clinical NER under realistic constraints, and to determine whether optimizing ICL demonstration selection can close the performance gap. We manually annotated 2,113 clinical notes from hematologic malignancy patients at Seoul National University Hospital and 400 MIMIC-IV notes. ICL configurations were optimized across task instructions, output formats, demonstration selection methods, sorting strategies, and pool sizes, using LLaMA-3.3-70B (open-source) via Ollama. Encoder fine-tuning was performed on both domain-specific and general-domain models, with RoBERTa-large representing the best encoder baseline. All models were evaluated as token-level classification tasks using macro and weighted F1, across in-domain, cross-domain, and cross-institutional scenarios. Demonstration selection played a major role in determining to ICL performance, improving macro F1 by up to 9.4 points over random selection under our experimental settings. In moderate-resource settings (500-sample pool), ICL exceeded RoBERTa-large fine-tuning by 4.7 macro F1 points and remained competitive up to 900 samples. Both ICL and fine-tuning experienced performance degradation in cross-domain evaluations, yet ICL demonstrated superior data efficiency, achieving competitive accuracy with substantially fewer labeled examples. ICL achieved in-domain macro F1 > 0.8 in several domains, outperforming full-data fine-tuned encoders, and delivered 6.3- to 11.6-point gains in cross-institutional transfer without parameter updates. At the largest pool size (∼1,900 samples), encoder-based fine-tuning regained the lead. With optimized domain-aware demonstration selection, open-source LLM-based ICL can match or surpass encoder fine-tuning for clinical NER. Its ease of adaptation and ability to update knowledge via demonstration pools-without retraining-enable continuous improvement in dynamic, resource-limited healthcare settings.",
+    "year": 2026,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Siun Kim",
+      "David Seung U Lee",
+      "Yujin Kim",
+      "Hyung-Jin Yoon",
+      "Howard Lee"
+    ],
+    "doi": "10.1016/j.jbi.2026.104982",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41519189/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41519189"
+    }
+  },
+  {
+    "paper_id": "pubmed:41488128",
+    "title": "Enabling Few-Shot Alzheimer's Disease Diagnosis on Biomarker Data with Tabular LLMs.",
+    "abstract": "Early and accurate diagnosis of Alzheimer's disease (AD), a complex neurodegenerative disorder, requires analysis of heterogeneous biomarkers (e.g., neuroimaging, genetic risk factors, cognitive tests, and cerebrospinal fluid proteins) typically represented in a tabular format. With flexible few-shot reasoning, multimodal integration, and natural-language-based interpretability, large language models (LLMs) offer unprecedented opportunities for prediction with structured biomedical data. We propose a novel framework called ",
+    "year": 2025,
+    "venue": "ACM-BCB ... ... : the ... ACM Conference on Bioinformatics, Computational Biology and Biomedicine. ACM Conference on Bioinformatics, Computational Biology and Biomedicine",
+    "authors": [
+      "Sophie Kearney",
+      "Shu Yang",
+      "Zixuan Wen",
+      "Bojian Hou",
+      "Duy Duong-Tran",
+      "Tianlong Chen",
+      "Jason Moore",
+      "Marylyn Ritchie",
+      "Li Shen"
+    ],
+    "doi": "10.1145/3765612.3767229",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41488128/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41488128"
+    }
+  },
+  {
+    "paper_id": "pubmed:41435443",
+    "title": "Efficient medical NER with limited data: Enhancing LLM performance through annotation guidelines.",
+    "abstract": "Named entity recognition (NER) is critical in natural language processing (NLP), particularly in the medical field, where accurate identification of entities, such as patient information and clinical events, is essential. Traditional NER approaches rely heavily on large, annotated corpora, which are resource intensive. Large language models (LLMs) offer new NER approaches, particularly through in-context and few-shot learning. This study investigates the effects of incorporating annotation guidelines into prompts for NER via LLMs, with a specific focus on their impact on few-shot learning performance across various medical corpora. We designed eight different prompt patterns, combining few-shot examples with annotation guidelines of varying complexity, and evaluated their performance via three prominent LLMs: GPT-4o, Claude 3.5 Sonnet, and gpt-oss-120b. Additionally, we employed three diverse medical corpora: i2b2-2014, i2b2-2012, and MedTxt-CR. Accuracy was assessed via precision, recall, and the F1 score, with evaluation methods aligned with those used in relevant shared tasks to ensure the comparability of the results. Our findings indicate that adding detailed annotation guidelines to few-shot prompts improves the recall and F1 score in most cases. Including annotation guidelines in prompts enhances the performance of LLMs in NER tasks, making this a practical approach for developing accurate NLP systems in resource-constrained environments. Although annotation guidelines are essential for evaluation and example creation, their integration into LLM prompts can further optimize few-shot learning, especially within specialized domains such as medical NLP.",
+    "year": 2026,
+    "venue": "International journal of medical informatics",
+    "authors": [
+      "Emiko Shinohara",
+      "Yoshimasa Kawazoe"
+    ],
+    "doi": "10.1016/j.ijmedinf.2025.106230",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41435443/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41435443"
+    }
+  },
+  {
+    "paper_id": "pubmed:41404284",
+    "title": "Rx-LLM: a benchmarking suite to evaluate safe large language model performance for medication-related tasks.",
+    "abstract": "For large language models (LLMs) to reach their potential as information technology tools that make medication use safer, clinically relevant benchmarks capable of automated grading and designed specifically to measure the performance of LLMs for medication tasks are required. The purpose of this study was to design a suite of benchmarking tests reflective of Comprehensive Medication Management (CMM; the standard of care for medication optimization) and quantify the baseline performance of the latest LLMs. We established six benchmarks representing critical stages of the CMM process: drug formulation matching, drug order (sig) generation, drug route matching, drug-drug interaction identification, renal dose identification, and drug-indication matching. For each benchmark, we curated a clinician-annotated dataset comprising 250 standardized input-output pairs including both inpatient and outpatient medications. We evaluated the clinical knowledge retrieval capabilities of three LLMs: GPT-4o-mini, MedGemma-27B, and LLaMA3-70B. We employed a zero-shot prompting strategy, excluding in-context examples, to assess the models' internal clinical knowledge rather than their few-shot learning potential. To check reliability, each model was run three times using a temperature of 0.7 (a mid-range value of an LLM setting controlling text generation randomness). Performance was assessed using task-specific evaluation metrics including precision (positive predictive value), recall (sensitivity), F1-score, accuracy, and correctness consistency across trials. Across six benchmarks,  Model performance varied substantially across medication-related tasks. LLaMA3-70B demonstrated promising baseline performance in tasks involving formulation, ordering, route, and indication. GPT-4o-mini showed potential advantages in drug-drug interaction detection and renal dose adjustment. These findings underscore the need for task-specific evaluation when deploying models for medication-focused clinical decision support.",
+    "year": 2025,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "Xingmeng Zhao",
+      "Kaitlin Blotske",
+      "Moriah Cargile",
+      "Adeleine Tilley",
+      "Brian Murray",
+      "Yanjun Gao",
+      "Kelli Henry",
+      "Susan E Smith",
+      "Erin F Barreto",
+      "Seth Bauer",
+      "Sunghwan Sohn",
+      "Tianming Liu",
+      "Tell Bennett",
+      "Mitch Cohen",
+      "Andrea Sikora"
+    ],
+    "doi": "10.64898/2025.12.01.25341004",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41404284/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41404284"
+    }
+  },
+  {
+    "paper_id": "pubmed:41342130",
+    "title": "Extracting Knowledge From Scientific Texts on Patient-Derived Cancer Models Using Large Language Models: Algorithm Development and Validation Study.",
+    "abstract": "Patient-derived cancer models (PDCMs) have become essential tools in cancer research and preclinical studies. Consequently, the number of publications on PDCMs has increased significantly over the past decade. Advances in artificial intelligence, particularly in large language models (LLMs), offer promising solutions for extracting knowledge from scientific literature at scale. This study aims to investigate LLM-based systems, focusing specifically on prompting techniques for the automated extraction of PDCM-related entities from scientific texts. We explore 2 LLM-prompting approaches. The classic method, direct prompting, involves manually designing a prompt. Our direct prompt consists of an instruction, entity-type definitions, gold examples, and a query. In addition, we experiment with a novel and underexplored prompting strategy-soft prompting. Unlike direct prompting, soft prompts are trainable continuous vectors that learn from provided data. We evaluate both prompting approaches across state-of-the-art proprietary and open LLMs. We manually annotated 100 abstracts of PDCM-relevant papers, focusing on PDCM papers with data deposited in the CancerModels.Org platform. The resulting gold annotations span 15 entity types for a total 3313 entity mentions, which we split across training (2089 entities), development (542 entities) and held-out, eye-off test (682 entities) sets. Evaluation includes the standard metrics of precision or positive predictive value, recall or sensitivity, and F1-score (harmonic mean of precision and recall) in 2 settings: an exact match setting, where spans of gold and predicted annotations have to match exactly, and an overlapping match setting, where the spans of gold and predicted annotations have to overlap. GPT4-o with direct prompting achieved F1-scores of 50.48 and 71.36 for exact and overlapping match settings, respectively. In both evaluation settings, LLaMA3 soft prompting improved performance over direct prompting (F1-score from 7.06 to 46.68 in the exact match setting; and 12.0 to 71.80 in the overlapping evaluation setting). Results with LLaMA3 soft prompting are slightly higher than GPT4-o direct prompting in the overlapping match evaluation setting. We investigated LLM-prompting techniques for the automatic extraction of PDCM-relevant entities from scientific texts, comparing the traditional direct prompting approach with the emerging soft prompting method. In our experiments, GPT4-o demonstrated strong performance with direct prompting, maintaining competitive results. Meanwhile, soft prompting significantly enhanced the performance of smaller open LLMs. Our findings suggest that training soft prompts on smaller open models can achieve performance levels comparable to those of proprietary very large language models.",
+    "year": 2025,
+    "venue": "JMIR bioinformatics and biotechnology",
+    "authors": [
+      "Jiarui Yao",
+      "Zinaida Perova",
+      "Tushar Mandloi",
+      "Elizabeth Lewis",
+      "Helen Parkinson",
+      "Guergana Savova"
+    ],
+    "doi": "10.2196/70706",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41342130/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41342130"
+    }
+  },
+  {
+    "paper_id": "pubmed:41201741",
+    "title": "Personalized rTMS treatment recommendation with retrieval-augmented LLM reasoning.",
+    "abstract": "Repetitive transcranial magnetic stimulation (rTMS) is an effective, non-invasive neuromodulation therapy for major depressive disorder (MDD) and treatment-resistant depression (TRD). However, current clinical practice typically relies on standardized protocols that may not adequately account for individual patient variability. To address this gap, we propose a novel, interpretable framework for personalized rTMS treatment recommendations that combines a pretrained sentence embedding model with large language model (LLM)-based reasoning in a retrieval-augmented generation (RAG) setting. Specifically, our approach leverages a pretrained sentence embedding model to encode structured patient profiles into a dense semantic representation, enabling the retrieval of clinically similar cases. These retrieved examples serve as few-shot prompts for in-context learning (ICL), enabling the LLM to reason over these examples and synthesize customized rTMS treatment parameters. Unlike previous approaches that focus solely on individual aspects of personalization, our framework integrates all key parameters (frequency, intensity, and stimulation mode) into a comprehensive recommendation. We systematically evaluated various sentence embedding models and LLMs. Among them, Bge-large-en-v1.5 for few-shot retrieval and GPT-4o-mini for reasoning achieved the highest rTMS protocol matching accuracy of 78.18% using 15 few-shot examples. Our approach is fine-tuning-free, interpretable, and adaptable to real-world, resource-poor clinical settings, providing a promising step forward in data-driven personalized neurostimulation therapy.",
+    "year": 2025,
+    "venue": "Brain informatics",
+    "authors": [
+      "Lingling Xu",
+      "Haoran Xie",
+      "Xiaohui Tao",
+      "S Joe Qin",
+      "Fu Lee Wang",
+      "Raj Gururajan",
+      "Soman Elangovan",
+      "Yanmei Shen"
+    ],
+    "doi": "10.1186/s40708-025-00275-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41201741/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41201741"
+    }
+  },
+  {
+    "paper_id": "pubmed:41144528",
+    "title": "Retrieval-augmented Chinese text-to-SQL generation for conversational bibliographic search.",
+    "abstract": "To overcome the limitations of current bibliographic search systems, such as low semantic precision and inadequate handling of complex queries, this study introduces a novel conversational search framework for the Chinese bibliographic domain. Our approach makes several contributions. We first developed BibSQL, the first Chinese Text-to-SQL dataset for bibliographic metadata. Using this dataset, we built a two-stage conversational system that combines semantic retrieval of relevant question-SQL pairs with in-context SQL generation by large language models (LLMs). To enhance retrieval, we designed SoftSimMatch, a supervised similarity learning model that improves semantic alignment. We further refined SQL generation using a Program-of-Thoughts (PoT) prompting strategy, which guides the LLM to produce more accurate output by first creating Python pseudocode. Experimental results demonstrate the framework's effectiveness. Retrieval-augmented generation (RAG) significantly boosts performance, achieving up to 96.6% execution accuracy. Our SoftSimMatch-enhanced RAG approach surpasses zero-shot prompting and random example selection in both semantic alignment and SQL accuracy. Ablation studies confirm that the PoT strategy and self-correction mechanism are particularly beneficial under low-resource conditions, increasing one model's exact matching accuracy from 74.8% to 82.9%. While acknowledging limitations such as potential logic errors in complex queries and reliance on domain-specific knowledge, the proposed framework shows strong generalizability and practical applicability. By uniquely integrating semantic similarity learning, RAG, and PoT prompting, this work establishes a scalable foundation for future intelligent bibliographic retrieval systems and domain-specific Text-to-SQL applications.",
+    "year": 2025,
+    "venue": "PloS one",
+    "authors": [
+      "Zhenyu Wang",
+      "Mark Xuefang Zhu",
+      "Guo Li",
+      "Shanshan Kong"
+    ],
+    "doi": "10.1371/journal.pone.0334965",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41144528/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41144528"
+    }
+  },
+  {
+    "paper_id": "pubmed:41140898",
+    "title": "In-Context Learning for Data-Efficient Diabetic Retinopathy Detection via Multimodal Foundation Models.",
+    "abstract": "This study aims to evaluate whether in-context learning (ICL), a prompt-based learning mechanism enabling multimodal foundation models to rapidly adapt to new tasks without retraining or large annotated datasets, can achieve comparable diagnostic performance to domain-specific foundation models. Specifically, we use diabetic retinopathy (DR) detection as an exemplar task to probe if a multimodal foundation model (Google Gemini 1.5 Pro), employing ICL, can match the performance of a domain-specific model (RETFound) fine-tuned explicitly for DR detection from color fundus photographs (CFPs). A cross-sectional study. A retrospective, publicly available dataset (Indian Diabetic Retinopathy Image Dataset) comprising 516 CFPs collected at an eye clinic in India, featuring both healthy individuals and patients with DR. The images were dichotomized into 2 groups based on the presence or absence of any signs of DR. RETFound was fine-tuned for this binary classification task, while Gemini 1.5 Pro was assessed for it under zero-shot and few-shot prompting scenarios, with the latter incorporating random or k-nearest-neighbors-based sampling of a varying number of example images. For experiments, data were partitioned into training, validation, and test sets in a stratified manner, with the process repeated for 10-fold cross-validation. Performance was assessed via accuracy, F1 score, and expected calibration error of predictive probabilities. Statistical significance was evaluated using Wilcoxon tests. The best ICL performance with Gemini 1.5 Pro yielded an average accuracy of 0.841 (95% confidence interval [CI]: 0.803-0.879), an F1 score of 0.876 (95% CI: 0.844-0.909), and a calibration error of 0.129 (95% CI: 0.107-0.152). RETFound achieved an average accuracy of 0.849 (95% CI: 0.813-0.885), an F1 score of 0.883 (95% CI: 0.852-0.915), and a calibration error of 0.081 (95% CI: 0.066-0.097). While accuracy and F1 scores were comparable ( Gemini 1.5 Pro with ICL demonstrated performance comparable to RETFound for binary DR detection, illustrating how future medical artificial intelligence systems may build upon such frontier models rather than being bespoke solutions. Proprietary or commercial disclosure may be found in the Footnotes and Disclosures at the end of this article.",
+    "year": 2026,
+    "venue": "Ophthalmology science",
+    "authors": [
+      "Murat S Ayhan",
+      "Ariel Y Ong",
+      "Eden Ruffell",
+      "Siegfried K Wagner",
+      "David A Merle",
+      "Pearse A Keane"
+    ],
+    "doi": "10.1016/j.xops.2025.100934",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41140898/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41140898"
+    }
+  },
+  {
+    "paper_id": "pubmed:40966546",
+    "title": "Large Language Model-Supported Identification of Intellectual Disabilities in Clinical Free-Text Summaries: Mixed Methods Study.",
+    "abstract": "Free-text clinical data are unstructured and narrative in nature, providing a rich source of patient information, but extracting research-quality clinical phenotypes from these data remains a challenge. Manually reviewing and extracting clinical phenotypes from free-text patient notes is a time-consuming process and not suitable for large-scale datasets. On the other hand, automatically extracting clinical phenotypes can be challenging because medical researchers lack gold-standard annotated references and other purpose-built resources, including software. Recent large language models (LLMs) can understand natural language instructions, which help them adapt to different domains and tasks without the need for specific training data. This makes them suitable for clinical applications, though their use in this field is limited. We aimed to develop an LLM pipeline based on the few-shot learning framework that could extract clinical information from free-text clinical summaries. We assessed the performance of this pipeline for classifying individuals with confirmed or suspected comorbid intellectual disability (ID) from clinical summaries of patients with severe mental illness and performed genetic validation of the results by testing whether individuals with LLM-defined ID carried more genetic variants known to confer risk of ID when compared with individuals without LLM-defined ID. We developed novel approaches for performing classification, based on an intermediate information extraction (IE) step and human-in-the-loop techniques. We evaluated two models: Fine-Tuned Language Text-To-Text Transfer Transformer (Flan-T5) and Large Language Model Architecture (LLaMA). The dataset comprised 1144 free-text clinical summaries, of which 314 were manually annotated and used as a gold standard for evaluating automated methods. We also used published genetic data from 547 individuals to perform a genetic validation of the classification results; Firth's penalized logistic regression framework was used to test whether individuals with LLM-defined ID carry significantly more de novo variants in known developmental disorder risk genes than individuals without LLM-defined ID. The results demonstrate that a 2-stage approach, combining IE with manual validation, can effectively identify individuals with suspected IDs from free-text patient records, requiring only a single training example per classification label. The best-performing method based on the Flan-T5 model and incorporating the IE step achieved an F1-score of 0.867. Individuals classified as having ID by the best performing model were significantly enriched for de novo variants in known developmental disorder risk genes (odds ratio 29.1, 95% CI 7.36-107; P=2.1×10-5). LLMs and in-context learning techniques combined with human-in-the-loop approaches can be highly beneficial for extraction and categorization of information from free-text clinical data. In this proof-of-concept study, we show that LLMs can be used to identify individuals with a severe mental illness who also have suspected ID, which is a biologically and clinically meaningful subgroup of patients.",
+    "year": 2025,
+    "venue": "JMIR AI",
+    "authors": [
+      "Aleksandra Edwards",
+      "Antonio F Pardiñas",
+      "George Kirov",
+      "Elliott Rees",
+      "Jose Camacho-Collados"
+    ],
+    "doi": "10.2196/72256",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40966546/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40966546"
+    }
+  },
+  {
+    "paper_id": "pubmed:40832420",
+    "title": "Detecting Stigmatizing Language in Clinical Notes with Large Language Models for Addiction Care.",
+    "abstract": "Recent studies have found that stigmatizing terms can incline physicians to pursue punitive approaches to patient care. The intensive care unit (ICU) contains large volumes of progress notes that may contain stigmatizing language, which could perpetuate negative biases against patients and affect healthcare delivery. Patients with substance use disorders (alcohol, opioid, and non-opioid drugs) are particularly vulnerable to stigma. This study aimed to examine the performance of Large Language Models (LLMs) in the identification of stigmatizing language from ICU progress notes of patients with substance use disorders (SUD). Clinical notes were sampled from the Medical Information Mart for Intensive Care (MIMIC)-III, which contains 2,083,180 ICU notes. These 2,083,180 notes were passed into a rule-based labeling approach followed by manual verification for more ambiguous cases. The labeling approach followed the NIH guidelines on stigma in SUD. The labeling process resulted in identifying 38,552 stigmatizing encounters. To design our cohort, we randomly sampled an equivalent amount of non-stigmatizing encounters to create a dataset with 77,104 notes. This cohort was organized into train/development/test datasets (70/15/15). We utilized Meta's Llama-3 8B Instruct LLM to run the following experiments for stigma detection: (1) prompts with instructions that adhere to the NIH terms (Zero-Shot); (2) prompts with instructions and examples (in-context learning); (3) in-context learning with a selective retrieval system for the NIH terms (Retrieval Augmented Generation-RAG); and (4) supervised fine-tuning (SFT). We also created a baseline model using keyword search. Evaluation was performed on the held-out test set for accuracy, macro F1 score, and error analysis. The LLM-based approaches were prompted to provide their reasoning for label prediction. Additionally, all approaches were evaluated on an external validation dataset from the University of Wisconsin (UW) Health System with 288,130 ICU notes. SFT had the best performance with 97.2% accuracy, followed by in-context learning. The LLMs with in-context learning and SFT provided appropriate reasoning for false positives during human review. Both approaches identified clinical notes with stigmatizing language that were missed during annotation (10/93 false positives for SFT and 22/186 false positives for the in-context learning approach were considered valid after human review). SFT maintained its accuracy at 97.9% on a similarly balanced external validation dataset. Our findings demonstrate that LLMs, particularly using SFT and in-context learning, effectively identify stigmatizing language in ICU notes with high accuracy while explaining their reasoning in an asynchronous fashion without needing rigorous and time-intensive manual verification involved in labeling. These models also demonstrated the ability to identify novel stigmatizing language not explicitly in training data nor existing guidelines. This study highlights the potential of LLMs in reducing stigma in clinical documentation, especially for patients with SUD. These LLMs enable identification of stigmatizing language in clinical notes that can perpetuate negative stigma towards patients and encourage rewriting of notes.",
+    "year": 2025,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "R Sethi",
+      "J Caskey",
+      "Y Gao",
+      "M M Churpek",
+      "T A Miller",
+      "A Mayampurath",
+      "E S Afshar",
+      "M Afshar",
+      "D Dligach"
+    ],
+    "doi": "10.1101/2025.08.08.25333315",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40832420/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40832420"
+    }
+  },
+  {
+    "paper_id": "pubmed:40541074",
+    "title": "Assessing large language models for acute heart failure classification and information extraction from French clinical notes.",
+    "abstract": "Understanding acute heart failure (AHF) remains a significant challenge, as many clinical details are recorded in unstructured text rather than structured data in electronic health records (EHRs). In this study, we explored the use of large language models (LLMs) to automatically identify AHF hospitalizations and extract accurate AHF-related clinical information from clinical notes. Based on clinical notes from the Nantes University Hospital in France, we used a general-purpose LLM, Qwen2-7B, and evaluated its performance against a French biomedical pretrained model, DrLongformer. We explored supervised fine-tuning and in-context learning techniques, such as few-shot and chain-of-thought prompting, and performed an ablation study to analyze the impact of data volume and annotation characteristics on model performance. Our results demonstrated that DrLongformer achieved superior performance in classifying AHF hospitalizations, with an F1 score of 0.878 compared to 0.80 for Qwen2-7B, and similarly outperformed in extracting most of the clinical information. However, Qwen2-7B showed better performance in extracting quantitative outcomes when fine-tuned on the training set (typically weight and body mass index, for example). Our ablation study revealed that the number of clinical notes used in training is a significant factor influencing model performance, but improvements plateaued after 250 documents. Additionally, we observed that longer annotations negatively impact model training and downstream performance. The findings highlight the potential of small language models-which can be hosted on-premise in hospitals and integrated with EHRs-to improve real-world data collection and identify complex medical symptoms such as acute heart failure.",
+    "year": 2025,
+    "venue": "Computers in biology and medicine",
+    "authors": [
+      "Adrien Bazoge",
+      "Matthieu Wargny",
+      "Pacôme Constant Dit Beaufils",
+      "Emmanuel Morin",
+      "Béatrice Daille",
+      "Pierre-Antoine Gourraud",
+      "Samy Hadjadj"
+    ],
+    "doi": "10.1016/j.compbiomed.2025.110609",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40541074/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40541074"
+    }
+  },
+  {
+    "paper_id": "pubmed:40529494",
+    "title": "Improving drug-drug interaction prediction via in-context learning and judging with large language models.",
+    "abstract": "Large Language Models (LLMs), recognized for their advanced capabilities in natural language processing, have been successfully employed across various domains. However, their effectiveness in addressing challenges related to drug discovery has yet to be fully elucidated. In this paper, we propose a novel LLM based method for drug-drug interaction (DDI) prediction, named DDI-JUDGE, achieved through the integration of judging and ICL prompts. The proposed method outperforms existing LLM approaches, demonstrating the potential of LLMs for predicting DDIs. We introduce a novel in-context learning (ICL) prompt paradigm that selects high-similarity samples as positive and negative prompts, enabling the model to effectively learn and generalize knowledge. Additionally, we present an ICL-based prompt template that structures inputs, prediction tasks, relevant factors, and examples, leveraging the pre-trained knowledge and contextual understanding of LLMs to enhance DDI prediction capabilities. To further refine predictions, we employ GPT-4 as a discriminator to assess the relevance of predictions generated by multiple LLMs. DDI-JUDGE achieves the best performance among all models in both zero-shot and few-shot settings, with an AUC of 0.642/0.788 and AUPR of 0.629/0.801, respectively. These results demonstrate its superior predictive capability and robustness across different learning scenarios. These findings highlight the potential of LLMs in advancing drug discovery through more effective DDI prediction. The modular prompt structure, combined with ensemble reasoning, offers a scalable framework for knowledge-intensive biomedical applications. The code for DDI-JUDGE is available at https://github.com/zcc1203/ddi-judge.",
+    "year": 2025,
+    "venue": "Frontiers in pharmacology",
+    "authors": [
+      "He Qi",
+      "Xiaoqiang Li",
+      "Chengcheng Zhang",
+      "Tianyi Zhao"
+    ],
+    "doi": "10.3389/fphar.2025.1589788",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40529494/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40529494"
+    }
+  },
+  {
+    "paper_id": "pubmed:40469073",
+    "title": "Untitled",
+    "abstract": "Few-shot prompting in large language models (LLMs) significantly improves performance across various tasks, including both in-domain and previously unseen natural language tasks, by learning from limited in-context examples. How these examples enhance transferability and contribute to achieving state-of-the-art (SOTA) performance in downstream tasks remains unclear. To address this, we propose ",
+    "year": 2025,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Y H P P Priyadarshana",
+      "Zilu Liang",
+      "Ian Piumarta"
+    ],
+    "doi": "10.3389/frai.2025.1564828",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40469073/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40469073"
+    }
+  },
+  {
+    "paper_id": "pubmed:40456086",
+    "title": "AFSPrompt: An Axiomatic Fuzzy Set Prompt Pipeline for Knowledge-Based VQA.",
+    "abstract": "Despite the impressive few-shot performance of in-context learning (ICL) in knowledge-based visual question answering (VQA), existing research often prioritizes addressing the image information gap in VQA, while placing less emphasis on organizing appropriate demonstrations (e.g., in-context examples) to support this task. Recent studies, however, have shown that ICL performance is sensitive to the organization of demonstrations. To address this, we introduce axiomatic fuzzy set (AFS) theory into knowledge-based VQA, leveraging its unsupervised and interpretable nature to effectively organize demonstrations by describing each candidate with semantic concepts, thereby enhancing both the understanding and trustworthiness of the decision-making process. In this article, we propose AFSPrompt, a train-free example selection and ranking framework based on AFS theory for knowledge-based VQA tasks. After filtering irrelevant examples using multimodal embeddings, we apply AFS logic to integrate comparison information from candidates with multidimensional features. Furthermore, to reduce reliance on large-scale language model APIs such as OpenAI and facilitate model deployment, we employ a smaller 7B LLM as the knowledge engine to answer questions based on the optimized prompt. Through extensive evaluations of two datasets, we demonstrate the effectiveness of AFSPrompt within a lightweight pipeline for knowledge-based VQA tasks. Our code is publicly available at https://github.com/afs001/AFSPrompt.",
+    "year": 2025,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Zhiwei Wang",
+      "Qi Lang",
+      "Xiaodong Liu",
+      "Hao Zhang"
+    ],
+    "doi": "10.1109/TNNLS.2025.3573267",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40456086/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40456086"
+    }
+  },
+  {
+    "paper_id": "pubmed:40311258",
+    "title": "Ontology accelerates few-shot learning capability of large language model: A study in extraction of drug efficacy in a rare pediatric epilepsy.",
+    "abstract": "Dravet Syndrome (DS) is a developmental and epileptic encephalopathy that is characterized by severe, prolonged motor seizures and high resistance to multiple antiseizure medications (ASMs) with multiple comorbidities. Evaluating the efficacy of new drugs in DS preclinical models and mapping them to human phenotypes of DS through analysis of published literature is an important goal for improving outcomes in this rare pediatric epilepsy. Large language models (LLM) have demonstrated great promise in parsing published literature; however, the performance of LLMs falls short in medical applications. In this study, we investigate the effectiveness of domain ontology developed by human experts to optimize LLMs for medical text processing in a rare disease. Utilizing a benchmark dataset that describes the efficacy of 17 ASMs tested in preclinical models and DS patients, we define a new ontology-augmented phased in-context learning (PCL) approach to process 4935 full-text DS articles. We expand this analysis to 7 new drugs that demonstrate efficacy in reducing seizures to identify gaps in current knowledge for designing new experimental studies for drug discovery in DS. Few-shot or in-context learning is a foundational capability of LLMs and the few-shot learning capability of the Gemini 1.0 Pro version LLM dramatically increases when we augment prompts with the DS epilepsy ontology. The DS epilepsy ontology is the largest epilepsy and seizure ontology in clinical use that was developed by DS basic scientists and clinical neurologists. The ontology-augmented PCL prompt achieves 100% accuracy in reproducing the benchmark drug efficacy dataset for 17 ASMs with only two examples for in-context learning. The new ontology-augmented PCL approach significantly accelerates the few-shot learning capabilities of the Gemini LLM, thereby reducing the number of required examples and time needed to optimize LLMs for medical applications.",
+    "year": 2025,
+    "venue": "International journal of medical informatics",
+    "authors": [
+      "Pedram Golnari",
+      "Katrina Prantzalos",
+      "Veronica Hood",
+      "Mary Anne Meskis",
+      "Lori L Isom",
+      "Karen Wilcox",
+      "Jack M Parent",
+      "Dennis Lal",
+      "Samden D Lhatoo",
+      "Howard P Goodkin",
+      "Elaine C Wirrell",
+      "Kelly G Knupp",
+      "Manisha Patel",
+      "Jeffrey A Loeb",
+      "Joseph E Sullivan",
+      "Lauren Harte-Hargrove",
+      "Brandy E Fureman",
+      "Jeffrey Buchhalter",
+      "Satya S Sahoo"
+    ],
+    "doi": "10.1016/j.ijmedinf.2025.105942",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40311258/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40311258"
+    }
+  },
+  {
+    "paper_id": "pubmed:40290288",
+    "title": "Nanophotonic device design based on large language models: multilayer and metasurface examples.",
+    "abstract": "Large language models (LLMs) have gained significant prominence in language processing, demonstrating remarkable performance across a wide range of tasks. Recently, LLMs have been explored in various scientific fields beyond language-based tasks. However, their application in the design of nanophotonic devices remains less explored. Here, we investigate the capabilities of LLMs to address nanophotonic design problems without requiring domain-specific expertise of the user. Our findings show that an LLM with in-context learning enables nonexpert users to calculate optical responses of multilayer films via numerical simulations. Through conversational interaction and feedback between the LLM and the user, an optimal design of the multilayer films can be also produced for the user-provided target optical properties. Furthermore, we fine-tune the LLM using text-based representations of the structure and properties of optical metasurfaces. We demonstrate that the fine-tuned LLM can generate metasurface designs with target properties by reversing the input and output text. This research highlights the potential of LLMs to expedite the nanophotonic design process and to make it more accessible to a wider audience.",
+    "year": 2025,
+    "venue": "Nanophotonics (Berlin, Germany)",
+    "authors": [
+      "Myungjoon Kim",
+      "Hyeonjin Park",
+      "Jonghwa Shin"
+    ],
+    "doi": "10.1515/nanoph-2024-0674",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40290288/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40290288"
+    }
+  },
+  {
+    "paper_id": "pubmed:40100267",
+    "title": "Prompt Framework for Extracting Scale-Related Knowledge Entities from Chinese Medical Literature: Development and Evaluation Study.",
+    "abstract": "Measurement-based care improves patient outcomes by using standardized scales, but its widespread adoption is hindered by the lack of accessible and structured knowledge, particularly in unstructured Chinese medical literature. Extracting scale-related knowledge entities from these texts is challenging due to limited annotated data. While large language models (LLMs) show promise in named entity recognition (NER), specialized prompting strategies are needed to accurately recognize medical scale-related entities, especially in low-resource settings. This study aims to develop and evaluate MedScaleNER, a task-oriented prompt framework designed to optimize LLM performance in recognizing medical scale-related entities from Chinese medical literature. MedScaleNER incorporates demonstration retrieval within in-context learning, chain-of-thought prompting, and self-verification strategies to improve performance. The framework dynamically retrieves optimal examples using a k-nearest neighbors approach and decomposes the NER task into two subtasks: entity type identification and entity labeling. Self-verification ensures the reliability of the final output. A dataset of manually annotated Chinese medical journal papers was constructed, focusing on three key entity types: scale names, measurement concepts, and measurement items. Experiments were conducted by varying the number of examples and the proportion of training data to evaluate performance in low-resource settings. Additionally, MedScaleNER's performance was compared with locally fine-tuned models. The CMedS-NER (Chinese Medical Scale Corpus for Named Entity Recognition) dataset, containing 720 papers with 27,499 manually annotated scale-related knowledge entities, was used for evaluation. Initial experiments identified GLM-4-0520 as the best-performing LLM among six tested models. When applied with GLM-4-0520, MedScaleNER significantly improved NER performance for scale-related entities, achieving a macro F MedScaleNER advances the application of LLMs and prompts engineering for specialized NER tasks in Chinese medical literature. By addressing the challenges of unstructured texts and limited annotated data, MedScaleNER's adaptability to various biomedical contexts supports more efficient and reliable knowledge extraction, contributing to broader measurement-based care implementation and improved clinical and research outcomes.",
+    "year": 2025,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Jie Hao",
+      "Zhenli Chen",
+      "Qinglong Peng",
+      "Liang Zhao",
+      "Wanqing Zhao",
+      "Shan Cong",
+      "Junlian Li",
+      "Jiao Li",
+      "Qing Qian",
+      "Haixia Sun"
+    ],
+    "doi": "10.2196/67033",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40100267/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40100267"
+    }
+  },
+  {
+    "paper_id": "pubmed:41602485",
+    "title": "Large Language Models are In-context Teachers for Knowledge Reasoning.",
+    "abstract": "In this work, we study ",
+    "year": 2024,
+    "venue": "Findings of ACL. EMNLP. Conference on Empirical Methods in Natural Language Processing",
+    "authors": [
+      "Jiachen Zhao",
+      "Zonghai Yao",
+      "Zhichao Yang",
+      "Hong Yu"
+    ],
+    "doi": "10.18653/v1/2024.findings-emnlp.961",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41602485/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41602485"
+    }
+  },
+  {
+    "paper_id": "pubmed:39146935",
+    "title": "Evaluating large language models on medical, lay-language, and self-reported descriptions of genetic conditions.",
+    "abstract": "Large language models (LLMs) are generating interest in medical settings. For example, LLMs can respond coherently to medical queries by providing plausible differential diagnoses based on clinical notes. However, there are many questions to explore, such as evaluating differences between open- and closed-source LLMs as well as LLM performance on queries from both medical and non-medical users. In this study, we assessed multiple LLMs, including Llama-2-chat, Vicuna, Medllama2, Bard/Gemini, Claude, ChatGPT3.5, and ChatGPT-4, as well as non-LLM approaches (Google search and Phenomizer) regarding their ability to identify genetic conditions from textbook-like clinician questions and their corresponding layperson translations related to 63 genetic conditions. For open-source LLMs, larger models were more accurate than smaller LLMs: 7b, 13b, and larger than 33b parameter models obtained accuracy ranges from 21%-49%, 41%-51%, and 54%-68%, respectively. Closed-source LLMs outperformed open-source LLMs, with ChatGPT-4 performing best (89%-90%). Three of 11 LLMs and Google search had significant performance gaps between clinician and layperson prompts. We also evaluated how in-context prompting and keyword removal affected open-source LLM performance. Models were provided with 2 types of in-context prompts: list-type prompts, which improved LLM performance, and definition-type prompts, which did not. We further analyzed removal of rare terms from descriptions, which decreased accuracy for 5 of 7 evaluated LLMs. Finally, we observed much lower performance with real individuals' descriptions; LLMs answered these questions with a maximum 21% accuracy.",
+    "year": 2024,
+    "venue": "American journal of human genetics",
+    "authors": [
+      "Kendall A Flaharty",
+      "Ping Hu",
+      "Suzanna Ledgister Hanchard",
+      "Molly E Ripper",
+      "Dat Duong",
+      "Rebekah L Waikel",
+      "Benjamin D Solomon"
+    ],
+    "doi": "10.1016/j.ajhg.2024.07.011",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39146935/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39146935"
+    }
+  },
+  {
+    "paper_id": "pubmed:39040164",
+    "title": "Large Language Models Diagnose Facial Deformity.",
+    "abstract": "This study examines the application of Large Language Models (LLMs) in diagnosing jaw deformities, aiming to overcome the limitations of various diagnostic methods by harnessing the advanced capabilities of LLMs for enhanced data interpretation. The goal is to provide tools that simplify complex data analysis and make diagnostic processes more accessible and intuitive for clinical practitioners. An experiment involving patients with jaw deformities was conducted, where cephalometric measurements (SNB Angle, Facial Angle, Mandibular Unit Length) were converted into text for LLM analysis. Multiple LLMs, including LLAMA-2 variants, GPT models, and the Gemini-Pro model, were evaluated against various methods (Threshold-based, Machine Learning Models) using balanced accuracy and F1-score. Our research demonstrates that larger LLMs efficiently adapt to diagnostic tasks, showing rapid performance saturation with minimal training examples and reducing ambiguous classification, which highlights their robust in-context learning abilities. The conversion of complex cephalometric measurements into intuitive text formats not only broadens the accessibility of the information but also enhances the interpretability, providing clinicians with clear and actionable insights. Integrating LLMs into the diagnosis of jaw deformities marks a significant advancement in making diagnostic processes more accessible and reducing reliance on specialized training. These models serve as valuable auxiliary tools, offering clear, understandable outputs that facilitate easier decision-making for clinicians, particularly those with less experience or in settings with limited access to specialized expertise. Future refinements and adaptations to include more comprehensive and medically specific datasets are expected to enhance the precision and utility of LLMs, potentially transforming the landscape of medical diagnostics.",
+    "year": 2024,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "Jungwook Lee",
+      "Xuanang Xu",
+      "Daeseung Kim",
+      "Hannah H Deng",
+      "Tianshu Kuang",
+      "Nathan Lampen",
+      "Xi Fang",
+      "Jaime Gateno",
+      "Pingkun Yan"
+    ],
+    "doi": "10.1101/2024.07.11.24310274",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39040164/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39040164"
+    }
+  },
+  {
+    "paper_id": "pubmed:38643910",
+    "title": "AlpaPICO: Extraction of PICO frames from clinical trial documents using LLMs.",
+    "abstract": "In recent years, there has been a surge in the publication of clinical trial reports, making it challenging to conduct systematic reviews. Automatically extracting Population, Intervention, Comparator, and Outcome (PICO) from clinical trial studies can alleviate the traditionally time-consuming process of manually scrutinizing systematic reviews. Existing approaches of PICO frame extraction involves supervised approach that relies on the existence of manually annotated data points in the form of BIO label tagging. Recent approaches, such as In-Context Learning (ICL), which has been shown to be effective for a number of downstream NLP tasks, require the use of labeled examples. In this work, we adopt ICL strategy by employing the pretrained knowledge of Large Language Models (LLMs), gathered during the pretraining phase of an LLM, to automatically extract the PICO-related terminologies from clinical trial documents in unsupervised set up to bypass the availability of large number of annotated data instances. Additionally, to showcase the highest effectiveness of LLM in oracle scenario where large number of annotated samples are available, we adopt the instruction tuning strategy by employing Low Rank Adaptation (LORA) to conduct the training of gigantic model in low resource environment for the PICO frame extraction task. More specifically, both of the proposed frameworks utilize AlpaCare as base LLM which employs both few-shot in-context learning and instruction tuning techniques to extract PICO-related terms from the clinical trial reports. We applied these approaches to the widely used coarse-grained datasets such as EBM-NLP, EBM-COMET and fine-grained datasets such as EBM-NLP",
+    "year": 2024,
+    "venue": "Methods (San Diego, Calif.)",
+    "authors": [
+      "Madhusudan Ghosh",
+      "Shrimon Mukherjee",
+      "Asmit Ganguly",
+      "Partha Basuchowdhuri",
+      "Sudip Kumar Naskar",
+      "Debasis Ganguly"
+    ],
+    "doi": "10.1016/j.ymeth.2024.04.005",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38643910/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38643910"
+    }
+  }
+]

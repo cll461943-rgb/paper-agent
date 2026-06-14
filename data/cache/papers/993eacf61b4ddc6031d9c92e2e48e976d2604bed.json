@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W7117237185",
+  "title": "FlashServe: Cost-Efficient Serverless Inference Scheduling for Large Language Models via Tiered Memory Management and Predictive Autoscaling",
+  "abstract": "Deploying Large Language Models (LLMs) in cloud environments presents significant challenges due to their substantial memory footprint and computational requirements. While serverless architectures offer attractive pay-per-use economics, they suffer from prohibitively long cold start times when loading multi-gigabyte model weights into GPU memory. This paper presents FlashServe, a serverless LLMinference system that achieves fast cold starts through three key innovations: (1) a tiered memory snapshotting mechanism that pre-stages model checkpoints in host DRAM and leverages high-speed DMAtransfers via PCIe for rapid GPU memory loading, (2) a hybrid Prophet-LSTM prediction model for proactive pod pre-warming based on request arrival patterns, and (3) efficient LoRA adapter multiplexing that enables serving multiple fine-tuned models on shared GPU resources. Extensive experiments on the Azure Functions trace dataset demonstrate that FlashServe reduces cold start latency by up to 49× compared to baseline S3-based loading approaches and by 3.3× compared to state-of-the-art systems like ServerlessLLM. Under realistic bursty workloads, FlashServe achieves 32% reduction in GPU idle costs while maintaining sub-second time-to-first-token (TTFT) latency for 95%of requests. These results demonstrate that FlashServe represents meaningful progress toward practical serverless LLM deployment.",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+    "Bolin Chen"
+  ],
+  "doi": "https://doi.org/10.20944/preprints202512.1908.v1",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.20944/preprints202512.1908.v1",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Latency (audio)",
+      "Scheduling (production processes)",
+      "Cloud computing",
+      "Dram",
+      "Memory footprint",
+      "Distributed computing",
+      "Inference",
+      "Adapter (computing)",
+      "Memory model",
+      "Real-time computing",
+      "Embedded system",
+      "Key (lock)",
+      "Reduction (mathematics)",
+      "Multiplexing",
+      "TRACE (psycholinguistics)",
+      "Parallel computing",
+      "Dynamic random-access memory",
+      "PCI Express",
+      "Computer network"
+    ],
+    "cited_by_api_url": null,
+    "related_works": []
+  }
+}

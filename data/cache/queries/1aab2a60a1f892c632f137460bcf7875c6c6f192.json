@@ -1,0 +1,1028 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2510.21391v1",
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sensing imagery for various high-level vision tasks, e.g., detection, segmentation, and extraction. Specifically, TerraGen introduces a geographic-spatial layout encoder that unifies bounding box and segmentation mask inputs, combined with a multi-scale injection scheme and mask-weighted loss to explicitly encode spatial constraints, from global structures to fine details. Also, we construct the first large-scale multi-task remote sensing layout generation dataset containing 45k images and establish a standardized evaluation protocol for this task. Experimental results show that our TerraGen can achieve the best generation image quality across diverse tasks. Additionally, TerraGen can be used as a universal data-augmentation generator, enhancing downstream task performance significantly and demonstrating robust cross-task generalisation in both full-data and few-shot scenarios.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Zhiheng Yu",
+      "Xiangyong Cao"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.21391v1",
+    "url": "http://arxiv.org/abs/2510.21391v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07869v1",
+    "title": "Let Invariant Rationale Discovery Inspire Graph Contrastive Learning",
+    "abstract": "Leading graph contrastive learning (GCL) methods perform graph augmentations in two fashions: (1) randomly corrupting the anchor graph, which could cause the loss of semantic information, or (2) using domain knowledge to maintain salient features, which undermines the generalization to other domains. Taking an invariance look at GCL, we argue that a high-performing augmentation should preserve the salient semantics of anchor graphs regarding instance-discrimination. To this end, we relate GCL with invariant rationale discovery, and propose a new framework, Rationale-aware Graph Contrastive Learning (RGCL). Specifically, without supervision signals, RGCL uses a rationale generator to reveal salient features about graph instance-discrimination as the rationale, and then creates rationale-aware views for contrastive learning. This rationale-aware pre-training scheme endows the backbone model with the powerful representation ability, further facilitating the fine-tuning on downstream tasks. On MNIST-Superpixel and MUTAG datasets, visual inspections on the discovered rationales showcase that the rationale generator successfully captures the salient features (i.e. distinguishing semantic nodes in graphs). On biochemical molecule and social network benchmark datasets, the state-of-the-art performance of RGCL demonstrates the effectiveness of rationale-aware views for contrastive learning. Our codes are available at https://github.com/lsh0520/RGCL.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Sihang Li",
+      "Xiang Wang",
+      "An zhang",
+      "Yingxin Wu",
+      "Xiangnan He",
+      "Tat-Seng Chua"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07869v1",
+    "url": "http://arxiv.org/abs/2206.07869v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.00921v1",
+    "title": "Supervised Contrastive Learning for Accented Speech Recognition",
+    "abstract": "Neural network based speech recognition systems suffer from performance degradation due to accented speech, especially unfamiliar accents. In this paper, we study the supervised contrastive learning framework for accented speech recognition. To build different views (similar \"positive\" data samples) for contrastive learning, three data augmentation techniques including noise injection, spectrogram augmentation and TTS-same-sentence generation are further investigated. From the experiments on the Common Voice dataset, we have shown that contrastive learning helps to build data-augmentation invariant and pronunciation invariant representations, which significantly outperforms traditional joint training methods in both zero-shot and full-shot settings. Experiments show that contrastive learning can improve accuracy by 3.66% (zero-shot) and 3.78% (full-shot) on average, comparing to the joint training method.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tao Han",
+      "Hantao Huang",
+      "Ziang Yang",
+      "Wei Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.00921v1",
+    "url": "http://arxiv.org/abs/2107.00921v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1907.02664v2",
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate Descent (CD). Gradient descent (GD) is a special case of these algorithms. PGD is typically used in the data-parallel setting, where data is partitioned across different samples, whereas, CD is used in the model-parallelism setting, where data is partitioned across the parameter space. In this paper, we propose a method based on data encoding and error correction over real numbers to combat adversarial attacks. We can tolerate up to $t\\leq \\lfloor\\frac{m-1}{2}\\rfloor$ corrupt worker nodes, which is information-theoretically optimal. We give deterministic guarantees, and our method does not assume any probability distribution on the data. We develop a {\\em sparse} encoding scheme which enables computationally efficient data encoding and decoding. We demonstrate a trade-off between the corruption threshold and the resource requirements (storage, computational, and communication complexity). As an example, for $t\\leq\\frac{m}{3}$, our scheme incurs only a {\\em constant} overhead on these resources, over that required by the plain distributed PGD/CD algorithms which provide no adversarial protection. To the best of our knowledge, ours is the first paper that makes CD secure against adversarial attacks. Our encoding scheme extends efficiently to the data streaming model and for stochastic gradient descent (SGD). We also give experimental results to show the efficacy of our proposed schemes.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "doi": null,
+    "arxiv_id": "1907.02664v2",
+    "url": "http://arxiv.org/abs/1907.02664v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.07866v1",
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply their filtering procedure in our {\\em heterogeneous} data setting where workers compute {\\em stochastic} gradients, we derive a new matrix concentration result, which may be of independent interest. We provide convergence analyses for smooth strongly-convex and non-convex objectives. We derive our results under the bounded variance assumption on local stochastic gradients and a {\\em deterministic} condition on datasets, namely, gradient dissimilarity; and for both these quantities, we provide concrete bounds in the statistical heterogeneous data model. We give a trade-off between the mini-batch size for stochastic gradients and the approximation error. Our algorithm can tolerate up to $\\frac{1}{4}$ fraction Byzantine workers. It can find approximate optimal parameters in the strongly-convex setting exponentially fast and reach to an approximate stationary point in the non-convex setting with a linear speed, thus, matching the convergence rates of vanilla SGD in the Byzantine-free setting. We also propose and analyze a Byzantine-resilient SGD algorithm with gradient compression, where workers send $k$ random coordinates of their gradients. Under mild conditions, we show a $\\frac{d}{k}$-factor saving in communication bits as well as decoding complexity over our compression-free algorithm without affecting its convergence rate (order-wise) and the approximation error.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.07866v1",
+    "url": "http://arxiv.org/abs/2005.07866v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.02722v1",
+    "title": "Video Contrastive Learning with Global Context",
+    "abstract": "Contrastive learning has revolutionized self-supervised image representation learning field, and recently been adapted to video domain. One of the greatest advantages of contrastive learning is that it allows us to flexibly define powerful loss objectives as long as we can find a reasonable way to formulate positive and negative samples to contrast. However, existing approaches rely heavily on the short-range spatiotemporal salience to form clip-level contrastive signals, thus limit themselves from using global context. In this paper, we propose a new video-level contrastive learning method based on segments to formulate positive pairs. Our formulation is able to capture global context in a video, thus robust to temporal content change. We also incorporate a temporal order regularization term to enforce the inherent sequential structure of videos. Extensive experiments show that our video-level contrastive learning framework (VCLR) is able to outperform previous state-of-the-arts on five video datasets for downstream action classification, action localization and video retrieval. Code is available at https://github.com/amazon-research/video-contrastive-learning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Haofei Kuang",
+      "Yi Zhu",
+      "Zhi Zhang",
+      "Xinyu Li",
+      "Joseph Tighe",
+      "Sören Schwertfeger",
+      "Cyrill Stachniss",
+      "Mu Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.02722v1",
+    "url": "http://arxiv.org/abs/2108.02722v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1110.5626v1",
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "doi": null,
+    "arxiv_id": "1110.5626v1",
+    "url": "http://arxiv.org/abs/1110.5626v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.15497v3",
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object classes. To address this issue, this paper proposes a layout-controllable diffusion generative model (i.e. AeroGen) tailored for RSIOD. To our knowledge, AeroGen is the first model to simultaneously support horizontal and rotated bounding box condition generation, thus enabling the generation of high-quality synthetic images that meet specific layout and object category requirements. Additionally, we propose an end-to-end data augmentation framework that integrates a diversity-conditioned generator and a filtering mechanism to enhance both the diversity and quality of generated data. Experimental results demonstrate that the synthetic data produced by our method are of high quality and diversity. Furthermore, the synthetic RSIOD data can significantly improve the detection performance of existing RSIOD models, i.e., the mAP metrics on DIOR, DIOR-R, and HRSC datasets are improved by 3.7%, 4.3%, and 2.43%, respectively. The code is available at https://github.com/Sonettoo/AeroGen.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li",
+      "Jing Yao",
+      "Xueru Bai",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Deyu Meng"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.15497v3",
+    "url": "http://arxiv.org/abs/2411.15497v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.04509v2",
+    "title": "MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive Learning from Molecular Graph",
+    "abstract": "Recent years have seen a rapid growth of utilizing graph neural networks (GNNs) in the biomedical domain for tackling drug-related problems. However, like any other deep architectures, GNNs are data hungry. While requiring labels in real world is often expensive, pretraining GNNs in an unsupervised manner has been actively explored. Among them, graph contrastive learning, by maximizing the mutual information between paired graph augmentations, has been shown to be effective on various downstream tasks. However, the current graph contrastive learning framework has two limitations. First, the augmentations are designed for general graphs and thus may not be suitable or powerful enough for certain domains. Second, the contrastive scheme only learns representations that are invariant to local perturbations and thus does not consider the global structure of the dataset, which may also be useful for downstream tasks. Therefore, in this paper, we study graph contrastive learning in the context of biomedical domain, where molecular graphs are present. We propose a novel framework called MoCL, which utilizes domain knowledge at both local- and global-level to assist representation learning. The local-level domain knowledge guides the augmentation process such that variation is introduced without changing graph semantics. The global-level knowledge encodes the similarity information between graphs in the entire dataset and helps to learn representations with richer semantics. The entire model is learned through a double contrast objective. We evaluate MoCL on various molecular datasets under both linear and semi-supervised settings and results show that MoCL achieves state-of-the-art performance.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mengying Sun",
+      "Jing Xing",
+      "Huijun Wang",
+      "Bin Chen",
+      "Jiayu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.04509v2",
+    "url": "http://arxiv.org/abs/2106.04509v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.14227v2",
+    "title": "CLUDA : Contrastive Learning in Unsupervised Domain Adaptation for Semantic Segmentation",
+    "abstract": "In this work, we propose CLUDA, a simple, yet novel method for performing unsupervised domain adaptation (UDA) for semantic segmentation by incorporating contrastive losses into a student-teacher learning paradigm, that makes use of pseudo-labels generated from the target domain by the teacher network. More specifically, we extract a multi-level fused-feature map from the encoder, and apply contrastive loss across different classes and different domains, via source-target mixing of images. We consistently improve performance on various feature encoder architectures and for different domain adaptation datasets in semantic segmentation. Furthermore, we introduce a learned-weighted contrastive loss to improve upon on a state-of-the-art multi-resolution training approach in UDA. We produce state-of-the-art results on GTA $\\rightarrow$ Cityscapes (74.4 mIOU, +0.6) and Synthia $\\rightarrow$ Cityscapes (67.2 mIOU, +1.4) datasets. CLUDA effectively demonstrates contrastive learning in UDA as a generic method, which can be easily integrated into any existing UDA for semantic segmentation tasks. Please refer to the supplementary material for the details on implementation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Midhun Vayyat",
+      "Jaswin Kasi",
+      "Anuraag Bhattacharya",
+      "Shuaib Ahmed",
+      "Rahul Tallamraju"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.14227v2",
+    "url": "http://arxiv.org/abs/2208.14227v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2009.14776v2",
+    "title": "Joint Contrastive Learning with Infinite Possibilities",
+    "abstract": "This paper explores useful modifications of the recent development in contrastive learning via novel probabilistic modeling. We derive a particular form of contrastive loss named Joint Contrastive Learning (JCL). JCL implicitly involves the simultaneous learning of an infinite number of query-key pairs, which poses tighter constraints when searching for invariant features. We derive an upper bound on this formulation that allows analytical solutions in an end-to-end training manner. While JCL is practically effective in numerous computer vision applications, we also theoretically unveil the certain mechanisms that govern the behavior of JCL. We demonstrate that the proposed formulation harbors an innate agency that strongly favors similarity within each instance-specific class, and therefore remains advantageous when searching for discriminative features among distinct instances. We evaluate these proposals on multiple benchmarks, demonstrating considerable improvements over existing algorithms. Code is publicly available at: https://github.com/caiqi/Joint-Contrastive-Learning.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Qi Cai",
+      "Yu Wang",
+      "Yingwei Pan",
+      "Ting Yao",
+      "Tao Mei"
+    ],
+    "doi": null,
+    "arxiv_id": "2009.14776v2",
+    "url": "http://arxiv.org/abs/2009.14776v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06380v5",
+    "title": "Structure-preserving contrastive learning for spatial time series",
+    "abstract": "The effectiveness of neural network models largely relies on learning meaningful latent patterns from data, where self-supervised learning of informative representations can enhance model performance and generalisability. However, self-supervised representation learning for spatially characterised time series, which are ubiquitous in transportation domain, poses unique challenges due to the necessity of maintaining fine-grained spatio-temporal similarities in the latent space. In this study, we introduce two structure-preserving regularisers for the contrastive learning of spatial time series: one regulariser preserves the topology of similarities between instances, and the other preserves the graph geometry of similarities across spatial and temporal dimensions. To balance the contrastive learning objective and the need for structure preservation, we propose a dynamic weighting mechanism that adaptively manages this trade-off and stabilises training. We validate the proposed method through extensive experiments, including multivariate time series classification to demonstrate its general applicability, as well as macroscopic and microscopic traffic prediction to highlight its particular usefulness in encoding traffic interactions. Across all tasks, our method preserves the similarity structures more effectively and improves state-of-the-art task performances. This method can be integrated with an arbitrary neural network model and is particularly beneficial for time series data with spatial or geographical features. Furthermore, our findings suggest that well-preserved similarity structures in the latent space indicate more informative and useful representations. This provides insights to design more effective neural networks for data-driven transportation research. Our code is made openly accessible with all resulting data at https://github.com/yiru-jiao/spclt",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yiru Jiao",
+      "Sander van Cranenburgh",
+      "Simeon Calvert",
+      "Hans van Lint"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06380v5",
+    "url": "http://arxiv.org/abs/2502.06380v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.00721v1",
+    "title": "Towards Improving Speaker Distance Estimation through Generative Impulse Response Augmentation",
+    "abstract": "The Room Acoustics and Speaker Distance Estimation (SDE) Challenge at ICASSP 2025 explores the effectiveness of augmented room impulse response (RIR) data for improving SDE model performance. This challenge at GenDARA involves generating RIRs to supplement sparse datasets and fine-tuning SDE models with the augmented data. We employ the open-source fast diffuse room impulse response generator (FastRIR) conditioned only on speaker and listener locations. We design a quality filter to ensure generated RIR alignment with challenge RIRs, and hyperparameter optimization is employed for model fine-tuning. Our approach reduces the mean absolute error (MAE) of the five positions from 1.66m to 0.6m for GWA rooms and from 2.18m to 0.69m for Treble rooms, with results demonstrating that the augmentation approach significantly improves estimation accuracy, particularly at medium to long distances.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Anton Ratnarajah",
+      "Mehmet Ergezer",
+      "Arun Nair",
+      "Mrudula Athi"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.00721v1",
+    "url": "http://arxiv.org/abs/2605.00721v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.16064v1",
+    "title": "A 20 Gbps Data Transmitting ASIC with PAM4 for Particle Physics Experiments",
+    "abstract": "We present the design principle and test results of a data transmitting ASIC, GBS20, for particle physics experiments. The goal of GBS20 will be an ASIC that employs two serializers each from the 10.24 Gbps lpGBT SerDes, sharing the PLL also from lpGBT. A PAM4 encoder plus a VCSEL driver will be implemented in the same die to use the same clock system, eliminating the need of CDRs in the PAM4 encoder. This way the transmitter module, GBT20, developed using the GBS20 ASIC, will have the exact lpGBT data interface and transmission protocol, with an output up to 20.48 Gbps over one fiber. With PAM4 embedded FPGAs at the receiving end, GBT20 will halve the fibers needed in a system and better use the input bandwidth of the FPGA. A prototype, GBS20v0 is fabricated using a commercial 65 nm CMOS technology. This prototype has two serializers and a PAM4 encoder sharing the lpGBT PLL, but no user data input. An internal PRBS generator provides data to the serializers. GBS20v0 is tested barely up to 20.48 Gbps. With lessons learned from this prototype, we are designing the second prototype, GBS20v1, that will have 16 user data input channels each at 1.28 Gbps. We present the design concept of the GBS20 ASIC and the GBT20 module, the preliminary test results, and lessons learned from GBS20v0 and the design of GBS20v1 which will be not only a test chip but also a user chip with 16 input data channels.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Li Zhang",
+      "Datao Gong",
+      "Suen Hou",
+      "Guanming Huang",
+      "Xing Huang",
+      "Chonghan Liu",
+      "Tiankuan Liu",
+      "Hanhan Sun",
+      "Quan Sun",
+      "Xiangming Sun",
+      "Wei Zhang",
+      "Jingbo Ye"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.16064v1",
+    "url": "http://arxiv.org/abs/2010.16064v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.08363v3",
+    "title": "Data-Efficient Augmentation for Training Neural Networks",
+    "abstract": "Data augmentation is essential to achieve state-of-the-art performance in many deep learning applications. However, the most effective augmentation techniques become computationally prohibitive for even medium-sized datasets. To address this, we propose a rigorous technique to select subsets of data points that when augmented, closely capture the training dynamics of full data augmentation. We first show that data augmentation, modeled as additive perturbations, improves learning and generalization by relatively enlarging and perturbing the smaller singular values of the network Jacobian, while preserving its prominent directions. This prevents overfitting and enhances learning the harder to learn information. Then, we propose a framework to iteratively extract small subsets of training data that when augmented, closely capture the alignment of the fully augmented Jacobian with labels/residuals. We prove that stochastic gradient descent applied to the augmented subsets found by our approach has similar training dynamics to that of fully augmented data. Our experiments demonstrate that our method achieves 6.3x speedup on CIFAR10 and 2.2x speedup on SVHN, and outperforms the baselines by up to 10% across various subset sizes. Similarly, on TinyImageNet and ImageNet, our method beats the baselines by up to 8%, while achieving up to 3.3x speedup across various subset sizes. Finally, training on and augmenting 50% subsets using our method on a version of CIFAR10 corrupted with label noise even outperforms using the full dataset. Our code is available at: https://github.com/tianyu139/data-efficient-augmentation",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Tian Yu Liu",
+      "Baharan Mirzasoleiman"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.08363v3",
+    "url": "http://arxiv.org/abs/2210.08363v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01088v2",
+    "title": "Exploring Empty Spaces: Human-in-the-Loop Data Augmentation",
+    "abstract": "Data augmentation is crucial to make machine learning models more robust and safe. However, augmenting data can be challenging as it requires generating diverse data points to rigorously evaluate model behavior on edge cases and mitigate potential harms. Creating high-quality augmentations that cover these \"unknown unknowns\" is a time- and creativity-intensive task. In this work, we introduce Amplio, an interactive tool to help practitioners navigate \"unknown unknowns\" in unstructured text datasets and improve data diversity by systematically identifying empty data spaces to explore. Amplio includes three human-in-the-loop data augmentation techniques: Augment With Concepts, Augment by Interpolation, and Augment with Large Language Model. In a user study with 18 professional red teamers, we demonstrate the utility of our augmentation methods in helping generate high-quality, diverse, and relevant model safety prompts. We find that Amplio enabled red teamers to augment data quickly and creatively, highlighting the transformative potential of interactive augmentation workflows.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Catherine Yeh",
+      "Donghao Ren",
+      "Yannick Assogba",
+      "Dominik Moritz",
+      "Fred Hohman"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01088v2",
+    "url": "http://arxiv.org/abs/2410.01088v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.15103v2",
+    "title": "Khan-GCL: Kolmogorov-Arnold Network Based Graph Contrastive Learning with Hard Negatives",
+    "abstract": "Graph contrastive learning (GCL) has demonstrated great promise for learning generalizable graph representations from unlabeled data. However, conventional GCL approaches face two critical limitations: (1) the restricted expressive capacity of multilayer perceptron (MLP) based encoders, and (2) suboptimal negative samples that either from random augmentations-failing to provide effective 'hard negatives'-or generated hard negatives without addressing the semantic distinctions crucial for discriminating graph data. To this end, we propose Khan-GCL, a novel framework that integrates the Kolmogorov-Arnold Network (KAN) into the GCL encoder architecture, substantially enhancing its representational capacity. Furthermore, we exploit the rich information embedded within KAN coefficient parameters to develop two novel critical feature identification techniques that enable the generation of semantically meaningful hard negative samples for each graph representation. These strategically constructed hard negatives guide the encoder to learn more discriminative features by emphasizing critical semantic differences between graphs. Extensive experiments demonstrate that our approach achieves state-of-the-art performance compared to existing GCL methods across a variety of datasets and tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zihu Wang",
+      "Boxun Xu",
+      "Hejia Geng",
+      "Peng Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.15103v2",
+    "url": "http://arxiv.org/abs/2505.15103v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.02544v4",
+    "title": "XSimGCL: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+    "abstract": "Contrastive learning (CL) has recently been demonstrated critical in improving recommendation performance. The underlying principle of CL-based recommendation models is to ensure the consistency between representations derived from different graph augmentations of the user-item bipartite graph. This self-supervised approach allows for the extraction of general features from raw data, thereby mitigating the issue of data sparsity. Despite the effectiveness of this paradigm, the factors contributing to its performance gains have yet to be fully understood. This paper provides novel insights into the impact of CL on recommendation. Our findings indicate that CL enables the model to learn more evenly distributed user and item representations, which alleviates the prevalent popularity bias and promoting long-tail items. Our analysis also suggests that the graph augmentations, previously considered essential, are relatively unreliable and of limited significance in CL-based recommendation. Based on these findings, we put forward an eXtremely Simple Graph Contrastive Learning method (XSimGCL) for recommendation, which discards the ineffective graph augmentations and instead employs a simple yet effective noise-based embedding augmentation to generate views for CL. A comprehensive experimental study on four large and highly sparse benchmark datasets demonstrates that, though the proposed method is extremely simple, it can smoothly adjust the uniformity of learned representations and outperforms its graph augmentation-based counterparts by a large margin in both recommendation accuracy and training efficiency. The code and used datasets are released at https://github.com/Coder-Yu/SELFRec.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Junliang Yu",
+      "Xin Xia",
+      "Tong Chen",
+      "Lizhen Cui",
+      "Nguyen Quoc Viet Hung",
+      "Hongzhi Yin"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.02544v4",
+    "url": "http://arxiv.org/abs/2209.02544v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.04029v1",
+    "title": "Motion-Focused Contrastive Learning of Video Representations",
+    "abstract": "Motion, as the most distinct phenomenon in a video to involve the changes over time, has been unique and critical to the development of video representation learning. In this paper, we ask the question: how important is the motion particularly for self-supervised video representation learning. To this end, we compose a duet of exploiting the motion for data augmentation and feature learning in the regime of contrastive learning. Specifically, we present a Motion-focused Contrastive Learning (MCL) method that regards such duet as the foundation. On one hand, MCL capitalizes on optical flow of each frame in a video to temporally and spatially sample the tubelets (i.e., sequences of associated frame patches across time) as data augmentations. On the other hand, MCL further aligns gradient maps of the convolutional layers to optical flow maps from spatial, temporal and spatio-temporal perspectives, in order to ground motion information in feature learning. Extensive experiments conducted on R(2+1)D backbone demonstrate the effectiveness of our MCL. On UCF101, the linear classifier trained on the representations learnt by MCL achieves 81.91% top-1 accuracy, outperforming ImageNet supervised pre-training by 6.78%. On Kinetics-400, MCL achieves 66.62% top-1 accuracy under the linear protocol. Code is available at https://github.com/YihengZhang-CV/MCL-Motion-Focused-Contrastive-Learning.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Rui Li",
+      "Yiheng Zhang",
+      "Zhaofan Qiu",
+      "Ting Yao",
+      "Dong Liu",
+      "Tao Mei"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.04029v1",
+    "url": "http://arxiv.org/abs/2201.04029v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.06949v1",
+    "title": "Data Augmentation for Scene Text Recognition",
+    "abstract": "Scene text recognition (STR) is a challenging task in computer vision due to the large number of possible text appearances in natural scenes. Most STR models rely on synthetic datasets for training since there are no sufficiently big and publicly available labelled real datasets. Since STR models are evaluated using real data, the mismatch between training and testing data distributions results into poor performance of models especially on challenging text that are affected by noise, artifacts, geometry, structure, etc. In this paper, we introduce STRAug which is made of 36 image augmentation functions designed for STR. Each function mimics certain text image properties that can be found in natural scenes, caused by camera sensors, or induced by signal processing operations but poorly represented in the training dataset. When applied to strong baseline models using RandAugment, STRAug significantly increases the overall absolute accuracy of STR models across regular and irregular test datasets by as much as 2.10% on Rosetta, 1.48% on R2AM, 1.30% on CRNN, 1.35% on RARE, 1.06% on TRBA and 0.89% on GCRNN. The diversity and simplicity of API provided by STRAug functions enable easy replication and validation of existing data augmentation methods for STR. STRAug is available at https://github.com/roatienza/straug.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rowel Atienza"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.06949v1",
+    "url": "http://arxiv.org/abs/2108.06949v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.05941v2",
+    "title": "Efficient Contrastive Learning via Novel Data Augmentation and Curriculum Learning",
+    "abstract": "We introduce EfficientCL, a memory-efficient continual pretraining method that applies contrastive learning with novel data augmentation and curriculum learning. For data augmentation, we stack two types of operation sequentially: cutoff and PCA jittering. While pretraining steps proceed, we apply curriculum learning by incrementing the augmentation degree for each difficulty step. After data augmentation is finished, contrastive learning is applied on projected embeddings of original and augmented examples. When finetuned on GLUE benchmark, our model outperforms baseline models, especially for sentence-level tasks. Additionally, this improvement is capable with only 70% of computational memory compared to the baseline model.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Seonghyeon Ye",
+      "Jiseon Kim",
+      "Alice Oh"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.05941v2",
+    "url": "http://arxiv.org/abs/2109.05941v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.09929v3",
+    "title": "Data Augmentation of Contrastive Learning is Estimating Positive-incentive Noise",
+    "abstract": "Inspired by the idea of Positive-incentive Noise (Pi-Noise or $π$-Noise) that aims at learning the reliable noise beneficial to tasks, we scientifically investigate the connection between contrastive learning and $π$-noise in this paper. By converting the contrastive loss to an auxiliary Gaussian distribution to quantitatively measure the difficulty of the specific contrastive model under the information theory framework, we properly define the task entropy, the core concept of $π$-noise, of contrastive learning. It is further proved that the predefined data augmentation in the standard contrastive learning paradigm can be regarded as a kind of point estimation of $π$-noise. Inspired by the theoretical study, a framework that develops a $π$-noise generator to learn the beneficial noise (instead of estimation) as data augmentations for contrast is proposed. The designed framework can be applied to diverse types of data and is also completely compatible with the existing contrastive models. From the visualization, we surprisingly find that the proposed method successfully learns effective augmentations. Our code is available at https://github.com/hyzhang98/PiNDA.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hongyuan Zhang",
+      "Yanchen Xu",
+      "Sida Huang",
+      "Xuelong Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.09929v3",
+    "url": "http://arxiv.org/abs/2408.09929v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.09129v1",
+    "title": "Generative Data Augmentation in Graph Contrastive Learning for Recommendation",
+    "abstract": "Recommendation systems have become indispensable in various online platforms, from e-commerce to streaming services. A fundamental challenge in this domain is learning effective embeddings from sparse user-item interactions. While contrastive learning has recently emerged as a promising solution to this issue, generating augmented views for contrastive learning through most existing random data augmentation methods often leads to the alteration of original semantic information. In this paper, we propose a novel framework, GDA4Rec (Generative Data Augmentation in graph contrastive learning for Recommendation) to generate high-quality augmented views and provide robust self-supervised signals. Specifically, we employ a noise generation module that leverages deep generative models to approximate the distribution of original data for data augmentation. Additionally, GDA4Rec further extracts an item complement matrix to characterize the latent correlations between items and provide additional self-supervised signals. Lastly, a joint objective that integrates recommendation, data augmentation and contrastive learning is used to enforce the model to learn more effective and informative embeddings. Extensive experiments are conducted on three public datasets to demonstrate the superiority of the model. The code is available at: https://github.com/MrYansong/GDA4Rec.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yansong Wang",
+      "Qihui Lin",
+      "Junjie Huang",
+      "Tao Jia"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.09129v1",
+    "url": "http://arxiv.org/abs/2510.09129v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.02317v1",
+    "title": "Adversarial Learning Data Augmentation for Graph Contrastive Learning in Recommendation",
+    "abstract": "Recently, Graph Neural Networks (GNNs) achieve remarkable success in Recommendation. To reduce the influence of data sparsity, Graph Contrastive Learning (GCL) is adopted in GNN-based CF methods for enhancing performance. Most GCL methods consist of data augmentation and contrastive loss (e.g., InfoNCE). GCL methods construct the contrastive pairs by hand-crafted graph augmentations and maximize the agreement between different views of the same node compared to that of other nodes, which is known as the InfoMax principle. However, improper data augmentation will hinder the performance of GCL. InfoMin principle, that the good set of views shares minimal information and gives guidelines to design better data augmentation. In this paper, we first propose a new data augmentation (i.e., edge-operating including edge-adding and edge-dropping). Then, guided by InfoMin principle, we propose a novel theoretical guiding contrastive learning framework, named Learnable Data Augmentation for Graph Contrastive Learning (LDA-GCL). Our methods include data augmentation learning and graph contrastive learning, which follow the InfoMin and InfoMax principles, respectively. In implementation, our methods optimize the adversarial loss function to learn data augmentation and effective representations of users and items. Extensive experiments on four public benchmark datasets demonstrate the effectiveness of LDA-GCL.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Junjie Huang",
+      "Qi Cao",
+      "Ruobing Xie",
+      "Shaoliang Zhang",
+      "Feng Xia",
+      "Huawei Shen",
+      "Xueqi Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.02317v1",
+    "url": "http://arxiv.org/abs/2302.02317v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.21523v1",
+    "title": "Tabular Data Augmentation for Machine Learning: Progress and Prospects of Embracing Generative AI",
+    "abstract": "Machine learning (ML) on tabular data is ubiquitous, yet obtaining abundant high-quality tabular data for model training remains a significant obstacle. Numerous works have focused on tabular data augmentation (TDA) to enhance the original table with additional data, thereby improving downstream ML tasks. Recently, there has been a growing interest in leveraging the capabilities of generative AI for TDA. Therefore, we believe it is time to provide a comprehensive review of the progress and future prospects of TDA, with a particular emphasis on the trending generative AI. Specifically, we present an architectural view of the TDA pipeline, comprising three main procedures: pre-augmentation, augmentation, and post-augmentation. Pre-augmentation encompasses preparation tasks that facilitate subsequent TDA, including error handling, table annotation, table simplification, table representation, table indexing, table navigation, schema matching, and entity matching. Augmentation systematically analyzes current TDA methods, categorized into retrieval-based methods, which retrieve external data, and generation-based methods, which generate synthetic data. We further subdivide these methods based on the granularity of the augmentation process at the row, column, cell, and table levels. Post-augmentation focuses on the datasets, evaluation and optimization aspects of TDA. We also summarize current trends and future directions for TDA, highlighting promising opportunities in the era of generative AI. In addition, the accompanying papers and related resources are continuously updated and maintained in the GitHub repository at https://github.com/SuDIS-ZJU/awesome-tabular-data-augmentation to reflect ongoing advancements in the field.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lingxi Cui",
+      "Huan Li",
+      "Ke Chen",
+      "Lidan Shou",
+      "Gang Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.21523v1",
+    "url": "http://arxiv.org/abs/2407.21523v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.11773v1",
+    "title": "Small Data Explainer -- The impact of small data methods in everyday life",
+    "abstract": "The emergence of breakthrough artificial intelligence (AI) techniques has led to a renewed focus on how small data settings, i.e., settings with limited information, can benefit from such developments. This includes societal issues such as how best to include under-represented groups in data-driven policy and decision making, or the health benefits of assistive technologies such as wearables. We provide a conceptual overview, in particular contrasting small data with big data, and identify common themes from exemplary case studies and application areas. Potential solutions are described in a more detailed technical overview of current data analysis and modelling techniques, highlighting contributions from different disciplines, such as knowledge-driven modelling from statistics and data-driven modelling from computer science. By linking application settings, conceptual contributions and specific techniques, we highlight what is already feasible and suggest what an agenda for fully leveraging small data might look like.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Maren Hackenberg",
+      "Sophia G. Connor",
+      "Fabian Kabus",
+      "June Brawner",
+      "Ella Markham",
+      "Mahi Hardalupas",
+      "Areeq Chowdhury",
+      "Rolf Backofen",
+      "Anna Köttgen",
+      "Angelika Rohde",
+      "Nadine Binder",
+      "Harald Binder",
+      "the Collaborative Research Center 1597 Small Data"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.11773v1",
+    "url": "http://arxiv.org/abs/2507.11773v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.03114v1",
+    "title": "An Augmentation Overlap Theory of Contrastive Learning",
+    "abstract": "Recently, self-supervised contrastive learning has achieved great success on various tasks. However, its underlying working mechanism is yet unclear. In this paper, we first provide the tightest bounds based on the widely adopted assumption of conditional independence. Further, we relax the conditional independence assumption to a more practical assumption of augmentation overlap and derive the asymptotically closed bounds for the downstream performance. Our proposed augmentation overlap theory hinges on the insight that the support of different intra-class samples will become more overlapped under aggressive data augmentations, thus simply aligning the positive samples (augmented views of the same sample) could make contrastive learning cluster intra-class samples together. Moreover, from the newly derived augmentation overlap perspective, we develop an unsupervised metric for the representation evaluation of contrastive learning, which aligns well with the downstream performance almost without relying on additional modules. Code is available at https://github.com/PKU-ML/GARC.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Qi Zhang",
+      "Yifei Wang",
+      "Yisen Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.03114v1",
+    "url": "http://arxiv.org/abs/2511.03114v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.03638v1",
+    "title": "Unifying Graph Contrastive Learning via Graph Message Augmentation",
+    "abstract": "Graph contrastive learning is usually performed by first conducting Graph Data Augmentation (GDA) and then employing a contrastive learning pipeline to train GNNs. As we know that GDA is an important issue for graph contrastive learning. Various GDAs have been developed recently which mainly involve dropping or perturbing edges, nodes, node attributes and edge attributes. However, to our knowledge, it still lacks a universal and effective augmentor that is suitable for different types of graph data. To address this issue, in this paper, we first introduce the graph message representation of graph data. Based on it, we then propose a novel Graph Message Augmentation (GMA), a universal scheme for reformulating many existing GDAs. The proposed unified GMA not only gives a new perspective to understand many existing GDAs but also provides a universal and more effective graph data augmentation for graph self-supervised learning tasks. Moreover, GMA introduces an easy way to implement the mixup augmentor which is natural for images but usually challengeable for graphs. Based on the proposed GMA, we then propose a unified graph contrastive learning, termed Graph Message Contrastive Learning (GMCL), that employs attribution-guided universal GMA for graph contrastive learning. Experiments on many graph learning tasks demonstrate the effectiveness and benefits of the proposed GMA and GMCL approaches.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ziyan Zhang",
+      "Bo Jiang",
+      "Jin Tang",
+      "Bin Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.03638v1",
+    "url": "http://arxiv.org/abs/2401.03638v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.01092v2",
+    "title": "ArCL: Enhancing Contrastive Learning with Augmentation-Robust Representations",
+    "abstract": "Self-Supervised Learning (SSL) is a paradigm that leverages unlabeled data for model training. Empirical studies show that SSL can achieve promising performance in distribution shift scenarios, where the downstream and training distributions differ. However, the theoretical understanding of its transferability remains limited. In this paper, we develop a theoretical framework to analyze the transferability of self-supervised contrastive learning, by investigating the impact of data augmentation on it. Our results reveal that the downstream performance of contrastive learning depends largely on the choice of data augmentation. Moreover, we show that contrastive learning fails to learn domain-invariant features, which limits its transferability. Based on these theoretical insights, we propose a novel method called Augmentation-robust Contrastive Learning (ArCL), which guarantees to learn domain-invariant features and can be easily integrated with existing contrastive learning algorithms. We conduct experiments on several datasets and show that ArCL significantly improves the transferability of contrastive learning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xuyang Zhao",
+      "Tianqi Du",
+      "Yisen Wang",
+      "Jun Yao",
+      "Weiran Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.01092v2",
+    "url": "http://arxiv.org/abs/2303.01092v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

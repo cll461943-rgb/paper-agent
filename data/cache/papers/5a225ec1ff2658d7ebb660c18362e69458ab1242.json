@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42280272",
+  "title": "A Bond-Level Sequence Framework for Molecular Representation Learning with Structural Constraints.",
+  "abstract": "Molecular property prediction is a fundamental task in drug discovery and materials design. While graph neural networks (GNNs) and SMILES-based Transformers have made significant strides, the former are often limited by local message-passing bottlenecks such as over-squashing, while the latter frequently lack explicit topological constraints and suffer from severe vocabulary imbalance. In this work, we revisit the granularity of molecular modeling and propose a representation learning framework built upon bond-level sequences. Our framework models molecules as sequences of directed bond tokens and introduces a structure-aware hybrid attention mechanism. By imposing hard topological constraints on a subset of attention heads to reinforce local connectivity while preserving global receptive fields in the remaining heads, the design is intended to separate short-range chemical bonding from long-range contextual dependencies. For pre-training, we implemented a multi-scale consistency learning paradigm, which utilizes an atom-centric group masking strategy to induce a hierarchical loss of local structural information and employs contrastive and triplet losses to ensure identity consistency across varying scales of structural degradation. Furthermore, by incorporating macro-scale physicochemical descriptors (e.g., LogP, TPSA) as global anchors, we examined how the inclusion of global attribute bias can provide weak physicochemical priors during pre-training, while its effect during downstream fine-tuning remains task-dependent. Experimental results demonstrate that our lightweight model, with approximately 3.5 million parameters, exhibits a dataset-dependent performance profile across MoleculeNet benchmarks and shows promising behavior on selected topology-sensitive tasks, particularly MUV. Ablation studies further analyze the contribution of bond-level connectivity, the stage-dependent dynamics of global attribute bias, structured masking, and pre-training configurations. Ultimately, this work provides an alternative representation design for molecular modeling, offering a parameter-efficient option for future molecular learning systems alongside traditional SMILES-based and graph-based formulations.",
+  "year": 2026,
+  "venue": "Molecules (Basel, Switzerland)",
+  "authors": [
+    "Haoran Fan",
+    "Haoqiang Qi",
+    "Xin Huang",
+    "Dongyang Zhu",
+    "Na Wang",
+    "Ting Wang",
+    "Hongxun Hao"
+  ],
+  "doi": "10.3390/molecules31111972",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42280272/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42280272"
+  }
+}

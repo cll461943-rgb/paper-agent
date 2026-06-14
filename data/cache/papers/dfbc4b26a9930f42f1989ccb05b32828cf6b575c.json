@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:42235268",
+  "title": "Robust cross-domain generalization using unlabeled target data with source-domain supervision.",
+  "abstract": "It is often desirable to generalize medical imaging AI models trained with dense annotations to data acquired from different ultrasound scanners or clinical sites; however, retraining these models with new annotations is often difficult and costly. We examine this challenge in pediatric wrist fracture assessment using point-of-care ultrasound (POCUS), where fractures are common and can be effectively triaged via ultrasound. AI has shown radiologist-level performance for fracture detection, often aided by high-quality bony structure segmentation. However, due to significant domain shifts, models perform poorly on data from other centers or probes, and obtaining segmentation labels across devices is impractical due to manual annotation effort and data privacy concerns. To address this, we propose a target-informed self-supervised pretraining and model-ensemble strategy. Specifically, our approach combines masked image modeling (MIM) and contrastive learning to learn target-domain structural representations without labels, and introduces a confidence-aware infusion head to adaptively integrate predictions. The source dataset, collected with a Philips Lumify probe, contained dense labels, while the target dataset, acquired with a TeleMED portable probe, was unlabeled. The datasets were kept strictly separate throughout the entire process. Our method used labeled source data for supervised training and leveraged target-domain pretraining to improve generalization. On 318 images from 62 pediatric POCUS videos, this approach significantly improved cross-device performance, achieving over 6% Dice improvement on the target domain versus the baseline. These results demonstrate a label-efficient and privacy-preserving approach for cross-device-robust ultrasound AI, offering a framework that can be extended to multi-center studies or federated learning setups. GitHub Repository:https://github.com/yuyue2uofa/CrossDomainPOCUS.",
+  "year": 2026,
+  "venue": "Computers in biology and medicine",
+  "authors": [
+    "Yuyue Zhou",
+    "Shrimanti Ghosh",
+    "Michael Kai Yue Xie",
+    "Justin J Y Kim",
+    "Jessica Knight",
+    "Steel McDonald",
+    "Vincent Man",
+    "Jacob L Jaremko",
+    "Abhilash Hareendranathan"
+  ],
+  "doi": "10.1016/j.compbiomed.2026.111788",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42235268/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42235268"
+  }
+}

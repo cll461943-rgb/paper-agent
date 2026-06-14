@@ -1,0 +1,116 @@
+2026-06-14 20:46:10,032 - scholar_agent.workflow.pipeline - INFO - Starting PaperAgentPipeline for query: Could you recommend research that investigates applying conventional data augmentation methods such as removing words and truncating sequences to contrastive learning in NLP applications?
+2026-06-14 20:46:27,132 - scholar_agent.workflow.pipeline - INFO - Executing Retrieval Round 1 with 8 queries
+2026-06-14 20:46:36,241 - scholar_agent.workflow.pipeline - INFO - Reviewing candidates for Round 2
+2026-06-14 20:46:36,241 - scholar_agent.workflow.pipeline - INFO - Result Review Agent decided to STOP search in Round 2
+2026-06-14 20:46:36,242 - scholar_agent.workflow.pipeline - INFO - Starting fine-grained evidence selection for 20 papers (filtered from 253 candidates)
+2026-06-14 20:47:48,497 - scholar_agent.workflow.pipeline - INFO - Validating evidence and constraints locally
+2026-06-14 20:47:48,502 - scholar_agent.workflow.pipeline - INFO - Reranking papers based on blending formula
+2026-06-14 20:47:48,507 - scholar_agent.workflow.pipeline - INFO - Synthesizing final structured report
+2026-06-14 20:47:48,507 - scholar_agent.workflow.pipeline - INFO - Pipeline completed successfully. Found 0 recommended papers.
+2026-06-14 20:47:48,518 - scholar_agent.workflow.pipeline - INFO - Starting PaperAgentPipeline for query: Have any studies explored the creation of memory management systems in AI to improve sustained conversational capabilities and tackle the challenge of contextual retention over extended periods?
+2026-06-14 20:48:16,575 - scholar_agent.workflow.pipeline - INFO - Executing Retrieval Round 1 with 8 queries
+2026-06-14 20:48:31,266 - scholar_agent.workflow.pipeline - INFO - Reviewing candidates for Round 2
+2026-06-14 20:48:31,266 - scholar_agent.workflow.pipeline - INFO - Result Review Agent decided to STOP search in Round 2
+2026-06-14 20:48:31,266 - scholar_agent.workflow.pipeline - INFO - Starting fine-grained evidence selection for 20 papers (filtered from 278 candidates)
+2026-06-14 20:48:59,560 - scholar_agent.workflow.pipeline - INFO - Validating evidence and constraints locally
+2026-06-14 20:48:59,562 - scholar_agent.workflow.pipeline - INFO - Reranking papers based on blending formula
+2026-06-14 20:48:59,569 - scholar_agent.workflow.pipeline - INFO - Synthesizing final structured report
+2026-06-14 20:48:59,570 - scholar_agent.workflow.pipeline - INFO - Pipeline completed successfully. Found 0 recommended papers.
+2026-06-14 20:48:59,584 - scholar_agent.workflow.pipeline - INFO - Starting PaperAgentPipeline for query: Which paper first shows that it is possible to maintain high LLM reasoning performance with in-context examples that are absurdly wrong?
+2026-06-14 20:49:37,045 - scholar_agent.workflow.pipeline - INFO - Executing Retrieval Round 1 with 8 queries
+2026-06-14 20:49:45,208 - scholar_agent.workflow.pipeline - INFO - Reviewing candidates for Round 2
+2026-06-14 20:49:45,208 - scholar_agent.workflow.pipeline - INFO - Result Review Agent decided to STOP search in Round 2
+2026-06-14 20:49:45,209 - scholar_agent.workflow.pipeline - INFO - Starting fine-grained evidence selection for 20 papers (filtered from 265 candidates)
+2026-06-14 20:50:38,251 - scholar_agent.workflow.pipeline - INFO - Validating evidence and constraints locally
+2026-06-14 20:50:38,253 - scholar_agent.workflow.pipeline - INFO - Reranking papers based on blending formula
+2026-06-14 20:50:38,257 - scholar_agent.workflow.pipeline - INFO - Synthesizing final structured report
+2026-06-14 20:50:38,257 - scholar_agent.workflow.pipeline - INFO - Pipeline completed successfully. Found 1 recommended papers.
+2026-06-14 20:50:38,268 - scholar_agent.workflow.pipeline - INFO - Starting PaperAgentPipeline for query: Which paper introduce a DRO (distribution robust optimization) like training objective for doing adversarial training without constructing adversarial samples.
+2026-06-14 20:51:32,377 - scholar_agent.workflow.pipeline - INFO - Executing Retrieval Round 1 with 8 queries
+2026-06-14 20:51:38,285 - scholar_agent.workflow.pipeline - INFO - Reviewing candidates for Round 2
+2026-06-14 20:51:38,285 - scholar_agent.workflow.pipeline - INFO - Result Review Agent decided to STOP search in Round 2
+2026-06-14 20:51:38,286 - scholar_agent.workflow.pipeline - INFO - Starting fine-grained evidence selection for 20 papers (filtered from 127 candidates)
+2026-06-14 20:52:08,615 - scholar_agent.workflow.pipeline - INFO - Validating evidence and constraints locally
+2026-06-14 20:52:08,618 - scholar_agent.workflow.pipeline - INFO - Reranking papers based on blending formula
+2026-06-14 20:52:08,620 - scholar_agent.workflow.pipeline - INFO - Synthesizing final structured report
+2026-06-14 20:52:08,621 - scholar_agent.workflow.pipeline - INFO - Pipeline completed successfully. Found 0 recommended papers.
+======================================================================
+📊 Starting Scholar Agent V2.0 Evaluation in 'live' mode
+======================================================================
+Loading dataset: C:\Users\33316\Desktop\claude-code-src-main\agengt-code\data\benchmarks\litsearch_dev_20.json
+Total cases in dataset: 20. Selected 4 cases for evaluation.
+
+[1/4] Evaluating Case #7: litsearch-inline_nonacl-row-168
+  Query: "Could you recommend research that investigates applying conventional data a..."
+  ⚠️ Logged 3 errors in Case #7:
+    - pasa_local.unavailable: provider unavailable
+    - llm json parse failed: Expecting ',' delimiter: line 81 column 133 (char 5089)
+    - llm json parse failed: empty llm response
+  -> Prec: 0.0000 | Recall: 0.0000 | F1: 0.0000
+  -> Candidate Recall@300: 0.0000 | Recall@500: 0.0000
+  -> Elapsed: 98.48s | LLM calls: 0
+
+[2/4] Evaluating Case #12: litsearch-inline_nonacl-row-273
+  Query: "Have any studies explored the creation of memory management systems in AI t..."
+  ⚠️ Logged 1 errors in Case #12:
+    - pasa_local.unavailable: provider unavailable
+  -> Prec: 0.0000 | Recall: 0.0000 | F1: 0.0000
+  -> Candidate Recall@300: 0.0000 | Recall@500: 0.0000
+  -> Elapsed: 71.05s | LLM calls: 0
+
+[3/4] Evaluating Case #15: litsearch-manual_acl-row-462
+  Query: "Which paper first shows that it is possible to maintain high LLM reasoning ..."
+  ⚠️ Logged 2 errors in Case #15:
+    - pasa_local.unavailable: provider unavailable
+    - llm json parse failed: Expecting ',' delimiter: line 102 column 10 (char 4265)
+  -> Prec: 0.0000 | Recall: 0.0000 | F1: 0.0000
+  -> Candidate Recall@300: 0.0000 | Recall@500: 0.0000
+  -> Elapsed: 98.67s | LLM calls: 0
+
+[4/4] Evaluating Case #16: litsearch-manual_acl-row-469
+  Query: "Which paper introduce a DRO (distribution robust optimization) like trainin..."
+  ⚠️ Logged 2 errors in Case #16:
+    - llm json parse failed: empty llm response
+    - pasa_local.unavailable: provider unavailable
+  -> Prec: 0.0000 | Recall: 0.0000 | F1: 0.0000
+  -> Candidate Recall@300: 0.0000 | Recall@500: 0.0000
+  -> Elapsed: 90.36s | LLM calls: 0
+
+======================================================================
+和 baseline 比:
+• avg_f1_final : 0.4445 -> 0.0000 , -0.4445
+• avg_precision_final : 0.5300 -> 0.0000 , -0.5300
+• avg_recall_final : 0.4452 -> 0.0000 , -0.4452
+• avg_candidate_recall_300 : 0.7335 -> 0.0000 , -0.7335
+• avg_candidate_recall_500 : 0.7430 -> 0.0000 , -0.7430
+• avg_wall_time : 24.72 -> 89.6394 , 仅 +64.9194s
+• queries_over_time_budget : 0 -> 4
+• queries_with_errors : 0 -> 0
+======================================================================
+
+📊 COMPONENT BUDGET AND RESOURCE STATS (Averages per query):
+  Avg LLM Calls: 8.2 (Limit: 30)
+  Avg API Calls: 8.0 (Limit: 15)
+  Avg Token Estimate: 26221.5
+  Avg Cache Hits: 4.5
+  Total Errors Logged: 8
+
+🤖 LLM Models and Providers Usage breakdown:
+  Model / Provider Name               | Calls / Requests | Tokens Used  | Total Time (s)
+  ----------------------------------------------------------------------------------
+  deepseek-v4-flash                   | 27               | 176550       | 471.25      
+
+🌐 Academic Retrieval Services Providers stats:
+  Service Provider                    | Elapsed Time (s) | Total Requests
+  ------------------------------------------------------------------------
+  openalex                            | 34.04            | 11            
+  pubmed                              | 30.77            | 10            
+  arxiv                               | 28.00            | 11            
+  pasa_local                          | 0.00             | 0             
+
+⏱️ Core Component Pipelines breakdown:
+  Component Name                      | Elapsed Time (s) | Calls / Requests | Tokens    
+  ----------------------------------------------------------------------------------
+  evidence_selector                   | 334.54           | 15             | 157179    
+  query_understanding                 | 136.71           | 12             | 19371     
+======================================================================

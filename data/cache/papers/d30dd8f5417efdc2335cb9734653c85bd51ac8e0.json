@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42079087",
+  "title": "TomoSwin3D: a Swin3D Transformer for the Identification and Classification of Macromolecules in 3D Cryo-ET Tomograms.",
+  "abstract": "Cryo-electron tomography (cryo-ET) enables in situ three-dimensional visualization of many protein complexes and other macromolecular assemblies such as ribosomes in cells, yet automated macromolecule particle identification in 3D cryo-ET tomograms remains a major bottleneck due to dose-limited low signal-to-noise ratios, missing-wedge artifacts, and densely crowded cellular backgrounds. We present TomoSwin3D, an end-to-end three-dimensional (3D) macromolecule particle identification and classification pipeline centered on a Swin Transformer-based U-Net that performs particle identification and classification and outputs particle centroid coordinates. TomoSwin3D leverages a multi-channel input representation that augments raw tomogram densities with complementary 3D feature maps capturing edge strength (Sobel gradients), local contrast enhancement (morphological top-hat), and multiscale blob responses (Difference-of-Gaussians), improving detectability of small and low-contrast targets. To better preserve particle geometry and avoid hand-crafted shape assumptions, it adopts occupancy-preserving supervision that directly uses available 3D instance masks rather than heuristic Gaussian/spherical labels and applies scalable patch-wise inference followed by lightweight post-processing (connected-component analysis, size filtering, centroid extraction) for robust centroid coordinate extraction. Across diverse simulated and experimental cryo-ET tomogram benchmarks including SHREC 2021 and 2020 test datasets, EMPIAR dataset, and Cryo-ET data portal dataset, TomoSwin3D achieves strong and consistent performance in detecting proteins and other particles, outperforming existing methods, with a pronounced advantage in picking hard, small protein particles. These results establish TomoSwin3D as a scalable and accurate solution for high-throughput cryo-ET macromolecule particle picking and downstream subtomogram averaging.",
+  "year": 2026,
+  "venue": "bioRxiv : the preprint server for biology",
+  "authors": [
+    "Ashwin Dhakal",
+    "Rajan Gyawali",
+    "Jianlin Cheng"
+  ],
+  "doi": "10.64898/2026.04.17.719219",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42079087/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42079087"
+  }
+}

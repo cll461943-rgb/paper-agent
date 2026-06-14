@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42122610",
+  "title": "Evaluating the Adversarial Robustness and Clinical Safety of Quantized Hierarchical Transformers for Edge-Based Malaria Microscopy.",
+  "abstract": "Automated mobile microscopy in Internet of Things (IoT) networks is essential for scaling malaria screening in resource-constrained environments. Deploying standard convolutional architectures here introduces severe adversarial vulnerabilities. Post-Training Quantization (PTQ) mitigates hardware constraints by converting floating-point models to 8-bit integers (INT8); however, its impact on clinical safety and security remains unexplored. This study presents an adversarial audit of quantized Vision Transformers for medical edge deployment. We evaluated a Swin-Tiny transformer against ViT-Tiny and MobileNetV3 baselines using a 27,558-image malaria dataset and an out-of-distribution (OOD) White Blood Cell dataset. Our findings redefine the \"Quantization Shield\" hypothesis. PTQ compresses the Swin model by 3.9× (to 27.89 MB) with a negligible 0.11% accuracy drop, maintaining statistical reliability on OOD tests. However, the hypothesized architectural resilience shatters under white-box Projected Gradient Descent (PGD) attacks. Despite robustness against single-step attacks, both MobileNetV3 and the INT8 Swin-Tiny collapse to 0.00% accuracy under iterative PGD. Conversely, the quantized Swin-Tiny resists black-box transfer attacks from a surrogate, maintaining 81.00% accuracy. We conclude that while quantized Vision Transformers meet mobile sensor constraints, integer quantization provides zero innate defense against targeted iterative perturbations, exposing a critical vulnerability in diagnostic IoT networks.",
+  "year": 2026,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Umar Hasan",
+    "Turki G Alghamdi",
+    "Muhammad Ali Nayeem"
+  ],
+  "doi": "10.3390/s26092888",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42122610/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42122610"
+  }
+}

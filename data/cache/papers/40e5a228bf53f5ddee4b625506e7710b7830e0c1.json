@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:40100267",
+  "title": "Prompt Framework for Extracting Scale-Related Knowledge Entities from Chinese Medical Literature: Development and Evaluation Study.",
+  "abstract": "Measurement-based care improves patient outcomes by using standardized scales, but its widespread adoption is hindered by the lack of accessible and structured knowledge, particularly in unstructured Chinese medical literature. Extracting scale-related knowledge entities from these texts is challenging due to limited annotated data. While large language models (LLMs) show promise in named entity recognition (NER), specialized prompting strategies are needed to accurately recognize medical scale-related entities, especially in low-resource settings. This study aims to develop and evaluate MedScaleNER, a task-oriented prompt framework designed to optimize LLM performance in recognizing medical scale-related entities from Chinese medical literature. MedScaleNER incorporates demonstration retrieval within in-context learning, chain-of-thought prompting, and self-verification strategies to improve performance. The framework dynamically retrieves optimal examples using a k-nearest neighbors approach and decomposes the NER task into two subtasks: entity type identification and entity labeling. Self-verification ensures the reliability of the final output. A dataset of manually annotated Chinese medical journal papers was constructed, focusing on three key entity types: scale names, measurement concepts, and measurement items. Experiments were conducted by varying the number of examples and the proportion of training data to evaluate performance in low-resource settings. Additionally, MedScaleNER's performance was compared with locally fine-tuned models. The CMedS-NER (Chinese Medical Scale Corpus for Named Entity Recognition) dataset, containing 720 papers with 27,499 manually annotated scale-related knowledge entities, was used for evaluation. Initial experiments identified GLM-4-0520 as the best-performing LLM among six tested models. When applied with GLM-4-0520, MedScaleNER significantly improved NER performance for scale-related entities, achieving a macro F MedScaleNER advances the application of LLMs and prompts engineering for specialized NER tasks in Chinese medical literature. By addressing the challenges of unstructured texts and limited annotated data, MedScaleNER's adaptability to various biomedical contexts supports more efficient and reliable knowledge extraction, contributing to broader measurement-based care implementation and improved clinical and research outcomes.",
+  "year": 2025,
+  "venue": "Journal of medical Internet research",
+  "authors": [
+    "Jie Hao",
+    "Zhenli Chen",
+    "Qinglong Peng",
+    "Liang Zhao",
+    "Wanqing Zhao",
+    "Shan Cong",
+    "Junlian Li",
+    "Jiao Li",
+    "Qing Qian",
+    "Haixia Sun"
+  ],
+  "doi": "10.2196/67033",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40100267/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40100267"
+  }
+}

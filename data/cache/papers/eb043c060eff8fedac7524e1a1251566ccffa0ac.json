@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:40541074",
+  "title": "Assessing large language models for acute heart failure classification and information extraction from French clinical notes.",
+  "abstract": "Understanding acute heart failure (AHF) remains a significant challenge, as many clinical details are recorded in unstructured text rather than structured data in electronic health records (EHRs). In this study, we explored the use of large language models (LLMs) to automatically identify AHF hospitalizations and extract accurate AHF-related clinical information from clinical notes. Based on clinical notes from the Nantes University Hospital in France, we used a general-purpose LLM, Qwen2-7B, and evaluated its performance against a French biomedical pretrained model, DrLongformer. We explored supervised fine-tuning and in-context learning techniques, such as few-shot and chain-of-thought prompting, and performed an ablation study to analyze the impact of data volume and annotation characteristics on model performance. Our results demonstrated that DrLongformer achieved superior performance in classifying AHF hospitalizations, with an F1 score of 0.878 compared to 0.80 for Qwen2-7B, and similarly outperformed in extracting most of the clinical information. However, Qwen2-7B showed better performance in extracting quantitative outcomes when fine-tuned on the training set (typically weight and body mass index, for example). Our ablation study revealed that the number of clinical notes used in training is a significant factor influencing model performance, but improvements plateaued after 250 documents. Additionally, we observed that longer annotations negatively impact model training and downstream performance. The findings highlight the potential of small language models-which can be hosted on-premise in hospitals and integrated with EHRs-to improve real-world data collection and identify complex medical symptoms such as acute heart failure.",
+  "year": 2025,
+  "venue": "Computers in biology and medicine",
+  "authors": [
+    "Adrien Bazoge",
+    "Matthieu Wargny",
+    "Pacôme Constant Dit Beaufils",
+    "Emmanuel Morin",
+    "Béatrice Daille",
+    "Pierre-Antoine Gourraud",
+    "Samy Hadjadj"
+  ],
+  "doi": "10.1016/j.compbiomed.2025.110609",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40541074/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40541074"
+  }
+}
