@@ -299,11 +299,11 @@ def run_evaluation(
 
     # 强制在 live 模式下激活主要的在线检索提供商
     if mode == "live":
-        config.app.providers = ["pasa_local", "openalex", "arxiv", "semantic_scholar", "pubmed"]
+        config.app.providers = ["pasa_local", "openalex", "arxiv", "pubmed"]
         config.providers.pasa_local.enabled = True
         config.providers.openalex.enabled = True
         config.providers.arxiv.enabled = True
-        config.providers.semantic_scholar.enabled = True
+        config.providers.semantic_scholar.enabled = False
         config.providers.pubmed.enabled = True
     else:
         config.app.providers = ["mock"]
