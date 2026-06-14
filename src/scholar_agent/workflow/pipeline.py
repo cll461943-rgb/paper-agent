@@ -1,0 +1,238 @@
+from __future__ import annotations
+
+import logging
+import time
+from typing import Any
+
+from scholar_agent.models.schemas import (
+    Paper,
+    QueryPlan,
+    RankedPaper,
+    RunMetrics,
+    SearchProcessRound,
+    SearchQuery,
+    SelectionResult,
+    WorkflowResult,
+)
+from scholar_agent.planning import (
+    understand_query,
+    heuristic_understand_query,
+    generate_search_queries,
+    heuristic_generate_search_queries,
+    review_retrieval_results,
+    optimize_search_strategy,
+)
+from scholar_agent.retrieval import MultiRouteRetriever, build_providers, expand_with_refchain
+from scholar_agent.selection.evidence_selector import select_and_extract_evidence
+from scholar_agent.selection.evidence_validator import validate_selections
+from scholar_agent.ranking.final_reranker import rerank_papers
+from scholar_agent.synthesis.synthesis_agent import SynthesisAgent
+from scholar_agent.workflow.budget import BudgetManager
+
+LOGGER = logging.getLogger(__name__)
+
+
+def deduplicate_papers(papers: list[Paper]) -> list[Paper]:
+    """去重候选论文池，保留元数据最全的记录，并合并检索路径。"""
+    seen: dict[str, Paper] = {}
+    for p in papers:
+        pid = p.paper_id
+        if pid not in seen:
+            seen[pid] = p
+        else:
+            existing = seen[pid]
+            # 合并字段
+            if not existing.abstract and p.abstract:
+                existing.abstract = p.abstract
+            if not existing.year and p.year:
+                existing.year = p.year
+            if not existing.venue and p.venue:
+                existing.venue = p.venue
+            if not existing.doi and p.doi:
+                existing.doi = p.doi
+            if not existing.arxiv_id and p.arxiv_id:
+                existing.arxiv_id = p.arxiv_id
+            if not existing.url and p.url:
+                existing.url = p.url
+            if existing.citation_count is None and p.citation_count is not None:
+                existing.citation_count = p.citation_count
+            elif existing.citation_count is not None and p.citation_count is not None:
+                existing.citation_count = max(existing.citation_count, p.citation_count)
+            
+            # 合并检索路径
+            for path in p.retrieval_path:
+                if path not in existing.retrieval_path:
+                    existing.retrieval_path.append(path)
+            
+            # 合并引文关系
+            for ref in p.references:
+                if ref not in existing.references:
+                    existing.references.append(ref)
+            for cit in p.citations:
+                if cit not in existing.citations:
+                    existing.citations.append(cit)
+
+    return list(seen.values())
+
+
+class PaperAgentPipeline:
+    def __init__(
+        self,
+        config: Any,
+        llm_client: Any | None = None,
+        providers: list[Any] | None = None,
+    ) -> None:
+        self.config = config
+        self.llm_client = llm_client
+        self.providers = providers or build_providers(config)
+
+    def run(self, original_query: str) -> WorkflowResult:
+        """运行智能学术检索 Agent V2.0 完整流程。"""
+        # 1. 初始化 BudgetManager
+        budget = BudgetManager(self.config)
+        # 为 LLM 客户端注入当前会话的 budget
+        if self.llm_client is not None:
+            self.llm_client.budget = budget
+
+        LOGGER.info("Starting PaperAgentPipeline for query: %s", original_query)
+
+        # 2. 意图理解与提取意图契约
+        try:
+            query_plan = understand_query(original_query, self.llm_client)
+        except Exception as exc:
+            LOGGER.warning("LLM Query understanding failed: %s. Falling back to heuristic.", exc)
+            query_plan = heuristic_understand_query(original_query)
+
+        # 3. 初始化多路检索器
+        retriever = MultiRouteRetriever(self.providers, budget, parallel=True)
+        rounds_history: list[SearchProcessRound] = []
+
+        # 4. 第一轮检索规划与执行
+        try:
+            subqueries = generate_search_queries(query_plan, budget, self.llm_client)
+        except Exception as exc:
+            LOGGER.warning("LLM query generation failed: %s. Falling back to heuristic.", exc)
+            subqueries = heuristic_generate_search_queries(query_plan)
+            budget.record_search_queries(len(subqueries))
+
+        # 执行第一轮检索
+        LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
+        _, candidate_pool = retriever.retrieve(subqueries)
+        all_candidates = deduplicate_papers(candidate_pool)
+
+        round_1_record = SearchProcessRound(
+            round_index=1,
+            search_goal="构建包含核心主题的基础论文候选池",
+            queries=[q.query for q in subqueries],
+            candidates_found=len(all_candidates),
+            review_conclusion="第一轮检索完成"
+        )
+        rounds_history.append(round_1_record)
+
+        # 5. 主控多轮迭代检索环 (最多 config.app.max_retrieval_rounds 轮)
+        max_rounds = getattr(self.config.budget, "max_retrieval_rounds", 3)
+        
+        for r in range(2, max_rounds + 1):
+            if not all_candidates:
+                LOGGER.info("No candidates found in Round %d. Aborting dynamic loop.", r - 1)
+                break
+
+            # 5.1 结果审阅与差距分析
+            LOGGER.info("Reviewing candidates for Round %d", r)
+            review_res = review_retrieval_results(query_plan, all_candidates, r - 1, self.llm_client)
+            # 更新上一轮的审阅结论
+            rounds_history[-1].review_conclusion = review_res.get("reason", "审阅完成")
+
+            # 5.2 决策是否提前终止
+            if review_res.get("next_action") == "stop_search":
+                LOGGER.info("Result Review Agent decided to STOP search in Round %d", r)
+                break
+
+            # 5.3 检索策略优化
+            LOGGER.info("Optimizing search strategy for Round %d", r)
+            opt_res = optimize_search_strategy(query_plan, review_res, all_candidates, r - 1, self.llm_client)
+
+            new_subqueries_data = opt_res.get("new_subqueries", [])
+            new_queries = []
+            for item in new_subqueries_data:
+                new_queries.append(
+                    SearchQuery(
+                        query=item.get("query", ""),
+                        route="hybrid",
+                        intent=item.get("reason", "expanded search"),
+                        priority=1
+                    )
+                )
+
+            new_candidates: list[Paper] = []
+            if new_queries:
+                budget.record_search_queries(len(new_queries))
+                _, new_pool = retriever.retrieve(new_queries)
+                new_candidates.extend(new_pool)
+
+            # 5.4 引文网络扩展
+            if review_res.get("need_citation_expansion") or opt_res.get("citation_expansion_seeds"):
+                seed_ids = set(opt_res.get("citation_expansion_seeds", []))
+                seed_papers = [p for p in all_candidates if p.paper_id in seed_ids]
+                if not seed_papers:
+                    # 兜底选择前 3 篇作为种子
+                    seed_papers = all_candidates[:3]
+                
+                LOGGER.info("Expanding citation network for Round %d with %d seeds", r, len(seed_papers))
+                expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=5)
+                new_candidates.extend(expanded_pool)
+
+            # 合并去重新候选
+            if new_candidates:
+                all_candidates.extend(new_candidates)
+                all_candidates = deduplicate_papers(all_candidates)
+
+            # 记录当前轮
+            round_record = SearchProcessRound(
+                round_index=r,
+                search_goal=opt_res.get("search_goal", "补充缺失主题与硬约束项"),
+                queries=[q.query for q in new_queries],
+                candidates_found=len(all_candidates),
+                review_conclusion="检索完成"
+            )
+            rounds_history.append(round_record)
+
+            if opt_res.get("stop_after_this_round", False):
+                LOGGER.info("Strategy Optimizer Agent decided to STOP after Round %d", r)
+                break
+
+        # 最后一轮的最终审阅更新
+        if rounds_history and rounds_history[-1].review_conclusion == "检索完成":
+            final_review = review_retrieval_results(query_plan, all_candidates, len(rounds_history), self.llm_client)
+            rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
+
+        # 6. 细粒度证据筛选
+        LOGGER.info("Starting fine-grained evidence selection for %d papers", len(all_candidates))
+        selections = select_and_extract_evidence(all_candidates, query_plan, self.llm_client)
+
+        # 7. 本地规则硬核校验与降级
+        LOGGER.info("Validating evidence and constraints locally")
+        validated_selections = validate_selections(all_candidates, selections, query_plan)
+
+        # 8. 多维度综合重排
+        LOGGER.info("Reranking papers based on blending formula")
+        ranked_papers = rerank_papers(all_candidates, validated_selections)
+
+        # 9. 结构化归纳合成与输出
+        LOGGER.info("Synthesizing final structured report")
+        synthesis_agent = SynthesisAgent(self.llm_client)
+        
+        # 统计指标录入
+        budget.candidate_pool_size = len(all_candidates)
+        
+        result = synthesis_agent.synthesize(
+            original_query=original_query,
+            query_plan=query_plan,
+            search_rounds=rounds_history,
+            ranked_papers=ranked_papers,
+            metrics=budget.get_metrics()
+        )
+
+        LOGGER.info("Pipeline completed successfully. Found %d recommended papers.", 
+                    len(result.highly_relevant_papers) + len(result.partially_relevant_papers))
+        return result
