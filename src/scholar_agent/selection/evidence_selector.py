@@ -78,8 +78,12 @@ def select_and_extract_evidence(
     )
 
     batch_size = 5  # 控制批处理大小以提升 DeepSeek-flash 细粒度判断精度
+    total_batches = (len(papers) + batch_size - 1) // batch_size
 
     for start in range(0, len(papers), batch_size):
+        batch_idx = (start // batch_size) + 1
+        LOGGER.info("Processing evidence selection batch %d/%d (papers %d-%d)...",
+                    batch_idx, total_batches, start + 1, min(start + batch_size, len(papers)))
         batch = papers[start : start + batch_size]
         paper_payload = [
             {

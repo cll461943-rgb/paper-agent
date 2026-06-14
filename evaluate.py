@@ -611,7 +611,7 @@ if __name__ == "__main__":
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
 
-    setup_logging(logging.WARNING)
+    setup_logging(logging.INFO)
     
     parser = argparse.ArgumentParser(description="Scholar Agent V2.0 Evaluation Runner")
     parser.add_argument(
