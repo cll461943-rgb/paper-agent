@@ -38,7 +38,7 @@ def review_retrieval_results(
         "reason": "已找到足够候选论文，或已达最大迭代轮数。" if len(papers) >= 15 else "候选论文较少，建议继续检索。"
     }
 
-    if llm_client is None or not papers:
+    if llm_client is None or not papers or len(papers) >= 20 or round_index >= 2:
         return fallback
 
     # 仅向大模型呈现 Top 20 篇候选论文进行审阅，以降低 Token 消耗并控制预算

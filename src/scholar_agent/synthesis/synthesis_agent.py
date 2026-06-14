@@ -172,7 +172,7 @@ class SynthesisAgent:
         timeline = fallback_data["timeline"]
         agent_self_report = fallback_data["agent_self_report"]
 
-        if self.llm_client is not None:
+        if self.llm_client is not None and len(recommended_papers) > 1:
             # 拼装提示词调用大模型，使用更高级的 Pro 模型做逻辑推理
             system_prompt = (
                 "You are an academic Synthesis Agent. "
@@ -186,7 +186,7 @@ class SynthesisAgent:
                 {
                     "paper_id": p.paper_id,
                     "title": p.title,
-                    "abstract": p.abstract,
+                    "abstract": (p.abstract[:150] + "...") if p.abstract else None,
                     "year": p.year,
                     "venue": p.venue,
                     "relevance": "high" if p.paper_id in {hr.paper.paper_id for hr in highly_relevant} else "medium"

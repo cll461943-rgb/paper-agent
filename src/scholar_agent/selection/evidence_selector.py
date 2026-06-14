@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import concurrent.futures
 import logging
 from typing import Any
 
@@ -78,13 +79,9 @@ def select_and_extract_evidence(
     )
 
     batch_size = 5  # 控制批处理大小以提升 DeepSeek-flash 细粒度判断精度
-    total_batches = (len(papers) + batch_size - 1) // batch_size
+    batches = [papers[i : i + batch_size] for i in range(0, len(papers), batch_size)]
 
-    for start in range(0, len(papers), batch_size):
-        batch_idx = (start // batch_size) + 1
-        LOGGER.info("Processing evidence selection batch %d/%d (papers %d-%d)...",
-                    batch_idx, total_batches, start + 1, min(start + batch_size, len(papers)))
-        batch = papers[start : start + batch_size]
+    def process_batch(batch: list[Paper]) -> list[dict[str, Any]]:
         paper_payload = [
             {
                 "paper_id": p.paper_id,
@@ -119,41 +116,58 @@ def select_and_extract_evidence(
             f"Candidate Papers to judge: {paper_payload}"
         )
 
-        # 细粒度相关性判断，使用 pro 模型保证效果
-        response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="pro")
-        payload = response.get("selections") if isinstance(response, dict) else response
-
-        for paper in batch:
-            fallback = _create_fallback_selection(paper, plan)
-            selected = fallback
+        try:
+            response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="pro")
+            payload = response.get("selections") if isinstance(response, dict) else response
             if isinstance(payload, list):
-                for item in payload:
-                    if item.get("paper_id") == paper.paper_id:
-                        try:
-                            # 细致解析字段并转换
-                            evidence_items = []
-                            for ev in item.get("evidence", []):
-                                if isinstance(ev, dict) and "field" in ev and "text" in ev:
-                                    evidence_items.append(EvidenceItem(field=ev["field"], text=ev["text"]))
-                            
-                            relevance = item.get("relevance_level")
-                            if relevance not in {"high", "medium", "low", "irrelevant"}:
-                                relevance = "low"
+                return payload
+        except Exception as exc:
+            LOGGER.warning("LLM batch evidence selection failed: %s", exc)
+        return []
 
-                            selected = SelectionResult(
-                                paper_id=paper.paper_id,
-                                relevance_level=relevance,
-                                matched_constraints=item.get("matched_constraints", []),
-                                missing_constraints=item.get("missing_constraints", []),
-                                evidence=evidence_items,
-                                reason=item.get("reason", "Parsed from LLM"),
-                                confidence=float(item.get("confidence", 0.9)),
-                                is_validated=True
-                            )
-                        except Exception as exc:
-                            LOGGER.warning("Error parsing LLM selection result for paper %s: %s", paper.paper_id, exc)
-                            selected = fallback
-                        break
-            results.append(selected)
+    all_payloads = []
+    # 使用 ThreadPoolExecutor 并发发起 API 请求
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(batches))) as executor:
+        futures = {executor.submit(process_batch, b): b for b in batches}
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                payload = future.result()
+                all_payloads.extend(payload)
+            except Exception as exc:
+                LOGGER.warning("Thread execution error for batch selection: %s", exc)
+
+    # 针对每篇 Paper 匹配并组合 SelectionResult
+    for paper in papers:
+        fallback = _create_fallback_selection(paper, plan)
+        selected = fallback
+        if all_payloads:
+            for item in all_payloads:
+                if isinstance(item, dict) and item.get("paper_id") == paper.paper_id:
+                    try:
+                        # 细致解析字段并转换
+                        evidence_items = []
+                        for ev in item.get("evidence", []):
+                            if isinstance(ev, dict) and "field" in ev and "text" in ev:
+                                evidence_items.append(EvidenceItem(field=ev["field"], text=ev["text"]))
+                        
+                        relevance = item.get("relevance_level")
+                        if relevance not in {"high", "medium", "low", "irrelevant"}:
+                            relevance = "low"
+
+                        selected = SelectionResult(
+                            paper_id=paper.paper_id,
+                            relevance_level=relevance,
+                            matched_constraints=item.get("matched_constraints", []),
+                            missing_constraints=item.get("missing_constraints", []),
+                            evidence=evidence_items,
+                            reason=item.get("reason", item.get("explanation", "Parsed from LLM")),
+                            confidence=float(item.get("confidence", 0.9)),
+                            is_validated=True
+                        )
+                    except Exception as exc:
+                        LOGGER.warning("Error parsing LLM selection result for paper %s: %s", paper.paper_id, exc)
+                        selected = fallback
+                    break
+        results.append(selected)
 
     return results
