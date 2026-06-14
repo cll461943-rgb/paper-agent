@@ -13,11 +13,11 @@ from scholar_agent.retrieval.base import PaperProvider
 LOGGER = logging.getLogger(__name__)
 
 OPENALEX_QUERY_STOPWORDS = {
-    "a", "about", "all", "also", "an", "and", "any", "are", "architecture",
-    "as", "at", "be", "by", "can", "cnns", "do", "does", "for", "from",
-    "how", "instead", "is", "it", "me", "mechanisms", "of", "on", "or",
-    "paper", "papers", "research", "rnns", "sequence", "that", "the",
-    "there", "to", "transduction", "uses", "using", "what", "which", "with",
+    "a", "about", "all", "also", "an", "and", "any", "are",
+    "as", "at", "be", "by", "can", "do", "does", "for", "from",
+    "how", "instead", "is", "it", "me", "of", "on", "or",
+    "paper", "papers", "research", "that", "the",
+    "there", "to", "what", "which", "with",
 }
 
 

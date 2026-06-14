@@ -125,11 +125,7 @@ def _merge_gold_key_sets(gold_key_sets: list[set[str]], paper_key_sets: list[set
 
 
 def score_papers_against_gold(papers: list[Any], gold_items: list[dict[str, Any] | str]) -> dict[str, float | int]:
-    gold_key_sets = []
-    for item in gold_items:
-        keys = gold_match_keys(item)
-        if keys:
-            gold_key_sets.append(keys)
+    gold_key_sets = [keys for item in gold_items if (keys := gold_match_keys(item))]
     paper_key_sets = [paper_match_keys(paper) for paper in papers]
     gold_key_sets = _merge_gold_key_sets(gold_key_sets, paper_key_sets)
     matched_gold_indexes: set[int] = set()
@@ -196,7 +192,7 @@ class StatsLLMClient:
         prev_tokens = curr_budget.token_estimate if curr_budget else 0
 
         # 调用底层客户端
-        result = self.base_client.complete_json(system_prompt, user_prompt, model_type, timeout_seconds=timeout_seconds)
+        result = self.base_client.complete_json(system_prompt, user_prompt, model_type)
 
         elapsed = time.perf_counter() - started_at
         tokens_used = (curr_budget.token_estimate - prev_tokens) if curr_budget else 0
@@ -299,9 +295,9 @@ def run_evaluation(
     mode: str = "live",
     limit: int | None = None,
     cases_filter: str | None = None,
-    simple: bool = False,
     output_path: str | None = None,
     time_budget: float = 30.0,
+    recall_only: bool = False,
 ) -> None:
     # 加载配置
     config = load_config()
@@ -361,8 +357,6 @@ def run_evaluation(
         if not indices:
             print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
             sys.exit(1)
-    elif simple:
-        indices = [0]
     elif limit is not None and limit > 0:
         indices = indices[:limit]
 
@@ -424,7 +418,7 @@ def run_evaluation(
         err_list = []
 
         try:
-            res = pipeline.run(query)
+            res = pipeline.run(query, retrieval_only=recall_only)
 
             # 汇聚推荐论文
             result_papers = [
@@ -471,11 +465,16 @@ def run_evaluation(
 
         # 计算得分
         if not has_error:
-            # 最终推荐得分 (限制前 k)
-            final_scores = score_papers_against_gold(result_papers[:k], gold)
-            case_f1 = final_scores["f1"]
-            case_prec = final_scores["precision"]
-            case_rec = final_scores["recall"]
+            if not recall_only:
+                # 最终推荐得分 (限制前 k)
+                final_scores = score_papers_against_gold(result_papers[:k], gold)
+                case_f1 = final_scores["f1"]
+                case_prec = final_scores["precision"]
+                case_rec = final_scores["recall"]
+
+                total_f1_final += case_f1
+                total_precision_final += case_prec
+                total_recall_final += case_rec
 
             # 候选池 @300 & @500 得分
             cand_scores_300 = score_papers_against_gold(candidate_pool[:300], gold)
@@ -483,13 +482,11 @@ def run_evaluation(
             cand_rec_300 = cand_scores_300["recall"]
             cand_rec_500 = cand_scores_500["recall"]
 
-            total_f1_final += case_f1
-            total_precision_final += case_prec
-            total_recall_final += case_rec
             total_candidate_recall_300 += cand_rec_300
             total_candidate_recall_500 += cand_rec_500
 
-            print(f"  -> Prec: {case_prec:.4f} | Recall: {case_rec:.4f} | F1: {case_f1:.4f}")
+            if not recall_only:
+                print(f"  -> Prec: {case_prec:.4f} | Recall: {case_rec:.4f} | F1: {case_f1:.4f}")
             print(f"  -> Candidate Recall@300: {cand_rec_300:.4f} | Recall@500: {cand_rec_500:.4f}")
             print(f"  -> Elapsed: {elapsed:.2f}s | LLM calls: {budget.llm_calls_used}")
         else:
@@ -523,9 +520,10 @@ def run_evaluation(
     # 3. 输出汇总模型性能报表 (与 baseline 对齐并展示提升)
     print("\n" + "=" * 70)
     print("和 baseline 比:")
-    print(format_compare("avg_f1_final", avg_f1, BASELINE_METRICS["avg_f1_final"]))
-    print(format_compare("avg_precision_final", avg_prec, BASELINE_METRICS["avg_precision_final"]))
-    print(format_compare("avg_recall_final", avg_rec, BASELINE_METRICS["avg_recall_final"]))
+    if not recall_only:
+        print(format_compare("avg_f1_final", avg_f1, BASELINE_METRICS["avg_f1_final"]))
+        print(format_compare("avg_precision_final", avg_prec, BASELINE_METRICS["avg_precision_final"]))
+        print(format_compare("avg_recall_final", avg_rec, BASELINE_METRICS["avg_recall_final"]))
     print(format_compare("avg_candidate_recall_300", avg_cand_rec_300, BASELINE_METRICS["avg_candidate_recall_300"]))
     print(format_compare("avg_candidate_recall_500", avg_cand_rec_500, BASELINE_METRICS["avg_candidate_recall_500"]))
     print(format_compare("avg_wall_time", avg_time, BASELINE_METRICS["avg_wall_time"], is_time=True))
@@ -611,11 +609,7 @@ def run_evaluation(
 
 
 if __name__ == "__main__":
-    # 强制设置 sys.stdout 编码为 utf-8，解决 Windows 环境下打印 emoji 时 UnicodeEncodeError 问题
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8")
-
-    setup_logging(logging.INFO)
+    setup_logging(logging.WARNING)
     
     parser = argparse.ArgumentParser(description="Scholar Agent V2.0 Evaluation Runner")
     parser.add_argument(
@@ -634,12 +628,7 @@ if __name__ == "__main__":
         "-c", "--cases",
         type=str,
         default=None,
-        help="指定仅运行的部分案例编号（如：'1,2,5-7'），不指定则默认全量"
-    )
-    parser.add_argument(
-        "-s", "--simple",
-        action="store_true",
-        help="只运行1条简单测试（即第1个案例）"
+        help="指定仅运行的部分案例编号（如：'1,2,5-7'）"
     )
     parser.add_argument(
         "-o", "--output",
@@ -652,6 +641,11 @@ if __name__ == "__main__":
         type=float,
         default=30.0,
         help="单个 Query 的最大耗时预算（秒），超过此值算为超时，默认 30.0"
+    )
+    parser.add_argument(
+        "--recall-only",
+        action="store_true",
+        help="仅评估检索召回率（Recall@300, Recall@500），跳过证据筛选与合成"
     )
 
     args = parser.parse_args()
@@ -682,7 +676,7 @@ if __name__ == "__main__":
         mode=run_mode,
         limit=args.limit,
         cases_filter=args.cases,
-        simple=args.simple,
         output_path=args.output,
-        time_budget=args.time_budget
+        time_budget=args.time_budget,
+        recall_only=args.recall_only
     )

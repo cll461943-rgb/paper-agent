@@ -155,7 +155,7 @@ class PaperAgentPipeline:
         self.llm_client = llm_client
         self.providers = providers or build_providers(config)
 
-    def run(self, original_query: str) -> WorkflowResult:
+    def run(self, original_query: str, retrieval_only: bool = False) -> WorkflowResult:
         """运行智能学术检索 Agent V2.0 完整流程。"""
         # 1. 初始化 BudgetManager
         budget = BudgetManager(self.config)
@@ -277,15 +277,51 @@ class PaperAgentPipeline:
 
         # 6. 细粒度证据筛选 (先进行粗排截断，最多只送 20 篇以控制 LLM 成本和噪声)
         def _get_rough_score(p: Paper) -> float:
+            import math
             bge = p.metadata.get("bge_score")
             try:
-                bge_val = float(bge) if bge is not None else 0.5
+                bge_val = float(bge) if bge is not None else 0.0
             except (ValueError, TypeError):
-                bge_val = 0.5
-            paths = len(p.retrieval_path) if p.retrieval_path else 1
-            return bge_val + paths * 0.01
+                bge_val = 0.0
+            
+            citation_score = 0.0
+            if p.citation_count is not None:
+                citation_score = math.log1p(max(0, p.citation_count)) * 0.01
+                
+            route_bonus = 0.0
+            for path in p.retrieval_path:
+                if "title_exact" in path or "title_like" in path:
+                    route_bonus += 0.2
+                if "reference_expansion" in path or "citation_expansion" in path:
+                    route_bonus += 0.05
+                    
+            paths_val = len(p.retrieval_path) if p.retrieval_path else 1
+            base_score = bge_val if bge_val > 0.0 else 0.5
+            
+            return base_score + paths_val * 0.01 + citation_score + route_bonus
 
         all_candidates.sort(key=_get_rough_score, reverse=True)
+
+        # 存储候选池供评估框架审计
+        self.candidate_pool = all_candidates
+        budget.candidate_pool_size = len(all_candidates)
+
+        if retrieval_only:
+            LOGGER.info("Retrieval only mode enabled. Bypassing evidence selection and synthesis.")
+            return WorkflowResult(
+                original_query=original_query,
+                query_plan=query_plan,
+                search_process=rounds_history,
+                highly_relevant_papers=[],
+                partially_relevant_papers=[],
+                method_clusters=[],
+                timeline=[],
+                citation_graph={},
+                recommendation_reasoning=[],
+                agent_self_report={"message": "Recall only mode. Evidence selection and synthesis were skipped."},
+                run_metrics=budget.get_metrics()
+            )
+
         max_selection = getattr(self.config.budget, "max_llm_selection_papers", 20)
         selection_candidates = all_candidates[:max_selection]
 

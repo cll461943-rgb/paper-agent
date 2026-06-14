@@ -1,0 +1,879 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2410.12096v1",
+    "title": "Bridging Large Language Models and Graph Structure Learning Models for Robust Representation Learning",
+    "abstract": "Graph representation learning, involving both node features and graph structures, is crucial for real-world applications but often encounters pervasive noise. State-of-the-art methods typically address noise by focusing separately on node features with large language models (LLMs) and on graph structures with graph structure learning models (GSLMs). In this paper, we introduce LangGSL, a robust framework that integrates the complementary strengths of pre-trained language models and GSLMs to jointly enhance both node feature and graph structure learning. In LangGSL, we first leverage LLMs to filter noise in the raw data and extract valuable cleaned information as features, enhancing the synergy of downstream models. During the mutual learning phase in LangGSL, the core idea is to leverage the relatively small language model (LM) to process local attributes and generate reliable pseudo-labels and informative node embeddings, which are then integrated into the GSLM's prediction phase. This approach enriches the global context and enhances overall performance. Meanwhile, GSLM refines the evolving graph structure constructed from the LM's output, offering updated labels back to the LM as additional guidance, thus facilitating a more effective mutual learning process. The LM and GSLM work synergistically, complementing each other's strengths and offsetting weaknesses within a variational information-maximizing framework, resulting in enhanced node features and a more robust graph structure. Extensive experiments on diverse graph datasets of varying scales and across different task scenarios demonstrate the scalability and effectiveness of the proposed approach.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Guangxin Su",
+      "Yifan Zhu",
+      "Wenjie Zhang",
+      "Hanchen Wang",
+      "Ying Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.12096v1",
+    "url": "http://arxiv.org/abs/2410.12096v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.08082v1",
+    "title": "Self-Generated In-Context Learning: Leveraging Auto-regressive Language Models as a Demonstration Generator",
+    "abstract": "Large-scale pre-trained language models (PLMs) are well-known for being capable of solving a task simply by conditioning a few input-label pairs dubbed demonstrations on a prompt without being explicitly tuned for the desired downstream task. Such a process (i.e., in-context learning), however, naturally leads to high reliance on the demonstrations which are usually selected from external datasets. In this paper, we propose self-generated in-context learning (SG-ICL), which generates demonstrations for in-context learning from PLM itself to minimize the reliance on the external demonstration. We conduct experiments on four different text classification tasks and show SG-ICL significantly outperforms zero-shot learning and is generally worth approximately 0.6 gold training samples. Moreover, our generated demonstrations show more consistent performance with low variance compared to randomly selected demonstrations from the training dataset.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Hyuhng Joon Kim",
+      "Hyunsoo Cho",
+      "Junyeob Kim",
+      "Taeuk Kim",
+      "Kang Min Yoo",
+      "Sang-goo Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.08082v1",
+    "url": "http://arxiv.org/abs/2206.08082v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08355v3",
+    "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+    "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jacob Beck",
+      "Shikha Surana",
+      "Manus McAuliffe",
+      "Oliver Bent",
+      "Thomas D. Barrett",
+      "Juan Jose Garau Luis",
+      "Paul Duckworth"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08355v3",
+    "url": "http://arxiv.org/abs/2410.08355v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.16679v1",
+    "title": "Reinforcement Learning Meets Large Language Models: A Survey of Advancements and Applications Across the LLM Lifecycle",
+    "abstract": "In recent years, training methods centered on Reinforcement Learning (RL) have markedly enhanced the reasoning and alignment performance of Large Language Models (LLMs), particularly in understanding human intents, following user instructions, and bolstering inferential strength. Although existing surveys offer overviews of RL augmented LLMs, their scope is often limited, failing to provide a comprehensive summary of how RL operates across the full lifecycle of LLMs. We systematically review the theoretical and practical advancements whereby RL empowers LLMs, especially Reinforcement Learning with Verifiable Rewards (RLVR). First, we briefly introduce the basic theory of RL. Second, we thoroughly detail application strategies for RL across various phases of the LLM lifecycle, including pre-training, alignment fine-tuning, and reinforced reasoning. In particular, we emphasize that RL methods in the reinforced reasoning phase serve as a pivotal driving force for advancing model reasoning to its limits. Next, we collate existing datasets and evaluation benchmarks currently used for RL fine-tuning, spanning human-annotated datasets, AI-assisted preference data, and program-verification-style corpora. Subsequently, we review the mainstream open-source tools and training frameworks available, providing clear practical references for subsequent research. Finally, we analyse the future challenges and trends in the field of RL-enhanced LLMs. This survey aims to present researchers and practitioners with the latest developments and frontier trends at the intersection of RL and LLMs, with the goal of fostering the evolution of LLMs that are more intelligent, generalizable, and secure.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Keliang Liu",
+      "Dingkang Yang",
+      "Ziyun Qian",
+      "Weijie Yin",
+      "Yuchi Wang",
+      "Hongsheng Li",
+      "Jun Liu",
+      "Peng Zhai",
+      "Yang Liu",
+      "Lihua Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.16679v1",
+    "url": "http://arxiv.org/abs/2509.16679v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13828v2",
+    "title": "Babysit A Language Model From Scratch: Interactive Language Learning by Trials and Demonstrations",
+    "abstract": "Humans are efficient language learners and inherently social creatures. Our language development is largely shaped by our social interactions, for example, the demonstration and feedback from caregivers. Contrary to human language learning, recent advancements in large language models have primarily adopted a non-interactive training paradigm, and refined pre-trained models through feedback afterward. In this work, we explore how corrective feedback from interactions influences neural language acquisition from scratch through systematically controlled experiments, assessing whether it contributes to word learning efficiency in language models. We introduce a trial-and-demonstration (TnD) learning framework that incorporates three distinct components: student trials, teacher demonstrations, and a reward conditioned on language competence at various developmental stages. Our experiments reveal that the TnD approach accelerates word acquisition for student models of equal and smaller numbers of parameters, and we highlight the significance of both trials and demonstrations. We further show that the teacher's choices of words influence students' word-specific learning efficiency, and a practice-makes-perfect effect is evident by a strong correlation between the frequency of words in trials and their respective learning curves. Our findings suggest that interactive language learning, with teacher demonstrations and active trials, can facilitate efficient word learning in language models.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ziqiao Ma",
+      "Zekun Wang",
+      "Joyce Chai"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13828v2",
+    "url": "http://arxiv.org/abs/2405.13828v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.21676v2",
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distributions lead to shorter plateaus. Finally, hallucinations emerge simultaneously with knowledge, and integrating new knowledge into the model through fine-tuning is challenging, as it quickly corrupts its existing parametric memories. Our results emphasize the importance of data distribution in knowledge acquisition and suggest novel data scheduling strategies to accelerate neural network training.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Nicolas Zucchet",
+      "Jörg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu",
+      "Soham De"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.21676v2",
+    "url": "http://arxiv.org/abs/2503.21676v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.23501v1",
+    "title": "The Impact of Role Design in In-Context Learning for Large Language Models",
+    "abstract": "In-context learning (ICL) enables Large Language Models (LLMs) to generate predictions based on prompts without additional fine-tuning. While prompt engineering has been widely studied, the impact of role design within prompts remains underexplored. This study examines the influence of role configurations in zero-shot and few-shot learning scenarios using GPT-3.5 and GPT-4o from OpenAI and Llama2-7b and Llama2-13b from Meta. We evaluate the models' performance across datasets, focusing on tasks like sentiment analysis, text classification, question answering, and math reasoning. Our findings suggest the potential of role-based prompt structuring to enhance LLM performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hamidreza Rouzegar",
+      "Masoud Makrehchi"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.23501v1",
+    "url": "http://arxiv.org/abs/2509.23501v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.05032v2",
+    "title": "Enhancing Human-Like Responses in Large Language Models",
+    "abstract": "This paper explores the advancements in making large language models (LLMs) more human-like. We focus on techniques that enhance natural language understanding, conversational coherence, and emotional intelligence in AI systems. The study evaluates various approaches, including fine-tuning with diverse datasets, incorporating psychological principles, and designing models that better mimic human reasoning patterns. Our findings demonstrate that these enhancements not only improve user interactions but also open new possibilities for AI applications across different domains. Future work will address the ethical implications and potential biases introduced by these human-like attributes.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ethem Yağız Çalık",
+      "Talha Rüzgar Akkuş"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.05032v2",
+    "url": "http://arxiv.org/abs/2501.05032v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.07546v2",
+    "title": "Does In-Context Learning Really Learn? Rethinking How Large Language Models Respond and Solve Tasks via In-Context Learning",
+    "abstract": "In-context Learning (ICL) has emerged as a powerful capability alongside the development of scaled-up large language models (LLMs). By instructing LLMs using few-shot demonstrative examples, ICL enables them to perform a wide range of tasks without updating millions of parameters. However, the precise contributions of demonstrations towards improving end-task performance have not been thoroughly investigated in recent analytical studies. In this paper, we empirically decompose the overall performance of ICL into three dimensions, label space, format, and discrimination, and we evaluate four general-purpose LLMs across a diverse range of tasks. Counter-intuitively, we find that the demonstrations have a marginal impact on provoking discriminative knowledge of language models. However, ICL exhibits significant efficacy in regulating the label space and format, which helps LLMs respond to desired label words. We then demonstrate that this ability functions similar to detailed instructions for LLMs to follow. We additionally provide an in-depth analysis of the mechanism of retrieval helping with ICL. Our findings demonstrate that retrieving the semantically similar examples notably boosts the model's discriminative capability. However, we also observe a trade-off in selecting good in-context examples regarding label diversity.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Quanyu Long",
+      "Yin Wu",
+      "Wenya Wang",
+      "Sinno Jialin Pan"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.07546v2",
+    "url": "http://arxiv.org/abs/2404.07546v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2304.10464v4",
+    "title": "Learning to Plan with Natural Language",
+    "abstract": "Large Language Models (LLMs) have shown remarkable performance in various basic natural language tasks. For completing the complex task, we still need a plan for the task to guide LLMs to generate the specific solutions step by step. LLMs can directly generate task plans, but these plans may still contain factual errors or are incomplete. A high-quality task plan contains correct step-by-step solutions for solving all situations and behavioral instructions for avoiding mistakes. To obtain it, we propose the Learning to Plan method, which involves two phases: (1) In the first learning task plan phase, it iteratively updates the task plan with new step-by-step solutions and behavioral instructions, which are obtained by prompting LLMs to derive from training error feedback. (2) In the subsequent test phase, the LLM uses the learned task plan to guide the inference of LLM on the test set. We demonstrate the effectiveness of our method on the five different reasoning type tasks (8 datasets). Further, our analysis experiment shows that the task plan learned by one LLM can directly guide another LLM to improve its performance, which reveals a new transfer learning paradigm. We release the code at \\url{https://github.com/Eureka6174/LearnNLPlan}",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yiduo Guo",
+      "Yaobo Liang",
+      "Chenfei Wu",
+      "Wenshan Wu",
+      "Dongyan Zhao",
+      "Nan Duan"
+    ],
+    "doi": null,
+    "arxiv_id": "2304.10464v4",
+    "url": "http://arxiv.org/abs/2304.10464v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.17080v1",
+    "title": "Can Vision Language Models Learn from Visual Demonstrations of Ambiguous Spatial Reasoning?",
+    "abstract": "Large vision-language models (VLMs) have become state-of-the-art for many computer vision tasks, with in-context learning (ICL) as a popular adaptation strategy for new ones. But can VLMs learn novel concepts purely from visual demonstrations, or are they limited to adapting to the output format of ICL examples? We propose a new benchmark we call Spatial Visual Ambiguity Tasks (SVAT) that challenges state-of-the-art VLMs to learn new visuospatial tasks in-context. We find that VLMs fail to do this zero-shot, and sometimes continue to fail after finetuning. However, adding simpler data to the training by curriculum learning leads to improved ICL performance.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Bowen Zhao",
+      "Leo Parker Dirac",
+      "Paulina Varshavskaya"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.17080v1",
+    "url": "http://arxiv.org/abs/2409.17080v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.00793v1",
+    "title": "Is In-Context Learning in Large Language Models Bayesian? A Martingale Perspective",
+    "abstract": "In-context learning (ICL) has emerged as a particularly remarkable characteristic of Large Language Models (LLM): given a pretrained LLM and an observed dataset, LLMs can make predictions for new data points from the same distribution without fine-tuning. Numerous works have postulated ICL as approximately Bayesian inference, rendering this a natural hypothesis. In this work, we analyse this hypothesis from a new angle through the martingale property, a fundamental requirement of a Bayesian learning system for exchangeable data. We show that the martingale property is a necessary condition for unambiguous predictions in such scenarios, and enables a principled, decomposed notion of uncertainty vital in trustworthy, safety-critical systems. We derive actionable checks with corresponding theory and test statistics which must hold if the martingale property is satisfied. We also examine if uncertainty in LLMs decreases as expected in Bayesian learning when more data is observed. In three experiments, we provide evidence for violations of the martingale property, and deviations from a Bayesian scaling behaviour of uncertainty, falsifying the hypothesis that ICL is Bayesian.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Fabian Falck",
+      "Ziyu Wang",
+      "Chris Holmes"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.00793v1",
+    "url": "http://arxiv.org/abs/2406.00793v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.11916v4",
+    "title": "Large Language Models Are Latent Variable Models: Explaining and Finding Good Demonstrations for In-Context Learning",
+    "abstract": "In recent years, pre-trained large language models (LLMs) have demonstrated remarkable efficiency in achieving an inference-time few-shot learning capability known as in-context learning. However, existing literature has highlighted the sensitivity of this capability to the selection of few-shot demonstrations. Current understandings of the underlying mechanisms by which this capability arises from regular language model pretraining objectives remain disconnected from the real-world LLMs. This study aims to examine the in-context learning phenomenon through a Bayesian lens, viewing real-world LLMs as latent variable models. On this premise, we propose an algorithm to select optimal demonstrations from a set of annotated data with a small LM, and then directly generalize the selected demonstrations to larger LMs. We demonstrate significant improvement over baselines, averaged over eight GPT models on eight real-world text classification datasets. We also demonstrate the real-world usefulness of our algorithm on GSM8K, a math word problem dataset. Our empirical findings support our hypothesis that LLMs implicitly infer a latent variable containing task information.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xinyi Wang",
+      "Wanrong Zhu",
+      "Michael Saxon",
+      "Mark Steyvers",
+      "William Yang Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.11916v4",
+    "url": "http://arxiv.org/abs/2301.11916v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.14679v2",
+    "title": "Is Self-knowledge and Action Consistent or Not: Investigating Large Language Model's Personality",
+    "abstract": "In this study, we delve into the validity of conventional personality questionnaires in capturing the human-like personality traits of Large Language Models (LLMs). Our objective is to assess the congruence between the personality traits LLMs claim to possess and their demonstrated tendencies in real-world scenarios. By conducting an extensive examination of LLM outputs against observed human response patterns, we aim to understand the disjunction between self-knowledge and action in LLMs.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yiming Ai",
+      "Zhiwei He",
+      "Ziyin Zhang",
+      "Wenhong Zhu",
+      "Hongkun Hao",
+      "Kai Yu",
+      "Lingjun Chen",
+      "Rui Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.14679v2",
+    "url": "http://arxiv.org/abs/2402.14679v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.09173v1",
+    "title": "Two-Stage Representation Learning for Analyzing Movement Behavior Dynamics in People Living with Dementia",
+    "abstract": "In remote healthcare monitoring, time series representation learning reveals critical patient behavior patterns from high-frequency data. This study analyzes home activity data from individuals living with dementia by proposing a two-stage, self-supervised learning approach tailored to uncover low-rank structures. The first stage converts time-series activities into text sequences encoded by a pre-trained language model, providing a rich, high-dimensional latent state space using a PageRank-based method. This PageRank vector captures latent state transitions, effectively compressing complex behaviour data into a succinct form that enhances interpretability. This low-rank representation not only enhances model interpretability but also facilitates clustering and transition analysis, revealing key behavioral patterns correlated with clinicalmetrics such as MMSE and ADAS-COG scores. Our findings demonstrate the framework's potential in supporting cognitive status prediction, personalized care interventions, and large-scale health monitoring.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jin Cui",
+      "Alexander Capstick",
+      "Payam Barnaghi",
+      "Gregory Scott"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.09173v1",
+    "url": "http://arxiv.org/abs/2502.09173v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.11357v3",
+    "title": "Large Language Models Lack Understanding of Character Composition of Words",
+    "abstract": "Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs' successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simple tasks that can be handled by humans with perfection. We analyze their behaviors with comparison to token level performances, and discuss the potential directions for future research.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Andrew Shin",
+      "Kunitake Kaneko"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.11357v3",
+    "url": "http://arxiv.org/abs/2405.11357v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.15867v5",
+    "title": "In-Context Ensemble Learning from Pseudo Labels Improves Video-Language Models for Low-Level Workflow Understanding",
+    "abstract": "A Standard Operating Procedure (SOP) defines a low-level, step-by-step written guide for a business software workflow. SOP generation is a crucial step towards automating end-to-end software workflows. Manually creating SOPs can be time-consuming. Recent advancements in large video-language models offer the potential for automating SOP generation by analyzing recordings of human demonstrations. However, current large video-language models face challenges with zero-shot SOP generation. In this work, we first explore in-context learning with video-language models for SOP generation. We then propose an exploration-focused strategy called In-Context Ensemble Learning, to aggregate pseudo labels of multiple possible paths of SOPs. The proposed in-context ensemble learning as well enables the models to learn beyond its context window limit with an implicit consistency regularisation. We report that in-context learning helps video-language models to generate more temporally accurate SOP, and the proposed in-context ensemble learning can consistently enhance the capabilities of the video-language models in SOP generation.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Moucheng Xu",
+      "Evangelos Chatzaroulas",
+      "Luc McCutcheon",
+      "Abdul Ahad",
+      "Hamzah Azeem",
+      "Janusz Marecki",
+      "Ammar Anwar"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.15867v5",
+    "url": "http://arxiv.org/abs/2409.15867v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.19925v2",
+    "title": "Improving Multimodal Large Language Models Using Continual Learning",
+    "abstract": "Generative large language models (LLMs) exhibit impressive capabilities, which can be further augmented by integrating a pre-trained vision model into the original LLM to create a multimodal LLM (MLLM). However, this integration often significantly decreases performance on natural language understanding and generation tasks, compared to the original LLM. This study investigates this issue using the LLaVA MLLM, treating the integration as a continual learning problem. We evaluate five continual learning methods to mitigate forgetting and identify a technique that enhances visual understanding while minimizing linguistic performance loss. Our approach reduces linguistic performance degradation by up to 15% over the LLaVA recipe, while maintaining high multimodal accuracy. We also demonstrate the robustness of our method through continual learning on a sequence of vision-language tasks, effectively preserving linguistic skills while acquiring new multimodal capabilities. Project webpage: https://shikhar-srivastava.github.io/cl-for-improving-mllms",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Shikhar Srivastava",
+      "Md Yousuf Harun",
+      "Robik Shrestha",
+      "Christopher Kanan"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.19925v2",
+    "url": "http://arxiv.org/abs/2410.19925v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1212.2390v1",
+    "title": "On the complexity of learning a language: An improvement of Block's algorithm",
+    "abstract": "Language learning is thought to be a highly complex process. One of the hurdles in learning a language is to learn the rules of syntax of the language. Rules of syntax are often ordered in that before one rule can applied one must apply another. It has been thought that to learn the order of n rules one must go through all n! permutations. Thus to learn the order of 27 rules would require 27! steps or 1.08889x10^{28} steps. This number is much greater than the number of seconds since the beginning of the universe! In an insightful analysis the linguist Block ([Block 86], pp. 62-63, p.238) showed that with the assumption of transitivity this vast number of learning steps reduces to a mere 377 steps. We present a mathematical analysis of the complexity of Block's algorithm. The algorithm has a complexity of order n^2 given n rules. In addition, we improve Block's results exponentially, by introducing an algorithm that has complexity of order less than n log n.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Eric Werner"
+    ],
+    "doi": null,
+    "arxiv_id": "1212.2390v1",
+    "url": "http://arxiv.org/abs/1212.2390v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12907v1",
+    "title": "Meta-in-context learning in large language models",
+    "abstract": "Large language models have shown tremendous performance in a variety of tasks. In-context learning -- the ability to improve at a task after being provided with a number of demonstrations -- is seen as one of the main contributors to their success. In the present paper, we demonstrate that the in-context learning abilities of large language models can be recursively improved via in-context learning itself. We coin this phenomenon meta-in-context learning. Looking at two idealized domains, a one-dimensional regression task and a two-armed bandit task, we show that meta-in-context learning adaptively reshapes a large language model's priors over expected tasks. Furthermore, we find that meta-in-context learning modifies the in-context learning strategies of such models. Finally, we extend our approach to a benchmark of real-world regression problems where we observe competitive performance to traditional learning algorithms. Taken together, our work improves our understanding of in-context learning and paves the way toward adapting large language models to the environment they are applied purely through meta-in-context learning rather than traditional finetuning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Julian Coda-Forno",
+      "Marcel Binz",
+      "Zeynep Akata",
+      "Matthew Botvinick",
+      "Jane X. Wang",
+      "Eric Schulz"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12907v1",
+    "url": "http://arxiv.org/abs/2305.12907v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.12216v3",
+    "title": "Energy-Based Models for Continual Learning",
+    "abstract": "We motivate Energy-Based Models (EBMs) as a promising model class for continual learning problems. Instead of tackling continual learning via the use of external memory, growing models, or regularization, EBMs change the underlying training objective to cause less interference with previously learned information. Our proposed version of EBMs for continual learning is simple, efficient, and outperforms baseline methods by a large margin on several benchmarks. Moreover, our proposed contrastive divergence-based training objective can be combined with other continual learning methods, resulting in substantial boosts in their performance. We further show that EBMs are adaptable to a more general continual learning setting where the data distribution changes without the notion of explicitly delineated tasks. These observations point towards EBMs as a useful building block for future continual learning methods.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Shuang Li",
+      "Yilun Du",
+      "Gido M. van de Ven",
+      "Igor Mordatch"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.12216v3",
+    "url": "http://arxiv.org/abs/2011.12216v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.12447v1",
+    "title": "Large language models have learned to use language",
+    "abstract": "Acknowledging that large language models have learned to use language can open doors to breakthrough language science. Achieving these breakthroughs may require abandoning some long-held ideas about how language knowledge is evaluated and reckoning with the difficult fact that we have entered a post-Turing test era.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Gary Lupyan"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.12447v1",
+    "url": "http://arxiv.org/abs/2512.12447v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.02872v3",
+    "title": "How do Large Language Models Learn In-Context? Query and Key Matrices of In-Context Heads are Two Towers for Metric Learning",
+    "abstract": "We investigate the mechanism of in-context learning (ICL) on sentence classification tasks with semantically-unrelated labels (\"foo\"/\"bar\"). We find intervening in only 1\\% heads (named \"in-context heads\") significantly affects ICL accuracy from 87.6\\% to 24.4\\%. To understand this phenomenon, we analyze the value-output vectors in these heads and discover that the vectors at each label position contain substantial information about the corresponding labels. Furthermore, we observe that the prediction shift from \"foo\" to \"bar\" is due to the respective reduction and increase in these heads' attention scores at \"foo\" and \"bar\" positions. Therefore, we propose a hypothesis for ICL: in in-context heads, the value-output matrices extract label features, while the query-key matrices compute the similarity between the features at the last position and those at each label position. The query and key matrices can be considered as two towers that learn the similarity metric between the last position's features and each demonstration at label positions. Using this hypothesis, we explain the majority label bias and recency bias in ICL and propose two methods to reduce these biases by 22\\% and 17\\%, respectively.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zeping Yu",
+      "Sophia Ananiadou"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.02872v3",
+    "url": "http://arxiv.org/abs/2402.02872v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1504.06329v1",
+    "title": "Analysis of Stopping Active Learning based on Stabilizing Predictions",
+    "abstract": "Within the natural language processing (NLP) community, active learning has been widely investigated and applied in order to alleviate the annotation bottleneck faced by developers of new NLP systems and technologies. This paper presents the first theoretical analysis of stopping active learning based on stabilizing predictions (SP). The analysis has revealed three elements that are central to the success of the SP method: (1) bounds on Cohen's Kappa agreement between successively trained models impose bounds on differences in F-measure performance of the models; (2) since the stop set does not have to be labeled, it can be made large in practice, helping to guarantee that the results transfer to previously unseen streams of examples at test/application time; and (3) good (low variance) sample estimates of Kappa between successive models can be obtained. Proofs of relationships between the level of Kappa agreement and the difference in performance between consecutive models are presented. Specifically, if the Kappa agreement between two models exceeds a threshold T (where $T>0$), then the difference in F-measure performance between those models is bounded above by $\\frac{4(1-T)}{T}$ in all cases. If precision of the positive conjunction of the models is assumed to be $p$, then the bound can be tightened to $\\frac{4(1-T)}{(p+1)T}$.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Michael Bloodgood",
+      "John Grothendieck"
+    ],
+    "doi": null,
+    "arxiv_id": "1504.06329v1",
+    "url": "http://arxiv.org/abs/1504.06329v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.05434v1",
+    "title": "Beneath the Surface: Unveiling Harmful Memes with Multimodal Reasoning Distilled from Large Language Models",
+    "abstract": "The age of social media is rife with memes. Understanding and detecting harmful memes pose a significant challenge due to their implicit meaning that is not explicitly conveyed through the surface text and image. However, existing harmful meme detection approaches only recognize superficial harm-indicative signals in an end-to-end classification manner but ignore in-depth cognition of the meme text and image. In this paper, we attempt to detect harmful memes based on advanced reasoning over the interplay of multimodal information in memes. Inspired by the success of Large Language Models (LLMs) on complex reasoning, we first conduct abductive reasoning with LLMs. Then we propose a novel generative framework to learn reasonable thoughts from LLMs for better multimodal fusion and lightweight fine-tuning, which consists of two training stages: 1) Distill multimodal reasoning knowledge from LLMs; and 2) Fine-tune the generative framework to infer harmfulness. Extensive experiments conducted on three meme datasets demonstrate that our proposed approach achieves superior performance than state-of-the-art methods on the harmful meme detection task.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Hongzhan Lin",
+      "Ziyang Luo",
+      "Jing Ma",
+      "Long Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.05434v1",
+    "url": "http://arxiv.org/abs/2312.05434v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.11651v2",
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also leads to significant wastage of data and resources and limits the possible optimization paths during fine-tuning. In this paper, we argue that unsuccessful trajectories offer valuable insights, and LLMs can learn from these trajectories through appropriate quality control and fine-tuning strategies. By simply adding a prefix or suffix that tells the model whether to generate a successful trajectory during training, we improve model performance by a large margin on mathematical reasoning, multi-hop question answering, and strategic question answering tasks. We further analyze the inference results and find that our method provides a better trade-off between valuable information and errors in unsuccessful trajectories. To our knowledge, we are the first to demonstrate the value of negative trajectories and their application in agent-tunning scenarios. Our findings offer guidance for developing better agent-tuning methods and low-resource data usage techniques.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.11651v2",
+    "url": "http://arxiv.org/abs/2402.11651v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1704.03732v4",
+    "title": "Deep Q-learning from Demonstrations",
+    "abstract": "Deep reinforcement learning (RL) has achieved several high profile successes in difficult decision-making problems. However, these algorithms typically require a huge amount of data before they reach reasonable performance. In fact, their performance during learning can be extremely poor. This may be acceptable for a simulator, but it severely limits the applicability of deep RL to many real-world tasks, where the agent must learn in the real environment. In this paper we study a setting where the agent may access data from previous control of the system. We present an algorithm, Deep Q-learning from Demonstrations (DQfD), that leverages small sets of demonstration data to massively accelerate the learning process even from relatively small amounts of demonstration data and is able to automatically assess the necessary ratio of demonstration data while learning thanks to a prioritized replay mechanism. DQfD works by combining temporal difference updates with supervised classification of the demonstrator's actions. We show that DQfD has better initial performance than Prioritized Dueling Double Deep Q-Networks (PDD DQN) as it starts with better scores on the first million steps on 41 of 42 games and on average it takes PDD DQN 83 million steps to catch up to DQfD's performance. DQfD learns to out-perform the best demonstration given in 14 of 42 games. In addition, DQfD leverages human demonstrations to achieve state-of-the-art results for 11 games. Finally, we show that DQfD performs better than three related algorithms for incorporating demonstration data into DQN.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Todd Hester",
+      "Matej Vecerik",
+      "Olivier Pietquin",
+      "Marc Lanctot",
+      "Tom Schaul",
+      "Bilal Piot",
+      "Dan Horgan",
+      "John Quan",
+      "Andrew Sendonaris",
+      "Gabriel Dulac-Arnold",
+      "Ian Osband",
+      "John Agapiou",
+      "Joel Z. Leibo",
+      "Audrunas Gruslys"
+    ],
+    "doi": null,
+    "arxiv_id": "1704.03732v4",
+    "url": "http://arxiv.org/abs/1704.03732v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.09676v1",
+    "title": "Unmasking the Shadows of AI: Investigating Deceptive Capabilities in Large Language Models",
+    "abstract": "This research critically navigates the intricate landscape of AI deception, concentrating on deceptive behaviours of Large Language Models (LLMs). My objective is to elucidate this issue, examine the discourse surrounding it, and subsequently delve into its categorization and ramifications. The essay initiates with an evaluation of the AI Safety Summit 2023 (ASS) and introduction of LLMs, emphasising multidimensional biases that underlie their deceptive behaviours.The literature review covers four types of deception categorised: Strategic deception, Imitation, Sycophancy, and Unfaithful Reasoning, along with the social implications and risks they entail. Lastly, I take an evaluative stance on various aspects related to navigating the persistent challenges of the deceptive AI. This encompasses considerations of international collaborative governance, the reconfigured engagement of individuals with AI, proposal of practical adjustments, and specific elements of digital education.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Linge Guo"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.09676v1",
+    "url": "http://arxiv.org/abs/2403.09676v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.12837v2",
+    "title": "Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?",
+    "abstract": "Large language models (LMs) are able to in-context learn -- perform a new task via inference alone by conditioning on a few input-label pairs (demonstrations) and making predictions for new inputs. However, there has been little understanding of how the model learns and which aspects of the demonstrations contribute to end task performance. In this paper, we show that ground truth demonstrations are in fact not required -- randomly replacing labels in the demonstrations barely hurts performance on a range of classification and multi-choce tasks, consistently over 12 different models including GPT-3. Instead, we find that other aspects of the demonstrations are the key drivers of end task performance, including the fact that they provide a few examples of (1) the label space, (2) the distribution of the input text, and (3) the overall format of the sequence. Together, our analysis provides a new way of understanding how and why in-context learning works, while opening up new questions about how much can be learned from large language models through inference alone.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Sewon Min",
+      "Xinxi Lyu",
+      "Ari Holtzman",
+      "Mikel Artetxe",
+      "Mike Lewis",
+      "Hannaneh Hajishirzi",
+      "Luke Zettlemoyer"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.12837v2",
+    "url": "http://arxiv.org/abs/2202.12837v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

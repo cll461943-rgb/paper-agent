@@ -1,0 +1,25 @@
+{
+  "paper_id": "http://arxiv.org/abs/2402.02872v3",
+  "title": "How do Large Language Models Learn In-Context? Query and Key Matrices of In-Context Heads are Two Towers for Metric Learning",
+  "abstract": "We investigate the mechanism of in-context learning (ICL) on sentence classification tasks with semantically-unrelated labels (\"foo\"/\"bar\"). We find intervening in only 1\\% heads (named \"in-context heads\") significantly affects ICL accuracy from 87.6\\% to 24.4\\%. To understand this phenomenon, we analyze the value-output vectors in these heads and discover that the vectors at each label position contain substantial information about the corresponding labels. Furthermore, we observe that the prediction shift from \"foo\" to \"bar\" is due to the respective reduction and increase in these heads' attention scores at \"foo\" and \"bar\" positions. Therefore, we propose a hypothesis for ICL: in in-context heads, the value-output matrices extract label features, while the query-key matrices compute the similarity between the features at the last position and those at each label position. The query and key matrices can be considered as two towers that learn the similarity metric between the last position's features and each demonstration at label positions. Using this hypothesis, we explain the majority label bias and recency bias in ICL and propose two methods to reduce these biases by 22\\% and 17\\%, respectively.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Zeping Yu",
+    "Sophia Ananiadou"
+  ],
+  "doi": null,
+  "arxiv_id": "2402.02872v3",
+  "url": "http://arxiv.org/abs/2402.02872v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

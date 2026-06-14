@@ -69,14 +69,35 @@ class OpenAICompatibleLLMClient:
 
     def _post_json(self, payload: dict[str, Any], timeout_seconds: float | None = None) -> dict[str, Any]:
         read_timeout = timeout_seconds if timeout_seconds is not None else self.config.timeout_seconds
-        response = self.session.post(
-            self._endpoint(),
-            headers={"Authorization": f"Bearer {self.api_key}"},
-            json=payload,
-            timeout=(10, read_timeout),
-        )
-        response.raise_for_status()
-        return response.json()
+        max_retries = 3
+        last_exc = None
+        for attempt in range(max_retries):
+            try:
+                response = self.session.post(
+                    self._endpoint(),
+                    headers={"Authorization": f"Bearer {self.api_key}"},
+                    json=payload,
+                    timeout=(10, read_timeout),
+                )
+                response.raise_for_status()
+                return response.json()
+            except Exception as exc:
+                last_exc = exc
+                should_retry = False
+                if isinstance(exc, requests.exceptions.HTTPError):
+                    status_code = exc.response.status_code
+                    if status_code == 429 or 500 <= status_code < 600:
+                        should_retry = True
+                elif isinstance(exc, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
+                    should_retry = True
+                
+                if should_retry and attempt < max_retries - 1:
+                    LOGGER.warning(f"LLM request transient error: {exc}. Retrying in 1s (attempt {attempt + 1}/{max_retries})...")
+                    time.sleep(1)
+                else:
+                    raise exc
+        if last_exc:
+            raise last_exc
 
     @staticmethod
     def _estimate_tokens(text: str) -> int:

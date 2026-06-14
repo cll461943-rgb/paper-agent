@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42177203",
+  "title": "CEAM-DETR: An NMS-free lightweight transformer for weed detection in soybean fields under complex conditions.",
+  "abstract": "Weed detection in complex agricultural environments faces significant challenges due to drastic illumination variations, high visual similarity between crops and weeds, and strong background interference, which place strict requirements on both detection accuracy and real-time performance. Most existing object detection methods rely on non-maximum suppression (NMS) as a post-processing step. However, this mechanism suffers from threshold sensitivity, limited cross-scene adaptability, and accumulated inference latency in practical applications. To address these limitations, this paper proposes a lightweight adaptive transformer-based model, termed CEAM-DETR, under an end-to-end detection paradigm to achieve efficient and stable weed detection without relying on NMS. A cross-stage efficient attention backbone is first constructed by integrating cross-stage partial connections with single-head self-attention, where feature splitting and cross-stage shortcuts preserve lightweight information and gradient propagation paths, while attention is applied only to partial channels to reduce computational and memory overhead and enhance fine-grained representations of small-scale targets. On this basis, an adaptive sparse feature interaction module (ASFI) is introduced to dynamically fuse sparse and dense attention branches, thereby improving the concentration of discriminative information under complex backgrounds. Furthermore, a multi-scale dilated re-parameterization block (MSDRB) is designed to extract features using parallel convolutions with different dilation rates and to equivalently merge them into a single convolution layer during inference, which expands the receptive field without increasing computational burden and supplements multi-scale contextual information. Experimental results on public datasets demonstrate that CEAM-DETR outperforms state-of-the-art methods in terms of detection accuracy and robustness, validating its effectiveness in complex agricultural environments. Compared to the original RT-DETR, the proposed model increased by 1.5%, reduced Params by 36.5%, decreased GFLOPs by 26.0%, and improved FPS by 32.9%.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Cheng Zhang",
+    "Jianyu Xiao",
+    "Yiqun Chang"
+  ],
+  "doi": "10.1038/s41598-026-48148-4",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42177203/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42177203"
+  }
+}

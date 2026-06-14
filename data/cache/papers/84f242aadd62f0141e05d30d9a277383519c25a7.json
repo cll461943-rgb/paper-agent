@@ -1,0 +1,50 @@
+{
+  "paper_id": "https://openalex.org/W4375958700",
+  "title": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting",
+  "abstract": "Large Language Models (LLMs) can achieve strong performance on many tasks by producing step-by-step reasoning before giving a final output, often referred to as chain-of-thought reasoning (CoT). It is tempting to interpret these CoT explanations as the LLM's process for solving a task. This level of transparency into LLMs' predictions would yield significant safety benefits. However, we find that CoT explanations can systematically misrepresent the true reason for a model's prediction. We demonstrate that CoT explanations can be heavily influenced by adding biasing features to model inputs--e.g., by reordering the multiple-choice options in a few-shot prompt to make the answer always \"(A)\"--which models systematically fail to mention in their explanations. When we bias models toward incorrect answers, they frequently generate CoT explanations rationalizing those answers. This causes accuracy to drop by as much as 36% on a suite of 13 tasks from BIG-Bench Hard, when testing with GPT-3.5 from OpenAI and Claude 1.0 from Anthropic. On a social-bias task, model explanations justify giving answers in line with stereotypes without mentioning the influence of these social biases. Our findings indicate that CoT explanations can be plausible yet misleading, which risks increasing our trust in LLMs without guaranteeing their safety. Building more transparent and explainable systems will require either improving CoT faithfulness through targeted efforts or abandoning CoT in favor of alternative methods.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Miles Turpin",
+    "Julian Michael",
+    "Ethan Perez",
+    "Samuel R. Bowman"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.04388",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.04388",
+  "citation_count": 78,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Transparency (behavior)",
+      "Task (project management)",
+      "Psychology",
+      "Cognitive psychology",
+      "Computer science",
+      "Economics",
+      "Computer security",
+      "Management"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W4382930947",
+      "https://openalex.org/W3081288631",
+      "https://openalex.org/W3152382318",
+      "https://openalex.org/W3004686567",
+      "https://openalex.org/W2738656338",
+      "https://openalex.org/W2603787370",
+      "https://openalex.org/W2555400967",
+      "https://openalex.org/W4211075255"
+    ]
+  }
+}

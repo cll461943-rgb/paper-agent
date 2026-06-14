@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2401.11576v6",
+  "title": "Quantum Architecture Search with Unsupervised Representation Learning",
+  "abstract": "Unsupervised representation learning presents new opportunities for advancing Quantum Architecture Search (QAS) on Noisy Intermediate-Scale Quantum (NISQ) devices. QAS is designed to optimize quantum circuits for Variational Quantum Algorithms (VQAs). Most QAS algorithms tightly couple the search space and search algorithm, typically requiring the evaluation of numerous quantum circuits, resulting in high computational costs and limiting scalability to larger quantum circuits. Predictor-based QAS algorithms mitigate this issue by estimating circuit performance based on structure or embedding. However, these methods often demand time-intensive labeling to optimize gate parameters across many circuits, which is crucial for training accurate predictors. Inspired by the classical neural architecture search algorithm Arch2vec, we investigate the potential of unsupervised representation learning for QAS without relying on predictors. Our framework decouples unsupervised architecture representation learning from the search process, enabling the learned representations to be applied across various downstream tasks. Additionally, it integrates an improved quantum circuit graph encoding scheme, addressing the limitations of existing representations and enhancing search efficiency. This predictor-free approach removes the need for large labeled datasets. During the search, we employ REINFORCE and Bayesian Optimization to explore the latent representation space and compare their performance against baseline methods. We further validate our approach by executing the best-discovered MaxCut circuits on IBM's ibm_sherbrooke quantum processor, confirming that the architectures retain optimal performance even under real hardware noise. Our results demonstrate that the framework efficiently identifies high-performing quantum circuits with fewer search iterations.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Yize Sun",
+    "Zixin Wu",
+    "Volker Tresp",
+    "Yunpu Ma"
+  ],
+  "doi": null,
+  "arxiv_id": "2401.11576v6",
+  "url": "http://arxiv.org/abs/2401.11576v6",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

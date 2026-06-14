@@ -1,0 +1,1027 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.14227v2",
+    "title": "CLUDA : Contrastive Learning in Unsupervised Domain Adaptation for Semantic Segmentation",
+    "abstract": "In this work, we propose CLUDA, a simple, yet novel method for performing unsupervised domain adaptation (UDA) for semantic segmentation by incorporating contrastive losses into a student-teacher learning paradigm, that makes use of pseudo-labels generated from the target domain by the teacher network. More specifically, we extract a multi-level fused-feature map from the encoder, and apply contrastive loss across different classes and different domains, via source-target mixing of images. We consistently improve performance on various feature encoder architectures and for different domain adaptation datasets in semantic segmentation. Furthermore, we introduce a learned-weighted contrastive loss to improve upon on a state-of-the-art multi-resolution training approach in UDA. We produce state-of-the-art results on GTA $\\rightarrow$ Cityscapes (74.4 mIOU, +0.6) and Synthia $\\rightarrow$ Cityscapes (67.2 mIOU, +1.4) datasets. CLUDA effectively demonstrates contrastive learning in UDA as a generic method, which can be easily integrated into any existing UDA for semantic segmentation tasks. Please refer to the supplementary material for the details on implementation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Midhun Vayyat",
+      "Jaswin Kasi",
+      "Anuraag Bhattacharya",
+      "Shuaib Ahmed",
+      "Rahul Tallamraju"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.14227v2",
+    "url": "http://arxiv.org/abs/2208.14227v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07869v1",
+    "title": "Let Invariant Rationale Discovery Inspire Graph Contrastive Learning",
+    "abstract": "Leading graph contrastive learning (GCL) methods perform graph augmentations in two fashions: (1) randomly corrupting the anchor graph, which could cause the loss of semantic information, or (2) using domain knowledge to maintain salient features, which undermines the generalization to other domains. Taking an invariance look at GCL, we argue that a high-performing augmentation should preserve the salient semantics of anchor graphs regarding instance-discrimination. To this end, we relate GCL with invariant rationale discovery, and propose a new framework, Rationale-aware Graph Contrastive Learning (RGCL). Specifically, without supervision signals, RGCL uses a rationale generator to reveal salient features about graph instance-discrimination as the rationale, and then creates rationale-aware views for contrastive learning. This rationale-aware pre-training scheme endows the backbone model with the powerful representation ability, further facilitating the fine-tuning on downstream tasks. On MNIST-Superpixel and MUTAG datasets, visual inspections on the discovered rationales showcase that the rationale generator successfully captures the salient features (i.e. distinguishing semantic nodes in graphs). On biochemical molecule and social network benchmark datasets, the state-of-the-art performance of RGCL demonstrates the effectiveness of rationale-aware views for contrastive learning. Our codes are available at https://github.com/lsh0520/RGCL.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Sihang Li",
+      "Xiang Wang",
+      "An zhang",
+      "Yingxin Wu",
+      "Xiangnan He",
+      "Tat-Seng Chua"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07869v1",
+    "url": "http://arxiv.org/abs/2206.07869v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.02722v1",
+    "title": "Video Contrastive Learning with Global Context",
+    "abstract": "Contrastive learning has revolutionized self-supervised image representation learning field, and recently been adapted to video domain. One of the greatest advantages of contrastive learning is that it allows us to flexibly define powerful loss objectives as long as we can find a reasonable way to formulate positive and negative samples to contrast. However, existing approaches rely heavily on the short-range spatiotemporal salience to form clip-level contrastive signals, thus limit themselves from using global context. In this paper, we propose a new video-level contrastive learning method based on segments to formulate positive pairs. Our formulation is able to capture global context in a video, thus robust to temporal content change. We also incorporate a temporal order regularization term to enforce the inherent sequential structure of videos. Extensive experiments show that our video-level contrastive learning framework (VCLR) is able to outperform previous state-of-the-arts on five video datasets for downstream action classification, action localization and video retrieval. Code is available at https://github.com/amazon-research/video-contrastive-learning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Haofei Kuang",
+      "Yi Zhu",
+      "Zhi Zhang",
+      "Xinyu Li",
+      "Joseph Tighe",
+      "Sören Schwertfeger",
+      "Cyrill Stachniss",
+      "Mu Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.02722v1",
+    "url": "http://arxiv.org/abs/2108.02722v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.00921v1",
+    "title": "Supervised Contrastive Learning for Accented Speech Recognition",
+    "abstract": "Neural network based speech recognition systems suffer from performance degradation due to accented speech, especially unfamiliar accents. In this paper, we study the supervised contrastive learning framework for accented speech recognition. To build different views (similar \"positive\" data samples) for contrastive learning, three data augmentation techniques including noise injection, spectrogram augmentation and TTS-same-sentence generation are further investigated. From the experiments on the Common Voice dataset, we have shown that contrastive learning helps to build data-augmentation invariant and pronunciation invariant representations, which significantly outperforms traditional joint training methods in both zero-shot and full-shot settings. Experiments show that contrastive learning can improve accuracy by 3.66% (zero-shot) and 3.78% (full-shot) on average, comparing to the joint training method.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tao Han",
+      "Hantao Huang",
+      "Ziang Yang",
+      "Wei Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.00921v1",
+    "url": "http://arxiv.org/abs/2107.00921v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.12419v2",
+    "title": "Network Comparison with Interpretable Contrastive Network Representation Learning",
+    "abstract": "Identifying unique characteristics in a network through comparison with another network is an essential network analysis task. For example, with networks of protein interactions obtained from normal and cancer tissues, we can discover unique types of interactions in cancer tissues. This analysis task could be greatly assisted by contrastive learning, which is an emerging analysis approach to discover salient patterns in one dataset relative to another. However, existing contrastive learning methods cannot be directly applied to networks as they are designed only for high-dimensional data analysis. To address this problem, we introduce a new analysis approach called contrastive network representation learning (cNRL). By integrating two machine learning schemes, network representation learning and contrastive learning, cNRL enables embedding of network nodes into a low-dimensional representation that reveals the uniqueness of one network compared to another. Within this approach, we also design a method, named i-cNRL, which offers interpretability in the learned results, allowing for understanding which specific patterns are only found in one network. We demonstrate the effectiveness of i-cNRL for network comparison with multiple network models and real-world datasets. Furthermore, we compare i-cNRL and other potential cNRL algorithm designs through quantitative and qualitative evaluations.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Takanori Fujiwara",
+      "Jian Zhao",
+      "Francine Chen",
+      "Yaoliang Yu",
+      "Kwan-Liu Ma"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.12419v2",
+    "url": "http://arxiv.org/abs/2005.12419v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2009.14776v2",
+    "title": "Joint Contrastive Learning with Infinite Possibilities",
+    "abstract": "This paper explores useful modifications of the recent development in contrastive learning via novel probabilistic modeling. We derive a particular form of contrastive loss named Joint Contrastive Learning (JCL). JCL implicitly involves the simultaneous learning of an infinite number of query-key pairs, which poses tighter constraints when searching for invariant features. We derive an upper bound on this formulation that allows analytical solutions in an end-to-end training manner. While JCL is practically effective in numerous computer vision applications, we also theoretically unveil the certain mechanisms that govern the behavior of JCL. We demonstrate that the proposed formulation harbors an innate agency that strongly favors similarity within each instance-specific class, and therefore remains advantageous when searching for discriminative features among distinct instances. We evaluate these proposals on multiple benchmarks, demonstrating considerable improvements over existing algorithms. Code is publicly available at: https://github.com/caiqi/Joint-Contrastive-Learning.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Qi Cai",
+      "Yu Wang",
+      "Yingwei Pan",
+      "Ting Yao",
+      "Tao Mei"
+    ],
+    "doi": null,
+    "arxiv_id": "2009.14776v2",
+    "url": "http://arxiv.org/abs/2009.14776v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.05933v1",
+    "title": "Temporal Supervised Contrastive Learning for Modeling Patient Risk Progression",
+    "abstract": "We consider the problem of predicting how the likelihood of an outcome of interest for a patient changes over time as we observe more of the patient data. To solve this problem, we propose a supervised contrastive learning framework that learns an embedding representation for each time step of a patient time series. Our framework learns the embedding space to have the following properties: (1) nearby points in the embedding space have similar predicted class probabilities, (2) adjacent time steps of the same time series map to nearby points in the embedding space, and (3) time steps with very different raw feature vectors map to far apart regions of the embedding space. To achieve property (3), we employ a nearest neighbor pairing mechanism in the raw feature space. This mechanism also serves as an alternative to data augmentation, a key ingredient of contrastive learning, which lacks a standard procedure that is adequately realistic for clinical tabular data, to our knowledge. We demonstrate that our approach outperforms state-of-the-art baselines in predicting mortality of septic patients (MIMIC-III dataset) and tracking progression of cognitive impairment (ADNI dataset). Our method also consistently recovers the correct synthetic dataset embedding structure across experiments, a feat not achieved by baselines. Our ablation experiments show the pivotal role of our nearest neighbor pairing.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shahriar Noroozizadeh",
+      "Jeremy C. Weiss",
+      "George H. Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.05933v1",
+    "url": "http://arxiv.org/abs/2312.05933v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.05651v1",
+    "title": "Representation Learning for Words and Entities",
+    "abstract": "This thesis presents new methods for unsupervised learning of distributed representations of words and entities from text and knowledge bases. The first algorithm presented in the thesis is a multi-view algorithm for learning representations of words called Multiview Latent Semantic Analysis (MVLSA). By incorporating up to 46 different types of co-occurrence statistics for the same vocabulary of english words, I show that MVLSA outperforms other state-of-the-art word embedding models. Next, I focus on learning entity representations for search and recommendation and present the second method of this thesis, Neural Variational Set Expansion (NVSE). NVSE is also an unsupervised learning method, but it is based on the Variational Autoencoder framework. Evaluations with human annotators show that NVSE can facilitate better search and recommendation of information gathered from noisy, automatic annotation of unstructured natural language corpora. Finally, I move from unstructured data and focus on structured knowledge graphs. I present novel approaches for learning embeddings of vertices and edges in a knowledge graph that obey logical constraints.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Pushpendre Rastogi"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.05651v1",
+    "url": "http://arxiv.org/abs/1906.05651v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:method_task",
+      "route:core_topic",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.15103v2",
+    "title": "Khan-GCL: Kolmogorov-Arnold Network Based Graph Contrastive Learning with Hard Negatives",
+    "abstract": "Graph contrastive learning (GCL) has demonstrated great promise for learning generalizable graph representations from unlabeled data. However, conventional GCL approaches face two critical limitations: (1) the restricted expressive capacity of multilayer perceptron (MLP) based encoders, and (2) suboptimal negative samples that either from random augmentations-failing to provide effective 'hard negatives'-or generated hard negatives without addressing the semantic distinctions crucial for discriminating graph data. To this end, we propose Khan-GCL, a novel framework that integrates the Kolmogorov-Arnold Network (KAN) into the GCL encoder architecture, substantially enhancing its representational capacity. Furthermore, we exploit the rich information embedded within KAN coefficient parameters to develop two novel critical feature identification techniques that enable the generation of semantically meaningful hard negative samples for each graph representation. These strategically constructed hard negatives guide the encoder to learn more discriminative features by emphasizing critical semantic differences between graphs. Extensive experiments demonstrate that our approach achieves state-of-the-art performance compared to existing GCL methods across a variety of datasets and tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zihu Wang",
+      "Boxun Xu",
+      "Hejia Geng",
+      "Peng Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.15103v2",
+    "url": "http://arxiv.org/abs/2505.15103v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.09195v5",
+    "title": "Data-Efficient Contrastive Self-supervised Learning: Most Beneficial Examples for Supervised Learning Contribute the Least",
+    "abstract": "Self-supervised learning (SSL) learns high-quality representations from large pools of unlabeled training data. As datasets grow larger, it becomes crucial to identify the examples that contribute the most to learning such representations. This enables efficient SSL by reducing the volume of data required. Nevertheless, quantifying the value of examples for SSL has remained an open question. In this work, we address this problem for the first time, by proving that examples that contribute the most to contrastive SSL are those that have the most similar augmentations to other examples, in expectation. We provide rigorous guarantees for the generalization performance of contrastive learning on such subsets. Through extensive experiments, we show that we can safely exclude 20% of examples from CIFAR100 and 40% from STL10 and TinyImageNet, without affecting downstream task performance. In general, subsets selected by our method outperform random subsets by over 3% across these datasets. Interestingly, we also discover the subsets that contribute the most to contrastive learning are those that contribute the least to supervised learning. Code available at https://github.com/bigml-cs-ucla/sas-data-efficient-contrastive-learning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Siddharth Joshi",
+      "Baharan Mirzasoleiman"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.09195v5",
+    "url": "http://arxiv.org/abs/2302.09195v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.04509v2",
+    "title": "MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive Learning from Molecular Graph",
+    "abstract": "Recent years have seen a rapid growth of utilizing graph neural networks (GNNs) in the biomedical domain for tackling drug-related problems. However, like any other deep architectures, GNNs are data hungry. While requiring labels in real world is often expensive, pretraining GNNs in an unsupervised manner has been actively explored. Among them, graph contrastive learning, by maximizing the mutual information between paired graph augmentations, has been shown to be effective on various downstream tasks. However, the current graph contrastive learning framework has two limitations. First, the augmentations are designed for general graphs and thus may not be suitable or powerful enough for certain domains. Second, the contrastive scheme only learns representations that are invariant to local perturbations and thus does not consider the global structure of the dataset, which may also be useful for downstream tasks. Therefore, in this paper, we study graph contrastive learning in the context of biomedical domain, where molecular graphs are present. We propose a novel framework called MoCL, which utilizes domain knowledge at both local- and global-level to assist representation learning. The local-level domain knowledge guides the augmentation process such that variation is introduced without changing graph semantics. The global-level knowledge encodes the similarity information between graphs in the entire dataset and helps to learn representations with richer semantics. The entire model is learned through a double contrast objective. We evaluate MoCL on various molecular datasets under both linear and semi-supervised settings and results show that MoCL achieves state-of-the-art performance.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mengying Sun",
+      "Jing Xing",
+      "Huijun Wang",
+      "Bin Chen",
+      "Jiayu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.04509v2",
+    "url": "http://arxiv.org/abs/2106.04509v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06380v5",
+    "title": "Structure-preserving contrastive learning for spatial time series",
+    "abstract": "The effectiveness of neural network models largely relies on learning meaningful latent patterns from data, where self-supervised learning of informative representations can enhance model performance and generalisability. However, self-supervised representation learning for spatially characterised time series, which are ubiquitous in transportation domain, poses unique challenges due to the necessity of maintaining fine-grained spatio-temporal similarities in the latent space. In this study, we introduce two structure-preserving regularisers for the contrastive learning of spatial time series: one regulariser preserves the topology of similarities between instances, and the other preserves the graph geometry of similarities across spatial and temporal dimensions. To balance the contrastive learning objective and the need for structure preservation, we propose a dynamic weighting mechanism that adaptively manages this trade-off and stabilises training. We validate the proposed method through extensive experiments, including multivariate time series classification to demonstrate its general applicability, as well as macroscopic and microscopic traffic prediction to highlight its particular usefulness in encoding traffic interactions. Across all tasks, our method preserves the similarity structures more effectively and improves state-of-the-art task performances. This method can be integrated with an arbitrary neural network model and is particularly beneficial for time series data with spatial or geographical features. Furthermore, our findings suggest that well-preserved similarity structures in the latent space indicate more informative and useful representations. This provides insights to design more effective neural networks for data-driven transportation research. Our code is made openly accessible with all resulting data at https://github.com/yiru-jiao/spclt",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yiru Jiao",
+      "Sander van Cranenburgh",
+      "Simeon Calvert",
+      "Hans van Lint"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06380v5",
+    "url": "http://arxiv.org/abs/2502.06380v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2204.11018v2",
+    "title": "Exploring Negatives in Contrastive Learning for Unpaired Image-to-Image Translation",
+    "abstract": "Unpaired image-to-image translation aims to find a mapping between the source domain and the target domain. To alleviate the problem of the lack of supervised labels for the source images, cycle-consistency based methods have been proposed for image structure preservation by assuming a reversible relationship between unpaired images. However, this assumption only uses limited correspondence between image pairs. Recently, contrastive learning (CL) has been used to further investigate the image correspondence in unpaired image translation by using patch-based positive/negative learning. Patch-based contrastive routines obtain the positives by self-similarity computation and recognize the rest patches as negatives. This flexible learning paradigm obtains auxiliary contextualized information at a low cost. As the negatives own an impressive sample number, with curiosity, we make an investigation based on a question: are all negatives necessary for feature contrastive learning? Unlike previous CL approaches that use negatives as much as possible, in this paper, we study the negatives from an information-theoretic perspective and introduce a new negative Pruning technology for Unpaired image-to-image Translation (PUT) by sparsifying and ranking the patches. The proposed algorithm is efficient, flexible and enables the model to learn essential information between corresponding patches stably. By putting quality over quantity, only a few negative patches are required to achieve better results. Lastly, we validate the superiority, stability, and versatility of our model through comparative experiments.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Yupei Lin",
+      "Sen Zhang",
+      "Tianshui Chen",
+      "Yongyi Lu",
+      "Guangping Li",
+      "Yukai Shi"
+    ],
+    "doi": null,
+    "arxiv_id": "2204.11018v2",
+    "url": "http://arxiv.org/abs/2204.11018v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1603.07695v1",
+    "title": "Part-of-Speech Relevance Weights for Learning Word Embeddings",
+    "abstract": "This paper proposes a model to learn word embeddings with weighted contexts based on part-of-speech (POS) relevance weights. POS is a fundamental element in natural language. However, state-of-the-art word embedding models fail to consider it. This paper proposes to use position-dependent POS relevance weighting matrices to model the inherent syntactic relationship among words within a context window. We utilize the POS relevance weights to model each word-context pairs during the word embedding training process. The model proposed in this paper paper jointly optimizes word vectors and the POS relevance matrices. Experiments conducted on popular word analogy and word similarity tasks all demonstrated the effectiveness of the proposed method.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Quan Liu",
+      "Zhen-Hua Ling",
+      "Hui Jiang",
+      "Yu Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "1603.07695v1",
+    "url": "http://arxiv.org/abs/1603.07695v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the most informative observations for labeling in order to improve the performance of machine learning models. These approaches can be broadly divided into two categories: static pool-based and stream-based active learning. Pool-based active learning involves selecting a subset of observations from a closed pool of unlabeled data, and it has been the focus of many surveys and literature reviews. However, the growing availability of data streams has led to an increase in the number of approaches that focus on online active learning, which involves continuously selecting and labeling observations as they arrive in a stream. This work aims to provide an overview of the most recently proposed approaches for selecting the most informative observations from data streams in real time. We review the various techniques that have been proposed and discuss their strengths and limitations, as well as the challenges and opportunities that exist in this area of research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.08893v4",
+    "url": "http://arxiv.org/abs/2302.08893v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.00113v2",
+    "title": "Anomaly Detection on Attributed Networks via Contrastive Self-Supervised Learning",
+    "abstract": "Anomaly detection on attributed networks attracts considerable research interests due to wide applications of attributed networks in modeling a wide range of complex systems. Recently, the deep learning-based anomaly detection methods have shown promising results over shallow approaches, especially on networks with high-dimensional attributes and complex structures. However, existing approaches, which employ graph autoencoder as their backbone, do not fully exploit the rich information of the network, resulting in suboptimal performance. Furthermore, these methods do not directly target anomaly detection in their learning objective and fail to scale to large networks due to the full graph training mechanism. To overcome these limitations, in this paper, we present a novel contrastive self-supervised learning framework for anomaly detection on attributed networks. Our framework fully exploits the local information from network data by sampling a novel type of contrastive instance pair, which can capture the relationship between each node and its neighboring substructure in an unsupervised way. Meanwhile, a well-designed graph neural network-based contrastive learning model is proposed to learn informative embedding from high-dimensional attributes and local structure and measure the agreement of each instance pairs with its outputted scores. The multi-round predicted scores by the contrastive learning model are further used to evaluate the abnormality of each node with statistical estimation. In this way, the learning model is trained by a specific anomaly detection-aware target. Furthermore, since the input of the graph neural network module is batches of instance pairs instead of the full network, our framework can adapt to large networks flexibly. Experimental results show that our proposed framework outperforms the state-of-the-art baseline methods on all seven benchmark datasets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Yixin Liu",
+      "Zhao Li",
+      "Shirui Pan",
+      "Chen Gong",
+      "Chuan Zhou",
+      "George Karypis"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.00113v2",
+    "url": "http://arxiv.org/abs/2103.00113v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.15962v2",
+    "title": "Towards Efficient Contrastive PAC Learning",
+    "abstract": "We study contrastive learning under the PAC learning framework. While a series of recent works have shown statistical results for learning under contrastive loss, based either on the VC-dimension or Rademacher complexity, their algorithms are inherently inefficient or not implying PAC guarantees. In this paper, we consider contrastive learning of the fundamental concept of linear representations. Surprisingly, even under such basic setting, the existence of efficient PAC learners is largely open. We first show that the problem of contrastive PAC learning of linear representations is intractable to solve in general. We then show that it can be relaxed to a semi-definite program when the distance between contrastive samples is measured by the $\\ell_2$-norm. We then establish generalization guarantees based on Rademacher complexity, and connect it to PAC guarantees under certain contrastive large-margin conditions. To the best of our knowledge, this is the first efficient PAC learning algorithm for contrastive learning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jie Shen"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.15962v2",
+    "url": "http://arxiv.org/abs/2502.15962v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2008.02531v2",
+    "title": "Self-supervised Video Representation Learning Using Inter-intra Contrastive Framework",
+    "abstract": "We propose a self-supervised method to learn feature representations from videos. A standard approach in traditional self-supervised methods uses positive-negative data pairs to train with contrastive learning strategy. In such a case, different modalities of the same video are treated as positives and video clips from a different video are treated as negatives. Because the spatio-temporal information is important for video representation, we extend the negative samples by introducing intra-negative samples, which are transformed from the same anchor video by breaking temporal relations in video clips. With the proposed Inter-Intra Contrastive (IIC) framework, we can train spatio-temporal convolutional networks to learn video representations. There are many flexible options in our IIC framework and we conduct experiments by using several different configurations. Evaluations are conducted on video retrieval and video recognition tasks using the learned video representation. Our proposed IIC outperforms current state-of-the-art results by a large margin, such as 16.7% and 9.5% points improvements in top-1 accuracy on UCF101 and HMDB51 datasets for video retrieval, respectively. For video recognition, improvements can also be obtained on these two benchmark datasets. Code is available at https://github.com/BestJuly/Inter-intra-video-contrastive-learning.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Li Tao",
+      "Xueting Wang",
+      "Toshihiko Yamasaki"
+    ],
+    "doi": null,
+    "arxiv_id": "2008.02531v2",
+    "url": "http://arxiv.org/abs/2008.02531v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.10365v2",
+    "title": "Robust image representations with counterfactual contrastive learning",
+    "abstract": "Contrastive pretraining can substantially increase model generalisation and downstream performance. However, the quality of the learned representations is highly dependent on the data augmentation strategy applied to generate positive pairs. Positive contrastive pairs should preserve semantic meaning while discarding unwanted variations related to the data acquisition domain. Traditional contrastive pipelines attempt to simulate domain shifts through pre-defined generic image transformations. However, these do not always mimic realistic and relevant domain variations for medical imaging, such as scanner differences. To tackle this issue, we herein introduce counterfactual contrastive learning, a novel framework leveraging recent advances in causal image synthesis to create contrastive positive pairs that faithfully capture relevant domain variations. Our method, evaluated across five datasets encompassing both chest radiography and mammography data, for two established contrastive objectives (SimCLR and DINO-v2), outperforms standard contrastive learning in terms of robustness to acquisition shift. Notably, counterfactual contrastive learning achieves superior downstream performance on both in-distribution and external datasets, especially for images acquired with scanners under-represented in the training set. Further experiments show that the proposed framework extends beyond acquisition shifts, with models trained with counterfactual contrastive learning reducing subgroup disparities across biological sex.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mélanie Roschewitz",
+      "Fabio De Sousa Ribeiro",
+      "Tian Xia",
+      "Galvin Khara",
+      "Ben Glocker"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.10365v2",
+    "url": "http://arxiv.org/abs/2409.10365v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.17098v2",
+    "title": "Learning Temporal Distances: Contrastive Successor Features Can Provide a Metric Structure for Decision-Making",
+    "abstract": "Temporal distances lie at the heart of many algorithms for planning, control, and reinforcement learning that involve reaching goals, allowing one to estimate the transit time between two states. However, prior attempts to define such temporal distances in stochastic settings have been stymied by an important limitation: these prior approaches do not satisfy the triangle inequality. This is not merely a definitional concern, but translates to an inability to generalize and find shortest paths. In this paper, we build on prior work in contrastive learning and quasimetrics to show how successor features learned by contrastive learning (after a change of variables) form a temporal distance that does satisfy the triangle inequality, even in stochastic settings. Importantly, this temporal distance is computationally efficient to estimate, even in high-dimensional and stochastic settings. Experiments in controlled settings and benchmark suites demonstrate that an RL algorithm based on these new temporal distances exhibits combinatorial generalization (i.e., \"stitching\") and can sometimes learn more quickly than prior methods, including those based on quasimetrics.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Vivek Myers",
+      "Chongyi Zheng",
+      "Anca Dragan",
+      "Sergey Levine",
+      "Benjamin Eysenbach"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.17098v2",
+    "url": "http://arxiv.org/abs/2406.17098v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.04029v1",
+    "title": "Motion-Focused Contrastive Learning of Video Representations",
+    "abstract": "Motion, as the most distinct phenomenon in a video to involve the changes over time, has been unique and critical to the development of video representation learning. In this paper, we ask the question: how important is the motion particularly for self-supervised video representation learning. To this end, we compose a duet of exploiting the motion for data augmentation and feature learning in the regime of contrastive learning. Specifically, we present a Motion-focused Contrastive Learning (MCL) method that regards such duet as the foundation. On one hand, MCL capitalizes on optical flow of each frame in a video to temporally and spatially sample the tubelets (i.e., sequences of associated frame patches across time) as data augmentations. On the other hand, MCL further aligns gradient maps of the convolutional layers to optical flow maps from spatial, temporal and spatio-temporal perspectives, in order to ground motion information in feature learning. Extensive experiments conducted on R(2+1)D backbone demonstrate the effectiveness of our MCL. On UCF101, the linear classifier trained on the representations learnt by MCL achieves 81.91% top-1 accuracy, outperforming ImageNet supervised pre-training by 6.78%. On Kinetics-400, MCL achieves 66.62% top-1 accuracy under the linear protocol. Code is available at https://github.com/YihengZhang-CV/MCL-Motion-Focused-Contrastive-Learning.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Rui Li",
+      "Yiheng Zhang",
+      "Zhaofan Qiu",
+      "Ting Yao",
+      "Dong Liu",
+      "Tao Mei"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.04029v1",
+    "url": "http://arxiv.org/abs/2201.04029v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.05862v1",
+    "title": "Bringing Masked Autoencoders Explicit Contrastive Properties for Point Cloud Self-Supervised Learning",
+    "abstract": "Contrastive learning (CL) for Vision Transformers (ViTs) in image domains has achieved performance comparable to CL for traditional convolutional backbones. However, in 3D point cloud pretraining with ViTs, masked autoencoder (MAE) modeling remains dominant. This raises the question: Can we take the best of both worlds? To answer this question, we first empirically validate that integrating MAE-based point cloud pre-training with the standard contrastive learning paradigm, even with meticulous design, can lead to a decrease in performance. To address this limitation, we reintroduce CL into the MAE-based point cloud pre-training paradigm by leveraging the inherent contrastive properties of MAE. Specifically, rather than relying on extensive data augmentation as commonly used in the image domain, we randomly mask the input tokens twice to generate contrastive input pairs. Subsequently, a weight-sharing encoder and two identically structured decoders are utilized to perform masked token reconstruction. Additionally, we propose that for an input token masked by both masks simultaneously, the reconstructed features should be as similar as possible. This naturally establishes an explicit contrastive constraint within the generative MAE-based pre-training paradigm, resulting in our proposed method, Point-CMAE. Consequently, Point-CMAE effectively enhances the representation quality and transfer performance compared to its MAE counterpart. Experimental evaluations across various downstream applications, including classification, part segmentation, and few-shot learning, demonstrate the efficacy of our framework in surpassing state-of-the-art techniques under standard ViTs and single-modal settings. The source code and trained models are available at: https://github.com/Amazingren/Point-CMAE.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Bin Ren",
+      "Guofeng Mei",
+      "Danda Pani Paudel",
+      "Weijie Wang",
+      "Yawei Li",
+      "Mengyuan Liu",
+      "Rita Cucchiara",
+      "Luc Van Gool",
+      "Nicu Sebe"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.05862v1",
+    "url": "http://arxiv.org/abs/2407.05862v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.02803v3",
+    "title": "Intriguing Properties of Contrastive Losses",
+    "abstract": "We study three intriguing properties of contrastive learning. First, we generalize the standard contrastive loss to a broader family of losses, and we find that various instantiations of the generalized loss perform similarly under the presence of a multi-layer non-linear projection head. Second, we study if instance-based contrastive learning (with a global image representation) can learn well on images with multiple objects present. We find that meaningful hierarchical local features can be learned despite the fact that these objectives operate on global instance-level features. Finally, we study the phenomenon of feature suppression among competing features shared across augmented views, such as \"color distribution\" vs \"object class\". We construct datasets with explicit and controllable competing features, and show that, for contrastive learning, a few bits of easy-to-learn shared features can suppress, and even fully prevent, the learning of other sets of competing features. In scenarios where there are multiple objects in an image, the dominant object would suppress the learning of smaller objects. Existing contrastive learning methods critically rely on data augmentation to favor certain sets of features over others, and could suffer from learning saturation for scenarios where existing augmentations cannot fully address the feature suppression. This poses open challenges to existing contrastive learning techniques.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ting Chen",
+      "Calvin Luo",
+      "Lala Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.02803v3",
+    "url": "http://arxiv.org/abs/2011.02803v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.02544v4",
+    "title": "XSimGCL: Towards Extremely Simple Graph Contrastive Learning for Recommendation",
+    "abstract": "Contrastive learning (CL) has recently been demonstrated critical in improving recommendation performance. The underlying principle of CL-based recommendation models is to ensure the consistency between representations derived from different graph augmentations of the user-item bipartite graph. This self-supervised approach allows for the extraction of general features from raw data, thereby mitigating the issue of data sparsity. Despite the effectiveness of this paradigm, the factors contributing to its performance gains have yet to be fully understood. This paper provides novel insights into the impact of CL on recommendation. Our findings indicate that CL enables the model to learn more evenly distributed user and item representations, which alleviates the prevalent popularity bias and promoting long-tail items. Our analysis also suggests that the graph augmentations, previously considered essential, are relatively unreliable and of limited significance in CL-based recommendation. Based on these findings, we put forward an eXtremely Simple Graph Contrastive Learning method (XSimGCL) for recommendation, which discards the ineffective graph augmentations and instead employs a simple yet effective noise-based embedding augmentation to generate views for CL. A comprehensive experimental study on four large and highly sparse benchmark datasets demonstrates that, though the proposed method is extremely simple, it can smoothly adjust the uniformity of learned representations and outperforms its graph augmentation-based counterparts by a large margin in both recommendation accuracy and training efficiency. The code and used datasets are released at https://github.com/Coder-Yu/SELFRec.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Junliang Yu",
+      "Xin Xia",
+      "Tong Chen",
+      "Lizhen Cui",
+      "Nguyen Quoc Viet Hung",
+      "Hongzhi Yin"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.02544v4",
+    "url": "http://arxiv.org/abs/2209.02544v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.07435v1",
+    "title": "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+    "abstract": "Model-agnostic meta-learning (MAML) is a meta-learning technique to train a model on a multitude of learning tasks in a way that primes the model for few-shot learning of new tasks. The MAML algorithm performs well on few-shot learning problems in classification, regression, and fine-tuning of policy gradients in reinforcement learning, but comes with the need for costly hyperparameter tuning for training stability. We address this shortcoming by introducing an extension to MAML, called Alpha MAML, to incorporate an online hyperparameter adaptation scheme that eliminates the need to tune meta-learning and learning rates. Our results with the Omniglot database demonstrate a substantial reduction in the need to tune MAML training hyperparameters and improvement to training stability with less sensitivity to hyperparameter choice.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Harkirat Singh Behl",
+      "Atılım Güneş Baydin",
+      "Philip H. S. Torr"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.07435v1",
+    "url": "http://arxiv.org/abs/1905.07435v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1609.09580v1",
+    "title": "Referential Uncertainty and Word Learning in High-dimensional, Continuous Meaning Spaces",
+    "abstract": "This paper discusses lexicon word learning in high-dimensional meaning spaces from the viewpoint of referential uncertainty. We investigate various state-of-the-art Machine Learning algorithms and discuss the impact of scaling, representation and meaning space structure. We demonstrate that current Machine Learning techniques successfully deal with high-dimensional meaning spaces. In particular, we show that exponentially increasing dimensions linearly impact learner performance and that referential uncertainty from word sensitivity has no impact.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Michael Spranger",
+      "Katrien Beuls"
+    ],
+    "doi": null,
+    "arxiv_id": "1609.09580v1",
+    "url": "http://arxiv.org/abs/1609.09580v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05461v2",
+    "title": "Learning Generative Models across Incomparable Spaces",
+    "abstract": "Generative Adversarial Networks have shown remarkable success in learning a distribution that faithfully recovers a reference distribution in its entirety. However, in some cases, we may want to only learn some aspects (e.g., cluster or manifold structure), while modifying others (e.g., style, orientation or dimension). In this work, we propose an approach to learn generative models across such incomparable spaces, and demonstrate how to steer the learned distribution towards target properties. A key component of our model is the Gromov-Wasserstein distance, a notion of discrepancy that compares distributions relationally rather than absolutely. While this framework subsumes current generative models in identically reproducing distributions, its inherent flexibility allows application to tasks in manifold learning, relational learning and cross-domain learning.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Charlotte Bunne",
+      "David Alvarez-Melis",
+      "Andreas Krause",
+      "Stefanie Jegelka"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05461v2",
+    "url": "http://arxiv.org/abs/1905.05461v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09921v4",
+    "title": "Meta-Learning Probabilistic Inference For Prediction",
+    "abstract": "This paper introduces a new framework for data efficient and versatile learning. Specifically: 1) We develop ML-PIP, a general framework for Meta-Learning approximate Probabilistic Inference for Prediction. ML-PIP extends existing probabilistic interpretations of meta-learning to cover a broad class of methods. 2) We introduce VERSA, an instance of the framework employing a flexible and versatile amortization network that takes few-shot learning datasets as inputs, with arbitrary numbers of shots, and outputs a distribution over task-specific parameters in a single forward pass. VERSA substitutes optimization at test time with forward passes through inference networks, amortizing the cost of inference and relieving the need for second derivatives during training. 3) We evaluate VERSA on benchmark datasets where the method sets new state-of-the-art results, handles arbitrary numbers of shots, and for classification, arbitrary numbers of classes at train and test time. The power of the approach is then demonstrated through a challenging few-shot ShapeNet view reconstruction task.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jonathan Gordon",
+      "John Bronskill",
+      "Matthias Bauer",
+      "Sebastian Nowozin",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09921v4",
+    "url": "http://arxiv.org/abs/1805.09921v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1705.05172v1",
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning efficiency. For the interactive ML and human-robot interaction (HRI) community, emotions can communicate state and enhance user investment. Lastly, it allows affective modelling (AM) researchers to investigate their emotion theories in a successful AI agent class. This survey provides background on emotion theory and RL. It systematically addresses 1) from what underlying dimensions (e.g., homeostasis, appraisal) emotions can be derived and how these can be modelled in RL-agents, 2) what types of emotions have been derived from these dimensions, and 3) how these emotions may either influence the learning efficiency of the agent or be useful as social signals. We also systematically compare evaluation criteria, and draw connections to important RL sub-domains like (intrinsic) motivation and model-based RL. In short, this survey provides both a practical overview for engineers wanting to implement emotions in their RL agents, and identifies challenges and directions for future emotion-RL research.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "doi": null,
+    "arxiv_id": "1705.05172v1",
+    "url": "http://arxiv.org/abs/1705.05172v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

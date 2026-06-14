@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42199317",
+  "title": "Adapting DeepLabV3+ for biopsy cervical cancer lesion segmentation.",
+  "abstract": "Cervical cancer remains a leading cause of cancer mortality in resource-constrained settings, where access to advanced digital pathology equipment is severely limited. Automated histopathological image segmentation offers a potential pathway to improve diagnostic access, but practical solutions combining affordable hardware with robust deep learning remain underdeveloped. We present an approach combining smartphone-assisted microscopy with DeepLabV3+ architecture for precise segmentation of cervical cancer lesions in H&E-stained histopathological images. A custom smartphone adapter and the Ocular data collection app were used for standardized image acquisition. A DeepLabV3+ model with ResNet34 encoder was developed and validated on 5,966 histopathological images collected from the Uganda Cancer Institute, targeting 21 distinct histopathological feature classes using a combined BCE and Dice loss function with memory-efficient training on an NVIDIA RTX 3090. On a held-out validation set drawn from the same institutional dataset, the system achieves a mean Intersection over Union (IoU) of 75.8% and a Dice coefficient of 93.1%, leveraging atrous spatial pyramid pooling to capture multi-scale contextual information. Per-class IoU ranged narrowly from 74.13% to 75.41% across all 21 feature classes, demonstrating consistent segmentation performance. DeepLabV3+ outperformed a U-Net baseline trained under identical conditions (mIoU: 56.84%, Dice: 68.53%), confirming the architectural contribution of the pre-trained encoder and ASPP module. These results demonstrate the technical feasibility of reliable digital pathology analysis in resource-limited settings using readily available smartphone hardware. The DeepLabV3+ architecture's superior boundary delineation and multi-scale feature extraction prove particularly effective for complex histopathological patterns. These results are reported on validation data only; independent multi-institutional evaluation will be necessary to assess generalization to broader clinical populations and imaging conditions before any clinical deployment.",
+  "year": 2026,
+  "venue": "Frontiers in digital health",
+  "authors": [
+    "Rose Nakasi",
+    "Cosmas Wamozo",
+    "Solomon Nsumba",
+    "Benjamin Rukundo",
+    "Tonny Okecha",
+    "Byron Mubiru",
+    "Chodrine Mutebi"
+  ],
+  "doi": "10.3389/fdgth.2026.1776155",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42199317/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42199317"
+  }
+}

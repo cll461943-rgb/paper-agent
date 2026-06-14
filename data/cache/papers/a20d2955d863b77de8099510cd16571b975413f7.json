@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:42174472",
+  "title": "Efficient transformer integration in nnU-Net for liver tumor segmentation: an external validation study.",
+  "abstract": "Small and low-contrast liver tumors remain challenging targets for contrast-enhanced CT segmentation because of severe class imbalance and limited long-range contextual modeling in conventional CNN encoders. We developed OF-TransUNet, a minimalist hybrid that differs from parameter-heavy TransUNet-style variants by inserting a single lightweight mid-level Conv-Transformer block at encoder stage 3 (×8 downsampling) within an otherwise unchanged 2D nnU-Net, together with an output-focused progressive unfreezing schedule intended to improve adaptation stability. This design was motivated by unstable and poorly reproducible optimization observed under immediate full fine-tuning in internal ablation experiments. A public dataset (n = 104) was used descriptively for architecture and schedule selection. The pre-specified primary endpoint was the external per-patient tumor Dice difference versus a standardized 2D nnU-Net baseline on an independent cohort (n = 42). A pre-defined secondary lesion-level analysis focused on medium-sized tumors (10-50 mm). On the external cohort, OF-TransUNet showed a numerically higher per-patient tumor Dice than nnU-Net (0.2788 ± 0.2575 vs 0.2400 ± 0.2426), with a mean paired difference of +0.0388 (95% CI 0.0029 to 0.0748). Because paired differences were non-normal, the pre-specified Wilcoxon signed-rank test was retained as the primary inferential analysis and was borderline (p = 0.0553); a supplementary paired t-test yielded nominal significance (p = 0.0347). In the pre-defined medium-lesion analysis (10-50 mm; n = 84), detection increased from 0.190 to 0.286 at the pre-specified 10% overlap threshold (McNemar exact p = 0.021; GEE OR 1.97, 95% CI 1.15-3.35). Post hoc sensitivity analyses using 5% and 15% overlap thresholds preserved the directional advantage. Relative to baseline, OF-TransUNet increased parameters by 8.4% and FLOPs by 18.3%, with no measurable latency penalty and only minimal memory increase. In this single-center external validation cohort, a single mid-level Conv-Transformer insertion plus output-focused progressive unfreezing was associated with a numerically higher per-patient tumor Dice and a statistically supported improvement in the pre-defined medium-lesion detection analysis, while preserving a lightweight computational profile. Because the pre-specified non-parametric primary patient-level analysis was borderline and did not reach conventional significance, the Dice finding should be interpreted cautiously. Tumor HD95 was numerically higher in OF-TransUNet, indicating a possible recall-boundary trade-off that requires further boundary-focused evaluation. Overall, this minimally invasive modification supports further multi-center validation rather than definitive claims of superiority. A supplementary controlled benchmark on the public LiTS dataset, limited to a single pre-fixed validation fold because only 131 public cases have released annotations for local evaluation, provided directionally consistent contextual evidence under an identical pipeline.",
+  "year": 2026,
+  "venue": "BMC medical imaging",
+  "authors": [
+    "He Cao",
+    "Li Tao",
+    "Fan Li",
+    "Xiaoping Pan"
+  ],
+  "doi": "10.1186/s12880-026-02406-z",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42174472/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42174472"
+  }
+}

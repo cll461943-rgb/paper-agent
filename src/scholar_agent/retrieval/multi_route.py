@@ -321,7 +321,7 @@ class MultiRouteRetriever:
         def _get_queries_for_provider(prov: PaperProvider) -> list[SearchQuery]:
             if prov.name in LOCAL_ZERO_API_PROVIDERS or prov.name == "pasa_local":
                 return queries
-            return queries[:4]
+            return queries[:8]
 
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:

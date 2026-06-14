@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2305.06599v3",
+  "title": "Structured Chain-of-Thought Prompting for Code Generation",
+  "abstract": "Large Language Models (LLMs) (e.g., ChatGPT) have shown impressive performance in code generation. LLMs take prompts as inputs, and Chain-of-Thought (CoT) prompting is the state-of-the-art prompting technique. CoT prompting asks LLMs first to generate CoTs (i.e., intermediate natural language reasoning steps) and then output the code. However, CoT prompting is designed for natural language generation and has low accuracy in code generation. In this paper, we propose Structured CoTs (SCoTs) and present a novel prompting technique for code generation, named SCoT prompting. Our motivation is source code contains rich structural information and any code can be composed of three program structures (i.e., sequence, branch, and loop structures). Intuitively, structured intermediate reasoning steps make for structured source code. Thus, we ask LLMs to use program structures to build CoTs, obtaining SCoTs. Then, LLMs generate the final code based on SCoTs. Compared to CoT prompting, SCoT prompting explicitly constrains LLMs to think about how to solve requirements from the view of source code and further the performance of LLMs in code generation. We apply SCoT prompting to two LLMs (i.e., ChatGPT and Codex) and evaluate it on three benchmarks (i.e., HumanEval, MBPP, and MBCPP). (1) SCoT prompting outperforms the state-of-the-art baseline - CoT prompting by up to 13.79% in Pass@1. (2) Human evaluation shows human developers prefer programs from SCoT prompting. (3) SCoT prompting is robust to examples and achieves substantial improvements.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Jia Li",
+    "Ge Li",
+    "Yongmin Li",
+    "Zhi Jin"
+  ],
+  "doi": null,
+  "arxiv_id": "2305.06599v3",
+  "url": "http://arxiv.org/abs/2305.06599v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

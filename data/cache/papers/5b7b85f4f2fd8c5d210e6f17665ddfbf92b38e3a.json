@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/1911.08731v2",
+  "title": "Distributionally Robust Neural Networks for Group Shifts: On the Importance of Regularization for Worst-Case Generalization",
+  "abstract": "Overparameterized neural networks can be highly accurate on average on an i.i.d. test set yet consistently fail on atypical groups of the data (e.g., by learning spurious correlations that hold on average but not in such groups). Distributionally robust optimization (DRO) allows us to learn models that instead minimize the worst-case training loss over a set of pre-defined groups. However, we find that naively applying group DRO to overparameterized neural networks fails: these models can perfectly fit the training data, and any model with vanishing average training loss also already has vanishing worst-case training loss. Instead, the poor worst-case performance arises from poor generalization on some groups. By coupling group DRO models with increased regularization---a stronger-than-typical L2 penalty or early stopping---we achieve substantially higher worst-group accuracies, with 10-40 percentage point improvements on a natural language inference task and two image tasks, while maintaining high average accuracies. Our results suggest that regularization is important for worst-group generalization in the overparameterized regime, even if it is not needed for average generalization. Finally, we introduce a stochastic optimization algorithm, with convergence guarantees, to efficiently train group DRO models.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Shiori Sagawa",
+    "Pang Wei Koh",
+    "Tatsunori B. Hashimoto",
+    "Percy Liang"
+  ],
+  "doi": null,
+  "arxiv_id": "1911.08731v2",
+  "url": "http://arxiv.org/abs/1911.08731v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_exact"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

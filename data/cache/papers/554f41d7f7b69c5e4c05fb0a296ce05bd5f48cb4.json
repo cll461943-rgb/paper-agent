@@ -1,0 +1,30 @@
+{
+  "paper_id": "http://arxiv.org/abs/2406.12225v1",
+  "title": "The Solution for CVPR2024 Foundational Few-Shot Object Detection Challenge",
+  "abstract": "This report introduces an enhanced method for the Foundational Few-Shot Object Detection (FSOD) task, leveraging the vision-language model (VLM) for object detection. However, on specific datasets, VLM may encounter the problem where the detected targets are misaligned with the target concepts of interest. This misalignment hinders the zero-shot performance of VLM and the application of fine-tuning methods based on pseudo-labels. To address this issue, we propose the VLM+ framework, which integrates the multimodal large language model (MM-LLM). Specifically, we use MM-LLM to generate a series of referential expressions for each category. Based on the VLM predictions and the given annotations, we select the best referential expression for each category by matching the maximum IoU. Subsequently, we use these referential expressions to generate pseudo-labels for all images in the training set and then combine them with the original labeled data to fine-tune the VLM. Additionally, we employ iterative pseudo-label generation and optimization to further enhance the performance of the VLM. Our approach achieve 32.56 mAP in the final test.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Hongpeng Pan",
+    "Shifeng Yi",
+    "Shouwei Yang",
+    "Lei Qi",
+    "Bing Hu",
+    "Yi Xu",
+    "Yang Yang"
+  ],
+  "doi": null,
+  "arxiv_id": "2406.12225v1",
+  "url": "http://arxiv.org/abs/2406.12225v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

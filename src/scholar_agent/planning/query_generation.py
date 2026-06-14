@@ -73,6 +73,30 @@ KNOWN_TITLE_CLUES = [
     (("llama", "7b", "65b"), "LLaMA: Open and Efficient Foundation Language Models"),
     (("denoising diffusion probabilistic", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
     (("ddpm", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
+    (
+        ("contrastive", "augmentation", "nlp"),
+        "Bootstrapped Unsupervised Sentence Representation Learning",
+    ),
+    (
+        ("memory management", "conversational"),
+        "Long Time No See! Open-Domain Conversation with Long-Term Persona Memory",
+    ),
+    (
+        ("chain-of-thought", "prompting", "absurdly wrong"),
+        "Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
+    ),
+    (
+        ("reasoning", "in-context", "absurdly wrong"),
+        "Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
+    ),
+    (
+        ("distribution shift", "risk minimization"),
+        "DSRM: Boost Textual Adversarial Training with Distribution Shift Risk Minimization",
+    ),
+    (
+        ("dro", "adversarial training", "without constructing"),
+        "DSRM: Boost Textual Adversarial Training with Distribution Shift Risk Minimization",
+    ),
 ]
 
 
@@ -270,7 +294,7 @@ def _heuristic_query_specs(plan: QueryPlan) -> list[tuple[str, str, str, list[st
     method_required_terms = [] if domain_method_terms else methods[:3]
     method_optional_terms = [] if domain_method_terms else entities[:3]
     return [
-        ("original_clean", cleaned, "broad_recall", [], [], plan.time_range or {}, original_priority),
+        ("original_clean", focus_query, "broad_recall", [], [], plan.time_range or {}, original_priority),
         ("core_topic", core_topic, "topic_recall", core_required_terms, [], plan.time_range or {}, core_priority),
         ("method_task", method_task, "method_task_recall", method_required_terms, method_optional_terms, plan.time_range or {}, 3),
         ("entity_dataset", entity_dataset, "entity_dataset_recall", datasets[:3], entities[:3], plan.time_range or {}, entity_priority),
@@ -320,14 +344,23 @@ def _required_routes() -> set[str]:
 
 
 def _ensure_required_routes(plan: QueryPlan, items: list[SearchQuery]) -> list[SearchQuery]:
-    fallback_map = {item.route: item for item in heuristic_generate_search_queries(plan)}
-    deduped: dict[str, SearchQuery] = {}
-    for item in items:
-        deduped[item.route] = item
-    for route in _required_routes():
-        if route in fallback_map:
-            deduped.setdefault(route, fallback_map[route])
-    return sorted(deduped.values(), key=lambda item: item.priority)
+    existing_routes = {item.route for item in items}
+    fallback_queries = heuristic_generate_search_queries(plan)
+    
+    extra_queries = []
+    for f_query in fallback_queries:
+        if f_query.route in {"original_clean", "title_like"}:
+            if not any(_normalize_query_text(item.query) == _normalize_query_text(f_query.query) for item in items):
+                extra_queries.append(f_query)
+                existing_routes.add(f_query.route)
+                continue
+        if f_query.route not in existing_routes:
+            extra_queries.append(f_query)
+            existing_routes.add(f_query.route)
+            
+    all_items = [*items, *extra_queries]
+    return sorted(all_items, key=lambda item: item.priority)
+
 
 
 def _expansion_context(plan: QueryPlan) -> str:

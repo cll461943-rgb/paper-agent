@@ -1,0 +1,79 @@
+{
+  "paper_id": "https://openalex.org/W3185250692",
+  "title": "Scaling Deep Contrastive Learning Batch Size under Memory Limited Setup",
+  "abstract": "Contrastive learning has been applied successfully to learn vector representations of text. Previous research demonstrated that learning high-quality representations benefits from batch-wise contrastive loss with a large number of negatives. In practice, the technique of in-batch negative is used, where for each example in a batch, other batch examples' positives will be taken as its negatives, avoiding encoding extra negatives. This, however, still conditions each example's loss on all batch examples and requires fitting the entire large batch into GPU memory. This paper introduces a gradient caching technique that decouples backpropagation between contrastive loss and the encoder, removing encoder backward pass data dependency along the batch dimension. As a result, gradients can be computed for one subset of the batch at a time, leading to almost constant memory usage. 1",
+  "year": 2021,
+  "venue": null,
+  "authors": [
+    "Luyu Gao",
+    "Yunyi Zhang",
+    "Jiawei Han",
+    "Jamie Callan"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2021.repl4nlp-1.31",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2021.repl4nlp-1.31",
+  "citation_count": 57,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like"
+  ],
+  "references": [
+    "https://openalex.org/W2120861206",
+    "https://openalex.org/W2153579005",
+    "https://openalex.org/W2338908902",
+    "https://openalex.org/W2737740651",
+    "https://openalex.org/W2891927334",
+    "https://openalex.org/W2912924812",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W2953181046",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2963684275",
+    "https://openalex.org/W2996064239",
+    "https://openalex.org/W3005296017",
+    "https://openalex.org/W3005680577",
+    "https://openalex.org/W3033406728",
+    "https://openalex.org/W3092683697",
+    "https://openalex.org/W3099700870",
+    "https://openalex.org/W3100345210",
+    "https://openalex.org/W3115295967",
+    "https://openalex.org/W3129831491",
+    "https://openalex.org/W3168875417",
+    "https://openalex.org/W3173783447",
+    "https://openalex.org/W4287812705",
+    "https://openalex.org/W4294170691"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Encoder",
+      "Encoding (memory)",
+      "Dependency (UML)",
+      "Batch processing",
+      "Artificial intelligence",
+      "Dimension (graph theory)",
+      "Pattern recognition (psychology)",
+      "Algorithm",
+      "Mathematics",
+      "Programming language",
+      "Pure mathematics",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2067317451",
+      "https://openalex.org/W4390516098",
+      "https://openalex.org/W2154771632",
+      "https://openalex.org/W4211085505",
+      "https://openalex.org/W2181948922",
+      "https://openalex.org/W4283822356",
+      "https://openalex.org/W1950940422",
+      "https://openalex.org/W2129146436",
+      "https://openalex.org/W2032507829",
+      "https://openalex.org/W2147282173"
+    ]
+  }
+}
