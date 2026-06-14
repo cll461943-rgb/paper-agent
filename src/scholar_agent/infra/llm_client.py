@@ -6,6 +6,17 @@ from dataclasses import dataclass
 from typing import Any
 
 import requests
+from urllib3.util import connection
+
+_original_create_connection = connection.create_connection
+
+def patched_create_connection(address, *args, **kwargs):
+    host, port = address
+    if host == "api.deepseek.com":
+        return _original_create_connection(("3.173.21.63", port), *args, **kwargs)
+    return _original_create_connection(address, *args, **kwargs)
+
+connection.create_connection = patched_create_connection
 
 from scholar_agent.infra.config import LLMConfig
 from scholar_agent.workflow.budget import BudgetExceededError, BudgetManager
@@ -23,11 +34,13 @@ class OpenAICompatibleLLMClient:
         self.config = config
         self.budget = budget
         self.session = requests.Session()
+        self.session.trust_env = False  # 直连国内 DeepSeek 接口，不走代理以规避 SSL 握手冲突
         self.session.headers.update(
             {
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "User-Agent": "scholar-agent/2.0.0",
+                "Connection": "close",  # 显式关闭连接复用，防止 Keep-Alive 长链接被网关意外掐断
             }
         )
 

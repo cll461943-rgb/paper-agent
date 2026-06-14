@@ -429,6 +429,10 @@ def run_evaluation(
             total_token_estimate += res.run_metrics.token_estimate
             total_cache_hits += res.run_metrics.cache_hits
             total_errors_logged += len(res.run_metrics.errors)
+            if res.run_metrics.errors:
+                print(f"  ⚠️ Logged {len(res.run_metrics.errors)} errors in Case #{original_idx}:")
+                for err in res.run_metrics.errors[:5]:
+                    print(f"    - {err}")
 
             # 汇总各组件开销
             for comp_metric in res.run_metrics.component_metrics:
