@@ -218,6 +218,9 @@ class PaperAgentPipeline:
         LOGGER.info("Reranking papers based on blending formula")
         ranked_papers = rerank_papers(all_candidates, validated_selections)
 
+        # 存储候选池供评估框架审计
+        self.candidate_pool = all_candidates
+
         # 9. 结构化归纳合成与输出
         LOGGER.info("Synthesizing final structured report")
         synthesis_agent = SynthesisAgent(self.llm_client)
