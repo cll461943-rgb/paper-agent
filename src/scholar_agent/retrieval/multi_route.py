@@ -318,14 +318,23 @@ class MultiRouteRetriever:
             if unavailable_result is not None:
                 results.append(unavailable_result)
 
+        def _get_queries_for_provider(prov: PaperProvider) -> list[SearchQuery]:
+            if prov.name in LOCAL_ZERO_API_PROVIDERS or prov.name == "pasa_local":
+                return queries
+            return queries[:4]
+
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:
-                future_map = [executor.submit(self._search_provider_routes, provider, queries) for provider in providers]
+                future_map = [
+                    executor.submit(self._search_provider_routes, provider, _get_queries_for_provider(provider))
+                    for provider in providers
+                ]
                 for future in as_completed(future_map):
                     results.extend(future.result())
         else:
-            for query in queries:
-                for provider in providers:
+            for provider in providers:
+                prov_queries = _get_queries_for_provider(provider)
+                for query in prov_queries:
                     results.append(self._search_one(provider, query))
 
         if include_title_exact:

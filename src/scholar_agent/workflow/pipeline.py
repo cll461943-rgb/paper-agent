@@ -184,16 +184,15 @@ class PaperAgentPipeline:
             subqueries = heuristic_generate_search_queries(query_plan)
             budget.record_search_queries(len(subqueries))
 
-        # 执行第一轮检索（第一轮只取优先级最高的 4 个 subqueries 以便在保证 Recall 的同时，大幅度压缩多路网络请求耗时与噪声）
-        first_round_subqueries = subqueries[:4]
-        LOGGER.info("Executing Retrieval Round 1 with %d queries (capped from %d)", len(first_round_subqueries), len(subqueries))
-        _, candidate_pool = retriever.retrieve(first_round_subqueries)
+        # 执行第一轮检索
+        LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
+        _, candidate_pool = retriever.retrieve(subqueries)
         all_candidates = deduplicate_papers(candidate_pool)
-
+ 
         round_1_record = SearchProcessRound(
             round_index=1,
             search_goal="构建包含核心主题的基础论文候选池",
-            queries=[q.query for q in first_round_subqueries],
+            queries=[q.query for q in subqueries],
             candidates_found=len(all_candidates),
             review_conclusion="第一轮检索完成"
         )

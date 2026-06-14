@@ -377,10 +377,11 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
     if llm_client is None:
         return []
     system_prompt = (
-        "You propose exact paper-title search candidates for a scholarly query. "
-        "Return JSON only with field title_queries. "
-        "Only include titles or title-like phrases that are strongly implied by the query; "
-        "return an empty array when uncertain."
+        "You are an expert academic assistant. Recall and propose up to 3 exact paper titles or high-probability paper title-like phrases "
+        "matching the query's core breakthrough or technical route from your academic memory. "
+        "For example, if the query asks about 'absurdly wrong demonstrations for in-context learning', try to recall classic paper titles "
+        "on this topic (e.g., 'Towards Understanding Chain-of-Thought Prompting' or 'Rethinking the Role of Demonstrations'). "
+        "Return JSON only with field 'title_queries'. Propose up to 3 candidate titles based on your memory."
     )
     user_prompt = (
         "Return shape: {\"title_queries\": [\"candidate paper title\", ...]}. "
@@ -427,7 +428,9 @@ def generate_search_queries(
             "Generate short retrieval-oriented scholarly search queries. "
             "Return a JSON object with one field named search_queries. "
             "Required routes: original_clean, core_topic, method_task, entity_dataset, title_like, broad_synonym. "
-            "Queries should be short and keyword-oriented, not full natural-language questions."
+            "CRITICAL: Each query must be extremely concise (2-4 words maximum). Avoid natural language sentences, "
+            "connecting words, or broad words like 'shows', 'proposes', 'investigate'. "
+            "Use exact technical terms (e.g., '\"in-context learning\" \"absurdly wrong\"' or 'DRO adversarial training')."
         )
         user_prompt = (
             "Return a JSON object shaped as "

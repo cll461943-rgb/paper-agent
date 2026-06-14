@@ -53,14 +53,18 @@ def _sanitize_openalex_search(query: SearchQuery) -> str:
     question_mark_ratio = raw.count("?") / max(len(raw), 1)
     looks_like_question = bool(re.match(r"(?i)^\s*(what|how|why|which|are|is|does|do|can)\b", raw)) or "?" in raw
 
-    if has_non_ascii or question_mark_ratio > 0.15 or looks_like_question:
+    # 只要包含了非 ASCII，或者像疑问句，或者总单词数大于 5 个，就强行进行停用词净化并限制长度
+    if has_non_ascii or question_mark_ratio > 0.15 or looks_like_question or len(ascii_tokens) > 5:
         if ascii_tokens:
             filtered = [
                 token.strip(" .")
                 for token in ascii_tokens
                 if token.strip(" .") and token.strip(" .").lower() not in OPENALEX_QUERY_STOPWORDS
             ]
-            return " ".join(dict.fromkeys(filtered or ascii_tokens))[:180]
+            # 限制有效词数最多为 5，防止 openalex 检索因 AND 条件过多而返回空
+            result_tokens = dict.fromkeys(filtered or ascii_tokens)
+            final_tokens = list(result_tokens.keys())[:5]
+            return " ".join(final_tokens)[:180]
         return " ".join(token for token in ["research", "paper", query.route] if token)
 
     normalized = re.sub(r"\s+", " ", raw).strip()

@@ -15,6 +15,36 @@ LOGGER = logging.getLogger(__name__)
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 
 
+def _sanitize_arxiv_search(query_text: str) -> str:
+    raw = query_text.strip()
+    if not raw:
+        return ""
+    # 移除标点，保留带引号的短语或连字符词
+    cleaned = re.sub(r"[^\w\s\-\"']", " ", raw)
+    tokens = cleaned.split()
+    
+    stop_words = {
+        "a", "about", "all", "also", "an", "and", "any", "are", "as", "at", 
+        "be", "by", "can", "do", "does", "for", "from", "how", "is", "it", 
+        "of", "on", "or", "paper", "papers", "research", "that", "the", 
+        "there", "to", "using", "what", "which", "with", "would", "first",
+        "shows", "show", "proposes", "propose", "investigates", "investigate",
+        "could", "recommend", "you", "me", "find", "list", "studies", "study",
+        "demonstrate", "demonstrates", "explore", "explores", "introduced", "introduce"
+    }
+    
+    filtered = []
+    for token in tokens:
+        clean_tok = token.strip("\"'").lower()
+        if clean_tok and clean_tok not in stop_words:
+            filtered.append(token)
+            
+    # 限制最大检索词数，防止 ArXiv API 的 AND 条件过苛刻导致 0 召回
+    if len(filtered) > 5:
+        filtered = filtered[:5]
+    return " ".join(filtered)
+
+
 class ArxivProvider(PaperProvider):
     name = "arxiv"
 
@@ -30,8 +60,11 @@ class ArxivProvider(PaperProvider):
         self.last_error: str | None = None
 
     def _build_params(self, query: SearchQuery, limit: int) -> dict[str, str | int]:
+        sanitized = _sanitize_arxiv_search(query.query)
+        # 兜底以防全部被过滤
+        search_str = sanitized if sanitized else "machine learning"
         return {
-            "search_query": f"all:{query.query}",
+            "search_query": f"all:{search_str}",
             "start": 0,
             "max_results": limit,
         }
