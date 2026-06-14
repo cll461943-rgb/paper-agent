@@ -119,8 +119,13 @@ class OpenAICompatibleLLMClient:
             self.budget.record_error(str(exc))
             return None
 
-        # 根据 model_type 选择 deepseek-v4-flash 还是 pro
-        model_name = self.config.model_pro if model_type == "pro" else self.config.model_flash
+        # 根据 model_type 选择 deepseek-v4-flash 还是 pro，并允许环境变量覆盖
+        import os
+        model_name = (
+            os.getenv("DEEPSEEK_MODEL_PRO", self.config.model_pro)
+            if model_type == "pro"
+            else os.getenv("DEEPSEEK_MODEL_FLASH", self.config.model_flash)
+        )
 
         payload = {
             "model": model_name,

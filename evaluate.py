@@ -179,7 +179,12 @@ class StatsLLMClient:
         if isinstance(self.base_client, MockLLMClient):
             model_name = "mock-pro" if model_type == "pro" else "mock-flash"
         else:
-            model_name = self.base_client.config.model_pro if model_type == "pro" else self.base_client.config.model_flash
+            import os
+            model_name = (
+                os.getenv("DEEPSEEK_MODEL_PRO", self.base_client.config.model_pro)
+                if model_type == "pro"
+                else os.getenv("DEEPSEEK_MODEL_FLASH", self.base_client.config.model_flash)
+            )
 
         started_at = time.perf_counter()
         
