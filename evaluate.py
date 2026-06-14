@@ -295,6 +295,7 @@ def run_evaluation(
     mode: str = "live",
     limit: int | None = None,
     cases_filter: str | None = None,
+    simple: bool = False,
     output_path: str | None = None,
     time_budget: float = 30.0,
 ) -> None:
@@ -356,6 +357,8 @@ def run_evaluation(
         if not indices:
             print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
             sys.exit(1)
+    elif simple:
+        indices = [0]
     elif limit is not None and limit > 0:
         indices = indices[:limit]
 
@@ -604,6 +607,10 @@ def run_evaluation(
 
 
 if __name__ == "__main__":
+    # 强制设置 sys.stdout 编码为 utf-8，解决 Windows 环境下打印 emoji 时 UnicodeEncodeError 问题
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     setup_logging(logging.WARNING)
     
     parser = argparse.ArgumentParser(description="Scholar Agent V2.0 Evaluation Runner")
@@ -623,7 +630,12 @@ if __name__ == "__main__":
         "-c", "--cases",
         type=str,
         default=None,
-        help="指定仅运行的部分案例编号（如：'1,2,5-7'）"
+        help="指定仅运行的部分案例编号（如：'1,2,5-7'），不指定则默认全量"
+    )
+    parser.add_argument(
+        "-s", "--simple",
+        action="store_true",
+        help="只运行1条简单测试（即第1个案例）"
     )
     parser.add_argument(
         "-o", "--output",
@@ -666,6 +678,7 @@ if __name__ == "__main__":
         mode=run_mode,
         limit=args.limit,
         cases_filter=args.cases,
+        simple=args.simple,
         output_path=args.output,
         time_budget=args.time_budget
     )
