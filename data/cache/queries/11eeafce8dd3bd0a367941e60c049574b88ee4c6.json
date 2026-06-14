@@ -1,0 +1,932 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2108.06949v1",
+    "title": "Data Augmentation for Scene Text Recognition",
+    "abstract": "Scene text recognition (STR) is a challenging task in computer vision due to the large number of possible text appearances in natural scenes. Most STR models rely on synthetic datasets for training since there are no sufficiently big and publicly available labelled real datasets. Since STR models are evaluated using real data, the mismatch between training and testing data distributions results into poor performance of models especially on challenging text that are affected by noise, artifacts, geometry, structure, etc. In this paper, we introduce STRAug which is made of 36 image augmentation functions designed for STR. Each function mimics certain text image properties that can be found in natural scenes, caused by camera sensors, or induced by signal processing operations but poorly represented in the training dataset. When applied to strong baseline models using RandAugment, STRAug significantly increases the overall absolute accuracy of STR models across regular and irregular test datasets by as much as 2.10% on Rosetta, 1.48% on R2AM, 1.30% on CRNN, 1.35% on RARE, 1.06% on TRBA and 0.89% on GCRNN. The diversity and simplicity of API provided by STRAug functions enable easy replication and validation of existing data augmentation methods for STR. STRAug is available at https://github.com/roatienza/straug.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rowel Atienza"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.06949v1",
+    "url": "http://arxiv.org/abs/2108.06949v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.00721v1",
+    "title": "Towards Improving Speaker Distance Estimation through Generative Impulse Response Augmentation",
+    "abstract": "The Room Acoustics and Speaker Distance Estimation (SDE) Challenge at ICASSP 2025 explores the effectiveness of augmented room impulse response (RIR) data for improving SDE model performance. This challenge at GenDARA involves generating RIRs to supplement sparse datasets and fine-tuning SDE models with the augmented data. We employ the open-source fast diffuse room impulse response generator (FastRIR) conditioned only on speaker and listener locations. We design a quality filter to ensure generated RIR alignment with challenge RIRs, and hyperparameter optimization is employed for model fine-tuning. Our approach reduces the mean absolute error (MAE) of the five positions from 1.66m to 0.6m for GWA rooms and from 2.18m to 0.69m for Treble rooms, with results demonstrating that the augmentation approach significantly improves estimation accuracy, particularly at medium to long distances.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Anton Ratnarajah",
+      "Mehmet Ergezer",
+      "Arun Nair",
+      "Mrudula Athi"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.00721v1",
+    "url": "http://arxiv.org/abs/2605.00721v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.04047v2",
+    "title": "LaPA$^2$: Length-Aware Prefix and Prompt Attention Augmentation for Long-Form Controllable Text Generation",
+    "abstract": "Prefix-based methods have emerged as a promising paradigm for Controllable Text Generation (CTG) due to their parameter efficiency. However, while effective in short sequences, their controllability tends to diminish as the generated sequence grows. In this paper, we identify Attention Dilution as a key factor behind this phenomenon: as the sequence length increases, the attention allocated to the control signal naturally decays due to the softmax mechanism, leading to a \"fading\" control effect. To address this, we propose LaPA$^2$ (Length-aware Prefix and Prompt Attention Augmentation), a training-free and model-agnostic framework designed to sustain robust control in long contexts. Specifically, LaPA$^2$ employs Length-Aware Logarithmic Scaling to dynamically amplify prefix attention weights, mathematically counteracting the dilution effect, while an optional Contextual Anchor Reinforcement applies synchronized augmentation to prompt tokens, preserving semantic coherence when strong attribute control risks overshadowing the original prompt. LaPA$^2$ is versatile, supporting both soft prefixes (continuous embeddings) and hard prefixes (discrete instructions). Experiments on multiple CTG tasks demonstrate that LaPA$^2$ consistently improves the performance of various prefix-based methods in long-form settings, leading to superior attribute controllability while preserving content relevance and fluency. Our code and data are publicly available at https://github.com/jiabingyang01/LaPA2.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiabing Yang",
+      "Yixiang Chen",
+      "Zichen Wen",
+      "Chenhang Cui",
+      "Peiyan Li",
+      "Yuan Xu",
+      "Bowen Fang",
+      "Tao Yu",
+      "Ruikang Lin",
+      "Yan Huang",
+      "Liang Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.04047v2",
+    "url": "http://arxiv.org/abs/2508.04047v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.14227v2",
+    "title": "CLUDA : Contrastive Learning in Unsupervised Domain Adaptation for Semantic Segmentation",
+    "abstract": "In this work, we propose CLUDA, a simple, yet novel method for performing unsupervised domain adaptation (UDA) for semantic segmentation by incorporating contrastive losses into a student-teacher learning paradigm, that makes use of pseudo-labels generated from the target domain by the teacher network. More specifically, we extract a multi-level fused-feature map from the encoder, and apply contrastive loss across different classes and different domains, via source-target mixing of images. We consistently improve performance on various feature encoder architectures and for different domain adaptation datasets in semantic segmentation. Furthermore, we introduce a learned-weighted contrastive loss to improve upon on a state-of-the-art multi-resolution training approach in UDA. We produce state-of-the-art results on GTA $\\rightarrow$ Cityscapes (74.4 mIOU, +0.6) and Synthia $\\rightarrow$ Cityscapes (67.2 mIOU, +1.4) datasets. CLUDA effectively demonstrates contrastive learning in UDA as a generic method, which can be easily integrated into any existing UDA for semantic segmentation tasks. Please refer to the supplementary material for the details on implementation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Midhun Vayyat",
+      "Jaswin Kasi",
+      "Anuraag Bhattacharya",
+      "Shuaib Ahmed",
+      "Rahul Tallamraju"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.14227v2",
+    "url": "http://arxiv.org/abs/2208.14227v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.02803v3",
+    "title": "Intriguing Properties of Contrastive Losses",
+    "abstract": "We study three intriguing properties of contrastive learning. First, we generalize the standard contrastive loss to a broader family of losses, and we find that various instantiations of the generalized loss perform similarly under the presence of a multi-layer non-linear projection head. Second, we study if instance-based contrastive learning (with a global image representation) can learn well on images with multiple objects present. We find that meaningful hierarchical local features can be learned despite the fact that these objectives operate on global instance-level features. Finally, we study the phenomenon of feature suppression among competing features shared across augmented views, such as \"color distribution\" vs \"object class\". We construct datasets with explicit and controllable competing features, and show that, for contrastive learning, a few bits of easy-to-learn shared features can suppress, and even fully prevent, the learning of other sets of competing features. In scenarios where there are multiple objects in an image, the dominant object would suppress the learning of smaller objects. Existing contrastive learning methods critically rely on data augmentation to favor certain sets of features over others, and could suffer from learning saturation for scenarios where existing augmentations cannot fully address the feature suppression. This poses open challenges to existing contrastive learning techniques.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ting Chen",
+      "Calvin Luo",
+      "Lala Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.02803v3",
+    "url": "http://arxiv.org/abs/2011.02803v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01088v2",
+    "title": "Exploring Empty Spaces: Human-in-the-Loop Data Augmentation",
+    "abstract": "Data augmentation is crucial to make machine learning models more robust and safe. However, augmenting data can be challenging as it requires generating diverse data points to rigorously evaluate model behavior on edge cases and mitigate potential harms. Creating high-quality augmentations that cover these \"unknown unknowns\" is a time- and creativity-intensive task. In this work, we introduce Amplio, an interactive tool to help practitioners navigate \"unknown unknowns\" in unstructured text datasets and improve data diversity by systematically identifying empty data spaces to explore. Amplio includes three human-in-the-loop data augmentation techniques: Augment With Concepts, Augment by Interpolation, and Augment with Large Language Model. In a user study with 18 professional red teamers, we demonstrate the utility of our augmentation methods in helping generate high-quality, diverse, and relevant model safety prompts. We find that Amplio enabled red teamers to augment data quickly and creatively, highlighting the transformative potential of interactive augmentation workflows.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Catherine Yeh",
+      "Donghao Ren",
+      "Yannick Assogba",
+      "Dominik Moritz",
+      "Fred Hohman"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01088v2",
+    "url": "http://arxiv.org/abs/2410.01088v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.10365v2",
+    "title": "Robust image representations with counterfactual contrastive learning",
+    "abstract": "Contrastive pretraining can substantially increase model generalisation and downstream performance. However, the quality of the learned representations is highly dependent on the data augmentation strategy applied to generate positive pairs. Positive contrastive pairs should preserve semantic meaning while discarding unwanted variations related to the data acquisition domain. Traditional contrastive pipelines attempt to simulate domain shifts through pre-defined generic image transformations. However, these do not always mimic realistic and relevant domain variations for medical imaging, such as scanner differences. To tackle this issue, we herein introduce counterfactual contrastive learning, a novel framework leveraging recent advances in causal image synthesis to create contrastive positive pairs that faithfully capture relevant domain variations. Our method, evaluated across five datasets encompassing both chest radiography and mammography data, for two established contrastive objectives (SimCLR and DINO-v2), outperforms standard contrastive learning in terms of robustness to acquisition shift. Notably, counterfactual contrastive learning achieves superior downstream performance on both in-distribution and external datasets, especially for images acquired with scanners under-represented in the training set. Further experiments show that the proposed framework extends beyond acquisition shifts, with models trained with counterfactual contrastive learning reducing subgroup disparities across biological sex.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mélanie Roschewitz",
+      "Fabio De Sousa Ribeiro",
+      "Tian Xia",
+      "Galvin Khara",
+      "Ben Glocker"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.10365v2",
+    "url": "http://arxiv.org/abs/2409.10365v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.07395v1",
+    "title": "Handwritten text generation and strikethrough characters augmentation",
+    "abstract": "We introduce two data augmentation techniques, which, used with a Resnet-BiLSTM-CTC network, significantly reduce Word Error Rate (WER) and Character Error Rate (CER) beyond best-reported results on handwriting text recognition (HTR) tasks. We apply a novel augmentation that simulates strikethrough text (HandWritten Blots) and a handwritten text generation method based on printed text (StackMix), which proved to be very effective in HTR tasks. StackMix uses weakly-supervised framework to get character boundaries. Because these data augmentation techniques are independent of the network used, they could also be applied to enhance the performance of other networks and approaches to HTR. Extensive experiments on ten handwritten text datasets show that HandWritten Blots augmentation and StackMix significantly improve the quality of HTR models",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Alex Shonenkov",
+      "Denis Karachev",
+      "Max Novopoltsev",
+      "Mark Potanin",
+      "Denis Dimitrov",
+      "Andrey Chertok"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.07395v1",
+    "url": "http://arxiv.org/abs/2112.07395v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.00921v1",
+    "title": "Supervised Contrastive Learning for Accented Speech Recognition",
+    "abstract": "Neural network based speech recognition systems suffer from performance degradation due to accented speech, especially unfamiliar accents. In this paper, we study the supervised contrastive learning framework for accented speech recognition. To build different views (similar \"positive\" data samples) for contrastive learning, three data augmentation techniques including noise injection, spectrogram augmentation and TTS-same-sentence generation are further investigated. From the experiments on the Common Voice dataset, we have shown that contrastive learning helps to build data-augmentation invariant and pronunciation invariant representations, which significantly outperforms traditional joint training methods in both zero-shot and full-shot settings. Experiments show that contrastive learning can improve accuracy by 3.66% (zero-shot) and 3.78% (full-shot) on average, comparing to the joint training method.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tao Han",
+      "Hantao Huang",
+      "Ziang Yang",
+      "Wei Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.00921v1",
+    "url": "http://arxiv.org/abs/2107.00921v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07869v1",
+    "title": "Let Invariant Rationale Discovery Inspire Graph Contrastive Learning",
+    "abstract": "Leading graph contrastive learning (GCL) methods perform graph augmentations in two fashions: (1) randomly corrupting the anchor graph, which could cause the loss of semantic information, or (2) using domain knowledge to maintain salient features, which undermines the generalization to other domains. Taking an invariance look at GCL, we argue that a high-performing augmentation should preserve the salient semantics of anchor graphs regarding instance-discrimination. To this end, we relate GCL with invariant rationale discovery, and propose a new framework, Rationale-aware Graph Contrastive Learning (RGCL). Specifically, without supervision signals, RGCL uses a rationale generator to reveal salient features about graph instance-discrimination as the rationale, and then creates rationale-aware views for contrastive learning. This rationale-aware pre-training scheme endows the backbone model with the powerful representation ability, further facilitating the fine-tuning on downstream tasks. On MNIST-Superpixel and MUTAG datasets, visual inspections on the discovered rationales showcase that the rationale generator successfully captures the salient features (i.e. distinguishing semantic nodes in graphs). On biochemical molecule and social network benchmark datasets, the state-of-the-art performance of RGCL demonstrates the effectiveness of rationale-aware views for contrastive learning. Our codes are available at https://github.com/lsh0520/RGCL.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Sihang Li",
+      "Xiang Wang",
+      "An zhang",
+      "Yingxin Wu",
+      "Xiangnan He",
+      "Tat-Seng Chua"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07869v1",
+    "url": "http://arxiv.org/abs/2206.07869v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.07513v1",
+    "title": "CORE-Text: Improving Scene Text Detection with Contrastive Relational Reasoning",
+    "abstract": "Localizing text instances in natural scenes is regarded as a fundamental challenge in computer vision. Nevertheless, owing to the extremely varied aspect ratios and scales of text instances in real scenes, most conventional text detectors suffer from the sub-text problem that only localizes the fragments of text instance (i.e., sub-texts). In this work, we quantitatively analyze the sub-text problem and present a simple yet effective design, COntrastive RElation (CORE) module, to mitigate that issue. CORE first leverages a vanilla relation block to model the relations among all text proposals (sub-texts of multiple text instances) and further enhances relational reasoning via instance-level sub-text discrimination in a contrastive manner. Such way naturally learns instance-aware representations of text proposals and thus facilitates scene text detection. We integrate the CORE module into a two-stage text detector of Mask R-CNN and devise our text detector CORE-Text. Extensive experiments on four benchmarks demonstrate the superiority of CORE-Text. Code is available: \\url{https://github.com/jylins/CORE-Text}.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jingyang Lin",
+      "Yingwei Pan",
+      "Rongfeng Lai",
+      "Xuehang Yang",
+      "Hongyang Chao",
+      "Ting Yao"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.07513v1",
+    "url": "http://arxiv.org/abs/2112.07513v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.03104v3",
+    "title": "HiTeC: Hierarchical Contrastive Learning on Text-Attributed Hypergraph with Semantic-Aware Augmentation",
+    "abstract": "Contrastive learning (CL) has become a dominant paradigm for self-supervised hypergraph learning, enabling effective training without costly labels. However, node entities in real-world hypergraphs are often associated with rich textual information, which has been largely ignored in prior works. Directly applying existing CL-based methods to such text-attributed hypergraphs (TAHGs) leads to three key limitations: (1) The common use of graph-agnostic text encoders fails to capture the correlations between textual semantics and hypergraph topology, resulting in less expressive representations. (2) Their reliance on random data augmentations introduces noise and weakens the contrastive signals. (3) The primary focus on node- and hyperedge-level contrastive signals limits the ability to capture long-range dependencies, which is essential for effective representation learning. To address these challenges, we introduce HiTeC, a two-stage hierarchical contrastive learning framework for effective self-supervised learning on TAHGs. In the first stage, we pre-train the text encoder with a structure-aware contrastive objective to overcome the graph-agnostic nature of conventional methods. In the second stage, we begin by introducing semantic-aware augmentations, including structure-contextualized text augmentation and semantic-aware hyperedge dropping, to facilitate informative view generation. Subsequently, we propose a multi-scale contrastive loss with an $s$-walk-based subgraph-level objective to capture long-range dependencies. Extensive experiments on six real-world datasets validate the effectiveness of our proposed method.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mengting Pan",
+      "Fan Li",
+      "Chen Chen",
+      "Xiaoyang Wang",
+      "Wenjie Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.03104v3",
+    "url": "http://arxiv.org/abs/2508.03104v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.08363v3",
+    "title": "Data-Efficient Augmentation for Training Neural Networks",
+    "abstract": "Data augmentation is essential to achieve state-of-the-art performance in many deep learning applications. However, the most effective augmentation techniques become computationally prohibitive for even medium-sized datasets. To address this, we propose a rigorous technique to select subsets of data points that when augmented, closely capture the training dynamics of full data augmentation. We first show that data augmentation, modeled as additive perturbations, improves learning and generalization by relatively enlarging and perturbing the smaller singular values of the network Jacobian, while preserving its prominent directions. This prevents overfitting and enhances learning the harder to learn information. Then, we propose a framework to iteratively extract small subsets of training data that when augmented, closely capture the alignment of the fully augmented Jacobian with labels/residuals. We prove that stochastic gradient descent applied to the augmented subsets found by our approach has similar training dynamics to that of fully augmented data. Our experiments demonstrate that our method achieves 6.3x speedup on CIFAR10 and 2.2x speedup on SVHN, and outperforms the baselines by up to 10% across various subset sizes. Similarly, on TinyImageNet and ImageNet, our method beats the baselines by up to 8%, while achieving up to 3.3x speedup across various subset sizes. Finally, training on and augmenting 50% subsets using our method on a version of CIFAR10 corrupted with label noise even outperforms using the full dataset. Our code is available at: https://github.com/tianyu139/data-efficient-augmentation",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Tian Yu Liu",
+      "Baharan Mirzasoleiman"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.08363v3",
+    "url": "http://arxiv.org/abs/2210.08363v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.08702v1",
+    "title": "Dual Contrastive Learning: Text Classification via Label-Aware Data Augmentation",
+    "abstract": "Contrastive learning has achieved remarkable success in representation learning via self-supervision in unsupervised settings. However, effectively adapting contrastive learning to supervised learning tasks remains as a challenge in practice. In this work, we introduce a dual contrastive learning (DualCL) framework that simultaneously learns the features of input samples and the parameters of classifiers in the same space. Specifically, DualCL regards the parameters of the classifiers as augmented samples associating to different labels and then exploits the contrastive learning between the input samples and the augmented samples. Empirical studies on five benchmark text classification datasets and their low-resource version demonstrate the improvement in classification accuracy and confirm the capability of learning discriminative representations of DualCL.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Qianben Chen",
+      "Richong Zhang",
+      "Yaowei Zheng",
+      "Yongyi Mao"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.08702v1",
+    "url": "http://arxiv.org/abs/2201.08702v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.17367v1",
+    "title": "Scale-free Characteristics of Multilingual Legal Texts and the Limitations of LLMs",
+    "abstract": "We present a comparative analysis of text complexity across domains using scale-free metrics. We quantify linguistic complexity via Heaps' exponent $β$ (vocabulary growth), Taylor's exponent $α$ (word-frequency fluctuation scaling), compression rate $r$ (redundancy), and entropy. Our corpora span three domains: legal documents (statutes, cases, deeds) as a specialized domain, general natural language texts (literature, Wikipedia), and AI-generated (GPT) text. We find that legal texts exhibit slower vocabulary growth (lower $β$) and higher term consistency (higher $α$) than general texts. Within legal domain, statutory codes have the lowest $β$ and highest $α$, reflecting strict drafting conventions, while cases and deeds show higher $β$ and lower $α$. In contrast, GPT-generated text shows the statistics more aligning with general language patterns. These results demonstrate that legal texts exhibit domain-specific structures and complexities, which current generative models do not fully replicate.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Haoyang Chen",
+      "Kumiko Tanaka-Ishii"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.17367v1",
+    "url": "http://arxiv.org/abs/2509.17367v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:entity_dataset",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.02722v1",
+    "title": "Video Contrastive Learning with Global Context",
+    "abstract": "Contrastive learning has revolutionized self-supervised image representation learning field, and recently been adapted to video domain. One of the greatest advantages of contrastive learning is that it allows us to flexibly define powerful loss objectives as long as we can find a reasonable way to formulate positive and negative samples to contrast. However, existing approaches rely heavily on the short-range spatiotemporal salience to form clip-level contrastive signals, thus limit themselves from using global context. In this paper, we propose a new video-level contrastive learning method based on segments to formulate positive pairs. Our formulation is able to capture global context in a video, thus robust to temporal content change. We also incorporate a temporal order regularization term to enforce the inherent sequential structure of videos. Extensive experiments show that our video-level contrastive learning framework (VCLR) is able to outperform previous state-of-the-arts on five video datasets for downstream action classification, action localization and video retrieval. Code is available at https://github.com/amazon-research/video-contrastive-learning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Haofei Kuang",
+      "Yi Zhu",
+      "Zhi Zhang",
+      "Xinyu Li",
+      "Joseph Tighe",
+      "Sören Schwertfeger",
+      "Cyrill Stachniss",
+      "Mu Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.02722v1",
+    "url": "http://arxiv.org/abs/2108.02722v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.17474v1",
+    "title": "Reducing and Exploiting Data Augmentation Noise through Meta Reweighting Contrastive Learning for Text Classification",
+    "abstract": "Data augmentation has shown its effectiveness in resolving the data-hungry problem and improving model's generalization ability. However, the quality of augmented data can be varied, especially compared with the raw/original data. To boost deep learning models' performance given augmented data/samples in text classification tasks, we propose a novel framework, which leverages both meta learning and contrastive learning techniques as parts of our design for reweighting the augmented samples and refining their feature representations based on their quality. As part of the framework, we propose novel weight-dependent enqueue and dequeue algorithms to utilize augmented samples' weight/quality information effectively. Through experiments, we show that our framework can reasonably cooperate with existing deep learning models (e.g., RoBERTa-base and Text-CNN) and augmentation techniques (e.g., Wordnet and Easydata) for specific supervised learning tasks. Experiment results show that our framework achieves an average of 1.6%, up to 4.3% absolute improvement on Text-CNN encoders and an average of 1.4%, up to 4.4% absolute improvement on RoBERTa-base encoders on seven GLUE benchmark datasets compared with the best baseline. We present an indepth analysis of our framework design, revealing the non-trivial contributions of our network components. Our code is publicly available for better reproducibility.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Guanyi Mou",
+      "Yichuan Li",
+      "Kyumin Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.17474v1",
+    "url": "http://arxiv.org/abs/2409.17474v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.04381v1",
+    "title": "Hierarchical Text Classification Using Contrastive Learning Informed Path Guided Hierarchy",
+    "abstract": "Hierarchical Text Classification (HTC) has recently gained traction given the ability to handle complex label hierarchy. This has found applications in domains like E- commerce, customer care and medicine industry among other real-world applications. Existing HTC models either encode label hierarchy separately and mix it with text encoding or guide the label hierarchy structure in the text encoder. Both approaches capture different characteristics of label hierarchy and are complementary to each other. In this paper, we propose a Hierarchical Text Classification using Contrastive Learning Informed Path guided hierarchy (HTC-CLIP), which learns hierarchy-aware text representation and text informed path guided hierarchy representation using contrastive learning. During the training of HTC-CLIP, we learn two different sets of class probabilities distributions and during inference, we use the pooled output of both probabilities for each class to get the best of both representations. Our results show that the two previous approaches can be effectively combined into one architecture to achieve improved performance. Tests on two public benchmark datasets showed an improvement of 0.99 - 2.37% in Macro F1 score using HTC-CLIP over the existing state-of-the-art models.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Neeraj Agrawal",
+      "Saurabh Kumar",
+      "Priyanka Bhatt",
+      "Tanishka Agarwal"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.04381v1",
+    "url": "http://arxiv.org/abs/2506.04381v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.04979v3",
+    "title": "VideoCoCa: Video-Text Modeling with Zero-Shot Transfer from Contrastive Captioners",
+    "abstract": "We explore an efficient approach to establish a foundational video-text model. We present VideoCoCa that maximally reuses a pretrained image-text contrastive captioner (CoCa) model and adapt it to video-text tasks with minimal extra training. While previous works adapt image-text models with various cross-frame fusion modules, we find that the generative attentional pooling and contrastive attentional pooling layers in CoCa are instantly adaptable to flattened frame embeddings, yielding state-of-the-art results on zero-shot video classification and zero-shot text-to-video retrieval. Furthermore, we explore lightweight finetuning on top of VideoCoCa, and achieve strong results on video question-answering and video captioning.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shen Yan",
+      "Tao Zhu",
+      "Zirui Wang",
+      "Yuan Cao",
+      "Mi Zhang",
+      "Soham Ghosh",
+      "Yonghui Wu",
+      "Jiahui Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.04979v3",
+    "url": "http://arxiv.org/abs/2212.04979v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.09828v1",
+    "title": "Analyzing Data Augmentation for Medical Images: A Case Study in Ultrasound Images",
+    "abstract": "Data augmentation is one of the most effective techniques to improve the generalization performance of deep neural networks. Yet, despite often facing limited data availability in medical image analysis, it is frequently underutilized. This appears to be due to a gap in our collective understanding of the efficacy of different augmentation techniques across medical imaging tasks and modalities. One domain where this is especially true is breast ultrasound images. This work addresses this issue by analyzing the effectiveness of different augmentation techniques for the classification of breast lesions in ultrasound images. We assess the generalizability of our findings across several datasets, demonstrate that certain augmentations are far more effective than others, and show that their usage leads to significant performance gains.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Adam Tupper",
+      "Christian Gagné"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.09828v1",
+    "url": "http://arxiv.org/abs/2403.09828v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.05967v3",
+    "title": "Revisiting Contrastive Methods for Unsupervised Learning of Visual Representations",
+    "abstract": "Contrastive self-supervised learning has outperformed supervised pretraining on many downstream tasks like segmentation and object detection. However, current methods are still primarily applied to curated datasets like ImageNet. In this paper, we first study how biases in the dataset affect existing methods. Our results show that current contrastive approaches work surprisingly well across: (i) object- versus scene-centric, (ii) uniform versus long-tailed and (iii) general versus domain-specific datasets. Second, given the generality of the approach, we try to realize further gains with minor modifications. We show that learning additional invariances -- through the use of multi-scale cropping, stronger augmentations and nearest neighbors -- improves the representations. Finally, we observe that MoCo learns spatially structured representations when trained with a multi-crop strategy. The representations can be used for semantic segment retrieval and video instance segmentation without finetuning. Moreover, the results are on par with specialized models. We hope this work will serve as a useful study for other researchers. The code and models are available at https://github.com/wvangansbeke/Revisiting-Contrastive-SSL.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Wouter Van Gansbeke",
+      "Simon Vandenhende",
+      "Stamatios Georgoulis",
+      "Luc Van Gool"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.05967v3",
+    "url": "http://arxiv.org/abs/2106.05967v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.21523v1",
+    "title": "Tabular Data Augmentation for Machine Learning: Progress and Prospects of Embracing Generative AI",
+    "abstract": "Machine learning (ML) on tabular data is ubiquitous, yet obtaining abundant high-quality tabular data for model training remains a significant obstacle. Numerous works have focused on tabular data augmentation (TDA) to enhance the original table with additional data, thereby improving downstream ML tasks. Recently, there has been a growing interest in leveraging the capabilities of generative AI for TDA. Therefore, we believe it is time to provide a comprehensive review of the progress and future prospects of TDA, with a particular emphasis on the trending generative AI. Specifically, we present an architectural view of the TDA pipeline, comprising three main procedures: pre-augmentation, augmentation, and post-augmentation. Pre-augmentation encompasses preparation tasks that facilitate subsequent TDA, including error handling, table annotation, table simplification, table representation, table indexing, table navigation, schema matching, and entity matching. Augmentation systematically analyzes current TDA methods, categorized into retrieval-based methods, which retrieve external data, and generation-based methods, which generate synthetic data. We further subdivide these methods based on the granularity of the augmentation process at the row, column, cell, and table levels. Post-augmentation focuses on the datasets, evaluation and optimization aspects of TDA. We also summarize current trends and future directions for TDA, highlighting promising opportunities in the era of generative AI. In addition, the accompanying papers and related resources are continuously updated and maintained in the GitHub repository at https://github.com/SuDIS-ZJU/awesome-tabular-data-augmentation to reflect ongoing advancements in the field.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lingxi Cui",
+      "Huan Li",
+      "Ke Chen",
+      "Lidan Shou",
+      "Gang Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.21523v1",
+    "url": "http://arxiv.org/abs/2407.21523v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.24387v2",
+    "title": "CoCoIns: Consistent Subject Generation via Contrastive Instantiated Concepts",
+    "abstract": "While text-to-image generative models can synthesize diverse and faithful content, subject variation across multiple generations limits their application to long-form content generation. Existing approaches require time-consuming fine-tuning, reference images for all subjects, or access to previously generated content. We introduce Contrastive Concept Instantiation (CoCoIns), a framework that effectively synthesizes consistent subjects across multiple independent generations. The framework consists of a generative model and a mapping network that transforms input latent codes into pseudo-words associated with specific concept instances. Users can generate consistent subjects by reusing the same latent codes. To construct such associations, we propose a contrastive learning approach that trains the network to distinguish between different combinations of prompts and latent codes. Extensive evaluations on human faces with a single subject show that CoCoIns performs comparably to existing methods while maintaining greater flexibility. We also demonstrate the potential for extending CoCoIns to multiple subjects and other object categories.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Lee Hsin-Ying",
+      "Kelvin C. K. Chan",
+      "Ming-Hsuan Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.24387v2",
+    "url": "http://arxiv.org/abs/2503.24387v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.04989v2",
+    "title": "Recurrent Neural Network based Part-of-Speech Tagger for Code-Mixed Social Media Text",
+    "abstract": "This paper describes Centre for Development of Advanced Computing's (CDACM) submission to the shared task-'Tool Contest on POS tagging for Code-Mixed Indian Social Media (Facebook, Twitter, and Whatsapp) Text', collocated with ICON-2016. The shared task was to predict Part of Speech (POS) tag at word level for a given text. The code-mixed text is generated mostly on social media by multilingual users. The presence of the multilingual words, transliterations, and spelling variations make such content linguistically complex. In this paper, we propose an approach to POS tag code-mixed social media text using Recurrent Neural Network Language Model (RNN-LM) architecture. We submitted the results for Hindi-English (hi-en), Bengali-English (bn-en), and Telugu-English (te-en) code-mixed data.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Raj Nath Patel",
+      "Prakash B. Pimpale",
+      "M Sasikumar"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.04989v2",
+    "url": "http://arxiv.org/abs/1611.04989v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.09566v2",
+    "title": "Bridging Text and Image for Artist Style Transfer via Contrastive Learning",
+    "abstract": "Image style transfer has attracted widespread attention in the past few years. Despite its remarkable results, it requires additional style images available as references, making it less flexible and inconvenient. Using text is the most natural way to describe the style. More importantly, text can describe implicit abstract styles, like styles of specific artists or art movements. In this paper, we propose a Contrastive Learning for Artistic Style Transfer (CLAST) that leverages advanced image-text encoders to control arbitrary style transfer. We introduce a supervised contrastive training strategy to effectively extract style descriptions from the image-text model (i.e., CLIP), which aligns stylization with the text description. To this end, we also propose a novel and efficient adaLN based state space models that explore style-content fusion. Finally, we achieve a text-driven image style transfer. Extensive experiments demonstrate that our approach outperforms the state-of-the-art methods in artistic style transfer. More importantly, it does not require online fine-tuning and can render a 512x512 image in 0.03s.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zhi-Song Liu",
+      "Li-Wen Wang",
+      "Jun Xiao",
+      "Vicky Kalogeiton"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.09566v2",
+    "url": "http://arxiv.org/abs/2410.09566v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.18038v1",
+    "title": "Designing for Affective Augmentation: Assistive, Harmful, or Unfamiliar?",
+    "abstract": "In what capacity are affective augmentations helpful to humans, and what risks (if any) do they pose? In this position paper, we outline three works on affective augmentation systems, where our studies suggest these systems have the ability to influence our cognitive, affective, and (social) bodily perceptions in perhaps unusual ways. We provide considerations on whether these systems, outside clinical settings, are assistive, harmful, or as of now largely unfamiliar to users.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Abdallah El Ali"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.18038v1",
+    "url": "http://arxiv.org/abs/2303.18038v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.04509v2",
+    "title": "MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive Learning from Molecular Graph",
+    "abstract": "Recent years have seen a rapid growth of utilizing graph neural networks (GNNs) in the biomedical domain for tackling drug-related problems. However, like any other deep architectures, GNNs are data hungry. While requiring labels in real world is often expensive, pretraining GNNs in an unsupervised manner has been actively explored. Among them, graph contrastive learning, by maximizing the mutual information between paired graph augmentations, has been shown to be effective on various downstream tasks. However, the current graph contrastive learning framework has two limitations. First, the augmentations are designed for general graphs and thus may not be suitable or powerful enough for certain domains. Second, the contrastive scheme only learns representations that are invariant to local perturbations and thus does not consider the global structure of the dataset, which may also be useful for downstream tasks. Therefore, in this paper, we study graph contrastive learning in the context of biomedical domain, where molecular graphs are present. We propose a novel framework called MoCL, which utilizes domain knowledge at both local- and global-level to assist representation learning. The local-level domain knowledge guides the augmentation process such that variation is introduced without changing graph semantics. The global-level knowledge encodes the similarity information between graphs in the entire dataset and helps to learn representations with richer semantics. The entire model is learned through a double contrast objective. We evaluate MoCL on various molecular datasets under both linear and semi-supervised settings and results show that MoCL achieves state-of-the-art performance.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mengying Sun",
+      "Jing Xing",
+      "Huijun Wang",
+      "Bin Chen",
+      "Jiayu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.04509v2",
+    "url": "http://arxiv.org/abs/2106.04509v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2012.01316v4",
+    "title": "Improved Contrastive Divergence Training of Energy Based Models",
+    "abstract": "Contrastive divergence is a popular method of training energy-based models, but is known to have difficulties with training stability. We propose an adaptation to improve contrastive divergence training by scrutinizing a gradient term that is difficult to calculate and is often left out for convenience. We show that this gradient term is numerically significant and in practice is important to avoid training instabilities, while being tractable to estimate. We further highlight how data augmentation and multi-scale processing can be used to improve model robustness and generation quality. Finally, we empirically evaluate stability of model architectures and show improved performance on a host of benchmarks and use cases,such as image generation, OOD detection, and compositional generation.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Yilun Du",
+      "Shuang Li",
+      "Joshua Tenenbaum",
+      "Igor Mordatch"
+    ],
+    "doi": null,
+    "arxiv_id": "2012.01316v4",
+    "url": "http://arxiv.org/abs/2012.01316v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.23863v1",
+    "title": "Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction",
+    "abstract": "Multi-view 3D reconstruction remains a core challenge in computer vision. Recent methods, such as DUST3R and its successors, directly regress pointmaps from image pairs without relying on known scene geometry or camera parameters. However, the performance of these models is constrained by the diversity and scale of available training data. In this work, we introduce Puzzles, a data augmentation strategy that synthesizes an unbounded volume of high-quality posed video-depth data from a single image or video clip. By simulating diverse camera trajectories and realistic scene geometry through targeted image transformations, Puzzles significantly enhances data variety. Extensive experiments show that integrating Puzzles into existing video-based 3D reconstruction pipelines consistently boosts performance without modifying the underlying network architecture. Notably, models trained on only ten percent of the original data augmented with Puzzles still achieve accuracy comparable to those trained on the full dataset. Code is available at https://jiahao-ma.github.io/puzzles/.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiahao Ma",
+      "Lei Wang",
+      "Miaomiao liu",
+      "David Ahmedt-Aristizabal",
+      "Chuong Nguyen"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.23863v1",
+    "url": "http://arxiv.org/abs/2506.23863v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

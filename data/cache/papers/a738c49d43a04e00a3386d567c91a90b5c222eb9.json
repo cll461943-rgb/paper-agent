@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2602.06370v1",
+  "title": "Cost-Aware Model Selection for Text Classification: Multi-Objective Trade-offs Between Fine-Tuned Encoders and LLM Prompting in Production",
+  "abstract": "Large language models (LLMs) such as GPT-4o and Claude Sonnet 4.5 have demonstrated strong capabilities in open-ended reasoning and generative language tasks, leading to their widespread adoption across a broad range of NLP applications. However, for structured text classification problems with fixed label spaces, model selection is often driven by predictive performance alone, overlooking operational constraints encountered in production systems. In this work, we present a systematic comparison of two contrasting paradigms for text classification: zero- and few-shot prompt-based large language models, and fully fine-tuned encoder-only architectures. We evaluate these approaches across four canonical benchmarks (IMDB, SST-2, AG News, and DBPedia), measuring predictive quality (macro F1), inference latency, and monetary cost. We frame model evaluation as a multi-objective decision problem and analyze trade-offs using Pareto frontier projections and a parameterized utility function reflecting different deployment regimes. Our results show that fine-tuned encoder-based models from the BERT family achieve competitive, and often superior, classification performance while operating at one to two orders of magnitude lower cost and latency compared to zero- and few-shot LLM prompting. Overall, our findings suggest that indiscriminate use of large language models for standard text classification workloads can lead to suboptimal system-level outcomes. Instead, fine-tuned encoders emerge as robust and efficient components for structured NLP pipelines, while LLMs are better positioned as complementary elements within hybrid architectures. We release all code, datasets, and evaluation protocols to support reproducibility and cost-aware NLP system design.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Alberto Andres Valdes Gonzalez"
+  ],
+  "doi": null,
+  "arxiv_id": "2602.06370v1",
+  "url": "http://arxiv.org/abs/2602.06370v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

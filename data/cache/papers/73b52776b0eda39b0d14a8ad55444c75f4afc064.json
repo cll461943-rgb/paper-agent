@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2205.14894v2",
+  "title": "Daisy Bloom Filters",
+  "abstract": "A filter is a widely used data structure for storing an approximation of a given set $S$ of elements from some universe $U$ (a countable set).It represents a superset $S'\\supseteq S$ that is ''close to $S$'' in the sense that for $x\\not\\in S$, the probability that $x\\in S'$ is bounded by some $\\varepsilon > 0$. The advantage of using a Bloom filter, when some false positives are acceptable, is that the space usage becomes smaller than what is required to store $S$ exactly. Though filters are well-understood from a worst-case perspective, it is clear that state-of-the-art constructions may not be close to optimal for particular distributions of data and queries. Suppose, for instance, that some elements are in $S$ with probability close to 1. Then it would make sense to always include them in $S'$, saving space by not having to represent these elements in the filter. Questions like this have been raised in the context of Weighted Bloom filters (Bruck, Gao and Jiang, ISIT 2006) and Bloom filter implementations that make use of access to learned components (Vaidya, Knorr, Mitzenmacher, and Krask, ICLR 2021). In this paper, we present a lower bound for the expected space that such a filter requires. We also show that the lower bound is asymptotically tight by exhibiting a filter construction that executes queries and insertions in worst-case constant time, and has a false positive rate at most $\\varepsilon $ with high probability over input sets drawn from a product distribution. We also present a Bloom filter alternative, which we call the $\\textit{Daisy Bloom filter}$, that executes operations faster and uses significantly less space than the standard Bloom filter.",
+  "year": 2022,
+  "venue": null,
+  "authors": [
+    "Ioana O. Bercea",
+    "Jakob Bæk Tejs Houen",
+    "Rasmus Pagh"
+  ],
+  "doi": null,
+  "arxiv_id": "2205.14894v2",
+  "url": "http://arxiv.org/abs/2205.14894v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:42255204",
+  "title": "Anatomy-aware lymphoma lesion detection in whole-body PET/CT.",
+  "abstract": "Early cancer detection is essential for improving patient outcomes, and 18F-FDG PET/CT imaging plays a central role by combining metabolic and anatomical information. However, accurate lesion detection remains challenging due to the presence of multiple lesions with varying sizes and locations. This study investigates whether incorporating anatomical prior information can improve deep learning-based lesion detection performance. Anatomical priors were incorporated by adding organ segmentation masks generated with TotalSegmentator as auxiliary input channels to two lesion detection frameworks: the CNN-based nnDetection and a transformer-based Swin UNETR implemented in MONAI. The Swin Transformer was trained using a two-stage strategy, with self-supervised pretraining performed on the autoPET dataset and supervised fine-tuning of the detector model conducted on the independent Karolinska lymphoma dataset. Model evaluation followed a single hold-out split, and performance was assessed using FROC and average precision metrics. Experiments were conducted on two independent PET/CT datasets covering different tracers and cancer subtypes. The autoPET dataset includes 18F-FDG PET/CT scans of lymphoma, melanoma, and lung cancer, while the Karolinska dataset focuses on lymphoma imaging. Incorporating anatomical priors consistently improved lesion detection performance within the nnDetection framework across both datasets. Specifically, nnDetection augmented with anatomical masks improved in mAP@0.1-0.5 from 0.288 to 0.335. In contrast, anatomical priors had minimal impact on the Swin Transformer, which did not demonstrate clear advantages over CNN-based encoders. Anatomy-aware priors substantially enhance lesion detection performance in CNN-based models, highlighting the importance of explicit anatomical context for multi-lesion PET/CT analysis. However, these benefits do not readily transfer to transformer-based architectures, indicating the need for improved strategies to integrate anatomical information into vision transformers for medical image analysis.",
+  "year": 2026,
+  "venue": "Frontiers in oncology",
+  "authors": [
+    "Simone Bendazzoli",
+    "Antonios Tzortzakakis",
+    "Andréas Abrahamsson",
+    "Björn Engelbrekt Wahlin",
+    "Örjan Smedby",
+    "Maria Holstensson",
+    "Rodrigo Moreno"
+  ],
+  "doi": "10.3389/fonc.2026.1695211",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42255204/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42255204"
+  }
+}

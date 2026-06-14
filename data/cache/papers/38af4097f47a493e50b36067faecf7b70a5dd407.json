@@ -1,0 +1,66 @@
+{
+  "paper_id": "https://openalex.org/W4389471414",
+  "title": "Improving Bias Mitigation through Bias Experts in Natural Language Understanding",
+  "abstract": "Biases in the dataset often enable the model to achieve high performance on in-distribution data, while poorly performing on out-of-distribution data. To mitigate the detrimental effect of the bias on the networks, previous works have proposed debiasing methods that down-weight the biased examples identified by an auxiliary model, which is trained with explicit bias labels. However, finding a type of bias in datasets is a costly process. Therefore, recent studies have attempted to make the auxiliary model biased without the guidance (or annotation) of bias labels, by constraining the model's training environment or the capability of the model itself. Despite the promising debiasing results of recent works, the multi-class learning objective, which has been naively used to train the auxiliary model, may harm the bias mitigation effect due to its regularization effect and competitive nature across classes. As an alternative, we propose a new debiasing framework that introduces binary classifiers between the auxiliary model and the main model, coined bias experts. Specifically, each bias expert is trained on a binary classification task derived from the multi-class classification task via the One-vs-Rest approach. Experimental results demonstrate that our proposed strategy improves the bias identification ability of the auxiliary model. Consequently, our debiased model consistently outperforms the state-of-the-art on various challenge datasets.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Eojin Jeon",
+    "Mingyu Lee",
+    "Juhyeong Park",
+    "Yeachan Kim",
+    "Wing-Lam Mok",
+    "SangKeun Lee"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2312.03577",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2312.03577",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Debiasing",
+      "Computer science",
+      "Regularization (linguistics)",
+      "Artificial intelligence",
+      "Machine learning",
+      "Task (project management)",
+      "Binary classification",
+      "Identification (biology)",
+      "Binary number",
+      "Class (philosophy)",
+      "Process (computing)",
+      "Support vector machine",
+      "Mathematics",
+      "Psychology",
+      "Economics",
+      "Operating system",
+      "Cognitive science",
+      "Management",
+      "Arithmetic",
+      "Botany",
+      "Biology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4362554880",
+      "https://openalex.org/W4281684980",
+      "https://openalex.org/W4386875279",
+      "https://openalex.org/W2171721708",
+      "https://openalex.org/W4390963114",
+      "https://openalex.org/W3214527415",
+      "https://openalex.org/W4287887864",
+      "https://openalex.org/W1495104519",
+      "https://openalex.org/W4225584739",
+      "https://openalex.org/W4306801760"
+    ]
+  }
+}

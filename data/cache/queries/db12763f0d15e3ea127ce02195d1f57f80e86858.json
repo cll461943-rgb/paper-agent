@@ -1,0 +1,998 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2207.08179v1",
+    "title": "End-to-End Spoken Language Understanding: Performance analyses of a voice command task in a low resource setting",
+    "abstract": "Spoken Language Understanding (SLU) is a core task in most human-machine interaction systems. With the emergence of smart homes, smart phones and smart speakers, SLU has become a key technology for the industry. In a classical SLU approach, an Automatic Speech Recognition (ASR) module transcribes the speech signal into a textual representation from which a Natural Language Understanding (NLU) module extracts semantic information. Recently End-to-End SLU (E2E SLU) based on Deep Neural Networks has gained momentum since it benefits from the joint optimization of the ASR and the NLU parts, hence limiting the cascade of error effect of the pipeline architecture. However, little is known about the actual linguistic properties used by E2E models to predict concepts and intents from speech input. In this paper, we present a study identifying the signal features and other linguistic properties used by an E2E model to perform the SLU task. The study is carried out in the application domain of a smart home that has to handle non-English (here French) voice commands. The results show that a good E2E SLU performance does not always require a perfect ASR capability. Furthermore, the results show the superior capabilities of the E2E model in handling background noise and syntactic variation compared to the pipeline model. Finally, a finer-grained analysis suggests that the E2E model uses the pitch information of the input signal to identify voice command concepts. The results and methodology outlined in this paper provide a springboard for further analyses of E2E models in speech processing.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Thierry Desot",
+      "François Portet",
+      "Michel Vacher"
+    ],
+    "doi": null,
+    "arxiv_id": "2207.08179v1",
+    "url": "http://arxiv.org/abs/2207.08179v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.11396v1",
+    "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization",
+    "abstract": "The Muon optimizer has emerged as a compelling alternative to Adam for training large language models, achieving remarkable computational savings through gradient orthogonalization. However, Muon's optimizer state is more sensitive to quantization errors: because the orthogonalization discards the magnitudes of singular values and retains only directional information, even small quantization errors in singular vector directions are amplified in the update. In this work, we propose MuonQ, a low-bit Muon training framework built on the principle of directional fidelity optimization. First, we apply a pre-quantization normalization so that each step introduces quantization errors of the same magnitude, preventing the accumulated error from developing a preferred direction. Second, we introduce a structural decomposition that separately quantizes the dominant singular components via power iteration, ensuring that quantization errors perturb only singular value magnitudes rather than rotating singular vector directions. Third, we adopt $μ$-law companding quantization to allocate higher resolution to densely packed momentum values, shifting the quantization objective from outlier preservation to dense-region distinguishability. Together, these techniques enable stable 4-bit quantization of Muon's optimizer states. Pre-training experiments on GPT-style and LLaMA-style models demonstrate that MuonQ at 4-bit precision closely matches full-precision Muon in both training loss and downstream task accuracy, while reducing optimizer state memory by up to 7.3 $\\times$. Our code is available at https://github.com/YupengSu/MuonQ.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yupeng Su",
+      "Ruijie Zhang",
+      "Ziyue Liu",
+      "Yequan Zhao",
+      "Zheng Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.11396v1",
+    "url": "http://arxiv.org/abs/2605.11396v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.16836v1",
+    "title": "LLM-FP4: 4-Bit Floating-Point Quantized Transformers",
+    "abstract": "We propose LLM-FP4 for quantizing both weights and activations in large language models (LLMs) down to 4-bit floating-point values, in a post-training manner. Existing post-training quantization (PTQ) solutions are primarily integer-based and struggle with bit widths below 8 bits. Compared to integer quantization, floating-point (FP) quantization is more flexible and can better handle long-tail or bell-shaped distributions, and it has emerged as a default choice in many hardware platforms. One characteristic of FP quantization is that its performance largely depends on the choice of exponent bits and clipping range. In this regard, we construct a strong FP-PTQ baseline by searching for the optimal quantization parameters. Furthermore, we observe a high inter-channel variance and low intra-channel variance pattern in activation distributions, which adds activation quantization difficulty. We recognize this pattern to be consistent across a spectrum of transformer models designed for diverse tasks, such as LLMs, BERT, and Vision Transformer models. To tackle this, we propose per-channel activation quantization and show that these additional scaling factors can be reparameterized as exponential biases of weights, incurring a negligible cost. Our method, for the first time, can quantize both weights and activations in the LLaMA-13B to only 4-bit and achieves an average score of 63.1 on the common sense zero-shot reasoning tasks, which is only 5.8 lower than the full-precision model, significantly outperforming the previous state-of-the-art by 12.7 points. Code is available at: https://github.com/nbasyl/LLM-FP4.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shih-yang Liu",
+      "Zechun Liu",
+      "Xijie Huang",
+      "Pingcheng Dong",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.16836v1",
+    "url": "http://arxiv.org/abs/2310.16836v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.05265v2",
+    "title": "PrefixQuant: Eliminating Outliers by Prefixed Tokens for Large Language Models Quantization",
+    "abstract": "Existing weight-activation quantization methods for Large Language Models (LLMs) primarily address channel-wise outliers but often neglect token-wise outliers, which limits the accuracy of quantized models. In this work, we propose PrefixQuant, a novel quantization method that achieves state-of-the-art performance across various precision levels (W4A4KV4 and W4A8KV4) and granularities (dynamic and static quantization) by effectively isolating token-wise outliers. First, PrefixQuant eliminates token-wise outliers by prefixing outlier tokens in the KV cache, a process that is training-free and highly efficient (e.g., 1 minutes for Llama-3-70B). Second, PrefixQuant introduces new trainable parameters for block-wise training to compensate for quantization error. Our experiments show that PrefixQuant significantly outperforms existing dynamic quantization methods, even under coarser static quantization settings. For instance, PrefixQuant achieves an average accuracy improvement of +3.08 and +2.85 points over SpinQuant (dynamic quantization) on five zero-shot reasoning tasks under dynamic and static quantization settings, respectively, on W4A4KV4 Llama-3-8B. Additionally, we demonstrate up to 2.74x prefilling speedup and 2.16x decoding speedup for LLMs using W4A4 PrefixQuant. Our code is available at https://github.com/ChenMnZ/PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Yi Liu",
+      "Jiahao Wang",
+      "Yi Bin",
+      "Wenqi Shao",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.05265v2",
+    "url": "http://arxiv.org/abs/2410.05265v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.13875v1",
+    "title": "Performance of Genetic Algorithms in the Context of Software Model Refactoring",
+    "abstract": "Software systems continuously evolve due to new functionalities, requirements, or maintenance activities. In the context of software evolution, software refactoring has gained a strategic relevance. The space of possible software refactoring is usually very large, as it is given by the combinations of different refactoring actions that can produce software system alternatives. Multi-objective algorithms have shown the ability to discover alternatives by pursuing different objectives simultaneously. Performance of such algorithms in the context of software model refactoring is of paramount importance. Therefore, in this paper, we conduct a performance analysis of three genetic algorithms to compare them in terms of performance and quality of solutions. Our results show that there are significant differences in performance among the algorithms (e.g., PESA2 seems to be the fastest one, while NSGA-II shows the least memory usage).",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Vittorio Cortellessa",
+      "Daniele Di Pompeo",
+      "Michele Tucci"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.13875v1",
+    "url": "http://arxiv.org/abs/2308.13875v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.21676v2",
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distributions lead to shorter plateaus. Finally, hallucinations emerge simultaneously with knowledge, and integrating new knowledge into the model through fine-tuning is challenging, as it quickly corrupts its existing parametric memories. Our results emphasize the importance of data distribution in knowledge acquisition and suggest novel data scheduling strategies to accelerate neural network training.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Nicolas Zucchet",
+      "Jörg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu",
+      "Soham De"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.21676v2",
+    "url": "http://arxiv.org/abs/2503.21676v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.19697v1",
+    "title": "Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models",
+    "abstract": "Extreme activation outliers in Large Language Models (LLMs) critically degrade quantization performance, hindering efficient on-device deployment. While channel-wise operations and adaptive gradient scaling are recognized causes, practical mitigation remains challenging. We introduce Outlier-Safe Pre-Training (OSP), a practical guideline that proactively prevents outlier formation rather than relying on post-hoc mitigation. OSP combines three key innovations: (1) the Muon optimizer, eliminating privileged bases while maintaining training efficiency; (2) Single-Scale RMSNorm, preventing channel-wise amplification; and (3) a learnable embedding projection, redistributing activation magnitudes originating from embedding matrices. We validate OSP by training a 1.4B-parameter model on 1 trillion tokens, which is the first production-scale LLM trained without such outliers. Under aggressive 4-bit quantization, our OSP model achieves a 35.7 average score across 10 benchmarks (compared to 26.5 for an Adam-trained model), with only a 2% training overhead. Remarkably, OSP models exhibit near-zero excess kurtosis (0.04) compared to extreme values (1818.56) in standard models, fundamentally altering LLM quantization behavior. Our work demonstrates that outliers are not inherent to LLMs but are consequences of training strategies, paving the way for more efficient LLM deployment. The source code and pretrained checkpoints are available at https://github.com/dmis-lab/Outlier-Safe-Pre-Training.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jungwoo Park",
+      "Taewhoo Lee",
+      "Chanwoong Yoon",
+      "Hyeon Hwang",
+      "Jaewoo Kang"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.19697v1",
+    "url": "http://arxiv.org/abs/2506.19697v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14302v1",
+    "title": "Scaling Law for Quantization-Aware Training",
+    "abstract": "Large language models (LLMs) demand substantial computational and memory resources, creating deployment challenges. Quantization-aware training (QAT) addresses these challenges by reducing model precision while maintaining performance. However, the scaling behavior of QAT, especially at 4-bit precision (W4A4), is not well understood. Existing QAT scaling laws often ignore key factors such as the number of training tokens and quantization granularity, which limits their applicability. This paper proposes a unified scaling law for QAT that models quantization error as a function of model size, training data volume, and quantization group size. Through 268 QAT experiments, we show that quantization error decreases as model size increases, but rises with more training tokens and coarser quantization granularity. To identify the sources of W4A4 quantization error, we decompose it into weight and activation components. Both components follow the overall trend of W4A4 quantization error, but with different sensitivities. Specifically, weight quantization error increases more rapidly with more training tokens. Further analysis shows that the activation quantization error in the FC2 layer, caused by outliers, is the primary bottleneck of W4A4 QAT quantization error. By applying mixed-precision quantization to address this bottleneck, we demonstrate that weight and activation quantization errors can converge to similar levels. Additionally, with more training data, weight quantization error eventually exceeds activation quantization error, suggesting that reducing weight quantization error is also important in such scenarios. These findings offer key insights for improving QAT research and development.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Chaoyi Zhang",
+      "Jing Liu",
+      "Yutao Zeng",
+      "Zeyue Xue",
+      "Zhiheng Liu",
+      "Yunshui Li",
+      "Jin Ma",
+      "Jie Huang",
+      "Xun Zhou",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14302v1",
+    "url": "http://arxiv.org/abs/2505.14302v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.12074v1",
+    "title": "4-bit Quantization of LSTM-based Speech Recognition Models",
+    "abstract": "We investigate the impact of aggressive low-precision representations of weights and activations in two families of large LSTM-based architectures for Automatic Speech Recognition (ASR): hybrid Deep Bidirectional LSTM - Hidden Markov Models (DBLSTM-HMMs) and Recurrent Neural Network - Transducers (RNN-Ts). Using a 4-bit integer representation, a naïve quantization approach applied to the LSTM portion of these models results in significant Word Error Rate (WER) degradation. On the other hand, we show that minimal accuracy loss is achievable with an appropriate choice of quantizers and initializations. In particular, we customize quantization schemes depending on the local properties of the network, improving recognition performance while limiting computational time. We demonstrate our solution on the Switchboard (SWB) and CallHome (CH) test sets of the NIST Hub5-2000 evaluation. DBLSTM-HMMs trained with 300 or 2000 hours of SWB data achieves $<$0.5% and $<$1% average WER degradation, respectively. On the more challenging RNN-T models, our quantization strategy limits degradation in 4-bit inference to 1.3%.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Andrea Fasoli",
+      "Chia-Yu Chen",
+      "Mauricio Serrano",
+      "Xiao Sun",
+      "Naigang Wang",
+      "Swagath Venkataramani",
+      "George Saon",
+      "Xiaodong Cui",
+      "Brian Kingsbury",
+      "Wei Zhang",
+      "Zoltán Tüske",
+      "Kailash Gopalakrishnan"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.12074v1",
+    "url": "http://arxiv.org/abs/2108.12074v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.21591v1",
+    "title": "Pioneering 4-Bit FP Quantization for Diffusion Models: Mixup-Sign Quantization and Timestep-Aware Fine-Tuning",
+    "abstract": "Model quantization reduces the bit-width of weights and activations, improving memory efficiency and inference speed in diffusion models. However, achieving 4-bit quantization remains challenging. Existing methods, primarily based on integer quantization and post-training quantization fine-tuning, struggle with inconsistent performance. Inspired by the success of floating-point (FP) quantization in large language models, we explore low-bit FP quantization for diffusion models and identify key challenges: the failure of signed FP quantization to handle asymmetric activation distributions, the insufficient consideration of temporal complexity in the denoising process during fine-tuning, and the misalignment between fine-tuning loss and quantization error. To address these challenges, we propose the mixup-sign floating-point quantization (MSFP) framework, first introducing unsigned FP quantization in model quantization, along with timestep-aware LoRA (TALoRA) and denoising-factor loss alignment (DFA), which ensure precise and stable fine-tuning. Extensive experiments show that we are the first to achieve superior performance in 4-bit FP quantization for diffusion models, outperforming existing PTQ fine-tuning methods in 4-bit INT quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Maosen Zhao",
+      "Pengtao Chen",
+      "Chong Yu",
+      "Yan Wen",
+      "Xudong Tan",
+      "Tao Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.21591v1",
+    "url": "http://arxiv.org/abs/2505.21591v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.05530v1",
+    "title": "Low-bit Model Quantization for Deep Neural Networks: A Survey",
+    "abstract": "With unprecedented rapid development, deep neural networks (DNNs) have deeply influenced almost all fields. However, their heavy computation costs and model sizes are usually unacceptable in real-world deployment. Model quantization, an effective weight-lighting technique, has become an indispensable procedure in the whole deployment pipeline. The essence of quantization acceleration is the conversion from continuous floating-point numbers to discrete integer ones, which significantly speeds up the memory I/O and calculation, i.e., addition and multiplication. However, performance degradation also comes with the conversion because of the loss of precision. Therefore, it has become increasingly popular and critical to investigate how to perform the conversion and how to compensate for the information loss. This article surveys the recent five-year progress towards low-bit quantization on DNNs. We discuss and compare the state-of-the-art quantization methods and classify them into 8 main categories and 24 sub-categories according to their core techniques. Furthermore, we shed light on the potential research opportunities in the field of model quantization. A curated list of model quantization is provided at https://github.com/Kai-Liu001/Awesome-Model-Quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kai Liu",
+      "Qian Zheng",
+      "Kaiwen Tao",
+      "Zhiteng Li",
+      "Haotong Qin",
+      "Wenbo Li",
+      "Yong Guo",
+      "Xianglong Liu",
+      "Linghe Kong",
+      "Guihai Chen",
+      "Yulun Zhang",
+      "Xiaokang Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.05530v1",
+    "url": "http://arxiv.org/abs/2505.05530v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:title_like",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.15508v3",
+    "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+    "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Jun Cheng",
+      "Mengchu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.15508v3",
+    "url": "http://arxiv.org/abs/2407.15508v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07882v1",
+    "title": "Accelerating Inference and Language Model Fusion of Recurrent Neural Network Transducers via End-to-End 4-bit Quantization",
+    "abstract": "We report on aggressive quantization strategies that greatly accelerate inference of Recurrent Neural Network Transducers (RNN-T). We use a 4 bit integer representation for both weights and activations and apply Quantization Aware Training (QAT) to retrain the full model (acoustic encoder and language model) and achieve near-iso-accuracy. We show that customized quantization schemes that are tailored to the local properties of the network are essential to achieve good performance while limiting the computational overhead of QAT. Density ratio Language Model fusion has shown remarkable accuracy gains on RNN-T workloads but it severely increases the computational cost of inference. We show that our quantization strategies enable using large beam widths for hypothesis search while achieving streaming-compatible runtimes and a full model compression ratio of 7.6$\\times$ compared to the full precision model. Via hardware simulations, we estimate a 3.4$\\times$ acceleration from FP16 to INT4 for the end-to-end quantized RNN-T inclusive of LM fusion, resulting in a Real Time Factor (RTF) of 0.06. On the NIST Hub5 2000, Hub5 2001, and RT-03 test sets, we retain most of the gains associated with LM fusion, improving the average WER by $>$1.5%.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Andrea Fasoli",
+      "Chia-Yu Chen",
+      "Mauricio Serrano",
+      "Swagath Venkataramani",
+      "George Saon",
+      "Xiaodong Cui",
+      "Brian Kingsbury",
+      "Kailash Gopalakrishnan"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07882v1",
+    "url": "http://arxiv.org/abs/2206.07882v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1610.00031v1",
+    "title": "Discriminating Similar Languages: Evaluations and Explorations",
+    "abstract": "We present an analysis of the performance of machine learning classifiers on discriminating between similar languages and language varieties. We carried out a number of experiments using the results of the two editions of the Discriminating between Similar Languages (DSL) shared task. We investigate the progress made between the two tasks, estimate an upper bound on possible performance using ensemble and oracle combination, and provide learning curves to help us understand which languages are more challenging. A number of difficult sentences are identified and investigated further with human annotation.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Cyril Goutte",
+      "Serge Léger",
+      "Shervin Malmasi",
+      "Marcos Zampieri"
+    ],
+    "doi": null,
+    "arxiv_id": "1610.00031v1",
+    "url": "http://arxiv.org/abs/1610.00031v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:hyde",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.17811v1",
+    "title": "Are Compressed Language Models Less Subgroup Robust?",
+    "abstract": "To reduce the inference cost of large language models, model compression is increasingly used to create smaller scalable models. However, little is known about their robustness to minority subgroups defined by the labels and attributes of a dataset. In this paper, we investigate the effects of 18 different compression methods and settings on the subgroup robustness of BERT language models. We show that worst-group performance does not depend on model size alone, but also on the compression method used. Additionally, we find that model compression does not always worsen the performance on minority subgroups. Altogether, our analysis serves to further research into the subgroup robustness of model compression.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Leonidas Gee",
+      "Andrea Zugarini",
+      "Novi Quadrianto"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.17811v1",
+    "url": "http://arxiv.org/abs/2403.17811v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.02228v1",
+    "title": "Unforgettable Generalization in Language Models",
+    "abstract": "When language models (LMs) are trained to forget (or \"unlearn'') a skill, how precisely does their behavior change? We study the behavior of transformer LMs in which tasks have been forgotten via fine-tuning on randomized labels. Such LMs learn to generate near-random predictions for individual examples in the \"training'' set used for forgetting. Across tasks, however, LMs exhibit extreme variability in whether LM predictions change on examples outside the training set. In some tasks (like entailment classification), forgetting generalizes robustly, and causes models to produce uninformative predictions on new task instances; in other tasks (like physical commonsense reasoning and scientific question answering) forgetting affects only the training examples, and models continue to perform the \"forgotten'' task accurately even for examples very similar to those that appeared in the training set. Dataset difficulty is not predictive of whether a behavior can be forgotten; instead, generalization in forgetting is (weakly) predicted by the confidence of LMs' initial task predictions and the variability of LM representations of training data, with low confidence and low variability both associated with greater generalization. Perhaps most surprisingly, random-label forgetting appears to be somewhat insensitive to the contents of the training set: for example, models trained on science questions with random labels continue to answer other science questions accurately, but begin to produce random labels on entailment classification tasks. Finally, we show that even generalizable forgetting is shallow: linear probes trained on LMs' representations can still perform tasks reliably after forgetting. Our results highlight the difficulty and unpredictability of performing targeted skill removal from models via fine-tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Eric Zhang",
+      "Leshem Chosen",
+      "Jacob Andreas"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.02228v1",
+    "url": "http://arxiv.org/abs/2409.02228v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.06653v1",
+    "title": "Improving Block-Wise LLM Quantization by 4-bit Block-Wise Optimal Float (BOF4): Analysis and Variations",
+    "abstract": "Large language models (LLMs) demand extensive memory capacity during both fine-tuning and inference. To enable memory-efficient fine-tuning, existing methods apply block-wise quantization techniques, such as NF4 and AF4, to the network weights. We show that these quantization techniques incur suboptimal quantization errors. Therefore, as a first novelty, we propose an optimization approach for block-wise quantization. Using this method, we design a family of quantizers named 4-bit block-wise optimal float (BOF4), which consistently reduces the quantization error compared to both baseline methods. We provide both a theoretical and a data-driven solution for the optimization process and prove their practical equivalence. Secondly, we propose a modification to the employed normalization method based on the signed absolute block maximum (BOF4-S), enabling further reduction of the quantization error and empirically achieving less degradation in language modeling performance. Thirdly, we explore additional variations of block-wise quantization methods applied to LLMs through an experimental study on the importance of accurately representing zero and large-amplitude weights on the one hand, and optimization towards various error metrics on the other hand. Lastly, we introduce a mixed-precision quantization strategy dubbed outlier-preserving quantization (OPQ) to address the distributional mismatch induced by outlier weights in block-wise quantization. By storing outlier weights in 16-bit precision (OPQ) while applying BOF4-S, we achieve top performance among 4-bit block-wise quantization techniques w.r.t. perplexity.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Patrick Blumenberg",
+      "Thomas Graave",
+      "Tim Fingscheidt"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.06653v1",
+    "url": "http://arxiv.org/abs/2505.06653v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.13331v2",
+    "title": "Qrazor: Reliable and Effortless 4-bit LLM Quantization by Significant Data Razoring",
+    "abstract": "Large-scale language models (LLMs) excel in language processing tasks but face deployment challenges due to high memory and computational demands. While low-bit quantization, such as 4-bit techniques, offers a potential solution, these methods often suffer from significant accuracy loss or require considerable effort for implementation such as reordering, rotation, etc. To address these challenges, we propose QRazor, a simple yet effective quantization scheme that enables 4-bit quantization of weights, activations, and KV cache in transformer-based LLMs. QRazor operates in two stages: first, quantizing data using 8 or 16-bit integers as a basis with absolute max scaling to preserve accuracy close to full-precision models, and second, compressing the quantized data to 4-bit using our significant data razoring (SDR) technique, which retains only the four most salient bits. Without any additional requirment of fine-tuning or additional training, QRazor achieves performance similar or better compared to state-of-the-art in 4-bit quantization method, surpassing Smoothquant and QLLM by over 12 points and Quarot(RTN) by more than 2.9 points in zero-shot reasoning task accuracy on the LLaMA2-7B model. Additionally, we introduce an integer-based arithmetic unit optimized for QRazor, allowing direct low-precision operations on SDR data without decompression.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dongyoung Lee",
+      "Seungkyu Choi",
+      "Ik Joon Chang"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.13331v2",
+    "url": "http://arxiv.org/abs/2501.13331v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.08692v2",
+    "title": "AAAC: Activation-Aware Adaptive Codebooks for 4-bit LLM Weight Quantization",
+    "abstract": "Post-training weight-only quantization to 4 bits is widely used to reduce the memory and compute costs of large language model inference. Existing PTQ methods, such as AWQ and GPTQ, improve how weights are mapped onto a fixed 4-bit grid through scaling, clipping, or error compensation. To further improve accuracy, methods such as OmniQuant and QuIP\\# uses gradient-assisted algorithms at the cost of hours of quantization time. In this work, we propose AAAC (Activation-Aware Adaptive Codebooks), a lightweight method for 4-bit LLM weight quantization. AAAC replaces the fixed scalar codebook used in standard quantization with two small learned scalar codebooks (64 bytes) per layer. Each group of weights selects the codebook that minimizes activation-weighted reconstruction error, encoding the choice in the unused sign bit of the group's positive scale and adding zero storage overhead. AAAC completes in 3--30 minutes on a single GPU, and adds no memory beyond the model itself. We evaluate against AWQ, GPTQ, IF4, GPTVQ, OmniQuant, SqueezeLLM, and QuIP\\# across model families. AAAC outperforms baselines at orders-of-magnitude less quantization time.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Beshr IslamBouli",
+      "David Jin"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.08692v2",
+    "url": "http://arxiv.org/abs/2605.08692v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.07654v1",
+    "title": "MergeQuant: Accurate 4-bit Static Quantization of Large Language Models by Channel-wise Calibration",
+    "abstract": "Quantization has been widely used to compress and accelerate inference of large language models (LLMs). Existing methods focus on exploring the per-token dynamic calibration to ensure both inference acceleration and model accuracy under 4-bit quantization. However, in autoregressive generation inference of long sequences, the overhead of repeated dynamic quantization and dequantization steps becomes considerably expensive. In this work, we propose MergeQuant, an accurate and efficient per-channel static quantization framework. MergeQuant integrates the per-channel quantization steps with the corresponding scalings and linear mappings through a Quantization Step Migration (QSM) method, thereby eliminating the quantization overheads before and after matrix multiplication. Furthermore, in view of the significant differences between the different channel ranges, we propose dimensional reconstruction and adaptive clipping to address the non-uniformity of quantization scale factors and redistribute the channel variations to the subsequent modules to balance the parameter distribution under QSM. Within the static quantization setting of W4A4, MergeQuant reduces the accuracy gap on zero-shot tasks compared to FP16 baseline to 1.3 points on Llama-2-70B model. On Llama-2-7B model, MergeQuant achieves up to 1.77x speedup in decoding, and up to 2.06x speedup in end-to-end compared to FP16 baseline.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jinguang Wang",
+      "Jingyu Wang",
+      "Haifeng Sun",
+      "Tingting Yang",
+      "Zirui Zhuang",
+      "Wanyi Ning",
+      "Yuexi Yin",
+      "Qi Qi",
+      "Jianxin Liao"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.07654v1",
+    "url": "http://arxiv.org/abs/2503.07654v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1610.00030v1",
+    "title": "Modeling Language Change in Historical Corpora: The Case of Portuguese",
+    "abstract": "This paper presents a number of experiments to model changes in a historical Portuguese corpus composed of literary texts for the purpose of temporal text classification. Algorithms were trained to classify texts with respect to their publication date taking into account lexical variation represented as word n-grams, and morphosyntactic variation represented by part-of-speech (POS) distribution. We report results of 99.8% accuracy using word unigram features with a Support Vector Machines classifier to predict the publication date of documents in time intervals of both one century and half a century. A feature analysis is performed to investigate the most informative features for this task and how they are linked to language change.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Marcos Zampieri",
+      "Shervin Malmasi",
+      "Mark Dras"
+    ],
+    "doi": null,
+    "arxiv_id": "1610.00030v1",
+    "url": "http://arxiv.org/abs/1610.00030v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:original_clean",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.15952v4",
+    "title": "4-bit Conformer with Native Quantization Aware Training for Speech Recognition",
+    "abstract": "Reducing the latency and model size has always been a significant research problem for live Automatic Speech Recognition (ASR) application scenarios. Along this direction, model quantization has become an increasingly popular approach to compress neural networks and reduce computation cost. Most of the existing practical ASR systems apply post-training 8-bit quantization. To achieve a higher compression rate without introducing additional performance regression, in this study, we propose to develop 4-bit ASR models with native quantization aware training, which leverages native integer operations to effectively optimize both training and inference. We conducted two experiments on state-of-the-art Conformer-based ASR models to evaluate our proposed quantization technique. First, we explored the impact of different precisions for both weight and activation quantization on the LibriSpeech dataset, and obtained a lossless 4-bit Conformer model with 5.8x size reduction compared to the float32 model. Following this, we for the first time investigated and revealed the viability of 4-bit quantization on a practical ASR system that is trained with large-scale datasets, and produced a lossless Conformer ASR model with mixed 4-bit and 8-bit weights that has 5x size reduction compared to the float32 model.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shaojin Ding",
+      "Phoenix Meadowlark",
+      "Yanzhang He",
+      "Lukasz Lew",
+      "Shivani Agrawal",
+      "Oleg Rybakov"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.15952v4",
+    "url": "http://arxiv.org/abs/2203.15952v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.13040v1",
+    "title": "SpeechPrompt: Prompting Speech Language Models for Speech Processing Tasks",
+    "abstract": "Prompting has become a practical method for utilizing pre-trained language models (LMs). This approach offers several advantages. It allows an LM to adapt to new tasks with minimal training and parameter updates, thus achieving efficiency in both storage and computation. Additionally, prompting modifies only the LM's inputs and harnesses the generative capabilities of language models to address various downstream tasks in a unified manner. This significantly reduces the need for human labor in designing task-specific models. These advantages become even more evident as the number of tasks served by the LM scales up. Motivated by the strengths of prompting, we are the first to explore the potential of prompting speech LMs in the domain of speech processing. Recently, there has been a growing interest in converting speech into discrete units for language modeling. Our pioneer research demonstrates that these quantized speech units are highly versatile within our unified prompting framework. Not only can they serve as class labels, but they also contain rich phonetic information that can be re-synthesized back into speech signals for speech generation tasks. Specifically, we reformulate speech processing tasks into speech-to-unit generation tasks. As a result, we can seamlessly integrate tasks such as speech classification, sequence generation, and speech generation within a single, unified prompting framework. The experiment results show that the prompting method can achieve competitive performance compared to the strong fine-tuning method based on self-supervised learning models with a similar number of trainable parameters. The prompting method also shows promising results in the few-shot setting. Moreover, with the advanced speech LMs coming into the stage, the proposed prompting framework attains great potential.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Kai-Wei Chang",
+      "Haibin Wu",
+      "Yu-Kai Wang",
+      "Yuan-Kuei Wu",
+      "Hua Shen",
+      "Wei-Cheng Tseng",
+      "Iu-thing Kang",
+      "Shang-Wen Li",
+      "Hung-yi Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.13040v1",
+    "url": "http://arxiv.org/abs/2408.13040v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.09977v1",
+    "title": "Fast Vocabulary Transfer for Language Model Compression",
+    "abstract": "Real-world business applications require a trade-off between language model performance and size. We propose a new method for model compression that relies on vocabulary transfer. We evaluate the method on various vertical domains and downstream tasks. Our results indicate that vocabulary transfer can be effectively used in combination with other compression techniques, yielding a significant reduction in model size and inference time while marginally compromising on performance.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Leonidas Gee",
+      "Andrea Zugarini",
+      "Leonardo Rigutini",
+      "Paolo Torroni"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.09977v1",
+    "url": "http://arxiv.org/abs/2402.09977v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1911.02079v1",
+    "title": "Post-Training 4-bit Quantization on Embedding Tables",
+    "abstract": "Continuous representations have been widely adopted in recommender systems where a large number of entities are represented using embedding vectors. As the cardinality of the entities increases, the embedding components can easily contain millions of parameters and become the bottleneck in both storage and inference due to large memory consumption. This work focuses on post-training 4-bit quantization on the continuous embeddings. We propose row-wise uniform quantization with greedy search and codebook-based quantization that consistently outperforms state-of-the-art quantization approaches on reducing accuracy degradation. We deploy our uniform quantization technique on a production model in Facebook and demonstrate that it can reduce the model size to only 13.89% of the single-precision version while the model quality stays neutral.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Hui Guan",
+      "Andrey Malevich",
+      "Jiyan Yang",
+      "Jongsoo Park",
+      "Hector Yuen"
+    ],
+    "doi": null,
+    "arxiv_id": "1911.02079v1",
+    "url": "http://arxiv.org/abs/1911.02079v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.16989v3",
+    "title": "PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models",
+    "abstract": "Post-training quantization (PTQ) of large language models (LLMs) to extremely low bit-widths remains challenging due to the fundamental trade-off between computational efficiency and representational capacity. While existing ultra-low-bit methods rely on binary approximations or quantization-aware training(QAT), they often suffer from either limited representational capacity or huge training resource overhead. We introduce PTQ to Trit-Planes (PTQTP), a structured PTQ framework that decomposes weight matrices into dual ternary {-1, 0, 1} trit-planes. This approach achieves multiplication-free additive inference by decoupling weights into discrete topology (trit-planes) and continuous magnitude (scales), effectively enabling high-fidelity sparse approximation. PTQTP provides: (1) a theoretically grounded progressive approximation algorithm ensuring global weight consistency; (2) model-agnostic deployment without architectural modifications; and (3) uniform ternary operations that eliminate mixed-precision overhead. Comprehensive experiments on LLaMA3.x and Qwen3 (0.6B-70B) demonstrate that PTQTP significantly outperforms sub-4bit PTQ methods on both language reasoning tasks and mathematical reasoning as well as coding. PTQTP rivals the 1.58-bit QAT performance while requiring only single-hour quantization compared to 10-14 GPU days for training-based methods, and the end-to-end inference speed achieves 4.63$\\times$ faster than the FP16 baseline model, establishing a new and practical solution for efficient LLM deployment in resource-constrained environments. Code will available at https://github.com/HeXiao-55/PTQTP.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "He Xiao",
+      "Runming Yang",
+      "Qingyao Yang",
+      "Wendong Xu",
+      "Zhen Li",
+      "Yupeng Su",
+      "Zhengwu Liu",
+      "Hongxia Yang",
+      "Ngai Wong"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.16989v3",
+    "url": "http://arxiv.org/abs/2509.16989v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.03536v1",
+    "title": "Pareto-Optimal Quantized ResNet Is Mostly 4-bit",
+    "abstract": "Quantization has become a popular technique to compress neural networks and reduce compute cost, but most prior work focuses on studying quantization without changing the network size. Many real-world applications of neural networks have compute cost and memory budgets, which can be traded off with model quality by changing the number of parameters. In this work, we use ResNet as a case study to systematically investigate the effects of quantization on inference compute cost-quality tradeoff curves. Our results suggest that for each bfloat16 ResNet model, there are quantized models with lower cost and higher accuracy; in other words, the bfloat16 compute cost-quality tradeoff curve is Pareto-dominated by the 4-bit and 8-bit curves, with models primarily quantized to 4-bit yielding the best Pareto curve. Furthermore, we achieve state-of-the-art results on ImageNet for 4-bit ResNet-50 with quantization-aware training, obtaining a top-1 eval accuracy of 77.09%. We demonstrate the regularizing effect of quantization by measuring the generalization gap. The quantization method we used is optimized for practicality: It requires little tuning and is designed with hardware capabilities in mind. Our work motivates further research into optimal numeric formats for quantization, as well as the development of machine learning accelerators supporting these formats. As part of this work, we contribute a quantization library written in JAX, which is open-sourced at https://github.com/google-research/google-research/tree/master/aqt.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "AmirAli Abdolrashidi",
+      "Lisa Wang",
+      "Shivani Agrawal",
+      "Jonathan Malmaud",
+      "Oleg Rybakov",
+      "Chas Leichner",
+      "Lukasz Lew"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.03536v1",
+    "url": "http://arxiv.org/abs/2105.03536v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.16299v1",
+    "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+    "abstract": "Emergent Large Language Models (LLMs) use their extraordinary performance and powerful deduction capacity to discern from traditional language models. However, the expenses of computational resources and storage for these LLMs are stunning, quantization then arises as a trending conversation. To address accuracy decay caused by quantization, two streams of works in post-training quantization methods stand out. One uses other weights to compensate existing quantization error, while the other transfers the quantization difficulty to other parts in the model. Combining both merits, we introduce Learnable Singular value Increment (LSI) as an advanced solution. LSI uses Singular Value Decomposition to extract singular values of the weights and make them learnable to help weights compensate each other conditioned on activation. Incorporating LSI with existing techniques, we achieve state-of-the-art performance in diverse quantization settings, no matter in weight-only, weight-activation or extremely low bit scenarios. By unleashing the potential of LSI, efficient finetuning on quantized model is no longer a prohibitive problem.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Yuting Xiao",
+      "Zhiyuan Xiang",
+      "Ruiting Dai",
+      "Jun Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.16299v1",
+    "url": "http://arxiv.org/abs/2406.16299v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.13369v2",
+    "title": "Clinical information extraction for Low-resource languages with Few-shot learning using Pre-trained language models and Prompting",
+    "abstract": "Automatic extraction of medical information from clinical documents poses several challenges: high costs of required clinical expertise, limited interpretability of model predictions, restricted computational resources and privacy regulations. Recent advances in domain-adaptation and prompting methods showed promising results with minimal training data using lightweight masked language models, which are suited for well-established interpretability methods. We are first to present a systematic evaluation of these methods in a low-resource setting, by performing multi-class section classification on German doctor's letters. We conduct extensive class-wise evaluations supported by Shapley values, to validate the quality of our small training data set and to ensure the interpretability of model predictions. We demonstrate that a lightweight, domain-adapted pretrained model, prompted with just 20 shots, outperforms a traditional classification model by 30.5% accuracy. Our results serve as a process-oriented guideline for clinical information extraction projects working with low-resource.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Phillip Richter-Pechanski",
+      "Philipp Wiesenbach",
+      "Dominic M. Schwab",
+      "Christina Kiriakou",
+      "Nicolas Geis",
+      "Christoph Dieterich",
+      "Anette Frank"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.13369v2",
+    "url": "http://arxiv.org/abs/2403.13369v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.08480v1",
+    "title": "Soft Inductive Bias Approach via Explicit Reasoning Perspectives in Inappropriate Utterance Detection Using Large Language Models",
+    "abstract": "Recent incidents in certain online games and communities, where anonymity is guaranteed, show that unchecked inappropriate remarks frequently escalate into verbal abuse and even criminal behavior, raising significant social concerns. Consequently, there is a growing need for research on techniques that can detect inappropriate utterances within conversational texts to help build a safer communication environment. Although large-scale language models trained on Korean corpora and chain-of-thought reasoning have recently gained attention, research applying these approaches to inappropriate utterance detection remains limited. In this study, we propose a soft inductive bias approach that explicitly defines reasoning perspectives to guide the inference process, thereby promoting rational decision-making and preventing errors that may arise during reasoning. We fine-tune a Korean large language model using the proposed method and conduct both quantitative performance comparisons and qualitative evaluations across different training strategies. Experimental results show that the Kanana-1.5 model achieves an average accuracy of 87.0046, improving by approximately 3.89 percent over standard supervised learning. These findings indicate that the proposed method goes beyond simple knowledge imitation by large language models and enables more precise and consistent judgments through constrained reasoning perspectives, demonstrating its effectiveness for inappropriate utterance detection.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ju-Young Kim",
+      "Ji-Hong Park",
+      "Se-Yeon Lee",
+      "Sujin Park",
+      "Gun-Woo Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.08480v1",
+    "url": "http://arxiv.org/abs/2512.08480v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

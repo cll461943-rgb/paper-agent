@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/1911.03918v2",
+  "title": "Improving BERT Fine-tuning with Embedding Normalization",
+  "abstract": "Large pre-trained sentence encoders like BERT start a new chapter in natural language processing. A common practice to apply pre-trained BERT to sequence classification tasks (e.g., classification of sentences or sentence pairs) is by feeding the embedding of [CLS] token (in the last layer) to a task-specific classification layer, and then fine tune the model parameters of BERT and classifier jointly. In this paper, we conduct systematic analysis over several sequence classification datasets to examine the embedding values of [CLS] token before the fine tuning phase, and present the biased embedding distribution issue---i.e., embedding values of [CLS] concentrate on a few dimensions and are non-zero centered. Such biased embedding brings challenge to the optimization process during fine-tuning as gradients of [CLS] embedding may explode and result in degraded model performance. We further propose several simple yet effective normalization methods to modify the [CLS] embedding during the fine-tuning. Compared with the previous practice, neural classification model with the normalized embedding shows improvements on several text classification tasks, demonstrates the effectiveness of our method.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Wenxuan Zhou",
+    "Junyi Du",
+    "Xiang Ren"
+  ],
+  "doi": null,
+  "arxiv_id": "1911.03918v2",
+  "url": "http://arxiv.org/abs/1911.03918v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

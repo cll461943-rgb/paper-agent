@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:40644996",
+  "title": "Outlier-trimmed dual-interval smoothing loss for sample selection in learning with noisy labels.",
+  "abstract": "Noisy labels are ubiquitous in real-world datasets, posing substantial risks of model overfitting, especially for Deep Neural Networks (DNNs) with high parameter complexity. Sample selection, a popular method for Learning with Noisy Labels (LNL), often boosts the DNNs' performance by identifying small-loss and large-loss data as clean and noisy samples, respectively. However, the instability of loss values during iterative optimization often leads to selection errors, including both the erroneous exclusion of clean samples and the retention of noisy instances. To address these issues, we propose a novel loss function called Outlier-Trimmed Dual-Interval Smoothing (OTDIS) loss, designed to improve sample selection robustness while mitigating overfitting to label noise. OTDIS addresses loss instability through dual-interval estimation that integrates temporal dynamics and sample distributions to redefine more accurate noise levels. Specifically, we investigate how outlier losses in early training stages affect sample selection reliability. Building on this insight, we first perform temporal smoothing using outlier-trimmed confidence interval lower bounds, thereby improving temporal robustness in sample selection. Next, we implement sample-space smoothing through clustering-based regrouping to achieve distributionally stable loss estimates. Furthermore, we develop a dual-polarity training objective by incorporating negative loss as a penalty and establish two learning frameworks based on OTDIS loss, i.e., common and semi-supervised, for scenarios with different resource constraints. Experimental results demonstrate that our method significantly improves sample selection accuracy and achieves superior classification performance on both MNIST and CIFAR datasets with synthetic noise and real-world noisy datasets such as CIFAR-N, ANIMAL-10N and WebVision. Code is available at https://github.com/SenyuHou/OTDIS.",
+  "year": 2025,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Senyu Hou",
+    "Maolong Xu",
+    "Gaoxia Jiang",
+    "Yaqing Guo",
+    "Wenjian Wang"
+  ],
+  "doi": "10.1016/j.neunet.2025.107827",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40644996/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40644996"
+  }
+}

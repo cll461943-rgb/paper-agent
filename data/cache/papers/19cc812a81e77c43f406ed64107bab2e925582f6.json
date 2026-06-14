@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42182473",
+  "title": "GatorDuo: Global-Consistency Dual-Graph Refinement With Pseudo-Label Agreement for Spatial Transcriptomics.",
+  "abstract": "Spatial transcriptomics (ST) measures gene expression together with spatial coordinates, enabling spatial domain identification of coherent tissue regions. Many recent approaches rely on graph-based modeling to combine spatial neighborhoods and transcriptomic (gene-expression) similarity, yet neighborhood construction is often unreliable under sparsity and technical noise. As a result, spurious cross-domain shortcut edges can persist in static graphs and propagate misleading signals during message passing, ultimately blurring domain boundaries and weakening cluster separability. In this paper, we propose GatorDuo, a topology-aware dual-graph contrastive self-supervised framework for robust spatial domain identification that couples gene-expression similarity with spatial proximity through complementary neighborhood graphs. GatorDuo introduces global-consistency-based graph refinement that uses a pseudo-label agreement mask to suppress cross-domain shortcut edges in both views, thus stabilizing neighborhood topology for representation learning. To avoid manual tuning of domain resolution, GatorDuo further employs a contextual bandit reinforcement-learning strategy to adaptively select the clustering granularity (the number of clusters) used for refinement. The refined view-specific embeddings are integrated via a hybrid-routing Mixture-of-Experts (MoE) module to generate a unified embedding, optimized with contrastive objectives augmented by an MoE-alignment term. Across eight public benchmarks spanning sequencing- and imaging-based ST at spot and single-cell resolution, and compared with ten representative baselines, GatorDuo consistently delivers strong and robust spatial domain identification performance across multiple clustering metrics, while yielding informative unified embeddings that can support downstream biological analyses.",
+  "year": 2026,
+  "venue": "bioRxiv : the preprint server for biology",
+  "authors": [
+    "Zhenhao Zhang",
+    "Antonio Jimeno Yepes",
+    "Jiang Bian",
+    "Fuyi Li",
+    "Yuxi Liu"
+  ],
+  "doi": "10.64898/2026.05.10.724039",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42182473/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:title_like",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42182473"
+  }
+}

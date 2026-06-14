@@ -1,0 +1,38 @@
+{
+  "paper_id": "http://arxiv.org/abs/2508.03332v2",
+  "title": "Exploring Layer-wise Information Effectiveness for Post-Training Quantization in Small Language Models",
+  "abstract": "Large language models with billions of parameters are often over-provisioned: many layers contribute little unique information yet dominate the memory and energy footprint during inference. We present LieQ Layer-wise information effectiveness Quantization, a hardware-native, metric-driven post-training quantization framework that addresses the critical challenge of maintaining accuracy in sub-8B models, model parameters less than 8B, under extreme low-bit compression. LieQ keeps uniform bit-width within each layer while mixing precision across layers, preserving standard multiplication kernels and avoiding irregular memory access, codebooks, or irregular formats at inference time. Our method uncovers a strong correlation between layer-wise functional saliency and representational compactness, revealing that layers with higher training-induced energy concentration are functionally irreplaceable. Leveraging this insight, we propose a purely geometry-driven sensitivity proxy that enables automatic bit-width allocation under a target average-bit budget without expensive gradient updates or inference-based perplexity probing. At sub 2-bit, LieQ consistently reduces the large accuracy gap typically observed for naive 2-bit baselines on Qwen3 and LLaMA3.x families, while retaining standard-kernel efficiency. These properties make LieQ a practical path toward deploying small language models on resource-constrained edge devices. Code will available here: https://github.com/HeXiao-55/LieQ-official.git.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "He Xiao",
+    "Qingyao Yang",
+    "Dirui Xie",
+    "Wendong Xu",
+    "Zunhai Su",
+    "Runming yang",
+    "Wenyong Zhou",
+    "Haobo Liu",
+    "Zhengwu Liu",
+    "Ngai Wong"
+  ],
+  "doi": null,
+  "arxiv_id": "2508.03332v2",
+  "url": "http://arxiv.org/abs/2508.03332v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:query2doc",
+    "route:hyde",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

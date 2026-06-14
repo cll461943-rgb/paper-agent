@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2505.02994v1",
+  "title": "Including Bloom Filters in Bottom-up Optimization",
+  "abstract": "Bloom filters are used in query processing to perform early data reduction and improve query performance. The optimal query plan may be different when Bloom filters are used, indicating the need for Bloom filter-aware query optimization. To date, Bloom filter-aware query optimization has only been incorporated in a top-down query optimizer and limited to snowflake queries. In this paper, we show how Bloom filters can be incorporated in a bottom-up cost-based query optimizer. We highlight the challenges in limiting optimizer search space expansion, and offer an efficient solution. We show that including Bloom filters in cost-based optimization can lead to better join orders with effective predicate transfer between operators. On a 100 GB instance of the TPC-H database, our approach achieved a 32.8% further reduction in latency for queries involving Bloom filters, compared to the traditional approach of adding Bloom filters in a separate post-optimization step. Our method applies to all query types, and we provide several heuristics to balance limited increases in optimization time against improved query latency.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Tim Zeyl",
+    "Qi Cheng",
+    "Reza Pournaghi",
+    "Jason Lam",
+    "Weicheng Wang",
+    "Calvin Wong",
+    "Chong Chen",
+    "Per-Ake Larson"
+  ],
+  "doi": null,
+  "arxiv_id": "2505.02994v1",
+  "url": "http://arxiv.org/abs/2505.02994v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

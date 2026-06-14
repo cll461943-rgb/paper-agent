@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:40031654",
+  "title": "Latency Adjustable Transformer Encoder for Language Understanding.",
+  "abstract": "Adjusting the latency, power, and accuracy of natural language understanding models is a desirable objective of an efficient architecture. This article proposes an efficient Transformer architecture that adjusts the inference computational cost adaptively with a desired inference latency speedup. In the fine-tuning phase, the proposed method detects less important hidden sequence elements (word-vectors) and eliminates them in each encoder layer using a proposed attention context contribution (ACC) metric. After the fine-tuning phase, with the novel offline-tuning property, the inference latency of the model can be adjusted in a wide range of inference speedup selections without any further training. Extensive experiments reveal that most word-vectors in higher Transformer layers contribute less to subsequent layers, allowing their removal to improve inference latency. Experimental results on various language understanding, text generation, and instruction tuning tasks and benchmarks demonstrate the approach's effectiveness across diverse datasets, with minimal impact on the input's global context. The technique improves the time-to-first-token (TTFT) of Llama3 by up to $2.9\\times $ , with a minor performance drop. The suggested approach posits that in large language models (LLMs), although the complete network is necessary for training, it can be truncated during the fine-tuning phase.",
+  "year": 2025,
+  "venue": "IEEE transactions on neural networks and learning systems",
+  "authors": [
+    "Sajjad Kachuee",
+    "Mohammad Sharifkhani"
+  ],
+  "doi": "10.1109/TNNLS.2025.3539727",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40031654/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40031654"
+  }
+}

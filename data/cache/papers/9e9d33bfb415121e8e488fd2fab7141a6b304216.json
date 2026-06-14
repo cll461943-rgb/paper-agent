@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2504.20834v4",
+  "title": "Token-Efficient RL for LLM Reasoning",
+  "abstract": "We propose reinforcement learning (RL) strategies tailored for reasoning in large language models (LLMs) under strict memory and compute limits, with a particular focus on compatibility with LoRA fine-tuning. Building on early policy gradient methods with baseline subtraction, we design critic-free methods that operate on a small, informative subset of output tokens to reduce memory usage and stabilize training. We introduce S-GRPO, a stochastic variant of Group Relative Policy Optimization, and T-SPMO, a token-level prefix matching approach for fine-grained credit assignment. Applied to Qwen2-1.5B, our methods raise accuracy on the SVAMP benchmark from 46% to over 70% and show strong performance on multi-digit multiplication. Surprisingly, full-token GRPO under LoRA fails to improve over the base model, suggesting that selective token-level optimization may act as an implicit regularizer in low-parameter training regimes.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Alan Lee",
+    "Harry Tong"
+  ],
+  "doi": null,
+  "arxiv_id": "2504.20834v4",
+  "url": "http://arxiv.org/abs/2504.20834v4",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:title_like",
+    "route:query2doc",
+    "route:hyde",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

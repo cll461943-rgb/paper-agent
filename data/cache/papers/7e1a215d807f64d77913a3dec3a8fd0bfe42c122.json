@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:40899548",
+  "title": "Medical Entity Linking in Low-Resource Settings with Fine-Tuning-Free LLMs.",
+  "abstract": "Medical entity linking is an important task in biomedical natural language processing, aiming to align textual mentions of medical concepts with standardized concepts in ontologies. Most existing approaches rely on supervised models or domain-specific embeddings, which require large datasets and significant computational resources. The objective of this work is (1) to investigate the effectiveness of large language models (LLMs) in improving both candidate generation and disambiguation for medical entity linking through synonym expansion and in-context learning, and (2) to evaluate this approach against traditional string-matching and supervised methods. We propose a simple yet effective approach that combines string matching with an LLM through in-context learning. Our method avoids fine-tuning and minimizes annotation requirements, making it suitable for low-resource settings. Our system enhances fuzzy string matching by expanding mention spans with LLM-generated synonyms during candidate generation. UMLS entity names, aliases, and synonyms are indexed in Elasticsearch, and candidates are retrieved using both the original span and generated variants. Disambiguation is performed using an LLM with few-shot prompting to select the correct entity from the candidate list. Evaluated on the MedMentions dataset, our approach achieves 56% linking accuracy, outperforming baseline string matching but falling behind supervised learning methods. The candidate generation component reaches 70% recall@5, while the disambiguation step achieves 80% accuracy when the correct entity is among the top five. We also observe that LLM-generated descriptions do not always improve accuracy. Our results demonstrate that LLMs have the potential to support medical entity linking in low-resource settings. Although our method is still outperformed by supervised models, it remains a lightweight alternative, requiring no fine-tuning or a large amount of annotated data. The approach is also adaptable to other domains and ontologies beyond biomedicine due to its flexible and domain-agnostic design.",
+  "year": 2025,
+  "venue": "Studies in health technology and informatics",
+  "authors": [
+    "Suteera Seeha",
+    "Martin Boeker",
+    "Luise Modersohn"
+  ],
+  "doi": "10.3233/SHTI251402",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40899548/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40899548"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.21472v3",
+  "title": "Stream3D: Sequential Multi-View 3D Generation via Evidential Memory",
+  "abstract": "View-conditioned 3D generators such as SAM 3D, TRELLIS, and Hunyuan3D produce high-quality object reconstructions from a single view, but real-world visual observation often arrives as long monocular streams. Naively applying these generators to each streaming frame independently leads to severe temporal inconsistency in the generated results. To address this problem, we propose Stream3D, the first training-free streaming mechanism that turns a frozen view-conditioned 3D generator into a streaming generator with constant cross-chunk memory. Stream3D achieves this by maintaining a compact evidential memory, which selectively caches the most informative historical frames based on a proposed evidence score mechanism. As the stream progresses, the memory dynamically updates to retain a fixed number of informative frames, preventing the memory footprint from growing linearly with sequence length. This also prevents degradation over long sequences and keeps the underlying generator completely unchanged without retraining, architectural modifications, or auxiliary losses. Evaluated on both realistic and synthetic streaming benchmarks, Stream3D outperforms latent-transport baselines, including KV-cache reuse and flow-based feature editing, across both photometric and geometric metrics. More details can be found at: https://stream-3d.github.io/stream3d.github.io/.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Kaichen Zhou",
+    "Zeyang Bai",
+    "Xinhai Chang",
+    "Mengyu Wang",
+    "Paul Liang",
+    "Fangneng Zhan"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.21472v3",
+  "url": "http://arxiv.org/abs/2605.21472v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

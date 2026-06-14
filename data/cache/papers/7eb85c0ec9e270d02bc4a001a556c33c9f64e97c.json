@@ -1,0 +1,49 @@
+{
+  "paper_id": "https://openalex.org/W4404849657",
+  "title": "Low-Bitwidth Floating Point Quantization for Efficient High-Quality Diffusion Models",
+  "abstract": "Diffusion models are emerging models that generate images by iteratively denoising random Gaussian noise using deep neural networks. These models typically exhibit high computational and memory demands, necessitating effective post-training quantization for high-performance inference. Recent works propose low-bitwidth (e.g., 8-bit or 4-bit) quantization for diffusion models, however 4-bit integer quantization typically results in low-quality images. We observe that on several widely used hardware platforms, there is little or no difference in compute capability between floating-point and integer arithmetic operations of the same bitwidth (e.g., 8-bit or 4-bit). Therefore, we propose an effective floating-point quantization method for diffusion models that provides better image quality compared to integer quantization methods. We employ a floating-point quantization method that was effective for other processing tasks, specifically computer vision and natural language tasks, and tailor it for diffusion models by integrating weight rounding learning during the mapping of the full-precision values to the quantized values in the quantization process. We comprehensively study integer and floating-point quantization methods in state-of-the-art diffusion models. Our floating-point quantization method not only generates higher-quality images than that of integer quantization methods, but also shows no noticeable degradation compared to full-precision models (32-bit floating-point), when both weights and activations are quantized to 8-bit floating-point values, while has minimal degradation with 4-bit weights and 8-bit activations. Additionally, we introduce a better methodology to evaluate quantization effects, highlighting shortcomings with existing output quality metrics and experimental methodologies. Finally, as an additional potential benefit, our floating-point quantization method increases model sparsity by an order of magnitude, enabling further optimization opportunities.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Cheng Chen",
+    "Christina Giannoula",
+    "Andreas Moshovos"
+  ],
+  "doi": "https://doi.org/10.1109/iiswc63097.2024.00025",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1109/iiswc63097.2024.00025",
+  "citation_count": 3,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Diffusion",
+      "Quality (philosophy)",
+      "Algorithm",
+      "Physics",
+      "Thermodynamics",
+      "Quantum mechanics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W4396696052"
+    ]
+  }
+}

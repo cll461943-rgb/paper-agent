@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2604.09737v1",
+  "title": "STaR-DRO: Stateful Tsallis Reweighting for Group-Robust Structured Prediction",
+  "abstract": "Structured prediction requires models to generate ontology-constrained labels, grounded evidence, and valid structure under ambiguity, label skew, and heterogeneous group difficulty. We present a two-part framework for controllable inference and robust fine-tuning. First, we introduce a task-agnostic prompting strategy that combines XML-based instruction structure, disambiguation rules, verification-style reasoning, schema constraints, and self-validation to address format drift, label ambiguity, evidence hallucination, and metadata-conditioned confusion in in-context structured generation. Second, we introduce STaR-DRO, a stateful robust optimization method for group heterogeneity. It combines Tsallis mirror descent with momentum-smoothed, centered group-loss signals and bounded excess-only multipliers so that only persistently hard groups above a neutral baseline are upweighted, concentrating learning where it is most needed while avoiding volatile, dense exponentiated-gradient reweighting and unnecessary loss from downweighting easier groups. We evaluate the combined framework on EPPC Miner, a benchmark for extracting hierarchical labels and evidence spans from patient-provider secure messages. Prompt engineering improves zero-shot by +15.44 average F1 across Code, Sub-code, and Span over four Llama models. Building on supervised fine-tuning, STaR-DRO further improves the hardest semantic decisions: on Llama-3.3-70B-Instruct, Code F1 rises from 79.24 to 81.47 and Sub-code F1 from 67.78 to 69.30, while preserving Span performance and reducing group-wise validation cross-entropy by up to 29.6% on the most difficult clinical categories. Because these rare and difficult groups correspond to clinically consequential communication behaviors, these gains are not merely statistical improvements: they directly strengthen communication mining reliability for patient-centered care analysis.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Samah Fodeh",
+    "Ganesh Puthiaraju",
+    "Elyas Irankhah",
+    "Linhai Ma",
+    "Srivani Talakokkul",
+    "Afshan Khan",
+    "Sreeraj Ramachandran",
+    "Jordan Alpert",
+    "Sarah Schellhorn"
+  ],
+  "doi": null,
+  "arxiv_id": "2604.09737v1",
+  "url": "http://arxiv.org/abs/2604.09737v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

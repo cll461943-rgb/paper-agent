@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:41305206",
+  "title": "Enhanced 3D Gaussian Splatting for Real-Scene Reconstruction via Depth Priors, Adaptive Densification, and Denoising.",
+  "abstract": "The application prospects of photorealistic 3D reconstruction are broad in smart cities, cultural heritage preservation, and related domains. However, existing methods face persistent challenges in balancing reconstruction accuracy, computational efficiency, and robustness, particularly in complex scenes characterized by reflective surfaces, vegetation, sparse viewpoints, or large-scale structures. In this study, an enhanced 3D Gaussian Splatting (3DGS) framework that integrates three key innovations is proposed: (i) a depth-aware regularization module that leverages metric depth priors from the pre-trained Depth-Anything V2 model, enabling geometrically informed optimization through a dynamically weighted hybrid loss; (ii) a gradient-driven adaptive densification mechanism that triggers Gaussian adjustments based on local gradient saliency, reducing redundant computation; and (iii) a neighborhood density-based floating artifact detection method that filters outliers using spatial distribution and opacity thresholds. Extensive evaluations are conducted across four diverse datasets-ranging from architectures, urban scenes, natural landscapes with water bodies, and long-range linear infrastructures. Our method achieves state-of-the-art performance in both reconstruction quality and efficiency, attaining a PSNR of 34.15 dB and SSIM of 0.9382 on medium-sized scenes, with real-time rendering speeds exceeding 170 FPS at a resolution of 1600 × 900. It demonstrates superior generalization on challenging materials such as water and foliage, while exhibiting reduced overfitting compared to baseline approaches. Ablation studies confirm the critical contributions of depth regularization and gradient-sensitive adaptation, with the latter improving training efficiency by 38% over depth supervision alone. Furthermore, we analyze the impact of input resolution and depth model selection, revealing non-trivial trade-offs between quantitative metrics and visual fidelity. While aggressive downsampling inflates PSNR and SSIM, it leads to loss of high-frequency detail; we identify 1/4-1/2 resolution scaling as an optimal balance for practical deployment. Among depth models, Vitb achieves the best reconstruction stability. Despite these advances, memory consumption remains a challenge in large-scale scenarios. Future work will focus on lightweight model design, efficient point cloud preprocessing, and dynamic memory management to enhance scalability for industrial applications.",
+  "year": 2025,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Haixing Shang",
+    "Mengyu Chen",
+    "Kenan Feng",
+    "Shiyuan Li",
+    "Zhiyuan Zhang",
+    "Songhua Xu",
+    "Chaofeng Ren",
+    "Jiangbo Xi"
+  ],
+  "doi": "10.3390/s25226999",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41305206/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41305206"
+  }
+}

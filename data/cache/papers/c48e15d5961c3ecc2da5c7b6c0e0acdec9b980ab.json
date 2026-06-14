@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2604.18117v1",
+  "title": "LoRaQ: Optimized Low Rank Approximation for 4-bit Quantization",
+  "abstract": "Post-training quantization (PTQ) is essential for deploying large diffusion transformers on resource-constrained hardware, but aggressive 4-bit quantization significantly degrades generative performance. Low-rank approximation methods have emerged as a promising solution by appending auxiliary linear branches to restore performance. However, current state-of-the-art approaches assume these branches must retain high precision (W16A16) and rely on heavy, data-dependent calibration for initialization. We challenge both limitations with LoRaQ (Low-Rank Approximated Quantization), a simple, data-free calibration approach that optimizes quantization error compensation. By overcoming the need for high-precision branches, LoRaQ enables the first fully sub-16 bit pipeline, allowing the low-rank branch itself to be quantized. We demonstrate that, at equal memory overhead, LoRaQ outperforms the state-of-the-art methods in their native implementations on Pixart-$Σ$ and SANA. We also analyze mixed-precision configurations, showing that setups such as W8A8, W6A6, and W4A8 for the low-rank branch, alongside a W4 main layer, yield superior results while maintaining a fully quantized architecture compatible with modern mixed-precision hardware.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Yann Bouquet",
+    "Alireza Khodamoradi",
+    "Sophie Yáng Shen",
+    "Kristof Denolf",
+    "Mathieu Salzmann"
+  ],
+  "doi": null,
+  "arxiv_id": "2604.18117v1",
+  "url": "http://arxiv.org/abs/2604.18117v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

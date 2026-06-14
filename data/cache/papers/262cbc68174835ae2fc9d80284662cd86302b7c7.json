@@ -1,0 +1,59 @@
+{
+  "paper_id": "https://openalex.org/W2259494520",
+  "title": "Formal verification of multimodal dialogs in pervasive environments",
+  "abstract": "Providing reliable and coherent interfaces to end-users in pervasive environments with a wealth of connected sensors and actuators is still an area with little to no support in terms of common methodologies and established standards. The wide range of diverse situations, in which interaction in these environments potentially takes place, prevents any single means of interaction to form a predominant approach. While one class of interaction devices, might be well suited in one given situation, it might be wholly inapplicable in another. Yet, users rightfully expect an interaction session to continue coherently when their situation calls for a change with regard to their means of interaction. The entailing classes of new requirements for user interfaces, such as distributed interaction logic, guaranteed coherence with regard to the state of the overall interaction and the necessity to effectively support multiple modalities as equals are addressed only insufficiently by the established approaches to model user interface that are popular today. Much research has already been conducted in the last 50 years to develop various conceptualizations applicable to model distributed, coherent, and / or multimodal interfaces, but so far this only lead to a plethora of isolated research prototypes and solutions to specific problems in the design space, with no solution having developed the inertia to succeed in establishing a permanent foothold in industry-supported, commercial end-user applications. While first applications are, indeed, starting to be commercialized, \\eg as seen on IFA 2015 and even earlier fairs, their lack of a standardized approach is still a serious obstacle to commodification: Having a BMW tell a Buderus central heating system that a user expects a warm living room in 30 minutes is appreciated, but the overall usefulness is diminished if one needs to change into the VW only to check on the contents of a Miele fridge, losing all interaction context in between. In this thesis, we will elaborate on an approach, recently recommended by the \"W3C Multimodal Interaction Working Group\", to express the interaction logic of user interfaces in pervasive environments as modality-agnostic, nested state-charts controlling modality-specific components. The major contribution is a description of an automated transformation from these state-charts, given in an XML dialect onto the input language of a model-checker. This allows an interface designer to formally guarantee certain behaviors of the state-charts and thereby properties of the interaction described within. This core contribution is evaluated by (i) identifying the subset of state-chart semantics applicable for formal verification, (ii) approaching a proof of correctness of the transformation via the official tests accompanying the state-chart description language and by (iii) showing applicability of the overall approach via transforming a non-trivial state-chart employed to describe the user interface of a commercial consumer product. Several smaller contributions of this thesis include (i) a proof of the Turing completeness of the employed state-chart semantics as well as the embedding of a push-down automaton, (ii) a transformation onto semantically equivalent state-machines in a slightly extended variant of the state-chart description language with (iii) a closed-form upper bound for the number of states in the state-machine (iv) and extensions to improve the applicability and expressiveness of the proposed state-chart formalism with regard to other established dialog modeling techniques. All of this is actually implemented in a platform-independent C++ state-chart interpreter, compliant to the respective W3C standards and accompanied by various tools available under a free open-source license. The interpreter is already used in commercial deployments of multimodal dialog systems and was submitted as part of the implementation and report plan for the respective W3C recommendation.",
+  "year": 2015,
+  "venue": "Technischen Universität Darmstadt",
+  "authors": [
+    "Stefan Radomski"
+  ],
+  "doi": "https://doi.org/10.26083/tuprints-00005184",
+  "arxiv_id": null,
+  "url": "http://tuprints.ulb.tu-darmstadt.de/view/person/Radomski=3AStefan=3A=3A.html>",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Human–computer interaction",
+      "Session (web analytics)",
+      "Modalities",
+      "Ubiquitous computing",
+      "Space (punctuation)",
+      "World Wide Web",
+      "Operating system",
+      "Social science",
+      "Sociology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2223525908",
+      "https://openalex.org/W2019217423",
+      "https://openalex.org/W2097008825",
+      "https://openalex.org/W130510833",
+      "https://openalex.org/W2044303677",
+      "https://openalex.org/W2165607772",
+      "https://openalex.org/W1984131332",
+      "https://openalex.org/W602778426",
+      "https://openalex.org/W2479081951",
+      "https://openalex.org/W1999386180",
+      "https://openalex.org/W845161543",
+      "https://openalex.org/W31494842",
+      "https://openalex.org/W2978665850",
+      "https://openalex.org/W2181904476",
+      "https://openalex.org/W71778537",
+      "https://openalex.org/W95466367",
+      "https://openalex.org/W1516687603",
+      "https://openalex.org/W1154757093",
+      "https://openalex.org/W2101517341",
+      "https://openalex.org/W1801944252"
+    ]
+  }
+}

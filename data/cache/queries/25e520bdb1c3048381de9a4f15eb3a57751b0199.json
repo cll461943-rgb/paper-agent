@@ -1,0 +1,827 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/1803.09050v3",
+    "title": "Learning to Reweight Examples for Robust Deep Learning",
+    "abstract": "Deep neural networks have been shown to be very powerful modeling tools for many supervised learning tasks involving complex input patterns. However, they can also easily overfit to training set biases and label noises. In addition to various regularizers, example reweighting algorithms are popular solutions to these problems, but they require careful tuning of additional hyperparameters, such as example mining schedules and regularization hyperparameters. In contrast to past reweighting methods, which typically consist of functions of the cost value of each example, in this work we propose a novel meta-learning algorithm that learns to assign weights to training examples based on their gradient directions. To determine the example weights, our method performs a meta gradient descent step on the current mini-batch example weights (which are initialized from zero) to minimize the loss on a clean unbiased validation set. Our proposed method can be easily implemented on any type of deep network, does not require any additional hyperparameter tuning, and achieves impressive performance on class imbalance and corrupted label problems where only a small amount of clean validation data is available.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Mengye Ren",
+      "Wenyuan Zeng",
+      "Bin Yang",
+      "Raquel Urtasun"
+    ],
+    "doi": null,
+    "arxiv_id": "1803.09050v3",
+    "url": "http://arxiv.org/abs/1803.09050v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06733v1",
+    "title": "Dynamic Loss-Based Sample Reweighting for Improved Large Language Model Pretraining",
+    "abstract": "Pretraining large language models (LLMs) on vast and heterogeneous datasets is crucial for achieving state-of-the-art performance across diverse downstream tasks. However, current training paradigms treat all samples equally, overlooking the importance or relevance of individual samples throughout the training process. Existing reweighting strategies, which primarily focus on group-level data importance, fail to leverage fine-grained instance-level information and do not adapt dynamically to individual sample importance as training progresses. In this paper, we introduce novel algorithms for dynamic, instance-level data reweighting aimed at improving both the efficiency and effectiveness of LLM pretraining. Our methods adjust the weight of each training sample based on its loss value in an online fashion, allowing the model to dynamically focus on more informative or important samples at the current training stage. In particular, our framework allows us to systematically devise reweighting strategies deprioritizing redundant or uninformative data, which we find tend to work best. Furthermore, we develop a new theoretical framework for analyzing the impact of loss-based reweighting on the convergence of gradient-based optimization, providing the first formal characterization of how these strategies affect convergence bounds. We empirically validate our approach across a spectrum of tasks, from pretraining 7B and 1.4B parameter LLMs to smaller-scale language models and linear regression problems, demonstrating that our loss-based reweighting approach can lead to faster convergence and significantly improved performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Daouda Sow",
+      "Herbert Woisetschläger",
+      "Saikiran Bulusu",
+      "Shiqiang Wang",
+      "Hans-Arno Jacobsen",
+      "Yingbin Liang"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06733v1",
+    "url": "http://arxiv.org/abs/2502.06733v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.12322v2",
+    "title": "Simultaneous reweighting of Transverse Momentum Dependent distributions",
+    "abstract": "The Bayesian reweighting procedure is extended to the case of multiple independent extractions of transverse momentum dependent parton distributions (TMDs). By exploiting the data on transverse single spin asymmetries, $A_N$, for inclusive pion production in polarized proton-proton collisions measured at RHIC, we perform a simultaneous reweighting of the quark Sivers, transversity and Collins TMD functions extracted from semi-inclusive deep inelastic scattering (SIDIS) and $e^+ e^-$ annihilation into hadron pairs. The impact of the implementation of the Soffer bound, as well as the differences between older and newer $A_N$ data, are investigated. The agreement with $A_N$ data at large-$x_F$ values, a kinematical region complementary to those explored in SIDIS measurements, is enhanced, improving the knowledge of the polarized quark TMDs in the large-$x$ region.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mariaelena Boglione",
+      "Umberto D'Alesio",
+      "Carlo Flore",
+      "Josè Osvaldo Gonzalez-Hernandez",
+      "Francesco Murgia",
+      "Alexei Prokudin"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.12322v2",
+    "url": "http://arxiv.org/abs/2402.12322v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.08244v1",
+    "title": "Auxiliary Task Reweighting for Minimum-data Learning",
+    "abstract": "Supervised learning requires a large amount of training data, limiting its application where labeled data is scarce. To compensate for data scarcity, one possible method is to utilize auxiliary tasks to provide additional supervision for the main task. Assigning and optimizing the importance weights for different auxiliary tasks remains an crucial and largely understudied research question. In this work, we propose a method to automatically reweight auxiliary tasks in order to reduce the data requirement on the main task. Specifically, we formulate the weighted likelihood function of auxiliary tasks as a surrogate prior for the main task. By adjusting the auxiliary task weights to minimize the divergence between the surrogate prior and the true prior of the main task, we obtain a more accurate prior estimation, achieving the goal of minimizing the required amount of training data for the main task and avoiding a costly grid search. In multiple experimental settings (e.g. semi-supervised learning, multi-label classification), we demonstrate that our algorithm can effectively utilize limited labeled data of the main task with the benefit of auxiliary tasks compared with previous task reweighting methods. We also show that under extreme cases with only a few extra examples (e.g. few-shot domain adaptation), our algorithm results in significant improvement over the baseline.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Baifeng Shi",
+      "Judy Hoffman",
+      "Kate Saenko",
+      "Trevor Darrell",
+      "Huijuan Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.08244v1",
+    "url": "http://arxiv.org/abs/2010.08244v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.03994v1",
+    "title": "Reinforcement Learning with Stepwise Fairness Constraints",
+    "abstract": "AI methods are used in societally important settings, ranging from credit to employment to housing, and it is crucial to provide fairness in regard to algorithmic decision making. Moreover, many settings are dynamic, with populations responding to sequential decision policies. We introduce the study of reinforcement learning (RL) with stepwise fairness constraints, requiring group fairness at each time step. Our focus is on tabular episodic RL, and we provide learning algorithms with strong theoretical guarantees in regard to policy optimality and fairness violation. Our framework provides useful tools to study the impact of fairness constraints in sequential settings and brings up new challenges in RL.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zhun Deng",
+      "He Sun",
+      "Zhiwei Steven Wu",
+      "Linjun Zhang",
+      "David C. Parkes"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.03994v1",
+    "url": "http://arxiv.org/abs/2211.03994v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.13738v1",
+    "title": "Multi-Target Multiplicity: Flexibility and Fairness in Target Specification under Resource Constraints",
+    "abstract": "Prediction models have been widely adopted as the basis for decision-making in domains as diverse as employment, education, lending, and health. Yet, few real world problems readily present themselves as precisely formulated prediction tasks. In particular, there are often many reasonable target variable options. Prior work has argued that this is an important and sometimes underappreciated choice, and has also shown that target choice can have a significant impact on the fairness of the resulting model. However, the existing literature does not offer a formal framework for characterizing the extent to which target choice matters in a particular task. Our work fills this gap by drawing connections between the problem of target choice and recent work on predictive multiplicity. Specifically, we introduce a conceptual and computational framework for assessing how the choice of target affects individuals' outcomes and selection rate disparities across groups. We call this multi-target multiplicity. Along the way, we refine the study of single-target multiplicity by introducing notions of multiplicity that respect resource constraints -- a feature of many real-world tasks that is not captured by existing notions of predictive multiplicity. We apply our methods on a healthcare dataset, and show that the level of multiplicity that stems from target variable choice can be greater than that stemming from nearly-optimal models of a single target.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jamelle Watson-Daniels",
+      "Solon Barocas",
+      "Jake M. Hofman",
+      "Alexandra Chouldechova"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.13738v1",
+    "url": "http://arxiv.org/abs/2306.13738v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1711.05144v5",
+    "title": "Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness",
+    "abstract": "The most prevalent notions of fairness in machine learning are statistical definitions: they fix a small collection of pre-defined groups, and then ask for parity of some statistic of the classifier across these groups. Constraints of this form are susceptible to intentional or inadvertent \"fairness gerrymandering\", in which a classifier appears to be fair on each individual group, but badly violates the fairness constraint on one or more structured subgroups defined over the protected attributes. We propose instead to demand statistical notions of fairness across exponentially (or infinitely) many subgroups, defined by a structured class of functions over the protected attributes. This interpolates between statistical definitions of fairness and recently proposed individual notions of fairness, but raises several computational challenges. It is no longer clear how to audit a fixed classifier to see if it satisfies such a strong definition of fairness. We prove that the computational problem of auditing subgroup fairness for both equality of false positive rates and statistical parity is equivalent to the problem of weak agnostic learning, which means it is computationally hard in the worst case, even for simple structured subclasses. We then derive two algorithms that provably converge to the best fair classifier, given access to oracles which can solve the agnostic learning problem. The algorithms are based on a formulation of subgroup fairness as a two-player zero-sum game between a Learner and an Auditor. Our first algorithm provably converges in a polynomial number of steps. Our second algorithm enjoys only provably asymptotic convergence, but has the merit of simplicity and faster per-step computation. We implement the simpler algorithm using linear regression as a heuristic oracle, and show that we can effectively both audit and learn fair classifiers on real datasets.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Michael Kearns",
+      "Seth Neel",
+      "Aaron Roth",
+      "Zhiwei Steven Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "1711.05144v5",
+    "url": "http://arxiv.org/abs/1711.05144v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.10512v1",
+    "title": "Causal Fairness-Guided Dataset Reweighting using Neural Networks",
+    "abstract": "The importance of achieving fairness in machine learning models cannot be overstated. Recent research has pointed out that fairness should be examined from a causal perspective, and several fairness notions based on the on Pearl's causal framework have been proposed. In this paper, we construct a reweighting scheme of datasets to address causal fairness. Our approach aims at mitigating bias by considering the causal relationships among variables and incorporating them into the reweighting process. The proposed method adopts two neural networks, whose structures are intentionally used to reflect the structures of a causal graph and of an interventional graph. The two neural networks can approximate the causal model of the data, and the causal model of interventions. Furthermore, reweighting guided by a discriminator is applied to achieve various fairness notions. Experiments on real-world datasets show that our method can achieve causal fairness on the data while remaining close to the original data for downstream tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xuan Zhao",
+      "Klaus Broelemann",
+      "Salvatore Ruggieri",
+      "Gjergji Kasneci"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.10512v1",
+    "url": "http://arxiv.org/abs/2311.10512v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1701.00986v2",
+    "title": "Reweighting complex Langevin trajectories",
+    "abstract": "Although the complex Langevin method can solve the sign problem in simulations of theories with complex actions, the method will yield the wrong results if known validity conditions are not satisfied. We present a novel method to compute observables for a target ensemble by reweighting complex trajectories generated with the complex Langevin method for an auxiliary ensemble having itself a complex action. While it is imperative that the validity conditions be satisfied for the auxiliary ensemble, there are no such requirements for the target ensemble. This allows us to enlarge the applicability range of the complex Langevin method. We illustrate this at the hand of a one-dimensional partition function and two-dimensional strong-coupling QCD.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Jacques Bloch"
+    ],
+    "doi": null,
+    "arxiv_id": "1701.00986v2",
+    "url": "http://arxiv.org/abs/1701.00986v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.01719v2",
+    "title": "FORML: Learning to Reweight Data for Fairness",
+    "abstract": "Machine learning models are trained to minimize the mean loss for a single metric, and thus typically do not consider fairness and robustness. Neglecting such metrics in training can make these models prone to fairness violations when training data are imbalanced or test distributions differ. This work introduces Fairness Optimized Reweighting via Meta-Learning (FORML), a training algorithm that balances fairness and robustness with accuracy by jointly learning training sample weights and neural network parameters. The approach increases model fairness by learning to balance the contributions from both over- and under-represented sub-groups through dynamic reweighting of the data learned from a user-specified held-out set representative of the distribution under which fairness is desired. FORML improves equality of opportunity fairness criteria on image classification tasks, reduces bias of corrupted labels, and facilitates building more fair datasets via data condensation. These improvements are achieved without pre-processing data or post-processing model outputs, without learning an additional weighting function, without changing model architecture, and while maintaining accuracy on the original predictive metric.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Bobby Yan",
+      "Skyler Seto",
+      "Nicholas Apostoloff"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.01719v2",
+    "url": "http://arxiv.org/abs/2202.01719v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.19371v1",
+    "title": "Fairness in AI: challenges in bridging the gap between algorithms and law",
+    "abstract": "In this paper we examine algorithmic fairness from the perspective of law aiming to identify best practices and strategies for the specification and adoption of fairness definitions and algorithms in real-world systems and use cases. We start by providing a brief introduction of current anti-discrimination law in the European Union and the United States and discussing the concepts of bias and fairness from an legal and ethical viewpoint. We then proceed by presenting a set of algorithmic fairness definitions by example, aiming to communicate their objectives to non-technical audiences. Then, we introduce a set of core criteria that need to be taken into account when selecting a specific fairness definition for real-world use case applications. Finally, we enumerate a set of key considerations and best practices for the design and employment of fairness methods on real-world AI applications",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Giorgos Giannopoulos",
+      "Maria Psalla",
+      "Loukas Kavouras",
+      "Dimitris Sacharidis",
+      "Jakub Marecek",
+      "German M Matilla",
+      "Ioannis Emiris"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.19371v1",
+    "url": "http://arxiv.org/abs/2404.19371v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1707.00093v2",
+    "title": "Multisided Fairness for Recommendation",
+    "abstract": "Recent work on machine learning has begun to consider issues of fairness. In this paper, we extend the concept of fairness to recommendation. In particular, we show that in some recommendation contexts, fairness may be a multisided concept, in which fair outcomes for multiple individuals need to be considered. Based on these considerations, we present a taxonomy of classes of fairness-aware recommender systems and suggest possible fairness-aware recommendation architectures.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Robin Burke"
+    ],
+    "doi": null,
+    "arxiv_id": "1707.00093v2",
+    "url": "http://arxiv.org/abs/1707.00093v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1707.00391v1",
+    "title": "Fair Pipelines",
+    "abstract": "This work facilitates ensuring fairness of machine learning in the real world by decoupling fairness considerations in compound decisions. In particular, this work studies how fairness propagates through a compound decision-making processes, which we call a pipeline. Prior work in algorithmic fairness only focuses on fairness with respect to one decision. However, many decision-making processes require more than one decision. For instance, hiring is at least a two stage model: deciding who to interview from the applicant pool and then deciding who to hire from the interview pool. Perhaps surprisingly, we show that the composition of fair components may not guarantee a fair pipeline under a $(1+\\varepsilon)$-equal opportunity definition of fair. However, we identify circumstances that do provide that guarantee. We also propose numerous directions for future work on more general compound machine learning decisions.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Amanda Bower",
+      "Sarah N. Kitchen",
+      "Laura Niss",
+      "Martin J. Strauss",
+      "Alexander Vargas",
+      "Suresh Venkatasubramanian"
+    ],
+    "doi": null,
+    "arxiv_id": "1707.00391v1",
+    "url": "http://arxiv.org/abs/1707.00391v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.21711v1",
+    "title": "Fairness under uncertainty in sequential decisions",
+    "abstract": "Fair machine learning (ML) methods help identify and mitigate the risk that algorithms encode or automate social injustices. Algorithmic approaches alone cannot resolve structural inequalities, but they can support socio-technical decision systems by surfacing discriminatory biases, clarifying trade-offs, and enabling governance. Although fairness is well studied in supervised learning, many real ML applications are online and sequential, with prior decisions informing future ones. Each decision is taken under uncertainty due to unobserved counterfactuals and finite samples, with dire consequences for under-represented groups, systematically under-observed due to historical exclusion and selective feedback. A bank cannot know whether a denied loan would have been repaid, and may have less data on marginalized populations. This paper introduces a taxonomy of uncertainty in sequential decision-making -- model, feedback, and prediction uncertainty -- providing shared vocabulary for assessing systems where uncertainty is unevenly distributed across groups. We formalize model and feedback uncertainty via counterfactual logic and reinforcement learning, and illustrate harms to decision makers (unrealized gains/losses) and subjects (compounding exclusion, reduced access) of policies that ignore the unobserved space. Algorithmic examples show it is possible to reduce outcome variance for disadvantaged groups while preserving institutional objectives (e.g. expected utility). Experiments on data simulated with varying bias show how unequal uncertainty and selective feedback produce disparities, and how uncertainty-aware exploration alters fairness metrics. The framework equips practitioners to diagnose, audit, and govern fairness risks. Where uncertainty drives unfairness rather than incidental noise, accounting for it is essential to fair and effective decision-making.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Michelle Seng Ah Lee",
+      "Kirtan Padh",
+      "David Watson",
+      "Niki Kilbertus",
+      "Jatinder Singh"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.21711v1",
+    "url": "http://arxiv.org/abs/2604.21711v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.13007v6",
+    "title": "A Critical Survey on Fairness Benefits of Explainable AI",
+    "abstract": "In this critical survey, we analyze typical claims on the relationship between explainable AI (XAI) and fairness to disentangle the multidimensional relationship between these two concepts. Based on a systematic literature review and a subsequent qualitative content analysis, we identify seven archetypal claims from 175 scientific articles on the alleged fairness benefits of XAI. We present crucial caveats with respect to these claims and provide an entry point for future discussions around the potentials and limitations of XAI for specific fairness desiderata. Importantly, we notice that claims are often (i) vague and simplistic, (ii) lacking normative grounding, or (iii) poorly aligned with the actual capabilities of XAI. We suggest to conceive XAI not as an ethical panacea but as one of many tools to approach the multidimensional, sociotechnical challenge of algorithmic fairness. Moreover, when making a claim about XAI and fairness, we emphasize the need to be more specific about what kind of XAI method is used, which fairness desideratum it refers to, how exactly it enables fairness, and who is the stakeholder that benefits from XAI.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Luca Deck",
+      "Jakob Schoeffer",
+      "Maria De-Arteaga",
+      "Niklas Kühl"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.13007v6",
+    "url": "http://arxiv.org/abs/2310.13007v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.14126v2",
+    "title": "Enhancing Fairness through Reweighting: A Path to Attain the Sufficiency Rule",
+    "abstract": "We introduce an innovative approach to enhancing the empirical risk minimization (ERM) process in model training through a refined reweighting scheme of the training data to enhance fairness. This scheme aims to uphold the sufficiency rule in fairness by ensuring that optimal predictors maintain consistency across diverse sub-groups. We employ a bilevel formulation to address this challenge, wherein we explore sample reweighting strategies. Unlike conventional methods that hinge on model size, our formulation bases generalization complexity on the space of sample weights. We discretize the weights to improve training speed. Empirical validation of our method showcases its effectiveness and robustness, revealing a consistent improvement in the balance between prediction performance and fairness metrics across various experiments.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Xuan Zhao",
+      "Klaus Broelemann",
+      "Salvatore Ruggieri",
+      "Gjergji Kasneci"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.14126v2",
+    "url": "http://arxiv.org/abs/2408.14126v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.13114v3",
+    "title": "Fairness without Demographics through Adversarially Reweighted Learning",
+    "abstract": "Much of the previous machine learning (ML) fairness literature assumes that protected features such as race and sex are present in the dataset, and relies upon them to mitigate fairness concerns. However, in practice factors like privacy and regulation often preclude the collection of protected features, or their use for training or inference, severely limiting the applicability of traditional fairness research. Therefore we ask: How can we train an ML model to improve fairness when we do not even know the protected group memberships? In this work we address this problem by proposing Adversarially Reweighted Learning (ARL). In particular, we hypothesize that non-protected features and task labels are valuable for identifying fairness issues, and can be used to co-train an adversarial reweighting approach for improving fairness. Our results show that {ARL} improves Rawlsian Max-Min fairness, with notable AUC improvements for worst-case protected groups in multiple datasets, outperforming state-of-the-art alternatives.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Preethi Lahoti",
+      "Alex Beutel",
+      "Jilin Chen",
+      "Kang Lee",
+      "Flavien Prost",
+      "Nithum Thain",
+      "Xuezhi Wang",
+      "Ed H. Chi"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.13114v3",
+    "url": "http://arxiv.org/abs/2006.13114v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.08349v3",
+    "title": "Performativity and Prospective Fairness",
+    "abstract": "Deploying an algorithmically informed policy is a significant intervention in the structure of society. As is increasingly acknowledged, predictive algorithms have performative effects: using them can shift the distribution of social outcomes away from the one on which the algorithms were trained. Algorithmic fairness research is usually motivated by the worry that these performative effects will exacerbate the structural inequalities that gave rise to the training data. However, standard retrospective fairness methodologies are ill-suited to predict these effects. They impose static fairness constraints that hold after the predictive algorithm is trained, but before it is deployed and, therefore, before performative effects have had a chance to kick in. However, satisfying static fairness criteria after training is not sufficient to avoid exacerbating inequality after deployment. Addressing the fundamental worry that motivates algorithmic fairness requires explicitly comparing the change in relevant structural inequalities before and after deployment. We propose a prospective methodology for estimating this post-deployment change from pre-deployment data and knowledge about the algorithmic policy. That requires a strategy for distinguishing between, and accounting for, different kinds of performative effects. In this paper, we focus on the algorithmic effect on the causally downstream outcome variable. Throughout, we are guided by an application from public administration: the use of algorithms to (1) predict who among the recently unemployed will stay unemployed for the long term and (2) targeting them with labor market programs. We illustrate our proposal by showing how to predict whether such policies will exacerbate gender inequalities in the labor market.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sebastian Zezulka",
+      "Konstantin Genin"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.08349v3",
+    "url": "http://arxiv.org/abs/2310.08349v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2001.09784v1",
+    "title": "Algorithmic Fairness",
+    "abstract": "An increasing number of decisions regarding the daily lives of human beings are being controlled by artificial intelligence (AI) algorithms in spheres ranging from healthcare, transportation, and education to college admissions, recruitment, provision of loans and many more realms. Since they now touch on many aspects of our lives, it is crucial to develop AI algorithms that are not only accurate but also objective and fair. Recent studies have shown that algorithmic decision-making may be inherently prone to unfairness, even when there is no intention for it. This paper presents an overview of the main concepts of identifying, measuring and improving algorithmic fairness when using AI algorithms. The paper begins by discussing the causes of algorithmic bias and unfairness and the common definitions and measures for fairness. Fairness-enhancing mechanisms are then reviewed and divided into pre-process, in-process and post-process mechanisms. A comprehensive comparison of the mechanisms is then conducted, towards a better understanding of which mechanisms should be used in different scenarios. The paper then describes the most commonly used fairness-related datasets in this field. Finally, the paper ends by reviewing several emerging research sub-fields of algorithmic fairness.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Dana Pessach",
+      "Erez Shmueli"
+    ],
+    "doi": null,
+    "arxiv_id": "2001.09784v1",
+    "url": "http://arxiv.org/abs/2001.09784v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.13271v1",
+    "title": "On Fairness and Interpretability",
+    "abstract": "Ethical AI spans a gamut of considerations. Among these, the most popular ones, fairness and interpretability, have remained largely distinct in technical pursuits. We discuss and elucidate the differences between fairness and interpretability across a variety of dimensions. Further, we develop two principles-based frameworks towards developing ethical AI for the future that embrace aspects of both fairness and interpretability. First, interpretability for fairness proposes instantiating interpretability within the realm of fairness to develop a new breed of ethical AI. Second, fairness and interpretability initiates deliberations on bringing the best aspects of both together. We hope that these two frameworks will contribute to intensifying scholarly discussions on new frontiers of ethical AI that brings together fairness and interpretability.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Deepak P",
+      "Sanil V",
+      "Joemon M. Jose"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.13271v1",
+    "url": "http://arxiv.org/abs/2106.13271v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.00720v2",
+    "title": "Fairness via Independence: A (Conditional) Distance Covariance Framework",
+    "abstract": "We explore fairness from a statistical perspective by selectively utilizing either conditional distance covariance or distance covariance statistics as measures to assess the independence between predictions and sensitive attributes. We boost fairness with independence by adding a distance covariance-based penalty to the model's training. Additionally, we present the matrix form of empirical (conditional) distance covariance for parallel calculations to enhance computational efficiency. Theoretically, we provide a proof for the convergence between empirical and population (conditional) distance covariance, establishing necessary guarantees for batch computations. Through experiments conducted on a range of real-world datasets, we have demonstrated that our method effectively bridges the fairness gap in machine learning. Our code is available at \\url{https://github.com/liuhaixias1/Fair_dc/}.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ruifan Huang",
+      "Haixia Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.00720v2",
+    "url": "http://arxiv.org/abs/2412.00720v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1311.7579v3",
+    "title": "Accelerated Event-by-Event Neutrino Oscillation Reweighting with Matter Effects on a GPU",
+    "abstract": "Oscillation probability calculations are becoming increasingly CPU intensive in modern neutrino oscillation analyses. The independency of reweighting individual events in a Monte Carlo sample lends itself to parallel implementation on a Graphics Processing Unit. The library \"Prob3++\" was ported to the GPU using the CUDA C API, allowing for large scale parallelized calculations of neutrino oscillation probabilities through matter of constant density, decreasing the execution time by a factor of 75, when compared to performance on a single CPU.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "R. G. Calland",
+      "A. C. Kaboth",
+      "D. Payne"
+    ],
+    "doi": null,
+    "arxiv_id": "1311.7579v3",
+    "url": "http://arxiv.org/abs/1311.7579v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.06883v1",
+    "title": "On the Apparent Conflict Between Individual and Group Fairness",
+    "abstract": "A distinction has been drawn in fair machine learning research between `group' and `individual' fairness measures. Many technical research papers assume that both are important, but conflicting, and propose ways to minimise the trade-offs between these measures. This paper argues that this apparent conflict is based on a misconception. It draws on theoretical discussions from within the fair machine learning research, and from political and legal philosophy, to argue that individual and group fairness are not fundamentally in conflict. First, it outlines accounts of egalitarian fairness which encompass plausible motivations for both group and individual fairness, thereby suggesting that there need be no conflict in principle. Second, it considers the concept of individual justice, from legal philosophy and jurisprudence which seems similar but actually contradicts the notion of individual fairness as proposed in the fair machine learning literature. The conclusion is that the apparent conflict between individual and group fairness is more of an artifact of the blunt application of fairness measures, rather than a matter of conflicting principles. In practice, this conflict may be resolved by a nuanced consideration of the sources of `unfairness' in a particular deployment context, and the carefully justified application of measures to mitigate it.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Reuben Binns"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.06883v1",
+    "url": "http://arxiv.org/abs/1912.06883v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.09838v2",
+    "title": "New Fairness Metrics for Recommendation that Embrace Differences",
+    "abstract": "We study fairness in collaborative-filtering recommender systems, which are sensitive to discrimination that exists in historical data. Biased data can lead collaborative filtering methods to make unfair predictions against minority groups of users. We identify the insufficiency of existing fairness metrics and propose four new metrics that address different forms of unfairness. These fairness metrics can be optimized by adding fairness terms to the learning objective. Experiments on synthetic and real data show that our new metrics can better measure fairness than the baseline, and that the fairness objectives effectively help reduce unfairness.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Sirui Yao",
+      "Bert Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.09838v2",
+    "url": "http://arxiv.org/abs/1706.09838v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2012.00106v1",
+    "title": "Towards Auditability for Fairness in Deep Learning",
+    "abstract": "Group fairness metrics can detect when a deep learning model behaves differently for advantaged and disadvantaged groups, but even models that score well on these metrics can make blatantly unfair predictions. We present smooth prediction sensitivity, an efficiently computed measure of individual fairness for deep learning models that is inspired by ideas from interpretability in deep learning. smooth prediction sensitivity allows individual predictions to be audited for fairness. We present preliminary experimental results suggesting that smooth prediction sensitivity can help distinguish between fair and unfair predictions, and that it may be helpful in detecting blatantly unfair predictions from \"group-fair\" models.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ivoline C. Ngong",
+      "Krystal Maughan",
+      "Joseph P. Near"
+    ],
+    "doi": null,
+    "arxiv_id": "2012.00106v1",
+    "url": "http://arxiv.org/abs/2012.00106v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.05511v3",
+    "title": "Measurement and Fairness",
+    "abstract": "We propose measurement modeling from the quantitative social sciences as a framework for understanding fairness in computational systems. Computational systems often involve unobservable theoretical constructs, such as socioeconomic status, teacher effectiveness, and risk of recidivism. Such constructs cannot be measured directly and must instead be inferred from measurements of observable properties (and other unobservable theoretical constructs) thought to be related to them -- i.e., operationalized via a measurement model. This process, which necessarily involves making assumptions, introduces the potential for mismatches between the theoretical understanding of the construct purported to be measured and its operationalization. We argue that many of the harms discussed in the literature on fairness in computational systems are direct results of such mismatches. We show how some of these harms could have been anticipated and, in some cases, mitigated if viewed through the lens of measurement modeling. To do this, we contribute fairness-oriented conceptualizations of construct reliability and construct validity that unite traditions from political science, education, and psychology and provide a set of tools for making explicit and testing assumptions about constructs and their operationalizations. We then turn to fairness itself, an essentially contested construct that has different theoretical understandings in different contexts. We argue that this contestedness underlies recent debates about fairness definitions: although these debates appear to be about different operationalizations, they are, in fact, debates about different theoretical understandings of fairness. We show how measurement modeling can provide a framework for getting to the core of these debates.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Abigail Z. Jacobs",
+      "Hanna Wallach"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.05511v3",
+    "url": "http://arxiv.org/abs/1912.05511v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.15020v1",
+    "title": "Tradeoffs are Domain Dependent: Improving Accuracy and Fairness in Property Tax Assessments",
+    "abstract": "Algorithmic fairness research often assumes a tradeoff between fairness and accuracy. Yet this tradeoff may not be universal. We test this assumption in the context of U.S. property tax assessment - a setting in which the output of predictive algorithms directly determines the distribution of tax obligations among homeowners. Currently, systematic assessment errors cause owners of lower-valued properties to face disproportionately high tax burdens, creating regressivity in the property tax system. Using data on 26 million property sales spanning 95% of U.S. counties, we conduct three complementary analyses. First, we find that assessment accuracy and fairness - measured using domain-relevant metrics - are strongly correlated across counties under status quo practices. Second, in simulated assessment models, we show that adding property features improves accuracy in most cases, and that when accuracy improves, fairness almost always improves as well. Third, we show that incorporating publicly available Census data into assessment models - a feasible reform in most counties - would significantly improve both accuracy and fairness relative to status quo assessments. Together, these results challenge the presumed universality of the fairness-accuracy tradeoff and demonstrate that well-designed modeling improvements can advance both fairness and accuracy in large-scale public sector systems.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Evelyn Smith",
+      "Emma Harvey",
+      "Christopher Berry",
+      "Jacob Goldin",
+      "Daniel E. Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.15020v1",
+    "url": "http://arxiv.org/abs/2605.15020v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.05049v1",
+    "title": "Fair When Trained, Unfair When Deployed: Observable Fairness Measures are Unstable in Performative Prediction Settings",
+    "abstract": "Many popular algorithmic fairness measures depend on the joint distribution of predictions, outcomes, and a sensitive feature like race or gender. These measures are sensitive to distribution shift: a predictor which is trained to satisfy one of these fairness definitions may become unfair if the distribution changes. In performative prediction settings, however, predictors are precisely intended to induce distribution shift. For example, in many applications in criminal justice, healthcare, and consumer finance, the purpose of building a predictor is to reduce the rate of adverse outcomes such as recidivism, hospitalization, or default on a loan. We formalize the effect of such predictors as a type of concept shift-a particular variety of distribution shift-and show both theoretically and via simulated examples how this causes predictors which are fair when they are trained to become unfair when they are deployed. We further show how many of these issues can be avoided by using fairness definitions that depend on counterfactual rather than observable outcomes.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Alan Mishler",
+      "Niccolò Dalmasso"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.05049v1",
+    "url": "http://arxiv.org/abs/2202.05049v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.05906v2",
+    "title": "On Comparing Fair Classifiers under Data Bias",
+    "abstract": "In this paper, we consider a theoretical model for injecting data bias, namely, under-representation and label bias (Blum & Stangl, 2019). We empirically study the effect of varying data biases on the accuracy and fairness of fair classifiers. Through extensive experiments on both synthetic and real-world datasets (e.g., Adult, German Credit, Bank Marketing, COMPAS), we empirically audit pre-, in-, and post-processing fair classifiers from standard fairness toolkits for their fairness and accuracy by injecting varying amounts of under-representation and label bias in their training data (but not the test data). Our main observations are: 1. The fairness and accuracy of many standard fair classifiers degrade severely as the bias injected in their training data increases, 2. A simple logistic regression model trained on the right data can often outperform, in both accuracy and fairness, most fair classifiers trained on biased training data, and 3. A few, simple fairness techniques (e.g., reweighing, exponentiated gradients) seem to offer stable accuracy and fairness guarantees even when their training data is injected with under-representation and label bias. Our experiments also show how to integrate a measure of data bias risk in the existing fairness dashboards for real-world deployments.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Mohit Sharma",
+      "Amit Deshpande",
+      "Rajiv Ratn Shah"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.05906v2",
+    "url": "http://arxiv.org/abs/2302.05906v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.03586v2",
+    "title": "Fair SA: Sensitivity Analysis for Fairness in Face Recognition",
+    "abstract": "As the use of deep learning in high impact domains becomes ubiquitous, it is increasingly important to assess the resilience of models. One such high impact domain is that of face recognition, with real world applications involving images affected by various degradations, such as motion blur or high exposure. Moreover, images captured across different attributes, such as gender and race, can also challenge the robustness of a face recognition algorithm. While traditional summary statistics suggest that the aggregate performance of face recognition models has continued to improve, these metrics do not directly measure the robustness or fairness of the models. Visual Psychophysics Sensitivity Analysis (VPSA) [1] provides a way to pinpoint the individual causes of failure by way of introducing incremental perturbations in the data. However, perturbations may affect subgroups differently. In this paper, we propose a new fairness evaluation based on robustness in the form of a generic framework that extends VPSA. With this framework, we can analyze the ability of a model to perform fairly for different subgroups of a population affected by perturbations, and pinpoint the exact failure modes for a subgroup by measuring targeted robustness. With the increasing focus on the fairness of models, we use face recognition as an example application of our framework and propose to compactly visualize the fairness analysis of a model via AUC matrices. We analyze the performance of common face recognition models and empirically show that certain subgroups are at a disadvantage when images are perturbed, thereby uncovering trends that were not visible using the model's performance on subgroups without perturbations.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Aparna R. Joshi",
+      "Xavier Suau",
+      "Nivedha Sivakumar",
+      "Luca Zappella",
+      "Nicholas Apostoloff"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.03586v2",
+    "url": "http://arxiv.org/abs/2202.03586v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

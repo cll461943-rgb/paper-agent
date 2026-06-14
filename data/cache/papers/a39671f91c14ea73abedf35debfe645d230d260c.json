@@ -1,0 +1,56 @@
+{
+  "paper_id": "https://openalex.org/W4399151624",
+  "title": "I-LLM: Efficient Integer-Only Inference for Fully-Quantized Low-Bit Large Language Models",
+  "abstract": "Post-training quantization (PTQ) serves as a potent technique to accelerate the inference of large language models (LLMs). Nonetheless, existing works still necessitate a considerable number of floating-point (FP) operations during inference, including additional quantization and de-quantization, as well as non-linear operators such as RMSNorm and Softmax. This limitation hinders the deployment of LLMs on the edge and cloud devices. In this paper, we identify the primary obstacle to integer-only quantization for LLMs lies in the large fluctuation of activations across channels and tokens in both linear and non-linear operations. To address this issue, we propose I-LLM, a novel integer-only fully-quantized PTQ framework tailored for LLMs. Specifically, (1) we develop Fully-Smooth Block-Reconstruction (FSBR) to aggressively smooth inter-channel variations of all activations and weights. (2) to alleviate degradation caused by inter-token variations, we introduce a novel approach called Dynamic Integer-only MatMul (DI-MatMul). This method enables dynamic quantization in full-integer matrix multiplication by dynamically quantizing the input and outputs with integer-only operations. (3) we design DI-ClippedSoftmax, DI-Exp, and DI-Normalization, which utilize bit shift to execute non-linear operators efficiently while maintaining accuracy. The experiment shows that our I-LLM achieves comparable accuracy to the FP baseline and outperforms non-integer quantization methods. For example, I-LLM can operate at W4A4 with negligible loss of accuracy. To our knowledge, we are the first to bridge the gap between integer-only quantization and LLMs. We've published our code on anonymous.4open.science, aiming to contribute to the advancement of this field.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Xing Hu",
+    "Yuan Chen",
+    "Dawei Yang",
+    "Zhihang Yuan",
+    "Jiangyong Yu",
+    "Chen Xu",
+    "Sifan Zhou"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2405.17849",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2405.17849",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Inference",
+      "Integer (computer science)",
+      "Bit (key)",
+      "Computer science",
+      "Theoretical computer science",
+      "Algorithm",
+      "Arithmetic",
+      "Mathematics",
+      "Programming language",
+      "Artificial intelligence",
+      "Computer security"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2411923897",
+      "https://openalex.org/W4394546135",
+      "https://openalex.org/W4285347720",
+      "https://openalex.org/W4200259850",
+      "https://openalex.org/W2333831899",
+      "https://openalex.org/W2484894494",
+      "https://openalex.org/W2367385042",
+      "https://openalex.org/W4381186982",
+      "https://openalex.org/W2040781570",
+      "https://openalex.org/W4226055750"
+    ]
+  }
+}

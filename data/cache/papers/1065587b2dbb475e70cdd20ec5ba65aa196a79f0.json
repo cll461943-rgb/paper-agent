@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42131692",
+  "title": "Efficient and accurate medical AI: MediLore and MediOut.",
+  "abstract": "The integration of artificial intelligence (AI) in medical question-answering (QA) systems requires a careful balance between diagnostic accuracy and computational efficiency. Existing large language models (LLMs) achieve strong performance but are often limited by high memory usage, latency, and inconsistent behavior in handling rare or complex clinical queries. This study addresses these limitations by exploring efficient and robust modeling strategies for medical QA. Two complementary approaches were developed: MediLore and MediOut. MediLore employs Weighted Low-Rank Adaptation (LoRA) adapter fusion to integrate domain-specific knowledge into a shared backbone model while reducing computational overhead. MediOut utilizes an output-level ensembling strategy that aggregates predictions from multiple fine-tuned models using semantic similarity-based scoring. Both models were trained and evaluated on clinically curated datasets, including MedQA, PubMedQA, and MedMCQA. Performance was assessed using BLEU, ROUGE, BERTScore, and BioBERT-based similarity metrics. Additionally, 4-bit quantization was applied to optimize deployment efficiency. MediOut achieved the highest performance across semantic evaluation metrics, with a BioBERT F1 score of 0.934 and strong improvements in semantic similarity and contextual alignment. MediLore retained up to 91% of the ensembling accuracy while reducing inference cost to approximately 0.3% of the baseline, significantly lowering latency from 141 seconds to 190 ms. BLEU score improvements were moderate (0.066-0.074), indicating that semantic alignment gains were more substantial than lexical overlap improvements. The results demonstrate that MediLore and MediOut provide complementary advantages in medical QA systems. MediLore enables efficient deployment in resource-constrained environments, while MediOut enhances robustness and semantic fidelity for complex clinical queries. The proposed framework highlights the trade-off between efficiency and accuracy, offering practical guidance for selecting appropriate deployment strategies in real-world healthcare applications. These findings contribute to the development of scalable, reliable, and clinically aligned AI systems for biomedical natural language processing.",
+  "year": 2026,
+  "venue": "Frontiers in artificial intelligence",
+  "authors": [
+    "S Mohamed Rayhan",
+    "M Hariprasath",
+    "K Hemalatha"
+  ],
+  "doi": "10.3389/frai.2026.1807268",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42131692/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42131692"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42271823",
+  "title": "BayesToF: multiresolution denoising of indirect time-of-flight distance maps.",
+  "abstract": "Indirect time-of-flight (IToF) cameras reconstruct scene distance from modulated light reflections, but their raw measurements are strongly affected by photon and thermal shot noise, as well as ambient illumination. Thus, the theoretical ability for the sensor's distance map to resolve millimeter-level distance details is not attainable without noise suppression. Due to a highly nonlinear relationship between the temporally modulated light measurements and the phase, however, modeling the stochastic nature of the output distance value is very challenging. For this reason, existing denoising algorithms-including deep neural networks and optimization-based schemes-have relied on simplified noise models (such as additive white Gaussian noise) or learned noise models instead of explicit structure-aware designs tailored to IToF physics, making it difficult to achieve true robustness in real-world scenarios. In this work, we derive an IToF structure-aware Bayesian denoising framework that mathematically propagates the physics-based likelihood model to address corruption of raw IToF sensor measurements by photon and thermal noise to the latent distance value. Our contributions are the physics-motivated mathematical insights and innovations that enable a multi-resolution hierarchical Bayesian minimum-mean-square-error (MMSE) estimator: (i) the underlying statistical joint distribution of distance signal and noise interferometric measurements becomes analytically tractable when modeled as a multinomial-Poisson process; (ii) a logarithmic function linearizes the multinomial data, solving the mathematical challenge of combining this likelihood function with a Gaussian-scale-mixture prior model in linearly transformed feature representation. The resulting BayesToF denoising method is a \"coring\" rule-based estimation technique that adapts automatically to photon and thermal shot noise and spatial frequency, enabling robust noise suppression without any network training. Experiments on both public and a new noisy IToF sensor dataset (UDayton-IToF2025) demonstrate high-quality distance reconstruction of BayesToF with superior accuracy and generalization over the state-of-the-art IToF denoising techniques.",
+  "year": 2026,
+  "venue": "Optics express",
+  "authors": [
+    "Achour Idoughi",
+    "Joseph Raffoul",
+    "Keigo Hirakawa"
+  ],
+  "doi": "10.1364/OE.596035",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42271823/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42271823"
+  }
+}

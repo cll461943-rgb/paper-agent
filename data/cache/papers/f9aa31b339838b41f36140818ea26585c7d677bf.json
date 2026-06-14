@@ -1,0 +1,80 @@
+{
+  "paper_id": "https://openalex.org/W3045818398",
+  "title": "Compressing Neural Machine Translation Models with 4-bit Precision",
+  "abstract": "Quantization is one way to compress Neural Machine Translation (NMT) models, especially for edge devices. This paper pushes quantization from 8 bits, seen in current work on machine translation, to 4 bits. Instead of fixed-point quantization, we use logarithmic quantization since parameters are skewed towards zero. We then observe that quantizing the bias terms in this way damages quality, so we leave them uncompressed. Bias terms are a tiny fraction of the model so the impact on compression rate is minimal. Retraining is necessary to preserve quality, for which we propose to use an error-feedback mechanism that treats compression errors like noisy gradients. We empirically show that NMT models based on the Transformer or RNN architectures can be compressed up to 4-bit precision without any noticeable quality degradation. Models can be compressed up to binary precision, albeit with lower quality. The RNN architecture appears more robust towards compression, compared to the Transformer.",
+  "year": 2020,
+  "venue": null,
+  "authors": [
+    "Alham Fikri Aji",
+    "Kenneth Heafield"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2020.ngt-1.4",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2020.ngt-1.4",
+  "citation_count": 11,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [
+    "https://openalex.org/W1522301498",
+    "https://openalex.org/W1605005685",
+    "https://openalex.org/W2101105183",
+    "https://openalex.org/W2242818861",
+    "https://openalex.org/W2267635276",
+    "https://openalex.org/W2286365479",
+    "https://openalex.org/W2291160084",
+    "https://openalex.org/W2407022425",
+    "https://openalex.org/W2524428287",
+    "https://openalex.org/W2740433069",
+    "https://openalex.org/W2805493160",
+    "https://openalex.org/W2962784628",
+    "https://openalex.org/W2962944188",
+    "https://openalex.org/W2963122961",
+    "https://openalex.org/W2963216553",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2963532001",
+    "https://openalex.org/W2963631431",
+    "https://openalex.org/W2963643655",
+    "https://openalex.org/W2964045208",
+    "https://openalex.org/W2964121744",
+    "https://openalex.org/W2964299589",
+    "https://openalex.org/W2985517040",
+    "https://openalex.org/W2991040477",
+    "https://openalex.org/W4295262505",
+    "https://openalex.org/W4297813615",
+    "https://openalex.org/W4385245566"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Quantization (signal processing)",
+      "Machine translation",
+      "Transformer",
+      "Logarithm",
+      "Artificial intelligence",
+      "Algorithm",
+      "Mathematics",
+      "Voltage",
+      "Physics",
+      "Quantum mechanics",
+      "Mathematical analysis"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W1974878518",
+      "https://openalex.org/W2435130738",
+      "https://openalex.org/W1592339875",
+      "https://openalex.org/W2392593357",
+      "https://openalex.org/W2016948484",
+      "https://openalex.org/W3107474891",
+      "https://openalex.org/W3098873988",
+      "https://openalex.org/W3012638462",
+      "https://openalex.org/W4288091846",
+      "https://openalex.org/W4320558514"
+    ]
+  }
+}

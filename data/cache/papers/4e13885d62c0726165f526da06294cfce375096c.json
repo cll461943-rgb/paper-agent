@@ -1,0 +1,30 @@
+{
+  "paper_id": "http://arxiv.org/abs/2603.13931v1",
+  "title": "True 4-Bit Quantized Convolutional Neural Network Training on CPU: Achieving Full-Precision Parity",
+  "abstract": "Low-precision neural network training has emerged as a promising direction for reducing computational costs and democratizing access to deep learning research. However, existing 4-bit quantization methods either rely on expensive GPU infrastructure or suffer from significant accuracy degradation. In this work, we present a practical method for training convolutional neural networks at true 4-bit precision using standard PyTorch operations on commodity CPUs. We introduce a novel tanh-based soft weight clipping technique that, combined with symmetric quantization, dynamic per-layer scaling, and straight-through estimators, achieves stable convergence and competitive accuracy. Training a VGG-style architecture with 3.25 million parameters from scratch on CIFAR-10, our method achieves 92.34% test accuracy on Google Colab's free CPU tier -- matching full-precision baseline performance (92.5%) with only a 0.16% gap. We further validate on CIFAR-100, achieving 70.94% test accuracy across 100 classes with the same architecture and training procedure, demonstrating that 4-bit training from scratch generalizes to harder classification tasks. Both experiments achieve 8x memory compression over FP32 while maintaining exactly 15 unique weight values per layer throughout training. We additionally validate hardware independence by demonstrating rapid convergence on a consumer mobile device (OnePlus 9R), achieving 83.16% accuracy in only 6 epochs. To the best of our knowledge, no prior work has demonstrated 4-bit quantization-aware training achieving full-precision parity on standard CPU hardware without specialized kernels or post-training quantization.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Shivnath Tathe"
+  ],
+  "doi": null,
+  "arxiv_id": "2603.13931v1",
+  "url": "http://arxiv.org/abs/2603.13931v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:query2doc",
+    "route:hyde",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

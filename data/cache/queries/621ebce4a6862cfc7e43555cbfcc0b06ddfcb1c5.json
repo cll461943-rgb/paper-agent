@@ -1,0 +1,327 @@
+[
+  {
+    "paper_id": "pubmed:38297371",
+    "title": "An evaluation of GPT models for phenotype concept recognition.",
+    "abstract": "Clinical deep phenotyping and phenotype annotation play a critical role in both the diagnosis of patients with rare disorders as well as in building computationally-tractable knowledge in the rare disorders field. These processes rely on using ontology concepts, often from the Human Phenotype Ontology, in conjunction with a phenotype concept recognition task (supported usually by machine learning methods) to curate patient profiles or existing scientific literature. With the significant shift in the use of large language models (LLMs) for most NLP tasks, we examine the performance of the latest Generative Pre-trained Transformer (GPT) models underpinning ChatGPT as a foundation for the tasks of clinical phenotyping and phenotype annotation. The experimental setup of the study included seven prompts of various levels of specificity, two GPT models (gpt-3.5-turbo and gpt-4.0) and two established gold standard corpora for phenotype recognition, one consisting of publication abstracts and the other clinical observations. The best run, using in-context learning, achieved 0.58 document-level F1 score on publication abstracts and 0.75 document-level F1 score on clinical observations, as well as a mention-level F1 score of 0.7, which surpasses the current best in class tool. Without in-context learning, however, performance is significantly below the existing approaches. Our experiments show that gpt-4.0 surpasses the state of the art performance if the task is constrained to a subset of the target ontology where there is prior knowledge of the terms that are expected to be matched. While the results are promising, the non-deterministic nature of the outcomes, the high cost and the lack of concordance between different runs using the same prompt and input make the use of these LLMs challenging for this particular task.",
+    "year": 2024,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Tudor Groza",
+      "Harry Caufield",
+      "Dylan Gration",
+      "Gareth Baynam",
+      "Melissa A Haendel",
+      "Peter N Robinson",
+      "Christopher J Mungall",
+      "Justin T Reese"
+    ],
+    "doi": "10.1186/s12911-024-02439-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38297371/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38297371"
+    }
+  },
+  {
+    "paper_id": "pubmed:37682111",
+    "title": "An extensive benchmark study on biomedical text generation and mining with ChatGPT.",
+    "abstract": "In recent years, the development of natural language process (NLP) technologies and deep learning hardware has led to significant improvement in large language models (LLMs). The ChatGPT, the state-of-the-art LLM built on GPT-3.5 and GPT-4, shows excellent capabilities in general language understanding and reasoning. Researchers also tested the GPTs on a variety of NLP-related tasks and benchmarks and got excellent results. With exciting performance on daily chat, researchers began to explore the capacity of ChatGPT on expertise that requires professional education for human and we are interested in the biomedical domain. To evaluate the performance of ChatGPT on biomedical-related tasks, this article presents a comprehensive benchmark study on the use of ChatGPT for biomedical corpus, including article abstracts, clinical trials description, biomedical questions, and so on. Typical NLP tasks like named entity recognization, relation extraction, sentence similarity, question and answering, and document classification are included. Overall, ChatGPT got a BLURB score of 58.50 while the state-of-the-art model had a score of 84.30. Through a series of experiments, we demonstrated the effectiveness and versatility of ChatGPT in biomedical text understanding, reasoning and generation, and the limitation of ChatGPT build on GPT-3.5. All the datasets are available from BLURB benchmark https://microsoft.github.io/BLURB/index.html. The prompts are described in the article.",
+    "year": 2023,
+    "venue": "Bioinformatics (Oxford, England)",
+    "authors": [
+      "Qijie Chen",
+      "Haotong Sun",
+      "Haoyang Liu",
+      "Yinghui Jiang",
+      "Ting Ran",
+      "Xurui Jin",
+      "Xianglu Xiao",
+      "Zhimin Lin",
+      "Hongming Chen",
+      "Zhangmin Niu"
+    ],
+    "doi": "10.1093/bioinformatics/btad557",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37682111/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37682111"
+    }
+  },
+  {
+    "paper_id": "pubmed:37488023",
+    "title": "Few-shot learning for medical text: A review of advances, trends, and opportunities.",
+    "abstract": "Few-shot learning (FSL) is a class of machine learning methods that require small numbers of labeled instances for training. With many medical topics having limited annotated text-based data in practical settings, FSL-based natural language processing (NLP) holds substantial promise. We aimed to conduct a review to explore the current state of FSL methods for medical NLP. We searched for articles published between January 2016 and October 2022 using PubMed/Medline, Embase, ACL Anthology, and IEEE Xplore Digital Library. We also searched the preprint servers (e.g., arXiv, medRxiv, and bioRxiv) via Google Scholar to identify the latest relevant methods. We included all articles that involved FSL and any form of medical text. We abstracted articles based on the data source, target task, training set size, primary method(s)/approach(es), and evaluation metric(s). Fifty-one articles met our inclusion criteria-all published after 2018, and most since 2020 (42/51; 82%). Concept extraction/named entity recognition was the most frequently addressed task (21/51; 41%), followed by text classification (16/51; 31%). Thirty-two (61%) articles reconstructed existing datasets to fit few-shot scenarios, and MIMIC-III was the most frequently used dataset (10/51; 20%). 77% of the articles attempted to incorporate prior knowledge to augment the small datasets available for training. Common methods included FSL with attention mechanisms (20/51; 39%), prototypical networks (11/51; 22%), meta-learning (7/51; 14%), and prompt-based learning methods, the latter being particularly popular since 2021. Benchmarking experiments demonstrated relative underperformance of FSL methods on biomedical NLP tasks. Despite the potential for FSL in biomedical NLP, progress has been limited. This may be attributed to the rarity of specialized data, lack of standardized evaluation criteria, and the underperformance of FSL methods on biomedical topics. The creation of publicly-available specialized datasets for biomedical FSL may aid method development by facilitating comparative analyses.",
+    "year": 2023,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Yao Ge",
+      "Yuting Guo",
+      "Sudeshna Das",
+      "Mohammed Ali Al-Garadi",
+      "Abeed Sarker"
+    ],
+    "doi": "10.1016/j.jbi.2023.104458",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37488023/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37488023"
+    }
+  },
+  {
+    "paper_id": "pubmed:37154341",
+    "title": "[An antibacterial peptides recognition method based on BERT and Text-CNN].",
+    "abstract": "Antimicrobial peptides (AMPs) are small molecule peptides that are widely found in living organisms with broad-spectrum antibacterial activity and immunomodulatory effect. Due to slower emergence of resistance, excellent clinical potential and wide range of application, AMP is a strong alternative to conventional antibiotics. AMP recognition is a significant direction in the field of AMP research. The high cost, low efficiency and long period shortcomings of the wet experiment methods prevent it from meeting the need for the large-scale AMP recognition. Therefore, computer-aided identification methods are important supplements to AMP recognition approaches, and one of the key issues is how to improve the accuracy. Protein sequences could be approximated as a language composed of amino acids. Consequently, rich features may be extracted using natural language processing (NLP) techniques. In this paper, we combine the pre-trained model BERT and the fine-tuned structure Text-CNN in the field of NLP to model protein languages, develop an open-source available antimicrobial peptide recognition tool and conduct a comparison with other five published tools. The experimental results show that the optimization of the two-phase training approach brings an overall improvement in accuracy, sensitivity, specificity, and Matthew correlation coefficient, offering a novel approach for further research on AMP recognition.",
+    "year": 2023,
+    "venue": "Sheng wu gong cheng xue bao = Chinese journal of biotechnology",
+    "authors": [
+      "Xiaofang Xu",
+      "Chunde Yang",
+      "Kunxian Shu",
+      "Xinpu Yuan",
+      "Mocheng Li",
+      "Yunping Zhu",
+      "Tao Chen"
+    ],
+    "doi": "10.13345/j.cjb.220878",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37154341/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37154341"
+    }
+  },
+  {
+    "paper_id": "pubmed:36721225",
+    "title": "Classifying literature mentions of biological pathogens as experimentally studied using natural language processing.",
+    "abstract": "Information pertaining to mechanisms, management and treatment of disease-causing pathogens including viruses and bacteria is readily available from research publications indexed in MEDLINE. However, identifying the literature that specifically characterises these pathogens and their properties based on experimental research, important for understanding of the molecular basis of diseases caused by these agents, requires sifting through a large number of articles to exclude incidental mentions of the pathogens, or references to pathogens in other non-experimental contexts such as public health. In this work, we lay the foundations for the development of automatic methods for characterising mentions of pathogens in scientific literature, focusing on the task of identifying research that involves the experimental study of a pathogen in an experimental context. There are no manually annotated pathogen corpora available for this purpose, while such resources are necessary to support the development of machine learning-based models. We therefore aim to fill this gap, producing a large data set automatically from MEDLINE under some simplifying assumptions for the task definition, and using it to explore automatic methods that specifically support the detection of experimentally studied pathogen mentions in research publications. We developed a pathogen mention characterisation literature data set -READBiomed-Pathogens- automatically using NCBI resources, which we make available. Resources such as the NCBI Taxonomy, MeSH and GenBank can be used effectively to identify relevant literature about experimentally researched pathogens, more specifically using MeSH to link to MEDLINE citations including titles and abstracts with experimentally researched pathogens. We experiment with several machine learning-based natural language processing (NLP) algorithms leveraging this data set as training data, to model the task of detecting papers that specifically describe experimental study of a pathogen. We show that our data set READBiomed-Pathogens can be used to explore natural language processing configurations for experimental pathogen mention characterisation. READBiomed-Pathogens includes citations related to organisms including bacteria, viruses, and a small number of toxins and other disease-causing agents. We studied the characterisation of experimentally studied pathogens in scientific literature, developing several natural language processing methods supported by an automatically developed data set. As a core contribution of the work, we presented a methodology to automatically construct a data set for pathogen identification using existing biomedical resources. The data set and the annotation code are made publicly available. Performance of the pathogen mention identification and characterisation algorithms were additionally evaluated on a small manually annotated data set shows that the data set that we have generated allows characterising pathogens of interest. N/A.",
+    "year": 2023,
+    "venue": "Journal of biomedical semantics",
+    "authors": [
+      "Antonio Jose Jimeno Yepes",
+      "Karin Verspoor"
+    ],
+    "doi": "10.1186/s13326-023-00282-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36721225/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36721225"
+    }
+  },
+  {
+    "paper_id": "pubmed:36268128",
+    "title": "Summarizing Patients' Problems from Hospital Progress Notes Using Pre-trained Sequence-to-Sequence Models.",
+    "abstract": "Automatically summarizing patients' main problems from daily progress notes using natural language processing methods helps to battle against information and cognitive overload in hospital settings and potentially assists providers with computerized diagnostic decision support. Problem list summarization requires a model to understand, abstract, and generate clinical documentation. In this work, we propose a new NLP task that aims to generate a list of problems in a patient's daily care plan using input from the provider's progress notes during hospitalization. We investigate the performance of T5 and BART, two state-of-the-art seq2seq transformer architectures, in solving this problem. We provide a corpus built on top of progress notes from publicly available electronic health record progress notes in the Medical Information Mart for Intensive Care (MIMIC)-III. T5 and BART are trained on general domain text, and we experiment with a data augmentation method and a domain adaptation pre-training method to increase exposure to medical vocabulary and knowledge. Evaluation methods include ROUGE, BERTScore, cosine similarity on sentence embedding, and F-score on medical concepts. Results show that T5 with domain adaptive pre-training achieves significant performance gains compared to a rule-based system and general domain pre-trained language models, indicating a promising direction for tackling the problem summarization task.",
+    "year": 2022,
+    "venue": "Proceedings of COLING. International Conference on Computational Linguistics",
+    "authors": [
+      "Yanjun Gao",
+      "Timothy Miller",
+      "Dongfang Xu",
+      "Dmitriy Dligach",
+      "Matthew M Churpek",
+      "Majid Afshar"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36268128/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36268128"
+    }
+  },
+  {
+    "paper_id": "pubmed:34918101",
+    "title": "Gender-sensitive word embeddings for healthcare.",
+    "abstract": "To analyze gender bias in clinical trials, to design an algorithm that mitigates the effects of biases of gender representation on natural-language (NLP) systems trained on text drawn from clinical trials, and to evaluate its performance. We analyze gender bias in clinical trials described by 16 772 PubMed abstracts (2008-2018). We present a method to augment word embeddings, the core building block of NLP-centric representations, by weighting abstracts by the number of women participants in the trial. We evaluate the resulting gender-sensitive embeddings performance on several clinical prediction tasks: comorbidity classification, hospital length of stay prediction, and intensive care unit (ICU) readmission prediction. For female patients, the gender-sensitive model area under the receiver-operator characteristic (AUROC) is 0.86 versus the baseline of 0.81 for comorbidity classification, mean absolute error 4.59 versus the baseline of 4.66 for length of stay prediction, and AUROC 0.69 versus 0.67 for ICU readmission. All results are statistically significant. Women have been underrepresented in clinical trials. Thus, using the broad clinical trials literature as training data for statistical language models could result in biased models, with deficits in knowledge about women. The method presented enables gender-sensitive use of publications as training data for word embeddings. In experiments, the gender-sensitive embeddings show better performance than baseline embeddings for the clinical tasks studied. The results highlight opportunities for recognizing and addressing gender and other representational biases in the clinical trials literature. Addressing representational biases in data for training NLP embeddings can lead to better results on downstream tasks for underrepresented populations.",
+    "year": 2022,
+    "venue": "Journal of the American Medical Informatics Association : JAMIA",
+    "authors": [
+      "Shunit Agmon",
+      "Plia Gillis",
+      "Eric Horvitz",
+      "Kira Radinsky"
+    ],
+    "doi": "10.1093/jamia/ocab279",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34918101/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "34918101"
+    }
+  },
+  {
+    "paper_id": "pubmed:30509272",
+    "title": "Combination of conditional random field with a rule based method in the extraction of PICO elements.",
+    "abstract": "Extracting primary care information in terms of Patient/Problem, Intervention, Comparison and Outcome, known as PICO elements, is difficult as the volume of medical information expands and the health semantics is complex to capture it from unstructured information. The combination of the machine learning methods (MLMs) with rule based methods (RBMs) could facilitate and improve the PICO extraction. This paper studies the PICO elements extraction methods. The goal is to combine the MLMs with the RBMs to extract PICO elements in medical papers to facilitate answering clinical questions formulated with the PICO framework. First, we analyze the aspects of the MLM model that influence the quality of the PICO elements extraction. Secondly, we combine the MLM approach with the RBMs in order to improve the PICO elements retrieval process. To conduct our experiments, we use a corpus of 1000 abstracts. We obtain an F-score of 80% for P element, 64% for the I element and 92% for the O element. Given the nature of the used training corpus where P and I elements represent respectively only 6.5 and 5.8% of total sentences, the results are competitive with previously published ones. Our study of the PICO element extraction shows that the task is very challenging. The MLMs tend to have an acceptable precision rate but they have a low recall rate when the corpus is not representative. The RBMs backed up the MLMs to increase the recall rate and consequently the combination of the two methods gave better results.",
+    "year": 2018,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Samir Chabou",
+      "Michal Iglewski"
+    ],
+    "doi": "10.1186/s12911-018-0699-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30509272/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "30509272"
+    }
+  },
+  {
+    "paper_id": "pubmed:30268842",
+    "title": "PISTON: Predicting drug indications and side effects using topic modeling and natural language processing.",
+    "abstract": "The process of discovering novel drugs to treat diseases requires a long time and high cost. It is important to understand side effects of drugs as well as their therapeutic effects, because these can seriously damage the patients due to unexpected actions of the derived candidate drugs. In order to overcome these limitations, computational methods for predicting the therapeutic effects and side effects have been proposed. In particular, text mining is a widely used technique in the field of systems biology, because it can discover hidden relationships between drugs, genes and diseases from a large amount of literature data. Compared with in vivo/in vitro experiments, text mining derives meaningful results with less time and cost. In this study, we propose an algorithm for predicting novel drug-phenotype associations and drug-side effect associations using topic modeling and natural language processing (NLP). We extract sentences in which drugs and genes co-occur from the abstracts of the literature and identify words that describe the relationship between them using NLP. Considering the characteristics of the identified words, we determine if the drug has an up-regulation effect or a down-regulation effect on the gene. Based on genes that affect drugs and their regulatory relationships, we group the frequently occurring genes and regulatory relationships into topics, and build a drug-topic probability matrix by calculating the score that the drug will have a topic using topic modeling. Using the matrix, a classifier is constructed for predicting the novel indications and side effects of drugs considering the characteristics of known drug-phenotype associations or drug-side effect associations. The proposed method predicts both indications and side effects with a single algorithm, and it can exclude drugs with serious side effects or side effects that patients do not want to experience from among the candidate drugs provided for the treatment of the phenotype. Furthermore, lists of novel candidate drugs for phenotypes and side effects can be continuously updated with our algorithm every time a document is added. More than a thousand documents are produced per day, and it is possible for our algorithm to efficiently derive candidate drugs because it requires less cost than the existing drug repositioning methods. The resource of PISTON is available at databio.gachon.ac.kr/tools/PISTON.",
+    "year": 2018,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Giup Jang",
+      "Taekeon Lee",
+      "Soyoun Hwang",
+      "Chihyun Park",
+      "Jaegyoon Ahn",
+      "Sukyung Seo",
+      "Youhyeon Hwang",
+      "Youngmi Yoon"
+    ],
+    "doi": "10.1016/j.jbi.2018.09.015",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30268842/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "30268842"
+    }
+  },
+  {
+    "paper_id": "pubmed:23347886",
+    "title": "Acquisition and evaluation of verb subcategorization resources for biomedicine.",
+    "abstract": "Biomedical natural language processing (NLP) applications that have access to detailed resources about the linguistic characteristics of biomedical language demonstrate improved performance on tasks such as relation extraction and syntactic or semantic parsing. Such applications are important for transforming the growing unstructured information buried in the biomedical literature into structured, actionable information. In this paper, we address the creation of linguistic resources that capture how individual biomedical verbs behave. We specifically consider verb subcategorization, or the tendency of verbs to \"select\" co-occurrence with particular phrase types, which influences the interpretation of verbs and identification of verbal arguments in context. There are currently a limited number of biomedical resources containing information about subcategorization frames (SCFs), and these are the result of either labor-intensive manual collation, or automatic methods that use tools adapted to a single biomedical subdomain. Either method may result in resources that lack coverage. Moreover, the quality of existing verb SCF resources for biomedicine is unknown, due to a lack of available gold standards for evaluation. This paper presents three new resources related to verb subcategorization frames in biomedicine, and four experiments making use of the new resources. We present the first biomedical SCF gold standards, capturing two different but widely-used definitions of subcategorization, and a new SCF lexicon, BioCat, covering a large number of biomedical sub-domains. We evaluate the SCF acquisition methodologies for BioCat with respect to the gold standards, and compare the results with the accuracy of the only previously existing automatically-acquired SCF lexicon for biomedicine, the BioLexicon. Our results show that the BioLexicon has greater precision while BioCat has better coverage of SCFs. Finally, we explore the definition of subcategorization using these resources and its implications for biomedical NLP. All resources are made publicly available. The SCF resources we have evaluated still show considerably lower accuracy than that reported with general English lexicons, demonstrating the need for domain- and subdomain-specific SCF acquisition tools for biomedicine. Our new gold standards reveal major differences when annotators use the different definitions. Moreover, evaluation of BioCat yields major differences in accuracy depending on the gold standard, demonstrating that the definition of subcategorization adopted will have a direct impact on perceived system accuracy for specific tasks.",
+    "year": 2013,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Laura Rimell",
+      "Thomas Lippincott",
+      "Karin Verspoor",
+      "Helen L Johnson",
+      "Anna Korhonen"
+    ],
+    "doi": "10.1016/j.jbi.2013.01.001",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23347886/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23347886"
+    }
+  },
+  {
+    "paper_id": "pubmed:20178611",
+    "title": "Extracting causal relations on HIV drug resistance from literature.",
+    "abstract": "In HIV treatment it is critical to have up-to-date resistance data of applicable drugs since HIV has a very high rate of mutation. These data are made available through scientific publications and must be extracted manually by experts in order to be used by virologists and medical doctors. Therefore there is an urgent need for a tool that partially automates this process and is able to retrieve relations between drugs and virus mutations from literature. In this work we present a novel method to extract and combine relationships between HIV drugs and mutations in viral genomes. Our extraction method is based on natural language processing (NLP) which produces grammatical relations and applies a set of rules to these relations. We applied our method to a relevant set of PubMed abstracts and obtained 2,434 extracted relations with an estimated performance of 84% for F-score. We then combined the extracted relations using logistic regression to generate resistance values for each <drug, mutation> pair. The results of this relation combination show more than 85% agreement with the Stanford HIVDB for the ten most frequently occurring mutations. The system is used in 5 hospitals from the Virolab project http://www.virolab.org to preselect the most relevant novel resistance data from literature and present those to virologists and medical doctors for further evaluation. The proposed relation extraction and combination method has a good performance on extracting HIV drug resistance data. It can be used in large-scale relation extraction experiments. The developed methods can also be applied to extract other type of relations such as gene-protein, gene-disease, and disease-mutation.",
+    "year": 2010,
+    "venue": "BMC bioinformatics",
+    "authors": [
+      "Quoc-Chinh Bui",
+      "Breanndán O Nualláin",
+      "Charles A Boucher",
+      "Peter M A Sloot"
+    ],
+    "doi": "10.1186/1471-2105-11-101",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20178611/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "20178611"
+    }
+  }
+]

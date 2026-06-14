@@ -1,0 +1,49 @@
+{
+  "paper_id": "https://openalex.org/W4396779165",
+  "title": "SoftMCL: Soft Momentum Contrastive Learning for Fine-grained Sentiment-aware Pre-training",
+  "abstract": "The pre-training for language models captures general language understanding but fails to distinguish the affective impact of a particular context to a specific word. Recent works have sought to introduce contrastive learning (CL) for sentiment-aware pre-training in acquiring affective information. Nevertheless, these methods present two significant limitations. First, the compatibility of the GPU memory often limits the number of negative samples, hindering the opportunities to learn good representations. In addition, using only a few sentiment polarities as hard labels, e.g., positive, neutral, and negative, to supervise CL will force all representations to converge to a few points, leading to the issue of latent space collapse. This study proposes a soft momentum contrastive learning (SoftMCL) for fine-grained sentiment-aware pre-training. Instead of hard labels, we introduce valence ratings as soft-label supervision for CL to fine-grained measure the sentiment similarities between samples. The proposed SoftMCL is conducted on both the word- and sentence-level to enhance the model's ability to learn affective information. A momentum queue was introduced to expand the contrastive samples, allowing storing and involving more negatives to overcome the limitations of hardware platforms. Extensive experiments were conducted on four different sentiment-related tasks, which demonstrates the effectiveness of the proposed SoftMCL method. The code and data of the proposed SoftMCL is available at: https://www.github.com/wangjin0818/SoftMCL/.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Jin Wang",
+    "Liang-Chih Yu",
+    "Xuejie Zhang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2405.01827",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2405.01827",
+  "citation_count": 4,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Training (meteorology)",
+      "Momentum (technical analysis)",
+      "Computer science",
+      "Psychology",
+      "Business",
+      "Physics",
+      "Finance",
+      "Meteorology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W230091440",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2233261550",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2810751659",
+      "https://openalex.org/W258997015",
+      "https://openalex.org/W2376932109"
+    ]
+  }
+}

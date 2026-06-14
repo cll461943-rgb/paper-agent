@@ -429,12 +429,17 @@ def generate_search_queries(
             "Return a JSON object with one field named search_queries. "
             "Required routes: original_clean, core_topic, method_task, entity_dataset, title_like, broad_synonym. "
             "CRITICAL: Each query must be extremely concise (2-4 words maximum). Avoid natural language sentences, "
-            "connecting words, or broad words like 'shows', 'proposes', 'investigate'. "
-            "Use exact technical terms (e.g., '\"in-context learning\" \"absurdly wrong\"' or 'DRO adversarial training')."
+            "connecting words, or broad words like 'shows', 'proposes', 'investigate', 'applications'. "
+            "Use exact technical terms and actively include academic synonyms, alternative phrasing, or broader/narrower "
+            "concepts (e.g. if the topic is contrastive learning, generate alternative queries with 'unsupervised sentence representation' "
+            "or 'SimCSE'). "
+            "Use double quotes for multi-word exact phrases where appropriate (e.g., '\"in-context learning\"' or '\"sentence representation\"')."
         )
         user_prompt = (
             "Return a JSON object shaped as "
             "{\"search_queries\": [{query, route, intent, required_terms, optional_terms, filters, priority}, ...]}. "
+            "Make sure to cover all required routes. For broad_synonym or core_topic routes, try to formulate queries using academic synonyms "
+            "that represent the same core concept but use different wordings to maximize search recall. "
             f"QueryPlan: {plan.model_dump_json()}. "
             f"Fallback reference: {[item.model_dump(mode='json') for item in fallback]}"
         )

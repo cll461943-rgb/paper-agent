@@ -1,0 +1,949 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2504.16021v1",
+    "title": "Navigating the State of Cognitive Flow: Context-Aware AI Interventions for Effective Reasoning Support",
+    "abstract": "Flow theory describes an optimal cognitive state where individuals experience deep focus and intrinsic motivation when a task's difficulty aligns with their skill level. In AI-augmented reasoning, interventions that disrupt the state of cognitive flow can hinder rather than enhance decision-making. This paper proposes a context-aware cognitive augmentation framework that adapts interventions based on three key contextual factors: type, timing, and scale. By leveraging multimodal behavioral cues (e.g., gaze behavior, typing hesitation, interaction speed), AI can dynamically adjust cognitive support to maintain or restore flow. We introduce the concept of cognitive flow, an extension of flow theory in AI-augmented reasoning, where interventions are personalized, adaptive, and minimally intrusive. By shifting from static interventions to context-aware augmentation, our approach ensures that AI systems support deep engagement in complex decision-making and reasoning without disrupting cognitive immersion.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dinithi Dissanayake",
+      "Suranga Nanayakkara"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.16021v1",
+    "url": "http://arxiv.org/abs/2504.16021v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.10793v3",
+    "title": "Demystifying Instruction Mixing for Fine-tuning Large Language Models",
+    "abstract": "Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tuning is still poorly understood. This study categorizes instructions into three primary types: NLP downstream tasks, coding, and general chat. We explore the effects of instruction tuning on different combinations of datasets on LLM performance, and find that certain instruction types are more advantageous for specific applications but can negatively impact other areas. This work provides insights into instruction mixtures, laying the foundations for future research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Minghao Wu",
+      "Yuxia Wang",
+      "Xudong Han",
+      "Chiyu Zhang",
+      "Timothy Baldwin"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.10793v3",
+    "url": "http://arxiv.org/abs/2312.10793v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.11651v2",
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "abstract": "Large language models (LLMs) have achieved success in acting as agents, which interact with environments through tools such as search engines. However, LLMs are optimized for language generation instead of tool use during training or alignment, limiting their effectiveness as agents. To resolve this problem, previous work has first collected interaction trajectories between LLMs and environments, using only trajectories that successfully finished the task to fine-tune smaller models, making fine-tuning data scarce and acquiring it both difficult and costly. Discarding failed trajectories also leads to significant wastage of data and resources and limits the possible optimization paths during fine-tuning. In this paper, we argue that unsuccessful trajectories offer valuable insights, and LLMs can learn from these trajectories through appropriate quality control and fine-tuning strategies. By simply adding a prefix or suffix that tells the model whether to generate a successful trajectory during training, we improve model performance by a large margin on mathematical reasoning, multi-hop question answering, and strategic question answering tasks. We further analyze the inference results and find that our method provides a better trade-off between valuable information and errors in unsuccessful trajectories. To our knowledge, we are the first to demonstrate the value of negative trajectories and their application in agent-tunning scenarios. Our findings offer guidance for developing better agent-tuning methods and low-resource data usage techniques.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.11651v2",
+    "url": "http://arxiv.org/abs/2402.11651v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.00034v2",
+    "title": "PB-LLM: Partially Binarized Large Language Models",
+    "abstract": "This paper explores network binarization, a radical form of quantization, compressing model weights to a single bit, specifically for Large Language Models (LLMs) compression. Due to previous binarization methods collapsing LLMs, we propose a novel approach, Partially-Binarized LLM (PB-LLM), which can achieve extreme low-bit quantization while maintaining the linguistic reasoning capacity of quantized LLMs. Specifically, our exploration first uncovers the ineffectiveness of naive applications of existing binarization algorithms and highlights the imperative role of salient weights in achieving low-bit quantization. Thus, PB-LLM filters a small ratio of salient weights during binarization, allocating them to higher-bit storage, i.e., partially-binarization. PB-LLM is extended to recover the capacities of quantized LMMs, by analyzing from the perspective of post-training quantization (PTQ) and quantization-aware training (QAT). Under PTQ, combining the concepts from GPTQ, we reconstruct the binarized weight matrix guided by the Hessian matrix and successfully recover the reasoning capacity of PB-LLM in low-bit. Under QAT, we freeze the salient weights during training, explore the derivation of optimal scaling factors crucial for minimizing the quantization error, and propose a scaling mechanism based on this derived scaling strategy for residual binarized weights. Those explorations and the developed methodologies significantly contribute to rejuvenating the performance of low-bit quantized LLMs and present substantial advancements in the field of network binarization for LLMs.The code is available at https://github.com/hahnyuan/BinaryLLM.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yuzhang Shang",
+      "Zhihang Yuan",
+      "Qiang Wu",
+      "Zhen Dong"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.00034v2",
+    "url": "http://arxiv.org/abs/2310.00034v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.06176v1",
+    "title": "Large Language Model Reasoning Failures",
+    "abstract": "Large Language Models (LLMs) have exhibited remarkable reasoning capabilities, achieving impressive results across a wide range of tasks. Despite these advances, significant reasoning failures persist, occurring even in seemingly simple scenarios. To systematically understand and address these shortcomings, we present the first comprehensive survey dedicated to reasoning failures in LLMs. We introduce a novel categorization framework that distinguishes reasoning into embodied and non-embodied types, with the latter further subdivided into informal (intuitive) and formal (logical) reasoning. In parallel, we classify reasoning failures along a complementary axis into three types: fundamental failures intrinsic to LLM architectures that broadly affect downstream tasks; application-specific limitations that manifest in particular domains; and robustness issues characterized by inconsistent performance across minor variations. For each reasoning failure, we provide a clear definition, analyze existing studies, explore root causes, and present mitigation strategies. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities. We additionally release a comprehensive collection of research works on LLM reasoning failures, as a GitHub repository at https://github.com/Peiyang-Song/Awesome-LLM-Reasoning-Failures, to provide an easy entry point to this area.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Peiyang Song",
+      "Pengrui Han",
+      "Noah Goodman"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.06176v1",
+    "url": "http://arxiv.org/abs/2602.06176v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.23180v1",
+    "title": "ReasoningRec: Bridging Personalized Recommendations and Human-Interpretable Explanations through LLM Reasoning",
+    "abstract": "This paper presents ReasoningRec, a reasoning-based recommendation framework that leverages Large Language Models (LLMs) to bridge the gap between recommendations and human-interpretable explanations. In contrast to conventional recommendation systems that rely on implicit user-item interactions, ReasoningRec employs LLMs to model users and items, focusing on preferences, aversions, and explanatory reasoning. The framework utilizes a larger LLM to generate synthetic explanations for user preferences, subsequently used to fine-tune a smaller LLM for enhanced recommendation accuracy and human-interpretable explanation. Our experimental study investigates the impact of reasoning and contextual information on personalized recommendations, revealing that the quality of contextual and personalized data significantly influences the LLM's capacity to generate plausible explanations. Empirical evaluations demonstrate that ReasoningRec surpasses state-of-the-art methods by up to 12.5\\% in recommendation prediction while concurrently providing human-intelligible explanations. The code is available here: https://github.com/millenniumbismay/reasoningrec.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Millennium Bismay",
+      "Xiangjue Dong",
+      "James Caverlee"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.23180v1",
+    "url": "http://arxiv.org/abs/2410.23180v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.12538v1",
+    "title": "Agentic Reasoning for Large Language Models",
+    "abstract": "Reasoning is a fundamental cognitive process underlying inference, problem-solving, and decision-making. While large language models (LLMs) demonstrate strong reasoning capabilities in closed-world settings, they struggle in open-ended and dynamic environments. Agentic reasoning marks a paradigm shift by reframing LLMs as autonomous agents that plan, act, and learn through continual interaction. In this survey, we organize agentic reasoning along three complementary dimensions. First, we characterize environmental dynamics through three layers: foundational agentic reasoning, which establishes core single-agent capabilities including planning, tool use, and search in stable environments; self-evolving agentic reasoning, which studies how agents refine these capabilities through feedback, memory, and adaptation; and collective multi-agent reasoning, which extends intelligence to collaborative settings involving coordination, knowledge sharing, and shared goals. Across these layers, we distinguish in-context reasoning, which scales test-time interaction through structured orchestration, from post-training reasoning, which optimizes behaviors via reinforcement learning and supervised fine-tuning. We further review representative agentic reasoning frameworks across real-world applications and benchmarks, including science, robotics, healthcare, autonomous research, and mathematics. This survey synthesizes agentic reasoning methods into a unified roadmap bridging thought and action, and outlines open challenges and future directions, including personalization, long-horizon interaction, world modeling, scalable multi-agent training, and governance for real-world deployment.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Tianxin Wei",
+      "Ting-Wei Li",
+      "Zhining Liu",
+      "Xuying Ning",
+      "Ze Yang",
+      "Jiaru Zou",
+      "Zhichen Zeng",
+      "Ruizhong Qiu",
+      "Xiao Lin",
+      "Dongqi Fu",
+      "Zihao Li",
+      "Mengting Ai",
+      "Duo Zhou",
+      "Wenxuan Bao",
+      "Yunzhe Li",
+      "Gaotang Li",
+      "Cheng Qian",
+      "Yu Wang",
+      "Xiangru Tang",
+      "Yin Xiao",
+      "Liri Fang",
+      "Hui Liu",
+      "Xianfeng Tang",
+      "Yuji Zhang",
+      "Chi Wang",
+      "Jiaxuan You",
+      "Heng Ji",
+      "Hanghang Tong",
+      "Jingrui He"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.12538v1",
+    "url": "http://arxiv.org/abs/2601.12538v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:hybrid",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.02483v1",
+    "title": "Enhancing Large Language Models with Neurosymbolic Reasoning for Multilingual Tasks",
+    "abstract": "Large language models (LLMs) often struggle to perform multi-target reasoning in long-context scenarios where relevant information is scattered across extensive documents. To address this challenge, we introduce NeuroSymbolic Augmented Reasoning (NSAR), which combines the benefits of neural and symbolic reasoning during inference. NSAR explicitly extracts symbolic facts from text and generates executable Python code to handle complex reasoning steps. Through extensive experiments across seven languages and diverse context lengths, we demonstrate that NSAR significantly outperforms both a vanilla RAG baseline and advanced prompting strategies in accurately identifying and synthesizing multiple pieces of information. Our results highlight the effectiveness of combining explicit symbolic operations with neural inference for robust, interpretable, and scalable reasoning in multilingual settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Sina Bagheri Nezhad",
+      "Ameeta Agrawal"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.02483v1",
+    "url": "http://arxiv.org/abs/2506.02483v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.19266v4",
+    "title": "PediatricsGPT: Large Language Models as Chinese Medical Assistants for Pediatric Applications",
+    "abstract": "Developing intelligent pediatric consultation systems offers promising prospects for improving diagnostic efficiency, especially in China, where healthcare resources are scarce. Despite recent advances in Large Language Models (LLMs) for Chinese medicine, their performance is sub-optimal in pediatric applications due to inadequate instruction data and vulnerable training procedures. To address the above issues, this paper builds PedCorpus, a high-quality dataset of over 300,000 multi-task instructions from pediatric textbooks, guidelines, and knowledge graph resources to fulfil diverse diagnostic demands. Upon well-designed PedCorpus, we propose PediatricsGPT, the first Chinese pediatric LLM assistant built on a systematic and robust training pipeline. In the continuous pre-training phase, we introduce a hybrid instruction pre-training mechanism to mitigate the internal-injected knowledge inconsistency of LLMs for medical domain adaptation. Immediately, the full-parameter Supervised Fine-Tuning (SFT) is utilized to incorporate the general medical knowledge schema into the models. After that, we devise a direct following preference optimization to enhance the generation of pediatrician-like humanistic responses. In the parameter-efficient secondary SFT phase, a mixture of universal-specific experts strategy is presented to resolve the competency conflict between medical generalist and pediatric expertise mastery. Extensive results based on the metrics, GPT-4, and doctor evaluations on distinct doctor downstream tasks show that PediatricsGPT consistently outperforms previous Chinese medical LLMs. Our model and dataset will be open-source for community development.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Dingkang Yang",
+      "Jinjie Wei",
+      "Dongling Xiao",
+      "Shunli Wang",
+      "Tong Wu",
+      "Gang Li",
+      "Mingcheng Li",
+      "Shuaibing Wang",
+      "Jiawei Chen",
+      "Yue Jiang",
+      "Qingyao Xu",
+      "Ke Li",
+      "Peng Zhai",
+      "Lihua Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.19266v4",
+    "url": "http://arxiv.org/abs/2405.19266v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.02144v1",
+    "title": "Making Large Language Models Better Reasoners with Alignment",
+    "abstract": "Reasoning is a cognitive process of using evidence to reach a sound conclusion. The reasoning capability is essential for large language models (LLMs) to serve as the brain of the artificial general intelligence agent. Recent studies reveal that fine-tuning LLMs on data with the chain of thought (COT) reasoning process can significantly enhance their reasoning capabilities. However, we find that the fine-tuned LLMs suffer from an \\textit{Assessment Misalignment} problem, i.e., they frequently assign higher scores to subpar COTs, leading to potential limitations in their reasoning abilities. To address this problem, we introduce an \\textit{Alignment Fine-Tuning (AFT)} paradigm, which involves three steps: 1) fine-tuning LLMs with COT training data; 2) generating multiple COT responses for each question, and categorizing them into positive and negative ones based on whether they achieve the correct answer; 3) calibrating the scores of positive and negative responses given by LLMs with a novel constraint alignment loss. Specifically, the constraint alignment loss has two objectives: a) Alignment, which guarantees that positive scores surpass negative scores to encourage answers with high-quality COTs; b) Constraint, which keeps the negative scores confined to a reasonable range to prevent the model degradation. Beyond just the binary positive and negative feedback, the constraint alignment loss can be seamlessly adapted to the ranking situations when ranking feedback is accessible. Furthermore, we also delve deeply into recent ranking-based alignment methods, such as DPO, RRHF, and PRO, and discover that the constraint, which has been overlooked by these approaches, is also crucial for their performance. Extensive experiments on four reasoning benchmarks with both binary and ranking feedback demonstrate the effectiveness of AFT.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Peiyi Wang",
+      "Lei Li",
+      "Liang Chen",
+      "Feifan Song",
+      "Binghuai Lin",
+      "Yunbo Cao",
+      "Tianyu Liu",
+      "Zhifang Sui"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.02144v1",
+    "url": "http://arxiv.org/abs/2309.02144v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.24377v1",
+    "title": "Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models",
+    "abstract": "Recent advancements in Large Language Models (LLMs) have significantly enhanced their ability to perform complex reasoning tasks, transitioning from fast and intuitive thinking (System 1) to slow and deep reasoning (System 2). While System 2 reasoning improves task accuracy, it often incurs substantial computational costs due to its slow thinking nature and inefficient or unnecessary reasoning behaviors. In contrast, System 1 reasoning is computationally efficient but leads to suboptimal performance. Consequently, it is critical to balance the trade-off between performance (benefits) and computational costs (budgets), giving rise to the concept of reasoning economy. In this survey, we provide a comprehensive analysis of reasoning economy in both the post-training and test-time inference stages of LLMs, encompassing i) the cause of reasoning inefficiency, ii) behavior analysis of different reasoning patterns, and iii) potential solutions to achieve reasoning economy. By offering actionable insights and highlighting open challenges, we aim to shed light on strategies for improving the reasoning economy of LLMs, thereby serving as a valuable resource for advancing research in this evolving area. We also provide a public repository to continually track developments in this fast-evolving field.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Rui Wang",
+      "Hongru Wang",
+      "Boyang Xue",
+      "Jianhui Pang",
+      "Shudong Liu",
+      "Yi Chen",
+      "Jiahao Qiu",
+      "Derek Fai Wong",
+      "Heng Ji",
+      "Kam-Fai Wong"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.24377v1",
+    "url": "http://arxiv.org/abs/2503.24377v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.05114v1",
+    "title": "$π^2$: Structure-Originated Reasoning Data Improves Long-Context Reasoning Ability of Large Language Models",
+    "abstract": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in large language models (LLMs). Our approach, $π^2$, constructs high-quality reasoning data through rigorous QA curation: 1) extracting and expanding tables from Wikipedia, 2) from the collected tables and relevant context, generating realistic and multi-hop analytical reasoning questions whose answers are automatically determined and verified through dual-path code execution, and 3) back-translating step-by-step structured reasoning traces as solutions of QA pairs given realistic web-search context. Supervised fine-tuning with \\textsc{\\small{gpt-oss-20b}} and \\textsc{\\small{Qwen3-4B-Instruct-2507}} on $π^2$ yields consistent improvements across four long-context reasoning benchmarks and our alike $π^2$-Bench, with average absolute accuracy gains of +4.3% and +2.7% respectively. Notably, our dataset facilitates self-distillation, where \\textsc{\\small{gpt-oss-20b}} even improves its average performance by +4.4% with its own reasoning traces, demonstrating $π^2$'s usefulness. Our code, data, and models are open-source at https://github.com/vt-pi-squared/pi-squared.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Quyet V. Do",
+      "Thinh Pham",
+      "Nguyen Nguyen",
+      "Sha Li",
+      "Pratibha Zunjare",
+      "Tu Vu"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.05114v1",
+    "url": "http://arxiv.org/abs/2604.05114v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.08568v2",
+    "title": "WizardCoder: Empowering Code Large Language Models with Evol-Instruct",
+    "abstract": "Code Large Language Models (Code LLMs), such as StarCoder, have demonstrated exceptional performance in code-related tasks. However, most existing models are solely pre-trained on extensive raw code data without instruction fine-tuning. In this paper, we introduce WizardCoder, which empowers Code LLMs with complex instruction fine-tuning, by adapting the Evol-Instruct method to the domain of code. Through comprehensive experiments on four prominent code generation benchmarks, namely HumanEval, HumanEval+, MBPP, and DS-1000, we unveil the exceptional capabilities of our model. It surpasses all other open-source Code LLMs by a substantial margin. Moreover, our model even outperforms the largest closed LLMs, Anthropic's Claude and Google's Bard, on HumanEval and HumanEval+. Our code, model weights, and data are public at https://github.com/nlpxucan/WizardLM",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ziyang Luo",
+      "Can Xu",
+      "Pu Zhao",
+      "Qingfeng Sun",
+      "Xiubo Geng",
+      "Wenxiang Hu",
+      "Chongyang Tao",
+      "Jing Ma",
+      "Qingwei Lin",
+      "Daxin Jiang"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.08568v2",
+    "url": "http://arxiv.org/abs/2306.08568v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.16118v2",
+    "title": "Response: Emergent analogical reasoning in large language models",
+    "abstract": "In their recent Nature Human Behaviour paper, \"Emergent analogical reasoning in large language models,\" (Webb, Holyoak, and Lu, 2023) the authors argue that \"large language models such as GPT-3 have acquired an emergent ability to find zero-shot solutions to a broad range of analogy problems.\" In this response, we provide counterexamples of the letter string analogies. In our tests, GPT-3 fails to solve simplest variations of the original tasks, whereas human performance remains consistently high across all modified versions. Zero-shot reasoning is an extraordinary claim that requires extraordinary evidence. We do not see that evidence in our experiments. To strengthen claims of humanlike reasoning such as zero-shot reasoning, it is important that the field develop approaches that rule out data memorization.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Damian Hodel",
+      "Jevin West"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.16118v2",
+    "url": "http://arxiv.org/abs/2308.16118v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.05261v1",
+    "title": "From Propositional Logic to Plausible Reasoning: A Uniqueness Theorem",
+    "abstract": "We consider the question of extending propositional logic to a logic of plausible reasoning, and posit four requirements that any such extension should satisfy. Each is a requirement that some property of classical propositional logic be preserved in the extended logic; as such, the requirements are simpler and less problematic than those used in Cox's Theorem and its variants. As with Cox's Theorem, our requirements imply that the extended logic must be isomorphic to (finite-set) probability theory. We also obtain specific numerical values for the probabilities, recovering the classical definition of probability as a theorem, with truth assignments that satisfy the premise playing the role of the \"possible cases.\"",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Kevin S. Van Horn"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.05261v1",
+    "url": "http://arxiv.org/abs/1706.05261v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.16419v4",
+    "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in complex tasks. Recent advancements in Large Reasoning Models (LRMs), such as OpenAI o1 and DeepSeek-R1, have further improved performance in System-2 reasoning domains like mathematics and programming by harnessing supervised fine-tuning (SFT) and reinforcement learning (RL) techniques to enhance the Chain-of-Thought (CoT) reasoning. However, while longer CoT reasoning sequences improve performance, they also introduce significant computational overhead due to verbose and redundant outputs, known as the \"overthinking phenomenon\". In this paper, we provide the first structured survey to systematically investigate and explore the current progress toward achieving efficient reasoning in LLMs. Overall, relying on the inherent mechanism of LLMs, we categorize existing works into several key directions: (1) model-based efficient reasoning, which considers optimizing full-length reasoning models into more concise reasoning models or directly training efficient reasoning models; (2) reasoning output-based efficient reasoning, which aims to dynamically reduce reasoning steps and length during inference; (3) input prompts-based efficient reasoning, which seeks to enhance reasoning efficiency based on input prompt properties such as difficulty or length control. Additionally, we introduce the use of efficient data for training reasoning models, explore the reasoning capabilities of small language models, and discuss evaluation methods and benchmarking. Project website: https://github.com/Eclipsess/Awesome-Efficient-Reasoning-LLMs",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yang Sui",
+      "Yu-Neng Chuang",
+      "Guanchu Wang",
+      "Jiamu Zhang",
+      "Tianyi Zhang",
+      "Jiayi Yuan",
+      "Hongyi Liu",
+      "Andrew Wen",
+      "Shaochen Zhong",
+      "Na Zou",
+      "Hanjie Chen",
+      "Xia Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.16419v4",
+    "url": "http://arxiv.org/abs/2503.16419v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.06101v1",
+    "title": "The Valley of Code Reasoning: Scaling Knowledge Distillation of Large Language Models",
+    "abstract": "Distilling the thinking traces of a Large Language Model (LLM) with reasoning capabilities into a smaller model has been proven effective. Yet, there is a scarcity of work done on how model performances scale with the quantity of distillation data. In this work, we study the scaling trend of distilling competitive coding skills on two small non-reasoning LLMs. We validate the hypothesis that there is a $\\textit{valley of code reasoning}$: downstream performance on competitive coding first drops as data quantity increases, then it steadily increases in a sharper-than-log-linear fashion. Having identified the trend, we further fine-tune the models at two different distillation stages on the same data to ground conclusions on their respective learning phases. We learn that across stages in the low and medium-low data regimes, small models benefit significantly from easier coding questions than from harder ones. We also find that, surprisingly, the correctness of outputs in training data makes no difference to distillation outcomes. Our work represents a step forward in understanding the training dynamics of code reasoning distillation outside intuition",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Muyu He",
+      "Muhammad Ali Shafique",
+      "Anand Kumar",
+      "Tsach Mackey",
+      "Nazneen Rajani"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.06101v1",
+    "url": "http://arxiv.org/abs/2510.06101v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.13930v1",
+    "title": "Hierarchical Multi-agent Large Language Model Reasoning for Autonomous Functional Materials Discovery",
+    "abstract": "Artificial intelligence is reshaping scientific exploration, but most methods automate procedural tasks without engaging in scientific reasoning, limiting autonomy in discovery. We introduce Materials Agents for Simulation and Theory in Electronic-structure Reasoning (MASTER), an active learning framework where large language models autonomously design, execute, and interpret atomistic simulations. In MASTER, a multimodal system translates natural language into density functional theory workflows, while higher-level reasoning agents guide discovery through a hierarchy of strategies, including a single agent baseline and three multi-agent approaches: peer review, triage-ranking, and triage-forms. Across two chemical applications, CO adsorption on Cu-surface transition metal (M) adatoms and on M-N-C catalysts, reasoning-driven exploration reduces required atomistic simulations by up to 90% relative to trial-and-error selection. Reasoning trajectories reveal chemically grounded decisions that cannot be explained by stochastic sampling or semantic bias. Altogether, multi-agent collaboration accelerates materials discovery and marks a new paradigm for autonomous scientific exploration.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Samuel Rothfarb",
+      "Megan C. Davis",
+      "Ivana Matanovic",
+      "Baikun Li",
+      "Edward F. Holby",
+      "Wilton J. M. Kort-Kamp"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.13930v1",
+    "url": "http://arxiv.org/abs/2512.13930v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.16883v1",
+    "title": "Enhancing Critical Thinking with AI: A Tailored Warning System for RAG Models",
+    "abstract": "Retrieval-Augmented Generation (RAG) systems offer a powerful approach to enhancing large language model (LLM) outputs by incorporating fact-checked, contextually relevant information. However, fairness and reliability concerns persist, as hallucinations can emerge at both the retrieval and generation stages, affecting users' reasoning and decision-making. Our research explores how tailored warning messages -- whose content depends on the specific context of hallucination -- shape user reasoning and actions in an educational quiz setting. Preliminary findings suggest that while warnings improve accuracy and awareness of high-level hallucinations, they may also introduce cognitive friction, leading to confusion and diminished trust in the system. By examining these interactions, this work contributes to the broader goal of AI-augmented reasoning: developing systems that actively support human reflection, critical thinking, and informed decision-making rather than passive information consumption.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xuyang Zhu",
+      "Sejoon Chang",
+      "Andrew Kuik"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.16883v1",
+    "url": "http://arxiv.org/abs/2504.16883v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.11364v4",
+    "title": "Offline Learning and Forgetting for Reasoning with Large Language Models",
+    "abstract": "Leveraging inference-time search in large language models has proven effective in further enhancing a trained model's capability to solve complex mathematical and reasoning problems. However, this approach significantly increases computational costs and inference time, as the model must generate and evaluate multiple candidate solutions to identify a viable reasoning path. To address this, we propose an effective approach that integrates search capabilities directly into the model by fine-tuning it on unpaired successful (learning) and failed reasoning paths (forgetting) derived from diverse search methods. A key challenge we identify is that naive fine-tuning can degrade the model's search capability; we show this can be mitigated with a smaller learning rate. Extensive experiments on the challenging Game-of-24 and Countdown arithmetic puzzles show that, replacing CoT-generated data with search-generated data for offline fine-tuning improves success rates by around 23% over inference-time search baselines, while reducing inference time by 180$\\times$. On top of this, our learning and forgetting objective consistently outperforms both supervised fine-tuning and preference-based methods.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Tianwei Ni",
+      "Allen Nie",
+      "Sapana Chaudhary",
+      "Yao Liu",
+      "Huzefa Rangwala",
+      "Rasool Fakoor"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.11364v4",
+    "url": "http://arxiv.org/abs/2504.11364v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.04371v11",
+    "title": "Cumulative Reasoning with Large Language Models",
+    "abstract": "Recent advancements in large language models (LLMs) have shown remarkable progress, yet their ability to solve complex problems remains limited. In this work, we introduce Cumulative Reasoning (CR), a structured framework that enhances LLM problem-solving by emulating human-like iterative and cumulative thought processes. CR orchestrates LLMs in three distinct roles: Proposer, Verifier(s), and Reporter, to systematically decompose tasks, generate and validate intermediate reasoning steps, and compose them into a solution by building a dynamic Directed Acyclic Graph (DAG) of verified propositions. This approach substantially enhances problem-solving capabilities. We demonstrate CR's advantage through several complex reasoning tasks: it outperforms existing methods in logical inference tasks with up to a 9.3% improvement, achieving 98.04% accuracy on the curated FOLIO wiki dataset. In the Game of 24, it achieves 98% accuracy, marking a 24% improvement over previous methods. In solving MATH problems, CR achieves a 4.2% increase from previous methods and a 43% relative improvement in the most challenging level 5 problems. When incorporating a code environment with CR, we further harness LLMs' reasoning capabilities and outperform the Program of Thought (PoT) method by 38.8%.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yifan Zhang",
+      "Jingqin Yang",
+      "Yang Yuan",
+      "Andrew Chi-Chih Yao"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.04371v11",
+    "url": "http://arxiv.org/abs/2308.04371v11",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.01023v1",
+    "title": "Large Language Model Evaluation Via Multi AI Agents: Preliminary results",
+    "abstract": "As Large Language Models (LLMs) have become integral to both research and daily operations, rigorous evaluation is crucial. This assessment is important not only for individual tasks but also for understanding their societal impact and potential risks. Despite extensive efforts to examine LLMs from various perspectives, there is a noticeable lack of multi-agent AI models specifically designed to evaluate the performance of different LLMs. To address this gap, we introduce a novel multi-agent AI model that aims to assess and compare the performance of various LLMs. Our model consists of eight distinct AI agents, each responsible for retrieving code based on a common description from different advanced language models, including GPT-3.5, GPT-3.5 Turbo, GPT-4, GPT-4 Turbo, Google Bard, LLAMA, and Hugging Face. Our developed model utilizes the API of each language model to retrieve code for a given high-level description. Additionally, we developed a verification agent, tasked with the critical role of evaluating the code generated by its counterparts. We integrate the HumanEval benchmark into our verification agent to assess the generated code's performance, providing insights into their respective capabilities and efficiencies. Our initial results indicate that the GPT-3.5 Turbo model's performance is comparatively better than the other models. This preliminary analysis serves as a benchmark, comparing their performances side by side. Our future goal is to enhance the evaluation process by incorporating the Massively Multitask Benchmark for Python (MBPP) benchmark, which is expected to further refine our assessment. Additionally, we plan to share our developed model with twenty practitioners from various backgrounds to test our model and collect their feedback for further improvement.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zeeshan Rasheed",
+      "Muhammad Waseem",
+      "Kari Systä",
+      "Pekka Abrahamsson"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.01023v1",
+    "url": "http://arxiv.org/abs/2404.01023v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.01157v3",
+    "title": "Complex Logical Reasoning over Knowledge Graphs using Large Language Models",
+    "abstract": "Reasoning over knowledge graphs (KGs) is a challenging task that requires a deep understanding of the complex relationships between entities and the underlying logic of their relations. Current approaches rely on learning geometries to embed entities in vector space for logical query operations, but they suffer from subpar performance on complex queries and dataset-specific representations. In this paper, we propose a novel decoupled approach, Language-guided Abstract Reasoning over Knowledge graphs (LARK), that formulates complex KG reasoning as a combination of contextual KG search and logical query reasoning, to leverage the strengths of graph extraction algorithms and large language models (LLM), respectively. Our experiments demonstrate that the proposed approach outperforms state-of-the-art KG reasoning methods on standard benchmark datasets across several logical query constructs, with significant performance gain for queries of higher complexity. Furthermore, we show that the performance of our approach improves proportionally to the increase in size of the underlying LLM, enabling the integration of the latest advancements in LLMs for logical reasoning over KGs. Our work presents a new direction for addressing the challenges of complex KG reasoning and paves the way for future research in this area.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Nurendra Choudhary",
+      "Chandan K. Reddy"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.01157v3",
+    "url": "http://arxiv.org/abs/2305.01157v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.09567v5",
+    "title": "Towards Reasoning Era: A Survey of Long Chain-of-Thought for Reasoning Large Language Models",
+    "abstract": "Recent advancements in reasoning with large language models (RLLMs), such as OpenAI-O1 and DeepSeek-R1, have demonstrated their impressive capabilities in complex domains like mathematics and coding. A central factor in their success lies in the application of long chain-of-thought (Long CoT) characteristics, which enhance reasoning abilities and enable the solution of intricate problems. However, despite these developments, a comprehensive survey on Long CoT is still lacking, limiting our understanding of its distinctions from traditional short chain-of-thought (Short CoT) and complicating ongoing debates on issues like \"overthinking\" and \"inference-time scaling.\" This survey seeks to fill this gap by offering a unified perspective on Long CoT. (1) We first distinguish Long CoT from Short CoT and introduce a novel taxonomy to categorize current reasoning paradigms. (2) Next, we explore the key characteristics of Long CoT: deep reasoning, extensive exploration, and feasible reflection, which enable models to handle more complex tasks and produce more efficient, coherent outcomes compared to the shallower Short CoT. (3) We then investigate key phenomena such as the emergence of Long CoT with these characteristics, including overthinking, and inference-time scaling, offering insights into how these processes manifest in practice. (4) Finally, we identify significant research gaps and highlight promising future directions, including the integration of multi-modal reasoning, efficiency improvements, and enhanced knowledge frameworks. By providing a structured overview, this survey aims to inspire future research and further the development of logical reasoning in artificial intelligence.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Qiguang Chen",
+      "Libo Qin",
+      "Jinhao Liu",
+      "Dengyun Peng",
+      "Jiannan Guan",
+      "Peng Wang",
+      "Mengkang Hu",
+      "Yuhang Zhou",
+      "Te Gao",
+      "Wanxiang Che"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.09567v5",
+    "url": "http://arxiv.org/abs/2503.09567v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.14214v1",
+    "title": "CROP: Token-Efficient Reasoning in Large Language Models via Regularized Prompt Optimization",
+    "abstract": "Large Language Models utilizing reasoning techniques improve task performance but incur significant latency and token costs due to verbose generation. Existing automatic prompt optimization(APO) frameworks target task accuracy exclusively at the expense of generating long reasoning traces. We propose Cost-Regularized Optimization of Prompts (CROP), an APO method that introduces regularization on response length by generating textual feedback in addition to standard accuracy feedback. This forces the optimization process to produce prompts that elicit concise responses containing only critical information and reasoning. We evaluate our approach on complex reasoning datasets, specifically GSM8K, LogiQA and BIG-Bench Hard. We achieved an 80.6\\% reduction in token consumption while maintaining competitive accuracy, seeing only a nominal decline in performance. This presents a pragmatic solution for deploying token-efficient and cost-effective agentic AI systems in production pipelines.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Deep Shah",
+      "Sanket Badhe",
+      "Nehal Kathrotia",
+      "Priyanka Tiwari"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.14214v1",
+    "url": "http://arxiv.org/abs/2604.14214v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.10034v3",
+    "title": "Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap",
+    "abstract": "Large language models (LLMs) have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence. The interplay between LLMs and evolutionary algorithms (EAs), despite differing in objectives and methodologies, share a common pursuit of applicability in complex problems. Meanwhile, EA can provide an optimization framework for LLM's further enhancement under black-box settings, empowering LLM with flexible global search capacities. On the other hand, the abundant domain knowledge inherent in LLMs could enable EA to conduct more intelligent searches. Furthermore, the text processing and generative capabilities of LLMs would aid in deploying EAs across a wide range of tasks. Based on these complementary advantages, this paper provides a thorough review and a forward-looking roadmap, categorizing the reciprocal inspiration into two main avenues: LLM-enhanced EA and EA-enhanced LLM. Some integrated synergy methods are further introduced to exemplify the complementarity between LLMs and EAs in diverse scenarios, including code generation, software engineering, neural architecture search, and various generation tasks. As the first comprehensive review focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding the collaborative potential of LLMs and EAs. The identified challenges and future directions offer guidance for researchers and practitioners to unlock the full potential of this innovative collaboration in propelling advancements in optimization and artificial intelligence. We have created a GitHub repository to index the relevant papers: https://github.com/wuxingyu-ai/LLM4EC.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Xingyu Wu",
+      "Sheng-hao Wu",
+      "Jibin Wu",
+      "Liang Feng",
+      "Kay Chen Tan"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.10034v3",
+    "url": "http://arxiv.org/abs/2401.10034v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.12036v2",
+    "title": "Exploring Advanced Large Language Models with LLMsuite",
+    "abstract": "This tutorial explores the advancements and challenges in the development of Large Language Models (LLMs) such as ChatGPT and Gemini. It addresses inherent limitations like temporal knowledge cutoffs, mathematical inaccuracies, and the generation of incorrect information, proposing solutions like Retrieval Augmented Generation (RAG), Program-Aided Language Models (PAL), and frameworks such as ReAct and LangChain. The integration of these techniques enhances LLM performance and reliability, especially in multi-step reasoning and complex task execution. The paper also covers fine-tuning strategies, including instruction fine-tuning, parameter-efficient methods like LoRA, and Reinforcement Learning from Human Feedback (RLHF) as well as Reinforced Self-Training (ReST). Additionally, it provides a comprehensive survey of transformer architectures and training techniques for LLMs. The source code can be accessed by contacting the author via email for a request.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Giorgio Roffo"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.12036v2",
+    "url": "http://arxiv.org/abs/2407.12036v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.19676v3",
+    "title": "Large Language Models' Reasoning Stalls: An Investigation into the Capabilities of Frontier Models",
+    "abstract": "Empirical methods to examine the capability of Large Language Models (LLMs) to use Automated Theorem Prover (ATP) reasoning strategies are studied. We evaluate the performance of State of the Art models from December 2023 and August 2024 on PRONTOQA steamroller reasoning problems. For that, we develop methods for assessing LLM response accuracy and correct answer correlation. Our results show that progress in improving LLM reasoning abilities has stalled over the nine month period. By tracking completion tokens, we show that almost all improvement in reasoning ability since GPT-4 was released can be attributed to either hidden system prompts or the training of models to automatically use generic Chain of Thought prompting strategies. Among the ATP reasoning strategies tried, we found that current frontier LLMs are best able to follow the bottom-up (also known as forward-chaining) strategy. A low positive correlation was found between an LLM response containing correct reasoning and arriving at the correct conclusion.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Lachlan McGinness",
+      "Peter Baumgartner"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.19676v3",
+    "url": "http://arxiv.org/abs/2505.19676v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.13684v1",
+    "title": "Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation",
+    "abstract": "Human cognition is constrained by processing limitations, leading to cognitive overload and inefficiencies in knowledge synthesis and decision-making. Large Language Models (LLMs) present an opportunity for cognitive augmentation, but their current reactive nature limits their real-world applicability. This position paper explores the potential of context-aware cognitive augmentation, where LLMs dynamically adapt to users' cognitive states and task environments to provide appropriate support. Through a think-aloud study in an exhibition setting, we examine how individuals interact with multi-modal information and identify key cognitive challenges in structuring, retrieving, and applying knowledge. Our findings highlight the need for AI-driven cognitive support systems that integrate real-time contextual awareness, personalized reasoning assistance, and socially adaptive interactions. We propose a framework for AI augmentation that seamlessly transitions between real-time cognitive support and post-experience knowledge organization, contributing to the design of more effective human-centered AI systems.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xiangrong",
+      "Zhu",
+      "Yuan Xu",
+      "Tianjian Liu",
+      "Jingwei Sun",
+      "Yu Zhang",
+      "Xin Tong"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.13684v1",
+    "url": "http://arxiv.org/abs/2504.13684v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12001v2",
+    "title": "OPT-R: Exploring the Role of Explanations in Finetuning and Prompting for Reasoning Skills of Large Language Models",
+    "abstract": "In this paper, we conduct a thorough investigation into the reasoning capabilities of Large Language Models (LLMs), focusing specifically on the Open Pretrained Transformers (OPT) models as a representative of such models. Our study entails finetuning three different sizes of OPT on a carefully curated reasoning corpus, resulting in two sets of finetuned models: OPT-R, finetuned without explanations, and OPT-RE, finetuned with explanations. We then evaluate all models on 57 out-of-domain tasks drawn from the SUPER-NATURALINSTRUCTIONS benchmark, covering 26 distinct reasoning skills, utilizing three prompting techniques. Through a comprehensive grid of 27 configurations and 6,156 test evaluations, we investigate the dimensions of finetuning, prompting, and scale to understand the role of explanations on different reasoning skills. Our findings reveal that having explanations in the fewshot exemplar has no significant impact on the model's performance when the model is finetuned, while positively affecting the non-finetuned counterpart. Moreover, we observe a slight yet consistent increase in classification accuracy as we incorporate explanations during prompting and finetuning, respectively. Finally, we offer insights on which skills benefit the most from incorporating explanations during finetuning and prompting, such as Numerical (+20.4%) and Analogical (+13.9%) reasoning, as well as skills that exhibit negligible or negative effects.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Badr AlKhamissi",
+      "Siddharth Verma",
+      "Ping Yu",
+      "Zhijing Jin",
+      "Asli Celikyilmaz",
+      "Mona Diab"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12001v2",
+    "url": "http://arxiv.org/abs/2305.12001v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

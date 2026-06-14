@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2310.02410v1",
+  "title": "Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness",
+  "abstract": "Large Mixture of Experts (MoE) models could achieve state-of-the-art quality on various language tasks, including machine translation task, thanks to the efficient model scaling capability with expert parallelism. However, it has brought a fundamental issue of larger memory consumption and increased memory bandwidth bottleneck at deployment time. In this paper, we propose Mixture of Quantized Experts (MoQE) which is a simple weight-only quantization method applying ultra low-bit down to 2-bit quantizations only to expert weights for mitigating the increased memory and latency issues of MoE models. We show that low-bit quantization together with the MoE architecture delivers a reliable model performance while reducing the memory size significantly even without any additional training in most cases. In particular, expert layers in MoE models are much more robust to the quantization than conventional feedforward networks (FFN) layers. In our comprehensive analysis, we show that MoE models with 2-bit expert weights can deliver better model performance than the dense model trained on the same dataset. As a result of low-bit quantization, we show the model size can be reduced by 79.6% of the original half precision floating point (fp16) MoE model. Combined with an optimized GPU runtime implementation, it also achieves 1.24X speed-up on A100 GPUs.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Young Jin Kim",
+    "Raffy Fahim",
+    "Hany Hassan Awadalla"
+  ],
+  "doi": null,
+  "arxiv_id": "2310.02410v1",
+  "url": "http://arxiv.org/abs/2310.02410v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

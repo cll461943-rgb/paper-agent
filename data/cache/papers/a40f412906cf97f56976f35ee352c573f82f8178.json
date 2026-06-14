@@ -1,0 +1,57 @@
+{
+  "paper_id": "https://openalex.org/W2867167548",
+  "title": "A Simple Unified Framework for Detecting Out-of-Distribution Samples and Adversarial Attacks",
+  "abstract": "Detecting test samples drawn sufficiently far away from the training distribution statistically or adversarially is a fundamental requirement for deploying a good classifier in many real-world machine learning applications. However, deep neural networks with the softmax classifier are known to produce highly overconfident posterior distributions even for such abnormal samples. In this paper, we propose a simple yet effective method for detecting any abnormal samples, which is applicable to any pre-trained softmax neural classifier. We obtain the class conditional Gaussian distributions with respect to (low- and upper-level) features of the deep models under Gaussian discriminant analysis, which result in a confidence score based on the Mahalanobis distance. While most prior methods have been evaluated for detecting either out-of-distribution or adversarial samples, but not both, the proposed method achieves the state-of-the-art performances for both cases in our experiments. Moreover, we found that our proposed method is more robust in harsh cases, e.g., when the training dataset has noisy labels or small number of samples. Finally, we show that the proposed method enjoys broader usage by applying it to class-incremental learning: whenever out-of-distribution samples are detected, our classification rule can incorporate new classes well without further training deep models.",
+  "year": 2018,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Kimin Lee",
+    "Kibok Lee",
+    "Honglak Lee",
+    "Jinwoo Shin"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.1807.03888",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/1807.03888",
+  "citation_count": 978,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Softmax function",
+      "Classifier (UML)",
+      "Mahalanobis distance",
+      "Artificial intelligence",
+      "Computer science",
+      "Deep neural networks",
+      "Pattern recognition (psychology)",
+      "Gaussian",
+      "Artificial neural network",
+      "Machine learning",
+      "Discriminant",
+      "Quantum mechanics",
+      "Physics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3107204728",
+      "https://openalex.org/W4287591324",
+      "https://openalex.org/W3108503355",
+      "https://openalex.org/W2980176872",
+      "https://openalex.org/W4226420367",
+      "https://openalex.org/W2366124773",
+      "https://openalex.org/W3120400911",
+      "https://openalex.org/W4300326282",
+      "https://openalex.org/W2742395793",
+      "https://openalex.org/W2810018382"
+    ]
+  }
+}

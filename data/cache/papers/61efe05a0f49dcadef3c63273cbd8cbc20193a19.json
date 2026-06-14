@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:41635798",
+  "title": "CervSpineNet: a hybrid deep learning-based approach for the segmentation of cervical spinous processes.",
+  "abstract": "Accurate segmentation of cervical spinous processes on lateral X-rays is essential for reliable anatomical landmarking, surgical planning, and longitudinal assessment of spinal deformity. However, no publicly available dataset provides pixel-level annotations of these structures, and manual delineation remains time-consuming and operator dependent. To address this gap, we curated an expert-labeled dataset of 500 cervical spine radiographs and developed CervSpineNet, a hybrid deep learning framework for automated spinous process segmentation. CervSpineNet integrates a transformer-based encoder to capture global anatomical context with a lightweight convolutional decoder to refine local boundaries. Training used a compound loss function that combines Dice, Focal Tversky, Hausdorff distance transform, and Structural Similarity (SSIM) terms to jointly optimize region overlap, class balance, structural fidelity, and boundary accuracy. The model was trained and evaluated on three dataset variants: original images, contrast-enhanced images using CLAHE, and augmented images. Performance was benchmarked against four baselines: U-Net, DeepLabV3+, the Segment Anything Model (SAM), and a text-guided SegFormer. Across all experimental settings, CervSpineNet consistently outperformed competing methods, achieving mean Dice coefficients above 0.93, IoU values above 0.87, and SSIM above 0.98, with substantially lower HD95 distances. The model demonstrated strong agreement with ground truth, with global MAE ≈ 0.005, and maintained efficient inference times of 5-10 seconds per image. With a compact footprint of approximately 345 MB, CervSpineNet runs on standard clinical hardware and reduces manual annotation time by about 96%. These results indicate that combining transformer-driven global context with convolutional boundary refinement enables robust and reproducible spinous process segmentation on lateral cervical radiographs. By pairing an expert-annotated dataset with a high-performing, computationally efficient model, this work provides a scalable foundation for AI-assisted cervical spine analysis, supporting rapid segmentation for surgical evaluation, deformity monitoring, and large-scale retrospective studies in both research and clinical practice.",
+  "year": 2025,
+  "venue": "Frontiers in bioengineering and biotechnology",
+  "authors": [
+    "Jay Sunil Sawant",
+    "Lama Moukheiber",
+    "Anupama Nair",
+    "Anubha Mahajan",
+    "Jaehui Byun",
+    "Ishwarya Pichaimani",
+    "Sangwook T Yoon",
+    "Christopher T Martin",
+    "Cassie S Mitchell"
+  ],
+  "doi": "10.3389/fbioe.2025.1733689",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41635798/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41635798"
+  }
+}

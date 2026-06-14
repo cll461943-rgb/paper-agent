@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.08692v2",
+  "title": "AAAC: Activation-Aware Adaptive Codebooks for 4-bit LLM Weight Quantization",
+  "abstract": "Post-training weight-only quantization to 4 bits is widely used to reduce the memory and compute costs of large language model inference. Existing PTQ methods, such as AWQ and GPTQ, improve how weights are mapped onto a fixed 4-bit grid through scaling, clipping, or error compensation. To further improve accuracy, methods such as OmniQuant and QuIP\\# uses gradient-assisted algorithms at the cost of hours of quantization time. In this work, we propose AAAC (Activation-Aware Adaptive Codebooks), a lightweight method for 4-bit LLM weight quantization. AAAC replaces the fixed scalar codebook used in standard quantization with two small learned scalar codebooks (64 bytes) per layer. Each group of weights selects the codebook that minimizes activation-weighted reconstruction error, encoding the choice in the unused sign bit of the group's positive scale and adding zero storage overhead. AAAC completes in 3--30 minutes on a single GPU, and adds no memory beyond the model itself. We evaluate against AWQ, GPTQ, IF4, GPTVQ, OmniQuant, SqueezeLLM, and QuIP\\# across model families. AAAC outperforms baselines at orders-of-magnitude less quantization time.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Beshr IslamBouli",
+    "David Jin"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.08692v2",
+  "url": "http://arxiv.org/abs/2605.08692v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:original_clean",
+    "route:query2doc",
+    "route:hyde",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

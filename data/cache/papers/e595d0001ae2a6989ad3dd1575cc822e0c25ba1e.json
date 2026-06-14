@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2606.03463v1",
+  "title": "DMF: A Deterministic Memory Framework for Conversational AI Agents",
+  "abstract": "Conversational AI agents require memory systems that are both scalable and semantically coherent across long interaction horizons. Existing approaches rely predominantly on large language model (LLM)-based summarisation at write time, which introduces non-determinism, escalating token costs, and opacity in pruning decisions. We present the Deterministic Memory Framework (DMF), a CPU-first approach that replaces generative memory compression with a fully deterministic pipeline grounded in classical NLP analysis, vector geometry, and mathematical scoring. DMF assigns each conversational interaction a Survival Score $Ω$ computed from deterministic content signals, conversational cues, and structured provenance, combined through a logistic projection. An interaction-count decay law, denoted as $Ω_{\\mathrm{eff}}(Δn)$, governs how relevance evolves as new turns arrive, where $Δn$ is the number of newer interactions rather than wall-clock time, preserving full determinism. We present the mathematical formulation of DMF, its structured recall pipeline, the pruning decision procedure, and the evaluation protocol. Experiments are conducted on a purpose-built benchmark using the LoCoMo and LongMemEval datasets. We compare DMF against Mem0, a popular memory layer for AI agents. DMF achieves comparable accuracy while using zero tokens to prepare the memory context and 5x to 242x fewer tokens over the entire conversation. These results show that it is possible to eliminate LLM calls from the memory-management loop, reducing token costs to nearly zero and enabling deterministic memory systems for conversational AI agents.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Matteo Stabile",
+    "Enrico Zimuel"
+  ],
+  "doi": null,
+  "arxiv_id": "2606.03463v1",
+  "url": "http://arxiv.org/abs/2606.03463v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like",
+    "route:entity_dataset",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:core_topic",
+    "route:original_clean",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

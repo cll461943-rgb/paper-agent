@@ -1,0 +1,37 @@
+{
+  "paper_id": "pubmed:42048554",
+  "title": "Data-Efficient Language Model for Assessing Pulmonary Embolism Diagnostic Certainty From Radiology Reports: Model Development and Validation Study.",
+  "abstract": "Computed tomography pulmonary angiography (CTPA) is the standard imaging modality for diagnosing pulmonary embolism (PE), but diagnostic uncertainty is common due to technical limitations and vague language, leading to inconsistent interpretation and clinician frustration. This study develops a prompt-free, data-efficient method for assessing diagnostic certainty of PE in CTPA reports using small pretrained language models. This study examined 173 consecutive CTPA reports from UMass Memorial Health, each annotated by 3 radiologists for PE diagnostic certainty. We developed PECertainty, a lightweight, prompt-free model, and compared it with advanced large language model (LLM)-based methods under limited supervision settings. Baselines included prompt-free methods (support vector machine, random forest, and RoBERTa [Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach]) and prompt-dependent methods (LLM fine-tuning, in-context learning, and ADAPET [A Densely-Supervised Approach to Pattern Exploiting Training]; UNC Chapel Hill) with open-source Gemma3-4B (Google DeepMind) and Llama3.2-3B (Meta), and the proprietary GPT-3.5 (OpenAI). Sensitivity analyses evaluated performance with 1 to 10 training examples per category for the top performer. Model performance was evaluated against radiologist annotations. External validation on 420 CTPA reports from the Baystate Medical Center, with validation limited to distinguishing certain from uncertain reports. Interpretability of the top-performing models (PECertainty and GPT-3.5) was evaluated using integrated gradients and prompt-based explanations reviewed by radiologists. Among prompt-dependent methods, GPT-3.5 fine-tuning (F1-score 0.86; 95% CI 0.71-1.0) and in-context learning (F1-score 0.87; 95% CI 0.71-1.0) performed best, and the performance of in-context learning consistently outperformed 0-shot learning for Gemma3-4B (F1-score 0.63, 95% CI 0.56-0.79 vs F1-score 0.45; 95% CI 0.29-0.56) and Llama3.2-3B (F1-score 0.54; 95% CI 0.41-0.71 vs F1-score 0.43, 95% CI 0.28-0.62). PECertainty demonstrated numerically better or equivalent performance compared with both the top-performing prompt-dependent methods and all prompt-free baselines. Compared with fine-tuned ClinicalBERT (Bidirectional Encoder Representations From Transformers Pretrained on Clinical Text), PECertainty achieved statistically significant improvements across all metrics (paired bootstrap significance test, P<.05). RoBERTa (Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach) fine-tuning lagged (F1-score 0.52; 95% CI 0.35-0.71), and simple models such as support vector machine underperformed. In few-shot settings (10 examples/category), PECertainty (F1-score 0.80; 95% CI 0.59-0.94) outperformed both GPT-3.5 fine-tuning (F1-score 0.74; 95% CI 0.58-0.88) and in-context learning (F1-score 0.65; 95% CI 0.47-0.83). External validation on the Baystate dataset showed good generalization for distinguishing certain from uncertain cases (F1-score 0.77; 95% CI 0.70-0.83). Despite its strong performance, PECertainty was rated as less interpretable than fine-tuned GPT-3.5 by radiologists (t test, P<.05). PECertainty enables accurate and data-efficient assessment of diagnostic certainty from free-text CTPA reports in low-resource settings. As an open-source, lightweight alternative to proprietary LLMs, it may support more precise communication between radiologists and referring physicians, with interpretability identified as a key direction for improvement.",
+  "year": 2026,
+  "venue": "JMIR medical informatics",
+  "authors": [
+    "Feifan Liu",
+    "Ruofan Hu",
+    "Donghyuk Kim",
+    "Hao Lo",
+    "Yevgeniy Kharonov",
+    "Ansh Johri",
+    "Ben S Gerber",
+    "Elke Rundensteiner",
+    "Lauren M Westafer",
+    "Jeroan Allison",
+    "Catarina Kiefe",
+    "Alexander Bankier",
+    "Max P Rosen"
+  ],
+  "doi": "10.2196/79972",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42048554/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42048554"
+  }
+}

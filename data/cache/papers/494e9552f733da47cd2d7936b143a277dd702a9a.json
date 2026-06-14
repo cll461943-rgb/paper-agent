@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42127208",
+  "title": "RAPTOR: A foundation policy for quadrotor control.",
+  "abstract": "Humans are remarkably data efficient when adapting to previously unseen conditions, like driving a new car. In contrast, modern robotic control systems, like neural network policies trained using reinforcement learning (RL), are highly specialized for single environments. Because of this overfitting, they are known to break down even under small differences like the simulation-to-reality gap and require system identification and retraining for even minimal changes to the system. Here, we present RAPTOR, a method for training a highly adaptive foundation policy for quadrotor control. Our method enables training a single, end-to-end neural network policy to control a wide variety of quadrotors. We tested 10 different real quadrotors, from 32 grams to 2.4 kilograms, that also differed in motor type (brushed versus brushless), frame type (soft versus rigid), propeller type (two, three, or four blades), and flight controller (PX4, Betaflight, Crazyflie, M5StampFly). We found that a tiny, three-layer policy with only 2084 parameters was sufficient for zero-shot adaptation to a wide variety of platforms. The adaptation through in-context learning was made possible by using a recurrence in the hidden layer. The policy was trained through our proposed meta-imitation learning algorithm, where we sampled 1000 quadrotors and trained a teacher policy for each of them using RL. The 1000 teachers were distilled into a single, adaptive student policy. We found that within milliseconds, the resulting foundation policy adapted zero-shot to unseen quadrotors. We tested the capabilities of the foundation policy under numerous conditions (trajectory tracking, indoor/outdoor, wind disturbance, poking, and different propellers).",
+  "year": 2026,
+  "venue": "Science robotics",
+  "authors": [
+    "Jonas Eschmann",
+    "Dario Albani",
+    "Giuseppe Loianno"
+  ],
+  "doi": "10.1126/scirobotics.aec1481",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42127208/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42127208"
+  }
+}

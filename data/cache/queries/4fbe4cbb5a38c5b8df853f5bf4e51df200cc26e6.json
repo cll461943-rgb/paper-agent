@@ -1,0 +1,947 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/1907.02664v2",
+    "title": "Data Encoding for Byzantine-Resilient Distributed Optimization",
+    "abstract": "We study distributed optimization in the presence of Byzantine adversaries, where both data and computation are distributed among $m$ worker machines, $t$ of which may be corrupt. The compromised nodes may collaboratively and arbitrarily deviate from their pre-specified programs, and a designated (master) node iteratively computes the model/parameter vector for generalized linear models. In this work, we primarily focus on two iterative algorithms: Proximal Gradient Descent (PGD) and Coordinate Descent (CD). Gradient descent (GD) is a special case of these algorithms. PGD is typically used in the data-parallel setting, where data is partitioned across different samples, whereas, CD is used in the model-parallelism setting, where data is partitioned across the parameter space. In this paper, we propose a method based on data encoding and error correction over real numbers to combat adversarial attacks. We can tolerate up to $t\\leq \\lfloor\\frac{m-1}{2}\\rfloor$ corrupt worker nodes, which is information-theoretically optimal. We give deterministic guarantees, and our method does not assume any probability distribution on the data. We develop a {\\em sparse} encoding scheme which enables computationally efficient data encoding and decoding. We demonstrate a trade-off between the corruption threshold and the resource requirements (storage, computational, and communication complexity). As an example, for $t\\leq\\frac{m}{3}$, our scheme incurs only a {\\em constant} overhead on these resources, over that required by the plain distributed PGD/CD algorithms which provide no adversarial protection. To the best of our knowledge, ours is the first paper that makes CD secure against adversarial attacks. Our encoding scheme extends efficiently to the data streaming model and for stochastic gradient descent (SGD). We also give experimental results to show the efficacy of our proposed schemes.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Deepesh Data",
+      "Linqi Song",
+      "Suhas Diggavi"
+    ],
+    "doi": null,
+    "arxiv_id": "1907.02664v2",
+    "url": "http://arxiv.org/abs/1907.02664v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.07866v1",
+    "title": "Byzantine-Resilient SGD in High Dimensions on Heterogeneous Data",
+    "abstract": "We study distributed stochastic gradient descent (SGD) in the master-worker architecture under Byzantine attacks. We consider the heterogeneous data model, where different workers may have different local datasets, and we do not make any probabilistic assumptions on data generation. At the core of our algorithm, we use the polynomial-time outlier-filtering procedure for robust mean estimation proposed by Steinhardt et al. (ITCS 2018) to filter-out corrupt gradients. In order to be able to apply their filtering procedure in our {\\em heterogeneous} data setting where workers compute {\\em stochastic} gradients, we derive a new matrix concentration result, which may be of independent interest. We provide convergence analyses for smooth strongly-convex and non-convex objectives. We derive our results under the bounded variance assumption on local stochastic gradients and a {\\em deterministic} condition on datasets, namely, gradient dissimilarity; and for both these quantities, we provide concrete bounds in the statistical heterogeneous data model. We give a trade-off between the mini-batch size for stochastic gradients and the approximation error. Our algorithm can tolerate up to $\\frac{1}{4}$ fraction Byzantine workers. It can find approximate optimal parameters in the strongly-convex setting exponentially fast and reach to an approximate stationary point in the non-convex setting with a linear speed, thus, matching the convergence rates of vanilla SGD in the Byzantine-free setting. We also propose and analyze a Byzantine-resilient SGD algorithm with gradient compression, where workers send $k$ random coordinates of their gradients. Under mild conditions, we show a $\\frac{d}{k}$-factor saving in communication bits as well as decoding complexity over our compression-free algorithm without affecting its convergence rate (order-wise) and the approximation error.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Deepesh Data",
+      "Suhas Diggavi"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.07866v1",
+    "url": "http://arxiv.org/abs/2005.07866v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1110.5626v1",
+    "title": "Constraints on dark energy from H II starburst galaxy apparent magnitude versus redshift data",
+    "abstract": "In this paper we use H II starburst galaxy apparent magnitude versus redshift data from Siegel et al. (2005) to constrain dark energy cosmological model parameters. These constraints are generally consistent with those derived using other data sets, but are not as restrictive as the tightest currently available constraints.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Data Mania",
+      "Bharat Ratra"
+    ],
+    "doi": null,
+    "arxiv_id": "1110.5626v1",
+    "url": "http://arxiv.org/abs/1110.5626v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.21391v1",
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sensing imagery for various high-level vision tasks, e.g., detection, segmentation, and extraction. Specifically, TerraGen introduces a geographic-spatial layout encoder that unifies bounding box and segmentation mask inputs, combined with a multi-scale injection scheme and mask-weighted loss to explicitly encode spatial constraints, from global structures to fine details. Also, we construct the first large-scale multi-task remote sensing layout generation dataset containing 45k images and establish a standardized evaluation protocol for this task. Experimental results show that our TerraGen can achieve the best generation image quality across diverse tasks. Additionally, TerraGen can be used as a universal data-augmentation generator, enhancing downstream task performance significantly and demonstrating robust cross-task generalisation in both full-data and few-shot scenarios.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Zhiheng Yu",
+      "Xiangyong Cao"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.21391v1",
+    "url": "http://arxiv.org/abs/2510.21391v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.15497v3",
+    "title": "AeroGen: Enhancing Remote Sensing Object Detection with Diffusion-Driven Data Generation",
+    "abstract": "Remote sensing image object detection (RSIOD) aims to identify and locate specific objects within satellite or aerial imagery. However, there is a scarcity of labeled data in current RSIOD datasets, which significantly limits the performance of current detection algorithms. Although existing techniques, e.g., data augmentation and semi-supervised learning, can mitigate this scarcity issue to some extent, they are heavily dependent on high-quality labeled data and perform worse in rare object classes. To address this issue, this paper proposes a layout-controllable diffusion generative model (i.e. AeroGen) tailored for RSIOD. To our knowledge, AeroGen is the first model to simultaneously support horizontal and rotated bounding box condition generation, thus enabling the generation of high-quality synthetic images that meet specific layout and object category requirements. Additionally, we propose an end-to-end data augmentation framework that integrates a diversity-conditioned generator and a filtering mechanism to enhance both the diversity and quality of generated data. Experimental results demonstrate that the synthetic data produced by our method are of high quality and diversity. Furthermore, the synthetic RSIOD data can significantly improve the detection performance of existing RSIOD models, i.e., the mAP metrics on DIOR, DIOR-R, and HRSC datasets are improved by 3.7%, 4.3%, and 2.43%, respectively. The code is available at https://github.com/Sonettoo/AeroGen.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Datao Tang",
+      "Xiangyong Cao",
+      "Xuan Wu",
+      "Jialin Li",
+      "Jing Yao",
+      "Xueru Bai",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Deyu Meng"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.15497v3",
+    "url": "http://arxiv.org/abs/2411.15497v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.12405v2",
+    "title": "A dissemination workshop for introducing young Italian students to NLP",
+    "abstract": "We describe and make available the game-based material developed for a laboratory run at several Italian science festivals to popularize NLP among young students.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Lucio Messina",
+      "Lucia Busso",
+      "Claudia Roberta Combei",
+      "Ludovica Pannitto",
+      "Alessio Miaschi",
+      "Gabriele Sarti",
+      "Malvina Nissim"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.12405v2",
+    "url": "http://arxiv.org/abs/2104.12405v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.16064v1",
+    "title": "A 20 Gbps Data Transmitting ASIC with PAM4 for Particle Physics Experiments",
+    "abstract": "We present the design principle and test results of a data transmitting ASIC, GBS20, for particle physics experiments. The goal of GBS20 will be an ASIC that employs two serializers each from the 10.24 Gbps lpGBT SerDes, sharing the PLL also from lpGBT. A PAM4 encoder plus a VCSEL driver will be implemented in the same die to use the same clock system, eliminating the need of CDRs in the PAM4 encoder. This way the transmitter module, GBT20, developed using the GBS20 ASIC, will have the exact lpGBT data interface and transmission protocol, with an output up to 20.48 Gbps over one fiber. With PAM4 embedded FPGAs at the receiving end, GBT20 will halve the fibers needed in a system and better use the input bandwidth of the FPGA. A prototype, GBS20v0 is fabricated using a commercial 65 nm CMOS technology. This prototype has two serializers and a PAM4 encoder sharing the lpGBT PLL, but no user data input. An internal PRBS generator provides data to the serializers. GBS20v0 is tested barely up to 20.48 Gbps. With lessons learned from this prototype, we are designing the second prototype, GBS20v1, that will have 16 user data input channels each at 1.28 Gbps. We present the design concept of the GBS20 ASIC and the GBT20 module, the preliminary test results, and lessons learned from GBS20v0 and the design of GBS20v1 which will be not only a test chip but also a user chip with 16 input data channels.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Li Zhang",
+      "Datao Gong",
+      "Suen Hou",
+      "Guanming Huang",
+      "Xing Huang",
+      "Chonghan Liu",
+      "Tiankuan Liu",
+      "Hanhan Sun",
+      "Quan Sun",
+      "Xiangming Sun",
+      "Wei Zhang",
+      "Jingbo Ye"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.16064v1",
+    "url": "http://arxiv.org/abs/2010.16064v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.12422v2",
+    "title": "Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students",
+    "abstract": "Although Natural Language Processing (NLP) is at the core of many tools young people use in their everyday life, high school curricula (in Italy) do not include any computational linguistics education. This lack of exposure makes the use of such tools less responsible than it could be and makes choosing computational linguistics as a university degree unlikely. To raise awareness, curiosity, and longer-term interest in young people, we have developed an interactive workshop designed to illustrate the basic principles of NLP and computational linguistics to high school Italian students aged between 13 and 18 years. The workshop takes the form of a game in which participants play the role of machines needing to solve some of the most common problems a computer faces in understanding language: from voice recognition to Markov chains to syntactic parsing. Participants are guided through the workshop with the help of instructors, who present the activities and explain core concepts from computational linguistics. The workshop was presented at numerous outlets in Italy between 2019 and 2021, both face-to-face and online.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Ludovica Pannitto",
+      "Lucia Busso",
+      "Claudia Roberta Combei",
+      "Lucio Messina",
+      "Alessio Miaschi",
+      "Gabriele Sarti",
+      "Malvina Nissim"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.12422v2",
+    "url": "http://arxiv.org/abs/2104.12422v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.08244v1",
+    "title": "Auxiliary Task Reweighting for Minimum-data Learning",
+    "abstract": "Supervised learning requires a large amount of training data, limiting its application where labeled data is scarce. To compensate for data scarcity, one possible method is to utilize auxiliary tasks to provide additional supervision for the main task. Assigning and optimizing the importance weights for different auxiliary tasks remains an crucial and largely understudied research question. In this work, we propose a method to automatically reweight auxiliary tasks in order to reduce the data requirement on the main task. Specifically, we formulate the weighted likelihood function of auxiliary tasks as a surrogate prior for the main task. By adjusting the auxiliary task weights to minimize the divergence between the surrogate prior and the true prior of the main task, we obtain a more accurate prior estimation, achieving the goal of minimizing the required amount of training data for the main task and avoiding a costly grid search. In multiple experimental settings (e.g. semi-supervised learning, multi-label classification), we demonstrate that our algorithm can effectively utilize limited labeled data of the main task with the benefit of auxiliary tasks compared with previous task reweighting methods. We also show that under extreme cases with only a few extra examples (e.g. few-shot domain adaptation), our algorithm results in significant improvement over the baseline.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Baifeng Shi",
+      "Judy Hoffman",
+      "Kate Saenko",
+      "Trevor Darrell",
+      "Huijuan Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.08244v1",
+    "url": "http://arxiv.org/abs/2010.08244v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.11773v1",
+    "title": "Small Data Explainer -- The impact of small data methods in everyday life",
+    "abstract": "The emergence of breakthrough artificial intelligence (AI) techniques has led to a renewed focus on how small data settings, i.e., settings with limited information, can benefit from such developments. This includes societal issues such as how best to include under-represented groups in data-driven policy and decision making, or the health benefits of assistive technologies such as wearables. We provide a conceptual overview, in particular contrasting small data with big data, and identify common themes from exemplary case studies and application areas. Potential solutions are described in a more detailed technical overview of current data analysis and modelling techniques, highlighting contributions from different disciplines, such as knowledge-driven modelling from statistics and data-driven modelling from computer science. By linking application settings, conceptual contributions and specific techniques, we highlight what is already feasible and suggest what an agenda for fully leveraging small data might look like.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Maren Hackenberg",
+      "Sophia G. Connor",
+      "Fabian Kabus",
+      "June Brawner",
+      "Ella Markham",
+      "Mahi Hardalupas",
+      "Areeq Chowdhury",
+      "Rolf Backofen",
+      "Anna Köttgen",
+      "Angelika Rohde",
+      "Nadine Binder",
+      "Harald Binder",
+      "the Collaborative Research Center 1597 Small Data"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.11773v1",
+    "url": "http://arxiv.org/abs/2507.11773v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.05664v1",
+    "title": "Training an NLP Scholar at a Small Liberal Arts College: A Backwards Designed Course Proposal",
+    "abstract": "The rapid growth in natural language processing (NLP) over the last couple years has generated student interest and excitement in learning more about the field. In this paper, we present two types of students that NLP courses might want to train. First, an \"NLP engineer\" who is able to flexibly design, build and apply new technologies in NLP for a wide range of tasks. Second, an \"NLP scholar\" who is able to pose, refine and answer questions in NLP and how it relates to the society, while also learning to effectively communicate these answers to a broader audience. While these two types of skills are not mutually exclusive -- NLP engineers should be able to think critically, and NLP scholars should be able to build systems -- we think that courses can differ in the balance of these skills. As educators at Small Liberal Arts Colleges, the strengths of our students and our institution favors an approach that is better suited to train NLP scholars. In this paper we articulate what kinds of skills an NLP scholar should have, and then adopt a backwards design to propose course components that can aid the acquisition of these skills.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Grusha Prasad",
+      "Forrest Davis"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.05664v1",
+    "url": "http://arxiv.org/abs/2408.05664v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06733v1",
+    "title": "Dynamic Loss-Based Sample Reweighting for Improved Large Language Model Pretraining",
+    "abstract": "Pretraining large language models (LLMs) on vast and heterogeneous datasets is crucial for achieving state-of-the-art performance across diverse downstream tasks. However, current training paradigms treat all samples equally, overlooking the importance or relevance of individual samples throughout the training process. Existing reweighting strategies, which primarily focus on group-level data importance, fail to leverage fine-grained instance-level information and do not adapt dynamically to individual sample importance as training progresses. In this paper, we introduce novel algorithms for dynamic, instance-level data reweighting aimed at improving both the efficiency and effectiveness of LLM pretraining. Our methods adjust the weight of each training sample based on its loss value in an online fashion, allowing the model to dynamically focus on more informative or important samples at the current training stage. In particular, our framework allows us to systematically devise reweighting strategies deprioritizing redundant or uninformative data, which we find tend to work best. Furthermore, we develop a new theoretical framework for analyzing the impact of loss-based reweighting on the convergence of gradient-based optimization, providing the first formal characterization of how these strategies affect convergence bounds. We empirically validate our approach across a spectrum of tasks, from pretraining 7B and 1.4B parameter LLMs to smaller-scale language models and linear regression problems, demonstrating that our loss-based reweighting approach can lead to faster convergence and significantly improved performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Daouda Sow",
+      "Herbert Woisetschläger",
+      "Saikiran Bulusu",
+      "Shiqiang Wang",
+      "Hans-Arno Jacobsen",
+      "Yingbin Liang"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06733v1",
+    "url": "http://arxiv.org/abs/2502.06733v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.12322v2",
+    "title": "Simultaneous reweighting of Transverse Momentum Dependent distributions",
+    "abstract": "The Bayesian reweighting procedure is extended to the case of multiple independent extractions of transverse momentum dependent parton distributions (TMDs). By exploiting the data on transverse single spin asymmetries, $A_N$, for inclusive pion production in polarized proton-proton collisions measured at RHIC, we perform a simultaneous reweighting of the quark Sivers, transversity and Collins TMD functions extracted from semi-inclusive deep inelastic scattering (SIDIS) and $e^+ e^-$ annihilation into hadron pairs. The impact of the implementation of the Soffer bound, as well as the differences between older and newer $A_N$ data, are investigated. The agreement with $A_N$ data at large-$x_F$ values, a kinematical region complementary to those explored in SIDIS measurements, is enhanced, improving the knowledge of the polarized quark TMDs in the large-$x$ region.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mariaelena Boglione",
+      "Umberto D'Alesio",
+      "Carlo Flore",
+      "Josè Osvaldo Gonzalez-Hernandez",
+      "Francesco Murgia",
+      "Alexei Prokudin"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.12322v2",
+    "url": "http://arxiv.org/abs/2402.12322v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.16228v2",
+    "title": "\"Thy algorithm shalt not bear false witness\": An Evaluation of Multiclass Debiasing Methods on Word Embeddings",
+    "abstract": "With the vast development and employment of artificial intelligence applications, research into the fairness of these algorithms has been increased. Specifically, in the natural language processing domain, it has been shown that social biases persist in word embeddings and are thus in danger of amplifying these biases when used. As an example of social bias, religious biases are shown to persist in word embeddings and the need for its removal is highlighted. This paper investigates the state-of-the-art multiclass debiasing techniques: Hard debiasing, SoftWEAT debiasing and Conceptor debiasing. It evaluates their performance when removing religious bias on a common basis by quantifying bias removal via the Word Embedding Association Test (WEAT), Mean Average Cosine Similarity (MAC) and the Relative Negative Sentiment Bias (RNSB). By investigating the religious bias removal on three widely used word embeddings, namely: Word2Vec, GloVe, and ConceptNet, it is shown that the preferred method is ConceptorDebiasing. Specifically, this technique manages to decrease the measured religious bias on average by 82,42%, 96,78% and 54,76% for the three word embedding sets respectively.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Thalea Schlender",
+      "Gerasimos Spanakis"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.16228v2",
+    "url": "http://arxiv.org/abs/2010.16228v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.08520v1",
+    "title": "GR-NLP-TOOLKIT: An Open-Source NLP Toolkit for Modern Greek",
+    "abstract": "We present GR-NLP-TOOLKIT, an open-source natural language processing (NLP) toolkit developed specifically for modern Greek. The toolkit provides state-of-the-art performance in five core NLP tasks, namely part-of-speech tagging, morphological tagging, dependency parsing, named entity recognition, and Greeklishto-Greek transliteration. The toolkit is based on pre-trained Transformers, it is freely available, and can be easily installed in Python (pip install gr-nlp-toolkit). It is also accessible through a demonstration platform on HuggingFace, along with a publicly available API for non-commercial use. We discuss the functionality provided for each task, the underlying methods, experiments against comparable open-source toolkits, and future possible enhancements. The toolkit is available at: https://github.com/nlpaueb/gr-nlp-toolkit",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lefteris Loukas",
+      "Nikolaos Smyrnioudis",
+      "Chrysa Dikonomaki",
+      "Spyros Barbakos",
+      "Anastasios Toumazatos",
+      "John Koutsikakis",
+      "Manolis Kyriakakis",
+      "Mary Georgiou",
+      "Stavros Vassos",
+      "John Pavlopoulos",
+      "Ion Androutsopoulos"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.08520v1",
+    "url": "http://arxiv.org/abs/2412.08520v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.02359v3",
+    "title": "How Good Is NLP? A Sober Look at NLP Tasks through the Lens of Social Impact",
+    "abstract": "Recent years have seen many breakthroughs in natural language processing (NLP), transitioning it from a mostly theoretical field to one with many real-world applications. Noting the rising number of applications of other machine learning and AI techniques with pervasive societal impact, we anticipate the rising importance of developing NLP technologies for social good. Inspired by theories in moral philosophy and global priorities research, we aim to promote a guideline for social good in the context of NLP. We lay the foundations via the moral philosophy definition of social good, propose a framework to evaluate the direct and indirect real-world impact of NLP tasks, and adopt the methodology of global priorities research to identify priority causes for NLP research. Finally, we use our theoretical framework to provide some practical guidelines for future NLP research for social good. Our data and code are available at http://github.com/zhijing-jin/nlp4sg_acl2021. In addition, we curate a list of papers and resources on NLP for social good at https://github.com/zhijing-jin/NLP4SocialGood_Papers.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Zhijing Jin",
+      "Geeticka Chauhan",
+      "Brian Tse",
+      "Mrinmaya Sachan",
+      "Rada Mihalcea"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.02359v3",
+    "url": "http://arxiv.org/abs/2106.02359v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1204.3055v1",
+    "title": "IVOA Recommendation: Spectrum Data Model 1.1",
+    "abstract": "We present a data model describing the structure of spectrophotometric datasets with spectral and temporal coordinates and associated metadata. This data model may be used to represent spectra, time series data, segments of SED (Spectral Energy Distributions) and other spectral or temporal associations.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Jonathan McDowell",
+      "Doug Tody",
+      "Tamas Budavari",
+      "Markus Dolensky",
+      "Inga Kamp",
+      "Kelly McCusker",
+      "Pavlos Protopapas",
+      "Arnold Rots",
+      "Randy Thompson",
+      "Frank Valdes",
+      "Petr Skoda",
+      "Bruno Rino",
+      "Sebastien Derriere",
+      "Jesus Salgado",
+      "Omar Laurino",
+      "the IVOA Data Access Layer",
+      "Data Model Working Groups"
+    ],
+    "doi": null,
+    "arxiv_id": "1204.3055v1",
+    "url": "http://arxiv.org/abs/1204.3055v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08918v1",
+    "title": "Wikimedia data for AI: a review of Wikimedia datasets for NLP tasks and AI-assisted editing",
+    "abstract": "Wikimedia content is used extensively by the AI community and within the language modeling community in particular. In this paper, we provide a review of the different ways in which Wikimedia data is curated to use in NLP tasks across pre-training, post-training, and model evaluations. We point to opportunities for greater use of Wikimedia content but also identify ways in which the language modeling community could better center the needs of Wikimedia editors. In particular, we call for incorporating additional sources of Wikimedia data, a greater focus on benchmarks for LLMs that encode Wikimedia principles, and greater multilingualism in Wikimedia-derived datasets.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Isaac Johnson",
+      "Lucie-Aimée Kaffee",
+      "Miriam Redi"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08918v1",
+    "url": "http://arxiv.org/abs/2410.08918v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.04700v1",
+    "title": "Augmenting NLP data to counter Annotation Artifacts for NLI Tasks",
+    "abstract": "In this paper, we explore Annotation Artifacts - the phenomena wherein large pre-trained NLP models achieve high performance on benchmark datasets but do not actually \"solve\" the underlying task and instead rely on some dataset artifacts (same across train, validation, and test sets) to figure out the right answer. We explore this phenomenon on the well-known Natural Language Inference task by first using contrast and adversarial examples to understand limitations to the model's performance and show one of the biases arising from annotation artifacts (the way training data was constructed by the annotators). We then propose a data augmentation technique to fix this bias and measure its effectiveness.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Armaan Singh Bhullar"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.04700v1",
+    "url": "http://arxiv.org/abs/2302.04700v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.13108v3",
+    "title": "Debiased Automatic Speech Recognition for Dysarthric Speech via Sample Reweighting with Sample Affinity Test",
+    "abstract": "Automatic speech recognition systems based on deep learning are mainly trained under empirical risk minimization (ERM). Since ERM utilizes the averaged performance on the data samples regardless of a group such as healthy or dysarthric speakers, ASR systems are unaware of the performance disparities across the groups. This results in biased ASR systems whose performance differences among groups are severe. In this study, we aim to improve the ASR system in terms of group robustness for dysarthric speakers. To achieve our goal, we present a novel approach, sample reweighting with sample affinity test (Re-SAT). Re-SAT systematically measures the debiasing helpfulness of the given data sample and then mitigates the bias by debiasing helpfulness-based sample reweighting. Experimental results demonstrate that Re-SAT contributes to improved ASR performance on dysarthric speech without performance degradation on healthy speech.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Eungbeom Kim",
+      "Yunkee Chae",
+      "Jaeheon Sim",
+      "Kyogu Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.13108v3",
+    "url": "http://arxiv.org/abs/2305.13108v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.00895v1",
+    "title": "Teaching NLP outside Linguistics and Computer Science classrooms: Some challenges and some opportunities",
+    "abstract": "NLP's sphere of influence went much beyond computer science research and the development of software applications in the past decade. We see people using NLP methods in a range of academic disciplines from Asian Studies to Clinical Oncology. We also notice the presence of NLP as a module in most of the data science curricula within and outside of regular university setups. These courses are taken by students from very diverse backgrounds. This paper takes a closer look at some issues related to teaching NLP to these diverse audiences based on my classroom experiences, and identifies some challenges the instructors face, particularly when there is no ecosystem of related courses for the students. In this process, it also identifies a few challenge areas for both NLP researchers and tool developers.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sowmya Vajjala"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.00895v1",
+    "url": "http://arxiv.org/abs/2105.00895v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.00913v1",
+    "title": "Self-Influence Guided Data Reweighting for Language Model Pre-training",
+    "abstract": "Language Models (LMs) pre-trained with self-supervision on large text corpora have become the default starting point for developing models for various NLP tasks. Once the pre-training corpus has been assembled, all data samples in the corpus are treated with equal importance during LM pre-training. However, due to varying levels of relevance and quality of data, equal importance to all the data samples may not be the optimal choice. While data reweighting has been explored in the context of task-specific supervised learning and LM fine-tuning, model-driven reweighting for pre-training data has not been explored. We fill this important gap and propose PRESENCE, a method for jointly reweighting samples by leveraging self-influence (SI) scores as an indicator of sample importance and pre-training. PRESENCE promotes novelty and stability for model pre-training. Through extensive analysis spanning multiple model sizes, datasets, and tasks, we present PRESENCE as an important first step in the research direction of sample reweighting for pre-training language models.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Megh Thakkar",
+      "Tolga Bolukbasi",
+      "Sriram Ganapathy",
+      "Shikhar Vashishth",
+      "Sarath Chandar",
+      "Partha Talukdar"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.00913v1",
+    "url": "http://arxiv.org/abs/2311.00913v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.04784v2",
+    "title": "NLP-ADBench: NLP Anomaly Detection Benchmark",
+    "abstract": "Anomaly detection (AD) is an important machine learning task with applications in fraud detection, content moderation, and user behavior analysis. However, AD is relatively understudied in a natural language processing (NLP) context, limiting its effectiveness in detecting harmful content, phishing attempts, and spam reviews. We introduce NLP-ADBench, the most comprehensive NLP anomaly detection (NLP-AD) benchmark to date, which includes eight curated datasets and 19 state-of-the-art algorithms. These span 3 end-to-end methods and 16 two-step approaches that adapt classical, non-AD methods to language embeddings from BERT and OpenAI. Our empirical results show that no single model dominates across all datasets, indicating a need for automated model selection. Moreover, two-step methods with transformer-based embeddings consistently outperform specialized end-to-end approaches, with OpenAI embeddings outperforming those of BERT. We release NLP-ADBench at https://github.com/USC-FORTIS/NLP-ADBench, providing a unified framework for NLP-AD and supporting future investigations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yuangang Li",
+      "Jiaqi Li",
+      "Zhuo Xiao",
+      "Tiankai Yang",
+      "Yi Nian",
+      "Xiyang Hu",
+      "Yue Zhao"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.04784v2",
+    "url": "http://arxiv.org/abs/2412.04784v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1701.00986v2",
+    "title": "Reweighting complex Langevin trajectories",
+    "abstract": "Although the complex Langevin method can solve the sign problem in simulations of theories with complex actions, the method will yield the wrong results if known validity conditions are not satisfied. We present a novel method to compute observables for a target ensemble by reweighting complex trajectories generated with the complex Langevin method for an auxiliary ensemble having itself a complex action. While it is imperative that the validity conditions be satisfied for the auxiliary ensemble, there are no such requirements for the target ensemble. This allows us to enlarge the applicability range of the complex Langevin method. We illustrate this at the hand of a one-dimensional partition function and two-dimensional strong-coupling QCD.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Jacques Bloch"
+    ],
+    "doi": null,
+    "arxiv_id": "1701.00986v2",
+    "url": "http://arxiv.org/abs/1701.00986v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.16977v2",
+    "title": "Dealing with Data for RE: Mitigating Challenges while using NLP and Generative AI",
+    "abstract": "Across the dynamic business landscape today, enterprises face an ever-increasing range of challenges. These include the constantly evolving regulatory environment, the growing demand for personalization within software applications, and the heightened emphasis on governance. In response to these multifaceted demands, large enterprises have been adopting automation that spans from the optimization of core business processes to the enhancement of customer experiences. Indeed, Artificial Intelligence (AI) has emerged as a pivotal element of modern software systems. In this context, data plays an indispensable role. AI-centric software systems based on supervised learning and operating at an industrial scale require large volumes of training data to perform effectively. Moreover, the incorporation of generative AI has led to a growing demand for adequate evaluation benchmarks. Our experience in this field has revealed that the requirement for large datasets for training and evaluation introduces a host of intricate challenges. This book chapter explores the evolving landscape of Software Engineering (SE) in general, and Requirements Engineering (RE) in particular, in this era marked by AI integration. We discuss challenges that arise while integrating Natural Language Processing (NLP) and generative AI into enterprise-critical software systems. The chapter provides practical insights, solutions, and examples to equip readers with the knowledge and tools necessary for effectively building solutions with NLP at their cores. We also reflect on how these text data-centric tasks sit together with the traditional RE process. We also highlight new RE tasks that may be necessary for handling the increasingly important text data-centricity involved in developing software systems.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Smita Ghaisas",
+      "Anmol Singhal"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.16977v2",
+    "url": "http://arxiv.org/abs/2402.16977v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.05286v2",
+    "title": "Informative Scene Graph Generation via Debiasing",
+    "abstract": "Scene graph generation aims to detect visual relationship triplets, (subject, predicate, object). Due to biases in data, current models tend to predict common predicates, e.g. \"on\" and \"at\", instead of informative ones, e.g. \"standing on\" and \"looking at\". This tendency results in the loss of precise information and overall performance. If a model only uses \"stone on road\" rather than \"stone blocking road\" to describe an image, it may be a grave misunderstanding. We argue that this phenomenon is caused by two imbalances: semantic space level imbalance and training sample level imbalance. For this problem, we propose DB-SGG, an effective framework based on debiasing but not the conventional distribution fitting. It integrates two components: Semantic Debiasing (SD) and Balanced Predicate Learning (BPL), for these imbalances. SD utilizes a confusion matrix and a bipartite graph to construct predicate relationships. BPL adopts a random undersampling strategy and an ambiguity removing strategy to focus on informative predicates. Benefiting from the model-agnostic process, our method can be easily applied to SGG models and outperforms Transformer by 136.3%, 119.5%, and 122.6% on mR@20 at three SGG sub-tasks on the SGG-VG dataset. Our method is further verified on another complex SGG dataset (SGG-GQA) and two downstream tasks (sentence-to-graph retrieval and image captioning).",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Lianli Gao",
+      "Xinyu Lyu",
+      "Yuyu Guo",
+      "Yuxuan Hu",
+      "Yuan-Fang Li",
+      "Lu Xu",
+      "Heng Tao Shen",
+      "Jingkuan Song"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.05286v2",
+    "url": "http://arxiv.org/abs/2308.05286v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.03061v1",
+    "title": "A Survey on Recognizing Textual Entailment as an NLP Evaluation",
+    "abstract": "Recognizing Textual Entailment (RTE) was proposed as a unified evaluation framework to compare semantic understanding of different NLP systems. In this survey paper, we provide an overview of different approaches for evaluating and understanding the reasoning capabilities of NLP systems. We then focus our discussion on RTE by highlighting prominent RTE datasets as well as advances in RTE dataset that focus on specific linguistic phenomena that can be used to evaluate NLP systems on a fine-grained level. We conclude by arguing that when evaluating NLP systems, the community should utilize newly introduced RTE datasets that focus on specific linguistic phenomena.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Adam Poliak"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.03061v1",
+    "url": "http://arxiv.org/abs/2010.03061v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.10402v2",
+    "title": "Real-Fake: Effective Training Data Synthesis Through Distribution Matching",
+    "abstract": "Synthetic training data has gained prominence in numerous learning tasks and scenarios, offering advantages such as dataset augmentation, generalization evaluation, and privacy preservation. Despite these benefits, the efficiency of synthetic data generated by current methodologies remains inferior when training advanced deep models exclusively, limiting its practical utility. To address this challenge, we analyze the principles underlying training data synthesis for supervised learning and elucidate a principled theoretical framework from the distribution-matching perspective that explicates the mechanisms governing synthesis efficacy. Through extensive experiments, we demonstrate the effectiveness of our synthetic data across diverse image classification tasks, both as a replacement for and augmentation to real datasets, while also benefits such as out-of-distribution generalization, privacy preservation, and scalability. Specifically, we achieve 70.9% top1 classification accuracy on ImageNet1K when training solely with synthetic data equivalent to 1 X the original real data size, which increases to 76.0% when scaling up to 10 X synthetic data.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jianhao Yuan",
+      "Jie Zhang",
+      "Shuyang Sun",
+      "Philip Torr",
+      "Bo Zhao"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.10402v2",
+    "url": "http://arxiv.org/abs/2310.10402v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2204.07288v1",
+    "title": "Characterizing the Efficiency vs. Accuracy Trade-off for Long-Context NLP Models",
+    "abstract": "With many real-world applications of Natural Language Processing (NLP) comprising of long texts, there has been a rise in NLP benchmarks that measure the accuracy of models that can handle longer input sequences. However, these benchmarks do not consider the trade-offs between accuracy, speed, and power consumption as input sizes or model sizes are varied. In this work, we perform a systematic study of this accuracy vs. efficiency trade-off on two widely used long-sequence models - Longformer-Encoder-Decoder (LED) and Big Bird - during fine-tuning and inference on four datasets from the SCROLLS benchmark. To study how this trade-off differs across hyperparameter settings, we compare the models across four sequence lengths (1024, 2048, 3072, 4096) and two model sizes (base and large) under a fixed resource budget. We find that LED consistently achieves better accuracy at lower energy costs than Big Bird. For summarization, we find that increasing model size is more energy efficient than increasing sequence length for higher accuracy. However, this comes at the cost of a large drop in inference speed. For question answering, we find that smaller models are both more efficient and more accurate due to the larger training batch sizes possible under a fixed resource budget.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Phyllis Ang",
+      "Bhuwan Dhingra",
+      "Lisa Wu Wills"
+    ],
+    "doi": null,
+    "arxiv_id": "2204.07288v1",
+    "url": "http://arxiv.org/abs/2204.07288v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.13704v1",
+    "title": "Natural Language Processing 4 All (NLP4All): A New Online Platform for Teaching and Learning NLP Concepts",
+    "abstract": "Natural Language Processing offers new insights into language data across almost all disciplines and domains, and allows us to corroborate and/or challenge existing knowledge. The primary hurdles to widening participation in and use of these new research tools are, first, a lack of coding skills in students across K-16, and in the population at large, and second, a lack of knowledge of how NLP-methods can be used to answer questions of disciplinary interest outside of linguistics and/or computer science. To broaden participation in NLP and improve NLP-literacy, we introduced a new tool web-based tool called Natural Language Processing 4 All (NLP4All). The intended purpose of NLP4All is to help teachers facilitate learning with and about NLP, by providing easy-to-use interfaces to NLP-methods, data, and analyses, making it possible for non- and novice-programmers to learn NLP concepts interactively.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rebekah Baglini",
+      "Arthur Hjorth"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.13704v1",
+    "url": "http://arxiv.org/abs/2105.13704v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

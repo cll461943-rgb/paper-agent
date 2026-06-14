@@ -1,0 +1,83 @@
+{
+  "paper_id": "https://openalex.org/W4385567578",
+  "title": "WinGNN: Dynamic Graph Neural Networks with Random Gradient Aggregation Window",
+  "abstract": "Modeling the dynamics into graph neural networks (GNNs) contributes to the understanding of evolution in dynamic graphs, which helps optimize temporal-spatial representations for real-world dynamic network problems. Empirically, dynamic GNN embedding requires additional temporal encoders, which inevitably introduces additional learning parameters to make dynamic GNNs oversized and inefficient. Furthermore, previous dynamic GNN models are under the same fixed temporal term, which causes the short-temporal optimum. To address these issues, we propose the WinGNN framework to model dynamic graphs, which is realized by a simple GNN model with the meta-learning strategy and a novel mechanism of random gradient aggregation. WinGNN calculates the frame-wise loss of the current snapshot and passes the loss gradient to the next to model graph dynamics without temporal encoders. Then it introduces the randomized sliding-window to acquire the window-aware gradienton consecutive snapshots, and the calculated two types of gradient are aggregated to update the GNN, thereby reducing the parameter size and improving the robustness. Experiments on six public datasets show the advantage of our WinGNN compared with existing baselines, where it has reached the optimum in twenty-two out of twenty-four performance metrics.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Yifan Zhu",
+    "Fangpeng Cong",
+    "Dan Zhang",
+    "Wenwen Gong",
+    "Qika Lin",
+    "Wenzheng Feng",
+    "Yuxiao Dong",
+    "Jie Tang"
+  ],
+  "doi": "https://doi.org/10.1145/3580305.3599551",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1145/3580305.3599551",
+  "citation_count": 61,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [
+    "https://openalex.org/W398859631",
+    "https://openalex.org/W2288345344",
+    "https://openalex.org/W2560674852",
+    "https://openalex.org/W2595002104",
+    "https://openalex.org/W2747329762",
+    "https://openalex.org/W2901504064",
+    "https://openalex.org/W2952179887",
+    "https://openalex.org/W2954691982",
+    "https://openalex.org/W2965683718",
+    "https://openalex.org/W2984323660",
+    "https://openalex.org/W2998116985",
+    "https://openalex.org/W3012664577",
+    "https://openalex.org/W3019863187",
+    "https://openalex.org/W3024560045",
+    "https://openalex.org/W3026076535",
+    "https://openalex.org/W3038934320",
+    "https://openalex.org/W3153329411",
+    "https://openalex.org/W3174652091",
+    "https://openalex.org/W3181240463",
+    "https://openalex.org/W4247950230",
+    "https://openalex.org/W4284698122",
+    "https://openalex.org/W4367047431"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Embedding",
+      "Encoder",
+      "Snapshot (computer storage)",
+      "Graph",
+      "Sliding window protocol",
+      "Robustness (evolution)",
+      "Artificial intelligence",
+      "Theoretical computer science",
+      "Window (computing)",
+      "Operating system",
+      "Gene",
+      "Biochemistry",
+      "Chemistry"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2542847180",
+      "https://openalex.org/W3034994054",
+      "https://openalex.org/W2805712290",
+      "https://openalex.org/W2155226960",
+      "https://openalex.org/W2548022288",
+      "https://openalex.org/W2909129499",
+      "https://openalex.org/W2392087771",
+      "https://openalex.org/W2761598930",
+      "https://openalex.org/W3134175397",
+      "https://openalex.org/W3093958035"
+    ]
+  }
+}

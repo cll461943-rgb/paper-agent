@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2510.03086v2",
+  "title": "Chaining 2-FWL GNNs for Combinatorial Graph Alignment",
+  "abstract": "For the combinatorial graph alignment problem (GAP) -- finding the node correspondence that maximizes the number of common edges (nce) between two unlabeled graphs -- properly initialized FAQ remains a strong classical baseline, while existing GNN approaches struggle in the purely structural setting. We introduce a chaining procedure: a sequence of Folklore-type (2-FWL) GNNs in which each network is trained with cross-entropy after decoding the previous network's similarity matrix and ranking nodes by their current alignment quality. This non-differentiable ranking step injects discrete combinatorial feedback at every link; at inference, we iterate the final network and keep the candidate with highest observed nce. On sparse Erdos-Renyi graphs at noise level 0.25, chained FGNNs with FAQ post-processing reach 85% accuracy versus 13% for FAQ initialized from the convex relaxation, and essentially 0% for prior GNN methods. On correlated regular graphs, where MPNNs with constant features produce identical node embeddings (1-WL fails to refine) and FAQ's convex initialization is degenerate, chaining is the only method we know that recovers a non-trivial alignment. On three real-world benchmarks (yeast PPI, coauthorship, and road networks), we show that recent comparisons underestimate FAQ by initializing it from a uniform doubly stochastic matrix; once FAQ is initialized from the convex relaxation it already surpasses prior reported numbers, and dataset-specific chained FGNNs further improve on this strengthened baseline.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Marc Lelarge"
+  ],
+  "doi": null,
+  "arxiv_id": "2510.03086v2",
+  "url": "http://arxiv.org/abs/2510.03086v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2505.00850v2",
+  "title": "ICQuant: Index Coding enables Low-bit LLM Quantization",
+  "abstract": "The rapid deployment of Large Language Models (LLMs) highlights the need for efficient low-bit post-training quantization (PTQ), due to their high memory costs. A key challenge in weight quantization is the presence of outliers, which inflate quantization ranges and lead to large errors. While a number of outlier suppression techniques have been proposed, they either: fail to effectively shrink the quantization range, or incur (relatively) high bit overhead. In this paper, we present ICQuant, a novel framework that leverages outlier statistics to design an efficient index coding scheme for outlier-aware weight-only quantization. Compared to existing outlier suppression techniques requiring $\\approx 1$ bit overhead to halve the quantization range, ICQuant requires only $\\approx 0.3$ bits; a significant saving in extreme compression regimes (e.g., 2-3 bits per weight). ICQuant can be used on top of any existing quantizers to eliminate outliers, improving the quantization quality. Using just 2.3 bits per weight and simple scalar quantizers, ICQuant improves the zero-shot accuracy of the 2-bit Llama3-70B model by up to 130% and 150% relative to QTIP and QuIP#; and it achieves comparable performance to the best-known fine-tuned quantizer (PV-tuning) without fine-tuning.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Xinlin Li",
+    "Osama Hanna",
+    "Christina Fragouli",
+    "Suhas Diggavi"
+  ],
+  "doi": null,
+  "arxiv_id": "2505.00850v2",
+  "url": "http://arxiv.org/abs/2505.00850v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

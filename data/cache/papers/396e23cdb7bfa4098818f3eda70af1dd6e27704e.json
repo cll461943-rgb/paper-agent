@@ -1,0 +1,35 @@
+{
+  "paper_id": "pubmed:42275418",
+  "title": "Between Help and Harm: An Evaluation Study of Mental Health Crisis Handling by Large Language Models.",
+  "abstract": "The use of large language models (LLMs)-powered chatbots has reshaped how people seek information and advice, including for emotional and mental health support. While LLMs can offer scalable support, their ability to safely detect and respond to acute mental health crises-including suicidal ideation, self-harm, and violent thoughts-remains poorly understood. Progress is hampered by the absence of unified mental health crisis taxonomies, annotated benchmarks, and empirical evaluations grounded in clinical best practices. We addressed these gaps by introducing (1) a unified taxonomy of 6 clinically informed mental health crisis categories; (2) an evaluation dataset of over 2000 user inputs drawn from 12 publicly available conversational mental health datasets, classified into crisis categories; and (3) an expert-designed protocol for assessing response appropriateness. We also used LLMs to automatically identify crisis-indicative inputs and conducted an auditing study of 5 LLMs to evaluate the safety and appropriateness of their responses. We developed a taxonomy of mental health crisis categories informed by clinical experts and established literature. From over 239,000 mental health-related user inputs collected from 12 Hugging Face datasets, we curated 2252 examples (206 for validation, 2046 for testing) covering all taxonomy categories. We evaluated 3 LLMs on their ability to classify inputs into crisis categories, selecting the model with the strongest agreement with human annotators as the judge to label the test set. We then audited 5 LLMs on their ability to generate safe and appropriate responses to the 2046 test examples. Response quality was measured using a clinically informed 5-point Likert scale (1=harmful and 5=fully appropriate), relying on an LLM-as-a-judge validated against human expert feedback. Several LLMs exhibited high consistency and generally reliable behavior when responding to explicit crisis disclosures, but significant risks remain. A nonnegligible proportion of responses was rated as inappropriate or harmful, particularly in the self-harm and suicidal ideation categories. Substantial performance differences were observed across models: gpt-5-nano and deepseek-v3.2-exp achieved very low harmful response rates, whereas gpt-4o-mini, Llama-4-Scout-17B-16E-Instruct, and grok-4-fast-non-reasoning generated markedly higher rates of unsafe outputs. All models exhibited systemic weaknesses, including poor handling of indirect or ambiguous risk signals, reliance on formulaic responses, and frequent misalignment with user context. These findings underscore the urgent need for enhanced safeguards, improved crisis detection, and context-aware interventions in LLM deployments and highlight the central role of alignment and safety engineering-beyond model scale or openness-in determining crisis response reliability. Our taxonomy, dataset, and evaluation framework lay the groundwork for ongoing research in artificial intelligence-driven mental health support, helping to minimize harm and protect vulnerable users.",
+  "year": 2026,
+  "venue": "JMIR mental health",
+  "authors": [
+    "Adrian Arnaiz-Rodriguez",
+    "Miguel Baidal",
+    "Erik Derner",
+    "Jenn Layton Annable",
+    "Mark Ball",
+    "Mark Ince",
+    "Elvira Perez Vallejos",
+    "Nuria Oliver"
+  ],
+  "doi": "10.2196/88435",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42275418/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42275418"
+  }
+}

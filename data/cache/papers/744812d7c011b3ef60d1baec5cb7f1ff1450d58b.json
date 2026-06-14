@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:42174001",
+  "title": "A digital twin and deep-learning ensemble for cyber attack detection in industrial control systems at the IoT edge.",
+  "abstract": "Industrial Control Systems (ICS) face escalating cyber threats as adversaries increasingly exploit artificial intelligence (AI) to evade conventional defenses. This paper introduces a Digital Twin-enhanced security framework in which a real-time, physics-consistent virtual replica of the controlled industrial process is synchronized with sensor and actuator telemetry from the physical plant and used to validate, suppress, or confirm anomaly scores produced by a deep-learning ensemble. The physical twin is the closed-loop ICS plant (water treatment, water distribution, or chemical process); the Digital Twin is a state-space process model coupled to an Extended Kalman Filter that predicts the next sensor measurement and emits a residual whenever the observation deviates from the physics-consistent prediction. The detection layer combines this Digital-Twin residual signal with a Long Short-Term Memory (LSTM) autoencoder, an attention-based transformer, and an Isolation Forest, fused through a calibrated weighted score that is gated by the residual, so that purely data-driven anomalies that do not violate physics are downweighted and stealthy attacks that violate physics are escalated. Evaluated on three benchmark datasets (Secure Water Treatment testbed [SWaT], Water Distribution [WADI], and Tennessee Eastman) comprising 56 attack scenarios, the framework achieves 97.6% precision, 96.2% recall, an F1-score of 96.9%, and sub-50 ms inference latency. This corresponds to a 3.2 percentage-point F1-score improvement over the strongest baseline (transformer at 93.7%) and a roughly 50% reduction in residual error. Interpretability is supported through attention visualization and Digital-Twin residual analysis, enabling operators to validate detection outcomes. With native Message Queuing Telemetry Transport (MQTT) and Open Platform Communications Unified Architecture (OPC UA) integration, Byzantine fault-tolerant consensus for distributed deployments, and formal verification of safety properties, the framework supports deployment-oriented protection for critical infrastructure aligned with International Electrotechnical Commission (IEC) 62443-4-2 requirements.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Ali Sayghe",
+    "Mohammad D Alahmadi",
+    "Abdulrahman A Gharawi"
+  ],
+  "doi": "10.1038/s41598-026-53863-z",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42174001/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42174001"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2508.12726v6",
+  "title": "DESIGNER: Design-Logic-Guided Multidisciplinary Data Synthesis for LLM Reasoning",
+  "abstract": "Large language models (LLMs) perform strongly on many language tasks but still struggle with complex multi-step reasoning across disciplines. Existing reasoning datasets often lack disciplinary breadth, reasoning depth, and diversity, as well as guiding principles for question synthesis. We propose DESIGNER: a DESIGN-logic-guidEd Reasoning data synthesis pipeline that leverages naturally available, extensive raw documents to generate multidisciplinary questions. The central insight is the notion of Design Logic, a form of reusable meta-knowledge that encapsulates the structured process human experts use to transform knowledge into complex exam questions, enabling LLMs to generate new questions with the same complex reasoning patterns from entirely different source texts with explicit control over difficulty, diversity, and question types. We use LLMs to reverse-engineer and abstract over 120,000 Design Logics from existing questions across various disciplines. By designing a two-stage retrieve-and-generate mechanism to match these Design Logics with raw corpus, we synthesized two large-scale reasoning datasets that span 75 disciplines: DLR-Book (3.04 million questions from the book corpus) and DLR-Web (1.66 million questions from the web corpus). Data analysis indicates that the questions synthesized by our method exhibit greater difficulty and diversity compared to those in the baseline datasets. Supervised fine-tuning (SFT) on Qwen3 and Llama3 with our data substantially improves multidisciplinary reasoning and outperforms baseline datasets. Notably, by applying SFT on the base versions of these models using only our data, we even surpass their official final models that have undergone the full post-training.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Weize Liu",
+    "Yongchi Zhao",
+    "Yijia Luo",
+    "Mingyu Xu",
+    "Jiaheng Liu",
+    "Yanan Li",
+    "Xiguo Hu",
+    "Zhiqi Bai",
+    "Yuchi Xu",
+    "Wenbo Su",
+    "Bo Zheng"
+  ],
+  "doi": null,
+  "arxiv_id": "2508.12726v6",
+  "url": "http://arxiv.org/abs/2508.12726v6",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

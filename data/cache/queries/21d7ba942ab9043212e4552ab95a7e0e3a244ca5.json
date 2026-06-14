@@ -1,0 +1,928 @@
+[
+  {
+    "paper_id": "pubmed:42286124",
+    "title": "A customized AI-based machine learning model for evaluating participants' activities under a workshop setting.",
+    "abstract": "Human action recognition (HAR) in the workshop-style environment poses unique challenges due to class imbalance, fused action boundaries, and context dependence. This study proposes a multi-stage fine-tuning supervised framework for workshop-style HAR based on a 3D CNN, supplemented by an unsupervised post-assessment. A total of 208 clips (100 frames per clip) from two internal and two external datasets were used, along with 183 clips generated from 152 videos in a subset of the public UCF101 dataset for an add-on supplementary analysis. An I3D-ResNet50 (I3D_R50) backbone was used to examine a pilot model for domain adaptation and subsequently optimized for cross-context generalization. In Study 1, the I3D_R50 model with a customized 57-class prediction head was trained on the internal dataset, achieving a solid class- and cluster-level performance, however, spurious co-activations and limited separation among similar actions were observed. Study 2 refined sample allocation and data augmentation, and applied threshold tuning to evaluate within-context adaptation (Test 1) and cross-context generalization (Test 2). Multi-level analyses (class-, clip-, cluster-, and person-level) revealed moderate co-activation and semantic fusion within context, whereas cross-context generalization suffered from structure over-merging and semantic drift. As a post-assessment, Study 3 provided supplementary evidence that the model captured certain semantic co-occurrence relationships, although its performance remained constrained by limited IGE-TREE specific training samples and fine-grained behavioral categories. Limitations include insufficient samples, blurred temporal sequence, and context dependency. Future work could explore domain-adversarial alignment, pose-guided normalization, and temporal contrastive modeling, and selective merging of semantically similar actions to enhance semantic disentanglement and generalization.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Xiaoyi Shao",
+      "Hua Li",
+      "Qian Ma",
+      "Kai Jin"
+    ],
+    "doi": "10.1038/s41598-026-57030-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42286124/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42286124"
+    }
+  },
+  {
+    "paper_id": "pubmed:42281046",
+    "title": "IoTDI-ImbS: A Precise Identification Model and Algorithm for IoT Devices from Network Traffic.",
+    "abstract": "With the rapid development of the Internet of Things (IoT) and the increase in the frequency of cyberattacks, accurate identification of IoT end devices is critical to their security. Existing identification methods are based on raw, statistical, and deep features of network traffic, each with their own advantages and disadvantages. Raw feature-based methods have difficulty performing feature extraction and insufficient information. As such, the recognition accuracy of statistical feature-based methods is limited by the distinguishment machine learning classifiers, and the deep feature-based methods do not take into account the problem of large differences in traffic samples, which leads to low recognition accuracy in some devices. For this reason, this paper proposes the IoTDI-ImbS method. The method selects the network traffic payload information as the original features and converts them into grayscale images; uses a generative adversarial network-based IoT terminal devices traffic generation (NTGAN) algorithm to generate traffic samples for devices with fewer samples through generative adversarial network to solve the sample imbalance problem; and constructs a ResNet18-BiLSTM model, mining spatial features with ResNet18 and extracting temporal features with BiLSTM to improve recognition accuracy. The experimental results on different sizes of IoT terminal device datasets show that IoTDI-ImbS has performance advantages over other methods in recognition accuracy, better leverages the sample imbalance problem in the dataset, and provides a more effective solution for IoT device recognition. Experimental results on the UNSW and IoT Sentinel dataset demonstrate that IoTDI-ImbS significantly outperforms baseline methods. Specifically, on the UNSW dataset, our method achieves an overall accuracy of 99.1% and an F1-score of 0.985. After integrating the NTGAN module, the identification accuracy for minority classes improved by approximately 3.5%. On the IoT Sentinel dataset, the model maintains a high precision of 98.7%, proving its robustness in diverse IoT environments.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Junhao Qian",
+      "Shuang Zhao",
+      "Zhihao Wang",
+      "Zhihua Li"
+    ],
+    "doi": "10.3390/s26113530",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42281046/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42281046"
+    }
+  },
+  {
+    "paper_id": "pubmed:42277163",
+    "title": "FedAttn-Credit: attention-augmented federated learning with adaptive differential privacy for rural inclusive finance credit assessment.",
+    "abstract": "Rural inclusive finance faces persistent challenges in credit assessment due to fragmented data ecosystems, heterogeneous borrower profiles, and stringent privacy constraints. This paper proposes FedAttn-Credit, a multi-party collaborative credit assessment framework that integrates horizontal federated learning with an attention-augmented scoring model and an adaptive differential privacy mechanism. The framework connects five categories of rural data holders-commercial banks, rural credit cooperatives, government platforms, agricultural e-commerce providers, and village-level microfinance institutions-through a central aggregation server that never accesses raw data. A multi-head self-attention module with group-wise importance gating enables the model to dynamically weight heterogeneous feature groups according to their contextual relevance for each borrower. An adaptive differential privacy strategy calibrates noise magnitude based on each participant's data volume and training-round gradient dynamics, providing stronger protection for small-sample participants without disproportionately degrading model utility. Experimental results on public microfinance records and a synthetic rural credit dataset show that FedAttn-Credit achieves an AUC of 0.8734, narrowing the gap to the centralized upper bound to 1.8 percentage points while outperforming all federated baselines. At equivalent accuracy, the adaptive privacy mechanism cuts cumulative privacy cost by roughly 47% relative to fixed-budget alternatives, a figure that we derive in \"Privacy protection effectiveness and model performance tradeoff analysis\" section from the Privacy Efficiency Ratio reported there (the two quantities express the same comparison from opposite directions). Ablation and robustness analyses confirm that the attention module, adaptive noise scheduling, and Shapley-based contribution evaluation provide compounding benefits under both standard and adversarial conditions.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Zhishan Xie",
+      "Liangyu Zhang"
+    ],
+    "doi": "10.1038/s41598-026-56120-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42277163/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42277163"
+    }
+  },
+  {
+    "paper_id": "pubmed:42271751",
+    "title": "Tactile sensing artificial finger skin: equivalent multi-round dense sampling training strategy for network demodulation.",
+    "abstract": "Optical fiber-based tactile sensing using fiber Bragg grating (FBG) arrays features compact structure, high robustness, and intrinsic immunity to electromagnetic interference, which makes it suitable for artificial finger skin in robotic systems. In practice, data-driven demodulation models usually rely on multi-round dense calibration to obtain sufficient training diversity, increasing calibration time and experimental workload. This work presents an equivalent multi-round dense sampling training strategy (EMRDS-TS) for FBG-based tactile sensing. The strategy reconstructs training diversity from single-round sparse measurements by combining a physically constrained deterministic trend model with a conditional generative adversarial network. The trend model describes the monotonic and quadratic wavelength response of the embedded FBG array with respect to pressing position and applied force. The generative module models residual variations related to channel nonuniformity and structural factors. Based on the reconstructed dataset, a coordinate attention-based haptic perception demodulation network (CA-HPDNet) is trained for simultaneous position and force estimation. Experimental results on Sample 1 show that EMRDS-TS achieves performance comparable to eight-to-twelve-round dense sampling. For position prediction over 0-30 mm, the mean absolute error (MAE) of 0.4228 mm and the R",
+    "year": 2026,
+    "venue": "Optics express",
+    "authors": [
+      "Zhiyuan Xu",
+      "Youxing Li",
+      "Hongye Wang",
+      "Donghui Wang",
+      "Shitai Yang",
+      "Taolue Yang",
+      "Xiongfeng Rao",
+      "Hongwei Li",
+      "Libo Yuan"
+    ],
+    "doi": "10.1364/OE.597137",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42271751/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42271751"
+    }
+  },
+  {
+    "paper_id": "pubmed:42270689",
+    "title": "UAV aerial image-based apparent defect detection method for embankments using an integrated framework of improved YOLOv8 and SAHI.",
+    "abstract": "To address the challenges of detecting apparent structural defects like cracks in large-scale embankment, an unmanned aerial vehicle (UAV) aerial image-based apparent defect detection method is proposed using UAV aerial photography and computer vision technologies. Firstly, Cycle-Consistent Adversarial Networks (CycleGAN) is employed to generate virtual apparent defect images under different lighting conditions using the limited aerial images via data augmentation, and then an image sample dataset of apparent structural defects is established. Subsequently, Convolutional Block Attention Module (CBAM) is utilized to enhance the feature extraction capability of You Only Look Once version 8 (YOLOv8) network, and Scylla-Intersection over Union (SIoU) is employed as the localization loss function to further improve the training efficiency and detection accuracy. Thereby, an improved YOLOv8 network-based intelligent detection model is established for identifying the apparent defects in embankment. Furthermore, Slice-aided Hyper Inference (SAHI) module is inserted into the improved YOLOv8 network to promote the small target detection capacity from long-distance high-resolution UAV images during inference period, and accordingly, an integrated framework of improved YOLOv8 and SAHI is proposed for apparent defect detection of embankment. Engineering example shows that, compared with YOLOv8 network, the improved YOLOv8 network exhibits higher detection accuracy and lower missed detection rate. Meanwhile, the image sample dataset augmented by virtual images is beneficial for improving the training ability, and the utilization of SAHI significantly promotes the inference performance of the intelligent detection model. A high-precision intelligent apparent defect detection approach is provided for safety management and danger inspection of embankment engineering.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Dongyang Yuan",
+      "Changwei Qiu",
+      "Bowen Wei",
+      "Jiawei Li"
+    ],
+    "doi": "10.1038/s41598-026-42946-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42270689/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42270689"
+    }
+  },
+  {
+    "paper_id": "pubmed:42258677",
+    "title": "Using Legacy Polysomnography Data to Train a Radar System to Quantify Sleep in Older Adults and People living with Dementia.",
+    "abstract": "Ultra-wideband (UWB) radar technology offers a promising solution for unobtrusive and cost-effective in-home sleep monitoring. However, the limited availability of radar sleep data poses challenges in building robust models that generalize across diverse cohorts and environments. This study proposes a novel deep transfer learning framework to enhance sleep stage classification using radar data. An end-to-end neural network was developed to classify sleep stages based on nocturnal respiratory and motion signals. The network was trained using a combination of large-scale polysomnography (PSG) datasets and radar data. A domain adaptation approach employing adversarial learning was utilized to bridge the knowledge gap between PSG and radar signals. Validation was performed on a radar dataset of 47 older adults (mean age: 71.2 ± 6.5), including 18 participants with prodromal or mild Alzheimer's disease. The proposed network structure achieves an accuracy of 79.5% with a Kappa value of 0.65 when classifying wakefulness, rapid eye movement, light sleep and deep sleep. Experimental results confirm that our deep transfer learning approach significantly enhances automatic sleep staging performance in the target domain. This method effectively addresses challenges associated with data variability and limited sample size, substantially improving the reliability of automatic sleep staging models, especially in contexts where radar data is limited. The findings underscore the viability of UWB radar as a nonintrusive, forward-looking sleep assessment tool that could significantly benefit care for older people and people with neurodegenerative disorders.",
+    "year": 2026,
+    "venue": "IEEE transactions on bio-medical engineering",
+    "authors": [
+      "Maowen Yin",
+      "Kiran K G Ravindran",
+      "Charalambos Hadjipanayi",
+      "Alan Bannon",
+      "Ciro Della Monica",
+      "Adrien Rapeaux",
+      "Tor Sverre Lande",
+      "Derk-Jan Dijk",
+      "Timothy Constandinou"
+    ],
+    "doi": "10.1109/TBME.2026.3701134",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42258677/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42258677"
+    }
+  },
+  {
+    "paper_id": "pubmed:42249019",
+    "title": "VerbaFake, EchoFake, and PixelFake: lightweight architectures with advanced augmentation for unimodal deepfake detection.",
+    "abstract": "The rapid evolution of deepfake technology, driven by deep learning and generative models such as Generative Adversarial Networks, has revolutionized digital content creation while simultaneously introducing serious threats to privacy, security, and digital trust. This study addresses the increasing risks posed by deepfakes, synthetically generated images, audio, and text, by developing a comprehensive unimodal deepfake detection framework. The system leverages a range of deep learning models including CNNs, attention mechanism (NLP), GRU and BiLSTM (RNNs), and capsule networks. For image detection, models such as MobileNetV2, EfficientNetV2-S, and the PixelFake (scratch-built) model achieved high accuracy, with MobileNetV2 and EfficientNetV2-S reaching 97%. Text-based detection models, including a VerbaFake (scratch-built), Efficient-CapsNet, and Attention-based BiLSTM, consistently achieved 99% accuracy. Audio deepfake detection models, such as Xception, DenseNet201, and the EchoFake (scratch-built) model, attained accuracies of 96%, 97%, and 98%, respectively.The framework integrates specialized pipelines for each modality, ensuring unimodal consistency and enhancing detection reliability.Publicly available datasets from Kaggle and additional curated sources were used, comprising over 26,000 image samples, 20,000 audio clips, and 31,429 text entries.Experimental results confirm the system's effectiveness, especially when employing CNN-based models.This research contributes a lightweight, real-time-capable solution with practical applications in journalism, cybersecurity, and law enforcement. While also raising awareness about the ethical implications of deepfakes and informing policy development. The proposed model codes and associated data are publicly available at https://github.com/UsmanAlExp/DeepFake-DetectionGitHub repository,with DOI:https://doi.org/10.5281/zenodo.19232320.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Usman Ali",
+      "Muhammad Rizwan Shoukat",
+      "Mahjbeen Rajput",
+      "Saeed Ali Omar Bahaj",
+      "Muhammad I Khan",
+      "Tariq Mahmood"
+    ],
+    "doi": "10.1038/s41598-026-56292-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42249019/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42249019"
+    }
+  },
+  {
+    "paper_id": "pubmed:42248934",
+    "title": "Federated autoencoder-based clinical decision framework with hybrid class balancing.",
+    "abstract": "Despite diagnosis accuracy has been much improved by depending more on deep learning for disease classification, it raises serious concerns about patient data privacy, security, and scalability. Conventional centralized deep learning approaches are vulnerable to data leaks and non-compliance with such privacy rules as GDPR and HIPAA since they rely on the aggregation of sensitive medical records. Our work presents a privacy-preserving federated learning architecture enabling cooperative model training among many healthcare institutions without exposing raw patient data, hence addressing these issues. Combining autoencoder-driven hierarchical feature extraction, the proposed method improves classification performance and guarantees low information loss. Moreover applied is a hybrid class-balancing mechanism integrating generative augmentation techniques with Synthetic Minority Over-Sampling Technique (SMote) to eliminate bias in unbalanced illness datasets, so raising sensitivity for minority-class scenarios. Maintaining computational efficiency in federated systems, experimental evaluation demonstrates that the proposed model achieves accuracy of 92.5% outperforming both classic CNN-based (87.2%) and LSTM-based (89.1%) models. Strong convergence even in non-IID distributed medical data is promised by adaptive federated averaging. Furthermore, the proposed method resists adversarial attacks, therefore enhancing the security in the surrounding practical areas. This work decreases the distance between high-accurate disease categorization and privacy-preserving artificial intelligence by offering the basis for scalable, distributed, secure medical intelligence systems. The findings help federated medical artificial intelligence to grow by proving its ability to change healthcare diagnostics while keeping regulatory compliance and data security.In this study, the Synthetic Minority Over-Sampling Technique (SMOTE) is incorporated to address the class imbalance present in the distributed medical datasets. SMOTE generates new synthetic samples for minority classes by interpolating between existing minority instances, thereby preventing model bias toward majority classes and improving classification robustness across federated clients. By enhancing minority-class representation prior to federated aggregation, SMOTE ensures that the global model learns more discriminative and balanced feature patterns.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Manjula Rani Indupalli",
+      "G Pradeepini"
+    ],
+    "doi": "10.1038/s41598-026-55715-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42248934/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42248934"
+    }
+  },
+  {
+    "paper_id": "pubmed:42243446",
+    "title": "Byzantine robust federated learning for heterogeneous brain MRI using multisignal gradient fingerprinting and adaptive trust aggregation.",
+    "abstract": "Federated learning enables collaborative training across institutions without centralizing patient data, but remains vulnerable to malicious clients and severe non-IID data heterogeneity. We propose a trust-aware federated learning framework for brain MRI that combines multi-signal gradient fingerprinting with adaptive aggregation to achieve Byzantine robustness. Each client update is characterized by a six-dimensional fingerprint (variational-autoencoder reconstruction error, cosine similarity to a server reference, peer similarity, gradient norm, sign consistency, and Monte Carlo Shapley contribution). A dual-attention module and a reinforcement-learning controller map these signals into trust weights and integrate with FedBN-P (Federated Batch Normalization with Proximal regularization), an optimizer co-designed for stability under heterogeneous and adversarial conditions. We evaluate on MNIST, CIFAR-10, Alzheimer's MRI, and the OASIS brain-MRI cohort (approximately 87 test samples, used strictly as proof-of-concept) under both standard and strengthened threat models (up to 40% malicious clients). Attack-specific ablation confirms a defense-in-depth design: VAE fingerprinting is the primary noise-attack defense (3.60 pp accuracy drop upon removal), Shapley values safeguard accuracy under scaling (10.16 pp drop), and reinforcement learning improves detection consistency under dynamic attack schedules. Three-seed paired-test validation further shows detection F1 outperforms FLTrust by up to 44 pp on Non-IID Gaussian noise; a white-box adaptive attacker degrades the detector but not model accuracy, confirming the layered design. End-to-end wall-clock overhead is + 8.8% over FedAvg with identical communication volume. The framework achieves F1 above 0.98 for gradient-scaling attacks while preserving accuracy under magnitude-preserving attacks where explicit detection remains limited. Multi-site validation on larger federated cohorts (e.g., ADNI, UK Biobank, FeTS) is required before any clinical-deployment claim can be made.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Mohammad Karami",
+      "Hamed Kebriaei",
+      "Fatemeh Ghassemi",
+      "Hamid Azadegan"
+    ],
+    "doi": "10.1038/s41598-026-55855-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42243446/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42243446"
+    }
+  },
+  {
+    "paper_id": "pubmed:42239069",
+    "title": "DigitAb: Domain-Adaptive Cell Type Prediction Method from Light Microscopy Images.",
+    "abstract": "Light microscopy imaging with histological stains is central to disease diagnosis and research. It is enhanced with immunostaining to reveal cellular composition and complexity linked to clinical utility and biological mechanisms. Emerging multiplex imaging technologies like Phenocycler markedly increase the coverage to capture the cellular diversity but are costly, technically demanding, and inaccessible to most clinical laboratories. We developed DigitAb, a deep learning framework that classifies cell types directly from hematoxylin and eosin (H&E) stained slides, eliminating the need for specialized assays. Using Phenocycler imaging, we generated highlZlresolution ground truths for ∼3.5 million cells from 29 human kidney samples across four multi-institutional datasets to train a semantic segmentation model for 10 cell types, achieving a balanced accuracy of 0.78. By employing an integrated adversarial domain adaptation module, we tested DigitAb on unlabeled and untested biopsy samples from kidney transplant and diabetic samples. We were able to predict several cell types just from histology images, without using any special technology or immunostains, and demonstrate high concordance with clinical gold-standard Banff schema in kidney transplant rejection, and clinical characteristics of diabetic nephropathy. Our cloudlZlbased tool, DigitAb, provides scalable, accessible, labellZlfree cellular segmentation for research and clinical pathology.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Nicholas Lucarelli",
+      "Seth Winfree",
+      "Angela Sabo",
+      "Daria Barwinska",
+      "Michael Ferkowicz",
+      "William Bowen",
+      "Akshat Singh",
+      "Kaifeng Chen",
+      "Anish Tatke",
+      "Kuang-Yu Jen",
+      "Michael T Eadon",
+      "Tarek M El-Achkar",
+      "Sanjay Jain",
+      "Pinaki Sarder"
+    ],
+    "doi": "10.64898/2026.05.19.726313",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42239069/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42239069"
+    }
+  },
+  {
+    "paper_id": "pubmed:42235583",
+    "title": "GPDM: generation-prior diffusion model for accelerated direct attenuation and scatter correction of whole-body 18F-FDG PET.",
+    "abstract": "Accurate attenuation and scatter correction is essential in positron emission tomography (PET) for reliable visual interpretation and quantitative analysis. Conventional correction methods based on computed tomography (CT) or magnetic resonance imaging (MRI) have limitations related to accuracy, radiation exposure, and practical applicability. Although deep neural networks, particularly generative adversarial network (GAN)-based approaches, have shown promise for generating attenuation- and scatter-corrected PET (ASC PET) images from non-attenuation and non-scatter-corrected PET (NASC PET) images, their performance is still limited by instability during training and mode collapse. This study proposes a novel framework to generate high-quality ASC PET images from NASC PET images.&#xD;&#xD;Approach: We developed a Generation-Prior Diffusion Model (GPDM) for ASC PET image generation. The proposed framework is based on the Denoising Diffusion Probabilistic Model (DDPM), but instead of initiating sampling from a completely unrelated image distribution, it starts from a distribution similar to the target ASC PET images. This prior distribution, termed the \\emph{Generation-Prior}, guides the sampling process toward the desired image domain. By leveraging this prior information, GPDM reduces the number of required sampling steps and improves the refinement of the generated ASC PET images.&#xD;&#xD;Main results: Experimental results demonstrated that GPDM outperformed existing methods for generating ASC PET images from NASC PET images. The proposed framework achieved higher image generation accuracy while substantially reducing sampling time. These results indicate that incorporating a Generation-Prior into the diffusion process improves both efficiency and image quality compared with conventional approaches.&#xD;&#xD;Significance: The proposed GPDM framework addresses key limitations of conventional GAN-based and diffusion-based methods for attenuation and scatter correction in PET imaging. By enabling more efficient and accurate generation of ASC PET images from NASC PET images, GPDM has the potential to provide a robust alternative to conventional correction strategies and to advance practical PET imaging workflows.",
+    "year": 2026,
+    "venue": "Physics in medicine and biology",
+    "authors": [
+      "Min Jeong Cho",
+      "Hyeong Seok Shim",
+      "SunGyu Kim",
+      "Jae Sung Lee"
+    ],
+    "doi": "10.1088/1361-6560/ae7798",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42235583/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42235583"
+    }
+  },
+  {
+    "paper_id": "pubmed:42233479",
+    "title": "Toward a Synthetic Data Revolution: Diffusion Model-Enhanced Hepatocellular Carcinoma Prediction in Steatotic Liver Disease.",
+    "abstract": "Steatotic liver disease (SLD) encompasses a heterogeneous spectrum with varying risks of hepatocellular carcinoma (HCC). Limited sample sizes limit the development of predictive models, particularly for rare outcomes. This study evaluated whether generative artificial intelligence (AI)-based synthetic data augmentation can enhance HCC risk prediction in SLD patients. A random survival forest (RSF) model was developed using data from 406 patients with biopsy-confirmed SLD. The dataset was divided into training (n = 284) and testing (n = 122) cohorts. Two synthetic data generation approaches, the conditional tabular generative adversarial network (CTGAN; a type of generative adversarial network [GAN]) and diffusion models, augmented the training dataset from 284 to 1000 samples. Model performance was assessed using Harrell's C-index and integrated Brier score (IBS). Synthetic data quality was evaluated using maximum mean discrepancy (MMD) and Wasserstein distance. During the mean follow-up of 5.9 years, 12 (3.0%) patients developed HCC. In the test cohort, the baseline RSF model achieved a C-index of 0.912. Following augmentation, the diffusion-augmented model improved to 0.949, whereas the GAN-augmented model decreased to 0.818. Diffusion-generated data showed superior fidelity with a lower MMD (0.0303 vs. 0.0762) and Wasserstein distance (0.0467 vs. 0.1145) than GAN-generated data. Both augmentation approaches improved calibration (IBS: diffusion, 0.0103; GAN, 0.0108 vs. baseline, 0.0114). Diffusion-based synthetic data augmentation improved HCC risk prediction in the test cohort, whereas GAN augmentation reduced model accuracy. These findings suggest that diffusion models may help address the data scarcity challenges in hepatology research, potentially providing a useful approach for developing predictive models in limited cohorts.",
+    "year": 2026,
+    "venue": "Hepatology research : the official journal of the Japan Society of Hepatology",
+    "authors": [
+      "Masaya Sato",
+      "Takuma Nakatsuka",
+      "Yuki Matsushita",
+      "Takuma Kaneko",
+      "Keisuke Mabuchi",
+      "Tomoharu Yamada",
+      "Kazuya Okushin",
+      "Tatsuya Minami",
+      "Yotaro Kudo",
+      "Satoshi Kodera",
+      "Kazuhiko Koike",
+      "Mitsuhiro Fujishiro",
+      "Ryosuke Tateishi"
+    ],
+    "doi": "10.1111/hepr.70213",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42233479/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42233479"
+    }
+  },
+  {
+    "paper_id": "pubmed:42230586",
+    "title": "Genome-guided generative adversarial learning enables nanopore adaptive sequencing.",
+    "abstract": "Nanopore adaptive sequencing enables real-time target enrichment, yet current deep-learning methods require costly, sample-specific experimental training data. To address this, we developed GANBase, a genome-guided generative adversarial learning framework, which is trained exclusively on reference sequences and incorporates a Monte Carlo Tree Search-based Rollout strategy for model training. GANBase demonstrates robust performance in target enrichment and host depletion across diverse scenarios. In live adaptive sequencing experiments, it remains effective despite significant pore loss or flow cell version updates, providing a data-independent solution that significantly expands the utility of real-time targeted sequencing.",
+    "year": 2026,
+    "venue": "Nature communications",
+    "authors": [
+      "Yixiang Zhang",
+      "Pingping Sun",
+      "Jiarong Zhang",
+      "Zhiguo Fu",
+      "Xiaochen Bo",
+      "Di Guan",
+      "Ming Ni",
+      "Zilin Ren"
+    ],
+    "doi": "10.1038/s41467-026-73785-8",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42230586/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42230586"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224323",
+    "title": "Promoting Generalization for Exact Combinatorial Solvers via Adversarial Instance Augmentation.",
+    "abstract": "Machine learning has been successfully applied to accelerate Mixed-Integer Linear Programming (MILP) solvers. However, the learning-based solvers often suffer from severe performance degradation on unseen MILP instances due to the limited number of training instances and diversity of training distributions. To tackle this problem, we propose a novel data augmentation approach, called Adversarial Instance Augmentation, to promote the data diversity for learning-based branching modules in branch-and-bound (B&B) Solvers (AdaSolver). To generate diverse augmented instances, AdaSolver uses an augmentation policy to augment the structures of the bipartite graphs representing MILP instances. The major technical contribution is that AdaSolver formulates the non-differentiable learning problem of the augmentation policy as a contextual bandit problem, enabling efficient gradient-based adversarial training for the learning-based solver and augmentation policy. To the best of our knowledge, AdaSolver is the first general and effective framework for understanding and improving the generalization of both imitation-learning-based and reinforcement-learning-based B&B solvers. Experiments demonstrate that AdaSolver leads to a remarkable roughly 35% improvement in solving time over the B&B solver across various distributions. Moreover, AdaSolver significantly improves the sample efficiency by roughly 40% reduction in solving time compared to the competitive GNN branching baseline with only 1% of the training instances.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Haoyang Liu",
+      "Jie Wang",
+      "Yufei Kuang",
+      "Xijun Li",
+      "Yongdong Zhang",
+      "Feng Wu"
+    ],
+    "doi": "10.1109/TPAMI.2026.3698451",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224323/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224323"
+    }
+  },
+  {
+    "paper_id": "pubmed:42222845",
+    "title": "Systematic review of trends in deep learning for UAV cybersecurity.",
+    "abstract": "Unmanned Aerial Vehicles (UAVs) operate in navigation, sensing, and communication environments that are frequently degraded or adversarial. Their attack surface spans flight-control and payload software, radio links, and swarm coordination. This PRISMA-aligned systematic review synthesizes peer-reviewed studies published between 2015 and 2025 and organizes the evidence using an OSI-inspired threat taxonomy that maps spoofing, jamming, intrusion, and malware to system touchpoints and observable anomalies. We compare deep learning architectures, training targets, feature representations, evaluation practice, and deployment constraints relevant to single UAVs and swarms. Across the literature, convolutional and recurrent models dominate intrusion and anomaly detection pipelines, while attention-based, graph, and generative models appear in newer work targeting multi-agent settings and limited labels. Evidence most often relies on protocol traffic and onboard telemetry, whereas RF inputs are used less frequently and are typically represented as raw samples or spectrograms when datasets allow. Studies increasingly report efficiency-oriented deployment using pruning, quantization, distillation, or split inference to meet onboard compute and energy limits. Federated and multi-agent approaches are evaluated for scalability and robustness under poisoned updates, and blockchain-integrated designs are discussed under bandwidth and power constraints. Key gaps persist in shared datasets, repeatable adversarial stress testing, uncertainty and explainability reporting, privacy preservation, and certification-ready assurance cases for aviation regulation.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Usman Tariq",
+      "Tariq Ahamed Ahanger",
+      "Irfan Ahmed"
+    ],
+    "doi": "10.3389/frai.2026.1752124",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42222845/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42222845"
+    }
+  },
+  {
+    "paper_id": "pubmed:42208028",
+    "title": "Enhancing Zero-Shot Adversarial Robustness of Vision-Language Models With Training-Free Adaptive Feature Movement.",
+    "abstract": "Pre-trained Vision-Language Models (VLMs) have demonstrated strong zero-shot generalization capabilities. Despite their effectiveness on various downstream tasks, they remain vulnerable to adversarial samples. Existing methods fine-tune VLMs to improve their robust performance by performing adversarial training on a certain dataset. However, this can lead to model overfitting and is not a true zero-shot scenario. In this paper, we propose a truly zero-shot and training-free approach that can improve the zero-shot adversarial robustness of VLMs on the evaluated benchmarks. Specifically, we first discover that simply adding Gaussian noise can enhance the VLM's zero-shot robustness. Then, we treat the adversarial examples with added Gaussian noise as anchors and strive to find a path in the embedding space that leads from the adversarial examples to the cleaner samples. Furthermore, to avoid the overfitting issue caused by fixed hyperparameters, we propose an adaptive parameter adjustment method based on the distance between the anchors and adversarial samples in the embedding space. We largely preserve the original VLMs' zero-shot generalization abilities in a truly zero-shot and training-free manner on the evaluated benchmarks compared to previous methods. Extensive experiments on 16 datasets demonstrate that our method can achieve stronger zero-shot robust performance, improving the top-1 robust accuracy by an average of 10.83%.",
+    "year": 2026,
+    "venue": "IEEE transactions on image processing : a publication of the IEEE Signal Processing Society",
+    "authors": [
+      "Baoshun Tong",
+      "Hanjiang Lai",
+      "Yan Pan",
+      "Jian Yin",
+      "Liang Lin"
+    ],
+    "doi": "10.1109/TIP.2026.3695647",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42208028/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42208028"
+    }
+  },
+  {
+    "paper_id": "pubmed:42197861",
+    "title": "Synthetic Spectrogram Augmentation via Semi-Supervised WGAN-GP for Acoustic Industrial Quality Inspection of Turbine Housings Under Extreme Data Scarcity.",
+    "abstract": "Impact-based acoustic inspection provides a rapid non-destructive approach for screening metallic components by analyzing the sound radiated after a controlled mechanical excitation. However, the limited availability of labeled data from defective parts remains a major challenge for deploying deep learning classifiers in production. This paper proposes a complete pipeline that converts raw impact-response audio recordings into magnitude log-spectrogram images and trains a semi-supervised Wasserstein GAN with gradient penalty (SS-WGAN-GP) designed to operate under extreme data scarcity. The architecture couples a shared convolutional backbone with two output heads: a Wasserstein critic for unsupervised discrimination between real and generated samples, and a binary classification head for supervised quality labeling, jointly optimized through a combined loss that balances Wasserstein distance, gradient penalty, and cross-entropy. A key property of the design is that the generator acts as a source of synthetic training samples, producing progressively more realistic spectrograms as training advances. These samples, in turn, enrich the feature representations learned by the shared backbone and improve the performance of the classification head. The classification head of the trained discriminator is deployed directly as the quality classifier, without requiring external data or post hoc retraining.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Ander Gracia Moisés",
+      "Óscar Del Barrio Farran",
+      "David Martinez García",
+      "María Puy Zudaire Latienda"
+    ],
+    "doi": "10.3390/s26103052",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42197861/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42197861"
+    }
+  },
+  {
+    "paper_id": "pubmed:42197755",
+    "title": "StratGAN: Conditional Adversarial Network for Permittivity Inversion of Borehole Radar Data in Stratified Media.",
+    "abstract": "An ill-posed permittivity inversion problem is encountered in borehole radar (BHR) applications within stratified media due to a highly nonlinear forward relation, insufficient statistical coverage under data-limited conditions, strong noise contamination, and limited borehole observation geometry, which together cause instability and blurred boundaries. To address these challenges, a stratified media oriented conditional generative adversarial network for permittivity inversion, termed StratGAN, is proposed. BHR waveform data are used as the conditional input, and the complex mapping from time domain waveforms to depth domain permittivity distributions is learned end to end through conditional adversarial training between a generator and a discriminator, jointly constrained by a composite loss. During training, statistical characteristics of layered structures are learned from real samples by the discriminator, and adaptive feedback is provided as a data-driven loss to suppress spurious structures and boundary ambiguity. WGAN-GP is adopted and combined with a patch-based local discrimination mechanism to reinforce high-frequency details and geometric boundary consistency, thereby reducing the over-smoothing tendency of conventional CNNs. In addition, geometric consistency of inversion results is improved in an end-to-end manner without relying on complicated velocity analysis. Quantitative evaluations on simulated and measured datasets indicate that, compared with an architecture-matched convolutional neural network (CNN) and the baseline model GPRNet, StratGAN achieves overall better performance in terms of mean absolute error, coefficient of determination, and structural similarity metrics, and layered interfaces and anomaly boundaries are more effectively recovered. For the controlled measured data, the coefficient of determination (R2) is improved to 0.9533 by StratGAN, whereas a value of 0.5598 is obtained by GPRNet. These results indicate the potential of StratGAN to enhance the reliability and structural fidelity of BHR permittivity inversion under limited-sample conditions, and preliminary evidence is provided for its practical applicability under controlled measured conditions.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Song Qing",
+      "Ding Yang",
+      "Raffaele Persico",
+      "Cheng Guo",
+      "Chuanhao Hu",
+      "Jianjian Huo",
+      "Jisheng Tong",
+      "Jinsong Liang",
+      "Qing Zhao"
+    ],
+    "doi": "10.3390/s26102946",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42197755/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42197755"
+    }
+  },
+  {
+    "paper_id": "pubmed:42189608",
+    "title": "Dual-Stage Improvement with Domain Adaptation for Cross-Subject Epileptic Seizure Prediction.",
+    "abstract": "Electroencephalogram (EEG)-based epileptic seizure prediction is a critical adjunctive treatment strategy for drug-resistant epilepsy. To mitigate cross-subject EEG variability and improve generalization performance, existing methods use domain adaptation (DA) to minimize distribution discrepancy between source and target domains. However, these methods overlook the joint impact of data imbalance and noisy pseudo-labels. This results in biased attention toward imbalanced source samples and degraded understanding of the true target distribution, thereby impairing the model's generalization performance. To address these issues, a cross-subject seizure prediction method based on DA with dual-stage improvement is proposed to integrate data balancing and pseudo-label optimization. Specifically, a global context-aware generative network is introduced to generate preictal samples with global contextual consistency to rectify class imbalance between preictal and interictal samples in the source domain. A common spatial pattern clustering filter is then introduced, which uses a confidence-guided covariance weighting strategy to integrate classification confidence from source-domain labels and target-domain pseudo-labels, optimizing spatial filters to maximize inter-class discrimination. To mitigate the accumulation and propagation of noisy pseudo-labels during training, a dual-filtering mechanism iteratively eliminates them. Experimental evaluation on the CHB-MIT dataset demonstrates the effectiveness of the proposed method in mitigating interpatient domain discrepancies and achieving superior performance over recent leading approaches.",
+    "year": 2026,
+    "venue": "International journal of neural systems",
+    "authors": [
+      "Chenchen Cheng",
+      "Wanjin Song",
+      "Bo You",
+      "Haichao Wu",
+      "Yan Liu"
+    ],
+    "doi": "10.1142/S0129065726500322",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42189608/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42189608"
+    }
+  },
+  {
+    "paper_id": "pubmed:42185690",
+    "title": "Generative diffusion meets domain adaptation: a framework for EEG cross-subject motor imagery classification.",
+    "abstract": "Cross-subject motor imagery classification remains challenging due to EEG data scarcity and inter-subject variability. This study proposes a novel framework integrating generative data augmentation with domain adaptation. First, we employ a diffusion probabilistic model to generate high-fidelity synthetic EEG samples, effectively enriching the training data. Subsequently, we propose the AMSC-DANN architecture, which synergizes an Adaptive Multi-Scale Convolution (AMSC) module for extracting multi-granular features with a Domain Adversarial Neural Network (DANN). This combination enables the model to learn discriminative temporal-spectral representations while simultaneously aligning feature distributions across different subjects. Extensive experiments on BCI Competition IV datasets 2a and 2b demonstrate that our proposed framework outperforms state-of-the-art baselines, validating its effectiveness in enhancing cross-subject generalization.",
+    "year": 2026,
+    "venue": "Brain informatics",
+    "authors": [
+      "Jiacheng Zhang",
+      "Haolan Zhang",
+      "Youpeng Yang"
+    ],
+    "doi": "10.1186/s40708-026-00308-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42185690/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42185690"
+    }
+  },
+  {
+    "paper_id": "pubmed:42184193",
+    "title": "Consistency-based Semi-supervised Evidential Active Learning Framework for Robust Classification of Radiology Images.",
+    "abstract": "Deep learning offers high performance for radiology image classification, but relies on large, expert annotated datasets. Semi-supervised learning and active learning approaches can leverage unlabelled samples and mitigate the annotation burden. Combining these techniques via semi-supervised active learning (SSAL) can compound their benefits, yet the effectiveness of this approach may be hindered by unreliable uncertainty estimation and consistency enforcement. To address these challenges, we propose Consistency-based Semi-supervised Evidential Active Learning (CSEAL). CSEAL is a principled SSAL framework leveraging evidential learning for reliable estimation of predictive uncertainty for consistency enforcement and prioritised sampling. First, we develop evidential counterparts of leading semi-supervised methods with different consistency enforcement mechanisms: Pseudo-labelling, Virtual Adversarial Training, Mean Teacher, and NoTeacher, and demonstrate customisability of CSEAL. Second, we introduce Noise Robust-evidential NoTeacher, an enhancement over evidential NoTeacher, that uses consensus principles and a small-loss inclusion mechanism to learn with noisyannotations. In extensive experiments on many X-ray, CT, and MRI datasets, we demon strate that CSEAL offers substantial performance gains over competitive SSAL baselines and enhances robustness in noisy annotation scenarios. Third, we translate CSEAL into an annotation platform and demonstrate its value as an aid for real-world radiology image annotation. Specifically, our CSEAL-assisted platform performs close to fully supervised learning with very small labelled datasets, en ables accurate auto-labelling, and maintains performance even when only noisy labels from junior annotators are available for training. Our work offers new opportunities to enhance the efficiency of clinical image annotation and model development workflows.",
+    "year": 2026,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Shafa Balaram",
+      "Manh Cuong Nguyen",
+      "Yang Yu",
+      "Ivan Ho Mien",
+      "Huijuan Yang",
+      "Navya Sindhu Vanjavaka",
+      "Nurul Hafidzah Rahim",
+      "Alistair Giap Chuan Koh",
+      "Shaheen Low",
+      "Ashish Jith Sreejith Kumar",
+      "Feri Guretno",
+      "Yih Yian Sitoh",
+      "Ashraf Kassim",
+      "Pavitra Krishnaswamy"
+    ],
+    "doi": "10.1109/JBHI.2026.3696868",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42184193/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42184193"
+    }
+  },
+  {
+    "paper_id": "pubmed:42180133",
+    "title": "VideoPASTA: 7K Preference Pairs That Matter for Video-LLM Alignment.",
+    "abstract": "Video-language models (Video-LLMs) excel at understanding video content but struggle with spatial relationships, temporal ordering, and cross-frame continuity. To address these limitations, we introduce ",
+    "year": 2025,
+    "venue": "Proceedings of the Conference on Empirical Methods in Natural Language Processing. Conference on Empirical Methods in Natural Language Processing",
+    "authors": [
+      "Yogesh Kulkarni",
+      "Pooyan Fazli"
+    ],
+    "doi": "10.18653/v1/2025.emnlp-main.1647",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42180133/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42180133"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174084",
+    "title": "Enhanced detection of network intrusions and anomalies in internet of things applications using a hybrid artificial intelligence model combining CNN and LSTM.",
+    "abstract": "The rapid development of the internet of things (IoT) has made an increasing number of large-scale, interconnected networks more vulnerable to advanced attacks. There are increased risks of hidden intrusions and compromised security in IoT environments, resulting from class imbalance in network traffic datasets, high-dimensional feature spaces, and the requirement for spatial and temporal anomaly detection. Traditional intrusion detection systems (IDS) fail to address these problems. This research work presents IaADS, an intrusion and anomaly detection system integrating 3 balancing components: a conditional generative adversarial network (cGAN) for minority-class data balancing, the slime mould algorithm (SMA) for wrapper-based feature selection (FS), and a dual convolutional neural network and long short-term memory (CNN+LSTM) for spatiotemporal feature extraction (FE). The cGAN generates class-conditioned synthetic samples for under-represented attack types, and SMA reduces training overhead by 18.0% using principled feature dimensionality reduction from 41 to an optimal discriminative subset. Evaluated on the NSL-KDD benchmark dataset against 6 baseline models-SVM, RF, KNN, MLP, LSTM, and CNN-IaADS achieves 97.1% accuracy on DoS detection, 81.5% on R2L, and 70.4% on U2R attack types, with a false positive rate of 3.2% on DoS and 17.4% on U2R. Five-fold cross-validation provides a mean accuracy of 96.4 ± 0.4% and a mean F1-score of 96.0 ± 0.4%, with statistical significance confirmed at p < 0.01 against all baselines. Inference latency of 2.3 ms per sample confirms suitability for near-real-time IoT gateway deployment. The attack taxonomy of NSL-KDD aligns directly with attack types documented in IoT network security, and validation on IoT-native datasets is a direction for future work.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Bharathi Subramaniam",
+      "Sudhakar Sengan",
+      "Julian L Webber",
+      "Abolfazl Mehbodniya",
+      "Meshal Ghalib Alharbi",
+      "Majed Alsafyani",
+      "Ahmed Emara"
+    ],
+    "doi": "10.1038/s41598-026-53602-4",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174084/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174084"
+    }
+  },
+  {
+    "paper_id": "pubmed:42173117",
+    "title": "PSWGAN-GP and MedicalDISTS synergistic optimization framework for few-shot fetal ultrasound image augmentation.",
+    "abstract": "The scarcity of fetal ultrasound image samples significantly constrains the performance of fetal anomaly screening models. To overcome the limitations of conventional augmentation techniques-including speckle noise-induced blurring, structural distortions, training instability, and the absence of effective sample filtering-this paper proposes a data augmentation framework synergistically driven by perceptually stabilized Wasserstein generative adversarial network with gradient penalty and MedicalDISTS (medical deep image structure and texture similarity). The framework incorporates a spectral normalized attention residual network to enhance organ contour clarity, a multi-scale deep perceptual feature pyramid to correct morphological distortions, and a multimodal stability-enhanced training mechanism to suppress mode collapse. The MedicalDISTS module further employs an edge-aware Sobel operator, a ResNet50-convolutional block attention module feature extractor, and adaptive thresholding to identify and filter structurally anomalous samples. Experiments on fetal cranial ultrasound data show that the proposed method reduces the Fréchet inception distance to 50.02 with a 48.73% decrease in model parameters. After screening, the dataset size is reduced by 43.53%, while downstream task performance is significantly improved, achieving a mAP@0.5:0.95 of 0.927 in detection and an Intersection over Union of 0.972 in segmentation. This demonstrates effective quality-quantity synergy, offering a reliable solution for small-sample fetal ultrasound image enhancement.",
+    "year": 2026,
+    "venue": "Biomedical physics & engineering express",
+    "authors": [
+      "Kang Chen",
+      "Wenjuan Gu",
+      "YanJing Li",
+      "Xiaobao Liu",
+      "Jihong Shen",
+      "Dan Tang"
+    ],
+    "doi": "10.1088/2057-1976/ae71d3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42173117/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42173117"
+    }
+  },
+  {
+    "paper_id": "pubmed:42172914",
+    "title": "Probabilistic multi-site MR image harmonization via feature preserving conditional generative adversarial networks.",
+    "abstract": "Brain magnetic resonance imaging (MRI) is pivotal in diagnosing and monitoring neurological disorders. However, despite their extensive applications, MR images have certain shortcomings. In particular, factors other than the anatomy of brain tissues influence the intensity distribution of voxels in MR images. These factors include hardware, software, magnetic field strength, and acquisition protocol. This inconsistency poses challenges in multi-site neuroimaging studies, where images are obtained from various devices with minimal control over acquisition parameters. Image harmonization algorithms aim to eliminate non-biological characteristics in MR images through various approaches, including converting images from multiple sites into a format resembling that of a designated target site. Among image harmonization methods, those relying on deep learning algorithms have gained significant attention recently. Nevertheless, certain aspects of deep learning-based image harmonization remain unexplored, notably the integration of probabilistic deep generative models to transform the distribution of MR images to a desired distribution. Inspired by this, we introduced a feature preserving conditional generative adversarial network (FP-cGAN) that converts images from multiple origins into the format of a target site while preserving anatomical features by imposing a novel regularizing constraint. We conduct our experiments on MR images from the SRPBS dataset, which comprises unpaired images in addition to paired (traveling subjects) images from multiple sites. We utilize the unpaired data for training our models and the paired data for evaluation. Furthermore, we compare our results with histogram matching, ImUnity, and CycleGAN, three widely used image harmonization methods. To evaluate robustness and generalizability, we also conduct an extended experiment using heterogeneous public datasets and assess performance using distributional measures. In addition, we analyze the role of the probabilistic formulation by examining the effect of the number of samples and by deriving uncertainty maps from the sample variance. Our experiments demonstrate that the proposed method outperforms the discussed competing approaches while providing meaningful uncertainty estimates.",
+    "year": 2026,
+    "venue": "Computerized medical imaging and graphics : the official journal of the Computerized Medical Imaging Society",
+    "authors": [
+      "Saeed Moazami",
+      "Sepideh Rezvani",
+      "Agnimitra Dasgupta",
+      "Assad A Oberai"
+    ],
+    "doi": "10.1016/j.compmedimag.2026.102777",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42172914/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42172914"
+    }
+  },
+  {
+    "paper_id": "pubmed:42172159",
+    "title": "A Method for Data Augmentation in Vertical Federated Learning Addressing Data Heterogeneity.",
+    "abstract": "Vertical federated learning (VFL) can aggregate data features from participating parties and is applicable to data collaboration in various fields. To address data heterogeneity in VFL, this article proposes a framework tailored for heterogeneous environments. First, to mitigate performance degradation caused by imbalanced local data across clients, we exploit conditional generative adversarial networks (CGANs) for targeted data augmentation, and propose a data balancing model named FeCWGAN-GP based on CGAN. This model pretrains a local CGAN for each client to perform local private data compensation, thereby alleviating the problem of decreased model performance. Second, to handle local model parameter distribution shifts induced by heterogeneity, leveraging both the sample size proportions and the Wasserstein distance in the model parameter space to capture parameter distribution shifts due to data heterogeneity, a parameter aggregation algorithm named WFedDA based on sample size and parameter distribution is proposed. This method calculates weights based on the sample size proportions of participants and the distribution difference between local model parameters and global model parameters, thus optimizing the global model. Finally, to address the instability of local model parameters caused by data heterogeneity, a stochastic gradient descent (SGD) method with a dual smoothing mechanism named SGD-MA is proposed. This method uses an exponential moving average (EMA) to process gradients and parameters sequentially, which reduces the fluctuation of gradients and the instability of parameter updates, thereby improving the stability of the training process. Experiments on the public datasets MNIST, CIFAR-10, Fashion-MNIST, and MIMIC-III demonstrate that the methods proposed in this article can effectively address the issues caused by data heterogeneity in multidata-source environments, significantly improving the generalization capability and stability of the global model.",
+    "year": 2026,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Yunpeng Xiao",
+      "Tingting Lv",
+      "Dengke Zhao",
+      "Wanjing Zhao",
+      "Tun Li",
+      "Rong Wang",
+      "Guoyin Wang"
+    ],
+    "doi": "10.1109/TNNLS.2026.3691817",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42172159/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42172159"
+    }
+  },
+  {
+    "paper_id": "pubmed:42166478",
+    "title": "STGAD: Self-temporal generative adversarial framework with transformer attention for unsupervised multivariate time-series anomaly detection and localization.",
+    "abstract": "Unsupervised anomaly detection in multivariate time series is important for maintaining the reliability of complex cyber-physical systems. However, existing methods often face practical challenges in adversarial stability, temporal dependency modeling, and anomaly-score calibration across datasets. We present STGAD, a dual-score generative-adversarial framework for anomaly detection and localization in multivariate time series. STGAD employs a WGAN-GP critic with a Transformer encoder to perform self-temporal modeling of within-window dependencies and cross-variable interactions, and uses a stochastic generator trained under adversarial supervision with sample-level proximity regularization to model normal temporal patterns. During inference, multiple generated candidates are sampled for each input window, and the minimum residual is used as a sample-matching anomaly cue. This residual-based score is fused with the critic-based score after normalization, and final anomaly decisions are produced by distribution-adaptive thresholding. Experiments on five benchmark datasets spanning server monitoring, aerospace telemetry, industrial control, and ECG signals (SMD, SMAP, MSL, SWaT, and MIT-BIH) show that STGAD achieves strong and consistent performance against representative baselines. Ablation and robustness analyses further demonstrate the effectiveness of critic-side temporal modeling, stable adversarial learning, and dual-score fusion in the proposed framework.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Xiao Liao",
+      "Wei Deng",
+      "Hongyue Ma",
+      "Yihan Mu"
+    ],
+    "doi": "10.1371/journal.pone.0349223",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42166478/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42166478"
+    }
+  },
+  {
+    "paper_id": "pubmed:42158596",
+    "title": "Discovering TEAD4 modulators for hepatocellular carcinoma: a GAN-enabled generative modelling framework.",
+    "abstract": "Liver diseases continue to impose a major global health burden, and therapeutic progress is constrained by the limited availability of validated small-molecule modulators. TEAD4, a central Hippo-YAP effector, has emerged as a key regulator of hepatic regeneration, survival, and disease progression, yet remains pharmacologically underexplored due to the scarcity of experimentally confirmed inhibitors. Critically, the limited number of known active compounds restricts effective supervised learning, necessitating data augmentation strategies capable of expanding TEAD4 relevant chemical space. To address this, we developed an integrative computational framework in which a conditional generative adversarial network was trained on QikProp-derived molecular descriptors to generate chemically realistic synthetic samples and mitigate class imbalance. This GAN driven augmentation enabled construction of a robust activity prediction model. XGBoost was selected as the classifier due to its strong performance on structured descriptor datasets and its ability to capture complex nonlinear relationships with strong generalization. The augmented dataset was used to train the XGBoost classifier for activity prediction and screen DrugBank compounds, producing a focused set of high confidence candidates. Shortlisted hits were refined using structure-based evaluation, toxicity filtering, and anticancer sensitivity prediction. Quantum chemical analysis identified DB00169 (cholecalciferol) as a potential TEAD4-binding candidate supported by combined structural, dynamic, and electronic analyses. Molecular dynamics simulations further supported the stability of the TEAD4-ligand complex, indicating compact structural behaviour and thermodynamically favourable conformational states. Overall, this work demonstrates that coupling GAN based molecular augmentation with XGBoost classification and molecular simulations provides a scalable strategy for identifying biologically meaningful TEAD4 modulators, supporting TEAD4 targeted drug discovery across liver diseases.",
+    "year": 2026,
+    "venue": "Frontiers in bioinformatics",
+    "authors": [
+      "Varshni Premnath",
+      "Ramanathan Karuppasamy",
+      "Jayakumar Kaliappan",
+      "Shanthi Veerappapillai"
+    ],
+    "doi": "10.3389/fbinf.2026.1811161",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42158596/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42158596"
+    }
+  },
+  {
+    "paper_id": "pubmed:42157660",
+    "title": "A Z-Score Template Method for Person-Specific Augmentation of Clinical Brain MRI: An Investigation in Multiple Sclerosis.",
+    "abstract": "Clinical MRI is essential for managing neurological disorders such as multiple sclerosis (MS) but often inconsistent, limiting secondary analyses for enhanced information characterization. Our goal was to establish a new Z-score template method for person-specific image augmentation, as compared to a common deep learning approach termed cycle generative adversarial network (CycleGAN), and test their utility using a treatment response predicting example in MS. We examined 148 MS participants (102 females) from two cohorts, 104 and 44, respectively, with equivalent sex ratio and age, and each included T1-weighted, T2-weighted, and fluid attenuated inversion recovery (FLAIR) brain MRI. The 104/148 participants were used for method development and 44/148 for held-out testing. Z-score templates were constructed using different sample sizes to compare. Z scores from the best template were used to create person- and sequence-specific images. Similar experiments were done using CycleGAN along with tests using the same cohort. Image quality was assessed using peak signal-to-noise ratio, structural similarity index, and root mean square error. Utility testing applied ResNet50-based deep learning models with cycling of the typically unavailable T1-weighted MRI. We found that Z-score template constructed with 75 individuals was the best. Using existing images, potentially unavailable MRI could be created using either method investigated. At an individual level, Z-score template synthesis was equivalent to CycleGAN results. Further, models trained with synthetic or source T1-weighted images achieved similar accuracies (0.82-0.84 ± 0.04 vs. 0.84 ± 0.02) in tests of treatment response prediction. Without using T1-weighted MRI, the model accuracy decreased to 0.72, and AUC decreased below chance. Overall, Z-score template appeared to be a competitive method for person-specific brain MRI augmentation, and synthesized images such as T1-weighted brain MRI have the potential to support downstream applications as seen in prediction of treatment response in MS.",
+    "year": 2026,
+    "venue": "NMR in biomedicine",
+    "authors": [
+      "Olayinka Oladosu",
+      "Rehman Tariq",
+      "Shayan Shahrokhi",
+      "Yunyan Zhang"
+    ],
+    "doi": "10.1002/nbm.70313",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42157660/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42157660"
+    }
+  },
+  {
+    "paper_id": "pubmed:42156463",
+    "title": "Knowledge-prior memory discrimination based generative adversarial network for industrial anomaly detection and localization.",
+    "abstract": "Industrial anomaly detection and localization have become key procedures in modern manufacturing for product quality assurance. However, it is still challenging for the emerging deep learning-based unsupervised anomaly detection approaches to simultaneously realize high-precision anomaly detection and localization, and generate high-quality anomaly masks end-to-end. Meanwhile, the limited number of normal samples and random nature of anomalies leads to insufficient discriminative information available for model training. To this end, a novel knowledge-prior memory discrimination based generative adversarial network (KMDGAN) is demonstrated for high-performance industrial anomaly detection and localization with merely few anomaly samples utilized. KMDGAN leverages both normal and anomaly features to learn feature-level spatial relationships and generate accurate anomaly masks end-to-end. Firstly, based on the idea of knowledge-prior discrimination, a memory feature matching module is elaborately designed to construct a memory knowledge base of normal product features, and considers the positive and negative difference information from the spatial location features, promoting the detection and localization of abnormal regions. Secondly, a cross-scale feature fusion module is developed to solve the multi-scale feature redundancy problem via attention optimization, while an anomaly map modulation technique enhances the integration of global context and local details. Finally, an edge-context hybrid module is designed to address the limitation of single information and enhance the perceptual comprehension ability by fully extracting the edge and overall information of anomaly sample features. Experimental results on the MVTec AD and VisA datasets demonstrate that our KMDGAN model achieves a salient anomaly detection and localization performance, outperforming the existing advanced counterparts.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Tianci Fan",
+      "Junchao Chen",
+      "Xingyue Liu"
+    ],
+    "doi": "10.1038/s41598-026-52590-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42156463/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42156463"
+    }
+  }
+]

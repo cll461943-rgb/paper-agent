@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2009.06368v2",
+  "title": "Searching for a Search Method: Benchmarking Search Algorithms for Generating NLP Adversarial Examples",
+  "abstract": "We study the behavior of several black-box search algorithms used for generating adversarial examples for natural language processing (NLP) tasks. We perform a fine-grained analysis of three elements relevant to search: search algorithm, search space, and search budget. When new search algorithms are proposed in past work, the attack search space is often modified alongside the search algorithm. Without ablation studies benchmarking the search algorithm change with the search space held constant, one cannot tell if an increase in attack success rate is a result of an improved search algorithm or a less restrictive search space. Additionally, many previous studies fail to properly consider the search algorithms' run-time cost, which is essential for downstream tasks like adversarial training. Our experiments provide a reproducible benchmark of search algorithms across a variety of search spaces and query budgets to guide future research in adversarial NLP. Based on our experiments, we recommend greedy attacks with word importance ranking when under a time constraint or attacking long inputs, and either beam search or particle swarm optimization otherwise. Code implementation shared via https://github.com/QData/TextAttack-Search-Benchmark",
+  "year": 2020,
+  "venue": null,
+  "authors": [
+    "Jin Yong Yoo",
+    "John X. Morris",
+    "Eli Lifland",
+    "Yanjun Qi"
+  ],
+  "doi": null,
+  "arxiv_id": "2009.06368v2",
+  "url": "http://arxiv.org/abs/2009.06368v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:query2doc",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

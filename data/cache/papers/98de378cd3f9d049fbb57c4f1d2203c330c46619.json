@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42268749",
+  "title": "NOTO: Noise-Tolerate Evidential Learning for Open-Set Cross-modal Retrieval.",
+  "abstract": "With the increasing accessibility of multimodal data, cross-modal retrieval (CMR) has gained significant attention in recent years. However, most existing CMR methods are built on clean annotations and closed-set label space assumptions, which are often violated in practice. In realistic scenarios, annotations are often noisy due to machine-generated or non-expert labeling, while new categories may also emerge from heterogeneous data sources. The coexistence of label noise and open-set categories gives rise to open-set noisy labels (OSNL). Compared to closed-set noise, OSNL is more harmful because it arises from samples whose true categories lie outside the training label space. When such unknown-class samples are incorrectly assigned to known labels, the model cannot correct them through label relationships. Instead, the model is forced to learn erroneous semantic associations, embedding unknown semantics into incorrect categories. This bias gradually accumulates and disrupts the semantic structure of the shared representation space, ultimately causing existing CMR methods to struggle to maintain reliable performance. To address these challenges, this paper proposes NOise-TOlerate evidential learning (NOTO), a novel framework that robustly learns cross-modal representations under both closed-set and open-set noisy labels. Specifically, a Robust Evidential Learning (REL) module is proposed to detect clean, closed-set noisy, and open-set noisy instances by modeling the predictive distribution as Dirichlet evidence and inferring belief masses. Based on these inferred instance types, REL then assigns tailored optimization strategies to enhance semantic consistency and enlarge the discrimination margin between indistribution data and open-set categories. An Adaptive Noise-aware Contrast (ANC) module is proposed to adaptively select reliable positive pairs according to the estimated noise states and maximize the mutual information between them to strengthen cross-modal alignment and mitigate the adverse effects of noisy supervision simultaneously. Extensive experiments and comparisons with ten state-of-the-art CMR methods on four benchmarks demonstrate that NOTO achieves superior retrieval performance and robustness against open-set noisy labels.",
+  "year": 2026,
+  "venue": "IEEE transactions on image processing : a publication of the IEEE Signal Processing Society",
+  "authors": [
+    "Ruitao Pu",
+    "Chao Su",
+    "Peng Hu",
+    "Zhenwen Ren",
+    "Dezhong Peng",
+    "Yuan Sun"
+  ],
+  "doi": "10.1109/TIP.2026.3697620",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42268749/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42268749"
+  }
+}

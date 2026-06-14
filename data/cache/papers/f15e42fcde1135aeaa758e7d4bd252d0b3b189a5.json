@@ -1,0 +1,44 @@
+{
+  "paper_id": "https://openalex.org/W4404782328",
+  "title": "ApiQ: Finetuning of 2-Bit Quantized Large Language Model",
+  "abstract": "Memory-efficient finetuning of large language models (LLMs) has recently attracted huge attention with the increasing size of LLMs, primarily due to the constraints posed by GPU memory limitations and the effectiveness of these methods compared to full finetuning.Despite the advancements, current strategies for memory-efficient finetuning, such as QLoRA, exhibit inconsistent performance across diverse bit-width quantizations and multifaceted tasks.This inconsistency largely stems from the detrimental impact of the quantization process on preserved knowledge, leading to catastrophic forgetting and undermining the utilization of pretrained models for finetuning purposes.In this work, we introduce a novel quantization framework named ApiQ, designed to restore the lost information from quantization by concurrently initializing the LoRA components and quantizing the weights of LLMs.This approach ensures the maintenance of the original LLM's activation precision while mitigating the error propagation from shallower into deeper layers.Through comprehensive evaluations conducted on a spectrum of language tasks with various LLMs, ApiQ demonstrably minimizes activation error during quantization.Consequently, it consistently achieves superior finetuning results across various bit-widths.Notably, one can even finetune a 2-bit Llama-2-70b with ApiQ on a single NVIDIA A100-80GB GPU without any memory-saving techniques, and achieve promising results.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Baohao Liao",
+    "Christian Herold",
+    "Shahram Khadivi",
+    "Christof Monz"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.1168",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.emnlp-main.1168",
+  "citation_count": 3,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Parallel computing"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W4396696052"
+    ]
+  }
+}

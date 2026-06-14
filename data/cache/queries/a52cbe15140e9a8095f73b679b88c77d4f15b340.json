@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "pubmed:41930825",
+    "title": "Constructing a corpus of hematologic pathology notes for the fine-tuning of BERT models for named entity recognition.",
+    "abstract": "Microscopic, immunologic, and chemical testing play a major role in the diagnostic process of hematologic cancer patients. Pathologists record the complex results of these tests in highly descriptive, free-text clinical notes. As unstructured text is not searchable, the relevant information in the notes is difficult to access for research and further analysis. The objective was the construction of a corpus of annotated hemato-oncological pathology notes as part of the development of an automated system for the extraction of structured data from clinical notes. The corpus was evaluated through the fine-tuning and assessment of a Bidirectional Encoder Representations from Transformers (BERT) model in the context of Named Entity Recognition (NER). We developed guidelines and an annotation scheme that capture relevant information in our hematology reports, such as diagnoses, immunohistochemistry findings, proliferation rate, presence of light chain restriction, and mutations. We annotated 110 reports twice in several rounds and measured the inter-annotator-agreement (IAA) using the F1-score. Following each round, we discussed inconsistencies and updated the annotation guidelines and scheme accordingly. We mapped the terms of our annotation strategy to systematized nomenclature of medicine clinical terms (SNOMED CT) concepts to permit translation into other languages. To validate our strategy, we fine-tuned a pre-trained BERT-model for a NER task using 240 annotated texts. The final annotation scheme consists of nine entity types and ten attribute types. During the annotation process, we observed an improvement in the F1-score for the IAA from 0.61 to 0.85 (close match) and from 0.70 to 0.91 (relaxed match). The model achieved an overall F1-score of 0.88 for the classification of entities and attributes in the validation experiment. We developed a novel and extensive annotation scheme and guidelines for the annotation of hemato-oncological pathology notes. The annotations facilitate experiments with state-of-the-art NER models which yielded satisfactory results in identifying entities and attributes.",
+    "year": 2026,
+    "venue": "Computers in biology and medicine",
+    "authors": [
+      "Desiree Jaschke",
+      "Celine-Fabienne Bergmann",
+      "Max Blumenstock",
+      "Alexander Brobeil",
+      "Sascha Dietrich",
+      "Tobias Dittrich",
+      "Michael Herweg",
+      "Petra Knaup",
+      "Christoph U Lehmann",
+      "Nora Liebers",
+      "Gunhild Mechtersheimer",
+      "Sarah Richter",
+      "Cleo-Aron Weis",
+      "Matthias Ganzinger"
+    ],
+    "doi": "10.1016/j.compbiomed.2026.111648",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41930825/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41930825"
+    }
+  },
+  {
+    "paper_id": "pubmed:41672471",
+    "title": "Large Language Models for Health Care Text Classification: Systematic Review.",
+    "abstract": "Large language models (LLMs) have fundamentally transformed approaches to natural language processing tasks across diverse domains. In health care, accurate and cost-efficient text classification is crucial-whether for clinical note analysis, diagnosis coding, or other related tasks-and LLMs present promising potential. Text classification has long faced multiple challenges, including the need for manual annotation during training, the handling of imbalanced data, and the development of scalable approaches. In health care, additional challenges arise, particularly the critical need to preserve patient data privacy and the complexity of medical terminology. Numerous studies have leveraged LLMs for automated health care text classification and compared their performance with traditional machine learning-based methods, which typically require embedding, annotation, and training. However, existing systematic reviews of LLMs either do not specialize in text classification or do not focus specifically on the health care domain. This research synthesizes and critically evaluates the current evidence in the literature on the use of LLMs for text classification in health care settings. Major databases (eg, Google Scholar, Scopus, PubMed, ScienceDirect) and other resources were queried for papers published between 2018 and 2024, following the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) guidelines, resulting in 65 eligible research articles. These studies were categorized by text classification type (eg, binary classification, multilabel classification), application (eg, clinical decision support, public health and opinion analysis), methodology, type of health care text, and the metrics used for evaluation and validation. The systematic review includes 65 research articles published between 2020 and Q3 2024, showing a significant increase in publications over time, with 28 papers published in Q1-Q3 2024 alone. Fine-tuning was the most common LLM-based approach (35 papers), followed by prompt engineering (17 papers). BERT (Bidirectional Encoder Representations from Transformers) variants were predominantly used for multilabel classification (50%), whereas closed-source LLMs were most commonly applied to binary (44.0%) and multiclass (30.6%) classification tasks. Clinical decision support was the most frequent application (29 papers). Over 80% of studies used English-language datasets, with clinical notes being the most common text type. All studies employed accuracy-related metrics for evaluation, and the findings consistently showed that LLMs outperformed traditional machine learning approaches in health care text classification tasks. This review identifies existing gaps in the literature and highlights future research directions for further investigation.",
+    "year": 2026,
+    "venue": "JMIR AI",
+    "authors": [
+      "Hajar Sakai",
+      "Sarah S Lam"
+    ],
+    "doi": "10.2196/79202",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41672471/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41672471"
+    }
+  },
+  {
+    "paper_id": "pubmed:39631489",
+    "title": "Enhancing suicidal behavior detection in EHRs: A multi-label NLP framework with transformer models and semantic retrieval-based annotation.",
+    "abstract": "Suicide is a leading cause of death worldwide, making early identification of suicidal behaviors crucial for clinicians. Current Natural Language Processing (NLP) approaches for identifying suicidal behaviors in Electronic Health Records (EHRs) rely on keyword searches, rule-based methods, and binary classification, which may not fully capture the complexity and spectrum of suicidal behaviors. This study aims to create a multi-class labeled dataset with annotation guidelines and develop a novel NLP approach for fine-grained, multi-label classification of suicidal behaviors, improving the efficiency of the annotation process and accuracy of the NLP methods. We develop a multi-class labeling system based on guidelines from FDA, CDC, and WHO, distinguishing between six categories of suicidal behaviors and allowing for multiple labels per data sample. To efficiently create an annotated dataset, we use an MPNet-based semantic retrieval framework to extract relevant sentences from a large EHR dataset, reducing annotation space while capturing diverse expressions. Experts annotate the extracted sentences using the multi-class system. We then formulate the task as a multi-label classification problem and fine-tune transformer-based models on the curated dataset to accurately classify suicidal behaviors in EHRs. Lexical analysis revealed key themes in assessing suicide risk, considering an individual's history, mental health, substance use, and family background. Fine-tuned transformer-based models effectively identified suicidal behaviors from EHRs, with Bio_ClinicalBERT, BioBERT, and XLNet achieving the F1 scores (0.81), outperforming BERT and RoBERTa. The proposed approach, based on a multi-label classification system, captures the complexity of suicidal behaviors effectively particularly \"Suicide Attempt\" and \"Family History\" instances. The proposed approach, using task-specific NLP models and a multi-label classification system, captures the complexity of suicidal behaviors more effectively than traditional binary classification. However, direct comparisons with existing studies are difficult due to varying metrics and label definitions. This study presents a robust NLP framework for detecting suicidal behaviors in EHRs, leveraging task-specific fine-tuning of transformer-based models and a semi-automated pipeline. Despite limitations, the approach demonstrates the potential of advanced NLP techniques in enhancing the identification of suicidal behaviors. Future work should focus on model expansion and integration to further improve patient care and clinical decision-making.",
+    "year": 2025,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Kimia Zandbiglari",
+      "Shobhan Kumar",
+      "Muhammad Bilal",
+      "Amie Goodin",
+      "Masoud Rouhizadeh"
+    ],
+    "doi": "10.1016/j.jbi.2024.104755",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39631489/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39631489"
+    }
+  }
+]

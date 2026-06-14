@@ -1,0 +1,846 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08355v3",
+    "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+    "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jacob Beck",
+      "Shikha Surana",
+      "Manus McAuliffe",
+      "Oliver Bent",
+      "Thomas D. Barrett",
+      "Juan Jose Garau Luis",
+      "Paul Duckworth"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08355v3",
+    "url": "http://arxiv.org/abs/2410.08355v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.19346v1",
+    "title": "Polynomial Regression as a Task for Understanding In-context Learning Through Finetuning and Alignment",
+    "abstract": "Simple function classes have emerged as toy problems to better understand in-context-learning in transformer-based architectures used for large language models. But previously proposed simple function classes like linear regression or multi-layer-perceptrons lack the structure required to explore things like prompting and alignment within models capable of in-context-learning. We propose univariate polynomial regression as a function class that is just rich enough to study prompting and alignment, while allowing us to visualize and understand what is going on clearly.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Max Wilcoxson",
+      "Morten Svendgård",
+      "Ria Doshi",
+      "Dylan Davis",
+      "Reya Vir",
+      "Anant Sahai"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.19346v1",
+    "url": "http://arxiv.org/abs/2407.19346v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the most informative observations for labeling in order to improve the performance of machine learning models. These approaches can be broadly divided into two categories: static pool-based and stream-based active learning. Pool-based active learning involves selecting a subset of observations from a closed pool of unlabeled data, and it has been the focus of many surveys and literature reviews. However, the growing availability of data streams has led to an increase in the number of approaches that focus on online active learning, which involves continuously selecting and labeling observations as they arrive in a stream. This work aims to provide an overview of the most recently proposed approaches for selecting the most informative observations from data streams in real time. We review the various techniques that have been proposed and discuss their strengths and limitations, as well as the challenges and opportunities that exist in this area of research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.08893v4",
+    "url": "http://arxiv.org/abs/2302.08893v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.05064v3",
+    "title": "Pretraining Decision Transformers with Reward Prediction for In-Context Multi-task Structured Bandit Learning",
+    "abstract": "We study learning to learn for the multi-task structured bandit problem where the goal is to learn a near-optimal algorithm that minimizes cumulative regret. The tasks share a common structure and an algorithm should exploit the shared structure to minimize the cumulative regret for an unseen but related test task. We use a transformer as a decision-making algorithm to learn this shared structure from data collected by a demonstrator on a set of training task instances. Our objective is to devise a training procedure such that the transformer will learn to outperform the demonstrator's learning algorithm on unseen test task instances. Prior work on pretraining decision transformers either requires privileged information like access to optimal arms or cannot outperform the demonstrator. Going beyond these approaches, we introduce a pre-training approach that trains a transformer network to learn a near-optimal policy in-context. This approach leverages the shared structure across tasks, does not require access to optimal actions, and can outperform the demonstrator. We validate these claims over a wide variety of structured bandit problems to show that our proposed solution is general and can quickly identify expected rewards on unseen test tasks to support effective exploration.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Subhojyoti Mukherjee",
+      "Josiah P. Hanna",
+      "Qiaomin Xie",
+      "Robert Nowak"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.05064v3",
+    "url": "http://arxiv.org/abs/2406.05064v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.07435v1",
+    "title": "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+    "abstract": "Model-agnostic meta-learning (MAML) is a meta-learning technique to train a model on a multitude of learning tasks in a way that primes the model for few-shot learning of new tasks. The MAML algorithm performs well on few-shot learning problems in classification, regression, and fine-tuning of policy gradients in reinforcement learning, but comes with the need for costly hyperparameter tuning for training stability. We address this shortcoming by introducing an extension to MAML, called Alpha MAML, to incorporate an online hyperparameter adaptation scheme that eliminates the need to tune meta-learning and learning rates. Our results with the Omniglot database demonstrate a substantial reduction in the need to tune MAML training hyperparameters and improvement to training stability with less sensitivity to hyperparameter choice.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Harkirat Singh Behl",
+      "Atılım Güneş Baydin",
+      "Philip H. S. Torr"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.07435v1",
+    "url": "http://arxiv.org/abs/1905.07435v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05461v2",
+    "title": "Learning Generative Models across Incomparable Spaces",
+    "abstract": "Generative Adversarial Networks have shown remarkable success in learning a distribution that faithfully recovers a reference distribution in its entirety. However, in some cases, we may want to only learn some aspects (e.g., cluster or manifold structure), while modifying others (e.g., style, orientation or dimension). In this work, we propose an approach to learn generative models across such incomparable spaces, and demonstrate how to steer the learned distribution towards target properties. A key component of our model is the Gromov-Wasserstein distance, a notion of discrepancy that compares distributions relationally rather than absolutely. While this framework subsumes current generative models in identically reproducing distributions, its inherent flexibility allows application to tasks in manifold learning, relational learning and cross-domain learning.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Charlotte Bunne",
+      "David Alvarez-Melis",
+      "Andreas Krause",
+      "Stefanie Jegelka"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05461v2",
+    "url": "http://arxiv.org/abs/1905.05461v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09921v4",
+    "title": "Meta-Learning Probabilistic Inference For Prediction",
+    "abstract": "This paper introduces a new framework for data efficient and versatile learning. Specifically: 1) We develop ML-PIP, a general framework for Meta-Learning approximate Probabilistic Inference for Prediction. ML-PIP extends existing probabilistic interpretations of meta-learning to cover a broad class of methods. 2) We introduce VERSA, an instance of the framework employing a flexible and versatile amortization network that takes few-shot learning datasets as inputs, with arbitrary numbers of shots, and outputs a distribution over task-specific parameters in a single forward pass. VERSA substitutes optimization at test time with forward passes through inference networks, amortizing the cost of inference and relieving the need for second derivatives during training. 3) We evaluate VERSA on benchmark datasets where the method sets new state-of-the-art results, handles arbitrary numbers of shots, and for classification, arbitrary numbers of classes at train and test time. The power of the approach is then demonstrated through a challenging few-shot ShapeNet view reconstruction task.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jonathan Gordon",
+      "John Bronskill",
+      "Matthias Bauer",
+      "Sebastian Nowozin",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09921v4",
+    "url": "http://arxiv.org/abs/1805.09921v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1705.05172v1",
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning efficiency. For the interactive ML and human-robot interaction (HRI) community, emotions can communicate state and enhance user investment. Lastly, it allows affective modelling (AM) researchers to investigate their emotion theories in a successful AI agent class. This survey provides background on emotion theory and RL. It systematically addresses 1) from what underlying dimensions (e.g., homeostasis, appraisal) emotions can be derived and how these can be modelled in RL-agents, 2) what types of emotions have been derived from these dimensions, and 3) how these emotions may either influence the learning efficiency of the agent or be useful as social signals. We also systematically compare evaluation criteria, and draw connections to important RL sub-domains like (intrinsic) motivation and model-based RL. In short, this survey provides both a practical overview for engineers wanting to implement emotions in their RL agents, and identifies challenges and directions for future emotion-RL research.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "doi": null,
+    "arxiv_id": "1705.05172v1",
+    "url": "http://arxiv.org/abs/1705.05172v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2204.12833v3",
+    "title": "Transfer Learning with Pre-trained Conditional Generative Models",
+    "abstract": "Transfer learning is crucial in training deep neural networks on new target tasks. Current transfer learning methods always assume at least one of (i) source and target task label spaces overlap, (ii) source datasets are available, and (iii) target network architectures are consistent with source ones. However, holding these assumptions is difficult in practical settings because the target task rarely has the same labels as the source task, the source dataset access is restricted due to storage costs and privacy, and the target architecture is often specialized to each task. To transfer source knowledge without these assumptions, we propose a transfer learning method that uses deep generative models and is composed of the following two stages: pseudo pre-training (PP) and pseudo semi-supervised learning (P-SSL). PP trains a target architecture with an artificial dataset synthesized by using conditional source generative models. P-SSL applies SSL algorithms to labeled target data and unlabeled pseudo samples, which are generated by cascading the source classifier and generative models to condition them with target samples. Our experimental results indicate that our method can outperform the baselines of scratch training and knowledge distillation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shin'ya Yamaguchi",
+      "Sekitoshi Kanai",
+      "Atsutoshi Kumagai",
+      "Daiki Chijiwa",
+      "Hisashi Kashima"
+    ],
+    "doi": null,
+    "arxiv_id": "2204.12833v3",
+    "url": "http://arxiv.org/abs/2204.12833v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.04458v2",
+    "title": "General-Purpose In-Context Learning by Meta-Learning Transformers",
+    "abstract": "Modern machine learning requires system designers to specify aspects of the learning pipeline, such as losses, architectures, and optimizers. Meta-learning, or learning-to-learn, instead aims to learn those aspects, and promises to unlock greater capabilities with less manual effort. One particularly ambitious goal of meta-learning is to train general-purpose in-context learning algorithms from scratch, using only black-box models with minimal inductive bias. Such a model takes in training data, and produces test-set predictions across a wide range of problems, without any explicit definition of an inference model, training loss, or optimization algorithm. In this paper we show that Transformers and other black-box models can be meta-trained to act as general-purpose in-context learners. We characterize transitions between algorithms that generalize, algorithms that memorize, and algorithms that fail to meta-train at all, induced by changes in model size, number of tasks, and meta-optimization. We further show that the capabilities of meta-trained algorithms are bottlenecked by the accessible state size (memory) determining the next prediction, unlike standard models which are thought to be bottlenecked by parameter count. Finally, we propose practical interventions such as biasing the training distribution that improve the meta-training and meta-generalization of general-purpose in-context learning algorithms.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Louis Kirsch",
+      "James Harrison",
+      "Jascha Sohl-Dickstein",
+      "Luke Metz"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.04458v2",
+    "url": "http://arxiv.org/abs/2212.04458v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the context of machine learning for official statistics. This paper gives an overview of the main risks, liabilities, and uncertainties associated with changing data sources in the context of machine learning for official statistics. We provide a checklist of the most prevalent origins and causes of changing data sources; not only on a technical level but also regarding ownership, ethics, regulation, and public perception. Next, we highlight the repercussions of changing data sources on statistical reporting. These include technical effects such as concept drift, bias, availability, validity, accuracy and completeness, but also the neutrality and potential discontinuation of the statistical offering. We offer a few important precautionary measures, such as enhancing robustness in both data sourcing and statistical techniques, and thorough monitoring. In doing so, machine learning-based official statistics can maintain integrity, reliability, consistency, and relevance in policy-making, decision-making, and public discourse.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.04338v1",
+    "url": "http://arxiv.org/abs/2306.04338v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.09429v2",
+    "title": "Federated Learning with Superquantile Aggregation for Heterogeneous Data",
+    "abstract": "We present a federated learning framework that is designed to robustly deliver good predictive performance across individual clients with heterogeneous data. The proposed approach hinges upon a superquantile-based learning objective that captures the tail statistics of the error distribution over heterogeneous clients. We present a stochastic training algorithm that interleaves differentially private client filtering with federated averaging steps. We prove finite time convergence guarantees for the algorithm: $O(1/\\sqrt{T})$ in the nonconvex case in $T$ communication rounds and $O(\\exp(-T/κ^{3/2}) + κ/T)$ in the strongly convex case with local condition number $κ$. Experimental results on benchmark datasets for federated learning demonstrate that our approach is competitive with classical ones in terms of average error and outperforms them in terms of tail statistics of the error.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Krishna Pillutla",
+      "Yassine Laguel",
+      "Jérôme Malick",
+      "Zaid Harchaoui"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.09429v2",
+    "url": "http://arxiv.org/abs/2112.09429v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.03905v2",
+    "title": "ChainerRL: A Deep Reinforcement Learning Library",
+    "abstract": "In this paper, we introduce ChainerRL, an open-source deep reinforcement learning (DRL) library built using Python and the Chainer deep learning framework. ChainerRL implements a comprehensive set of DRL algorithms and techniques drawn from state-of-the-art research in the field. To foster reproducible research, and for instructional purposes, ChainerRL provides scripts that closely replicate the original papers' experimental settings and reproduce published benchmark results for several algorithms. Lastly, ChainerRL offers a visualization tool that enables the qualitative inspection of trained agents. The ChainerRL source code can be found on GitHub: https://github.com/chainer/chainerrl.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Yasuhiro Fujita",
+      "Prabhat Nagarajan",
+      "Toshiki Kataoka",
+      "Takahiro Ishikawa"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.03905v2",
+    "url": "http://arxiv.org/abs/1912.03905v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.04881v3",
+    "title": "Learning Flat Latent Manifolds with VAEs",
+    "abstract": "Measuring the similarity between data points often requires domain knowledge, which can in parts be compensated by relying on unsupervised methods such as latent-variable models, where similarity/distance is estimated in a more compact latent space. Prevalent is the use of the Euclidean metric, which has the drawback of ignoring information about similarity of data stored in the decoder, as captured by the framework of Riemannian geometry. We propose an extension to the framework of variational auto-encoders allows learning flat latent manifolds, where the Euclidean metric is a proxy for the similarity between data points. This is achieved by defining the latent space as a Riemannian manifold and by regularising the metric tensor to be a scaled identity matrix. Additionally, we replace the compact prior typically used in variational auto-encoders with a recently presented, more expressive hierarchical one---and formulate the learning problem as a constrained optimisation problem. We evaluate our method on a range of data-sets, including a video-tracking benchmark, where the performance of our unsupervised approach nears that of state-of-the-art supervised approaches, while retaining the computational efficiency of straight-line-based approaches.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Nutan Chen",
+      "Alexej Klushyn",
+      "Francesco Ferroni",
+      "Justin Bayer",
+      "Patrick van der Smagt"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.04881v3",
+    "url": "http://arxiv.org/abs/2002.04881v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.12276v3",
+    "title": "Emergence and Effectiveness of Task Vectors in In-Context Learning: An Encoder Decoder Perspective",
+    "abstract": "Autoregressive transformers exhibit adaptive learning through in-context learning (ICL), which begs the question of how. Prior works have shown that transformers represent the ICL tasks as vectors in their representations. In this paper, we leverage the encoding-decoding framework to study how transformers form task vectors during pretraining and how their task encoding quality predicts ICL task performance. On synthetic ICL tasks, we analyze the training dynamics of a small transformer and report the coupled emergence of task encoding and decoding. As the model learns to encode different latent tasks (e.g., \"Finding the first noun in a sentence.\") into distinct, separable representations, it concurrently builds conditional decoding algorithms and improves its ICL performance. We validate this phenomenon across pretrained models of varying scales (Gemma-2 2B/9B/27B, Llama-3.1 8B/70B) and over the course of pretraining in OLMo-7B. Further, we demonstrate that the quality of task encoding inferred from representations predicts ICL performance, and that, surprisingly, finetuning the earlier layers can improve the task encoding and performance more than finetuning the latter layers. Our empirical insights shed light into better understanding the success and failure modes of large language models via their representations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Seungwook Han",
+      "Jinyeop Song",
+      "Jeff Gore",
+      "Pulkit Agrawal"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.12276v3",
+    "url": "http://arxiv.org/abs/2412.12276v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1510.08231v3",
+    "title": "Operator-valued Kernels for Learning from Functional Response Data",
+    "abstract": "In this paper we consider the problems of supervised classification and regression in the case where attributes and labels are functions: a data is represented by a set of functions, and the label is also a function. We focus on the use of reproducing kernel Hilbert space theory to learn from such functional data. Basic concepts and properties of kernel-based learning are extended to include the estimation of function-valued functions. In this setting, the representer theorem is restated, a set of rigorously defined infinite-dimensional operator-valued kernels that can be valuably applied when the data are functions is described, and a learning algorithm for nonlinear functional data analysis is introduced. The methodology is illustrated through speech and audio signal processing experiments.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Hachem Kadri",
+      "Emmanuel Duflos",
+      "Philippe Preux",
+      "Stéphane Canu",
+      "Alain Rakotomamonjy",
+      "Julien Audiffren"
+    ],
+    "doi": null,
+    "arxiv_id": "1510.08231v3",
+    "url": "http://arxiv.org/abs/1510.08231v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.11575v2",
+    "title": "In-Context Learning for Seismic Data Processing",
+    "abstract": "Seismic processing transforms raw data into subsurface images essential for geophysical applications. Traditional methods face challenges, such as noisy data, and manual parameter tuning, among others. Recently deep learning approaches have proposed alternative solutions to some of these problems. However, important challenges of existing deep learning approaches are spatially inconsistent results across neighboring seismic gathers and lack of user-control. We address these limitations by introducing ContextSeisNet, an in-context learning model, to seismic demultiple processing. Our approach conditions predictions on a support set of spatially related example pairs: neighboring common-depth point gathers from the same seismic line and their corresponding labels. This allows the model to learn task-specific processing behavior at inference time by observing how similar gathers should be processed, without any retraining. This method provides both flexibility through user-defined examples and improved lateral consistency across seismic lines. On synthetic data, ContextSeisNet outperforms a U-Net baseline quantitatively and demonstrates enhanced spatial coherence between neighboring gathers. On field data, our model achieves superior lateral consistency compared to both traditional Radon demultiple and the U-Net baseline. Relative to the U-Net, ContextSeisNet also delivers improved near-offset performance and more complete multiple removal. Notably, ContextSeisNet achieves comparable field data performance despite being trained on 90% less data, demonstrating substantial data efficiency. These results establish ContextSeisNet as a practical approach for spatially consistent seismic demultiple with potential applicability to other seismic processing tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Fabian Fuchs",
+      "Mario Ruben Fernandez",
+      "Norman Ettrich",
+      "Janis Keuper"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.11575v2",
+    "url": "http://arxiv.org/abs/2512.11575v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1812.01662v1",
+    "title": "Feed-Forward Neural Networks Need Inductive Bias to Learn Equality Relations",
+    "abstract": "Basic binary relations such as equality and inequality are fundamental to relational data structures. Neural networks should learn such relations and generalise to new unseen data. We show in this study, however, that this generalisation fails with standard feed-forward networks on binary vectors. Even when trained with maximal training data, standard networks do not reliably detect equality.We introduce differential rectifier (DR) units that we add to the network in different configurations. The DR units create an inductive bias in the networks, so that they do learn to generalise, even from small numbers of examples and we have not found any negative effect of their inclusion in the network. Given the fundamental nature of these relations, we hypothesize that feed-forward neural network learning benefits from inductive bias in other relations as well. Consequently, the further development of suitable inductive biases will be beneficial to many tasks in relational learning with neural networks.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Tillman Weyde",
+      "Radha Manisha Kopparti"
+    ],
+    "doi": null,
+    "arxiv_id": "1812.01662v1",
+    "url": "http://arxiv.org/abs/1812.01662v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cs/0212038v1",
+    "title": "The Identification of Context-Sensitive Features: A Formal Definition of Context for Concept Learning",
+    "abstract": "A large body of research in machine learning is concerned with supervised learning from examples. The examples are typically represented as vectors in a multi-dimensional feature space (also known as attribute-value descriptions). A teacher partitions a set of training examples into a finite number of classes. The task of the learning algorithm is to induce a concept from the training examples. In this paper, we formally distinguish three types of features: primary, contextual, and irrelevant features. We also formally define what it means for one feature to be context-sensitive to another feature. Context-sensitive features complicate the task of the learner and potentially impair the learner's performance. Our formal definitions make it possible for a learner to automatically identify context-sensitive features. After context-sensitive features have been identified, there are several strategies that the learner can employ for managing the features; however, a discussion of these strategies is outside of the scope of this paper. The formal definitions presented here correct a flaw in previously proposed definitions. We discuss the relationship between our work and a formal definition of relevance.",
+    "year": 2002,
+    "venue": null,
+    "authors": [
+      "Peter D. Turney"
+    ],
+    "doi": null,
+    "arxiv_id": "0212038v1",
+    "url": "http://arxiv.org/abs/cs/0212038v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.12293v3",
+    "title": "In-Context Learning of Linear Systems: Generalization Theory and Applications to Operator Learning",
+    "abstract": "We study theoretical guarantees for solving linear systems in-context using a linear transformer architecture. For in-domain generalization, we provide neural scaling laws that bound the generalization error in terms of the number of tasks and sizes of samples used in training and inference. For out-of-domain generalization, we find that the behavior of trained transformers under task distribution shifts depends crucially on the distribution of the tasks seen during training. We introduce a novel notion of task diversity and show that it defines a necessary and sufficient condition for pre-trained transformers generalize under task distribution shifts. We also explore applications of learning linear systems in-context, such as to in-context operator learning for PDEs. Finally, we provide some numerical experiments to validate the established theory.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Frank Cole",
+      "Yulong Lu",
+      "Wuzhe Xu",
+      "Tianhao Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.12293v3",
+    "url": "http://arxiv.org/abs/2409.12293v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.05933v1",
+    "title": "Temporal Supervised Contrastive Learning for Modeling Patient Risk Progression",
+    "abstract": "We consider the problem of predicting how the likelihood of an outcome of interest for a patient changes over time as we observe more of the patient data. To solve this problem, we propose a supervised contrastive learning framework that learns an embedding representation for each time step of a patient time series. Our framework learns the embedding space to have the following properties: (1) nearby points in the embedding space have similar predicted class probabilities, (2) adjacent time steps of the same time series map to nearby points in the embedding space, and (3) time steps with very different raw feature vectors map to far apart regions of the embedding space. To achieve property (3), we employ a nearest neighbor pairing mechanism in the raw feature space. This mechanism also serves as an alternative to data augmentation, a key ingredient of contrastive learning, which lacks a standard procedure that is adequately realistic for clinical tabular data, to our knowledge. We demonstrate that our approach outperforms state-of-the-art baselines in predicting mortality of septic patients (MIMIC-III dataset) and tracking progression of cognitive impairment (ADNI dataset). Our method also consistently recovers the correct synthetic dataset embedding structure across experiments, a feat not achieved by baselines. Our ablation experiments show the pivotal role of our nearest neighbor pairing.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shahriar Noroozizadeh",
+      "Jeremy C. Weiss",
+      "George H. Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.05933v1",
+    "url": "http://arxiv.org/abs/2312.05933v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.13613v2",
+    "title": "Regression Networks for Meta-Learning Few-Shot Classification",
+    "abstract": "We propose regression networks for the problem of few-shot classification, where a classifier must generalize to new classes not seen in the training set, given only a small number of examples of each class. In high dimensional embedding spaces the direction of data generally contains richer information than magnitude. Next to this, state-of-the-art few-shot metric methods that compare distances with aggregated class representations, have shown superior performance. Combining these two insights, we propose to meta-learn classification of embedded points by regressing the closest approximation in every class subspace while using the regression error as a distance metric. Similarly to recent approaches for few-shot learning, regression networks reflect a simple inductive bias that is beneficial in this limited-data regime and they achieve excellent results, especially when more aggregate class representations can be formed with multiple shots.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Arnout Devos",
+      "Matthias Grossglauser"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.13613v2",
+    "url": "http://arxiv.org/abs/1905.13613v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1812.09225v4",
+    "title": "Learning Representations from Dendrograms",
+    "abstract": "We propose unsupervised representation learning and feature extraction from dendrograms. The commonly used Minimax distance measures correspond to building a dendrogram with single linkage criterion, with defining specific forms of a level function and a distance function over that. Therefore, we extend this method to arbitrary dendrograms. We develop a generalized framework wherein different distance measures and representations can be inferred from different types of dendrograms, level functions and distance functions. Via an appropriate embedding, we compute a vector-based representation of the inferred distances, in order to enable many numerical machine learning algorithms to employ such distances. Then, to address the model selection problem, we study the aggregation of different dendrogram-based distances respectively in solution space and in representation space in the spirit of deep representations. In the first approach, for example for the clustering problem, we build a graph with positive and negative edge weights according to the consistency of the clustering labels of different objects among different solutions, in the context of ensemble methods. Then, we use an efficient variant of correlation clustering to produce the final clusters. In the second approach, we investigate the combination of different distances and features sequentially in the spirit of multi-layered architectures to obtain the final features. Finally, we demonstrate the effectiveness of our approach via several numerical studies.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Morteza Haghir Chehreghani",
+      "Mostafa Haghir Chehreghani"
+    ],
+    "doi": null,
+    "arxiv_id": "1812.09225v4",
+    "url": "http://arxiv.org/abs/1812.09225v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2007.01135v1",
+    "title": "Student-Teacher Curriculum Learning via Reinforcement Learning: Predicting Hospital Inpatient Admission Location",
+    "abstract": "Accurate and reliable prediction of hospital admission location is important due to resource-constraints and space availability in a clinical setting, particularly when dealing with patients who come from the emergency department. In this work we propose a student-teacher network via reinforcement learning to deal with this specific problem. A representation of the weights of the student network is treated as the state and is fed as an input to the teacher network. The teacher network's action is to select the most appropriate batch of data to train the student network on from a training set sorted according to entropy. By validating on three datasets, not only do we show that our approach outperforms state-of-the-art methods on tabular data and performs competitively on image recognition, but also that novel curricula are learned by the teacher network. We demonstrate experimentally that the teacher network can actively learn about the student network and guide it to achieve better performance than if trained alone.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Rasheed el-Bouri",
+      "David Eyre",
+      "Peter Watkinson",
+      "Tingting Zhu",
+      "David Clifton"
+    ],
+    "doi": null,
+    "arxiv_id": "2007.01135v1",
+    "url": "http://arxiv.org/abs/2007.01135v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.23450v2",
+    "title": "Return Augmented Decision Transformer for Off-Dynamics Reinforcement Learning",
+    "abstract": "We study offline off-dynamics reinforcement learning (RL) to utilize data from an easily accessible source domain to enhance policy learning in a target domain with limited data. Our approach centers on return-conditioned supervised learning (RCSL), particularly focusing on Decision Transformer (DT) type frameworks, which can predict actions conditioned on desired return guidance and complete trajectory history. Previous works address the dynamics shift problem by augmenting the reward in the trajectory from the source domain to match the optimal trajectory in the target domain. However, this strategy can not be directly applicable in RCSL owing to (1) the unique form of the RCSL policy class, which explicitly depends on the return, and (2) the absence of a straightforward representation of the optimal trajectory distribution. We propose the Return Augmented (REAG) method for DT type frameworks, where we augment the return in the source domain by aligning its distribution with that in the target domain. We provide the theoretical analysis demonstrating that the RCSL policy learned from REAG achieves the same level of suboptimality as would be obtained without a dynamics shift. We introduce two practical implementations REAG$_\\text{Dara}^{*}$ and REAG$_\\text{MV}^{*}$ respectively. Thorough experiments on D4RL datasets and various DT-type baselines demonstrate that our methods consistently enhance the performance of DT type frameworks in off-dynamics RL.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ruhan Wang",
+      "Yu Yang",
+      "Zhishuai Liu",
+      "Dongruo Zhou",
+      "Pan Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.23450v2",
+    "url": "http://arxiv.org/abs/2410.23450v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.12216v3",
+    "title": "Energy-Based Models for Continual Learning",
+    "abstract": "We motivate Energy-Based Models (EBMs) as a promising model class for continual learning problems. Instead of tackling continual learning via the use of external memory, growing models, or regularization, EBMs change the underlying training objective to cause less interference with previously learned information. Our proposed version of EBMs for continual learning is simple, efficient, and outperforms baseline methods by a large margin on several benchmarks. Moreover, our proposed contrastive divergence-based training objective can be combined with other continual learning methods, resulting in substantial boosts in their performance. We further show that EBMs are adaptable to a more general continual learning setting where the data distribution changes without the notion of explicitly delineated tasks. These observations point towards EBMs as a useful building block for future continual learning methods.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Shuang Li",
+      "Yilun Du",
+      "Gido M. van de Ven",
+      "Igor Mordatch"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.12216v3",
+    "url": "http://arxiv.org/abs/2011.12216v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.00793v1",
+    "title": "Is In-Context Learning in Large Language Models Bayesian? A Martingale Perspective",
+    "abstract": "In-context learning (ICL) has emerged as a particularly remarkable characteristic of Large Language Models (LLM): given a pretrained LLM and an observed dataset, LLMs can make predictions for new data points from the same distribution without fine-tuning. Numerous works have postulated ICL as approximately Bayesian inference, rendering this a natural hypothesis. In this work, we analyse this hypothesis from a new angle through the martingale property, a fundamental requirement of a Bayesian learning system for exchangeable data. We show that the martingale property is a necessary condition for unambiguous predictions in such scenarios, and enables a principled, decomposed notion of uncertainty vital in trustworthy, safety-critical systems. We derive actionable checks with corresponding theory and test statistics which must hold if the martingale property is satisfied. We also examine if uncertainty in LLMs decreases as expected in Bayesian learning when more data is observed. In three experiments, we provide evidence for violations of the martingale property, and deviations from a Bayesian scaling behaviour of uncertainty, falsifying the hypothesis that ICL is Bayesian.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Fabian Falck",
+      "Ziyu Wang",
+      "Chris Holmes"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.00793v1",
+    "url": "http://arxiv.org/abs/2406.00793v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12808v2",
+    "title": "Open-Ended Learning Leads to Generally Capable Agents",
+    "abstract": "In this work we create agents that can perform well beyond a single, individual task, that exhibit much wider generalisation of behaviour to a massive, rich space of challenges. We define a universe of tasks within an environment domain and demonstrate the ability to train agents that are generally capable across this vast space and beyond. The environment is natively multi-agent, spanning the continuum of competitive, cooperative, and independent games, which are situated within procedurally generated physical 3D worlds. The resulting space is exceptionally diverse in terms of the challenges posed to agents, and as such, even measuring the learning progress of an agent is an open research problem. We propose an iterative notion of improvement between successive generations of agents, rather than seeking to maximise a singular objective, allowing us to quantify progress despite tasks being incomparable in terms of achievable rewards. We show that through constructing an open-ended learning process, which dynamically changes the training task distributions and training objectives such that the agent never stops learning, we achieve consistent learning of new behaviours. The resulting agent is able to score reward in every one of our humanly solvable evaluation levels, with behaviour generalising to many held-out points in the universe of tasks. Examples of this zero-shot generalisation include good performance on Hide and Seek, Capture the Flag, and Tag. Through analysis and hand-authored probe tasks we characterise the behaviour of our agent, and find interesting emergent heuristic behaviours such as trial-and-error experimentation, simple tool use, option switching, and cooperation. Finally, we demonstrate that the general capabilities of this agent could unlock larger scale transfer of behaviour through cheap finetuning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Open Ended Learning Team",
+      "Adam Stooke",
+      "Anuj Mahajan",
+      "Catarina Barros",
+      "Charlie Deck",
+      "Jakob Bauer",
+      "Jakub Sygnowski",
+      "Maja Trebacz",
+      "Max Jaderberg",
+      "Michael Mathieu",
+      "Nat McAleese",
+      "Nathalie Bradley-Schmieg",
+      "Nathaniel Wong",
+      "Nicolas Porcel",
+      "Roberta Raileanu",
+      "Steph Hughes-Fitt",
+      "Valentin Dalibard",
+      "Wojciech Marian Czarnecki"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12808v2",
+    "url": "http://arxiv.org/abs/2107.12808v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

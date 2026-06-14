@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:42279817",
+  "title": "Dual-Guided Semi-Supervised Semantic Segmentation for Citrus Quality Evaluation.",
+  "abstract": "Automated defect detection in precision agriculture serves as a critical technology for enhancing the quality of agricultural products. Although supervised-only semantic segmentation has demonstrated remarkable performance in citrus surface defect detection, it relies heavily on training with large-scale labeled data, which results in prohibitive acquisition costs. Semi-supervised learning mitigates reliance on labeled data by generating pseudo-labels. However, existing semi-supervised segmentation methods still face challenges. On the one hand, the instability of pseudo-labels and the propagation of noise can mislead the training of semi-supervised models. On the other hand, due to the lack of semantic constraints in feature learning, models often suffer from insufficient feature discriminability when handling complex samples, such as citrus surface defects characterized by similar textures and blurred boundaries. Therefore, this study proposes UP-ETS, a dual-guided semi-supervised semantic segmentation model based on the Mean Teacher-Student framework, specifically designed for the segmentation of complex citrus surface defects. UP-ETS employs Uncertainty Estimation (UE) based on Kullback-Leibler (KL) divergence to quantify the prediction discrepancy between the teacher and student models on blurred and ambiguous pixels. This mechanism guides the model to dynamically adjust weights, thereby reducing noise propagation and enhancing pseudo-label stability under complex citrus surface textures. Prototype Contrastive Learning (PCL) is utilized to align pixel-level features of difficult samples with class prototypes, optimizing the feature discriminability for complex citrus surfaces. Experimental results demonstrate that the UP-ETS model exhibits superior semi-supervised segmentation performance. Notably, at a labeled data ratio of only 1/16, the dice improved from 85.57% to 87.76% compared to the supervised-only baseline. Furthermore, the model shows significant performance enhancements in segmenting difficult samples, such as small targets, complex boundaries, and blurred regions. The results of ablation studies and t-SNE visualization prove the effectiveness of the proposed UE and PCL. These two methods synergistically guide the model to construct a feature space that is better structured and highly discriminative. Furthermore, UP-ETS outperforms various representative semi-supervised segmentation models in terms of segmentation performance, parameters, and inference speed. In cross-dataset validation, the model exhibits robust generalization capabilities, achieving performance comparable to supervised-only methods trained on the full augmented dataset. Consequently, the framework introduced in this study effectively mitigates the heavy dependency on annotated datasets, providing significant practical value for agricultural deployment.",
+  "year": 2026,
+  "venue": "Foods (Basel, Switzerland)",
+  "authors": [
+    "Xufeng Xu",
+    "Ruokai Guo",
+    "Kai Guo",
+    "Zetong Li",
+    "Zichao Wei",
+    "Xiuqin Rao"
+  ],
+  "doi": "10.3390/foods15112029",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42279817/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42279817"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:41181566",
+  "title": "Ensemble learning for improved sentiment analysis in doctor-patient communication.",
+  "abstract": "To fill the benchmarking gap in clinician-patient sentiment analysis, we compare deep learning, transformer, and ensemble models for three-class (low/medium/high) sentiment classification in doctor-patient consultations. We used a publicly available dataset of 3325 anonymized doctor-patient consultations from the Hugging Face repository (mahfoos/Patient-Doctor-Conversation) labeled as low, medium, or high severity. Preprocessing included text cleaning, tokenization, and padding; class balancing was applied only within the training split of each fold. Models evaluated were long short-term memory (LSTM), bidirectional LSTM (BiLSTM), convolutional neural networks (CNN), CNN-LSTM, and bidirectional encoder representations from transformers (BERT); an ensemble (hard voting over Logistic Regression, Random Forest, and Support Vector Classifier (SVC)) was also tested. Evaluation used stratified five-fold cross-validation, with metrics reported as mean ± SD across outer test folds (accuracy; macro-averaged precision/recall/F1). Interpretability was examined via BERT attention and feature attributions. The ensemble achieved the highest accuracy (75.5 ± 0.5), outperforming BERT (66.98 ± 0.6), CNN-LSTM (65.68 ± 0.9), CNN (64.17 ± 0.8), BiLSTM (64.82 ± 0.7), and LSTM (58.66 ± 0.19). Class-wise analysis showed robust detection of high-severity interactions (e.g. ensemble F1 = 90.8 ± 1.3), while low-severity remained most challenging; the ensemble improved class 0 recall (58.7 ± 1.0), and BERT provided the highest class 0 precision (65.5 ± 1.0). Under stratified five-fold cross-validation, ensemble learning delivered the strongest and most balanced performance for three-class sentiment classification of clinician-patient dialogue, while transformers offered complementary precision on difficult cases. Attention- and feature-attribution analyses improved transparency, supporting clinical interpretability. Future work should scale to larger, multimodal (text/audio/vision) and multilingual datasets, and develop privacy-preserving, lightweight models for real-time deployment in clinical settings.",
+  "year": 2025,
+  "venue": "Digital health",
+  "authors": [
+    "Yufan Ge",
+    "Lingling Dai",
+    "Bingding Huang",
+    "Rashid Khan"
+  ],
+  "doi": "10.1177/20552076251393338",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41181566/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41181566"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:41349436",
+  "title": "TiDE-Net: A time-guided dual-encoder ResUNet for Positron Emission Tomography (PET) image denoising.",
+  "abstract": "Positron emission tomography (PET) imaging enables quantitative assessment of metabolic activity in the human body and is widely used for clinical diagnosis and monitoring treatment. PET imaging, however, is inherently affected by noise due to a number of factors including radioactive decay from the injected radiotracer, the amount of radiotracer injected, attenuation of photons, patient characteristics (e.g Body Mass Index), the underlying condition and the characteristics of the instrumentation employed (the type of PET-CT scanner). Low-dose imaging protocols have been in vogue to minimize patient radiation exposure. As such, extensive research has been focused on reducing noise levels while minimizing the administered radiotracer dose. State-of-the-art denoising methods are trained on data with fixed noise levels, i.e., noise with consistent statistical properties across all samples. This assumption limits their ability to generalize to real-world PET imaging scenarios, where noise levels differ from those seen during training for the reason outlined above. We propose a time-guided dual-encoder ResUNet (TiDE-Net) to remove reliance on fixed noise levels at both training and inference stages for PET image denoising. TiDE-Net incorporates a Dual-Encoder with Complementary Attention (DECA) to extract global context and local structure, enhancing feature representation under varying noise conditions. To enhance adaptability, we introduce a Time-Guided Mechanism (TGM), where a scalar timestep variable represents and controls the level of simulated noise, where higher timesteps correspond to higher noise levels. By simulating varying noise levels from standard-dose PET (stndPET) data, TiDE-Net learns a continuous representation of noise characteristics. In our experiments, TiDE-Net outperformed state-of-the-art comparison methods on two benchmark datasets (664 patient studies from Siemens Biograph Vision Quadra and United Imaging uEXPLORER total body scanners), across all noise levels. Ablation studies further demonstrated that our proposed TGM and DECA modules markedly improved performance, particularly on dose levels not seen during training. Clinical evaluation through SUV analysis further demonstrates the model's ability to preserve quantitative accuracy across different regions. Our experiments demonstrate that conditioning on a timestep enables TiDE-Net to generalize across unseen noise levels, achieving consistent denoising performance across different noise conditions.",
+  "year": 2026,
+  "venue": "Computer methods and programs in biomedicine",
+  "authors": [
+    "Boyuan Tan",
+    "Yuxin Xue",
+    "Lei Bi",
+    "Michael Fulham",
+    "Jinman Kim"
+  ],
+  "doi": "10.1016/j.cmpb.2025.109200",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41349436/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41349436"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:37149274",
+  "title": "A method for extracting tumor events from clinical CT examination reports.",
+  "abstract": "Accurate and efficient extraction of key information related to diseases from medical examination reports, such as X-ray and ultrasound images, CT scans, and others, is crucial for accurate diagnosis and treatment. These reports provide a detailed record of a patient's health condition and are an important part of the clinical examination process. By organizing this information in a structured way, doctors can more easily review and analyze the data, leading to better patient care. In this paper, we introduce a new technique for extracting useful information from unstructured clinical text examination reports, which we refer to as a medical event extraction (EE) task. Our approach is based on Machine Reading Comprehension (MRC) and involves two sub-tasks: Question Answerability Judgment (QAJ) and Span Selection (SS). We use BERT to build a question answerability discriminator (Judger) that determines whether a reading comprehension question can be answered or not, thereby avoiding the extraction of arguments from unanswerable questions. The SS sub-task first obtains the encoding of each word in the medical text from the final layer of BERT's Transformer, then utilizes the attention mechanism to identify important information related to the answer from these word encodings. This information is then input into a bidirectional LSTM (BiLSTM) module to obtain a global representation of the text, which is used, along with the softmax function, to predict the span of the answer (i.e., the start and end positions of the answer in the text report). We use interpretable methods to calculate the Jensen-Shannon Divergence (JSD) score between various layers of the network and confirm that our model has strong word representation capabilities, enabling it to effectively extract contextual information from medical reports. Our experiments demonstrate that our method outperforms existing medical event extraction methods, achieving state-of-the-art results with a notable F1 score.",
+  "year": 2023,
+  "venue": "Journal of biomedical informatics",
+  "authors": [
+    "Qiao Pan",
+    "Feifan Zhao",
+    "Xiaoling Chen",
+    "Dehua Chen"
+  ],
+  "doi": "10.1016/j.jbi.2023.104371",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37149274/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "37149274"
+  }
+}

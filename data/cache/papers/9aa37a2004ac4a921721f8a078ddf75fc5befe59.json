@@ -1,0 +1,58 @@
+{
+  "paper_id": "https://openalex.org/W4387114247",
+  "title": "Efficient Post-training Quantization with FP8 Formats",
+  "abstract": "Recent advances in deep learning methods such as LLMs and Diffusion models have created a need for improved quantization methods that can meet the computational demands of these modern architectures while maintaining accuracy. Towards this goal, we study the advantages of FP8 data formats for post-training quantization across 75 unique network architectures covering a wide range of tasks, including machine translation, language modeling, text generation, image classification, generation, and segmentation. We examine three different FP8 representations (E5M2, E4M3, and E3M4) to study the effects of varying degrees of trade-off between dynamic range and precision on model accuracy. Based on our extensive study, we developed a quantization workflow that generalizes across different network architectures. Our empirical results show that FP8 formats outperform INT8 in multiple aspects, including workload coverage (92.64% vs. 65.87%), model accuracy and suitability for a broader range of operations. Furthermore, our findings suggest that E4M3 is better suited for NLP models, whereas E3M4 performs marginally better than E4M3 on computer vision tasks. The code is publicly available on Intel Neural Compressor: https://github.com/intel/neural-compressor.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Haihao Shen",
+    "Naveen Mellempudi",
+    "Xin He",
+    "Qun Gao",
+    "Chang Wang",
+    "Mengni Wang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2309.14592",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2309.14592",
+  "citation_count": 4,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Quantization (signal processing)",
+      "Workload",
+      "Artificial neural network",
+      "Artificial intelligence",
+      "Machine translation",
+      "Workflow",
+      "Deep learning",
+      "Machine learning",
+      "Segmentation",
+      "Computer engineering",
+      "Algorithm",
+      "Database",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2000785801",
+      "https://openalex.org/W986318368",
+      "https://openalex.org/W2384410913",
+      "https://openalex.org/W2352878646",
+      "https://openalex.org/W2004734601",
+      "https://openalex.org/W3204400881",
+      "https://openalex.org/W3214410901",
+      "https://openalex.org/W3204296682",
+      "https://openalex.org/W3183118997",
+      "https://openalex.org/W2917767146"
+    ]
+  }
+}

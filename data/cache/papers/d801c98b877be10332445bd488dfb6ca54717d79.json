@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2009.11789v2",
+  "title": "A Case for Partitioned Bloom Filters",
+  "abstract": "In a partitioned Bloom Filter the $m$ bit vector is split into $k$ disjoint $m/k$ sized parts, one per hash function. Contrary to hardware designs, where they prevail, software implementations mostly adopt standard Bloom filters, considering partitioned filters slightly worse, due to the slightly larger false positive rate (FPR). In this paper, by performing an in-depth analysis, first we show that the FPR advantage of standard Bloom filters is smaller than thought; more importantly, by studying the per-element FPR, we show that standard Bloom filters have weak spots in the domain: elements which will be tested as false positives much more frequently than expected. This is relevant in scenarios where an element is tested against many filters, e.g., in packet forwarding. Moreover, standard Bloom filters are prone to exhibit extremely weak spots if naive double hashing is used, something occurring in several, even mainstream, libraries. Partitioned Bloom filters exhibit a uniform distribution of the FPR over the domain and are robust to the naive use of double hashing, having no weak spots. Finally, by surveying several usages other than testing set membership, we point out the many advantages of having disjoint parts: they can be individually sampled, extracted, added or retired, leading to superior designs for, e.g., SIMD usage, size reduction, test of set disjointness, or duplicate detection in streams. Partitioned Bloom filters are better, and should replace the standard form, both in general purpose libraries and as the base for novel designs.",
+  "year": 2020,
+  "venue": null,
+  "authors": [
+    "Paulo Sérgio Almeida"
+  ],
+  "doi": null,
+  "arxiv_id": "2009.11789v2",
+  "url": "http://arxiv.org/abs/2009.11789v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

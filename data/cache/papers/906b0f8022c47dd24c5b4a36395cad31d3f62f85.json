@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2408.03099v2",
+  "title": "Topic Modeling with Fine-tuning LLMs and Bag of Sentences",
+  "abstract": "Large language models (LLMs) are increasingly used for topic modeling, outperforming classical topic models such as LDA. Commonly, pre-trained LLM encoders such as BERT are used out-of-the-box despite the fact that fine-tuning is known to improve LLMs considerably. The challenge lies in obtaining a suitable labeled dataset for fine-tuning. In this paper, we build on the recent idea of using bags of sentences as the elementary unit for computing topics. Based on this idea, we derive an approach called FT-Topic to perform unsupervised fine-tuning, relying primarily on two steps for constructing a training dataset in an automatic fashion. First, a heuristic method identifies pairs of sentence groups that are assumed to belong either to the same topic or to different topics. Second, we remove sentence pairs that are likely labeled incorrectly. The resulting dataset is then used to fine-tune an encoder LLM, which can be leveraged by any topic modeling approach that uses embeddings. In this work, we demonstrate its effectiveness by deriving a novel state-of-the-art topic modeling method called SenClu. The method achieves fast inference through an expectation-maximization algorithm and hard assignments of sentence groups to a single topic, while allowing users to encode prior knowledge about the topic-document distribution. Code is available at https://github.com/JohnTailor/FT-Topic",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Johannes Schneider"
+  ],
+  "doi": null,
+  "arxiv_id": "2408.03099v2",
+  "url": "http://arxiv.org/abs/2408.03099v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

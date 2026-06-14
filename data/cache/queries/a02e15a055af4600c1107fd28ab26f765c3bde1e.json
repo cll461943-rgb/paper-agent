@@ -1,0 +1,942 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2504.16021v1",
+    "title": "Navigating the State of Cognitive Flow: Context-Aware AI Interventions for Effective Reasoning Support",
+    "abstract": "Flow theory describes an optimal cognitive state where individuals experience deep focus and intrinsic motivation when a task's difficulty aligns with their skill level. In AI-augmented reasoning, interventions that disrupt the state of cognitive flow can hinder rather than enhance decision-making. This paper proposes a context-aware cognitive augmentation framework that adapts interventions based on three key contextual factors: type, timing, and scale. By leveraging multimodal behavioral cues (e.g., gaze behavior, typing hesitation, interaction speed), AI can dynamically adjust cognitive support to maintain or restore flow. We introduce the concept of cognitive flow, an extension of flow theory in AI-augmented reasoning, where interventions are personalized, adaptive, and minimally intrusive. By shifting from static interventions to context-aware augmentation, our approach ensures that AI systems support deep engagement in complex decision-making and reasoning without disrupting cognitive immersion.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dinithi Dissanayake",
+      "Suranga Nanayakkara"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.16021v1",
+    "url": "http://arxiv.org/abs/2504.16021v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08355v3",
+    "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+    "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jacob Beck",
+      "Shikha Surana",
+      "Manus McAuliffe",
+      "Oliver Bent",
+      "Thomas D. Barrett",
+      "Juan Jose Garau Luis",
+      "Paul Duckworth"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08355v3",
+    "url": "http://arxiv.org/abs/2410.08355v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.19121v3",
+    "title": "Towards Learning Abductive Reasoning using VSA Distributed Representations",
+    "abstract": "We introduce the Abductive Rule Learner with Context-awareness (ARLC), a model that solves abstract reasoning tasks based on Learn-VRF. ARLC features a novel and more broadly applicable training objective for abductive reasoning, resulting in better interpretability and higher accuracy when solving Raven's progressive matrices (RPM). ARLC allows both programming domain knowledge and learning the rules underlying a data distribution. We evaluate ARLC on the I-RAVEN dataset, showcasing state-of-the-art accuracy across both in-distribution and out-of-distribution (unseen attribute-rule pairs) tests. ARLC surpasses neuro-symbolic and connectionist baselines, including large language models, despite having orders of magnitude fewer parameters. We show ARLC's robustness to post-programming training by incrementally learning from examples on top of programmed knowledge, which only improves its performance and does not result in catastrophic forgetting of the programmed solution. We validate ARLC's seamless transfer learning from a 2x2 RPM constellation to unseen constellations. Our code is available at https://github.com/IBM/abductive-rule-learner-with-context-awareness.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Giacomo Camposampiero",
+      "Michael Hersche",
+      "Aleksandar Terzić",
+      "Roger Wattenhofer",
+      "Abu Sebastian",
+      "Abbas Rahimi"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.19121v3",
+    "url": "http://arxiv.org/abs/2406.19121v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.02171v1",
+    "title": "Continual Reasoning: Non-Monotonic Reasoning in Neurosymbolic AI using Continual Learning",
+    "abstract": "Despite the extensive investment and impressive recent progress at reasoning by similarity, deep learning continues to struggle with more complex forms of reasoning such as non-monotonic and commonsense reasoning. Non-monotonicity is a property of non-classical reasoning typically seen in commonsense reasoning, whereby a reasoning system is allowed (differently from classical logic) to jump to conclusions which may be retracted later, when new information becomes available. Neural-symbolic systems such as Logic Tensor Networks (LTN) have been shown to be effective at enabling deep neural networks to achieve reasoning capabilities. In this paper, we show that by combining a neural-symbolic system with methods from continual learning, LTN can obtain a higher level of accuracy when addressing non-monotonic reasoning tasks. Continual learning is added to LTNs by adopting a curriculum of learning from knowledge and data with recall. We call this process Continual Reasoning, a new methodology for the application of neural-symbolic systems to reasoning tasks. Continual Reasoning is applied to a prototypical non-monotonic reasoning problem as well as other reasoning examples. Experimentation is conducted to compare and analyze the effects that different curriculum choices may have on overall learning and reasoning results. Results indicate significant improvement on the prototypical non-monotonic reasoning problem and a promising outlook for the proposed approach on statistical relational learning examples.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sofoklis Kyriakopoulos",
+      "Artur S. d'Avila Garcez"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.02171v1",
+    "url": "http://arxiv.org/abs/2305.02171v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.19346v1",
+    "title": "Polynomial Regression as a Task for Understanding In-context Learning Through Finetuning and Alignment",
+    "abstract": "Simple function classes have emerged as toy problems to better understand in-context-learning in transformer-based architectures used for large language models. But previously proposed simple function classes like linear regression or multi-layer-perceptrons lack the structure required to explore things like prompting and alignment within models capable of in-context-learning. We propose univariate polynomial regression as a function class that is just rich enough to study prompting and alignment, while allowing us to visualize and understand what is going on clearly.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Max Wilcoxson",
+      "Morten Svendgård",
+      "Ria Doshi",
+      "Dylan Davis",
+      "Reya Vir",
+      "Anant Sahai"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.19346v1",
+    "url": "http://arxiv.org/abs/2407.19346v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.11364v4",
+    "title": "Offline Learning and Forgetting for Reasoning with Large Language Models",
+    "abstract": "Leveraging inference-time search in large language models has proven effective in further enhancing a trained model's capability to solve complex mathematical and reasoning problems. However, this approach significantly increases computational costs and inference time, as the model must generate and evaluate multiple candidate solutions to identify a viable reasoning path. To address this, we propose an effective approach that integrates search capabilities directly into the model by fine-tuning it on unpaired successful (learning) and failed reasoning paths (forgetting) derived from diverse search methods. A key challenge we identify is that naive fine-tuning can degrade the model's search capability; we show this can be mitigated with a smaller learning rate. Extensive experiments on the challenging Game-of-24 and Countdown arithmetic puzzles show that, replacing CoT-generated data with search-generated data for offline fine-tuning improves success rates by around 23% over inference-time search baselines, while reducing inference time by 180$\\times$. On top of this, our learning and forgetting objective consistently outperforms both supervised fine-tuning and preference-based methods.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Tianwei Ni",
+      "Allen Nie",
+      "Sapana Chaudhary",
+      "Yao Liu",
+      "Huzefa Rangwala",
+      "Rasool Fakoor"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.11364v4",
+    "url": "http://arxiv.org/abs/2504.11364v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.10775v2",
+    "title": "LLMs for Game Theory: Entropy-Guided In-Context Learning and Adaptive CoT Reasoning",
+    "abstract": "We propose a novel LLM-based framework for reasoning in discrete, game-theoretic tasks, illustrated with \\emph{Tic-Tac-Toe}. The method integrates in-context learning with entropy-guided chain-of-thought (CoT) reasoning and adaptive context retrieval. The model dynamically adjusts both the number of retrieved examples and reasoning paths according to token-level uncertainty: concise reasoning with minimal context is used when uncertainty is low, whereas higher uncertainty triggers expanded multi-path CoT exploration. Experimental evaluation against a sub-optimal algorithmic opponent shows that entropy-aware adaptive reasoning substantially improves decision quality, increasing the average game outcome from \\(-11.6\\%\\) with the baseline LLM to \\(+9.5\\%\\) with entropy-guided adaptive reasoning over 100 games (win = +1, tie = 0, loss = -1), while maintaining a relatively low number of LLM queries per game. Statistical validation confirms that the improvement is significant, and correlation analysis reveals a negative association between token-level entropy and move optimality. These findings demonstrate that uncertainty-guided adaptive reasoning effectively enhances LLM performance in sequential decision-making environments.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Tommaso Felice Banfi",
+      "Sashenka Gamage"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.10775v2",
+    "url": "http://arxiv.org/abs/2601.10775v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.13684v1",
+    "title": "Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation",
+    "abstract": "Human cognition is constrained by processing limitations, leading to cognitive overload and inefficiencies in knowledge synthesis and decision-making. Large Language Models (LLMs) present an opportunity for cognitive augmentation, but their current reactive nature limits their real-world applicability. This position paper explores the potential of context-aware cognitive augmentation, where LLMs dynamically adapt to users' cognitive states and task environments to provide appropriate support. Through a think-aloud study in an exhibition setting, we examine how individuals interact with multi-modal information and identify key cognitive challenges in structuring, retrieving, and applying knowledge. Our findings highlight the need for AI-driven cognitive support systems that integrate real-time contextual awareness, personalized reasoning assistance, and socially adaptive interactions. We propose a framework for AI augmentation that seamlessly transitions between real-time cognitive support and post-experience knowledge organization, contributing to the design of more effective human-centered AI systems.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xiangrong",
+      "Zhu",
+      "Yuan Xu",
+      "Tianjian Liu",
+      "Jingwei Sun",
+      "Yu Zhang",
+      "Xin Tong"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.13684v1",
+    "url": "http://arxiv.org/abs/2504.13684v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.05114v1",
+    "title": "$π^2$: Structure-Originated Reasoning Data Improves Long-Context Reasoning Ability of Large Language Models",
+    "abstract": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in large language models (LLMs). Our approach, $π^2$, constructs high-quality reasoning data through rigorous QA curation: 1) extracting and expanding tables from Wikipedia, 2) from the collected tables and relevant context, generating realistic and multi-hop analytical reasoning questions whose answers are automatically determined and verified through dual-path code execution, and 3) back-translating step-by-step structured reasoning traces as solutions of QA pairs given realistic web-search context. Supervised fine-tuning with \\textsc{\\small{gpt-oss-20b}} and \\textsc{\\small{Qwen3-4B-Instruct-2507}} on $π^2$ yields consistent improvements across four long-context reasoning benchmarks and our alike $π^2$-Bench, with average absolute accuracy gains of +4.3% and +2.7% respectively. Notably, our dataset facilitates self-distillation, where \\textsc{\\small{gpt-oss-20b}} even improves its average performance by +4.4% with its own reasoning traces, demonstrating $π^2$'s usefulness. Our code, data, and models are open-source at https://github.com/vt-pi-squared/pi-squared.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Quyet V. Do",
+      "Thinh Pham",
+      "Nguyen Nguyen",
+      "Sha Li",
+      "Pratibha Zunjare",
+      "Tu Vu"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.05114v1",
+    "url": "http://arxiv.org/abs/2604.05114v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the most informative observations for labeling in order to improve the performance of machine learning models. These approaches can be broadly divided into two categories: static pool-based and stream-based active learning. Pool-based active learning involves selecting a subset of observations from a closed pool of unlabeled data, and it has been the focus of many surveys and literature reviews. However, the growing availability of data streams has led to an increase in the number of approaches that focus on online active learning, which involves continuously selecting and labeling observations as they arrive in a stream. This work aims to provide an overview of the most recently proposed approaches for selecting the most informative observations from data streams in real time. We review the various techniques that have been proposed and discuss their strengths and limitations, as well as the challenges and opportunities that exist in this area of research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.08893v4",
+    "url": "http://arxiv.org/abs/2302.08893v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.19280v1",
+    "title": "Group Distributionally Robust Optimization-Driven Reinforcement Learning for LLM Reasoning",
+    "abstract": "Recent progress in Large Language Model (LLM) reasoning is increasingly driven by the refinement of post-training loss functions and alignment strategies. However, standard Reinforcement Learning (RL) paradigms like Group Relative Policy Optimization (GRPO) remain constrained by static uniformity: uniform prompt sampling and a fixed number of rollouts per prompt. For heterogeneous, heavy-tailed reasoning data, this creates structural inefficiencies that waste compute on already-solved patterns while under-training the long tail of hard problems. To address this, we propose Multi-Adversary Group Distributionally Robust Optimization (GDRO), an optimization-first framework that moves beyond uniform reasoning models by dynamically adapting the training distribution. We introduce an Online Difficulty Classifier that partitions prompts into dynamic pass@k difficulty groups. We then propose two independent GDRO games for post-training: (1) Prompt-GDRO, which employs an EMA-debiased multiplicative-weights bandit sampler to target the intensive difficulty margin and upweight persistently hard groups without frequency bias; and (2) Rollout-GDRO, which uses a shadow-price controller to reallocate rollouts across groups, maximizing gradient variance reduction on hard tasks under a fixed mean budget (compute-neutral). We provide no-regret guarantees for both controllers and additionally a variance-proxy analysis motivating a square-root optimal rollout allocation for Rollout-GDRO. We validate our framework on the DAPO 14.1k dataset using Qwen3-Base models. Prompt-GDRO and Rollout-GDRO achieve average relative gains of +10.6% and +10.1%, respectively, in pass@8 accuracy across 1.7B, 4B, and 8B scales compared to the GRPO baseline. Qualitative analysis shows an emergent curriculum: the adversaries shift resources to the evolving reasoning frontier, enhancing the reasoning model's performance.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Kishan Panaganti",
+      "Zhenwen Liang",
+      "Wenhao Yu",
+      "Haitao Mi",
+      "Dong Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.19280v1",
+    "url": "http://arxiv.org/abs/2601.19280v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.08989v1",
+    "title": "SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning",
+    "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective for training large language models (LLMs) on complex reasoning tasks, such as mathematical problem solving. A prerequisite for the scalability of RLVR is a high-quality problem set with precise and verifiable answers. However, the scarcity of well-crafted human-labeled math problems and limited-verification answers in existing distillation-oriented synthetic datasets limit their effectiveness in RL. Additionally, most problem synthesis strategies indiscriminately expand the problem set without considering the model's capabilities, leading to low efficiency in generating useful questions. To mitigate this issue, we introduce a Self-aware Weakness-driven problem Synthesis framework (SwS) that systematically identifies model deficiencies and leverages them for problem augmentation. Specifically, we define weaknesses as questions that the model consistently fails to learn through its iterative sampling during RL training. We then extract the core concepts from these failure cases and synthesize new problems to strengthen the model's weak areas in subsequent augmented training, enabling it to focus on and gradually overcome its weaknesses. Without relying on external knowledge distillation, our framework enables robust generalization byempowering the model to self-identify and address its weaknesses in RL, yielding average performance gains of 10.0% and 7.7% on 7B and 32B models across eight mainstream reasoning benchmarks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xiao Liang",
+      "Zhong-Zhi Li",
+      "Yeyun Gong",
+      "Yang Wang",
+      "Hengyuan Zhang",
+      "Yelong Shen",
+      "Ying Nian Wu",
+      "Weizhu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.08989v1",
+    "url": "http://arxiv.org/abs/2506.08989v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.05261v1",
+    "title": "From Propositional Logic to Plausible Reasoning: A Uniqueness Theorem",
+    "abstract": "We consider the question of extending propositional logic to a logic of plausible reasoning, and posit four requirements that any such extension should satisfy. Each is a requirement that some property of classical propositional logic be preserved in the extended logic; as such, the requirements are simpler and less problematic than those used in Cox's Theorem and its variants. As with Cox's Theorem, our requirements imply that the extended logic must be isomorphic to (finite-set) probability theory. We also obtain specific numerical values for the probabilities, recovering the classical definition of probability as a theorem, with truth assignments that satisfy the premise playing the role of the \"possible cases.\"",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Kevin S. Van Horn"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.05261v1",
+    "url": "http://arxiv.org/abs/1706.05261v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.05064v3",
+    "title": "Pretraining Decision Transformers with Reward Prediction for In-Context Multi-task Structured Bandit Learning",
+    "abstract": "We study learning to learn for the multi-task structured bandit problem where the goal is to learn a near-optimal algorithm that minimizes cumulative regret. The tasks share a common structure and an algorithm should exploit the shared structure to minimize the cumulative regret for an unseen but related test task. We use a transformer as a decision-making algorithm to learn this shared structure from data collected by a demonstrator on a set of training task instances. Our objective is to devise a training procedure such that the transformer will learn to outperform the demonstrator's learning algorithm on unseen test task instances. Prior work on pretraining decision transformers either requires privileged information like access to optimal arms or cannot outperform the demonstrator. Going beyond these approaches, we introduce a pre-training approach that trains a transformer network to learn a near-optimal policy in-context. This approach leverages the shared structure across tasks, does not require access to optimal actions, and can outperform the demonstrator. We validate these claims over a wide variety of structured bandit problems to show that our proposed solution is general and can quickly identify expected rewards on unseen test tasks to support effective exploration.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Subhojyoti Mukherjee",
+      "Josiah P. Hanna",
+      "Qiaomin Xie",
+      "Robert Nowak"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.05064v3",
+    "url": "http://arxiv.org/abs/2406.05064v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.09854v1",
+    "title": "Model-Grounded Symbolic Artificial Intelligence Systems Learning and Reasoning with Model-Grounded Symbolic Artificial Intelligence Systems",
+    "abstract": "Neurosymbolic artificial intelligence (AI) systems combine neural network and classical symbolic AI mechanisms to exploit the complementary strengths of large scale, generalizable learning and robust, verifiable reasoning. Numerous classifications of neurosymbolic AI illustrate how these two components can be integrated in distinctly different ways. In this work, we propose reinterpreting instruction tuned large language models as model grounded symbolic AI systems where natural language serves as the symbolic layer and grounding is achieved through the models internal representation space. Within this framework, we investigate and develop novel learning and reasoning approaches that preserve structural similarities to traditional learning and reasoning paradigms. Preliminary evaluations across axiomatic deductive reasoning procedures of varying complexity provide insights into the effectiveness of our approach in improving learning efficiency and reasoning reliability.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Aniruddha Chattopadhyay",
+      "Raj Dandekar",
+      "Kaushik Roy"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.09854v1",
+    "url": "http://arxiv.org/abs/2507.09854v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09012v1",
+    "title": "An Ontology-Based Reasoning Framework for Context-Aware Applications",
+    "abstract": "Context-aware applications process context information to support users in their daily tasks and routines. These applications can adapt their functionalities by aggregating context information through machine-learning and data processing algorithms, supporting users with recommendations or services based on their current needs. In the last years, smartphones have been used in the field of context-awareness due to their embedded sensors and various communication interfaces such as Bluetooth, WiFi, NFC or cellular. However, building context-aware applications for smartphones can be a challenging and time-consuming task. In this paper, we describe an ontology-based reasoning framework to create context-aware applications. The framework is based on an ontology as well as micro-services to aggregate, process and represent context information.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Christoph Anderson",
+      "Isabel Suarez",
+      "Yaqian Xu",
+      "Klaus David"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09012v1",
+    "url": "http://arxiv.org/abs/1805.09012v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:query2doc",
+      "route:hyde",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.07435v1",
+    "title": "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+    "abstract": "Model-agnostic meta-learning (MAML) is a meta-learning technique to train a model on a multitude of learning tasks in a way that primes the model for few-shot learning of new tasks. The MAML algorithm performs well on few-shot learning problems in classification, regression, and fine-tuning of policy gradients in reinforcement learning, but comes with the need for costly hyperparameter tuning for training stability. We address this shortcoming by introducing an extension to MAML, called Alpha MAML, to incorporate an online hyperparameter adaptation scheme that eliminates the need to tune meta-learning and learning rates. Our results with the Omniglot database demonstrate a substantial reduction in the need to tune MAML training hyperparameters and improvement to training stability with less sensitivity to hyperparameter choice.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Harkirat Singh Behl",
+      "Atılım Güneş Baydin",
+      "Philip H. S. Torr"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.07435v1",
+    "url": "http://arxiv.org/abs/1905.07435v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.15694v1",
+    "title": "The Impact of Quantization on Large Reasoning Model Reinforcement Learning",
+    "abstract": "Strong reasoning capabilities can now be achieved by large-scale reinforcement learning (RL) without any supervised fine-tuning. Although post-training quantization (PTQ) and quantization-aware training (QAT) are well studied in the context of fine-tuning, how quantization impacts RL in large reasoning models (LRMs) remains an open question. To answer this question, we conducted systematic experiments and discovered a significant gap in reasoning performance on mathematical benchmarks between post-RL quantized models and their quantization-aware RL optimized counterparts. Our findings suggest that quantization-aware RL training negatively impacted the learning process, whereas PTQ and QLoRA led to greater performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Medha Kumar",
+      "Zifei Xu",
+      "Xin Wang",
+      "Tristan Webb"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.15694v1",
+    "url": "http://arxiv.org/abs/2511.15694v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05461v2",
+    "title": "Learning Generative Models across Incomparable Spaces",
+    "abstract": "Generative Adversarial Networks have shown remarkable success in learning a distribution that faithfully recovers a reference distribution in its entirety. However, in some cases, we may want to only learn some aspects (e.g., cluster or manifold structure), while modifying others (e.g., style, orientation or dimension). In this work, we propose an approach to learn generative models across such incomparable spaces, and demonstrate how to steer the learned distribution towards target properties. A key component of our model is the Gromov-Wasserstein distance, a notion of discrepancy that compares distributions relationally rather than absolutely. While this framework subsumes current generative models in identically reproducing distributions, its inherent flexibility allows application to tasks in manifold learning, relational learning and cross-domain learning.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Charlotte Bunne",
+      "David Alvarez-Melis",
+      "Andreas Krause",
+      "Stefanie Jegelka"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05461v2",
+    "url": "http://arxiv.org/abs/1905.05461v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09921v4",
+    "title": "Meta-Learning Probabilistic Inference For Prediction",
+    "abstract": "This paper introduces a new framework for data efficient and versatile learning. Specifically: 1) We develop ML-PIP, a general framework for Meta-Learning approximate Probabilistic Inference for Prediction. ML-PIP extends existing probabilistic interpretations of meta-learning to cover a broad class of methods. 2) We introduce VERSA, an instance of the framework employing a flexible and versatile amortization network that takes few-shot learning datasets as inputs, with arbitrary numbers of shots, and outputs a distribution over task-specific parameters in a single forward pass. VERSA substitutes optimization at test time with forward passes through inference networks, amortizing the cost of inference and relieving the need for second derivatives during training. 3) We evaluate VERSA on benchmark datasets where the method sets new state-of-the-art results, handles arbitrary numbers of shots, and for classification, arbitrary numbers of classes at train and test time. The power of the approach is then demonstrated through a challenging few-shot ShapeNet view reconstruction task.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jonathan Gordon",
+      "John Bronskill",
+      "Matthias Bauer",
+      "Sebastian Nowozin",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09921v4",
+    "url": "http://arxiv.org/abs/1805.09921v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1705.05172v1",
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning efficiency. For the interactive ML and human-robot interaction (HRI) community, emotions can communicate state and enhance user investment. Lastly, it allows affective modelling (AM) researchers to investigate their emotion theories in a successful AI agent class. This survey provides background on emotion theory and RL. It systematically addresses 1) from what underlying dimensions (e.g., homeostasis, appraisal) emotions can be derived and how these can be modelled in RL-agents, 2) what types of emotions have been derived from these dimensions, and 3) how these emotions may either influence the learning efficiency of the agent or be useful as social signals. We also systematically compare evaluation criteria, and draw connections to important RL sub-domains like (intrinsic) motivation and model-based RL. In short, this survey provides both a practical overview for engineers wanting to implement emotions in their RL agents, and identifies challenges and directions for future emotion-RL research.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "doi": null,
+    "arxiv_id": "1705.05172v1",
+    "url": "http://arxiv.org/abs/1705.05172v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1603.07704v2",
+    "title": "Probabilistic Reasoning via Deep Learning: Neural Association Models",
+    "abstract": "In this paper, we propose a new deep learning approach, called neural association model (NAM), for probabilistic reasoning in artificial intelligence. We propose to use neural networks to model association between any two events in a domain. Neural networks take one event as input and compute a conditional probability of the other event to model how likely these two events are to be associated. The actual meaning of the conditional probabilities varies between applications and depends on how the models are trained. In this work, as two case studies, we have investigated two NAM structures, namely deep neural networks (DNN) and relation-modulated neural nets (RMNN), on several probabilistic reasoning tasks in AI, including recognizing textual entailment, triple classification in multi-relational knowledge bases and commonsense reasoning. Experimental results on several popular datasets derived from WordNet, FreeBase and ConceptNet have all demonstrated that both DNNs and RMNNs perform equally well and they can significantly outperform the conventional methods available for these reasoning tasks. Moreover, compared with DNNs, RMNNs are superior in knowledge transfer, where a pre-trained model can be quickly extended to an unseen relation after observing only a few training samples. To further prove the effectiveness of the proposed models, in this work, we have applied NAMs to solving challenging Winograd Schema (WS) problems. Experiments conducted on a set of WS problems prove that the proposed models have the potential for commonsense reasoning.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Quan Liu",
+      "Hui Jiang",
+      "Andrew Evdokimov",
+      "Zhen-Hua Ling",
+      "Xiaodan Zhu",
+      "Si Wei",
+      "Yu Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "1603.07704v2",
+    "url": "http://arxiv.org/abs/1603.07704v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2204.12833v3",
+    "title": "Transfer Learning with Pre-trained Conditional Generative Models",
+    "abstract": "Transfer learning is crucial in training deep neural networks on new target tasks. Current transfer learning methods always assume at least one of (i) source and target task label spaces overlap, (ii) source datasets are available, and (iii) target network architectures are consistent with source ones. However, holding these assumptions is difficult in practical settings because the target task rarely has the same labels as the source task, the source dataset access is restricted due to storage costs and privacy, and the target architecture is often specialized to each task. To transfer source knowledge without these assumptions, we propose a transfer learning method that uses deep generative models and is composed of the following two stages: pseudo pre-training (PP) and pseudo semi-supervised learning (P-SSL). PP trains a target architecture with an artificial dataset synthesized by using conditional source generative models. P-SSL applies SSL algorithms to labeled target data and unlabeled pseudo samples, which are generated by cascading the source classifier and generative models to condition them with target samples. Our experimental results indicate that our method can outperform the baselines of scratch training and knowledge distillation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shin'ya Yamaguchi",
+      "Sekitoshi Kanai",
+      "Atsutoshi Kumagai",
+      "Daiki Chijiwa",
+      "Hisashi Kashima"
+    ],
+    "doi": null,
+    "arxiv_id": "2204.12833v3",
+    "url": "http://arxiv.org/abs/2204.12833v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.04458v2",
+    "title": "General-Purpose In-Context Learning by Meta-Learning Transformers",
+    "abstract": "Modern machine learning requires system designers to specify aspects of the learning pipeline, such as losses, architectures, and optimizers. Meta-learning, or learning-to-learn, instead aims to learn those aspects, and promises to unlock greater capabilities with less manual effort. One particularly ambitious goal of meta-learning is to train general-purpose in-context learning algorithms from scratch, using only black-box models with minimal inductive bias. Such a model takes in training data, and produces test-set predictions across a wide range of problems, without any explicit definition of an inference model, training loss, or optimization algorithm. In this paper we show that Transformers and other black-box models can be meta-trained to act as general-purpose in-context learners. We characterize transitions between algorithms that generalize, algorithms that memorize, and algorithms that fail to meta-train at all, induced by changes in model size, number of tasks, and meta-optimization. We further show that the capabilities of meta-trained algorithms are bottlenecked by the accessible state size (memory) determining the next prediction, unlike standard models which are thought to be bottlenecked by parameter count. Finally, we propose practical interventions such as biasing the training distribution that improve the meta-training and meta-generalization of general-purpose in-context learning algorithms.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Louis Kirsch",
+      "James Harrison",
+      "Jascha Sohl-Dickstein",
+      "Luke Metz"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.04458v2",
+    "url": "http://arxiv.org/abs/2212.04458v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.24760v2",
+    "title": "REASONING GYM: Reasoning Environments for Reinforcement Learning with Verifiable Rewards",
+    "abstract": "We introduce Reasoning Gym (RG), a library of reasoning environments for reinforcement learning with verifiable rewards. It provides over 100 data generators and verifiers spanning multiple domains including algebra, arithmetic, computation, cognition, geometry, graph theory, logic, and various common games. Its key innovation is the ability to generate virtually infinite training data with adjustable complexity, unlike most previous reasoning datasets, which are typically fixed. This procedural generation approach allows for continuous evaluation across varying difficulty levels. Our experimental results demonstrate the efficacy of RG in both evaluating and reinforcement learning of reasoning models.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zafir Stojanovski",
+      "Oliver Stanley",
+      "Joe Sharratt",
+      "Richard Jones",
+      "Abdulhakeem Adefioye",
+      "Jean Kaddour",
+      "Andreas Köpf"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.24760v2",
+    "url": "http://arxiv.org/abs/2505.24760v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.05816v1",
+    "title": "Graph Reasoning Networks",
+    "abstract": "Graph neural networks (GNNs) are the predominant approach for graph-based machine learning. While neural networks have shown great performance at learning useful representations, they are often criticized for their limited high-level reasoning abilities. In this work, we present Graph Reasoning Networks (GRNs), a novel approach to combine the strengths of fixed and learned graph representations and a reasoning module based on a differentiable satisfiability solver. While results on real-world datasets show comparable performance to GNN, experiments on synthetic datasets demonstrate the potential of the newly proposed method.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Markus Zopf",
+      "Francesco Alesiani"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.05816v1",
+    "url": "http://arxiv.org/abs/2407.05816v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.26306v4",
+    "title": "Interactive Learning for LLM Reasoning",
+    "abstract": "Existing multi-agent learning approaches have developed interactive training environments to explicitly promote collaboration among multiple Large Language Models (LLMs), thereby constructing stronger multi-agent systems (MAS). However, during inference, they require re-executing the MAS to obtain final solutions, which diverges from human cognition that individuals can enhance their reasoning capabilities through interactions with others and resolve questions independently in the future. To investigate whether multi-agent interaction can enhance LLMs' independent problem-solving ability, we introduce ILR, a novel co-learning framework for MAS that integrates two key components: Dynamic Interaction and Perception Calibration. Specifically, Dynamic Interaction first adaptively selects either cooperative or competitive strategies depending on question difficulty and model ability. LLMs then exchange information through Idea3, an innovative interaction paradigm designed to mimic human discussion, before deriving their respective final answers. In Perception Calibration, ILR employs Group Relative Policy Optimization (GRPO) to train LLMs while integrating one LLM's reward distribution characteristics into another's reward function, thereby enhancing the cohesion of multi-agent interactions. We evaluate the effectiveness of ILR across three LLMs from two model families of varying scales on five mathematical, one coding, one general question answering, and one scientific reasoning benchmarks. Experimental results show that ILR consistently outperforms single-agent learning, yielding an improvement of up to 5% over the strongest baseline. We further discover that Idea3 can enhance the robustness of stronger LLMs during multi-agent inference, and dynamic interaction types can boost multi-agent learning compared to pure cooperative or competitive strategies.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hehai Lin",
+      "Shilei Cao",
+      "Sudong Wang",
+      "Haotian Wu",
+      "Minzhi Li",
+      "Linyi Yang",
+      "Juepeng Zheng",
+      "Chengwei Qin"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.26306v4",
+    "url": "http://arxiv.org/abs/2509.26306v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.04338v1",
+    "title": "Changing Data Sources in the Age of Machine Learning for Official Statistics",
+    "abstract": "Data science has become increasingly essential for the production of official statistics, as it enables the automated collection, processing, and analysis of large amounts of data. With such data science practices in place, it enables more timely, more insightful and more flexible reporting. However, the quality and integrity of data-science-driven statistics rely on the accuracy and reliability of the data sources and the machine learning techniques that support them. In particular, changes in data sources are inevitable to occur and pose significant risks that are crucial to address in the context of machine learning for official statistics. This paper gives an overview of the main risks, liabilities, and uncertainties associated with changing data sources in the context of machine learning for official statistics. We provide a checklist of the most prevalent origins and causes of changing data sources; not only on a technical level but also regarding ownership, ethics, regulation, and public perception. Next, we highlight the repercussions of changing data sources on statistical reporting. These include technical effects such as concept drift, bias, availability, validity, accuracy and completeness, but also the neutrality and potential discontinuation of the statistical offering. We offer a few important precautionary measures, such as enhancing robustness in both data sourcing and statistical techniques, and thorough monitoring. In doing so, machine learning-based official statistics can maintain integrity, reliability, consistency, and relevance in policy-making, decision-making, and public discourse.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Cedric De Boom",
+      "Michael Reusens"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.04338v1",
+    "url": "http://arxiv.org/abs/2306.04338v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

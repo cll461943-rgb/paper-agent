@@ -1,0 +1,25 @@
+{
+  "paper_id": "pubmed:42229150",
+  "title": "Learning-assisted locality optimisation in online suffix tree construction: Formal analysis and empirical validation.",
+  "abstract": "Suffix trees underpin many string-processing applications, yet their classical O(n) construction algorithms suffer in practice from the gap between processor and memory speeds: cache misses, not arithmetic operations, dominate wall-clock time. This paper asks whether a lightweight machine-learning predictor can anticipate which tree branches Ukkonen's online construction will visit next, allowing the relevant nodes to be prefetched into the cache without changing what the algorithm actually does. The intuition is simple: the predictor whispers hints about upcoming memory accesses; Ukkonen's algorithm itself remains untouched. We formalise this idea through an observationally transparent layer and prove that the augmented algorithm produces exactly the same suffix tree as Ukkonen's algorithm, regardless of how good (or bad) the predictor is. Complexity is preserved at O(n) under fixed model parameters, and we derive an explicit break-even condition that predicts when learning helps and when it hurts. Experiments on natural language, genomic, and source-code corpora confirm 24-38% reductions in L3 cache misses and 1.24-1.30 × wall-clock speedups, with prediction accuracy explaining 79% of speedup variance (Pearson r = 0.89). Where the theory predicts failure-small alphabets, uniform distributions, or oversized models-the algorithm slows by up to 22%, exactly as predicted. The observational-transparency framework introduced here generalises to other classical algorithms and offers a reusable template for combining machine learning with rigorously analysed data structures.",
+  "year": 2026,
+  "venue": "Computational biology and chemistry",
+  "authors": [
+    "Freeson Kaniwa"
+  ],
+  "doi": "10.1016/j.compbiolchem.2026.109153",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42229150/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42229150"
+  }
+}

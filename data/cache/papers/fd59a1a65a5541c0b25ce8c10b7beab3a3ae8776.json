@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:41886735",
+  "title": "Large Language Model Adaptation Strategies in Speech-Based Cognitive Screening: Systematic Evaluation.",
+  "abstract": "Over half of US adults with Alzheimer disease and related dementias (ADRD) remain undiagnosed. Speech-based screening algorithms offer a scalable approach, but the relative value of large language model (LLM) adaptation strategies is unclear. The study aimed to compare LLM adaptation strategies for cognitive impairment detection across DementiaBank speech datasets using both text-only and multimodal models. We analyzed audio-recorded speech from 237 participants in the ADReSSo subset of DementiaBank (ADRD vs cognitive normal [CN]) and report performance on a held-out test set (n=71). Nine text-only LLMs (3B-405B; open-weight and commercial) and 3 multimodal audio-text models were evaluated. Adaptations included (1) in-context learning (ICL) with 4 demonstration selection strategies (most similar, least similar, average similar or prototype, and random), (2) reasoning-augmented prompting (self- or teacher-generated rationales, self-consistency, tree-of-thought with domain experts), (3) parameter-efficient fine-tuning (token-level vs added classification head), and (4) multimodal audio-text integration. Generalizability of the adaptation strategies was evaluated on the DementiaBank Delaware dataset (n=205; mild cognitive impairment vs CN) using the first 3 strategies. The primary outcome was the F1-score for the cognitive impaired class; the area under the receiver operating characteristic curve was reported when available. On the ADReSSo dataset, average similar (prototype) demonstrations achieved the highest ICL performance across model sizes (F1-score up to 0.81). Reasoning primarily benefited smaller models: teacher-generated rationales increased LLaMA 8B from F1-score 0.72 to 0.76; expert-role tree-of-thought improved its zero-shot score from 0.65 to 0.71. Token-level fine-tuning produced the highest scores (LLaMA 3B: F1=0.83, 95% CI 0.01, area under the curve [AUC]=0.91; LLaMA 70B: F1=0.82, 95% CI 0.02, AUC=0.86; GPT-4o: F1=0.79, 95% CI 0.01, AUC=0.87). A classification head markedly improved MedAlpaca 7B (F1=0.06, 95% CI 0.02 to F1=0.81, 95% CI 0.04), indicating model-dependent benefits of this approach. Among multimodal models, fine-tuned Phi-4 Multimodal reached an F1-score of 0.80 (cognitive impaired) and 0.75 (CN) but did not exceed the top text-only systems. On the Delaware dataset, ICL achieved a high performance (LLaMA 8B: F1=0.74; GPT-4o: F1=0.80). Reasoning-augmented ICL improved LLaMA 8B to an F1-score of 0.75. Token-level fine-tuning produced the highest scores (LLaMA 8B: F1=0.76, 95% CI 0.02; GPT-4o: F1=0.82, 95% CI 0.03). Detection accuracy is influenced by demonstration selection, reasoning design, and tuning method. Token-level fine-tuning is generally most effective, while a classification head benefits models that perform poorly under token-based supervision. Properly adapted open-weight models can match or exceed commercial LLMs, supporting their use in scalable speech-based ADRD and mild cognitive impairment screening. Current multimodal models may require improved audio-text alignment and/or larger training corpora.",
+  "year": 2026,
+  "venue": "JMIR AI",
+  "authors": [
+    "Fatemeh Taherinezhad",
+    "Mohamad Javad Momeni Nezhad",
+    "Sepehr Karimi",
+    "Sina Rashidi",
+    "Ali Zolnour",
+    "Maryam Dadkhah",
+    "Yasaman Haghbin",
+    "Hossein Azadmaleki",
+    "Maryam Zolnoori"
+  ],
+  "doi": "10.2196/82608",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41886735/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41886735"
+  }
+}

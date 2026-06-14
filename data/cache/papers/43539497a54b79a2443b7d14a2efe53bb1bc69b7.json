@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.16732v1",
+  "title": "DiRotQ: Rotation-Aware Quantization for 4-bit Diffusion Transformers",
+  "abstract": "Diffusion Transformers (DiTs) achieve state-of-the-art image generation quality but incur substantial memory and computational costs at inference. While aggressive Post-Training Quantization (PTQ) to 4-bit precision offers significant efficiency gains, it typically results in severe quality degradation. Existing approaches, including smoothing-based methods, mixed-precision schemes, rotation techniques, and low-rank residual methods, partially mitigate this issue but still leave a noticeable gap to FP16/BF16 performance. In this work, we introduce DiRotQ, a W4A4 PTQ framework that mitigates this degradation through rotation-aware activation quantization. DiRotQ identifies a low-rank subspace capturing dominant activation variance via Principal Component Analysis (PCA), preserving coefficients in this subspace at higher precision while quantizing the remaining components to 4-bit. Activations are rotated into the PCA basis at inference time using calibration-derived orthogonal transformations, while the inverse rotation is fused into the layer weights offline. Combined with GPTQ-based weight quantization, DiRotQ achieves an FID (lower is better) of 15.9 and PSNR (higher is better) of 19.1 dB on PixArt-Σ over the MJHQ-30K dataset, outperforming the prior state-of-the-art SVDQuant (FID 18.9, PSNR 17.6) under the same INT W4A4 setting. Beyond standard metrics, we introduce a VLM-as-a-Judge evaluation protocol for diffusion model quantization, the first such evaluation in this setting, providing a more holistic assessment of perceptual quality and prompt alignment under aggressive compression. On the systems side, we implement a Triton-based custom kernel to enable efficient end-to-end inference, reducing memory usage of the 12B FLUX.1-dev model by 2.1x and delivering 2.3x speedup over the BF16 baseline, on a 24 GB RTX 4090 GPU.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Sayeh Sharify",
+    "Mahsa Salmani",
+    "Hesham Mostafa"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.16732v1",
+  "url": "http://arxiv.org/abs/2605.16732v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

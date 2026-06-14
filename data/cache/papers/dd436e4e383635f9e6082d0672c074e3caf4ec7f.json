@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:41892137",
+  "title": "HOIMamba: Bidirectional State-Space Modeling for Monocular 3D Human-Object Interaction Reconstruction.",
+  "abstract": "Monocular 3D human-object interaction (HOI) reconstruction requires jointly recovering articulated human geometry, object pose, and physically plausible contact from a single RGB image. While recent token-based methods commonly employ dense self-attention to capture global dependencies, isotropic all-to-all mixing tends to entangle spatial-geometric cues (e.g., contact locality) with channel-wise semantic cues (e.g., action/affordance), and provides limited control for representing directional and asymmetric physical influence between humans and objects. This paper presents HOIMamba, a state-space sequence modeling framework that reformulates HOI reconstruction as bidirectional, multi-scale interaction state inference. Instead of relying on symmetric correlation aggregation, HOIMamba uses structured state evolution to propagate interaction evidence. We introduce a multi-scale state-space module (MSSM) to capture interaction dependencies spanning local contact details and global body-object coordination. Building on MSSM, we propose a spatial-channel grouped SSM (SCSSM) block that factorizes interaction modeling into a spatial pathway for geometric/contact dependencies and a channel pathway for semantic/functional correlations, followed by gated fusion. HOIMamba further performs explicit bidirectional propagation between human and object states to better reflect asymmetric reciprocity in physical interactions. We evaluate HOIMamba on two public benchmarks, BEHAVE and InterCap, using Chamfer distance for human/object meshes and contact precision/recall induced by reconstructed geometry. HOIMamba achieves consistent improvements over representative prior methods. On the BEHAVE dataset, it reduces human Chamfer distance by 8.6% and improves contact recall by 13.5% compared to the strongest Transformer-based baseline, with similar gains observed on the InterCap dataset. Ablation studies on BEHAVE verify the contributions of state-space modeling, multi-scale inference, spatial-channel factorization, and bidirectional interaction reasoning.",
+  "year": 2026,
+  "venue": "Biomimetics (Basel, Switzerland)",
+  "authors": [
+    "Jinsong Zhang",
+    "Yuqin Lin"
+  ],
+  "doi": "10.3390/biomimetics11030214",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41892137/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41892137"
+  }
+}

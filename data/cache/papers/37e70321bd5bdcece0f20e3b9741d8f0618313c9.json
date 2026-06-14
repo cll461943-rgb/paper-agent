@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.28306v1",
+  "title": "Routing-Aligned Fine-Tuning for Multilingual Downstream Tasks in Mixture-of-Experts Models",
+  "abstract": "Mixture-of-Experts (MoE) models have emerged as a dominant paradigm for efficient LLM scaling, yet adapting them to non-English downstream tasks remains challenging. Existing fine-tuning approaches treat MoE models as monolithic learners, ignoring the heterogeneous routing structure that develops during pretraining. We validate across multiple MoE models and downstream tasks that middle layers form a language-universal alignment zone where routing divergence strongly predicts per-language task performance gaps. Building on this observation, we propose RA-MoE (Routing-Aligned MoE Fine-Tuning), a three-stage framework that categorizes parallel task examples into a four-way taxonomy (cc/ci/ic/ii) based on correctness in English and the target language, identifies task-relevant experts in the middle layers, and augments standard SFT with a routing alignment loss that encourages target-language routing on ci-type examples to follow the English task-expert activation pattern. Experiments across three MoE models, three tasks, and six target languages demonstrate that RA-MoE consistently outperforms standard SFT and strong baselines including Routing Steering and RISE, with the ci proportion of a task-language pair serving as a reliable predictor of alignment benefit.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Guanzhi Deng",
+    "Kuan Wu",
+    "Haibo Wang",
+    "Shing Yin Wong",
+    "Sichun Luo",
+    "Linqi Song"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.28306v1",
+  "url": "http://arxiv.org/abs/2605.28306v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

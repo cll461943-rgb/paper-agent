@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42275635",
+  "title": "Patient Cognitive Bias in Large Language Model-Supported Health Consultations: Simulation-Based Comparative Study.",
+  "abstract": "Large language models (LLMs) are increasingly used by patients for health information and preliminary medical advice. In patient-facing consultations, users may present explicitly stated diagnostic preferences or symptom narratives emphasizing a preferred explanation. Such cognitively biased input constrains the diagnostic context available to the model and may systematically steer its reasoning during interactive LLM-supported health consultations. This study aimed to quantify the impact of patient cognitive bias on LLM diagnostic performance in multiturn consultations, assess the effectiveness of prompt-based mitigation strategies and decoding temperature adjustment, and evaluate a dual-system framework for improving robustness under biased interaction. We developed a simulated patient agent to generate both unbiased and cognitively biased consultations using 1273 medical question answering dataset United States Medical Licensing Examination cases. Six widely used LLMs of varying capacities were evaluated through 3-round, multiturn dialogues, after which each model produced a final diagnostic judgment based on the complete consultation record. Diagnostic accuracy was the primary outcome. Secondary outcomes included bias-induced accuracy decline (absolute reduction in accuracy under biased vs standard consultations) and bias-influenced error proportion (proportion of incorrect responses aligned with the patient's preferred but incorrect diagnosis). Three prompt-based mitigation strategies and 4 decoding temperature settings were tested. In addition, a dual-system framework was evaluated, in which a conversational foundation LLM conducted patient interaction and history taking (System 1), while a reasoning-oriented LLM (o1-mini) generated the final diagnostic judgment (System 2). In the foundation-only condition, the same LLM performed both interaction and diagnosis. Across all 6 evaluated models, cognitively biased consultations led to marked diagnostic accuracy declines of approximately 7 to 39 percentage points compared with standard multiturn consultations, whereas static single-response tests and standard consultations showed comparable accuracy. Larger deteriorations were observed in lower-capacity models, with some approaching random-guess performance under bias. Errors were frequently aligned with patient bias, with bias-influenced error proportion exceeding one-third across models, indicating systematic conformity rather than random error. Prompt-based mitigation strategies and decoding temperature reduction yielded limited and inconsistent improvements and did not reliably prevent bias-induced performance loss. By contrast, the dual-system framework substantially improved diagnostic accuracy under biased conditions, producing gains of approximately 10 to 39 percentage points across most models and recovering a large proportion of the performance lost due to bias, particularly in lower-capacity systems. Patient-driven cognitive bias represents an underrecognized behavioral risk in LLM-supported health consultations. Common mitigation approaches, such as prompt engineering or decoding parameter adjustment, provide limited resilience. Explicitly separating conversational interaction from deliberative diagnostic reasoning through a dual-system framework enables more robust diagnostic performance under biased input while potentially preserving patient-facing dialogue fluency by retaining the foundation LLM as the conversational component, offering a scalable design strategy for safer medical AI systems.",
+  "year": 2026,
+  "venue": "Journal of medical Internet research",
+  "authors": [
+    "Yi Zuo",
+    "Qifeng Wan",
+    "Shalong Wang"
+  ],
+  "doi": "10.2196/85770",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42275635/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42275635"
+  }
+}

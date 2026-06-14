@@ -1,0 +1,948 @@
+[
+  {
+    "paper_id": "pubmed:42282807",
+    "title": "Bridging Ancestry Gaps in Genomic Risk Prediction with Tabular Foundation Models.",
+    "abstract": "Models deployed for genomic prediction of diseases perform unevenly across populations, limiting clinical utility. Two factors drive this limitation: large imbalances in sample availability across ancestry groups and non-stationarity of genotype-phenotype effect sizes across the ancestry continuum. While tabular foundation models with in-context learning (ICL) have shown strong sample efficiency in other domains, their effectiveness for genotype-to-phenotype prediction and their robustness to ancestry-driven effect heterogeneity remain unclear. Using large, ancestrally diverse biobank data, we show that ICL-capable tabular foundation models reduce performance degradation in under-sampled ancestry groups compared to conventional supervised approaches. However, we find that prevailing models trained on existing synthetic tabular tasks fail when allele effect sizes vary across ancestry space. Treating genetic ancestry as a continuous variable, we introduce an instruction-tuning framework that exposes models to synthetic tasks with ancestry-dependent non-stationary effects. Instruction-tuned models achieve improved and more stable predictive performance across the genetic ancestry continuum, including for individuals distant from in-context exemplars in ancestry space. All code for instruction-tuning models, synthetic task generation, data wrangling, and model evaluation, is publicly available at https://github.com/ai4pm/Bridging-Ancestry-Gaps-in-Genomic-Risk-Prediction-with-Tabular-Foundation-Models . The final instruction-tuned model (ICL-NS-G2P-proto) is also released in this repository. Detailed documentation is provided, including environment setup instructions and guidelines for running various parts. The instruction-tuning task datasets are available at https://zenodo.org/records/18309187 . adas23@uthsc.edu , ycui2@uthsc.edu. Supplementary data are available online.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Anirban Das",
+      "Yan Cui"
+    ],
+    "doi": "10.64898/2026.05.29.728877",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42282807/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42282807"
+    }
+  },
+  {
+    "paper_id": "pubmed:42282016",
+    "title": "A real-world feasibility evaluation of LLM-based clinical prediction: emergency department return visit admission across two academic medical centers.",
+    "abstract": "Large language models (LLMs) are increasingly applied to clinical prediction tasks and offer significant promise for real-world impact. Whether that promise translates into deployment, however, depends on several feasibility constraints, performance, data requirements, operational cost, and safety, that are rarely evaluated together. Using emergency department (ED) return visit admission (RVA) prediction as a clinical use case, we developed and tested a two-stage LLM-based approach at two academic medical centers. In the first stage, an LLM generates structured severity summaries from ED documentation and structured EHR variables; in the second stage, these summaries inform RVA prediction via zero-shot or in-context learning (ICL). We evaluated the framework on four feasibility axes simultaneously: discrimination performance, data requirements, per-encounter token consumption, and hallucination risk in LLM-generated severity summaries. The LLM-based pipeline outperformed the strongest traditional ML baseline at WCM (Gemini ICL = 3 AUC 0.746 vs. CatBoost AUC 0.723; DeLong p = 0.044), but not at VUMC, where logistic regression on structured data alone (AUC 0.799) matched the best LLM configuration (GPT-5 mini AUC 0.789, n.s.). Absolute discrimination at VUMC was higher than at WCM for both approaches, indicating that the cross-site difference reflects local documentation and structured-data informativeness rather than LLM failure. We find that the deploy-or-not decision for an LLM-based clinical prediction pipeline is primarily a feasibility question first, rather than an architectural one. This decision is site-conditional, tied to how much of the predictive signal is already captured by structured EHR variables at a given site.",
+    "year": 2026,
+    "venue": "Research square",
+    "authors": [
+      "Jinsong Liu",
+      "Katherine Brown",
+      "Michelle J Ma",
+      "Arindam RoyChoudhury",
+      "Bradley A Malin",
+      "Allison McCoy",
+      "Adam Wright",
+      "Jessica S Ancker",
+      "Tony Rosen",
+      "Jin Ho Han",
+      "Peter A D Steel",
+      "Yiye Zhang"
+    ],
+    "doi": "10.21203/rs.3.rs-9733941/v1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42282016/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42282016"
+    }
+  },
+  {
+    "paper_id": "pubmed:42257039",
+    "title": "Cross-lingual transfer with multilingual language models for influenza-like-illness detection in social media texts.",
+    "abstract": "Current Language Models (LMs) can process multilingual texts, enabling social media-based Influenza-Like-Illness (ILI) surveillance across languages without requiring language-specific systems. Yet, it remains unclear whether a cost-effective multilingual classifier can reliably extract ILI signals from social media across countries, languages, and seasons. We introduce MuILI, the first class-balanced multilingual dataset annotated for ILI detection, comprising 4,284 tweets across five widely spoken European languages. Using MuILI, we investigated whether a single multilingual classifier can consistently extract ILI signals across nine ILI seasons for France (2014-2023) and five seasons for Italy, Spain, and Germany (2018-2023). We compared five fine-tuned Multilingual-Masked LMs (MMLMs), three Cross-Lingual Transfer (CLT) strategies, and four In-Context Learning (ICL) techniques with decoder-only Large LMs (LLMs). Domain-adapted MMLMs (Bernice, F1 = 0.87), set the benchmark performance. Comparable results were obtained with translate-train (F1 = 0.85) or model-transfer (F1 = 0.84) from French data alone. Spanish translate-train performed similarly (F1 = 0.84). Among LLMs, only Qwen2.5-72B-Instruct surpassed the benchmark (F1 = 0.88-0.90). Spearman cross-correlation between ILI signals derived from the benchmark classifier and official consultation rates demonstrated strong real-time alignment, though it varied during disruptions. Overall, multilingual LMs can expand ILI surveillance using social-media. CLT offers annotation-efficient solutions, while ICL with LLMs can eliminate annotation requirements but at substantial computational costs.",
+    "year": 2026,
+    "venue": "npj digital public health",
+    "authors": [
+      "Niti Mishra",
+      "Joan Ballester",
+      "Rodrigo Agerri"
+    ],
+    "doi": "10.1038/s44482-026-00020-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42257039/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42257039"
+    }
+  },
+  {
+    "paper_id": "pubmed:42222844",
+    "title": "In-context adaptation of VLMs for few-shot cell detection in optical microscopy.",
+    "abstract": "Foundation vision-language models (VLMs) excel on natural images, but their utility for biomedical microscopy remains underexplored. In this paper, we investigate how in-context learning enables state-of-the-art VLMs to perform few-shot object detection when large annotated datasets are unavailable, as is often the case with microscopic images. We introduce the Micro-OD benchmark, a curated collection of 252 images specifically curated for in-context learning, with bounding-box annotations spanning 11 cell types across four sources, including two in-lab expert-annotated sets. We systematically evaluate eight VLMs under few-shot conditions and compare variants with and without implicit test-time reasoning tokens. We further implement a hybrid Few-Shot Object Detection (FSOD) pipeline that combines a detection head with a VLM-based few-shot classifier, which enhances the few-shot performance of recent VLMs on our benchmark. Across datasets, we observe that zero-shot performance is weak due to the domain gap; however, few-shot support consistently improves detection, with marginal gains achieved after six shots. We observe that some reasoning variant models show task-specific gains, but the effect varies across models and settings. Our results highlight in-context adaptation as a promising research direction requiring further development for microscopy, and our benchmark provides a reproducible testbed for advancing open-vocabulary detection in biomedical imaging. Our project page is at: here.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Shreyan Ganguly",
+      "Angona Biswas",
+      "Jaydeep Rade",
+      "Md Hasibul Hasan Hasib",
+      "Nabila Masud",
+      "Nitish Singla",
+      "Abhipsa Dash",
+      "Ushashi Bhattacharjee",
+      "Soumik Sarkar",
+      "Aditya Balu",
+      "Anwesha Sarkar",
+      "Adarsh Krishnamurthy"
+    ],
+    "doi": "10.3389/frai.2026.1761903",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42222844/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42222844"
+    }
+  },
+  {
+    "paper_id": "pubmed:42221560",
+    "title": "Bayesian Optimization of Catalysis with In-Context Learning.",
+    "abstract": "Large language models (LLMs) can perform accurate classification with zero or few examples through in-context learning (ICL), allowing the model to observe query-relevant examples at inference time and eliminating the need for additional weight updates to generalize beyond its original training data. We extend this capability to regression with uncertainty estimation using frozen LLMs (e.g., GPT-4o, Gemini), enabling Bayesian optimization (BO) in natural language without explicit model training or feature engineering. We apply this to materials discovery by representing materials as synthesis and testing procedures for use in natural language prompts. This Bayesian, design-first approach prioritizes optimization toward target material properties before detailed characterization, in contrast to conventional experimental workflows that often emphasize characterization of suboptimal materials. On benchmarks like aqueous solubility and oxidative coupling of methane (OCM), BO-ICL matches or outperforms Gaussian processes. In live experiments on the reverse water-gas shift (RWGS) reaction, BO-ICL identifies multimetallic catalysts that approach equilibrium CO yield within 6 and 10 iterations from a pool of 3,700 and 360,000 candidates, respectively. Our method redefines materials representation and accelerates discovery, with broad applications across catalysis, materials science, and AI. Code: https://github.com/ur-whitelab/BO-ICL.",
+    "year": 2026,
+    "venue": "ACS central science",
+    "authors": [
+      "Mayk Caldas Ramos",
+      "Shane S Michtavy",
+      "Andrew D White",
+      "Marc D Porosoff"
+    ],
+    "doi": "10.1021/acscentsci.5c02418",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42221560/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42221560"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174970",
+    "title": "From Report to Record: Prompt-Based Information Extraction from Gynecology Oncology Reports Using LLMs.",
+    "abstract": "The growing capabilities of Large Language Models (LLMs) in understanding and generating clinical text are transforming the processing of unstructured medical data. This study presents a prompt-based framework for extracting structured information from Multidisciplinary Tumor Board (MTB) reports on ovarian cancer, written in Italian. Focusing on the anamnestic section, the main features (about Demographic, Scores, Comorbidities, Treatments and Gynecological History) are extracted through in-context learning prompts, and evaluated with the LLM-as-a-judge majority-voting scheme. Results show high accuracy across macroareas and strong agreement among judge models, confirming the robustness of the approach. The occurrence-based analysis further highlights how variable frequency influences extraction reliability, ensuring a more balanced interpretation of model performance. Overall, the framework enables reliable LLM-based information extraction and supports the creation of structured clinical knowledge for oncology applications.",
+    "year": 2026,
+    "venue": "Studies in health technology and informatics",
+    "authors": [
+      "Livia Lilli",
+      "Massimo Criscione",
+      "Giovanni Paolo Tobia",
+      "Federica Tomassini",
+      "Chiara Dachena",
+      "Alice Luraschi",
+      "Andrea Rosati",
+      "Anna Fagotti",
+      "Massimo Bernaschi",
+      "Stefano Patarnello"
+    ],
+    "doi": "10.3233/SHTI260296",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174970/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174970"
+    }
+  },
+  {
+    "paper_id": "pubmed:42166651",
+    "title": "Letter to the Editor: practical follow up to foundation models article.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Physiology (Bethesda, Md.)",
+    "authors": [
+      "Ryan C Godwin",
+      "Kameshwari Soundararajan",
+      "Ryan L Melvin"
+    ],
+    "doi": "10.1152/physiol.00019.2026",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42166651/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42166651"
+    }
+  },
+  {
+    "paper_id": "pubmed:42127208",
+    "title": "RAPTOR: A foundation policy for quadrotor control.",
+    "abstract": "Humans are remarkably data efficient when adapting to previously unseen conditions, like driving a new car. In contrast, modern robotic control systems, like neural network policies trained using reinforcement learning (RL), are highly specialized for single environments. Because of this overfitting, they are known to break down even under small differences like the simulation-to-reality gap and require system identification and retraining for even minimal changes to the system. Here, we present RAPTOR, a method for training a highly adaptive foundation policy for quadrotor control. Our method enables training a single, end-to-end neural network policy to control a wide variety of quadrotors. We tested 10 different real quadrotors, from 32 grams to 2.4 kilograms, that also differed in motor type (brushed versus brushless), frame type (soft versus rigid), propeller type (two, three, or four blades), and flight controller (PX4, Betaflight, Crazyflie, M5StampFly). We found that a tiny, three-layer policy with only 2084 parameters was sufficient for zero-shot adaptation to a wide variety of platforms. The adaptation through in-context learning was made possible by using a recurrence in the hidden layer. The policy was trained through our proposed meta-imitation learning algorithm, where we sampled 1000 quadrotors and trained a teacher policy for each of them using RL. The 1000 teachers were distilled into a single, adaptive student policy. We found that within milliseconds, the resulting foundation policy adapted zero-shot to unseen quadrotors. We tested the capabilities of the foundation policy under numerous conditions (trajectory tracking, indoor/outdoor, wind disturbance, poking, and different propellers).",
+    "year": 2026,
+    "venue": "Science robotics",
+    "authors": [
+      "Jonas Eschmann",
+      "Dario Albani",
+      "Giuseppe Loianno"
+    ],
+    "doi": "10.1126/scirobotics.aec1481",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42127208/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42127208"
+    }
+  },
+  {
+    "paper_id": "pubmed:42116134",
+    "title": "Clinical-ShiftEval: a framework for simulating and evaluating model adaptation in dynamic clinical NLP tasks.",
+    "abstract": "Clinical natural language processing (NLP) models are widely used to extract information from electronic health records (EHR) and support healthcare decision-making. However, most existing models are evaluated under the assumption of static data distributions and fixed task definitions, overlooking the dynamic and evolving nature of real clinical environments. Distributional changes arising from updated guidelines, emerging diseases, or institutional restructuring can lead to substantial model degradation in practice. We introduce Clinical-ShiftEval, a framework designed to simulate and evaluate model adaptation in dynamic clinical NLP tasks using real-world clinical text data. Our framework parameterizes two prevalent types of evolution observed in healthcare: (1) label-set incompatibility (LSI), where the set of prediction targets changes over time, and (2) task definition evolution (TDE), where the clinical meaning or labeling rule is revised. These changes are operationalized through controlled transitions between two periods in real datasets. As a case study, we applied Clinical-ShiftEval to the Chilean Waiting List Corpus, using referral specialty classification to model LSI and disease prioritization to model TDE, and systematically compared continual training, in-context learning with large language models, and a hybrid approach. We validated that Clinical-ShiftEval reliably simulates realistic levels of clinical change and produces controlled, interpretable performance drops. This confirms its utility as a framework to generate reproducible scenarios for benchmarking model robustness. As a case study, we compared multiple model adaptation strategies under LSI and TDE. Conventional supervised models showed severe degradation under these shifts (up to a drop of 82% F1 in LSI and 43% in TDE). In contrast, in-context learning reduced the drop to 35% in LSI and 10% in TDE, while a hybrid method further improved robustness, limiting the drop to approximately 8% in both settings. Continual adaptation with incremental retraining gradually restored performance, but only surpassed in-context and hybrid approaches after incorporating at least 30% of data from the second period. Clinical-ShiftEval enables robust benchmarking of model adaptation in realistic, dynamic settings using authentic EHR text. Both in-context learning and hybrid approaches substantially mitigate the impact of evolving clinical data, achieving strong performance even without access to new labeled data. For optimal recovery of baseline accuracy, continual training with a moderate amount of new data is most effective, eventually surpassing the other methods as more new data become available. These findings provide practical guidance for the deployment of resilient NLP models in dynamic healthcare settings.",
+    "year": 2026,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Fabián Villena",
+      "Felipe Bravo-Marquez",
+      "Jocelyn Dunstan"
+    ],
+    "doi": "10.1186/s12911-026-03538-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42116134/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42116134"
+    }
+  },
+  {
+    "paper_id": "pubmed:42113780",
+    "title": "Extracting user profile via large language models and ontologies.",
+    "abstract": "Extracting user-specific profiles that include general personal information, such as hobbies, occupation, or age, is a valuable asset for systems like recommendation engines or personalized chatbots. Currently, most approaches moved toward exploiting the capabilities of large language models (LLMs) on rich languages while less-resourced languages still present significant opportunities for exploration and improvement. In this research, we present a multi-step approach for profile extraction from dialogue systems in Persian as a use case. Through an extensive set of experiments and analyses on various models, we show that LLMs struggle with these languages due to limited language-specific resources and complex linguistic structures. To address this, we propose a hybrid method that combines techniques such as slot filling, in-context learning, and ontology-based inference. Our final results demonstrate a significant improvement over current state-of-the-art models, including LLMs with few-shot examples and even their fine-tuned version. Our method achieves an F-score of 90.46, outperforming GPT-4o and Llama-3-70B by an absolute difference of 17.08 and 24.51 respectively. Our system can also detect inconsistencies in presented information in which our performance substantially exceeds the best performance of GPT-4o and Llama-3-70B with an accuracy of 92%. It is 21% absolutely better than GPT-4o and 47% better than Llama.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Pegah Safari",
+      "Mehrnoush Shamsfard"
+    ],
+    "doi": "10.1371/journal.pone.0329934",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42113780/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42113780"
+    }
+  },
+  {
+    "paper_id": "pubmed:42081430",
+    "title": "Advancing In-Context Learning for Efficient and Stable Medical Report Generation.",
+    "abstract": "Vision-language models (VLMs) have shown strong generalization across multimodal tasks, but adapting them to medical report generation (MRG) often demands extensive paired image-text data that are limited due to data privacy and annotation cost. In-context learning (ICL) offers a promising training-free alternative, yet standard ICL approaches rely on long demonstration prompts that are computationally inefficient and often yield inconsistent or clinically inaccurate descriptions. To address these challenges, we propose Principal In-Context Vectors (PCVs), a compact latent-guidance framework that distills multimodal demonstrations into stable semantic representations. By extracting hidden states from auto-regressive VLMs and applying principal component analysis (PCA), we identify robust semantic directions that remain stable under input perturbations. These PCVs are then injected into new queries to steer generation toward accurate and clinically meaningful outputs without any model tuning. Extensive experiments on four MRG benchmark datasets show that our approach can enhance both zero-shot and fully supervised generation quality across diverse settings, including cross-center, cross-disease, and longitudinal scenarios. This work provides a lightweight and scalable approach to adapt pre-trained VLMs for practical clinical deployment.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Mingjie Li",
+      "Rui Liu",
+      "Zeyi Shi",
+      "Mingfei Han",
+      "Lina Yao",
+      "Zhihui Li",
+      "Xiaojun Chang",
+      "Kilian M Pohl",
+      "Md Tauhidul Islam",
+      "Lei Xing"
+    ],
+    "doi": "10.1109/TPAMI.2026.3689780",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42081430/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42081430"
+    }
+  },
+  {
+    "paper_id": "pubmed:42076658",
+    "title": "A Training-Free Paradigm for Data-Scarce Maritime Scene Classification Using Vision-Language Models.",
+    "abstract": "Maritime Domain Awareness (MDA) relies heavily on data acquired from high-resolution optical spaceborne sensors; however, processing this massive quantity of sensor data via traditional supervised deep learning is severely bottlenecked by its dependency on exhaustively annotated datasets. Under extreme data scarcity, conventional architectures suffer severe performance degradation, rendering them impractical for time-critical, zero-day deployments. To overcome this barrier, we propose a training-free inference paradigm that leverages the extensive pre-trained knowledge of Large Vision-Language Models (VLMs). Specifically, we introduce a Domain Knowledge-Enhanced In-Context Learning (DK-ICL) framework coupled with a Macro-Topological Chain-of-Thought (MT-CoT) strategy. This approach bridges the perspective gap between natural images and top-down optical sensor imagery by translating expert remote sensing heuristics into a strict, step-by-step reasoning pipeline. Extensive evaluations demonstrate the substantial efficacy of this framework. Armed with merely 4 visual exemplars per category as in-context triggers, our MT-CoT augmented VLMs outperform traditional models trained under identical scarcity by over 38% in F1-score. Crucially, real-world case studies confirm that this zero-gradient approach maintains robust generalization on unannotated, out-of-distribution coastal clutters, achieving performance parity with data-heavy networks trained on 50 times the data volume. By substituting massive human annotation and GPU optimization with scalable logical deduction, this paradigm establishes a resource-efficient foundation for next-generation intelligent maritime sensing networks.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Jiabao Wu",
+      "Yujie Chen",
+      "Wentao Chen",
+      "Yicheng Lai",
+      "Junjun Li",
+      "Xuhang Chen",
+      "Wangyu Wu"
+    ],
+    "doi": "10.3390/s26082549",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42076658/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42076658"
+    }
+  },
+  {
+    "paper_id": "pubmed:42072262",
+    "title": "Using Large Language Models to Generate Dietary Feedback Similar to Human Experts in Weight Management: Experiments on Real-World Scenario Data.",
+    "abstract": "Providing dietary feedback is important for promoting healthy behaviors in weight management, but the rapid development of obesity and the shortage of medical nutrition human resources have limited this health service. The rise of large language models (LLMs) offers the possibility of using artificial intelligence (AI) to simulate the behavior of human dietitians. However, existing studies have only explored LLM performance when generating answers to common nutrition-related questions; the use of LLMs to generate situation-adapted dietary feedback in practical weight management scenarios still needs further research. In this study, we collected dietary records and dietary feedback from primary dietitians through an mHealth weight management application. We conducted topic modeling to generalize how dietitians deliver nutrition guidance in real-world dietary feedback scenarios. Combining the in-context learning capability of LLMs with real-world data, we proposed a synthetic data generation approach (HDI-SDG) and trained an LLM for dietary feedback with the synthetic data (LLMDF-EXP). Experiments on automatic and manual evaluation of LLMDF-EXP and an LLM trained directly with the real-world data as well as generalized LLMs illustrated that LLMDF-EXP performed most similarly to human experts. Notably, there were no significant differences from human experts in terms of professionalism (",
+    "year": 2026,
+    "venue": "Bioengineering (Basel, Switzerland)",
+    "authors": [
+      "Ruixin Dai",
+      "Liping Cui",
+      "Kun Hu",
+      "Jiye An",
+      "Ning Deng"
+    ],
+    "doi": "10.3390/bioengineering13040468",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42072262/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42072262"
+    }
+  },
+  {
+    "paper_id": "pubmed:42069931",
+    "title": "Visual information extraction from documents via classification-guided large vision-language models.",
+    "abstract": "Visual information extraction (VIE) from visually rich documents remains challenging due to high layout variability and real-world impairments. Existing methods typically rely on sequential OCR pipelines or end-to-end models requiring extensive labeled data and layout-specific training, limiting their scalability. We propose a classification-guided large vision-language model (LVLM) framework for multi-type VIE that achieves high accuracy with minimal supervision. The approach decouples document-type classification from content extraction and employs in-context learning (ICL)-based dynamic prompt engineering to inject task-specific knowledge, enabling robust zero-shot inference across diverse layouts. From a theoretical perspective, the proposed method can be viewed as a form of conditional computation that reduces task uncertainty and improves information efficiency during prompt-based inference. Evaluated on a real-world bidding dataset with 16 certificate types, our zero-shot method (based on Qwen2.5-VL-7B) outperforms a strong supervised baseline by 18.35 percentage points in F1-score (86.43% vs. 68.08%) and 0.23 in normalized edit distance (0.90 vs. 0.67). Optional domain-specific fine-tuning further improves performance to 93.65% F1 and 0.93 NED, demonstrating superior robustness against seals, watermarks, and low contrast. The framework offers an efficient, scalable solution for complex document understanding in office automation. Code is available at https://github.com/FairmeHIT/Multi-VIE , and fine-tuned models at https://huggingface.co/fairme/Qwen2.5-VL-7B-SFT .",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Huafu Li",
+      "Guo Chen",
+      "Jia Xia",
+      "Lei Wang",
+      "Wei Du",
+      "Yun Yao",
+      "Weijun Peng",
+      "Liming Li"
+    ],
+    "doi": "10.1038/s41598-026-49319-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42069931/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42069931"
+    }
+  },
+  {
+    "paper_id": "pubmed:42048554",
+    "title": "Data-Efficient Language Model for Assessing Pulmonary Embolism Diagnostic Certainty From Radiology Reports: Model Development and Validation Study.",
+    "abstract": "Computed tomography pulmonary angiography (CTPA) is the standard imaging modality for diagnosing pulmonary embolism (PE), but diagnostic uncertainty is common due to technical limitations and vague language, leading to inconsistent interpretation and clinician frustration. This study develops a prompt-free, data-efficient method for assessing diagnostic certainty of PE in CTPA reports using small pretrained language models. This study examined 173 consecutive CTPA reports from UMass Memorial Health, each annotated by 3 radiologists for PE diagnostic certainty. We developed PECertainty, a lightweight, prompt-free model, and compared it with advanced large language model (LLM)-based methods under limited supervision settings. Baselines included prompt-free methods (support vector machine, random forest, and RoBERTa [Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach]) and prompt-dependent methods (LLM fine-tuning, in-context learning, and ADAPET [A Densely-Supervised Approach to Pattern Exploiting Training]; UNC Chapel Hill) with open-source Gemma3-4B (Google DeepMind) and Llama3.2-3B (Meta), and the proprietary GPT-3.5 (OpenAI). Sensitivity analyses evaluated performance with 1 to 10 training examples per category for the top performer. Model performance was evaluated against radiologist annotations. External validation on 420 CTPA reports from the Baystate Medical Center, with validation limited to distinguishing certain from uncertain reports. Interpretability of the top-performing models (PECertainty and GPT-3.5) was evaluated using integrated gradients and prompt-based explanations reviewed by radiologists. Among prompt-dependent methods, GPT-3.5 fine-tuning (F1-score 0.86; 95% CI 0.71-1.0) and in-context learning (F1-score 0.87; 95% CI 0.71-1.0) performed best, and the performance of in-context learning consistently outperformed 0-shot learning for Gemma3-4B (F1-score 0.63, 95% CI 0.56-0.79 vs F1-score 0.45; 95% CI 0.29-0.56) and Llama3.2-3B (F1-score 0.54; 95% CI 0.41-0.71 vs F1-score 0.43, 95% CI 0.28-0.62). PECertainty demonstrated numerically better or equivalent performance compared with both the top-performing prompt-dependent methods and all prompt-free baselines. Compared with fine-tuned ClinicalBERT (Bidirectional Encoder Representations From Transformers Pretrained on Clinical Text), PECertainty achieved statistically significant improvements across all metrics (paired bootstrap significance test, P<.05). RoBERTa (Robustly Optimized Bidirectional Encoder Representations From Transformers Pretraining Approach) fine-tuning lagged (F1-score 0.52; 95% CI 0.35-0.71), and simple models such as support vector machine underperformed. In few-shot settings (10 examples/category), PECertainty (F1-score 0.80; 95% CI 0.59-0.94) outperformed both GPT-3.5 fine-tuning (F1-score 0.74; 95% CI 0.58-0.88) and in-context learning (F1-score 0.65; 95% CI 0.47-0.83). External validation on the Baystate dataset showed good generalization for distinguishing certain from uncertain cases (F1-score 0.77; 95% CI 0.70-0.83). Despite its strong performance, PECertainty was rated as less interpretable than fine-tuned GPT-3.5 by radiologists (t test, P<.05). PECertainty enables accurate and data-efficient assessment of diagnostic certainty from free-text CTPA reports in low-resource settings. As an open-source, lightweight alternative to proprietary LLMs, it may support more precise communication between radiologists and referring physicians, with interpretability identified as a key direction for improvement.",
+    "year": 2026,
+    "venue": "JMIR medical informatics",
+    "authors": [
+      "Feifan Liu",
+      "Ruofan Hu",
+      "Donghyuk Kim",
+      "Hao Lo",
+      "Yevgeniy Kharonov",
+      "Ansh Johri",
+      "Ben S Gerber",
+      "Elke Rundensteiner",
+      "Lauren M Westafer",
+      "Jeroan Allison",
+      "Catarina Kiefe",
+      "Alexander Bankier",
+      "Max P Rosen"
+    ],
+    "doi": "10.2196/79972",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42048554/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42048554"
+    }
+  },
+  {
+    "paper_id": "pubmed:42046957",
+    "title": "An image-based food quality analysis framework driven by large language models.",
+    "abstract": "Although computer vision approaches based on machine learning (ML) and deep learning (DL) have been applied to image-based food quality analysis, they typically require large labeled datasets, intensive training, and expert knowledge. Recent advances in large language models (LLMs) have enabled enhanced reasoning capabilities and flexible multimodal perception. In this work, an LLM-driven vision inspection framework featuring two inference routes was developed. The text-only inference (TOI) converts pre-extracted image features into structured textual prompts for LLM-based reasoning. The vision-language inference (VLI) directly processes raw food images using LLMs with built-in visual encoders, enabling end-to-end multimodal inference. A lightweight graphical user interface (GUI) was integrated to automate feature extraction and structured data generation with one-click operation. Several state-of-the-art LLMs were evaluated on food ripeness, freshness, and authenticity datasets. Using GPT-5, the TOI approach attained an accuracy of 1.000 on low-complexity datasets and maintained strong performance (0.875) on more complex tasks, while the VLI approach demonstrated consistently high accuracy (0.964-1.000) with substantially fewer training images, matching or surpassing traditional ML and DL baselines. The proposed framework relies solely on prompt-based in-context learning, eliminating task-specific fine-tuning. These results demonstrate the feasibility and practicality of efficient, fine-tuning-free, LLM-driven vision inspection for food quality analysis.",
+    "year": 2026,
+    "venue": "Analytical methods : advancing methods and applications",
+    "authors": [
+      "Xiao-Yue Yin",
+      "Hai-Long Wu",
+      "Luo-Yuan Han",
+      "Ye He",
+      "Xiao-Zhi Wang",
+      "Tong Wang",
+      "Ru-Qin Yu"
+    ],
+    "doi": "10.1039/d6ay00214e",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42046957/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42046957"
+    }
+  },
+  {
+    "paper_id": "pubmed:42038995",
+    "title": "Self-Contemplating In-Context Learning Enhances T Cell Receptor Generation for Novel Epitopes.",
+    "abstract": "Computational design of T cell receptors (TCRs) that bind to epitopes holds the potential to revolutionize targeted immunotherapy. However, computational design of TCRs for novel epitopes is challenging due to the scarcity of training data, and the absence of known cognate TCRs for novel epitopes. In this study, we aim to generate high-quality cognate TCRs particularly for ",
+    "year": 2025,
+    "venue": "Proceedings of machine learning research",
+    "authors": [
+      "Pengfei Zhang",
+      "Sonal Sujit Prabhu",
+      "Gloria Grama",
+      "Seojin Bang",
+      "Heewook Lee"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42038995/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42038995"
+    }
+  },
+  {
+    "paper_id": "pubmed:42004884",
+    "title": "Can You Help ChatGPT Get an \"A\" in Organic Chemistry? Teaching Effective Prompting of Large Language Models for Reaction Prediction.",
+    "abstract": "As generative artificial intelligence (AI) tools such as large language models (LLMs) become widespread, they are increasingly finding applications in chemical sciences. Although LLMs have achieved impressive performance in many chemistry tasks, optimal performance requires proper use, including appropriate prompting techniques. Chemistry students are not generally taught strategies for effective LLM usage, especially for nonwriting tasks. Here we report an activity that introduces organic chemistry students to the use of LLMs such as ChatGPT for predicting the outcome of chemical reactions, specifically the types of alkene addition reactions taught in introductory organic chemistry courses. This activity exposes students to molecular representations, digitization of chemical reactions, train-test splitting practices for evaluating performance, and generalizable LLM prompting strategies, namely, the Five \"S\" prompt-writing approach and in-context learning. We tested this activity with chemistry students in the USA and in Austria and evaluated the activity through anonymous pre- and postlab surveys. Survey data revealed that students felt that they achieved their learning goals and that the activity was enjoyable. As chemistry students will inevitably interact with LLMs in their future careers, it is important to teach best practices for the effective and critical use of these tools in the context of chemistry.",
+    "year": 2026,
+    "venue": "Journal of chemical education",
+    "authors": [
+      "Elizabeth S Thrall",
+      "Olivia M Vanden Assem",
+      "Julia A Schneider",
+      "Joshua Schrier",
+      "Sebastian Tassoti"
+    ],
+    "doi": "10.1021/acs.jchemed.5c01712",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42004884/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42004884"
+    }
+  },
+  {
+    "paper_id": "pubmed:41989909",
+    "title": "From Image to Pixels: towards Fine-Grained Medical Vision-Language Models.",
+    "abstract": "Multimodal large language models (MLLMs) offer immense potential for biomedical AI, yet current applications remain limited to coarse-grained image understanding and basic textual queries-falling short of the fine-grained reasoning required in clinical contexts. In this work, we present a comprehensive solution spanning data, model, and training innovations to advance pixel-level multimodal intelligence in biomedicine. First, we construct MeCoVQA, a new visual-language benchmark that spans eight medical imaging modalities and four core tasks, supporting both spatially-grounded reasoning and fine grained diagnostic comprehension. Building on this, we introduce MedPLIB, an end-to-end biomedical MLLM equipped with pixel level visual understanding. MedPLIB supports diverse multi modal tasks-including VQA, point- and region-based querying, grounding, and segmentation-through unified modeling. To further accommodate the heterogeneous nature of biomedical tasks, we design a task-specialized Mixture-of-Experts (MoE) architecture, where each expert is tailored to a specific task and jointly optimized via unified fine-tuning. This modular design accommodates diverse biomedical tasks while maintaining a unified and efficient architecture. By integrating retrieval-augmented generation (RAG) and in-context learning (ICL), MedPLIB also demonstrates strong generalization on out-of-distribution (OOD) medical image segmentation. Experiments across multiple benchmarks show that MedPLIB sets a new state-of-the-art on biomedical vision-language tasks; notably, it outperforms the best existing small and large models by 19.7 and 15.6 mDice in zero shot pixel-level grounding, highlighting its clinical utility and generalization strength. Code and data are publicly available at GitHub: https://github.com/ShawnHuang497/MedPLIB.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Lingdong Shen",
+      "Xiaoshuang Huang",
+      "Fangxin Shang",
+      "Xudong Zhang",
+      "Yehui Yang",
+      "Bin Fan",
+      "Shiming Xiang"
+    ],
+    "doi": "10.1109/TPAMI.2026.3682684",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41989909/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41989909"
+    }
+  },
+  {
+    "paper_id": "pubmed:41967315",
+    "title": "TrCLIP-VAD : Weak supervised video anomaly detection by improving CLIP training with text rewriting.",
+    "abstract": "The existing video anomaly detection (VAD) methods based on the contrastive language-image pre-training (CLIP) framework primarily rely on spatial-temporal features and label prompts, often overlooking high-level semantic information, such as text descriptions of abnormal behavior. Moreover, while data augmentation techniques are commonly used to expand video frames, text inputs typically remain unchanged throughout the training process, limiting the exposure of different texts to the same image. In this paper, we propose a text rewriting based CLIP model called TrCLIP-VAD. It first generates source caption descriptions for each video and then utilizes the In-Context Learning (ICL) capabilities of large language models (LLMs) to rewrite these captions, thereby enhancing semantic expression. Subsequently, we randomly select a caption and fuse it with visual features to detect anomalies. In addition, we introduce the Local-Global Multi-scale Mamba (LGM-Mamba) module. The LGM-Mamba module aims to capture the local-global temporal dependence of frame sequence and promote the deep fusion of visual and caption features to improve the detection performance. The experimental results show that TrCLIP-VAD achieves state-of-the-art performance on two widely used datasets, XD-Violence and UCF-Crime. Specifically, TrCLIP-VAD achieves 86.05% AP scores on XD-Violence dataset and 88.59% AUC scores on UCF-Crime dataset. The code is released at https://github.com/vpsg-research/TrCLIP-VAD.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Shengjie Shen",
+      "Ziteng Guo",
+      "Yahui Li",
+      "Liejun Wang",
+      "Zhiqing Guo"
+    ],
+    "doi": "10.1016/j.neunet.2026.108951",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41967315/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41967315"
+    }
+  },
+  {
+    "paper_id": "pubmed:41965610",
+    "title": "Automated scout-image-based estimation of contrast agent dosing: a deep learning approach.",
+    "abstract": "Optimal contrast agent dosing in computed tomography (CT) depends on accurate patient weight, yet manual measurements increase workload and self-reporting can introduce bias. We developed and tested a deep-learning-based algorithm to automate the approximation of contrast agent dosage directly from CT scout images. We retrospectively analyzed 817 patients undergoing thorax/abdomen CT. Prior to examination, patient weight was collected via manual scale measurements and self-reporting. We developed an EfficientNet convolutional neural network pipeline to estimate weight from scout images and used in-context learning and dataset distillation to analyze body-weight-informative CT features. The model was used in a browser-based user interface to provide dosing estimates for various contrast agent compounds. Self-reported patient weights were statistically significantly lower than manual scale measurements (75.13 kg vs. 77.06 kg; p < 10 This open-source deep learning pipeline enables automatic, accurate contrast agent dosing in routine CT workflows. The approach has the potential to improve patient safety and clinical efficiency by providing accurate weight estimates without requiring additional measurements or relying on potentially outdated records. Further validation on larger cohorts and across different clinical centers is required.",
+    "year": 2026,
+    "venue": "BMC medical imaging",
+    "authors": [
+      "Robin Tibor Schirrmeister",
+      "Laetitia Taleb",
+      "Paul Friemel",
+      "Marco Reisert",
+      "Fabian Bamberg",
+      "Jakob Weiß",
+      "Alexander Rau"
+    ],
+    "doi": "10.1186/s12880-026-02331-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41965610/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41965610"
+    }
+  },
+  {
+    "paper_id": "pubmed:41965168",
+    "title": "Towards generalizable pathology reports via a multimodal LLM with the multicenter in-context learning.",
+    "abstract": "Pathology report generation has received increasing attention in recent years. However, existing pathology report generation methods still face two main limitations: (1) these methods utilize image-report datasets where some report contents are irrelevant to the given whole slide image (WSI), making it unreliable to train an AI model to generate such content; (2) existing methods trained on data from internal hospitals struggle to generalize to external hospitals due to significant and inevitable textual discrepancies across multiple centers. To address these challenges, we first introduce a multicenter microscopic findings (MMF) dataset, which consists of WSIs and corresponding reports of lung adenocarcinoma from multiple hospitals. The MMF dataset is designed to enable the model to generate relevant report contents and evaluate its generalization to external hospitals. Second, we propose a novel Multicenter In-Context Learning (MICL) method that effectively generalizes the model to external hospitals without the need for fine-tuning. Third, we propose a new WSI-MLLM that incorporates gigabyte-sized WSIs and their image pyramid structure into MLLMs for the first time. Experiments demonstrate that WSI-MLLM significantly outperforms existing pathology report generation methods, and MICL effectively accommodates multicenter discrepancies, achieving consistent performances across hospitals and improving BLEU-4 scores by up to 26.04%. These findings underscore the effectiveness of our WSI-MLLM and MICL in generating high-quality, generalizable pathology reports. This project is available at https://huggingface.co/datasets/yili7eli/MMF.",
+    "year": 2026,
+    "venue": "Medical image analysis",
+    "authors": [
+      "Yi Li",
+      "Zhihao Lin",
+      "Qixiang Zhang",
+      "Xinpeng Ding",
+      "Honglong Yang",
+      "Linjing Pi",
+      "Wei Yuan",
+      "Yongqin Wen",
+      "Linglang Guo",
+      "Qingling Zhang",
+      "Xiaomeng Li"
+    ],
+    "doi": "10.1016/j.media.2026.104060",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41965168/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41965168"
+    }
+  },
+  {
+    "paper_id": "pubmed:41965069",
+    "title": "Accurate SPARQL generation via in-context learning and schema-based query construction.",
+    "abstract": "Integrated analysis across biological databases is becoming increasingly important in life science research, leading many public databases to adopt Semantic Web technologies, also known as knowledge graphs. However, biological data possesses inherently complex and diverse structures, which makes the resulting Resource Description Framework (RDF) schemas intricate and difficult for non-expert users to master, preventing them from translating natural language questions into correct SPARQL queries. Although recent large language model (LLM)-based approaches show potential for automatic SPARQL query generation, they often suffer from structural hallucinations and require large-scale training data to capture schema-specific structures. In this study, we propose a novel framework that avoids hallucinations and requires no training data by combining LLM-based word extraction with a schema-based SPARQL query builder. The LLM extracts variables and parameters from the user's question based on a predefined schema, and the query builder generates a syntactically correct SPARQL query accordingly. By providing a predefined schema in prompts, our method eliminates the need for training data. Experimental results on UniProt, Rhea, and Bgee demonstrate that our method outperforms baseline LLM-based methods using fine-tuning and prompt-tuning in terms of the similarity between search results obtained from generated and expert-written queries. Furthermore, we developed a proof-of-concept chatbot system that enables users to query RDF databases via natural language input, demonstrating the practical utility of our approach in improving access to biological data resources. Experimental environment: https://github.com/scott2121/sparql_query_generator (DOI: https://doi.org/10.5281/zenodo.18539213). Chatbot: https://github.com/scott2121/sparql_query_chatbot (DOI: https://doi.org/10.5281/zenodo.18539225).",
+    "year": 2026,
+    "venue": "Bioinformatics (Oxford, England)",
+    "authors": [
+      "Hikaru Nagazumi",
+      "Yuki Moriya",
+      "Shuichi Kawashima",
+      "Toshiaki Katayama",
+      "Kana Shimizu"
+    ],
+    "doi": "10.1093/bioinformatics/btag174",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41965069/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41965069"
+    }
+  },
+  {
+    "paper_id": "pubmed:41959732",
+    "title": "Detecting stress from videos via intra-subject and inter-subject learning.",
+    "abstract": "Mental stress poses a growing threat to public health, yet video based stress detection remains challenging because of substantial inter individual variability in physiological and expressive responses. To address this issue, we propose a novel two level learning framework grounded in allostasis theory, where stress is modeled as a personalized deviation from an individual's physiological baseline rather than as an absolute state. We introduce CalmScore, a metric based on resting heart rate variability, to robustly identify each subject's most relaxed reference state. Building on this reference, an intra subject Physiological Discrepancy based Representation Adaptive Modulation module computes multimodal deviations between the current state and the resting state, and further modulates them using resting heart rate variability as a proxy for regulation capacity. In addition, an inter subject analogical reasoning mechanism based on In Context Instruction Tuning retrieves physiologically similar peers and provides stressed, unstressed, and resting examples for contextual calibration. Extensive experiments on the UVSD, RSL, and MUSE datasets demonstrate the effectiveness of the proposed framework. Our method achieves state of the art F1 scores of 96.85% on UVSD and 88.67% on RSL, surpassing the strongest baseline. Ablation studies further verify the necessity of each component. The results show that robust video based stress detection benefits from modeling individualized deviations and interpreting them through group level physiological analogy.",
+    "year": 2026,
+    "venue": "Health information science and systems",
+    "authors": [
+      "Yang Ding",
+      "Yi Dai",
+      "Lei Cao",
+      "Junrui Tian",
+      "Zexi Lin",
+      "Ling Feng"
+    ],
+    "doi": "10.1007/s13755-026-00450-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41959732/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41959732"
+    }
+  },
+  {
+    "paper_id": "pubmed:41959091",
+    "title": "Temporal AI model predicts drivers of cell state trajectories across human aging.",
+    "abstract": "Foundational AI models have recently shown promise for predicting the impact of perturbations on cell states. However, current models typically consider only one cell state at a time, limiting their ability to learn how cellular responses unfold over time, particularly across long trajectories such as diseases of aging. Here, we develop a temporal AI model, MaxToki, trained on nearly 1 trillion gene tokens including cell state trajectories across the human lifespan to generate cell states across long timelapses of human aging. MaxToki generalized to unseen trajectories through in-context learning and predicted novel age-modulating targets that were experimentally verified to influence age-related gene programs and functional decline in vivo. MaxToki represents a promising strategy for temporal modeling to accelerate the discovery of interventions for programming therapeutic cellular trajectories.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Javier Gómez Ortega",
+      "Rangarajan D Nadadur",
+      "Akira Kunitomi",
+      "Steven Kothen-Hill",
+      "Julian U G Wagner",
+      "Sarp D Kurtoglu",
+      "Bumjoon Kim",
+      "Madigan M Reid",
+      "Thomas Lu",
+      "Kaho Washizu",
+      "Lukas Zanders",
+      "Han Chen",
+      "Yujie Zhang",
+      "Sarah Ancheta",
+      "Sara Lichtarge",
+      "William A Johnson",
+      "Chris Thompson",
+      "Dereck M Phan",
+      "Alexis J Combes",
+      "Andrew C Yang",
+      "Neha Tadimeti",
+      "Stefanie Dimmeler",
+      "Shinya Yamanaka",
+      "Michael Alexanian",
+      "Christina V Theodoris"
+    ],
+    "doi": "10.64898/2026.03.30.715396",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41959091/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41959091"
+    }
+  },
+  {
+    "paper_id": "pubmed:41955152",
+    "title": "Learn From Examples: In-Context Learning for Camouflaged Object Detection.",
+    "abstract": "Recently, new paradigms of camouflaged object detection (COD), such as referring COD (Ref-COD) and collaborative COD (Co-COD), have been proposed to enhance task performance. However, there remains a lack of in-depth exploration of how to utilize reference information more effectively. In this paper, we introduce in-context learning camouflaged object detection (ICL-COD) as a novel paradigm of COD, which leverages camouflaged image samples and their corresponding annotations as visual examples to guide the model in better perceiving camouflage and recognizing camouflaged objects. We propose the ICL-Camo network, with the design of a context mining module (CMM) to mine fine-grained contextual information contained in the visual examples, and a context guiding module (CGM) that utilizes the contextual information mined from the examples as guidance to shift the attention of the target image features on potential camouflaged regions, thus enhancing its perception of camouflaged objects. Extensive experiments conducted on the COD benchmarks and other relevant tasks demonstrate the effectiveness of our proposed ICL-COD paradigm and ICL-Camo network. Code and results are available at: https://github.com/h0t-zer0/ICL-Camo.",
+    "year": 2026,
+    "venue": "IEEE transactions on image processing : a publication of the IEEE Signal Processing Society",
+    "authors": [
+      "Chunyuan Chen",
+      "Weiyun Liang",
+      "Ji Du",
+      "Jing Xu",
+      "Ping Li",
+      "Guiling Wang"
+    ],
+    "doi": "10.1109/TIP.2026.3680717",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41955152/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41955152"
+    }
+  },
+  {
+    "paper_id": "pubmed:41945831",
+    "title": "DreamFuse: Towards Realistic and Seamless Image Fusion Across Diverse Scenarios.",
+    "abstract": "Image fusion seeks to seamlessly integrate fore ground objects with background scenes, producing realistic and harmonious fused images. While existing methods often insert objects directly, adaptive and interactive fusion-requiring contextual adaptation and foreground-background interplay-remains a challenging yet critical task. To address this, we first propose a pipeline for generating high-quality fusion data. By combining iterative in-context learning with existing tools, we curate a diverse cross-scene dataset supporting three core tasks: object integration, replacement, and attribute-referenced editing. Lever aging this, we introduce DreamFuse, a unified diffusion-based approach that jointly optimizes these capabilities. DreamFuse exploits the Diffusion Transformer (DiT) architecture, using its attention mechanism to extract and align foreground-background features for coherent fusion. For flexible control, we incorporate a Positional Affine mechanism, enabling precise spatial and scale adjustments while supporting diverse text-driven fusion. Fur thermore, we employ Localized Direct Preference Optimization (L-DPO), refining the model via human feedback to enhance harmony and consistency. Extensive experimental results demon strate DreamFuse's superiority over state-of-the-art approaches across multiple metrics.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Junjia Huang",
+      "Pengxiang Yan",
+      "Jiyang Liu",
+      "Jie Wu",
+      "Zhao Wang",
+      "Yitong Wang",
+      "Xinglong Wu",
+      "Liang Lin",
+      "Guanbin Li"
+    ],
+    "doi": "10.1109/TPAMI.2026.3680535",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41945831/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41945831"
+    }
+  },
+  {
+    "paper_id": "pubmed:41921209",
+    "title": "Training an AI Chatbot to Manage Health in Underserved Populations: Methodological Approach.",
+    "abstract": "Health disparities such as morbidity and mortality among childbearing women remain high in the United States, especially among those with risks associated with criminal legal system involvement. These underserved women are often managed through community supervision such as probation. They have many needs and could benefit from easily accessible mobile health (mHealth) apps that specifically target their health and safety using artificial intelligence (AI). The purpose of this methodological case study is to provide our detailed strategies and findings for systematically designing, optimizing, and testing an AI chatbot. This methodological case study used an mHealth app's AI chatbot, JUN, that involved preliminary studies and development efforts to support childbearing women on community supervision. We applied the Information Systems Research framework to guide the steps on how we designed, tailored, configured, and tested the chatbot using a retrieval-augmented generation framework. We demonstrated the feasibility of using an in-context learning approach addressing relevance, design, and rigor cycles. During both crisis and noncrisis situations, the JUN chatbot had an overall performance of 89% accuracy (N=178) in detecting a \"crisis.\" Qualitative findings displayed increased usability of JUN to manage health at night by participants. The findings also demonstrated that the role of caregiving or current pregnancy was a motivating factor to manage health using technology such as the JUN app. Collectively, the sample expressed that barriers to managing their health effectively were associated with limited transportation, time off work, and insurance coverage. Participants in the community supervision group also described that stress related to criminal legal system involvement put limitations in how they managed their health and well-being. Altogether, participants from both groups discussed how an anonymous chat feature and app store accessibility would enhance the usability and acceptability of JUN among users. Pregnant women used the app to manage feelings of fatigue, shortness of breath, food cravings, anxiety, confidence, determination, frustration, excitement, happiness, hopefulness, irritation, love, as well as acknowledgment of their own feelings. Pregnant participants on community supervision had more housing (P=.05) and food (P=.01) insecurity, worry about electricity being turned off (P=.04), and needing resources (P=.01) compared to pregnant women without community supervision. We illustrate the methodological case study to design, optimize, and test an AI chatbot within an mHealth app to provide health and safety-related support for childbearing women on community supervision. This methodological case study poses possibilities for further development and testing of interventions for populations with similar risks to their health and safety. ClinicalTrials.gov NCT06636110; https://clinicaltrials.gov/ct2/show/NCT06636110.",
+    "year": 2026,
+    "venue": "JMIR AI",
+    "authors": [
+      "Allison Diane Ihle",
+      "Breann Wicks",
+      "Vangelis Metsis",
+      "Autumn Starfall",
+      "Fleur Clapham",
+      "Aleksei Gorbachev",
+      "Sean Shanley",
+      "Christina Strauser",
+      "Jacqueline M McGrath"
+    ],
+    "doi": "10.2196/84145",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41921209/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41921209"
+    }
+  },
+  {
+    "paper_id": "pubmed:41915520",
+    "title": "ConfIC-RCA: Statistically Grounded Efficient Estimation of Segmentation Quality.",
+    "abstract": "Assessing the quality of automatic image segmentation is crucial in clinical practice, but often very challenging due to the limited availability of ground truth annotations. Reverse Classification Accuracy (RCA) is an approach that estimates the quality of new predictions on unseen samples by training a segmenter on those predictions, and then evaluating it against existing annotated images. In this work we introduce ConfIC-RCA (Conformal In-Context RCA), a novel method for automatically estimating segmentation quality with statistical guarantees in the absence of ground-truth annotations, which consists of two main innovations. First, In-Context RCA, which leverages recent in-context learning models for image segmentation and incorporates retrieval-augmentation techniques to select the most relevant reference images. This approach enables efficient quality estimation with minimal reference data while avoiding the need of training additional models. Second, we introduce Conformal RCA, which extends both the original RCA framework and In-Context RCA to go beyond point estimation. Using tools from split conformal prediction, Conformal RCA produces prediction intervals for segmentation quality providing statistical guarantees that the true score lies within the estimated interval with a user-specified probability. Validated across 10 different medical imaging tasks in various organs and modalities, our methods demonstrate robust performance and computational efficiency, offering a promising solution for automated quality control in clinical workflows, where fast and reliable segmentation assessment is essential. The code is available at https://github.com/mcosarinsky/Conformal-In-Context-RCA.",
+    "year": 2026,
+    "venue": "IEEE transactions on medical imaging",
+    "authors": [
+      "Matias Cosarinsky",
+      "Ramiro Billot",
+      "Lucas Mansilla",
+      "Gabriel Jimenez",
+      "Nicolas Gaggion",
+      "Guanghui Fu",
+      "Tom Tirer",
+      "Enzo Ferrante"
+    ],
+    "doi": "10.1109/TMI.2026.3679618",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41915520/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41915520"
+    }
+  },
+  {
+    "paper_id": "pubmed:41915517",
+    "title": "Implicit Demonstration Augmentation for Robust and Stable In-Context Learning.",
+    "abstract": "The advent of in-context learning (ICL) allows pretrained large language models (LLMs) to handle unseen inputs by leveraging context, without requiring parameter updates. However, the success of ICL is strongly influenced by factors such as the quality, size, and ordering of demonstrations, often resulting in unstable or less-than-ideal outcomes. This work is the first to address these limitations through the lens of demonstration augmentation. We first propose a simple yet effective ICL method, termed implicit demonstration augmentation-based ICL (IDAICL), that enriches demonstrations by leveraging their deep feature distributions, integrating knowledge from the entire demonstration set to enhance LLM predictions. From a theoretical standpoint, we demonstrate that when the number of augmented samples tends to infinity, our method asymptotically converges to a new form of logit calibration. Building upon this foundation, we further propose a domain-aware IDAICL (D-IDAICL) method, which improves the precision of knowledge integration by identifying and leveraging the most pertinent domain for each test sample during augmentation. Specifically, a hypernetwork is employed to adaptively select the most effective domain based on the deep representation of the test sample. The corresponding domain-specific knowledge is then utilized to augment the demonstrations, resulting in a domain-aware logit calibration function that enhances predictive performance. Comprehensive evaluations across multiple tasks using eight LLMs reveal that both approaches markedly boost overall and worst-case accuracy, leading to improved robustness and predictive capability. In addition, our approaches mitigate performance fluctuations across different demonstrations, orderings, and templates, while also showing effectiveness in handling class imbalance.",
+    "year": 2026,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Xiaoling Zhou",
+      "Zhemg Lee",
+      "Rui Xie",
+      "Lei Zou",
+      "Wei Ye",
+      "Shikun Zhang"
+    ],
+    "doi": "10.1109/TNNLS.2026.3677885",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41915517/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41915517"
+    }
+  }
+]

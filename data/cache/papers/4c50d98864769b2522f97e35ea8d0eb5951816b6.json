@@ -1,0 +1,80 @@
+{
+  "paper_id": "https://openalex.org/W4409409574",
+  "title": "Efficient Integer Quantization for Compressed DETR Models",
+  "abstract": "The Transformer-based target detection model, DETR, has powerful feature extraction and recognition capabilities, but its high computational and storage requirements limit its deployment on resource-constrained devices. To solve this problem, we first replace the ResNet-50 backbone network in DETR with Swin-T, which realizes the unification of the backbone network with the Transformer encoder and decoder under the same Transformer processing paradigm. On this basis, we propose a quantized inference scheme based entirely on integers, which effectively serves as a data compression method for reducing memory occupation and computational complexity. Unlike previous approaches that only quantize the linear layer of DETR, we further apply integer approximation to all non-linear operational layers (e.g., Sigmoid, Softmax, LayerNorm, GELU), thus realizing the execution of the entire inference process in the integer domain. Experimental results show that our method reduces the computation and storage to 6.3% and 25% of the original model, respectively, while the average accuracy decreases by only 1.1%, which validates the effectiveness of the method as an efficient and hardware-friendly solution for target detection.",
+  "year": 2025,
+  "venue": "Entropy",
+  "authors": [
+    "Peng Liu",
+    "Congduan Li",
+    "Nanfeng Zhang",
+    "Jingfeng Yang",
+    "Li Wang"
+  ],
+  "doi": "https://doi.org/10.3390/e27040422",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.3390/e27040422",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [
+    "https://openalex.org/W1861492603",
+    "https://openalex.org/W2799404913",
+    "https://openalex.org/W2962298324",
+    "https://openalex.org/W2963122961",
+    "https://openalex.org/W3024366773",
+    "https://openalex.org/W3035083896",
+    "https://openalex.org/W3035219584",
+    "https://openalex.org/W3096609285",
+    "https://openalex.org/W4285601701",
+    "https://openalex.org/W4385819842",
+    "https://openalex.org/W4386075873",
+    "https://openalex.org/W4390872156",
+    "https://openalex.org/W4390873361",
+    "https://openalex.org/W4390873673",
+    "https://openalex.org/W4394676676",
+    "https://openalex.org/W4398198280",
+    "https://openalex.org/W4401634204",
+    "https://openalex.org/W4402772916",
+    "https://openalex.org/W4403510494",
+    "https://openalex.org/W6788001715",
+    "https://openalex.org/W6797854001"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Inference",
+      "Softmax function",
+      "Quantization (signal processing)",
+      "Computation",
+      "Encoder",
+      "Algorithm",
+      "Computational complexity theory",
+      "Integer (computer science)",
+      "Data mining",
+      "Theoretical computer science",
+      "Artificial intelligence",
+      "Artificial neural network",
+      "Programming language",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3107204728",
+      "https://openalex.org/W4287591324",
+      "https://openalex.org/W2095407248",
+      "https://openalex.org/W1997714924",
+      "https://openalex.org/W2129190845",
+      "https://openalex.org/W4389045637",
+      "https://openalex.org/W1994209155",
+      "https://openalex.org/W2076843925",
+      "https://openalex.org/W4384300015",
+      "https://openalex.org/W2054979592"
+    ]
+  }
+}

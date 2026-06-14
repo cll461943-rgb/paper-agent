@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42156521",
+  "title": "Graph guided multiscale cross attention for multilabel chest X ray classification.",
+  "abstract": "Multi-label chest X-ray (CXR) classification is challenging because thoracic abnormalities vary substantially in scale, visual saliency, and anatomical distribution, while disease labels often exhibit clinically meaningful dependencies. We propose a visual-semantic framework that integrates heterogeneous visual representations with graph-guided label reasoning for image-level multi-label CXR classification. The visual encoder consists of a Vision Transformer (ViT) branch and a DenseNet-121 branch with complementary inductive biases: the ViT branch provides self-attention-based content-adaptive token representations, whereas the DenseNet branch provides hierarchical convolutional feature maps with explicit spatial layouts. A multi-scale bidirectional dual cross-attention fusion (DCAF) module aligns these two representations and enables bidirectional cross-representation interaction at the [Formula: see text] and [Formula: see text] stages to construct a fused visual memory. To model label dependencies, we construct an ML-GCN-style label graph whose edges are derived from training-set conditional co-occurrence statistics and whose node features are initialized using GloVe label-name embeddings. The resulting GCN-refined label embeddings initialize the label queries of a Transformer decoder, which retrieves label-specific evidence from the fused visual memory and predicts a single logits matrix for multi-label classification. The proposed method achieves a Mean AUC of 0.849 on ChestX-ray14 following its official evaluation protocol and 0.815 on CheXpert using an internal 70%/10%/20% training/validation/testing partition. Qualitative Grad-CAM visualizations on selected cases further suggest that the proposed framework tends to produce activation patterns consistent with manually indicated visually suspicious regions; these visualizations are not intended as a formal localization evaluation. Overall, the results indicate that cross-representation visual fusion and graph-guided label-query decoding provide complementary benefits for multi-label CXR classification.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Guokun Shi",
+    "Zijian Wang",
+    "Yucheng Shi",
+    "Jingwen Pan",
+    "Liping Sun",
+    "Fang Fang",
+    "Li Jin"
+  ],
+  "doi": "10.1038/s41598-026-53115-0",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42156521/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42156521"
+  }
+}

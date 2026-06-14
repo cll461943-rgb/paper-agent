@@ -1,0 +1,52 @@
+{
+  "paper_id": "https://openalex.org/W4404782932",
+  "title": "Prefixing Attention Sinks can Mitigate Activation Outliers for Large Language Model Quantization",
+  "abstract": "Despite recent advances in LLM quantization, activation quantization remains to be challenging due to the activation outliers.Conventional remedies, e.g., mixing precisions for different channels, introduce extra overhead and reduce the speedup.In this work, we develop a simple yet effective strategy to facilitate per-tensor activation quantization by preventing the generation of problematic tokens.Precisely, we propose a method to find a set of key-value cache, coined CushionCache, which mitigates outliers in subsequent tokens when inserted as a prefix.CushionCache works in two steps: First, we greedily search for a prompt token sequence that minimizes the maximum activation values in subsequent tokens.Then, we further tune the token cache to regularize the activations of subsequent tokens to be more quantization-friendly.The proposed method successfully addresses activation outliers of LLMs, providing a substantial performance boost for per-tensor activation quantization methods.We thoroughly evaluate our method over a wide range of models and benchmarks and find that it significantly surpasses the established baseline of per-tensor W8A8 quantization and can be seamlessly integrated with the recent activation quantization method.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Seung Woo Son",
+    "Wonpyo Park",
+    "Woohyun Han",
+    "Kyuyeun Kim",
+    "Jaeho Lee"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.134",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.emnlp-main.134",
+  "citation_count": 7,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Outlier",
+      "Language model",
+      "Quantization (signal processing)",
+      "Data modeling",
+      "Natural language processing",
+      "Artificial intelligence",
+      "Algorithm",
+      "Database"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3006513224",
+      "https://openalex.org/W2046456988",
+      "https://openalex.org/W2357409937",
+      "https://openalex.org/W2510582230",
+      "https://openalex.org/W2978674666",
+      "https://openalex.org/W2074430941",
+      "https://openalex.org/W2113096305",
+      "https://openalex.org/W1977636359",
+      "https://openalex.org/W2772305933",
+      "https://openalex.org/W2580722822"
+    ]
+  }
+}

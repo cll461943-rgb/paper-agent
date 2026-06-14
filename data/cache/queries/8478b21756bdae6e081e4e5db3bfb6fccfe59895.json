@@ -1,0 +1,877 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2009.12303v4",
+    "title": "Towards Debiasing NLU Models from Unknown Biases",
+    "abstract": "NLU models often exploit biases to achieve high dataset-specific performance without properly learning the intended task. Recently proposed debiasing methods are shown to be effective in mitigating this tendency. However, these methods rely on a major assumption that the types of bias should be known a-priori, which limits their application to many NLU tasks and datasets. In this work, we present the first step to bridge this gap by introducing a self-debiasing framework that prevents models from mainly utilizing biases without knowing them in advance. The proposed framework is general and complementary to the existing debiasing methods. We show that it allows these existing methods to retain the improvement on the challenge datasets (i.e., sets of examples designed to expose models' reliance on biases) without specifically targeting certain biases. Furthermore, the evaluation suggests that applying the framework results in improved overall robustness.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Prasetya Ajie Utama",
+      "Nafise Sadat Moosavi",
+      "Iryna Gurevych"
+    ],
+    "doi": null,
+    "arxiv_id": "2009.12303v4",
+    "url": "http://arxiv.org/abs/2009.12303v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.02071v1",
+    "title": "End-to-End Self-Debiasing Framework for Robust NLU Training",
+    "abstract": "Existing Natural Language Understanding (NLU) models have been shown to incorporate dataset biases leading to strong performance on in-distribution (ID) test sets but poor performance on out-of-distribution (OOD) ones. We introduce a simple yet effective debiasing framework whereby the shallow representations of the main model are used to derive a bias model and both models are trained simultaneously. We demonstrate on three well studied NLU tasks that despite its simplicity, our method leads to competitive OOD results. It significantly outperforms other debiasing approaches on two tasks, while still delivering high in-distribution performance.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Abbas Ghaddar",
+      "Philippe Langlais",
+      "Mehdi Rezagholizadeh",
+      "Ahmad Rashid"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.02071v1",
+    "url": "http://arxiv.org/abs/2109.02071v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.00292v1",
+    "title": "IBADR: an Iterative Bias-Aware Dataset Refinement Framework for Debiasing NLU models",
+    "abstract": "As commonly-used methods for debiasing natural language understanding (NLU) models, dataset refinement approaches heavily rely on manual data analysis, and thus maybe unable to cover all the potential biased features. In this paper, we propose IBADR, an Iterative Bias-Aware Dataset Refinement framework, which debiases NLU models without predefining biased features. We maintain an iteratively expanded sample pool. Specifically, at each iteration, we first train a shallow model to quantify the bias degree of samples in the pool. Then, we pair each sample with a bias indicator representing its bias degree, and use these extended samples to train a sample generator. In this way, this generator can effectively learn the correspondence relationship between bias indicators and samples. Furthermore, we employ the generator to produce pseudo samples with fewer biased features by feeding specific bias indicators. Finally, we incorporate the generated pseudo samples into the pool. Experimental results and in-depth analyses on two NLU tasks show that IBADR not only significantly outperforms existing dataset refinement approaches, achieving SOTA, but also is compatible with model-centric methods.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xiaoyue Wang",
+      "Xin Liu",
+      "Lijie Wang",
+      "Yaoxiang Wang",
+      "Jinsong Su",
+      "Hua Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.00292v1",
+    "url": "http://arxiv.org/abs/2311.00292v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06733v1",
+    "title": "Dynamic Loss-Based Sample Reweighting for Improved Large Language Model Pretraining",
+    "abstract": "Pretraining large language models (LLMs) on vast and heterogeneous datasets is crucial for achieving state-of-the-art performance across diverse downstream tasks. However, current training paradigms treat all samples equally, overlooking the importance or relevance of individual samples throughout the training process. Existing reweighting strategies, which primarily focus on group-level data importance, fail to leverage fine-grained instance-level information and do not adapt dynamically to individual sample importance as training progresses. In this paper, we introduce novel algorithms for dynamic, instance-level data reweighting aimed at improving both the efficiency and effectiveness of LLM pretraining. Our methods adjust the weight of each training sample based on its loss value in an online fashion, allowing the model to dynamically focus on more informative or important samples at the current training stage. In particular, our framework allows us to systematically devise reweighting strategies deprioritizing redundant or uninformative data, which we find tend to work best. Furthermore, we develop a new theoretical framework for analyzing the impact of loss-based reweighting on the convergence of gradient-based optimization, providing the first formal characterization of how these strategies affect convergence bounds. We empirically validate our approach across a spectrum of tasks, from pretraining 7B and 1.4B parameter LLMs to smaller-scale language models and linear regression problems, demonstrating that our loss-based reweighting approach can lead to faster convergence and significantly improved performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Daouda Sow",
+      "Herbert Woisetschläger",
+      "Saikiran Bulusu",
+      "Shiqiang Wang",
+      "Hans-Arno Jacobsen",
+      "Yingbin Liang"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06733v1",
+    "url": "http://arxiv.org/abs/2502.06733v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.00315v1",
+    "title": "Mind the Trade-off: Debiasing NLU Models without Degrading the In-distribution Performance",
+    "abstract": "Models for natural language understanding (NLU) tasks often rely on the idiosyncratic biases of the dataset, which make them brittle against test cases outside the training distribution. Recently, several proposed debiasing methods are shown to be very effective in improving out-of-distribution performance. However, their improvements come at the expense of performance drop when models are evaluated on the in-distribution data, which contain examples with higher diversity. This seemingly inevitable trade-off may not tell us much about the changes in the reasoning and understanding capabilities of the resulting models on broader types of examples beyond the small subset represented in the out-of-distribution data. In this paper, we address this trade-off by introducing a novel debiasing method, called confidence regularization, which discourage models from exploiting biases while enabling them to receive enough incentive to learn from all the training examples. We evaluate our method on three NLU tasks and show that, in contrast to its predecessors, it improves the performance on out-of-distribution datasets (e.g., 7pp gain on HANS dataset) while maintaining the original in-distribution accuracy.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Prasetya Ajie Utama",
+      "Nafise Sadat Moosavi",
+      "Iryna Gurevych"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.00315v1",
+    "url": "http://arxiv.org/abs/2005.00315v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.16228v2",
+    "title": "\"Thy algorithm shalt not bear false witness\": An Evaluation of Multiclass Debiasing Methods on Word Embeddings",
+    "abstract": "With the vast development and employment of artificial intelligence applications, research into the fairness of these algorithms has been increased. Specifically, in the natural language processing domain, it has been shown that social biases persist in word embeddings and are thus in danger of amplifying these biases when used. As an example of social bias, religious biases are shown to persist in word embeddings and the need for its removal is highlighted. This paper investigates the state-of-the-art multiclass debiasing techniques: Hard debiasing, SoftWEAT debiasing and Conceptor debiasing. It evaluates their performance when removing religious bias on a common basis by quantifying bias removal via the Word Embedding Association Test (WEAT), Mean Average Cosine Similarity (MAC) and the Relative Negative Sentiment Bias (RNSB). By investigating the religious bias removal on three widely used word embeddings, namely: Word2Vec, GloVe, and ConceptNet, it is shown that the preferred method is ConceptorDebiasing. Specifically, this technique manages to decrease the measured religious bias on average by 82,42%, 96,78% and 54,76% for the three word embedding sets respectively.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Thalea Schlender",
+      "Gerasimos Spanakis"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.16228v2",
+    "url": "http://arxiv.org/abs/2010.16228v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.12322v2",
+    "title": "Simultaneous reweighting of Transverse Momentum Dependent distributions",
+    "abstract": "The Bayesian reweighting procedure is extended to the case of multiple independent extractions of transverse momentum dependent parton distributions (TMDs). By exploiting the data on transverse single spin asymmetries, $A_N$, for inclusive pion production in polarized proton-proton collisions measured at RHIC, we perform a simultaneous reweighting of the quark Sivers, transversity and Collins TMD functions extracted from semi-inclusive deep inelastic scattering (SIDIS) and $e^+ e^-$ annihilation into hadron pairs. The impact of the implementation of the Soffer bound, as well as the differences between older and newer $A_N$ data, are investigated. The agreement with $A_N$ data at large-$x_F$ values, a kinematical region complementary to those explored in SIDIS measurements, is enhanced, improving the knowledge of the polarized quark TMDs in the large-$x$ region.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mariaelena Boglione",
+      "Umberto D'Alesio",
+      "Carlo Flore",
+      "Josè Osvaldo Gonzalez-Hernandez",
+      "Francesco Murgia",
+      "Alexei Prokudin"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.12322v2",
+    "url": "http://arxiv.org/abs/2402.12322v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.12226v1",
+    "title": "Address Instance-level Label Prediction in Multiple Instance Learning",
+    "abstract": "\\textit{Multiple Instance Learning} (MIL) is concerned with learning from bags of instances, where only bag labels are given and instance labels are unknown. Existent approaches in this field were mainly designed for the bag-level label prediction (predict labels for bags) but not the instance-level (predict labels for instances), with the task loss being only defined at the bag level. This restricts their application in many tasks, where the instance-level labels are more interested. In this paper, we propose a novel algorithm, whose loss is specifically defined at the instance level, to address instance-level label prediction in MIL. We prove that the loss of this algorithm can be unbiasedly and consistently estimated without using instance labels, under the i.i.d assumption. Empirical study validates the above statements and shows that the proposed algorithm can achieve superior instance-level and comparative bag-level performance, compared to state-of-the-art MIL methods. In addition, it shows that the proposed method can achieve similar results as the fully supervised model (trained with instance labels) for label prediction at the instance level.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Minlong Peng",
+      "Qi Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.12226v1",
+    "url": "http://arxiv.org/abs/1905.12226v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.08244v1",
+    "title": "Auxiliary Task Reweighting for Minimum-data Learning",
+    "abstract": "Supervised learning requires a large amount of training data, limiting its application where labeled data is scarce. To compensate for data scarcity, one possible method is to utilize auxiliary tasks to provide additional supervision for the main task. Assigning and optimizing the importance weights for different auxiliary tasks remains an crucial and largely understudied research question. In this work, we propose a method to automatically reweight auxiliary tasks in order to reduce the data requirement on the main task. Specifically, we formulate the weighted likelihood function of auxiliary tasks as a surrogate prior for the main task. By adjusting the auxiliary task weights to minimize the divergence between the surrogate prior and the true prior of the main task, we obtain a more accurate prior estimation, achieving the goal of minimizing the required amount of training data for the main task and avoiding a costly grid search. In multiple experimental settings (e.g. semi-supervised learning, multi-label classification), we demonstrate that our algorithm can effectively utilize limited labeled data of the main task with the benefit of auxiliary tasks compared with previous task reweighting methods. We also show that under extreme cases with only a few extra examples (e.g. few-shot domain adaptation), our algorithm results in significant improvement over the baseline.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Baifeng Shi",
+      "Judy Hoffman",
+      "Kate Saenko",
+      "Trevor Darrell",
+      "Huijuan Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.08244v1",
+    "url": "http://arxiv.org/abs/2010.08244v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1701.00986v2",
+    "title": "Reweighting complex Langevin trajectories",
+    "abstract": "Although the complex Langevin method can solve the sign problem in simulations of theories with complex actions, the method will yield the wrong results if known validity conditions are not satisfied. We present a novel method to compute observables for a target ensemble by reweighting complex trajectories generated with the complex Langevin method for an auxiliary ensemble having itself a complex action. While it is imperative that the validity conditions be satisfied for the auxiliary ensemble, there are no such requirements for the target ensemble. This allows us to enlarge the applicability range of the complex Langevin method. We illustrate this at the hand of a one-dimensional partition function and two-dimensional strong-coupling QCD.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Jacques Bloch"
+    ],
+    "doi": null,
+    "arxiv_id": "1701.00986v2",
+    "url": "http://arxiv.org/abs/1701.00986v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.13108v3",
+    "title": "Debiased Automatic Speech Recognition for Dysarthric Speech via Sample Reweighting with Sample Affinity Test",
+    "abstract": "Automatic speech recognition systems based on deep learning are mainly trained under empirical risk minimization (ERM). Since ERM utilizes the averaged performance on the data samples regardless of a group such as healthy or dysarthric speakers, ASR systems are unaware of the performance disparities across the groups. This results in biased ASR systems whose performance differences among groups are severe. In this study, we aim to improve the ASR system in terms of group robustness for dysarthric speakers. To achieve our goal, we present a novel approach, sample reweighting with sample affinity test (Re-SAT). Re-SAT systematically measures the debiasing helpfulness of the given data sample and then mitigates the bias by debiasing helpfulness-based sample reweighting. Experimental results demonstrate that Re-SAT contributes to improved ASR performance on dysarthric speech without performance degradation on healthy speech.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Eungbeom Kim",
+      "Yunkee Chae",
+      "Jaeheon Sim",
+      "Kyogu Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.13108v3",
+    "url": "http://arxiv.org/abs/2305.13108v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.05286v2",
+    "title": "Informative Scene Graph Generation via Debiasing",
+    "abstract": "Scene graph generation aims to detect visual relationship triplets, (subject, predicate, object). Due to biases in data, current models tend to predict common predicates, e.g. \"on\" and \"at\", instead of informative ones, e.g. \"standing on\" and \"looking at\". This tendency results in the loss of precise information and overall performance. If a model only uses \"stone on road\" rather than \"stone blocking road\" to describe an image, it may be a grave misunderstanding. We argue that this phenomenon is caused by two imbalances: semantic space level imbalance and training sample level imbalance. For this problem, we propose DB-SGG, an effective framework based on debiasing but not the conventional distribution fitting. It integrates two components: Semantic Debiasing (SD) and Balanced Predicate Learning (BPL), for these imbalances. SD utilizes a confusion matrix and a bipartite graph to construct predicate relationships. BPL adopts a random undersampling strategy and an ambiguity removing strategy to focus on informative predicates. Benefiting from the model-agnostic process, our method can be easily applied to SGG models and outperforms Transformer by 136.3%, 119.5%, and 122.6% on mR@20 at three SGG sub-tasks on the SGG-VG dataset. Our method is further verified on another complex SGG dataset (SGG-GQA) and two downstream tasks (sentence-to-graph retrieval and image captioning).",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Lianli Gao",
+      "Xinyu Lyu",
+      "Yuyu Guo",
+      "Yuxuan Hu",
+      "Yuan-Fang Li",
+      "Lu Xu",
+      "Heng Tao Shen",
+      "Jingkuan Song"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.05286v2",
+    "url": "http://arxiv.org/abs/2308.05286v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1311.7579v3",
+    "title": "Accelerated Event-by-Event Neutrino Oscillation Reweighting with Matter Effects on a GPU",
+    "abstract": "Oscillation probability calculations are becoming increasingly CPU intensive in modern neutrino oscillation analyses. The independency of reweighting individual events in a Monte Carlo sample lends itself to parallel implementation on a Graphics Processing Unit. The library \"Prob3++\" was ported to the GPU using the CUDA C API, allowing for large scale parallelized calculations of neutrino oscillation probabilities through matter of constant density, decreasing the execution time by a factor of 75, when compared to performance on a single CPU.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "R. G. Calland",
+      "A. C. Kaboth",
+      "D. Payne"
+    ],
+    "doi": null,
+    "arxiv_id": "1311.7579v3",
+    "url": "http://arxiv.org/abs/1311.7579v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09627v2",
+    "title": "Benchmarking Debiasing Methods for LLM-based Parameter Estimates",
+    "abstract": "Large language models (LLMs) offer an inexpensive yet powerful way to annotate text, but are often inconsistent when compared with experts. These errors can bias downstream estimates of population parameters such as regression coefficients and causal effects. To mitigate this bias, researchers have developed debiasing methods such as Design-based Supervised Learning (DSL) and Prediction-Powered Inference (PPI), which promise valid estimation by combining LLM annotations with a limited number of expensive expert annotations. Although these methods produce consistent estimates under theoretical assumptions, it is unknown how they compare in finite samples of sizes encountered in applied research. We make two contributions. First, we study how each methods performance scales with the number of expert annotations, highlighting regimes where LLM bias or limited expert labels significantly affect results. Second, we compare DSL and PPI across a range of tasks, finding that although both achieve low bias with large datasets, DSL often outperforms PPI on bias reduction and empirical efficiency, but its performance is less consistent across datasets. Our findings indicate that there is a bias-variance tradeoff at the level of debiasing methods, calling for more research on developing metrics for quantifying their efficiency in finite samples.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Nicolas Audinet de Pieuchon",
+      "Adel Daoud",
+      "Connor T. Jerzak",
+      "Moa Johansson",
+      "Richard Johansson"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09627v2",
+    "url": "http://arxiv.org/abs/2506.09627v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.01736v2",
+    "title": "Geometry-aware Instance-reweighted Adversarial Training",
+    "abstract": "In adversarial machine learning, there was a common belief that robustness and accuracy hurt each other. The belief was challenged by recent studies where we can maintain the robustness and improve the accuracy. However, the other direction, whether we can keep the accuracy while improving the robustness, is conceptually and practically more interesting, since robust accuracy should be lower than standard accuracy for any model. In this paper, we show this direction is also promising. Firstly, we find even over-parameterized deep networks may still have insufficient model capacity, because adversarial training has an overwhelming smoothing effect. Secondly, given limited model capacity, we argue adversarial data should have unequal importance: geometrically speaking, a natural data point closer to/farther from the class boundary is less/more robust, and the corresponding adversarial data point should be assigned with larger/smaller weight. Finally, to implement the idea, we propose geometry-aware instance-reweighted adversarial training, where the weights are based on how difficult it is to attack a natural data point. Experiments show that our proposal boosts the robustness of standard adversarial training; combining two directions, we improve both robustness and accuracy of standard adversarial training.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Jingfeng Zhang",
+      "Jianing Zhu",
+      "Gang Niu",
+      "Bo Han",
+      "Masashi Sugiyama",
+      "Mohan Kankanhalli"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.01736v2",
+    "url": "http://arxiv.org/abs/2010.01736v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.07167v1",
+    "title": "Vulnerability-Aware Instance Reweighting For Adversarial Training",
+    "abstract": "Adversarial Training (AT) has been found to substantially improve the robustness of deep learning classifiers against adversarial attacks. AT involves obtaining robustness by including adversarial examples in training a classifier. Most variants of AT algorithms treat every training example equally. However, recent works have shown that better performance is achievable by treating them unequally. In addition, it has been observed that AT exerts an uneven influence on different classes in a training set and unfairly hurts examples corresponding to classes that are inherently harder to classify. Consequently, various reweighting schemes have been proposed that assign unequal weights to robust losses of individual examples in a training set. In this work, we propose a novel instance-wise reweighting scheme. It considers the vulnerability of each natural example and the resulting information loss on its adversarial counterpart occasioned by adversarial attacks. Through extensive experiments, we show that our proposed method significantly improves over existing reweighting schemes, especially against strong white and black-box attacks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Olukorede Fakorede",
+      "Ashutosh Kumar Nirala",
+      "Modeste Atsague",
+      "Jin Tian"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.07167v1",
+    "url": "http://arxiv.org/abs/2307.07167v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.13173v1",
+    "title": "Semantic-Promoted Debiasing and Background Disambiguation for Zero-Shot Instance Segmentation",
+    "abstract": "Zero-shot instance segmentation aims to detect and precisely segment objects of unseen categories without any training samples. Since the model is trained on seen categories, there is a strong bias that the model tends to classify all the objects into seen categories. Besides, there is a natural confusion between background and novel objects that have never shown up in training. These two challenges make novel objects hard to be raised in the final instance segmentation results. It is desired to rescue novel objects from background and dominated seen categories. To this end, we propose D$^2$Zero with Semantic-Promoted Debiasing and Background Disambiguation to enhance the performance of Zero-shot instance segmentation. Semantic-promoted debiasing utilizes inter-class semantic relationships to involve unseen categories in visual feature training and learns an input-conditional classifier to conduct dynamical classification based on the input image. Background disambiguation produces image-adaptive background representation to avoid mistaking novel objects for background. Extensive experiments show that we significantly outperform previous state-of-the-art methods by a large margin, e.g., 16.86% improvement on COCO. Project page: https://henghuiding.github.io/D2Zero/",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shuting He",
+      "Henghui Ding",
+      "Wei Jiang"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.13173v1",
+    "url": "http://arxiv.org/abs/2305.13173v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1508.02496v3",
+    "title": "A Practical Guide to CNNs and Fisher Vectors for Image Instance Retrieval",
+    "abstract": "With deep learning becoming the dominant approach in computer vision, the use of representations extracted from Convolutional Neural Nets (CNNs) is quickly gaining ground on Fisher Vectors (FVs) as favoured state-of-the-art global image descriptors for image instance retrieval. While the good performance of CNNs for image classification are unambiguously recognised, which of the two has the upper hand in the image retrieval context is not entirely clear yet. In this work, we propose a comprehensive study that systematically evaluates FVs and CNNs for image retrieval. The first part compares the performances of FVs and CNNs on multiple publicly available data sets. We investigate a number of details specific to each method. For FVs, we compare sparse descriptors based on interest point detectors with dense single-scale and multi-scale variants. For CNNs, we focus on understanding the impact of depth, architecture and training data on retrieval results. Our study shows that no descriptor is systematically better than the other and that performance gains can usually be obtained by using both types together. The second part of the study focuses on the impact of geometrical transformations such as rotations and scale changes. FVs based on interest point detectors are intrinsically resilient to such transformations while CNNs do not have a built-in mechanism to ensure such invariance. We show that performance of CNNs can quickly degrade in presence of rotations while they are far less affected by changes in scale. We then propose a number of ways to incorporate the required invariances in the CNN pipeline. Overall, our work is intended as a reference guide offering practically useful and simply implementable guidelines to anyone looking for state-of-the-art global descriptors best suited to their specific image instance retrieval problem.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Vijay Chandrasekhar",
+      "Jie Lin",
+      "Olivier Morère",
+      "Hanlin Goh",
+      "Antoine Veillard"
+    ],
+    "doi": null,
+    "arxiv_id": "1508.02496v3",
+    "url": "http://arxiv.org/abs/1508.02496v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.13899v1",
+    "title": "Strong Instance Segmentation Pipeline for MMSports Challenge",
+    "abstract": "The goal of ACM MMSports2022 DeepSportRadar Instance Segmentation Challenge is to tackle the segmentation of individual humans including players, coaches and referees on a basketball court. And the main characteristics of this challenge are there is a high level of occlusions between players and the amount of data is quite limited. In order to address these problems, we designed a strong instance segmentation pipeline. Firstly, we employed a proper data augmentation strategy for this task mainly including photometric distortion transform and copy-paste strategy, which can generate more image instances with a wider distribution. Secondly, we employed a strong segmentation model, Hybrid Task Cascade based detector on the Swin-Base based CBNetV2 backbone, and we add MaskIoU head to HTCMaskHead that can simply and effectively improve the performance of instance segmentation. Finally, the SWA training strategy was applied to improve the performance further. Experimental results demonstrate the proposed pipeline can achieve a competitive result on the DeepSportRadar challenge, with 0.768AP@0.50:0.95 on the challenge set. Source code is available at https://github.com/YJingyu/Instanc_Segmentation_Pro.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Bo Yan",
+      "Fengliang Qi",
+      "Zhuang Li",
+      "Yadong Li",
+      "Hongbin Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.13899v1",
+    "url": "http://arxiv.org/abs/2209.13899v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.17627v1",
+    "title": "Robust Natural Language Understanding with Residual Attention Debiasing",
+    "abstract": "Natural language understanding (NLU) models often suffer from unintended dataset biases. Among bias mitigation methods, ensemble-based debiasing methods, especially product-of-experts (PoE), have stood out for their impressive empirical success. However, previous ensemble-based debiasing methods typically apply debiasing on top-level logits without directly addressing biased attention patterns. Attention serves as the main media of feature interaction and aggregation in PLMs and plays a crucial role in providing robust prediction. In this paper, we propose REsidual Attention Debiasing (READ), an end-to-end debiasing method that mitigates unintended biases from attention. Experiments on three NLU tasks show that READ significantly improves the performance of BERT-based models on OOD data with shortcuts removed, including +12.9% accuracy on HANS, +11.0% accuracy on FEVER-Symmetric, and +2.7% F1 on PAWS. Detailed analyses demonstrate the crucial role of unbiased attention in robust NLU models and that READ effectively mitigates biases in attention. Code is available at https://github.com/luka-group/READ.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Fei Wang",
+      "James Y. Huang",
+      "Tianyi Yan",
+      "Wenxuan Zhou",
+      "Muhao Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.17627v1",
+    "url": "http://arxiv.org/abs/2305.17627v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.01287v1",
+    "title": "milearn: A Python Package for Multi-Instance Machine Learning",
+    "abstract": "We introduce milearn, a Python package for multi-instance learning (MIL) that follows the familiar scikit-learn fit/predict interface while providing a unified framework for both classical and neural-network-based MIL algorithms for regression and classification. The package also includes built-in hyperparameter optimization designed specifically for small MIL datasets, enabling robust model selection in data-scarce scenarios. We demonstrate the versatility of milearn across a broad range of synthetic MIL benchmark datasets, including digit classification and regression, molecular property prediction, and protein-protein interaction (PPI) prediction. Special emphasis is placed on the key instance detection (KID) problem, for which the package provides dedicated support.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dmitry Zankov",
+      "Pavlo Polishchuk",
+      "Michal Sobieraj",
+      "Mario Barbatti"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.01287v1",
+    "url": "http://arxiv.org/abs/2512.01287v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.09277v1",
+    "title": "Building Height Prediction with Instance Segmentation",
+    "abstract": "Extracting building heights from satellite images is an active research area used in many fields such as telecommunications, city planning, etc. Many studies utilize DSM (Digital Surface Models) generated with lidars or stereo images for this purpose. Predicting the height of the buildings using only RGB images is challenging due to the insufficient amount of data, low data quality, variations of building types, different angles of light and shadow, etc. In this study, we present an instance segmentation-based building height extraction method to predict building masks with their respective heights from a single RGB satellite image. We used satellite images with building height annotations of certain cities along with an open-source satellite dataset with the transfer learning approach. We reached, the bounding box mAP 59, the mask mAP 52.6, and the average accuracy value of 70% for buildings belonging to each height class in our test set.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Furkan Burak Bagci",
+      "Ahmet Alp Kindriroglu",
+      "Metehan Yalcin",
+      "Ufuk Uyan",
+      "Mahiye Uluyagmur Ozturk"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.09277v1",
+    "url": "http://arxiv.org/abs/2212.09277v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.04438v2",
+    "title": "Occlusion-Aware Instance Segmentation via BiLayer Network Architectures",
+    "abstract": "Segmenting highly-overlapping image objects is challenging, because there is typically no distinction between real object contours and occlusion boundaries on images. Unlike previous instance segmentation methods, we model image formation as a composition of two overlapping layers, and propose Bilayer Convolutional Network (BCNet), where the top layer detects occluding objects (occluders) and the bottom layer infers partially occluded instances (occludees). The explicit modeling of occlusion relationship with bilayer structure naturally decouples the boundaries of both the occluding and occluded instances, and considers the interaction between them during mask regression. We investigate the efficacy of bilayer structure using two popular convolutional network designs, namely, Fully Convolutional Network (FCN) and Graph Convolutional Network (GCN). Further, we formulate bilayer decoupling using the vision transformer (ViT), by representing instances in the image as separate learnable occluder and occludee queries. Large and consistent improvements using one/two-stage and query-based object detectors with various backbones and network layer choices validate the generalization ability of bilayer decoupling, as shown by extensive experiments on image instance segmentation benchmarks (COCO, KINS, COCOA) and video instance segmentation benchmarks (YTVIS, OVIS, BDD100K MOTS), especially for heavy occlusion cases. Code and data are available at https://github.com/lkeab/BCNet.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Lei Ke",
+      "Yu-Wing Tai",
+      "Chi-Keung Tang"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.04438v2",
+    "url": "http://arxiv.org/abs/2208.04438v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.16079v1",
+    "title": "Debiasing Masks: A New Framework for Shortcut Mitigation in NLU",
+    "abstract": "Debiasing language models from unwanted behaviors in Natural Language Understanding tasks is a topic with rapidly increasing interest in the NLP community. Spurious statistical correlations in the data allow models to perform shortcuts and avoid uncovering more advanced and desirable linguistic features. A multitude of effective debiasing approaches has been proposed, but flexibility remains a major issue. For the most part, models must be retrained to find a new set of weights with debiased behavior. We propose a new debiasing method in which we identify debiased pruning masks that can be applied to a finetuned model. This enables the selective and conditional application of debiasing behaviors. We assume that bias is caused by a certain subset of weights in the network; our method is, in essence, a mask search to identify and remove biased weights. Our masks show equivalent or superior performance to the standard counterparts, while offering important benefits. Pruning masks can be stored with high efficiency in memory, and it becomes possible to switch among several debiasing behaviors (or revert back to the original biased model) at inference time. Finally, it opens the doors to further research on how biases are acquired by studying the generated masks. For example, we observed that the early layers and attention heads were pruned more aggressively, possibly hinting towards the location in which biases may be encoded.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Johannes Mario Meissner",
+      "Saku Sugawara",
+      "Akiko Aizawa"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.16079v1",
+    "url": "http://arxiv.org/abs/2210.16079v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.00470v1",
+    "title": "Instance Segmentation Challenge Track Technical Report, VIPriors Workshop at ICCV 2021: Task-Specific Copy-Paste Data Augmentation Method for Instance Segmentation",
+    "abstract": "Copy-Paste has proven to be a very effective data augmentation for instance segmentation which can improve the generalization of the model. We used a task-specific Copy-Paste data augmentation method to achieve good performance on the instance segmentation track of the 2nd VIPriors workshop challenge. We also applied additional data augmentation techniques including RandAugment and GridMask. Our segmentation model is the HTC detector on the CBSwin-B with CBFPN with some tweaks. This model was trained at the multi-scale mode by a random sampler on the 6x schedule and tested at the single-scale mode. By combining these techniques, we achieved 0.398 AP@0.50:0.95 with the validation set and 0.433 AP@0.50:0.95 with the test set. Finally, we reached 0.477 AP@0.50:0.95 with the test set by adding the validation set to the training data. Source code is available at https://github.com/jahongir7174/VIP2021.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jahongir Yunusov",
+      "Shohruh Rakhmatov",
+      "Abdulaziz Namozov",
+      "Abdulaziz Gaybulayev",
+      "Tae-Hyong Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.00470v1",
+    "url": "http://arxiv.org/abs/2110.00470v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.03281v2",
+    "title": "The state-of-the-art 3D anisotropic intracranial hemorrhage segmentation on non-contrast head CT: The INSTANCE challenge",
+    "abstract": "Automatic intracranial hemorrhage segmentation in 3D non-contrast head CT (NCCT) scans is significant in clinical practice. Existing hemorrhage segmentation methods usually ignores the anisotropic nature of the NCCT, and are evaluated on different in-house datasets with distinct metrics, making it highly challenging to improve segmentation performance and perform objective comparisons among different methods. The INSTANCE 2022 was a grand challenge held in conjunction with the 2022 International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI). It is intended to resolve the above-mentioned problems and promote the development of both intracranial hemorrhage segmentation and anisotropic data processing. The INSTANCE released a training set of 100 cases with ground-truth and a validation set with 30 cases without ground-truth labels that were available to the participants. A held-out testing set with 70 cases is utilized for the final evaluation and ranking. The methods from different participants are ranked based on four metrics, including Dice Similarity Coefficient (DSC), Hausdorff Distance (HD), Relative Volume Difference (RVD) and Normalized Surface Dice (NSD). A total of 13 teams submitted distinct solutions to resolve the challenges, making several baseline models, pre-processing strategies and anisotropic data processing techniques available to future researchers. The winner method achieved an average DSC of 0.6925, demonstrating a significant growth over our proposed baseline method. To the best of our knowledge, the proposed INSTANCE challenge releases the first intracranial hemorrhage segmentation benchmark, and is also the first challenge that intended to resolve the anisotropic problem in 3D medical image segmentation, which provides new alternatives in these research fields.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xiangyu Li",
+      "Gongning Luo",
+      "Kuanquan Wang",
+      "Hongyu Wang",
+      "Jun Liu",
+      "Xinjie Liang",
+      "Jie Jiang",
+      "Zhenghao Song",
+      "Chunyue Zheng",
+      "Haokai Chi",
+      "Mingwang Xu",
+      "Yingte He",
+      "Xinghua Ma",
+      "Jingwen Guo",
+      "Yifan Liu",
+      "Chuanpu Li",
+      "Zeli Chen",
+      "Md Mahfuzur Rahman Siddiquee",
+      "Andriy Myronenko",
+      "Antoine P. Sanner",
+      "Anirban Mukhopadhyay",
+      "Ahmed E. Othman",
+      "Xingyu Zhao",
+      "Weiping Liu",
+      "Jinhuang Zhang",
+      "Xiangyuan Ma",
+      "Qinghui Liu",
+      "Bradley J. MacIntosh",
+      "Wei Liang",
+      "Moona Mazher",
+      "Abdul Qayyum",
+      "Valeriia Abramova",
+      "Xavier Lladó",
+      "Shuo Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.03281v2",
+    "url": "http://arxiv.org/abs/2301.03281v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.10804v2",
+    "title": "Active Learning in Incomplete Label Multiple Instance Multiple Label Learning",
+    "abstract": "In multiple instance multiple label learning, each sample, a bag, consists of multiple instances. To alleviate labeling complexity, each sample is associated with a set of bag-level labels leaving instances within the bag unlabeled. This setting is more convenient and natural for representing complicated objects, which have multiple semantic meanings. Compared to single instance labeling, this approach allows for labeling larger datasets at an equivalent labeling cost. However, for sufficiently large datasets, labeling all bags may become prohibitively costly. Active learning uses an iterative labeling and retraining approach aiming to provide reasonable classification performance using a small number of labeled samples. To our knowledge, only a few works in the area of active learning in the MIML setting are available. These approaches can provide practical solutions to reduce labeling cost but their efficacy remains unclear. In this paper, we propose a novel bag-class pair based approach for active learning in the MIML setting. Due to the partial availability of bag-level labels, we focus on the incomplete-label MIML setting for the proposed active learning approach. Our approach is based on a discriminative graphical model with efficient and exact inference. For the query process, we adapt active learning criteria to the novel bag-class pair selection strategy. Additionally, we introduce an online stochastic gradient descent algorithm to provide an efficient model update after each query. Numerical experiments on benchmark datasets illustrate the robustness of the proposed approach.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tam Nguyen",
+      "Raviv Raich"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.10804v2",
+    "url": "http://arxiv.org/abs/2107.10804v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.11963v2",
+    "title": "Tracking Instances as Queries",
+    "abstract": "Recently, query based deep networks catch lots of attention owing to their end-to-end pipeline and competitive results on several fundamental computer vision tasks, such as object detection, semantic segmentation, and instance segmentation. However, how to establish a query based video instance segmentation (VIS) framework with elegant architecture and strong performance remains to be settled. In this paper, we present \\textbf{QueryTrack} (i.e., tracking instances as queries), a unified query based VIS framework fully leveraging the intrinsic one-to-one correspondence between instances and queries in QueryInst. The proposed method obtains 52.7 / 52.3 AP on YouTube-VIS-2019 / 2021 datasets, which wins the 2-nd place in the YouTube-VIS Challenge at CVPR 2021 \\textbf{with a single online end-to-end model, single scale testing \\& modest amount of training data}. We also provide QueryTrack-ResNet-50 baseline results on YouTube-VIS-2021 val set as references for the VIS community.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Shusheng Yang",
+      "Yuxin Fang",
+      "Xinggang Wang",
+      "Yu Li",
+      "Ying Shan",
+      "Bin Feng",
+      "Wenyu Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.11963v2",
+    "url": "http://arxiv.org/abs/2106.11963v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.18955v2",
+    "title": "BioMistral-NLU: Towards More Generalizable Medical Language Understanding through Instruction Tuning",
+    "abstract": "Large language models (LLMs) such as ChatGPT are fine-tuned on large and diverse instruction-following corpora, and can generalize to new tasks. However, those instruction-tuned LLMs often perform poorly in specialized medical natural language understanding (NLU) tasks that require domain knowledge, granular text comprehension, and structured data extraction. To bridge the gap, we: (1) propose a unified prompting format for 7 important NLU tasks, (2) curate an instruction-tuning dataset, MNLU-Instruct, utilizing diverse existing open-source medical NLU corpora, and (3) develop BioMistral-NLU, a generalizable medical NLU model, through fine-tuning BioMistral on MNLU-Instruct. We evaluate BioMistral-NLU in a zero-shot setting, across 6 important NLU tasks, from two widely adopted medical NLU benchmarks: BLUE and BLURB. Our experiments show that our BioMistral-NLU outperforms the original BioMistral, as well as the proprietary LLMs - ChatGPT and GPT-4. Our dataset-agnostic prompting strategy and instruction tuning step over diverse NLU tasks enhance LLMs' generalizability across diverse medical NLU tasks. Our ablation experiments show that instruction-tuning on a wider variety of tasks, even when the total number of training instances remains constant, enhances downstream zero-shot generalization.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yujuan Velvin Fu",
+      "Giridhar Kaushik Ramachandran",
+      "Namu Park",
+      "Kevin Lybarger",
+      "Fei Xia",
+      "Ozlem Uzuner",
+      "Meliha Yetisgen"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.18955v2",
+    "url": "http://arxiv.org/abs/2410.18955v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.05421v3",
+    "title": "Feature-Level Debiased Natural Language Understanding",
+    "abstract": "Natural language understanding (NLU) models often rely on dataset biases rather than intended task-relevant features to achieve high performance on specific datasets. As a result, these models perform poorly on datasets outside the training distribution. Some recent studies address this issue by reducing the weights of biased samples during the training process. However, these methods still encode biased latent features in representations and neglect the dynamic nature of bias, which hinders model prediction. We propose an NLU debiasing method, named debiasing contrastive learning (DCT), to simultaneously alleviate the above problems based on contrastive learning. We devise a debiasing, positive sampling strategy to mitigate biased latent features by selecting the least similar biased positive samples. We also propose a dynamic negative sampling strategy to capture the dynamic influence of biases by employing a bias-only model to dynamically select the most similar biased negative samples. We conduct experiments on three NLU benchmark datasets. Experimental results show that DCT outperforms state-of-the-art baselines on out-of-distribution datasets while maintaining in-distribution performance. We also verify that DCT can reduce biased latent features from the model's representation.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Yougang Lyu",
+      "Piji Li",
+      "Yechang Yang",
+      "Maarten de Rijke",
+      "Pengjie Ren",
+      "Yukun Zhao",
+      "Dawei Yin",
+      "Zhaochun Ren"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.05421v3",
+    "url": "http://arxiv.org/abs/2212.05421v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

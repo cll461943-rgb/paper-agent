@@ -1,0 +1,933 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2605.11396v1",
+    "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization",
+    "abstract": "The Muon optimizer has emerged as a compelling alternative to Adam for training large language models, achieving remarkable computational savings through gradient orthogonalization. However, Muon's optimizer state is more sensitive to quantization errors: because the orthogonalization discards the magnitudes of singular values and retains only directional information, even small quantization errors in singular vector directions are amplified in the update. In this work, we propose MuonQ, a low-bit Muon training framework built on the principle of directional fidelity optimization. First, we apply a pre-quantization normalization so that each step introduces quantization errors of the same magnitude, preventing the accumulated error from developing a preferred direction. Second, we introduce a structural decomposition that separately quantizes the dominant singular components via power iteration, ensuring that quantization errors perturb only singular value magnitudes rather than rotating singular vector directions. Third, we adopt $μ$-law companding quantization to allocate higher resolution to densely packed momentum values, shifting the quantization objective from outlier preservation to dense-region distinguishability. Together, these techniques enable stable 4-bit quantization of Muon's optimizer states. Pre-training experiments on GPT-style and LLaMA-style models demonstrate that MuonQ at 4-bit precision closely matches full-precision Muon in both training loss and downstream task accuracy, while reducing optimizer state memory by up to 7.3 $\\times$. Our code is available at https://github.com/YupengSu/MuonQ.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yupeng Su",
+      "Ruijie Zhang",
+      "Ziyue Liu",
+      "Yequan Zhao",
+      "Zheng Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.11396v1",
+    "url": "http://arxiv.org/abs/2605.11396v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.13931v1",
+    "title": "True 4-Bit Quantized Convolutional Neural Network Training on CPU: Achieving Full-Precision Parity",
+    "abstract": "Low-precision neural network training has emerged as a promising direction for reducing computational costs and democratizing access to deep learning research. However, existing 4-bit quantization methods either rely on expensive GPU infrastructure or suffer from significant accuracy degradation. In this work, we present a practical method for training convolutional neural networks at true 4-bit precision using standard PyTorch operations on commodity CPUs. We introduce a novel tanh-based soft weight clipping technique that, combined with symmetric quantization, dynamic per-layer scaling, and straight-through estimators, achieves stable convergence and competitive accuracy. Training a VGG-style architecture with 3.25 million parameters from scratch on CIFAR-10, our method achieves 92.34% test accuracy on Google Colab's free CPU tier -- matching full-precision baseline performance (92.5%) with only a 0.16% gap. We further validate on CIFAR-100, achieving 70.94% test accuracy across 100 classes with the same architecture and training procedure, demonstrating that 4-bit training from scratch generalizes to harder classification tasks. Both experiments achieve 8x memory compression over FP32 while maintaining exactly 15 unique weight values per layer throughout training. We additionally validate hardware independence by demonstrating rapid convergence on a consumer mobile device (OnePlus 9R), achieving 83.16% accuracy in only 6 epochs. To the best of our knowledge, no prior work has demonstrated 4-bit quantization-aware training achieving full-precision parity on standard CPU hardware without specialized kernels or post-training quantization.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Shivnath Tathe"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.13931v1",
+    "url": "http://arxiv.org/abs/2603.13931v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.13875v1",
+    "title": "Performance of Genetic Algorithms in the Context of Software Model Refactoring",
+    "abstract": "Software systems continuously evolve due to new functionalities, requirements, or maintenance activities. In the context of software evolution, software refactoring has gained a strategic relevance. The space of possible software refactoring is usually very large, as it is given by the combinations of different refactoring actions that can produce software system alternatives. Multi-objective algorithms have shown the ability to discover alternatives by pursuing different objectives simultaneously. Performance of such algorithms in the context of software model refactoring is of paramount importance. Therefore, in this paper, we conduct a performance analysis of three genetic algorithms to compare them in terms of performance and quality of solutions. Our results show that there are significant differences in performance among the algorithms (e.g., PESA2 seems to be the fastest one, while NSGA-II shows the least memory usage).",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Vittorio Cortellessa",
+      "Daniele Di Pompeo",
+      "Michele Tucci"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.13875v1",
+    "url": "http://arxiv.org/abs/2308.13875v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.21591v1",
+    "title": "Pioneering 4-Bit FP Quantization for Diffusion Models: Mixup-Sign Quantization and Timestep-Aware Fine-Tuning",
+    "abstract": "Model quantization reduces the bit-width of weights and activations, improving memory efficiency and inference speed in diffusion models. However, achieving 4-bit quantization remains challenging. Existing methods, primarily based on integer quantization and post-training quantization fine-tuning, struggle with inconsistent performance. Inspired by the success of floating-point (FP) quantization in large language models, we explore low-bit FP quantization for diffusion models and identify key challenges: the failure of signed FP quantization to handle asymmetric activation distributions, the insufficient consideration of temporal complexity in the denoising process during fine-tuning, and the misalignment between fine-tuning loss and quantization error. To address these challenges, we propose the mixup-sign floating-point quantization (MSFP) framework, first introducing unsigned FP quantization in model quantization, along with timestep-aware LoRA (TALoRA) and denoising-factor loss alignment (DFA), which ensure precise and stable fine-tuning. Extensive experiments show that we are the first to achieve superior performance in 4-bit FP quantization for diffusion models, outperforming existing PTQ fine-tuning methods in 4-bit INT quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Maosen Zhao",
+      "Pengtao Chen",
+      "Chong Yu",
+      "Yan Wen",
+      "Xudong Tan",
+      "Tao Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.21591v1",
+    "url": "http://arxiv.org/abs/2505.21591v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.15952v4",
+    "title": "4-bit Conformer with Native Quantization Aware Training for Speech Recognition",
+    "abstract": "Reducing the latency and model size has always been a significant research problem for live Automatic Speech Recognition (ASR) application scenarios. Along this direction, model quantization has become an increasingly popular approach to compress neural networks and reduce computation cost. Most of the existing practical ASR systems apply post-training 8-bit quantization. To achieve a higher compression rate without introducing additional performance regression, in this study, we propose to develop 4-bit ASR models with native quantization aware training, which leverages native integer operations to effectively optimize both training and inference. We conducted two experiments on state-of-the-art Conformer-based ASR models to evaluate our proposed quantization technique. First, we explored the impact of different precisions for both weight and activation quantization on the LibriSpeech dataset, and obtained a lossless 4-bit Conformer model with 5.8x size reduction compared to the float32 model. Following this, we for the first time investigated and revealed the viability of 4-bit quantization on a practical ASR system that is trained with large-scale datasets, and produced a lossless Conformer ASR model with mixed 4-bit and 8-bit weights that has 5x size reduction compared to the float32 model.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shaojin Ding",
+      "Phoenix Meadowlark",
+      "Yanzhang He",
+      "Lukasz Lew",
+      "Shivani Agrawal",
+      "Oleg Rybakov"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.15952v4",
+    "url": "http://arxiv.org/abs/2203.15952v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.13331v2",
+    "title": "Qrazor: Reliable and Effortless 4-bit LLM Quantization by Significant Data Razoring",
+    "abstract": "Large-scale language models (LLMs) excel in language processing tasks but face deployment challenges due to high memory and computational demands. While low-bit quantization, such as 4-bit techniques, offers a potential solution, these methods often suffer from significant accuracy loss or require considerable effort for implementation such as reordering, rotation, etc. To address these challenges, we propose QRazor, a simple yet effective quantization scheme that enables 4-bit quantization of weights, activations, and KV cache in transformer-based LLMs. QRazor operates in two stages: first, quantizing data using 8 or 16-bit integers as a basis with absolute max scaling to preserve accuracy close to full-precision models, and second, compressing the quantized data to 4-bit using our significant data razoring (SDR) technique, which retains only the four most salient bits. Without any additional requirment of fine-tuning or additional training, QRazor achieves performance similar or better compared to state-of-the-art in 4-bit quantization method, surpassing Smoothquant and QLLM by over 12 points and Quarot(RTN) by more than 2.9 points in zero-shot reasoning task accuracy on the LLaMA2-7B model. Additionally, we introduce an integer-based arithmetic unit optimized for QRazor, allowing direct low-precision operations on SDR data without decompression.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dongyoung Lee",
+      "Seungkyu Choi",
+      "Ik Joon Chang"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.13331v2",
+    "url": "http://arxiv.org/abs/2501.13331v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.12759v1",
+    "title": "decoupleQ: Towards 2-bit Post-Training Uniform Quantization via decoupling Parameters into Integer and Floating Points",
+    "abstract": "Quantization emerges as one of the most promising compression technologies for deploying efficient large models for various real time application in recent years. Considering that the storage and IO of weights take up the vast majority of the overhead inside a large model, weight only quantization can lead to large gains. However, existing quantization schemes suffer from significant accuracy degradation at very low bits, or require some additional computational overhead when deployed, making it difficult to be applied to large-scale applications in industry. In this paper, we propose decoupleQ, achieving a substantial increase in model accuracy, especially at very low bits. decoupleQ abandons the traditional heuristic quantization paradigm and decouples the model parameters into integer and floating-point parts, thus transforming the quantization problem into a traditional mathematical optimization problem with constraints, which is then solved alternatively by off-the-shelf optimization methods. Quantization via decoupleQ is linear and uniform, making it hardware-friendlier than non-uniform counterpart, and enabling the idea to be migrated to high-bit quantization to enhance its robustness. Our method has achieved well on-line accuracy near fp16/bf16 on the 2-bit quantization of large speech models in ByteDance. The code is available at https://github.com/bytedance/decoupleQ",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yi Guo",
+      "Fanliu Kong",
+      "Xiaoyang Li",
+      "Hui Li",
+      "Wei Chen",
+      "Xiaogang Tian",
+      "Jinping Cai",
+      "Yang Zhang",
+      "Shouda Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.12759v1",
+    "url": "http://arxiv.org/abs/2404.12759v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.16836v1",
+    "title": "LLM-FP4: 4-Bit Floating-Point Quantized Transformers",
+    "abstract": "We propose LLM-FP4 for quantizing both weights and activations in large language models (LLMs) down to 4-bit floating-point values, in a post-training manner. Existing post-training quantization (PTQ) solutions are primarily integer-based and struggle with bit widths below 8 bits. Compared to integer quantization, floating-point (FP) quantization is more flexible and can better handle long-tail or bell-shaped distributions, and it has emerged as a default choice in many hardware platforms. One characteristic of FP quantization is that its performance largely depends on the choice of exponent bits and clipping range. In this regard, we construct a strong FP-PTQ baseline by searching for the optimal quantization parameters. Furthermore, we observe a high inter-channel variance and low intra-channel variance pattern in activation distributions, which adds activation quantization difficulty. We recognize this pattern to be consistent across a spectrum of transformer models designed for diverse tasks, such as LLMs, BERT, and Vision Transformer models. To tackle this, we propose per-channel activation quantization and show that these additional scaling factors can be reparameterized as exponential biases of weights, incurring a negligible cost. Our method, for the first time, can quantize both weights and activations in the LLaMA-13B to only 4-bit and achieves an average score of 63.1 on the common sense zero-shot reasoning tasks, which is only 5.8 lower than the full-precision model, significantly outperforming the previous state-of-the-art by 12.7 points. Code is available at: https://github.com/nbasyl/LLM-FP4.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shih-yang Liu",
+      "Zechun Liu",
+      "Xijie Huang",
+      "Pingcheng Dong",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.16836v1",
+    "url": "http://arxiv.org/abs/2310.16836v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.03536v1",
+    "title": "Pareto-Optimal Quantized ResNet Is Mostly 4-bit",
+    "abstract": "Quantization has become a popular technique to compress neural networks and reduce compute cost, but most prior work focuses on studying quantization without changing the network size. Many real-world applications of neural networks have compute cost and memory budgets, which can be traded off with model quality by changing the number of parameters. In this work, we use ResNet as a case study to systematically investigate the effects of quantization on inference compute cost-quality tradeoff curves. Our results suggest that for each bfloat16 ResNet model, there are quantized models with lower cost and higher accuracy; in other words, the bfloat16 compute cost-quality tradeoff curve is Pareto-dominated by the 4-bit and 8-bit curves, with models primarily quantized to 4-bit yielding the best Pareto curve. Furthermore, we achieve state-of-the-art results on ImageNet for 4-bit ResNet-50 with quantization-aware training, obtaining a top-1 eval accuracy of 77.09%. We demonstrate the regularizing effect of quantization by measuring the generalization gap. The quantization method we used is optimized for practicality: It requires little tuning and is designed with hardware capabilities in mind. Our work motivates further research into optimal numeric formats for quantization, as well as the development of machine learning accelerators supporting these formats. As part of this work, we contribute a quantization library written in JAX, which is open-sourced at https://github.com/google-research/google-research/tree/master/aqt.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "AmirAli Abdolrashidi",
+      "Lisa Wang",
+      "Shivani Agrawal",
+      "Jonathan Malmaud",
+      "Oleg Rybakov",
+      "Chas Leichner",
+      "Lukasz Lew"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.03536v1",
+    "url": "http://arxiv.org/abs/2105.03536v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.12074v1",
+    "title": "4-bit Quantization of LSTM-based Speech Recognition Models",
+    "abstract": "We investigate the impact of aggressive low-precision representations of weights and activations in two families of large LSTM-based architectures for Automatic Speech Recognition (ASR): hybrid Deep Bidirectional LSTM - Hidden Markov Models (DBLSTM-HMMs) and Recurrent Neural Network - Transducers (RNN-Ts). Using a 4-bit integer representation, a naïve quantization approach applied to the LSTM portion of these models results in significant Word Error Rate (WER) degradation. On the other hand, we show that minimal accuracy loss is achievable with an appropriate choice of quantizers and initializations. In particular, we customize quantization schemes depending on the local properties of the network, improving recognition performance while limiting computational time. We demonstrate our solution on the Switchboard (SWB) and CallHome (CH) test sets of the NIST Hub5-2000 evaluation. DBLSTM-HMMs trained with 300 or 2000 hours of SWB data achieves $<$0.5% and $<$1% average WER degradation, respectively. On the more challenging RNN-T models, our quantization strategy limits degradation in 4-bit inference to 1.3%.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Andrea Fasoli",
+      "Chia-Yu Chen",
+      "Mauricio Serrano",
+      "Xiao Sun",
+      "Naigang Wang",
+      "Swagath Venkataramani",
+      "George Saon",
+      "Xiaodong Cui",
+      "Brian Kingsbury",
+      "Wei Zhang",
+      "Zoltán Tüske",
+      "Kailash Gopalakrishnan"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.12074v1",
+    "url": "http://arxiv.org/abs/2108.12074v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12356v1",
+    "title": "Integer or Floating Point? New Outlooks for Low-Bit Quantization on Large Language Models",
+    "abstract": "Efficient deployment of large language models (LLMs) necessitates low-bit quantization to minimize model size and inference cost. While low-bit integer formats (e.g., INT8/INT4) have been the conventional choice, emerging low-bit floating-point formats (e.g., FP8/FP4) offer a compelling alternative and are gaining support from cutting-edge hardware, such as NVIDIA's H100 GPU. However, the superiority of low-bit INT versus FP formats for quantization on LLMs remains unclear. In this study, we conduct a comparative analysis of INT and FP quantization with the same bit-width, revealing that the optimal quantization format varies across different layers due to the complexity and diversity of tensor distribution. Consequently, we advocate the Mixture of Formats Quantization (MoFQ), which selects the optimal format on a layer-wise basis. This simple yet effective approach achieves state-of-the-art results in both weight-only (W-only) and weight-activation (WA) post-training quantization scenarios when tested on LLaMA across various tasks. In 4-bit W-only quantization, MoFQ surpasses GPTQ without complex hyperparameter tuning and with an order of magnitude faster quantization speed. While in 8-bit WA quantization, MoFQ significantly outperforms INT/FP-only methods, achieving performance close to the full precision model. Notably, MoFQ incurs no hardware overhead compared to INT/FP-only quantization, as the bit-width remains unchanged.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yijia Zhang",
+      "Lingran Zhao",
+      "Shijie Cao",
+      "Wenqiang Wang",
+      "Ting Cao",
+      "Fan Yang",
+      "Mao Yang",
+      "Shanghang Zhang",
+      "Ningyi Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12356v1",
+    "url": "http://arxiv.org/abs/2305.12356v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1149v1",
+    "title": "A Performance Study of GA and LSH in Multiprocessor Job Scheduling",
+    "abstract": "Multiprocessor task scheduling is an important and computationally difficult problem. This paper proposes a comparison study of genetic algorithm and list scheduling algorithm. Both algorithms are naturally parallelizable but have heavy data dependencies. Based on experimental results, this paper presents a detailed analysis of the scalability, advantages and disadvantages of each algorithm. Multiprocessors have emerged as a powerful computing means for running real-time applications, especially where a uni-processor system would not be sufficient enough to execute all the tasks. The high performance and reliability of multiprocessors have made them a powerful computing resource. Such computing environment requires an efficient algorithm to determine when and on which processor a given task should execute. In multiprocessor systems, an efficient scheduling of a parallel program onto the processors that minimizes the entire execution time is vital for achieving a high performance. This scheduling problem is known to be NP- Hard. In multiprocessor scheduling problem, a given program is to be scheduled in a given multiprocessor system such that the program's execution time is minimized. The last job must be completed as early as possible. Genetic algorithm (GA) is one of the widely used techniques for constrained optimization.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "S. R. Vijayalakshmi",
+      "G. Padmavathi"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1149v1",
+    "url": "http://arxiv.org/abs/1002.1149v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.15508v3",
+    "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+    "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Jun Cheng",
+      "Mengchu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.15508v3",
+    "url": "http://arxiv.org/abs/2407.15508v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14302v1",
+    "title": "Scaling Law for Quantization-Aware Training",
+    "abstract": "Large language models (LLMs) demand substantial computational and memory resources, creating deployment challenges. Quantization-aware training (QAT) addresses these challenges by reducing model precision while maintaining performance. However, the scaling behavior of QAT, especially at 4-bit precision (W4A4), is not well understood. Existing QAT scaling laws often ignore key factors such as the number of training tokens and quantization granularity, which limits their applicability. This paper proposes a unified scaling law for QAT that models quantization error as a function of model size, training data volume, and quantization group size. Through 268 QAT experiments, we show that quantization error decreases as model size increases, but rises with more training tokens and coarser quantization granularity. To identify the sources of W4A4 quantization error, we decompose it into weight and activation components. Both components follow the overall trend of W4A4 quantization error, but with different sensitivities. Specifically, weight quantization error increases more rapidly with more training tokens. Further analysis shows that the activation quantization error in the FC2 layer, caused by outliers, is the primary bottleneck of W4A4 QAT quantization error. By applying mixed-precision quantization to address this bottleneck, we demonstrate that weight and activation quantization errors can converge to similar levels. Additionally, with more training data, weight quantization error eventually exceeds activation quantization error, suggesting that reducing weight quantization error is also important in such scenarios. These findings offer key insights for improving QAT research and development.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Chaoyi Zhang",
+      "Jing Liu",
+      "Yutao Zeng",
+      "Zeyue Xue",
+      "Zhiheng Liu",
+      "Yunshui Li",
+      "Jin Ma",
+      "Jie Huang",
+      "Xun Zhou",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14302v1",
+    "url": "http://arxiv.org/abs/2505.14302v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.13144v2",
+    "title": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks",
+    "abstract": "We propose Additive Powers-of-Two~(APoT) quantization, an efficient non-uniform quantization scheme for the bell-shaped and long-tailed distribution of weights and activations in neural networks. By constraining all quantization levels as the sum of Powers-of-Two terms, APoT quantization enjoys high computational efficiency and a good match with the distribution of weights. A simple reparameterization of the clipping function is applied to generate a better-defined gradient for learning the clipping threshold. Moreover, weight normalization is presented to refine the distribution of weights to make the training more stable and consistent. Experimental results show that our proposed method outperforms state-of-the-art methods, and is even competitive with the full-precision models, demonstrating the effectiveness of our proposed APoT quantization. For example, our 4-bit quantized ResNet-50 on ImageNet achieves 76.6% top-1 accuracy without bells and whistles; meanwhile, our model reduces 22% computational cost compared with the uniformly quantized counterpart. The code is available at https://github.com/yhhhli/APoT_Quantization.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Yuhang Li",
+      "Xin Dong",
+      "Wei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.13144v2",
+    "url": "http://arxiv.org/abs/1909.13144v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1154v1",
+    "title": "Performance Analysis of Software to Hardware Task Migration in Codesign",
+    "abstract": "The complexity of multimedia applications in terms of intensity of computation and heterogeneity of treated data led the designers to embark them on multiprocessor systems on chip. The complexity of these systems on one hand and the expectations of the consumers on the other hand complicate the designers job to conceive and supply strong and successful systems in the shortest deadlines. They have to explore the different solutions of the design space and estimate their performances in order to deduce the solution that respects their design constraints. In this context, we propose the modeling of one of the design space possible solutions: the software to hardware task migration. This modeling exploits the synchronous dataflow graphs to take into account the different migration impacts and estimate their performances in terms of throughput.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "Dorsaf Sebai",
+      "Abderrazak Jemai",
+      "Imed Bennour"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1154v1",
+    "url": "http://arxiv.org/abs/1002.1154v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.08692v2",
+    "title": "AAAC: Activation-Aware Adaptive Codebooks for 4-bit LLM Weight Quantization",
+    "abstract": "Post-training weight-only quantization to 4 bits is widely used to reduce the memory and compute costs of large language model inference. Existing PTQ methods, such as AWQ and GPTQ, improve how weights are mapped onto a fixed 4-bit grid through scaling, clipping, or error compensation. To further improve accuracy, methods such as OmniQuant and QuIP\\# uses gradient-assisted algorithms at the cost of hours of quantization time. In this work, we propose AAAC (Activation-Aware Adaptive Codebooks), a lightweight method for 4-bit LLM weight quantization. AAAC replaces the fixed scalar codebook used in standard quantization with two small learned scalar codebooks (64 bytes) per layer. Each group of weights selects the codebook that minimizes activation-weighted reconstruction error, encoding the choice in the unused sign bit of the group's positive scale and adding zero storage overhead. AAAC completes in 3--30 minutes on a single GPU, and adds no memory beyond the model itself. We evaluate against AWQ, GPTQ, IF4, GPTVQ, OmniQuant, SqueezeLLM, and QuIP\\# across model families. AAAC outperforms baselines at orders-of-magnitude less quantization time.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Beshr IslamBouli",
+      "David Jin"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.08692v2",
+    "url": "http://arxiv.org/abs/2605.08692v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1006.0686v1",
+    "title": "Integer Sequences from Queueing Theory",
+    "abstract": "Operators on probability distributions can be expressed as operators on the associated moment sequences, and so correspond to operators on integer sequences. Thus, there is an opportunity to apply each theory to the other. Moreover, probability models can be sources of integer sequences, both classical and new, as we show by considering the classical M/G/1 single-server queueing model. We identify moment sequences that are integer sequences. We establish connections between the M/M/1 busy period distribution and the Catalan and Schroeder numbers.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "Joseph Abate",
+      "Ward Whitt"
+    ],
+    "doi": null,
+    "arxiv_id": "1006.0686v1",
+    "url": "http://arxiv.org/abs/1006.0686v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.18117v1",
+    "title": "LoRaQ: Optimized Low Rank Approximation for 4-bit Quantization",
+    "abstract": "Post-training quantization (PTQ) is essential for deploying large diffusion transformers on resource-constrained hardware, but aggressive 4-bit quantization significantly degrades generative performance. Low-rank approximation methods have emerged as a promising solution by appending auxiliary linear branches to restore performance. However, current state-of-the-art approaches assume these branches must retain high precision (W16A16) and rely on heavy, data-dependent calibration for initialization. We challenge both limitations with LoRaQ (Low-Rank Approximated Quantization), a simple, data-free calibration approach that optimizes quantization error compensation. By overcoming the need for high-precision branches, LoRaQ enables the first fully sub-16 bit pipeline, allowing the low-rank branch itself to be quantized. We demonstrate that, at equal memory overhead, LoRaQ outperforms the state-of-the-art methods in their native implementations on Pixart-$Σ$ and SANA. We also analyze mixed-precision configurations, showing that setups such as W8A8, W6A6, and W4A8 for the low-rank branch, alongside a W4 main layer, yield superior results while maintaining a fully quantized architecture compatible with modern mixed-precision hardware.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yann Bouquet",
+      "Alireza Khodamoradi",
+      "Sophie Yáng Shen",
+      "Kristof Denolf",
+      "Mathieu Salzmann"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.18117v1",
+    "url": "http://arxiv.org/abs/2604.18117v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0709.4307v2",
+    "title": "The rapid decline of the prompt emission in Gamma-Ray Bursts",
+    "abstract": "Many gamma ray bursts (GRBs) have been observed with the Burst-Alert and X-Ray telescopes of the Swift satellite. The successive `pulses' of these GRBs end with a fast decline and a fast spectral softening, until they are overtaken by another pulse, or the last pulse's decline is overtaken by a less rapidly-varying `afterglow'. The fast decline-phase has been attributed, in the currently-explored standard fireball model of GRBs, to `high-latitude' synchrotron emission from a collision of two conical shells. This high latitude emission does not explain the observed spectral softening. In contrast, the temporal behaviour and the spectral evolution during the fast-decline phase agree with the predictions of the cannonball model of GRBs.",
+    "year": 2007,
+    "venue": null,
+    "authors": [
+      "Shlomo Dado",
+      "Arnon Dar",
+      "A. De Rujula"
+    ],
+    "doi": null,
+    "arxiv_id": "0709.4307v2",
+    "url": "http://arxiv.org/abs/0709.4307v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1911.02079v1",
+    "title": "Post-Training 4-bit Quantization on Embedding Tables",
+    "abstract": "Continuous representations have been widely adopted in recommender systems where a large number of entities are represented using embedding vectors. As the cardinality of the entities increases, the embedding components can easily contain millions of parameters and become the bottleneck in both storage and inference due to large memory consumption. This work focuses on post-training 4-bit quantization on the continuous embeddings. We propose row-wise uniform quantization with greedy search and codebook-based quantization that consistently outperforms state-of-the-art quantization approaches on reducing accuracy degradation. We deploy our uniform quantization technique on a production model in Facebook and demonstrate that it can reduce the model size to only 13.89% of the single-precision version while the model quality stays neutral.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Hui Guan",
+      "Andrey Malevich",
+      "Jiyan Yang",
+      "Jongsoo Park",
+      "Hector Yuen"
+    ],
+    "doi": null,
+    "arxiv_id": "1911.02079v1",
+    "url": "http://arxiv.org/abs/1911.02079v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.14494v1",
+    "title": "Free-Bloom: Zero-Shot Text-to-Video Generator with LLM Director and LDM Animator",
+    "abstract": "Text-to-video is a rapidly growing research area that aims to generate a semantic, identical, and temporal coherence sequence of frames that accurately align with the input text prompt. This study focuses on zero-shot text-to-video generation considering the data- and cost-efficient. To generate a semantic-coherent video, exhibiting a rich portrayal of temporal semantics such as the whole process of flower blooming rather than a set of \"moving images\", we propose a novel Free-Bloom pipeline that harnesses large language models (LLMs) as the director to generate a semantic-coherence prompt sequence, while pre-trained latent diffusion models (LDMs) as the animator to generate the high fidelity frames. Furthermore, to ensure temporal and identical coherence while maintaining semantic coherence, we propose a series of annotative modifications to adapting LDMs in the reverse process, including joint noise sampling, step-aware attention shift, and dual-path interpolation. Without any video data and training requirements, Free-Bloom generates vivid and high-quality videos, awe-inspiring in generating complex scenes with semantic meaningful frame sequences. In addition, Free-Bloom is naturally compatible with LDMs-based extensions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Hanzhuo Huang",
+      "Yufan Feng",
+      "Cheng Shi",
+      "Lan Xu",
+      "Jingyi Yu",
+      "Sibei Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.14494v1",
+    "url": "http://arxiv.org/abs/2309.14494v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.13313v1",
+    "title": "Performance Enhancement of the Ozaki Scheme on Integer Matrix Multiplication Unit",
+    "abstract": "This study was aimed at simultaneously achieving sufficient accuracy and high performance for general matrix multiplications. Recent architectures, such as NVIDIA GPUs, feature high-performance units designed for low-precision matrix multiplications in machine learning models, and next-generation architectures are expected to follow the same design principle. The key to achieving superior performance is to fully leverage such architectures. The Ozaki scheme, a highly accurate matrix multiplication algorithm using error-free transformations, enables higher-precision matrix multiplication to be performed through multiple lower-precision matrix multiplications and higher-precision matrix additions. Ootomo et al. implemented the Ozaki scheme on high-performance matrix multiplication units with the aim of achieving both sufficient accuracy and high performance. This paper proposes alternative approaches to improving performance by reducing the numbers of lower-precision matrix multiplications and higher-precision matrix additions. Numerical experiments demonstrate the accuracy of the results and conduct performance benchmarks of the proposed approaches. These approaches are expected to yield more efficient results in next-generation architectures.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yuki Uchino",
+      "Katsuhisa Ozaki",
+      "Toshiyuki Imamura"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.13313v1",
+    "url": "http://arxiv.org/abs/2409.13313v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.06653v1",
+    "title": "Improving Block-Wise LLM Quantization by 4-bit Block-Wise Optimal Float (BOF4): Analysis and Variations",
+    "abstract": "Large language models (LLMs) demand extensive memory capacity during both fine-tuning and inference. To enable memory-efficient fine-tuning, existing methods apply block-wise quantization techniques, such as NF4 and AF4, to the network weights. We show that these quantization techniques incur suboptimal quantization errors. Therefore, as a first novelty, we propose an optimization approach for block-wise quantization. Using this method, we design a family of quantizers named 4-bit block-wise optimal float (BOF4), which consistently reduces the quantization error compared to both baseline methods. We provide both a theoretical and a data-driven solution for the optimization process and prove their practical equivalence. Secondly, we propose a modification to the employed normalization method based on the signed absolute block maximum (BOF4-S), enabling further reduction of the quantization error and empirically achieving less degradation in language modeling performance. Thirdly, we explore additional variations of block-wise quantization methods applied to LLMs through an experimental study on the importance of accurately representing zero and large-amplitude weights on the one hand, and optimization towards various error metrics on the other hand. Lastly, we introduce a mixed-precision quantization strategy dubbed outlier-preserving quantization (OPQ) to address the distributional mismatch induced by outlier weights in block-wise quantization. By storing outlier weights in 16-bit precision (OPQ) while applying BOF4-S, we achieve top performance among 4-bit block-wise quantization techniques w.r.t. perplexity.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Patrick Blumenberg",
+      "Thomas Graave",
+      "Tim Fingscheidt"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.06653v1",
+    "url": "http://arxiv.org/abs/2505.06653v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.16732v1",
+    "title": "DiRotQ: Rotation-Aware Quantization for 4-bit Diffusion Transformers",
+    "abstract": "Diffusion Transformers (DiTs) achieve state-of-the-art image generation quality but incur substantial memory and computational costs at inference. While aggressive Post-Training Quantization (PTQ) to 4-bit precision offers significant efficiency gains, it typically results in severe quality degradation. Existing approaches, including smoothing-based methods, mixed-precision schemes, rotation techniques, and low-rank residual methods, partially mitigate this issue but still leave a noticeable gap to FP16/BF16 performance. In this work, we introduce DiRotQ, a W4A4 PTQ framework that mitigates this degradation through rotation-aware activation quantization. DiRotQ identifies a low-rank subspace capturing dominant activation variance via Principal Component Analysis (PCA), preserving coefficients in this subspace at higher precision while quantizing the remaining components to 4-bit. Activations are rotated into the PCA basis at inference time using calibration-derived orthogonal transformations, while the inverse rotation is fused into the layer weights offline. Combined with GPTQ-based weight quantization, DiRotQ achieves an FID (lower is better) of 15.9 and PSNR (higher is better) of 19.1 dB on PixArt-Σ over the MJHQ-30K dataset, outperforming the prior state-of-the-art SVDQuant (FID 18.9, PSNR 17.6) under the same INT W4A4 setting. Beyond standard metrics, we introduce a VLM-as-a-Judge evaluation protocol for diffusion model quantization, the first such evaluation in this setting, providing a more holistic assessment of perceptual quality and prompt alignment under aggressive compression. On the systems side, we implement a Triton-based custom kernel to enable efficient end-to-end inference, reducing memory usage of the 12B FLUX.1-dev model by 2.1x and delivering 2.3x speedup over the BF16 baseline, on a 24 GB RTX 4090 GPU.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Sayeh Sharify",
+      "Mahsa Salmani",
+      "Hesham Mostafa"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.16732v1",
+    "url": "http://arxiv.org/abs/2605.16732v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.07409v1",
+    "title": "A Metric for Performance Portability",
+    "abstract": "The term \"performance portability\" has been informally used in computing to refer to a variety of notions which generally include: 1) the ability to run one application across multiple hardware platforms; and 2) achieving some notional level of performance on these platforms. However, there has been a noticeable lack of consensus on the precise meaning of the term, and authors' conclusions regarding their success (or failure) to achieve performance portability have thus been subjective. Comparing one approach to performance portability with another has generally been marked with vague claims and verbose, qualitative explanation of the comparison. This paper presents a concise definition for performance portability, along with a simple metric that accurately captures the performance and portability of an application across different platforms. The utility of this metric is then demonstrated with a retroactive application to previous work.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "S. J. Pennycook",
+      "J. D. Sewall",
+      "V. W. Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.07409v1",
+    "url": "http://arxiv.org/abs/1611.07409v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.09720v2",
+    "title": "The case for 4-bit precision: k-bit Inference Scaling Laws",
+    "abstract": "Quantization methods reduce the number of bits required to represent each parameter in a model, trading accuracy for smaller memory footprints and inference latencies. However, the final model size depends on both the number of parameters of the original model and the rate of compression. For example, a 30B 8-bit model and a 60B 4-bit model have the same number of bits but may have very different zero-shot accuracies. In this work, we study this trade-off by developing inference scaling laws of zero-shot performance in Large Language Models (LLMs) to determine the bit-precision and model size that maximizes zero-shot performance. We run more than 35,000 experiments with 16-bit inputs and k-bit parameters to examine which zero-shot quantization methods improve scaling for 3 to 8-bit precision at scales of 19M to 176B parameters across the LLM families BLOOM, OPT, NeoX/Pythia, and GPT-2. We find that it is challenging to improve the bit-level scaling trade-off, with the only improvements being the use of a small block size -- splitting the parameters into small independently quantized blocks -- and the quantization data type being used (e.g., Int vs Float). Overall, our findings show that {4-bit} precision is almost universally optimal for total model bits and zero-shot accuracy.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Tim Dettmers",
+      "Luke Zettlemoyer"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.09720v2",
+    "url": "http://arxiv.org/abs/2212.09720v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.16299v1",
+    "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+    "abstract": "Emergent Large Language Models (LLMs) use their extraordinary performance and powerful deduction capacity to discern from traditional language models. However, the expenses of computational resources and storage for these LLMs are stunning, quantization then arises as a trending conversation. To address accuracy decay caused by quantization, two streams of works in post-training quantization methods stand out. One uses other weights to compensate existing quantization error, while the other transfers the quantization difficulty to other parts in the model. Combining both merits, we introduce Learnable Singular value Increment (LSI) as an advanced solution. LSI uses Singular Value Decomposition to extract singular values of the weights and make them learnable to help weights compensate each other conditioned on activation. Incorporating LSI with existing techniques, we achieve state-of-the-art performance in diverse quantization settings, no matter in weight-only, weight-activation or extremely low bit scenarios. By unleashing the potential of LSI, efficient finetuning on quantized model is no longer a prohibitive problem.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Yuting Xiao",
+      "Zhiyuan Xiang",
+      "Ruiting Dai",
+      "Jun Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.16299v1",
+    "url": "http://arxiv.org/abs/2406.16299v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.01556v1",
+    "title": "TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization",
+    "abstract": "4-bit quantization reduces the memory footprint and latency of large language model inference, but its aggressive precision reduction can severely degrade accuracy. Prior methods address this by decomposing each weight matrix into two components (e.g., via singular value decomposition) and quantizing them separately, assigning the bulk of values to a low-precision residual component while handling outliers with a high-precision low-rank component. However, such decompositions are designed to minimize the real-valued energy of the residual, rather than the post-quantization error of the residual and low-rank components. We propose TwinQuant, a 4-bit quantization framework that learns quantization-friendly decomposed subspaces and jointly reshapes both the low-rank and residual components. TwinQuant learns component-specific transformations via a joint optimization over the Stiefel and general linear manifolds, flattening their distributions and reducing dynamic-range imbalance. To enable efficient end-to-end execution, we further design a fused dual-component kernel that pipelines the two-stage low-rank computation on-chip and merges both components with a single epilogue, avoiding intermediate global-memory traffic. Across LLaMA3 and Qwen3 models, TwinQuant preserves near-FP16 accuracy and delivers up to $1.8\\times$ end-to-end speedup over an FP16 baseline.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Haodong Wang",
+      "Junjie Liu",
+      "Zicong Hong",
+      "Qianli Liu",
+      "Jian Lin",
+      "Song Guo",
+      "Xu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.01556v1",
+    "url": "http://arxiv.org/abs/2606.01556v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.04532v3",
+    "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+    "abstract": "Quantization can accelerate large language model (LLM) inference. Going beyond INT8 quantization, the research community is actively exploring even lower precision, such as INT4. Nonetheless, state-of-the-art INT4 quantization techniques only accelerate low-batch, edge LLM inference, failing to deliver performance gains in large-batch, cloud-based LLM serving. We uncover a critical issue: existing INT4 quantization methods suffer from significant runtime overhead (20-90%) when dequantizing either weights or partial sums on GPUs. To address this challenge, we introduce QoQ, a W4A8KV4 quantization algorithm with 4-bit weight, 8-bit activation, and 4-bit KV cache. QoQ stands for quattuor-octo-quattuor, which represents 4-8-4 in Latin. QoQ is implemented by the QServe inference library that achieves measured speedup. The key insight driving QServe is that the efficiency of LLM serving on GPUs is critically influenced by operations on low-throughput CUDA cores. Building upon this insight, in QoQ algorithm, we introduce progressive quantization that can allow low dequantization overhead in W4A8 GEMM. Additionally, we develop SmoothAttention to effectively mitigate the accuracy degradation incurred by 4-bit KV quantization. In the QServe system, we perform compute-aware weight reordering and take advantage of register-level parallelism to reduce dequantization latency. We also make fused attention memory-bound, harnessing the performance gain brought by KV4 quantization. As a result, QServe improves the maximum achievable serving throughput of Llama-3-8B by 1.2x on A100, 1.4x on L40S; and Qwen1.5-72B by 2.4x on A100, 3.5x on L40S, compared to TensorRT-LLM. Remarkably, QServe on L40S GPU can achieve even higher throughput than TensorRT-LLM on A100. Thus, QServe effectively reduces the dollar cost of LLM serving by 3x. Code is available at https://github.com/mit-han-lab/omniserve.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yujun Lin",
+      "Haotian Tang",
+      "Shang Yang",
+      "Zhekai Zhang",
+      "Guangxuan Xiao",
+      "Chuang Gan",
+      "Song Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.04532v3",
+    "url": "http://arxiv.org/abs/2405.04532v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

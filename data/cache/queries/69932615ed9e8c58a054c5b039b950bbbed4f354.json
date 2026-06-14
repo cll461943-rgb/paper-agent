@@ -1,0 +1,887 @@
+[
+  {
+    "paper_id": "pubmed:42282807",
+    "title": "Bridging Ancestry Gaps in Genomic Risk Prediction with Tabular Foundation Models.",
+    "abstract": "Models deployed for genomic prediction of diseases perform unevenly across populations, limiting clinical utility. Two factors drive this limitation: large imbalances in sample availability across ancestry groups and non-stationarity of genotype-phenotype effect sizes across the ancestry continuum. While tabular foundation models with in-context learning (ICL) have shown strong sample efficiency in other domains, their effectiveness for genotype-to-phenotype prediction and their robustness to ancestry-driven effect heterogeneity remain unclear. Using large, ancestrally diverse biobank data, we show that ICL-capable tabular foundation models reduce performance degradation in under-sampled ancestry groups compared to conventional supervised approaches. However, we find that prevailing models trained on existing synthetic tabular tasks fail when allele effect sizes vary across ancestry space. Treating genetic ancestry as a continuous variable, we introduce an instruction-tuning framework that exposes models to synthetic tasks with ancestry-dependent non-stationary effects. Instruction-tuned models achieve improved and more stable predictive performance across the genetic ancestry continuum, including for individuals distant from in-context exemplars in ancestry space. All code for instruction-tuning models, synthetic task generation, data wrangling, and model evaluation, is publicly available at https://github.com/ai4pm/Bridging-Ancestry-Gaps-in-Genomic-Risk-Prediction-with-Tabular-Foundation-Models . The final instruction-tuned model (ICL-NS-G2P-proto) is also released in this repository. Detailed documentation is provided, including environment setup instructions and guidelines for running various parts. The instruction-tuning task datasets are available at https://zenodo.org/records/18309187 . adas23@uthsc.edu , ycui2@uthsc.edu. Supplementary data are available online.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Anirban Das",
+      "Yan Cui"
+    ],
+    "doi": "10.64898/2026.05.29.728877",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42282807/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42282807"
+    }
+  },
+  {
+    "paper_id": "pubmed:42282183",
+    "title": "APOE and amyloid-tau pathology in cognitively unimpaired older adults.",
+    "abstract": "APOE genotype shows well-established dose-dependent associations with higher amyloid in cognitively unimpaired (CU) adults. In contrast, associations with tau burden and cognition are less well characterized. We performed a cross-sectional analysis of harmonized multi-cohort ADSP-PHC data from 4,380 CU participants across 4 cohorts with APOE genotype, amyloid PET, and cognitive data from four domains of memory, language, executive, and visuospatial function, including a subset of 758 with tau PET imaging. APOE ε4 showed a strong dose-dependent association with amyloid burden and amyloid positivity, with the highest levels observed among ε4 homozygotes. Associations between APOE and global tau burden were more modest and appeared to be driven mainly by ε4 homozygotes, while regional analyses showed localized APOE ε4-related associations in medial temporal regions. Independently, higher tau burden was associated with lower memory and language performance. In CU older adults, APOE ε4 was most strongly associated with amyloid burden, with more modest associations observed for medial temporal tau burden. APOE ε4 showed dose-dependent associations with amyloid burden and age-related amyloid differencesAPOE-related global tau associations were modest, mainly in ε44 group, with stronger medial temporal effects among ε4 carriersHigher tau burden was associated with lower memory and language performance, regardless APOE status.",
+    "year": 2026,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "Carlos Albarrán Morillo",
+      "Lukai Zheng",
+      "Elham Ghanbarian",
+      "Babak Khorsand",
+      "Crystal M Glover",
+      "Joshua D Grill",
+      "S Ahmad Sajjadi",
+      "Ali Ezzati"
+    ],
+    "doi": "10.64898/2026.06.02.26354753",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42282183/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42282183"
+    }
+  },
+  {
+    "paper_id": "pubmed:42282016",
+    "title": "A real-world feasibility evaluation of LLM-based clinical prediction: emergency department return visit admission across two academic medical centers.",
+    "abstract": "Large language models (LLMs) are increasingly applied to clinical prediction tasks and offer significant promise for real-world impact. Whether that promise translates into deployment, however, depends on several feasibility constraints, performance, data requirements, operational cost, and safety, that are rarely evaluated together. Using emergency department (ED) return visit admission (RVA) prediction as a clinical use case, we developed and tested a two-stage LLM-based approach at two academic medical centers. In the first stage, an LLM generates structured severity summaries from ED documentation and structured EHR variables; in the second stage, these summaries inform RVA prediction via zero-shot or in-context learning (ICL). We evaluated the framework on four feasibility axes simultaneously: discrimination performance, data requirements, per-encounter token consumption, and hallucination risk in LLM-generated severity summaries. The LLM-based pipeline outperformed the strongest traditional ML baseline at WCM (Gemini ICL = 3 AUC 0.746 vs. CatBoost AUC 0.723; DeLong p = 0.044), but not at VUMC, where logistic regression on structured data alone (AUC 0.799) matched the best LLM configuration (GPT-5 mini AUC 0.789, n.s.). Absolute discrimination at VUMC was higher than at WCM for both approaches, indicating that the cross-site difference reflects local documentation and structured-data informativeness rather than LLM failure. We find that the deploy-or-not decision for an LLM-based clinical prediction pipeline is primarily a feasibility question first, rather than an architectural one. This decision is site-conditional, tied to how much of the predictive signal is already captured by structured EHR variables at a given site.",
+    "year": 2026,
+    "venue": "Research square",
+    "authors": [
+      "Jinsong Liu",
+      "Katherine Brown",
+      "Michelle J Ma",
+      "Arindam RoyChoudhury",
+      "Bradley A Malin",
+      "Allison McCoy",
+      "Adam Wright",
+      "Jessica S Ancker",
+      "Tony Rosen",
+      "Jin Ho Han",
+      "Peter A D Steel",
+      "Yiye Zhang"
+    ],
+    "doi": "10.21203/rs.3.rs-9733941/v1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42282016/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42282016"
+    }
+  },
+  {
+    "paper_id": "pubmed:42274101",
+    "title": "Learning From Successful Hospital Discharge: A Realist Evaluation in a Dutch Hospital to Gain Insight Into Its Underlying Working Mechanisms.",
+    "abstract": "To understand the underlying working mechanisms and the influencing context of successful discharge. We conducted a realist evaluation using observations, individual interviews, and focus group interviews with both patients and different types of health care professionals involved in the discharge process on a ward where discharge was perceived to be successful. Using framework analysis, we developed an initial program theory to capture the working mechanisms that contribute to a successful hospital discharge. We found 3 underlying working mechanisms that were triggered and influenced by context, contributing to successful hospital discharges in daily practice: to anticipate, to connect, and to simplify. We illustrate how successful discharge is achieved through the underlying working mechanisms-to anticipate, to connect, and to simplify-that are triggered by the context encountered. Our findings show that to ensure successful discharges, policies and protocols for health care professionals should be flexible and adaptable to daily variations in context.",
+    "year": 2026,
+    "venue": "Journal of patient safety",
+    "authors": [
+      "Milou Steenbergen",
+      "Sigrid Cjm Vervoort",
+      "Esther de Groot",
+      "Debbie Vermond",
+      "Bas de Vries",
+      "Maarten Ten Berg",
+      "Lisette Schoonhoven",
+      "Dorien Lm Zwart"
+    ],
+    "doi": "10.1097/PTS.0000000000001539",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42274101/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42274101"
+    }
+  },
+  {
+    "paper_id": "pubmed:42257039",
+    "title": "Cross-lingual transfer with multilingual language models for influenza-like-illness detection in social media texts.",
+    "abstract": "Current Language Models (LMs) can process multilingual texts, enabling social media-based Influenza-Like-Illness (ILI) surveillance across languages without requiring language-specific systems. Yet, it remains unclear whether a cost-effective multilingual classifier can reliably extract ILI signals from social media across countries, languages, and seasons. We introduce MuILI, the first class-balanced multilingual dataset annotated for ILI detection, comprising 4,284 tweets across five widely spoken European languages. Using MuILI, we investigated whether a single multilingual classifier can consistently extract ILI signals across nine ILI seasons for France (2014-2023) and five seasons for Italy, Spain, and Germany (2018-2023). We compared five fine-tuned Multilingual-Masked LMs (MMLMs), three Cross-Lingual Transfer (CLT) strategies, and four In-Context Learning (ICL) techniques with decoder-only Large LMs (LLMs). Domain-adapted MMLMs (Bernice, F1 = 0.87), set the benchmark performance. Comparable results were obtained with translate-train (F1 = 0.85) or model-transfer (F1 = 0.84) from French data alone. Spanish translate-train performed similarly (F1 = 0.84). Among LLMs, only Qwen2.5-72B-Instruct surpassed the benchmark (F1 = 0.88-0.90). Spearman cross-correlation between ILI signals derived from the benchmark classifier and official consultation rates demonstrated strong real-time alignment, though it varied during disruptions. Overall, multilingual LMs can expand ILI surveillance using social-media. CLT offers annotation-efficient solutions, while ICL with LLMs can eliminate annotation requirements but at substantial computational costs.",
+    "year": 2026,
+    "venue": "npj digital public health",
+    "authors": [
+      "Niti Mishra",
+      "Joan Ballester",
+      "Rodrigo Agerri"
+    ],
+    "doi": "10.1038/s44482-026-00020-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42257039/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42257039"
+    }
+  },
+  {
+    "paper_id": "pubmed:42249375",
+    "title": "Immersive ethical role-play in undergraduate nursing ethics education: a qualitative descriptive study.",
+    "abstract": "Nursing ethics teaching often relies on lectures and paper-based cases, which may not adequately prepare students for ethically ambiguous clinical practice. Evidence on low-resource, narrative, immersive approaches for nursing ethics education remains limited. To explore how undergraduate nursing students described their ethical reasoning, ethical positioning, and perceived learning after participating in an immersive ethical role-play simulation (IERS). Qualitative descriptive study. A total of 102 second-year undergraduate nursing students at Hubei Polytechnic University in central China participated in November 2025. Students took part in a 2.5-hour, peer-enacted IERS built around an end-of-life decision-making scenario. Anonymous post-session survey data were collected using one two-part mapping item and two open-ended questions. Q1-2 responses were summarized using descriptive content analysis; Q3 responses were examined using typological analysis; and Q4 responses were analyzed using reflexive thematic analysis. Autonomy was the most frequently identified primary bioethical principle (50/102 responses), although students also referred to beneficence, justice, non-maleficence, and relational obligations such as filial duty. Three post-simulation positioning modes were identified: principle-based distancing, contextualized ambivalence, and value-aligned identification. Four themes described students' perceived learning gains: embodied understanding of bioethical principles, movement beyond binary moral judgment, perspective-taking and empathy, and emerging professional identity. This study suggests that a low-resource, immersive role-play format may help nursing students engage with bioethical principles in context, consider multiple stakeholder perspectives, and reflect on their future professional responsibilities. The findings support IERS as a feasible complement to didactic ethics teaching, while also indicating the need for longitudinal and comparative research to assess sustained educational impact.",
+    "year": 2026,
+    "venue": "BMC medical ethics",
+    "authors": [
+      "Yayun Song",
+      "Pu Lin",
+      "Gang Hu",
+      "Jia Qu",
+      "Zhenhong Su"
+    ],
+    "doi": "10.1186/s12910-026-01515-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42249375/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42249375"
+    }
+  },
+  {
+    "paper_id": "pubmed:42245005",
+    "title": "An ECG foundation model for generalizable cardiac function prediction across the lifespan.",
+    "abstract": "Artificial intelligence-enhanced electrocardiography (AI-ECG) enables scalable, low-cost cardiac dysfunction screening, but existing models are annotation-intensive and predominantly adult-derived, leaving paediatric generalizability uncertain. Paediatric cohorts exhibit highly variable cardiac morphology and function compared to adults, which may be useful for learning generalizable AI-ECG models. We pretrained ECG-Fyler on a predominantly paediatric, all-age cohort at Boston Children's Hospital (1992-2023), annotated with a cardiologyspecific coding system (Fyler codes), and evaluated it on assessments from echocardiography (echo) and cardiac magnetic resonance (CMR) studies. We validated on an external adult cohort from Columbia University Irving Medical Center. Performance was benchmarked against several AI-ECG foundation models by AUROC across age groups, lesion types, and limited-data scenarios. The pretraining cohort comprised 782,138 ECGs from 255,271 patients (median age: 10.9 years, IQR: [2.8-16.8]). Internal evaluation included 178,495 ECG-echo pairs (median age: 10.9 [3.7-17.0]) and 8,584 ECG-CMR pairs (median age: 20.7 [15.6-29.6]). External validation included 82,543 ECG-echo pairs from adults (median age: 64.0 [52.0-74.0]). ECG-Fyler improved AUROC across biventricular dysfunction and dilation tasks, with the largest gains in low-data settings. In internal validation, ECG-Fyler detected low left ventricular ejection fraction (LVEF  Pretraining on richly annotated, paediatric-dominant ECGs yields models that transfer efficiently across institutions and ages, supporting AI-ECG screening and triage when labels or imaging access are limited. National Institutes of Health (R01LM012973); Kostin Innovation Fund, Boston Children's Hospital.",
+    "year": 2026,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "Yuting Yang",
+      "Lorenzo Peracchio",
+      "Joshua Mayourian",
+      "Timothy Miller",
+      "William G La Cava"
+    ],
+    "doi": "10.64898/2026.05.26.26354128",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42245005/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42245005"
+    }
+  },
+  {
+    "paper_id": "pubmed:42229829",
+    "title": "Spaced learning and high unconditioned stimulus saliency are necessary to create a context fear memory independent of the hippocampus.",
+    "abstract": "Spaced contextual fear conditioning can establish a memory that no longer requires contribution from the hippocampus (HPC). It is unclear, however, whether spaced conditioning episodes alone are sufficient or whether a combination of spaced episodes and a high saliency unconditioned stimulus are required to make the context fear memory become HPC independent. To address this, rats underwent spaced contextual fear conditioning with shocks of low (0.4 mA), intermediate (0.7 mA), or high (1.0 mA) saliency, followed by sham or neurotoxic HPC lesions. Two weeks later, retention was assessed using freezing as the memory index, and c-Fos expression was quantified to identify supporting brain structures. In the low-saliency condition, control rats exhibited minimal freezing, limiting interpretation of lesion effects. With intermediate saliency, control rats froze robustly, whereas HPC-lesion rats did not, suggesting maintained HPC dependence despite spaced learning. In contrast, high-saliency conditioning produced comparable freezing in both groups, suggesting that combining spaced episodes with a strong stimulus creates an HPC-independent memory. Consistent with behavior, c-Fos analysis revealed increased expression in perirhinal and anterior cingulate cortices across conditions, regardless of saliency or lesion effects, implicating these regions in context representation. Elevated c-Fos was observed in the basolateral amygdala in rats from the spaced condition that retained fear memory, including HPC-lesioned rats, supporting its role in fear representation. Thus, HPC-independent contextual fear memory emerges when spaced conditioning is paired with a highly salient stimulus and is supported by a perirhinal and anterior cingulate cortices context representation and an amygdalar fear representation.",
+    "year": 2026,
+    "venue": "Neuroscience",
+    "authors": [
+      "Swarsattie Kishun",
+      "Melissa J Glenn",
+      "Neil M Fournier",
+      "Hugo Lehmann"
+    ],
+    "doi": "10.1016/j.neuroscience.2026.05.038",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42229829/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42229829"
+    }
+  },
+  {
+    "paper_id": "pubmed:42223698",
+    "title": "Lexical Inference in L2 Chinese: Does Contextual Information Always Work?",
+    "abstract": "The ability of second language (L2) learners to guess the meanings of unfamiliar words, which is known as lexical inference, is crucial for learning words and for reading comprehension. However, the extent to which L2 learners can make effective use of the contextual resources surrounding unfamiliar words remains uncertain, as many L2 studies seem to suggest a low success rate for lexical inferencing in context; furthermore, whether the relationship between contextual richness and the success of lexical inferencing is influenced by L2 learners' linguistic knowledge (i.e., vocabulary and grammatical knowledge) is undetermined. Sixty-six L2 Chinese learners who were attending Chinese universities participated voluntarily in this study. All the participants completed four computerized tasks: a short-term memory task, a vocabulary knowledge task, a grammatical knowledge task, and a lexical inferencing task with three contextual conditions. The results revealed that: 1) regardless of their linguistic knowledge, L2 learners performed better in lexical inference when provided with a more informative context compared to a less informative or a non-informative context, indicating that the degree of contextual richness plays a significant role in L2 learners' success; 2) L2 learners with greater linguistic knowledge performed marginally better when inferring the meanings of unknown words in the more informative context than did those with less linguistic knowledge; and. 3) although L2 learners' linguistic knowledge did not generally have a moderating effect on their lexical inference via the use of contextual information, there appeared to be some complexity in this relationship for participants with greater linguistic knowledge.",
+    "year": 2026,
+    "venue": "Journal of psycholinguistic research",
+    "authors": [
+      "Wenwen Zhu",
+      "Meng Cheng",
+      "Bing Feng",
+      "Tianxu Chen"
+    ],
+    "doi": "10.1007/s10936-026-10258-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42223698/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42223698"
+    }
+  },
+  {
+    "paper_id": "pubmed:42222844",
+    "title": "In-context adaptation of VLMs for few-shot cell detection in optical microscopy.",
+    "abstract": "Foundation vision-language models (VLMs) excel on natural images, but their utility for biomedical microscopy remains underexplored. In this paper, we investigate how in-context learning enables state-of-the-art VLMs to perform few-shot object detection when large annotated datasets are unavailable, as is often the case with microscopic images. We introduce the Micro-OD benchmark, a curated collection of 252 images specifically curated for in-context learning, with bounding-box annotations spanning 11 cell types across four sources, including two in-lab expert-annotated sets. We systematically evaluate eight VLMs under few-shot conditions and compare variants with and without implicit test-time reasoning tokens. We further implement a hybrid Few-Shot Object Detection (FSOD) pipeline that combines a detection head with a VLM-based few-shot classifier, which enhances the few-shot performance of recent VLMs on our benchmark. Across datasets, we observe that zero-shot performance is weak due to the domain gap; however, few-shot support consistently improves detection, with marginal gains achieved after six shots. We observe that some reasoning variant models show task-specific gains, but the effect varies across models and settings. Our results highlight in-context adaptation as a promising research direction requiring further development for microscopy, and our benchmark provides a reproducible testbed for advancing open-vocabulary detection in biomedical imaging. Our project page is at: here.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Shreyan Ganguly",
+      "Angona Biswas",
+      "Jaydeep Rade",
+      "Md Hasibul Hasan Hasib",
+      "Nabila Masud",
+      "Nitish Singla",
+      "Abhipsa Dash",
+      "Ushashi Bhattacharjee",
+      "Soumik Sarkar",
+      "Aditya Balu",
+      "Anwesha Sarkar",
+      "Adarsh Krishnamurthy"
+    ],
+    "doi": "10.3389/frai.2026.1761903",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42222844/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42222844"
+    }
+  },
+  {
+    "paper_id": "pubmed:42221560",
+    "title": "Bayesian Optimization of Catalysis with In-Context Learning.",
+    "abstract": "Large language models (LLMs) can perform accurate classification with zero or few examples through in-context learning (ICL), allowing the model to observe query-relevant examples at inference time and eliminating the need for additional weight updates to generalize beyond its original training data. We extend this capability to regression with uncertainty estimation using frozen LLMs (e.g., GPT-4o, Gemini), enabling Bayesian optimization (BO) in natural language without explicit model training or feature engineering. We apply this to materials discovery by representing materials as synthesis and testing procedures for use in natural language prompts. This Bayesian, design-first approach prioritizes optimization toward target material properties before detailed characterization, in contrast to conventional experimental workflows that often emphasize characterization of suboptimal materials. On benchmarks like aqueous solubility and oxidative coupling of methane (OCM), BO-ICL matches or outperforms Gaussian processes. In live experiments on the reverse water-gas shift (RWGS) reaction, BO-ICL identifies multimetallic catalysts that approach equilibrium CO yield within 6 and 10 iterations from a pool of 3,700 and 360,000 candidates, respectively. Our method redefines materials representation and accelerates discovery, with broad applications across catalysis, materials science, and AI. Code: https://github.com/ur-whitelab/BO-ICL.",
+    "year": 2026,
+    "venue": "ACS central science",
+    "authors": [
+      "Mayk Caldas Ramos",
+      "Shane S Michtavy",
+      "Andrew D White",
+      "Marc D Porosoff"
+    ],
+    "doi": "10.1021/acscentsci.5c02418",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42221560/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42221560"
+    }
+  },
+  {
+    "paper_id": "pubmed:42211855",
+    "title": "SCUD - Smart Culinary Utility Device: Leveraging edge AI for battery optimization and operation cycles.",
+    "abstract": "Current day society pursues a lifestyle that is simpler, more efficient, reliable, faster, and progressively automated. Culinary Utility Device available in the market exhibit drawbacks including substantial investment costs, increased labor requirements, and excessive time consumption. Adding intelligence to the these devices may make once life happy. Embedded devices with limited resources are now poised to leverage machine learning techniques thanks to the convergence of Edge Computing and the Internet of Things (IoT). Traditional machine learning often demands significant computational resources for predictive tasks. TinyML, which focuses on Embedded Machine Learning, aims to transition a considerable portion of users from high-end devices to low-end gadgets. This paradigm strives to ensure the accuracy of learning models while enabling training and deployment on micro edge devices with resource constraints. It also seeks to optimize processing capabilities and enhance system resilience. This article provides an intuitive overview of Data-Driven State of Charge (SoC) estimation for Li-Ion Batteries. It begins by specification table followed by the hardware in context introducing the background of SoC estimation, followed by discussions on Hardware and signal , links to the design files and BOM in specific. The article delves into essential aspects related to Build and Operational instructions. In conclusion, the article addresses critical challenges and outlines a future road map.",
+    "year": 2026,
+    "venue": "HardwareX",
+    "authors": [
+      "Sesidhar Dvsr",
+      "Chandrashekhar Badachi",
+      "Chandrashekar Nagawaram",
+      "Panduranga Chary Kondoju",
+      "Pavana Salunkhe",
+      "Sahil Kumar Chaurasia"
+    ],
+    "doi": "10.1016/j.ohx.2026.e00780",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42211855/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42211855"
+    }
+  },
+  {
+    "paper_id": "pubmed:42205233",
+    "title": "Immersive Virtual Reality-Supported Cognitive-Behavioral Therapy for Patients With Mild to Borderline Intellectual Disabilities and Substance Use Disorders: Two Exploratory Studies.",
+    "abstract": "Substance use disorders (SUDs) are prevalent and characterized by high relapse rates. Individuals with mild to borderline intellectual disability (MBID) are more likely to develop SUDs and face barriers within treatment related to difficulties they experience with abstract thinking, verbal skills, and generalizing learned strategies to real-world contexts. Therefore, experiential, context-rich approaches are needed that reduce reliance on retrospective verbal reflection, support in-context identification of triggers, and allow the rehearsal of coping responses. Immersive virtual reality (IVR) may provide realistic, safe environments where patients with SUD and MBID can practice cognitive and behavioral skills with visual and practice-oriented materials. This study aimed to generate design input for the development and clinical integration of IVR-supported therapy for individuals with MBID and SUD. Specifically, Study 1 explored alcohol-related triggers in patients with alcohol use disorder, whereas Study 2 examined the feasibility and acceptability of practicing nicotine-related coping strategies in patients with nicotine dependence (ND). Two explorative studies were conducted at an inpatient clinic for patients with MBID and SUD in the Netherlands. Study 1 included 10 adults with alcohol use disorder and MBID who participated in interviews to determine relevant risk situations, triggers, and therapeutic goals for IVR-cognitive behavioral therapy (CBT). Study 2 included 10 adults with MBID and nicotine dependence who practiced coping strategies within an existing IVR featuring craving-inducing and craving-reduction scenarios. A multiple-method approach was used to gather input for IVR-CBT development and to explore feasibility and acceptability (user evaluation interviews, the Questionnaire of Smoking Urges, and Visual Analog Scale ratings). In study 1, we identified high-risk situations, including at-home routines (eg, sitting on the couch watching football), supermarkets (eg, confrontation with alcohol and advertisements), social gatherings (eg, invitations and peer pressure), and being outside or traveling (eg, public transport or passing alcohol-related places). Triggers clustered into multisensory cues (eg, seeing or smelling alcohol), social influences (peer pressure and interpersonal conflict), affective states (tension, distress, boredom, or euphoria), and personal habits (eg, rewarding oneself or associations with money). Participants expressed interest in using IVR to identify triggers, discuss affective states, and train refusal skills. In study 2, IVR elicited nicotine craving, which increased during cue exposure and decreased during tutorial and coping phases. The coping elements embedded in IVR included relaxation (eg, mindfulness or breathing exercises), distraction (eg, virtual pets and interactive games), and physical activity (eg, walking or sports). IVR-CBT elements appear feasible and acceptable in inpatient MBID care with appropriate support. Findings provide patient-derived design insights for integrating trigger identification and coping rehearsal within IVR. Future work should use an iterative, user-centered design approach based on validated CBT-related techniques (eg, functional analysis or coping, or skills training) and compare IVR-CBT with CBT as usual to understand benefits and risks for patients and therapists.",
+    "year": 2026,
+    "venue": "JMIR XR and spatial computing",
+    "authors": [
+      "Samantha Murray",
+      "Simon Langener",
+      "Hanneke Kip",
+      "Randy Klaassen",
+      "Saskia Marion Kelders",
+      "Dirk Heylen",
+      "Joanne VanDerNagel"
+    ],
+    "doi": "10.2196/82601",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42205233/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42205233"
+    }
+  },
+  {
+    "paper_id": "pubmed:42183411",
+    "title": "Effectiveness of Large Language Models in Self-Learning of Anterior Neck Anatomy: A Pilot Randomised Controlled Trial.",
+    "abstract": "Self-learning, where students take responsibility for their own education, is valuable in anatomy education because it enables learners to engage with content independently and in context. Advances in technology, particularly large language models (LLMs), have facilitated this process by providing real-time guidance to support independent learning. However, the effectiveness of LLM-driven approaches in anatomy education remains largely unexplored. In this study, we assess the impact of Anatbuddy, a custom-built LLM-powered chatbot designed for anatomy learning, on self- learning. Using an open-labelled, double-blind study design, we evaluate its effectiveness through the lens of Bloom's taxonomy and a validated survey instrument. Participants were randomised and underwent a learning phase where the intervention group received Anatbuddy plus PowerPoint slides of anterior neck anatomy with an option to access Google while the control group had the same resources but without Anatbuddy, followed by a post-intervention test and a self-learning survey. Our findings indicate that the intervention group ( The online version contains supplementary material available at 10.1007/s40670-026-02648-0.",
+    "year": 2026,
+    "venue": "Medical science educator",
+    "authors": [
+      "Jonathan Wei En Ang",
+      "Olivia Ng",
+      "Kian Bee Ng",
+      "Sreenivasulu Reddy Mogali"
+    ],
+    "doi": "10.1007/s40670-026-02648-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42183411/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42183411"
+    }
+  },
+  {
+    "paper_id": "pubmed:42176801",
+    "title": "Automated detection of referential features in schizophrenic speech using large language models.",
+    "abstract": "Cross-linguistic studies have demonstrated that individuals with schizophrenia-particularly those exhibiting formal thought disorder (FTD)-show distinctive distributions of noun phrases (NPs) in spontaneous speech. NPs (e.g., the picture; a husband) serve to organize the referential structure of meaning. Extracting such referential NP features, however, has traditionally required manual annotations. In this study we applied state-of-the-art large language models (LLMs) to extract these features automatically, using an existing, manually annotated dataset, in which English-speaking participants described a comic strip: 30 individuals with schizophrenia (SZ) (15 with moderate or severe FTD (SZ + FTD), 15 with minimal or no FTD (SZ-FTD), 15 neurotypical controls (NC). We first show that LLM-based analyses replicate the findings based on manual annotation, particularly highlighting that definite NPs tied to prior discourse, markers of grammatical and cognitive complexity and narrative coherence, were underused in the SZ + FTD group. Secondly, we demonstrate that LLMs, especially when used with in-context (few-shot) learning, offer a promising avenue for the automatic extraction of referential features. These results show that a cross-linguistically validated and clinically important linguistic pattern of deviance is accessible to automatized assessment with NLP.",
+    "year": 2026,
+    "venue": "Neuropsychologia",
+    "authors": [
+      "Derya Çokal",
+      "Melike Filizer",
+      "Martin Villalba",
+      "Douglas Turkington",
+      "I Nicol Ferrier",
+      "Klaus von Heusinger",
+      "Stuart Watson",
+      "Wolfram Hinzen",
+      "Massimo Poesio"
+    ],
+    "doi": "10.1016/j.neuropsychologia.2026.109505",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42176801/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42176801"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174970",
+    "title": "From Report to Record: Prompt-Based Information Extraction from Gynecology Oncology Reports Using LLMs.",
+    "abstract": "The growing capabilities of Large Language Models (LLMs) in understanding and generating clinical text are transforming the processing of unstructured medical data. This study presents a prompt-based framework for extracting structured information from Multidisciplinary Tumor Board (MTB) reports on ovarian cancer, written in Italian. Focusing on the anamnestic section, the main features (about Demographic, Scores, Comorbidities, Treatments and Gynecological History) are extracted through in-context learning prompts, and evaluated with the LLM-as-a-judge majority-voting scheme. Results show high accuracy across macroareas and strong agreement among judge models, confirming the robustness of the approach. The occurrence-based analysis further highlights how variable frequency influences extraction reliability, ensuring a more balanced interpretation of model performance. Overall, the framework enables reliable LLM-based information extraction and supports the creation of structured clinical knowledge for oncology applications.",
+    "year": 2026,
+    "venue": "Studies in health technology and informatics",
+    "authors": [
+      "Livia Lilli",
+      "Massimo Criscione",
+      "Giovanni Paolo Tobia",
+      "Federica Tomassini",
+      "Chiara Dachena",
+      "Alice Luraschi",
+      "Andrea Rosati",
+      "Anna Fagotti",
+      "Massimo Bernaschi",
+      "Stefano Patarnello"
+    ],
+    "doi": "10.3233/SHTI260296",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174970/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174970"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174195",
+    "title": "Evaluating large language models for diagnostic reasoning from unstructured clinical narratives in epilepsy.",
+    "abstract": "Large Language Models (LLMs) have been shown to encode clinical knowledge. Many evaluations, however, rely on structured question-answer benchmarks, overlooking critical challenges of interpreting and reasoning about unstructured clinical narratives in real-world settings. In this study we task eight Large Language models including two medical models (GPT-3.5, GPT-4, Mixtral-8 × 7B, Qwen-72B, LlaMa2, LlaMa3, OpenBioLLM, Med42) with a core diagnostic task in epilepsy: mapping seizure description phrases-after targeted filtering and standardization-to one of seven possible seizure onset zones using likelihood estimates. We conduct quantitative and qualitative analyses, measuring correctness, confidence, calibration, and expert-evaluated reasoning quality and source citation accuracy. Through systematic prompt-engineering and ablation studies, we assess how model performance depends on variations in prompt strategy, clinical role impersonation, narrative length, and language context. Most models yield well-above chance accuracy after prompt engineering that even approaches clinician-level performance. Specifically, clinician-guided chain-of-thought reasoning leads to the most consistent improvements. Performance is further strongly modulated by clinical in-context impersonation, narrative length and language context (13.7%, 32.7% and 14.2% performance variation, respectively). However, reasoning analysis by clinical experts reveal that correct prediction can be based on hallucinated knowledge and inaccurate source citation, underscoring the need to improve interpretability of LLMs in clinical use. Overall, SemioLLM provides a scalable, domain-adaptable framework for evaluating LLMs in clinical disciplines where unstructured verbal descriptions encode diagnostic information. By identifying both the strengths and limitations of LLMs, our work contributes to testing the applicability of foundational AI systems for healthcare.",
+    "year": 2026,
+    "venue": "Communications medicine",
+    "authors": [
+      "Meghal Dani",
+      "Muthu Jeyanthi Prakash",
+      "Filip Rosa",
+      "Zeynep Akata",
+      "Stefanie Liebe"
+    ],
+    "doi": "10.1038/s43856-026-01653-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174195/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174195"
+    }
+  },
+  {
+    "paper_id": "pubmed:42166651",
+    "title": "Letter to the Editor: practical follow up to foundation models article.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Physiology (Bethesda, Md.)",
+    "authors": [
+      "Ryan C Godwin",
+      "Kameshwari Soundararajan",
+      "Ryan L Melvin"
+    ],
+    "doi": "10.1152/physiol.00019.2026",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42166651/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42166651"
+    }
+  },
+  {
+    "paper_id": "pubmed:42158123",
+    "title": "Critical thinking in early medical education: experiences from a first-year science course.",
+    "abstract": "Critical thinking is emphasized as an important learning aim in early medical education, yet how students experience learning this capability in practice remains underexplored. Understanding students' experiences of learning critical thinking provides insight into how educational intentions are encountered rather than requiring measurement of whether learning has occurred. This study explored how first-year medical students experienced learning critical thinking in a science course. An interpretive qualitative design with reflexive thematic analysis and semi-structured interviews was used. Twelve first-year medical students participated. Analysis generated four themes: navigating epistemic uncertainty about what critical thinking meant in context; engaging in active analytical practice through specific course activities; inhabiting a threshold of difficulty marked by persistent discomfort and evaluative ambiguity; and experiencing affective and identity-level responses to a cognitively demanding new standard of learning. Students reported that learning critical thinking felt different from other forms of learning they had previously encountered, often more demanding and less straightforward. Course activities such as problem-solving exercises and evaluating evidence were experienced as opportunities to practice critical thinking, though students varied in how comfortable or successful they felt during these activities. Moments of difficulty were common and included struggling to know how much analysis was sufficient or feeling uncertain about whether their thinking was appropriately critical. The findings indicate that students experience learning critical thinking as a complex process involving cognitive effort, emotional engagement, and ongoing interpretation of what is being asked. Attending to how students experience this learning provides a perspective on early medical education that complements outcome-focused approaches.",
+    "year": 2026,
+    "venue": "Frontiers in medicine",
+    "authors": [
+      "Moteeb Alhamidani"
+    ],
+    "doi": "10.3389/fmed.2026.1816516",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42158123/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42158123"
+    }
+  },
+  {
+    "paper_id": "pubmed:42127208",
+    "title": "RAPTOR: A foundation policy for quadrotor control.",
+    "abstract": "Humans are remarkably data efficient when adapting to previously unseen conditions, like driving a new car. In contrast, modern robotic control systems, like neural network policies trained using reinforcement learning (RL), are highly specialized for single environments. Because of this overfitting, they are known to break down even under small differences like the simulation-to-reality gap and require system identification and retraining for even minimal changes to the system. Here, we present RAPTOR, a method for training a highly adaptive foundation policy for quadrotor control. Our method enables training a single, end-to-end neural network policy to control a wide variety of quadrotors. We tested 10 different real quadrotors, from 32 grams to 2.4 kilograms, that also differed in motor type (brushed versus brushless), frame type (soft versus rigid), propeller type (two, three, or four blades), and flight controller (PX4, Betaflight, Crazyflie, M5StampFly). We found that a tiny, three-layer policy with only 2084 parameters was sufficient for zero-shot adaptation to a wide variety of platforms. The adaptation through in-context learning was made possible by using a recurrence in the hidden layer. The policy was trained through our proposed meta-imitation learning algorithm, where we sampled 1000 quadrotors and trained a teacher policy for each of them using RL. The 1000 teachers were distilled into a single, adaptive student policy. We found that within milliseconds, the resulting foundation policy adapted zero-shot to unseen quadrotors. We tested the capabilities of the foundation policy under numerous conditions (trajectory tracking, indoor/outdoor, wind disturbance, poking, and different propellers).",
+    "year": 2026,
+    "venue": "Science robotics",
+    "authors": [
+      "Jonas Eschmann",
+      "Dario Albani",
+      "Giuseppe Loianno"
+    ],
+    "doi": "10.1126/scirobotics.aec1481",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42127208/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42127208"
+    }
+  },
+  {
+    "paper_id": "pubmed:42125964",
+    "title": "Modeling flexible behavior with remapping-based hippocampal sequence learning.",
+    "abstract": "Animals flexibly change their behavior depending on context. It is reported that the hippocampus is one of the most prominent regions for contextual behaviors, and its sequential activity shows context dependency. However, how such context-dependent sequential activity is established through reorganization of neuronal activity (remapping) remains unclear. To better understand the formation of hippocampal activity and its contribution to context-dependent flexible behavior, we present a novel biologically plausible reinforcement learning model. In this model, Context selector promotes the formation of context-dependent sequential activity and allows for flexible switching of behavior in multiple contexts. This model reproduces a variety of findings from neural activity, optogenetic inactivation, human fMRI, and clinical research. Furthermore, our model predicts that imbalances in the ratio between sensory and contextual representations in Context selector account for schizophrenia and autism spectrum disorder-like behaviors.",
+    "year": 2026,
+    "venue": "eLife",
+    "authors": [
+      "Yoshiki Ito",
+      "Taro Toyoizumi"
+    ],
+    "doi": "10.7554/eLife.106506",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42125964/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42125964"
+    }
+  },
+  {
+    "paper_id": "pubmed:42121845",
+    "title": "Spatial Biology Evolution: Past, Present and Future of Mapping Life in Context.",
+    "abstract": "The life sciences are currently undergoing a serious transition from the reductive biochemical analysis of dissociated tissues to non-destructive \"spatial forensics\". In addition to discovering new molecules, we are moving towards finding out their precise tissue localization and performing in situ interrogation to uncover a biological logic within preserved cellular \"neighborhoods\". Our perspective is focused on exploring the spatial imperative, including the structural logic and \"neighborhood effects\" of the tissue microenvironment, which is a prerequisite to understanding cellular function in normal and in pathological conditions. Beginning with a historical foundation of the origins of histochemistry, dating back to the 19th century with pioneer botanist François-Vincent Raspail, we emphasize the technological metamorphosis, transitioning from classical immunohistochemistry to modern multi- and high-plex spatial multi-omics. A critical evaluation of the current operational landscape has been made, addressing the engineering strategies behind multiplexed immunofluorescence (mIF), the challenges of experimental design in spatial transcriptomics, and the functional symbiosis between targeted and unbiased spatial proteomics. There are many layers of genomic and proteomic information we have to consider in order to unravel the mechanisms underlying body function. If we learn how to combine all this information together, we will be able to better understand how cells communicate with each other and what disrupts their communication, leading to cancer and many other pathologies. It is obvious that by implementing spatial biology tools, it becomes possible to develop new medicines and treat diseases in the most efficient ways. At the same time, we realize that there is an urgent need to learn how to put data pieces together so that they blend seamlessly into a meaningful output, further transitioning spatial biology over time into a routine tool to cure for both common and rare diseases and improve our lives and health.",
+    "year": 2026,
+    "venue": "Cells",
+    "authors": [
+      "Alexander E Kalyuzhny"
+    ],
+    "doi": "10.3390/cells15090743",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42121845/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42121845"
+    }
+  },
+  {
+    "paper_id": "pubmed:42116134",
+    "title": "Clinical-ShiftEval: a framework for simulating and evaluating model adaptation in dynamic clinical NLP tasks.",
+    "abstract": "Clinical natural language processing (NLP) models are widely used to extract information from electronic health records (EHR) and support healthcare decision-making. However, most existing models are evaluated under the assumption of static data distributions and fixed task definitions, overlooking the dynamic and evolving nature of real clinical environments. Distributional changes arising from updated guidelines, emerging diseases, or institutional restructuring can lead to substantial model degradation in practice. We introduce Clinical-ShiftEval, a framework designed to simulate and evaluate model adaptation in dynamic clinical NLP tasks using real-world clinical text data. Our framework parameterizes two prevalent types of evolution observed in healthcare: (1) label-set incompatibility (LSI), where the set of prediction targets changes over time, and (2) task definition evolution (TDE), where the clinical meaning or labeling rule is revised. These changes are operationalized through controlled transitions between two periods in real datasets. As a case study, we applied Clinical-ShiftEval to the Chilean Waiting List Corpus, using referral specialty classification to model LSI and disease prioritization to model TDE, and systematically compared continual training, in-context learning with large language models, and a hybrid approach. We validated that Clinical-ShiftEval reliably simulates realistic levels of clinical change and produces controlled, interpretable performance drops. This confirms its utility as a framework to generate reproducible scenarios for benchmarking model robustness. As a case study, we compared multiple model adaptation strategies under LSI and TDE. Conventional supervised models showed severe degradation under these shifts (up to a drop of 82% F1 in LSI and 43% in TDE). In contrast, in-context learning reduced the drop to 35% in LSI and 10% in TDE, while a hybrid method further improved robustness, limiting the drop to approximately 8% in both settings. Continual adaptation with incremental retraining gradually restored performance, but only surpassed in-context and hybrid approaches after incorporating at least 30% of data from the second period. Clinical-ShiftEval enables robust benchmarking of model adaptation in realistic, dynamic settings using authentic EHR text. Both in-context learning and hybrid approaches substantially mitigate the impact of evolving clinical data, achieving strong performance even without access to new labeled data. For optimal recovery of baseline accuracy, continual training with a moderate amount of new data is most effective, eventually surpassing the other methods as more new data become available. These findings provide practical guidance for the deployment of resilient NLP models in dynamic healthcare settings.",
+    "year": 2026,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Fabián Villena",
+      "Felipe Bravo-Marquez",
+      "Jocelyn Dunstan"
+    ],
+    "doi": "10.1186/s12911-026-03538-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42116134/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42116134"
+    }
+  },
+  {
+    "paper_id": "pubmed:42113780",
+    "title": "Extracting user profile via large language models and ontologies.",
+    "abstract": "Extracting user-specific profiles that include general personal information, such as hobbies, occupation, or age, is a valuable asset for systems like recommendation engines or personalized chatbots. Currently, most approaches moved toward exploiting the capabilities of large language models (LLMs) on rich languages while less-resourced languages still present significant opportunities for exploration and improvement. In this research, we present a multi-step approach for profile extraction from dialogue systems in Persian as a use case. Through an extensive set of experiments and analyses on various models, we show that LLMs struggle with these languages due to limited language-specific resources and complex linguistic structures. To address this, we propose a hybrid method that combines techniques such as slot filling, in-context learning, and ontology-based inference. Our final results demonstrate a significant improvement over current state-of-the-art models, including LLMs with few-shot examples and even their fine-tuned version. Our method achieves an F-score of 90.46, outperforming GPT-4o and Llama-3-70B by an absolute difference of 17.08 and 24.51 respectively. Our system can also detect inconsistencies in presented information in which our performance substantially exceeds the best performance of GPT-4o and Llama-3-70B with an accuracy of 92%. It is 21% absolutely better than GPT-4o and 47% better than Llama.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Pegah Safari",
+      "Mehrnoush Shamsfard"
+    ],
+    "doi": "10.1371/journal.pone.0329934",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42113780/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42113780"
+    }
+  },
+  {
+    "paper_id": "pubmed:42101926",
+    "title": "Strategies for constructing context-specific protein-protein interaction networks.",
+    "abstract": "Protein-protein interactions (PPIs) are fundamental to virtually all biological processes. However, their highly dynamic and context-dependent nature poses significant challenges to traditional general network models in capturing their true biological significance. Here, we introduce the formation of context-specific PPI networks, emphasizing the importance of the biological context in which PPIs occur. We systematically compare traditional experimental methods, mass spectrometry (MS)-based high-throughput technologies, and structure- and biophysics-based approaches across six dimensions. Although these experimental methods have generated valuable data resources, they still suffer from limitations, including low capture efficiency for transient or weak interactions and a lack of gold-standard datasets with specific biological contexts. Furthermore, we review recent advances in context-specific PPI inference strategies centered on omics data integration, and highlight the emerging potential of large cellular models (LCMs) to generate context-aware representations that support the construction of context-specific PPI networks. In the future, comprehensive context-specific PPI networks are expected to more accurately reflect the biological system, thereby enabling deeper mechanistic insights, improving disease interpretation, and accelerating the discovery of therapeutic targets.",
+    "year": 2026,
+    "venue": "Briefings in bioinformatics",
+    "authors": [
+      "Shiyan Nie",
+      "Xiangren Kong",
+      "Dong Li"
+    ],
+    "doi": "10.1093/bib/bbag004",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42101926/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42101926"
+    }
+  },
+  {
+    "paper_id": "pubmed:42092527",
+    "title": "Mitochondrial calcium modulates odor-mediated behavioral plasticity in Caenorhabditis elegans.",
+    "abstract": "Despite growing understanding of the various roles mitochondria play in neurons, how they contribute to higher brain functions such as learning and memory remains underexplored. Here, using the nematode Caenorhabditis elegans, we found that the mitochondrial calcium uniporter (MCU) pore-forming unit MCU-1 is required for aversive learning of specific odors sensed by the AWC sensory neuron. MCU-1 expression was required in the sensory neuron at the time of odor conditioning for proper behavioral response to 60 min of prolonged odor exposure. We discovered that calcium entry into the mitochondria in AWC responds to the length of odor stimulus: calcium is elevated after 60 minutes of odor but not after 30 minutes, suggesting a gating mechanism that can discriminate the duration of sensory stimuli. Through genetic and pharmacological manipulation, we show that calcium influx through the MCU causes mtROS production, leading to NLP-1 secretion from the AWC neuron and odor learning. Overall, our results demonstrate that, by regulating mitochondrial calcium entry, mitochondria can respond to the length of a sensory stimulus to modulate the synaptic response, resulting in context-appropriate learning and behavior.",
+    "year": 2026,
+    "venue": "Molecules and cells",
+    "authors": [
+      "Hee Kyung Lee",
+      "Abe Gayle Santos",
+      "Kyu-Sang Park",
+      "Kyoung-Hye Yoon"
+    ],
+    "doi": "10.1016/j.mocell.2026.100367",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42092527/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42092527"
+    }
+  },
+  {
+    "paper_id": "pubmed:42081565",
+    "title": "VUStruct: A compute pipeline for high throughput and personalized structural biology.",
+    "abstract": "Effective diagnosis and treatment of rare genetic disorders requires the interpretation of a patient's genetic variants of unknown significance (VUSs). Today, clinical decision-making is primarily guided by gene-phenotype association databases and DNA-based scoring methods. Our web-accessible variant analysis pipeline, VUStruct, supplements these established approaches by deeply analyzing the downstream molecular impact of variation in context of 3D protein structure. VUStruct's growing impact is fueled by the co-proliferation of protein 3D structural models, gene sequencing, compute power, and artificial intelligence. Contextualizing VUSs in protein 3D structural models also illuminates longitudinal genomics studies and biochemical bench research focused on VUS, and we created VUStruct for clinicians and researchers alike. We now introduce VUStruct to the broad scientific community as a mature, web-facing, extensible, High-Performance Computing (HPC) software pipeline. VUStruct maps missense variants onto automatically selected protein structures and launches a broad range of analyses. These include energy-based assessments of protein folding and stability, pathogenicity prediction through spatial clustering analysis, and machine learning (ML) predictors of binding surface disruptions and nearby post-translational modification sites. The pipeline also considers the entire input set of VUS and identifies genes potentially involved in digenic disease. VUStruct's utility in clinical rare disease genome interpretation has been demonstrated through its analysis of over 175 Undiagnosed Disease Network (UDN) Patient cases. VUStruct-leveraged hypotheses have often informed clinicians in their consideration of additional patient testing, and we report here details from two cases where VUStruct was key to their solution. We also note successes with academic research collaborators, for whom VUStruct has informed research directions in both computational genomics and wet lab studies.",
+    "year": 2026,
+    "venue": "PLoS computational biology",
+    "authors": [
+      "Christopher W Moth",
+      "Jonathan H Sheehan",
+      "Abdullah Al Mamun",
+      "R Michael Sivley",
+      "Alican Gulsevin",
+      "David C Rinker",
+      "Zenab F Mchaourab",
+      "John A Capra",
+      "Jens Meiler"
+    ],
+    "doi": "10.1371/journal.pcbi.1014183",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42081565/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42081565"
+    }
+  },
+  {
+    "paper_id": "pubmed:42081430",
+    "title": "Advancing In-Context Learning for Efficient and Stable Medical Report Generation.",
+    "abstract": "Vision-language models (VLMs) have shown strong generalization across multimodal tasks, but adapting them to medical report generation (MRG) often demands extensive paired image-text data that are limited due to data privacy and annotation cost. In-context learning (ICL) offers a promising training-free alternative, yet standard ICL approaches rely on long demonstration prompts that are computationally inefficient and often yield inconsistent or clinically inaccurate descriptions. To address these challenges, we propose Principal In-Context Vectors (PCVs), a compact latent-guidance framework that distills multimodal demonstrations into stable semantic representations. By extracting hidden states from auto-regressive VLMs and applying principal component analysis (PCA), we identify robust semantic directions that remain stable under input perturbations. These PCVs are then injected into new queries to steer generation toward accurate and clinically meaningful outputs without any model tuning. Extensive experiments on four MRG benchmark datasets show that our approach can enhance both zero-shot and fully supervised generation quality across diverse settings, including cross-center, cross-disease, and longitudinal scenarios. This work provides a lightweight and scalable approach to adapt pre-trained VLMs for practical clinical deployment.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Mingjie Li",
+      "Rui Liu",
+      "Zeyi Shi",
+      "Mingfei Han",
+      "Lina Yao",
+      "Zhihui Li",
+      "Xiaojun Chang",
+      "Kilian M Pohl",
+      "Md Tauhidul Islam",
+      "Lei Xing"
+    ],
+    "doi": "10.1109/TPAMI.2026.3689780",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42081430/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42081430"
+    }
+  },
+  {
+    "paper_id": "pubmed:42081358",
+    "title": "Confidence in context: Children's context-dependent interpretations of informants' confidence and hesitancy.",
+    "abstract": "Are children's evaluations of informants' confidence cues context dependent? Three experiments (N = 180; Experiments 1 and 3: 6-8 years, Experiment 2: 3-8 years; 62.1% White; 50.5% female; data collected 2016-2020 in Canada and the United States) examined children's ratings of confident and hesitant informants in three contexts: factual questions, moral dilemmas, or subjective questions. Children's interpretation of confidence was context dependent: Confidence was viewed more positively for factual questions than moral dilemmas and hesitancy was viewed more positively for moral dilemmas than factual questions (Experiments 1-2; Bs = .62 to .88). Children did not differ in their judgments of confidence and hesitancy for subjective questions (Experiment 3). The results demonstrated children's remarkable cognitive flexibility in integrating contextual information in their interpretations of confidence cues.",
+    "year": 2026,
+    "venue": "Child development",
+    "authors": [
+      "Shailee R Woodard",
+      "Parky Lau",
+      "Rachel L Severson",
+      "Susan A J Birch"
+    ],
+    "doi": "10.1093/chidev/aacag076",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42081358/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42081358"
+    }
+  },
+  {
+    "paper_id": "pubmed:42076658",
+    "title": "A Training-Free Paradigm for Data-Scarce Maritime Scene Classification Using Vision-Language Models.",
+    "abstract": "Maritime Domain Awareness (MDA) relies heavily on data acquired from high-resolution optical spaceborne sensors; however, processing this massive quantity of sensor data via traditional supervised deep learning is severely bottlenecked by its dependency on exhaustively annotated datasets. Under extreme data scarcity, conventional architectures suffer severe performance degradation, rendering them impractical for time-critical, zero-day deployments. To overcome this barrier, we propose a training-free inference paradigm that leverages the extensive pre-trained knowledge of Large Vision-Language Models (VLMs). Specifically, we introduce a Domain Knowledge-Enhanced In-Context Learning (DK-ICL) framework coupled with a Macro-Topological Chain-of-Thought (MT-CoT) strategy. This approach bridges the perspective gap between natural images and top-down optical sensor imagery by translating expert remote sensing heuristics into a strict, step-by-step reasoning pipeline. Extensive evaluations demonstrate the substantial efficacy of this framework. Armed with merely 4 visual exemplars per category as in-context triggers, our MT-CoT augmented VLMs outperform traditional models trained under identical scarcity by over 38% in F1-score. Crucially, real-world case studies confirm that this zero-gradient approach maintains robust generalization on unannotated, out-of-distribution coastal clutters, achieving performance parity with data-heavy networks trained on 50 times the data volume. By substituting massive human annotation and GPU optimization with scalable logical deduction, this paradigm establishes a resource-efficient foundation for next-generation intelligent maritime sensing networks.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Jiabao Wu",
+      "Yujie Chen",
+      "Wentao Chen",
+      "Yicheng Lai",
+      "Junjun Li",
+      "Xuhang Chen",
+      "Wangyu Wu"
+    ],
+    "doi": "10.3390/s26082549",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42076658/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:method_task",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42076658"
+    }
+  }
+]

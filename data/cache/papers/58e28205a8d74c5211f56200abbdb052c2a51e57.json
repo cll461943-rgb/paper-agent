@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:41282707",
+  "title": "For clinical data extraction, QLoRA attains accuracy close to LoRA while requiring lower compute resources.",
+  "abstract": "Large language models (LLMs) can accurately extract structured data from free text, yet fine-tuning for specific clinical tasks is often compute- and memory-intensive. We examine whether Parameter-Efficient Fine-Tuning (PEFT)-updating only a small subset of weights in the LLM-preserves accuracy on quantized models while further reducing memory and graphical processing unit (GPU) requirements for hardware-limited teams. We fine-tuned three Llama-3.1-8B-Instruct variants: (i) a non-quantized low-rank adaptation (LoRA) model and (ii-iii) quantized low-rank adaptation (QLoRA) models initialized from 8-bit and 4-bit quantized bases. We used the ELMTEX corpus of 60,000 clinical summaries extracted from PubMed Central, which included manual annotations for 15 categories. Models were evaluated with naïve and advanced prompting to extract data from the corpus for the 15 categories. Advanced prompting involved a detailed task description and three examples selected using similarity scores. Metrics included ROUGE and BERTScore for lexical/semantic alignment, and entity-level precision, recall, and F1 to assess clinical concept extraction. Fine-tuning consistently outperformed prompting alone. LoRA improved metrics by 10-20 points over the base model, while QLoRA improved by 8-14 points-only 2-4 points below LoRA. Quantization lowered the need for resources- LoRA required 4 GPUs, versus 3 (8-bit) and 2 (4-bit) for QLoRA. Compared with LoRA, 4-bit QLoRA used about two-thirds of the peak GPU RAM. However training of quantized models took 28-32% longer, likely due to dequantization overhead and less-mature library routines. PEFT on quantized models preserves most of LoRA's accuracy gains while substantially reducing GPU count and memory footprint, providing a practical path for accurate clinical information extraction in resource-constrained settings. This study was limited to a single architecture (Llama-3.1-8B) and use of clinical summaries that are less complex than routine clinical notes, which constrains generalizability of the results. Future work should test QLoRA across diverse architectures and sizes and on clinical corpora representative of real-world practice.",
+  "year": 2025,
+  "venue": "medRxiv : the preprint server for health sciences",
+  "authors": [
+    "Prabin R Shakya",
+    "Ayush Khaneja",
+    "Kavishwar B Wagholikar"
+  ],
+  "doi": "10.1101/2025.10.21.25338506",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41282707/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41282707"
+  }
+}

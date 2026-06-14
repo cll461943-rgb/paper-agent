@@ -1,0 +1,62 @@
+{
+  "paper_id": "https://openalex.org/W4393212080",
+  "title": "Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression",
+  "abstract": "Compressing high-capability Large Language Models (LLMs) has emerged as a favored strategy for resource-efficient inferences. While state-of-the-art (SoTA) compression methods boast impressive advancements in preserving benign task performance, the potential risks of compression in terms of safety and trustworthiness have been largely neglected. This study conducts the first, thorough evaluation of three (3) leading LLMs using five (5) SoTA compression techniques across eight (8) trustworthiness dimensions. Our experiments highlight the intricate interplay between compression and trustworthiness, revealing some interesting patterns. We find that quantization is currently a more effective approach than pruning in achieving efficiency and trustworthiness simultaneously. For instance, a 4-bit quantized model retains the trustworthiness of its original counterpart, but model pruning significantly degrades trustworthiness, even at 50% sparsity. Moreover, employing quantization within a moderate bit range could unexpectedly improve certain trustworthiness dimensions such as ethics and fairness. Conversely, extreme quantization to very low bit levels (3 bits) tends to reduce trustworthiness significantly. This increased risk cannot be uncovered by looking at benign performance alone, in turn, mandating comprehensive trustworthiness evaluation in practice. These findings culminate in practical recommendations for simultaneously achieving high utility, efficiency, and trustworthiness in LLMs. Code and models are available at https://decoding-comp-trust.github.io.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Junyuan Hong",
+    "Jinhao Duan",
+    "Chenhui Zhang",
+    "Zhangheng Li",
+    "Chulin Xie",
+    "Kelsey Lieberman",
+    "James Diffenderfer",
+    "Brian R. Bartoldson",
+    "Ajay Jaiswal",
+    "Kaidi Xu",
+    "Bhavya Kailkhura",
+    "Dan Hendrycks",
+    "Dawn Song",
+    "Zhangyang Wang",
+    "Bo Li"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2403.15447",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2403.15447",
+  "citation_count": 4,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Trustworthiness",
+      "Decoding methods",
+      "Compression (physics)",
+      "Computer science",
+      "Business",
+      "Computer security",
+      "Algorithm",
+      "Materials science",
+      "Composite material"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2076536433",
+      "https://openalex.org/W90316445",
+      "https://openalex.org/W3203142394",
+      "https://openalex.org/W2161474341",
+      "https://openalex.org/W4327743613",
+      "https://openalex.org/W2965447900",
+      "https://openalex.org/W4302615923",
+      "https://openalex.org/W3199750033",
+      "https://openalex.org/W1974101135",
+      "https://openalex.org/W2351061015"
+    ]
+  }
+}

@@ -125,7 +125,11 @@ def _merge_gold_key_sets(gold_key_sets: list[set[str]], paper_key_sets: list[set
 
 
 def score_papers_against_gold(papers: list[Any], gold_items: list[dict[str, Any] | str]) -> dict[str, float | int]:
-    gold_key_sets = [keys for item in gold_items if (keys := gold_match_keys(item))]
+    gold_key_sets = []
+    for item in gold_items:
+        keys = gold_match_keys(item)
+        if keys:
+            gold_key_sets.append(keys)
     paper_key_sets = [paper_match_keys(paper) for paper in papers]
     gold_key_sets = _merge_gold_key_sets(gold_key_sets, paper_key_sets)
     matched_gold_indexes: set[int] = set()
@@ -175,7 +179,7 @@ class StatsLLMClient:
         else:
             setattr(self.base_client, name, value)
 
-    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash") -> Any | None:
+    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None) -> Any | None:
         if isinstance(self.base_client, MockLLMClient):
             model_name = "mock-pro" if model_type == "pro" else "mock-flash"
         else:
@@ -192,7 +196,7 @@ class StatsLLMClient:
         prev_tokens = curr_budget.token_estimate if curr_budget else 0
 
         # 调用底层客户端
-        result = self.base_client.complete_json(system_prompt, user_prompt, model_type)
+        result = self.base_client.complete_json(system_prompt, user_prompt, model_type, timeout_seconds=timeout_seconds)
 
         elapsed = time.perf_counter() - started_at
         tokens_used = (curr_budget.token_estimate - prev_tokens) if curr_budget else 0

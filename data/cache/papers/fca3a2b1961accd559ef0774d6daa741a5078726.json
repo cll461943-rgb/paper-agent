@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42286684",
+  "title": "Benchmarking molecular representations and machine learning algorithms for asymmetric catalysis: a palladium-catalysed decarboxylative asymmetric allylic alkylation case study.",
+  "abstract": "Machine learning (ML) applied to metal-ligand asymmetric catalysis remains less explored compared to other applications, such as drug design or materials science. Current strategies frequently focus on augmenting pre-existing descriptors (e.g. those originally formulated for medicinal chemistry), the development of new bespoke steric and electronic descriptors, and the use of molecular fingerprints. Such method diversity, in the absence of user guidelines, makes selecting optimal ML tools to model new asymmetric catalysis problems challenging. This is exacerbated in early asymmetric catalysis metal-ligand development, where typically only limited data describing how ligands and substrates affect reaction stereoselectivity are available. Herein, we present a benchmarking pipeline for asymmetric catalysis ML studies and a comparative evaluation of reaction representations, including bespoke electronic and steric descriptors, fingerprints (CircuS and Morgan), physicochemical descriptors (from RDKit), machine-learnt representations (ChemBERTa, MolT5, and UniMol), and graph representations, paired with a range of ML algorithms (Support Vector Regressors, Random Forests, Extreme Gradient Boosting, Multilayer Perceptron, and GNNs). We use a database comprising only 103 early-development palladium-catalysed decarboxylative asymmetric allylic alkylation (DAAA) exemplars (three Trost-type ligands and 54 substrates) to predict reaction enantioselectivity, evaluating performance in low-data regimes and in extrapolative tasks under both random and substrate-scaffold splitting. An external validation dataset comprising 19 more recently developed reactions is used as a final evaluation. Across data regimes, Morgan fingerprints, ChemBERTa, and the bespoke V4 descriptors emerged as the most robust representations, with Random Forest the most consistent algorithm; on truly unseen substrates, an ensemble of GNNs gave the most accurate predictions. Importantly, scaffold-based splitting was found to estimate real-world extrapolation performance more reliably than random splitting. Post-hoc explainability analyses (SHAP and integrated gradients) revealed that the bespoke and fingerprint representations provided chemically meaningful insights into the substrate and catalyst features driving enantioselectivity, whereas embedding- and RDKit-based representations did not. Lastly, the methodology was validated on asymmetric hydrogenation and palladium-electrocatalysed C-H activation datasets, demonstrating its applicability to a wide range of asymmetric reactions.Scientific contributionA curated dataset of 103 palladium-catalysed decarboxylative asymmetric allylic alkylation (DAAA) reactions, drawn consistently from Guiry group publications, is introduced together with an external validation set of 19 newer reactions. A bespoke, interpretable descriptor strategy that combines fragment-level steric (van der Waals volume) and electronic (Hammett-derived) parameters is developed for this reaction class, requiring neither DFT computations nor experimental crystal structures. A systematic benchmarking methodology is proposed for evaluating combinations of molecular representations and machine learning algorithms under realistic conditions-including small training sets and chemical-space extrapolation-and is validated across three asymmetric catalysis datasets (DAAA, asymmetric hydrogenation, and C-H activation).",
+  "year": 2026,
+  "venue": "Journal of cheminformatics",
+  "authors": [
+    "Eduardo Aguilar-Bejarano",
+    "Declan Galvin",
+    "David M Rogers",
+    "Ender Özcan",
+    "Simon Woodward",
+    "Patrick J Guiry",
+    "Grazziela Figueredo"
+  ],
+  "doi": "10.1186/s13321-026-01236-z",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42286684/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42286684"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:41534605",
+  "title": "FG-DDI: Functional group-aware graph neural networks for drug-drug interaction prediction.",
+  "abstract": "We aim to improve Drug-Drug Interactions (DDIs) by explicitly injecting medicinal-chemistry knowledge of functional groups (FGs) into graph neural network (GNN) message passing, in both transductive and inductive settings. Our goal is to (i) encode FG priors in a trainable way that enhances representation quality without handcrafting features, and (ii) yield interpretable attributions that align learned weights with pharmacologically meaningful FG patterns. We introduce FG-DDI, a dual-view GNN that augments both intra- and inter-molecular reasoning. At the intra-molecular level, atom/bond messages are scaled by FG enrichment weights derived from detected FG motifs within each drug graph. At the inter-molecular level, a bipartite message-passing layer between a drug pair is modulated by FG-FG enrichment scores that reflect empirical co-occurrence in known DDIs. Enrichment is computed as odds ratios from corpus statistics and injected via learnable gates, ensuring differentiability and allowing data to override noisy priors. We couple this with standard supervision on interaction labels and report accuracy (ACC), AUROC, average precision (AP), and F1. Experiments use DrugBank (1706 drugs; 86 interaction types) and TwoSides (filtered triplets) under transductive and inductive splits (one unseen; both unseen). We perform ablations removing each FG term to isolate contributions and assess stability across splits. Comprehensive experiments on DrugBank and TwoSides datasets demonstrate that FG-DDI achieves superior performance compared to state-of-the-art methods. For DrugBank, the accuracy improves by 0.36% in transductive settings and by 0.46% and 1.42% in inductive settings, respectively for S1 and S2 partitioning. By systematically integrating chemical domain knowledge into deep learning architectures, this approach enables better generalization to unseen drug combinations while maintaining computational efficiency, making it particularly valuable for real-world pharmaceutical applications where new drugs continuously enter the market.",
+  "year": 2026,
+  "venue": "Journal of biomedical informatics",
+  "authors": [
+    "Fangyu Zhou",
+    "Shahadat Uddin"
+  ],
+  "doi": "10.1016/j.jbi.2026.104981",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41534605/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41534605"
+  }
+}

@@ -1,0 +1,561 @@
+[
+  {
+    "paper_id": "pubmed:42046957",
+    "title": "An image-based food quality analysis framework driven by large language models.",
+    "abstract": "Although computer vision approaches based on machine learning (ML) and deep learning (DL) have been applied to image-based food quality analysis, they typically require large labeled datasets, intensive training, and expert knowledge. Recent advances in large language models (LLMs) have enabled enhanced reasoning capabilities and flexible multimodal perception. In this work, an LLM-driven vision inspection framework featuring two inference routes was developed. The text-only inference (TOI) converts pre-extracted image features into structured textual prompts for LLM-based reasoning. The vision-language inference (VLI) directly processes raw food images using LLMs with built-in visual encoders, enabling end-to-end multimodal inference. A lightweight graphical user interface (GUI) was integrated to automate feature extraction and structured data generation with one-click operation. Several state-of-the-art LLMs were evaluated on food ripeness, freshness, and authenticity datasets. Using GPT-5, the TOI approach attained an accuracy of 1.000 on low-complexity datasets and maintained strong performance (0.875) on more complex tasks, while the VLI approach demonstrated consistently high accuracy (0.964-1.000) with substantially fewer training images, matching or surpassing traditional ML and DL baselines. The proposed framework relies solely on prompt-based in-context learning, eliminating task-specific fine-tuning. These results demonstrate the feasibility and practicality of efficient, fine-tuning-free, LLM-driven vision inspection for food quality analysis.",
+    "year": 2026,
+    "venue": "Analytical methods : advancing methods and applications",
+    "authors": [
+      "Xiao-Yue Yin",
+      "Hai-Long Wu",
+      "Luo-Yuan Han",
+      "Ye He",
+      "Xiao-Zhi Wang",
+      "Tong Wang",
+      "Ru-Qin Yu"
+    ],
+    "doi": "10.1039/d6ay00214e",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42046957/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42046957"
+    }
+  },
+  {
+    "paper_id": "pubmed:41886735",
+    "title": "Large Language Model Adaptation Strategies in Speech-Based Cognitive Screening: Systematic Evaluation.",
+    "abstract": "Over half of US adults with Alzheimer disease and related dementias (ADRD) remain undiagnosed. Speech-based screening algorithms offer a scalable approach, but the relative value of large language model (LLM) adaptation strategies is unclear. The study aimed to compare LLM adaptation strategies for cognitive impairment detection across DementiaBank speech datasets using both text-only and multimodal models. We analyzed audio-recorded speech from 237 participants in the ADReSSo subset of DementiaBank (ADRD vs cognitive normal [CN]) and report performance on a held-out test set (n=71). Nine text-only LLMs (3B-405B; open-weight and commercial) and 3 multimodal audio-text models were evaluated. Adaptations included (1) in-context learning (ICL) with 4 demonstration selection strategies (most similar, least similar, average similar or prototype, and random), (2) reasoning-augmented prompting (self- or teacher-generated rationales, self-consistency, tree-of-thought with domain experts), (3) parameter-efficient fine-tuning (token-level vs added classification head), and (4) multimodal audio-text integration. Generalizability of the adaptation strategies was evaluated on the DementiaBank Delaware dataset (n=205; mild cognitive impairment vs CN) using the first 3 strategies. The primary outcome was the F1-score for the cognitive impaired class; the area under the receiver operating characteristic curve was reported when available. On the ADReSSo dataset, average similar (prototype) demonstrations achieved the highest ICL performance across model sizes (F1-score up to 0.81). Reasoning primarily benefited smaller models: teacher-generated rationales increased LLaMA 8B from F1-score 0.72 to 0.76; expert-role tree-of-thought improved its zero-shot score from 0.65 to 0.71. Token-level fine-tuning produced the highest scores (LLaMA 3B: F1=0.83, 95% CI 0.01, area under the curve [AUC]=0.91; LLaMA 70B: F1=0.82, 95% CI 0.02, AUC=0.86; GPT-4o: F1=0.79, 95% CI 0.01, AUC=0.87). A classification head markedly improved MedAlpaca 7B (F1=0.06, 95% CI 0.02 to F1=0.81, 95% CI 0.04), indicating model-dependent benefits of this approach. Among multimodal models, fine-tuned Phi-4 Multimodal reached an F1-score of 0.80 (cognitive impaired) and 0.75 (CN) but did not exceed the top text-only systems. On the Delaware dataset, ICL achieved a high performance (LLaMA 8B: F1=0.74; GPT-4o: F1=0.80). Reasoning-augmented ICL improved LLaMA 8B to an F1-score of 0.75. Token-level fine-tuning produced the highest scores (LLaMA 8B: F1=0.76, 95% CI 0.02; GPT-4o: F1=0.82, 95% CI 0.03). Detection accuracy is influenced by demonstration selection, reasoning design, and tuning method. Token-level fine-tuning is generally most effective, while a classification head benefits models that perform poorly under token-based supervision. Properly adapted open-weight models can match or exceed commercial LLMs, supporting their use in scalable speech-based ADRD and mild cognitive impairment screening. Current multimodal models may require improved audio-text alignment and/or larger training corpora.",
+    "year": 2026,
+    "venue": "JMIR AI",
+    "authors": [
+      "Fatemeh Taherinezhad",
+      "Mohamad Javad Momeni Nezhad",
+      "Sepehr Karimi",
+      "Sina Rashidi",
+      "Ali Zolnour",
+      "Maryam Dadkhah",
+      "Yasaman Haghbin",
+      "Hossein Azadmaleki",
+      "Maryam Zolnoori"
+    ],
+    "doi": "10.2196/82608",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41886735/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41886735"
+    }
+  },
+  {
+    "paper_id": "pubmed:41640508",
+    "title": "Detecting stigmatizing language in clinical notes with large language models for addiction care.",
+    "abstract": "Intensive care units (ICU) produce numerous progress notes that may contain stigmatizing language that perpetuate negative biases and punitive approaches against patients. Patients with substance use disorders are particularly vulnerable to stigma. This study examined the performance of Large Language Models (LLMs) in the identification of stigmatizing language. We annotated a dataset with over 77,000 stigmatizing and non-stigmatizing notes from the MIMIC-III database. We utilized Meta's Llama-3 8B Instruct LLM to run the following experiments for stigma detection: zero-shot; in-context learning; in-context learning with a selective retrieval; supervised fine-tuning (SFT); and keyword search. All approaches were evaluated on a held-out test set and external validation (University of Wisconsin Health System). SFT had the best performance with 97.2% accuracy, followed by in-context learning. The LLMs with in-context learning and SFT provided appropriate reasoning for false positives during human review. Both approaches identified clinical notes with stigmatizing language that were missed during annotation. SFT achieved 97.9% accuracy on external validation dataset. LLMs, particularly SFT and in-context learning, effectively identify stigmatizing language in ICU notes with high accuracy while explaining their reasoning in an asynchronous fashion and demonstrated the ability to identify novel stigmatizing language, not explicitly in training data nor existing guidelines.",
+    "year": 2026,
+    "venue": "npj health systems",
+    "authors": [
+      "Rohan Sethi",
+      "John Caskey",
+      "Yanjun Gao",
+      "Matthew M Churpek",
+      "Timothy A Miller",
+      "Anoop Mayampurath",
+      "Elizabeth Salisbury-Afshar",
+      "Majid Afshar",
+      "Dmitry Dligach"
+    ],
+    "doi": "10.1038/s44401-026-00069-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41640508/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41640508"
+    }
+  },
+  {
+    "paper_id": "pubmed:41488128",
+    "title": "Enabling Few-Shot Alzheimer's Disease Diagnosis on Biomarker Data with Tabular LLMs.",
+    "abstract": "Early and accurate diagnosis of Alzheimer's disease (AD), a complex neurodegenerative disorder, requires analysis of heterogeneous biomarkers (e.g., neuroimaging, genetic risk factors, cognitive tests, and cerebrospinal fluid proteins) typically represented in a tabular format. With flexible few-shot reasoning, multimodal integration, and natural-language-based interpretability, large language models (LLMs) offer unprecedented opportunities for prediction with structured biomedical data. We propose a novel framework called ",
+    "year": 2025,
+    "venue": "ACM-BCB ... ... : the ... ACM Conference on Bioinformatics, Computational Biology and Biomedicine. ACM Conference on Bioinformatics, Computational Biology and Biomedicine",
+    "authors": [
+      "Sophie Kearney",
+      "Shu Yang",
+      "Zixuan Wen",
+      "Bojian Hou",
+      "Duy Duong-Tran",
+      "Tianlong Chen",
+      "Jason Moore",
+      "Marylyn Ritchie",
+      "Li Shen"
+    ],
+    "doi": "10.1145/3765612.3767229",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41488128/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41488128"
+    }
+  },
+  {
+    "paper_id": "pubmed:41468327",
+    "title": "Large Language Models Are Multitask Chain-of-Thought Prompting Optimizers.",
+    "abstract": "Large language models (LLMs) have achieved striking performance across a broad range of reasoning benchmarks, yet the quality of their outputs remains acutely sensitive to prompt design. A meticulously engineered prompt can coax an LLM into correctly answering even highly complex questions, prompting a surge of research into techniques that boost prompt efficacy. Manual chain-of-thought (CoT) prompting and automated prompt generation have emerged as leading strategies. However, CoT exemplars must be painstakingly tailored to each task, making the process labor-intensive, while prompts optimized for a single task often fail to generalize. We introduce a simple yet powerful alternative: by treating the LLM itself as a multitask optimizer, we enable iterative self-refinement of prompts through natural language task descriptions and few-shot in-context learning (ICL). Recognizing that individual prompts exhibit task-dependent sensitivity, we further ensemble the top-performing prompts at inference time. Empirical evaluation with several state-of-the-art LLMs shows that our method substantially surpasses prior baselines, delivering gains of up to 6.0% on mathematical reasoning tasks and 10.2% on commonsense reasoning benchmarks.",
+    "year": 2025,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Feihu Jin",
+      "Ying Tan"
+    ],
+    "doi": "10.1109/TNNLS.2025.3644134",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41468327/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41468327"
+    }
+  },
+  {
+    "paper_id": "pubmed:41362614",
+    "title": "Multi agent large language models for biomedical hypothesis generation in drug combination discovery.",
+    "abstract": "Recent advancements in large language models (LLMs) have demonstrated their potential in scientific reasoning, but their ability to open-ended hypotheses in data-scarce domains remains underexplored. Here, we introduce ",
+    "year": 2025,
+    "venue": "iScience",
+    "authors": [
+      "Qidi Xu",
+      "Claudio Soto",
+      "Mohammad Shahnawaz",
+      "Xiaozhong Liu",
+      "Xiaoqian Jiang",
+      "Yejin Kim"
+    ],
+    "doi": "10.1016/j.isci.2025.113984",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41362614/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41362614"
+    }
+  },
+  {
+    "paper_id": "pubmed:41330688",
+    "title": "LUMIR: an LLM-driven unified agent framework for multi-task infrared spectroscopy reasoning.",
+    "abstract": "Infrared spectroscopy enables rapid and non-destructive characterization of chemical and material properties, yet effective analysis typically requires workflows involving preprocessing, variable selection, and modeling. The construction and optimization of such workflows demand substantial expertise and often fail to generalize across datasets and tasks. Large language models (LLMs), with strong reasoning and adaptability, provide a promising approach to automate and enhance these processes. Nonetheless, existing chemometric and machine learning methods remain limited in robustness and transferability, leaving the field without a unified, data-efficient framework for automated infrared spectral analysis. This study introduces LUMIR (LLM-driven Unified agent framework for Multi-task Infrared spectroscopy Reasoning), an agent based framework designed to achieve accurate infrared spectral analysis under low data conditions. LUMIR integrates a structured literature knowledge base, automated preprocessing, feature extraction, and predictive modeling into a unified pipeline. By mining peer reviewed spectroscopy studies, it identifies validated preprocessing and feature derivation strategies, transforms spectra into low dimensional representations, and applies few-shot prompts for classification, regression, and anomaly detection. The framework was validated on diverse datasets, including the publicly available Milk near-infrared dataset, Chinese medicinal herbs, Citri Reticulatae Pericarpium(CRP) with different storage durations, an industrial wastewater COD dataset, and two additional public benchmarks, Tecator and Corn. Across these tasks, LUMIR achieved performance comparable to established machine learning and deep learning models, particularly in resource limited settings. This work demonstrates that by exploiting the broad generalization capacity of LLMs, together with structured literature guidance and few-shot learning, it is possible to achieve robust and automated spectral interpretation across diverse tasks. LUMIR establishes a new paradigm for applying LLMs to infrared spectroscopy, offering high accuracy with minimal labeled data and broad applicability across scientific and industrial domains.",
+    "year": 2026,
+    "venue": "Analytica chimica acta",
+    "authors": [
+      "Zujie Xie",
+      "Zixuan Chen",
+      "Jiheng Liang",
+      "Xiangyang Yu",
+      "Ziru Yu"
+    ],
+    "doi": "10.1016/j.aca.2025.344857",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41330688/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41330688"
+    }
+  },
+  {
+    "paper_id": "pubmed:41201741",
+    "title": "Personalized rTMS treatment recommendation with retrieval-augmented LLM reasoning.",
+    "abstract": "Repetitive transcranial magnetic stimulation (rTMS) is an effective, non-invasive neuromodulation therapy for major depressive disorder (MDD) and treatment-resistant depression (TRD). However, current clinical practice typically relies on standardized protocols that may not adequately account for individual patient variability. To address this gap, we propose a novel, interpretable framework for personalized rTMS treatment recommendations that combines a pretrained sentence embedding model with large language model (LLM)-based reasoning in a retrieval-augmented generation (RAG) setting. Specifically, our approach leverages a pretrained sentence embedding model to encode structured patient profiles into a dense semantic representation, enabling the retrieval of clinically similar cases. These retrieved examples serve as few-shot prompts for in-context learning (ICL), enabling the LLM to reason over these examples and synthesize customized rTMS treatment parameters. Unlike previous approaches that focus solely on individual aspects of personalization, our framework integrates all key parameters (frequency, intensity, and stimulation mode) into a comprehensive recommendation. We systematically evaluated various sentence embedding models and LLMs. Among them, Bge-large-en-v1.5 for few-shot retrieval and GPT-4o-mini for reasoning achieved the highest rTMS protocol matching accuracy of 78.18% using 15 few-shot examples. Our approach is fine-tuning-free, interpretable, and adaptable to real-world, resource-poor clinical settings, providing a promising step forward in data-driven personalized neurostimulation therapy.",
+    "year": 2025,
+    "venue": "Brain informatics",
+    "authors": [
+      "Lingling Xu",
+      "Haoran Xie",
+      "Xiaohui Tao",
+      "S Joe Qin",
+      "Fu Lee Wang",
+      "Raj Gururajan",
+      "Soman Elangovan",
+      "Yanmei Shen"
+    ],
+    "doi": "10.1186/s40708-025-00275-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41201741/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41201741"
+    }
+  },
+  {
+    "paper_id": "pubmed:41171676",
+    "title": "Chat2Layout: Interactive 3D Furniture Layout With a Multimodal LLM.",
+    "abstract": "Automatic furniture layout is long desired for convenient interior design. Leveraging the remarkable visual reasoning capabilities of multimodal large language models (MLLMs), recent methods address layout generation in a static manner, lacking the feedback-driven refinement essential for interactive user engagement. We introduce Chat2Layout, a novel interactive furniture layout generation system that extends the functionality of MLLMs into the realm of interactive layout design. To achieve this, we establish a unified vision-question paradigm for in-context learning, enabling seamless communication with MLLMs to steer their behavior without altering model weights. Within this framework, we present a novel training-free visual prompting mechanism. This involves a visual-text prompting technique that assist MLLMs in reasoning about plausible layout plans, followed by an Offline-to-Online search (O2O-Search) method, which identifies the minimal set of informative references to provide exemplars for visual-text prompting. By employing an agent system with MLLMs as the core controller, we enable bidirectional interaction. The agent not only comprehends the 3D environment and user requirements through linguistic and visual perception but also plans tasks and reasons about actions to generate and arrange furniture within the virtual space. Furthermore, the agent iteratively updates based on visual feedback from execution results. Experimental results demonstrate that our approach facilitates language-interactive generation and arrangement for diverse and complex 3D furniture.",
+    "year": 2026,
+    "venue": "IEEE transactions on visualization and computer graphics",
+    "authors": [
+      "Can Wang",
+      "Hongliang Zhong",
+      "Menglei Chai",
+      "Mingming He",
+      "Dongdong Chen",
+      "Jing Liao"
+    ],
+    "doi": "10.1109/TVCG.2025.3626731",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41171676/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41171676"
+    }
+  },
+  {
+    "paper_id": "pubmed:40832420",
+    "title": "Detecting Stigmatizing Language in Clinical Notes with Large Language Models for Addiction Care.",
+    "abstract": "Recent studies have found that stigmatizing terms can incline physicians to pursue punitive approaches to patient care. The intensive care unit (ICU) contains large volumes of progress notes that may contain stigmatizing language, which could perpetuate negative biases against patients and affect healthcare delivery. Patients with substance use disorders (alcohol, opioid, and non-opioid drugs) are particularly vulnerable to stigma. This study aimed to examine the performance of Large Language Models (LLMs) in the identification of stigmatizing language from ICU progress notes of patients with substance use disorders (SUD). Clinical notes were sampled from the Medical Information Mart for Intensive Care (MIMIC)-III, which contains 2,083,180 ICU notes. These 2,083,180 notes were passed into a rule-based labeling approach followed by manual verification for more ambiguous cases. The labeling approach followed the NIH guidelines on stigma in SUD. The labeling process resulted in identifying 38,552 stigmatizing encounters. To design our cohort, we randomly sampled an equivalent amount of non-stigmatizing encounters to create a dataset with 77,104 notes. This cohort was organized into train/development/test datasets (70/15/15). We utilized Meta's Llama-3 8B Instruct LLM to run the following experiments for stigma detection: (1) prompts with instructions that adhere to the NIH terms (Zero-Shot); (2) prompts with instructions and examples (in-context learning); (3) in-context learning with a selective retrieval system for the NIH terms (Retrieval Augmented Generation-RAG); and (4) supervised fine-tuning (SFT). We also created a baseline model using keyword search. Evaluation was performed on the held-out test set for accuracy, macro F1 score, and error analysis. The LLM-based approaches were prompted to provide their reasoning for label prediction. Additionally, all approaches were evaluated on an external validation dataset from the University of Wisconsin (UW) Health System with 288,130 ICU notes. SFT had the best performance with 97.2% accuracy, followed by in-context learning. The LLMs with in-context learning and SFT provided appropriate reasoning for false positives during human review. Both approaches identified clinical notes with stigmatizing language that were missed during annotation (10/93 false positives for SFT and 22/186 false positives for the in-context learning approach were considered valid after human review). SFT maintained its accuracy at 97.9% on a similarly balanced external validation dataset. Our findings demonstrate that LLMs, particularly using SFT and in-context learning, effectively identify stigmatizing language in ICU notes with high accuracy while explaining their reasoning in an asynchronous fashion without needing rigorous and time-intensive manual verification involved in labeling. These models also demonstrated the ability to identify novel stigmatizing language not explicitly in training data nor existing guidelines. This study highlights the potential of LLMs in reducing stigma in clinical documentation, especially for patients with SUD. These LLMs enable identification of stigmatizing language in clinical notes that can perpetuate negative stigma towards patients and encourage rewriting of notes.",
+    "year": 2025,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "R Sethi",
+      "J Caskey",
+      "Y Gao",
+      "M M Churpek",
+      "T A Miller",
+      "A Mayampurath",
+      "E S Afshar",
+      "M Afshar",
+      "D Dligach"
+    ],
+    "doi": "10.1101/2025.08.08.25333315",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40832420/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40832420"
+    }
+  },
+  {
+    "paper_id": "pubmed:40621800",
+    "title": "Statistical or Embodied? Comparing Colorseeing, Colorblind, Painters, and Large Language Models in Their Processing of Color Metaphors.",
+    "abstract": "Can metaphorical reasoning involving embodied experience-such as color perception-be learned from the statistics of language alone? Recent work finds that colorblind individuals robustly understand and reason abstractly about color, implying that color associations in everyday language might contribute to the metaphorical understanding of color. However, it is unclear how much colorblind individuals' understanding of color is driven by language versus their limited (but no less embodied) visual experience. A more direct test of whether language supports the acquisition of humans' understanding of color is whether large language models (LLMs)-those trained purely on text with no visual experience-can nevertheless learn to generate consistent and coherent metaphorical responses about color. Here, we conduct preregistered surveys that compare colorseeing adults, colorblind adults, and LLMs in how they (1) associate colors to words that lack established color associations and (2) interpret conventional and novel color metaphors. Colorblind and colorseeing adults exhibited highly similar and replicable color associations with novel words and abstract concepts. Yet, while GPT (a popular LLM) also generated replicable color associations with impressive consistency, its associations departed considerably from colorseeing and colorblind participants. Moreover, GPT frequently failed to generate coherent responses about its own metaphorical color associations when asked to invert its color associations or explain novel color metaphors in context. Consistent with this view, painters who regularly work with color pigments were more likely than all other groups to understand novel color metaphors using embodied reasoning. Thus, embodied experience may play an important role in metaphorical reasoning about color and the generation of conceptual connections between embodied associations.",
+    "year": 2025,
+    "venue": "Cognitive science",
+    "authors": [
+      "Ethan O Nadler",
+      "Douglas Guilbeault",
+      "Sofronia M Ringold",
+      "T R Williamson",
+      "Antoine Bellemare-Pepin",
+      "Iulia M Comșa",
+      "Karim Jerbi",
+      "Srini Narayanan",
+      "Lisa Aziz-Zadeh"
+    ],
+    "doi": "10.1111/cogs.70083",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40621800/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40621800"
+    }
+  },
+  {
+    "paper_id": "pubmed:40529494",
+    "title": "Improving drug-drug interaction prediction via in-context learning and judging with large language models.",
+    "abstract": "Large Language Models (LLMs), recognized for their advanced capabilities in natural language processing, have been successfully employed across various domains. However, their effectiveness in addressing challenges related to drug discovery has yet to be fully elucidated. In this paper, we propose a novel LLM based method for drug-drug interaction (DDI) prediction, named DDI-JUDGE, achieved through the integration of judging and ICL prompts. The proposed method outperforms existing LLM approaches, demonstrating the potential of LLMs for predicting DDIs. We introduce a novel in-context learning (ICL) prompt paradigm that selects high-similarity samples as positive and negative prompts, enabling the model to effectively learn and generalize knowledge. Additionally, we present an ICL-based prompt template that structures inputs, prediction tasks, relevant factors, and examples, leveraging the pre-trained knowledge and contextual understanding of LLMs to enhance DDI prediction capabilities. To further refine predictions, we employ GPT-4 as a discriminator to assess the relevance of predictions generated by multiple LLMs. DDI-JUDGE achieves the best performance among all models in both zero-shot and few-shot settings, with an AUC of 0.642/0.788 and AUPR of 0.629/0.801, respectively. These results demonstrate its superior predictive capability and robustness across different learning scenarios. These findings highlight the potential of LLMs in advancing drug discovery through more effective DDI prediction. The modular prompt structure, combined with ensemble reasoning, offers a scalable framework for knowledge-intensive biomedical applications. The code for DDI-JUDGE is available at https://github.com/zcc1203/ddi-judge.",
+    "year": 2025,
+    "venue": "Frontiers in pharmacology",
+    "authors": [
+      "He Qi",
+      "Xiaoqiang Li",
+      "Chengcheng Zhang",
+      "Tianyi Zhao"
+    ],
+    "doi": "10.3389/fphar.2025.1589788",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40529494/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40529494"
+    }
+  },
+  {
+    "paper_id": "pubmed:40092287",
+    "title": "Assertion Detection in Clinical Natural Language Processing using Large Language Models.",
+    "abstract": "In this study, we aim to address the task of assertion detection when extracting medical concepts from clinical notes, a key process in clinical natural language processing (NLP). Assertion detection in clinical NLP usually involves identifying assertion types for medical concepts in the clinical text, namely certainty (whether the medical concept is positive, negated, possible, or hypothetical), temporality (whether the medical concept is for present or the past history), and experiencer (whether the medical concept is described for the patient or a family member). These assertion types are essential for healthcare professionals to quickly and clearly understand the context of medical conditions from unstructured clinical texts, directly influencing the quality and outcomes of patient care. Although widely used, traditional methods, particularly rule-based NLP systems and machine learning or deep learning models, demand intensive manual efforts to create patterns and tend to overlook less common assertion types, leading to an incomplete understanding of the context. To address this challenge, our research introduces a novel methodology that utilizes Large Language Models (LLMs) pre-trained on a vast array of medical data for assertion detection. We enhanced the current method with advanced reasoning techniques, including Tree of Thought (ToT), Chain of Thought (CoT), and Self-Consistency (SC), and refine it further with Low-Rank Adaptation (LoRA) fine-tuning. We first evaluated the model on the i2b2 2010 assertion dataset. Our method achieved a micro-averaged F-1 of 0.89, with 0.11 improvements over the previous works. To further assess the generalizability of our approach, we extended our evaluation to a local dataset that focused on sleep concept extraction. Our approach achieved an F-1 of 0.74, which is 0.31 higher than the previous method. The results show that using LLMs is a viable option for assertion detection in clinical NLP and can potentially integrate with other LLM-based concept extraction models for clinical NLP tasks.",
+    "year": 2024,
+    "venue": "Proceedings. IEEE International Conference on Healthcare Informatics",
+    "authors": [
+      "Yuelyu Ji",
+      "Zeshui Yu",
+      "Yanshan Wang"
+    ],
+    "doi": "10.1109/ichi61247.2024.00039",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40092287/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40092287"
+    }
+  },
+  {
+    "paper_id": "pubmed:40030896",
+    "title": "Decision Tree Extraction for Clinical Decision Support System With If-Else Pseudocode and PlanSelect Strategy.",
+    "abstract": "Decision trees, as a structured representation of medical knowledge, are critical resources for building clinical decision support systems. Their structured decision pathways can be used for retrieval to enhance clinical decision making. Currently, mainstream methods mainly utilize large language models and in-context learning for decision tree extraction. However, these methods often face challenges in understanding the structure of decision trees and accurately extracting the complete content of tree nodes, leading to noise in the extracted trees and ultimately impacting their effectiveness in clinical decision support system. To this end, in this paper, we propose a novel decision tree extraction framework, including two stages. In the first stage, we propose to use the If-Else pseudocode to represent the decision tree structure and design specific constraints on format and content to guide the LLM in generating outputs. In the second stage, we introduce a novel node-filling strategy called PlanSelect to match the extracted triplets with sub-sentences in the generated pseudocode, including four reasoning steps: observation, plan, action, and answer. To evaluate the effectiveness of our proposed method, we construct an English decision tree extraction dataset (EMDT) and conduct extensive experiments on the built and public datasets. Experiments on the Text2DT and EMDT datasets demonstrate that our method outperforms the current state-of-the-art approaches, achieving improvements of 1.37% and 1.54% on the $ER$ metric (which is lower is better), respectively. Furthermore, we use the medical decision trees extracted using our framework to improve the model's performance on clinical decision making tasks, i.e., CMB-Clin and MedQA.",
+    "year": 2025,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Ruihui Hou",
+      "Xiaojun Wang",
+      "Weiyan Zhang",
+      "Zhexin Song",
+      "Kai Wang",
+      "Yifei Chen",
+      "Jingping Liu",
+      "Tong Ruan"
+    ],
+    "doi": "10.1109/JBHI.2025.3529682",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40030896/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40030896"
+    }
+  },
+  {
+    "paper_id": "pubmed:39691157",
+    "title": "Leveraging Professional Radiologists' Expertise to Enhance LLMs' Evaluation for AI-generated Radiology Reports.",
+    "abstract": "In radiology, Artificial Intelligence (AI) has significantly advanced report generation, but automatic evaluation of these AI-produced reports remains challenging. Current metrics, such as Conventional Natural Language Generation (NLG) and Clinical Efficacy (CE), often fall short in capturing the semantic intricacies of clinical contexts or overemphasize clinical details, undermining report clarity. To overcome these issues, our proposed method synergizes the expertise of professional radiologists with Large Language Models (LLMs), like GPT-3.5 and GPT-4. Utilizing In-Context Instruction Learning (ICIL) and Chain of Thought (CoT) reasoning, our approach aligns LLM evaluations with radiologist standards, enabling detailed comparisons between human and AI-generated reports. This is further enhanced by a Regression model that aggregates sentence evaluation scores. Experimental results show that our \"Detailed GPT-4 (5-shot)\" model achieves a correlation that is 0.48, outperforming the METEOR metric by 0.19, while our \"Regressed GPT-4\" model shows even greater alignment(0.64) with expert evaluations, exceeding the best existing metric by a 0.35 margin. Moreover, the robustness of our explanations has been validated through a thorough iterative strategy. We plan to publicly release annotations from radiology experts, setting a new standard for accuracy in future assessments. This underscores the potential of our approach in enhancing the quality assessment of AI-driven medical reports.",
+    "year": 2024,
+    "venue": "Proceedings. IEEE International Conference on Healthcare Informatics",
+    "authors": [
+      "Qingqing Zhu",
+      "Xiuying Chen",
+      "Qiao Jin",
+      "Benjamin Hou",
+      "Tejas Sudharshan Mathai",
+      "Pritam Mukherjee",
+      "Xin Gao",
+      "Ronald M Summers",
+      "Zhiyong Lu"
+    ],
+    "doi": "10.1109/ichi61247.2024.00058",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39691157/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39691157"
+    }
+  },
+  {
+    "paper_id": "pubmed:39679213",
+    "title": "A survey on multimodal large language models.",
+    "abstract": "Recently, the multimodal large language model (MLLM) represented by GPT-4V has been a new rising research hotspot, which uses powerful large language models (LLMs) as a brain to perform multimodal tasks. The surprising emergent capabilities of the MLLM, such as writing stories based on images and optical character recognition-free math reasoning, are rare in traditional multimodal methods, suggesting a potential path to artificial general intelligence. To this end, both academia and industry have endeavored to develop MLLMs that can compete with or even outperform GPT-4V, pushing the limit of research at a surprising speed. In this paper, we aim to trace and summarize the recent progress of MLLMs. First, we present the basic formulation of the MLLM and delineate its related concepts, including architecture, training strategy and data, as well as evaluation. Then, we introduce research topics about how MLLMs can be extended to support more granularity, modalities, languages and scenarios. We continue with multimodal hallucination and extended techniques, including multimodal in-context learning, multimodal chain of thought and LLM-aided visual reasoning. To conclude the paper, we discuss existing challenges and point out promising research directions.",
+    "year": 2024,
+    "venue": "National science review",
+    "authors": [
+      "Shukang Yin",
+      "Chaoyou Fu",
+      "Sirui Zhao",
+      "Ke Li",
+      "Xing Sun",
+      "Tong Xu",
+      "Enhong Chen"
+    ],
+    "doi": "10.1093/nsr/nwae403",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39679213/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39679213"
+    }
+  },
+  {
+    "paper_id": "pubmed:39437276",
+    "title": "Benchmarking Large Language Models in Evidence-Based Medicine.",
+    "abstract": "Evidence-based medicine (EBM) represents a paradigm of providing patient care grounded in the most current and rigorously evaluated research. Recent advances in large language models (LLMs) offer a potential solution to transform EBM by automating labor-intensive tasks and thereby improving the efficiency of clinical decision-making. This study explores integrating LLMs into the key stages in EBM, evaluating their ability across evidence retrieval (PICO extraction, biomedical question answering), synthesis (summarizing randomized controlled trials), and dissemination (medical text simplification). We conducted a comparative analysis of seven LLMs, including both proprietary and open-source models, as well as those fine-tuned on medical corpora. Specifically, we benchmarked the performance of various LLMs on each EBM task under zero-shot settings as baselines, and employed prompting techniques, including in-context learning, chain-of-thought reasoning, and knowledge-guided prompting to enhance their capabilities. Our extensive experiments revealed the strengths of LLMs, such as remarkable understanding capabilities even in zero-shot settings, strong summarization skills, and effective knowledge transfer via prompting. Promoting strategies such as knowledge-guided prompting proved highly effective (e.g., improving the performance of GPT-4 by 13.10% over zero-shot in PICO extraction). However, the experiments also showed limitations, with LLM performance falling well below state-of-the-art baselines like PubMedBERT in handling named entity recognition tasks. Moreover, human evaluation revealed persisting challenges with factual inconsistencies and domain inaccuracies, underscoring the need for rigorous quality control before clinical application. This study provides insights into enhancing EBM using LLMs while highlighting critical areas for further research.",
+    "year": 2025,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Jin Li",
+      "Yiyan Deng",
+      "Qi Sun",
+      "Junjie Zhu",
+      "Yu Tian",
+      "Jingsong Li",
+      "Tingting Zhu"
+    ],
+    "doi": "10.1109/JBHI.2024.3483816",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39437276/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39437276"
+    }
+  },
+  {
+    "paper_id": "pubmed:38903745",
+    "title": "Leveraging Professional Radiologists' Expertise to Enhance LLMs' Evaluation for Radiology Reports.",
+    "abstract": "In radiology, Artificial Intelligence (AI) has significantly advanced report generation, but automatic evaluation of these AI-produced reports remains challenging. Current metrics, such as Conventional Natural Language Generation (NLG) and Clinical Efficacy (CE), often fall short in capturing the semantic intricacies of clinical contexts or overemphasize clinical details, undermining report clarity. To overcome these issues, our proposed method synergizes the expertise of professional radiologists with Large Language Models (LLMs), like GPT-3.5 and GPT-4. Utilizing In-Context Instruction Learning (ICIL) and Chain of Thought (CoT) reasoning, our approach aligns LLM evaluations with radiologist standards, enabling detailed comparisons between human and AI-generated reports. This is further enhanced by a Regression model that aggregates sentence evaluation scores. Experimental results show that our \"Detailed GPT-4 (5-shot)\" model achieves a 0.48 score, outperforming the METEOR metric by 0.19, while our \"Regressed GPT-4\" model shows even greater alignment with expert evaluations, exceeding the best existing metric by a 0.35 margin. Moreover, the robustness of our explanations has been validated through a thorough iterative strategy. We plan to publicly release annotations from radiology experts, setting a new standard for accuracy in future assessments. This underscores the potential of our approach in enhancing the quality assessment of AI-driven medical reports.",
+    "year": 2024,
+    "venue": "ArXiv",
+    "authors": [
+      "Qingqing Zhu",
+      "Xiuying Chen",
+      "Qiao Jin",
+      "Benjamin Hou",
+      "Tejas Sudharshan Mathai",
+      "Pritam Mukherjee",
+      "Xin Gao",
+      "Ronald M Summers",
+      "Zhiyong Lu"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38903745/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38903745"
+    }
+  }
+]

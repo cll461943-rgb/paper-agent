@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2603.27914v2",
+  "title": "ITQ3_S: High-Fidelity 3-bit LLM Inference via Interleaved Ternary Quantization with Rotation-Domain Smoothing",
+  "abstract": "We present ITQ3_S (Interleaved Ternary Quantization -- Specialized), a novel 3-bit weight quantization format for LLMs integrating TurboQuant (TQ), a rotation-domain strategy based on the Fast Walsh-Hadamard Transform (FWHT). Conventional 3-bit methods suffer precision loss from heavy-tailed weight distributions and inter-channel outliers. ITQ3_S pre-rotates the weight space via FWHT before quantization, spreading outlier energy across the vector and inducing a near-Gaussian distribution amenable to uniform ternary coding. We derive a rigorous dequantization procedure fusing a 256-point Inverse FWHT into the CUDA shared-memory loading stage, ensuring reconstruction error is bounded exclusively by the ternary quantization grid with no additional error from the transform inversion. For any weight vector $\\mathbf{w} \\in \\mathbb{R}^{256}$, the reconstruction satisfies $\\|\\hat{\\mathbf{w}} - \\mathbf{w}\\|_2 \\leq ε_q$, strictly smaller than uniform 3-bit baselines that do not exploit rotation-induced distribution normalization. TurboQuant lacks a native CUDA kernel, precluding direct deployment; naively composing TQ with existing weight quantizers introduces domain mismatch errors that accumulate across layers, degrading quality below standard 3-bit baselines. ITQ3_S resolves this by co-designing the FWHT rotation and quantization kernel as a unified pipeline grounded in the IQ3_S weight format, with the inverse transform fused into the CUDA MMQ kernel. Empirically, on the NVIDIA RTX 5090 (Blackwell), ITQ3_S achieves perplexity competitive with FP16 while delivering throughput exceeding 1.5x that of 4-bit alternatives via optimized DP4A and Tensor Core scheduling. Our results establish ITQ3_S as a practical, mathematically grounded solution for high-fidelity LLM deployment on consumer hardware.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Edward J. Yoon"
+  ],
+  "doi": null,
+  "arxiv_id": "2603.27914v2",
+  "url": "http://arxiv.org/abs/2603.27914v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

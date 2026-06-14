@@ -1,0 +1,25 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.05561v1",
+  "title": "BitCal-TTS: Bit-Calibrated Test-Time Scaling for Quantized Reasoning Models",
+  "abstract": "Post-training quantization makes large reasoning models practical under tight memory and latency budgets, but it can distort the online signals that drive adaptive test-time compute allocation. Under a fixed cap on the number of newly generated tokens, miscalibrated confidence can lead to harmful early halting: the model may surface a plausible final line while the underlying reasoning is still wrong, or the controller may stop before the trace has stabilized. We study this interaction for greedy 4-bit inference and propose BitCal-TTS, a lightweight runtime controller that combines (i) inexpensive online proxies for token-level uncertainty and reasoning-trace stability, (ii) a bit-conditioned confidence rescaling that is conservative at low nominal precision, and (iii) a bit-aware post-marker confirmation horizon designed for GSM8K-style structured outputs. The method requires no fine-tuning of the base model and integrates with standard Hugging Face 4-bit inference using forward hooks for logits and last-layer hidden states. On small evaluation shards of GSM8K with Qwen2.5 Instruct models, BitCal-TTS improves exact-match accuracy over a non-bit-aware adaptive baseline at the 7B and 14B scales while preserving substantial token savings relative to fixed-budget decoding. At a token cap of B=512, on the evaluation shards we report (N=54 for 7B and N=35 for 14B; not the full GSM8K test set), accuracy gains are +3.7 points (7B) and +2.8 points (14B), with the premature-stop rate falling from 14.8% to 11.1% on 7B and from 17.1% to 11.4% on 14B. We report Wilson 95% confidence intervals throughout and explicitly discuss the limited statistical power of the partial-shard comparisons. We release code and figure-generation scripts to support full reproduction.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Sai Babu Patarlapalli",
+    "Surya Teja Avvaru"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.05561v1",
+  "url": "http://arxiv.org/abs/2605.05561v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

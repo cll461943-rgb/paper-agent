@@ -1,0 +1,33 @@
+{
+  "paper_id": "http://arxiv.org/abs/2105.03536v1",
+  "title": "Pareto-Optimal Quantized ResNet Is Mostly 4-bit",
+  "abstract": "Quantization has become a popular technique to compress neural networks and reduce compute cost, but most prior work focuses on studying quantization without changing the network size. Many real-world applications of neural networks have compute cost and memory budgets, which can be traded off with model quality by changing the number of parameters. In this work, we use ResNet as a case study to systematically investigate the effects of quantization on inference compute cost-quality tradeoff curves. Our results suggest that for each bfloat16 ResNet model, there are quantized models with lower cost and higher accuracy; in other words, the bfloat16 compute cost-quality tradeoff curve is Pareto-dominated by the 4-bit and 8-bit curves, with models primarily quantized to 4-bit yielding the best Pareto curve. Furthermore, we achieve state-of-the-art results on ImageNet for 4-bit ResNet-50 with quantization-aware training, obtaining a top-1 eval accuracy of 77.09%. We demonstrate the regularizing effect of quantization by measuring the generalization gap. The quantization method we used is optimized for practicality: It requires little tuning and is designed with hardware capabilities in mind. Our work motivates further research into optimal numeric formats for quantization, as well as the development of machine learning accelerators supporting these formats. As part of this work, we contribute a quantization library written in JAX, which is open-sourced at https://github.com/google-research/google-research/tree/master/aqt.",
+  "year": 2021,
+  "venue": null,
+  "authors": [
+    "AmirAli Abdolrashidi",
+    "Lisa Wang",
+    "Shivani Agrawal",
+    "Jonathan Malmaud",
+    "Oleg Rybakov",
+    "Chas Leichner",
+    "Lukasz Lew"
+  ],
+  "doi": null,
+  "arxiv_id": "2105.03536v1",
+  "url": "http://arxiv.org/abs/2105.03536v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

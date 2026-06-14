@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:42209608",
+  "title": "PipeBench: a benchmarking framework for end-to-end machine learning pipelines.",
+  "abstract": "The integration of machine learning (ML) into modern data management systems has enabled intelligent decision-making across large-scale information infrastructures. However, existing performance benchmarks typically evaluate isolated components such as model training or inference, leaving the behavior of full end-to-end pipelines poorly understood. This paper introduces PipeBench, a reproducible benchmarking framework for evaluating integrated ML pipelines that combine distributed data processing, automated machine learning (AutoML), model management, and production serving. The proposed framework is implemented using widely adopted open-source technologies including Apache Spark, Kubeflow, MLflow, and TensorFlow Serving. Experiments are conducted across three representative datasets (industrial IoT, e-commerce, and financial analytics) under controlled variations of data scale, cluster size, and AutoML strategies. Results show that model training dominates pipeline latency (58-70%), while preprocessing contributes 19-28% of execution time. Bayesian optimization achieves 97% of the accuracy of evolutionary AutoML methods while reducing computational cost by nearly half. A multi-fidelity approach (BOHB) further improves efficiency, achieving equivalent accuracy at 43% lower cost than standard Bayesian optimization. The study also identifies key system bottlenecks including GPU underutilization, shuffle-induced memory pressure, and storage contention during checkpointing. All code, configuration files, and synthetic data generators are publicly released to ensure reproducibility. PipeBench provides a standardized experimental framework and practical design guidelines for building scalable ML-enabled information systems.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Sanjay Agal",
+    "Ruchika Katariya"
+  ],
+  "doi": "10.1038/s41598-026-53722-x",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42209608/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42209608"
+  }
+}

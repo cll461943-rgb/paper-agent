@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:41915517",
+  "title": "Implicit Demonstration Augmentation for Robust and Stable In-Context Learning.",
+  "abstract": "The advent of in-context learning (ICL) allows pretrained large language models (LLMs) to handle unseen inputs by leveraging context, without requiring parameter updates. However, the success of ICL is strongly influenced by factors such as the quality, size, and ordering of demonstrations, often resulting in unstable or less-than-ideal outcomes. This work is the first to address these limitations through the lens of demonstration augmentation. We first propose a simple yet effective ICL method, termed implicit demonstration augmentation-based ICL (IDAICL), that enriches demonstrations by leveraging their deep feature distributions, integrating knowledge from the entire demonstration set to enhance LLM predictions. From a theoretical standpoint, we demonstrate that when the number of augmented samples tends to infinity, our method asymptotically converges to a new form of logit calibration. Building upon this foundation, we further propose a domain-aware IDAICL (D-IDAICL) method, which improves the precision of knowledge integration by identifying and leveraging the most pertinent domain for each test sample during augmentation. Specifically, a hypernetwork is employed to adaptively select the most effective domain based on the deep representation of the test sample. The corresponding domain-specific knowledge is then utilized to augment the demonstrations, resulting in a domain-aware logit calibration function that enhances predictive performance. Comprehensive evaluations across multiple tasks using eight LLMs reveal that both approaches markedly boost overall and worst-case accuracy, leading to improved robustness and predictive capability. In addition, our approaches mitigate performance fluctuations across different demonstrations, orderings, and templates, while also showing effectiveness in handling class imbalance.",
+  "year": 2026,
+  "venue": "IEEE transactions on neural networks and learning systems",
+  "authors": [
+    "Xiaoling Zhou",
+    "Zhemg Lee",
+    "Rui Xie",
+    "Lei Zou",
+    "Wei Ye",
+    "Shikun Zhang"
+  ],
+  "doi": "10.1109/TNNLS.2026.3677885",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41915517/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41915517"
+  }
+}

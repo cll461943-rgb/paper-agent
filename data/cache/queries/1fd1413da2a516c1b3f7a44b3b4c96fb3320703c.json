@@ -1,0 +1,873 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/1910.13461v1",
+    "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+    "abstract": "We present BART, a denoising autoencoder for pretraining sequence-to-sequence models. BART is trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. It uses a standard Tranformer-based neural machine translation architecture which, despite its simplicity, can be seen as generalizing BERT (due to the bidirectional encoder), GPT (with the left-to-right decoder), and many other more recent pretraining schemes. We evaluate a number of noising approaches, finding the best performance by both randomly shuffling the order of the original sentences and using a novel in-filling scheme, where spans of text are replaced with a single mask token. BART is particularly effective when fine tuned for text generation but also works well for comprehension tasks. It matches the performance of RoBERTa with comparable training resources on GLUE and SQuAD, achieves new state-of-the-art results on a range of abstractive dialogue, question answering, and summarization tasks, with gains of up to 6 ROUGE. BART also provides a 1.1 BLEU increase over a back-translation system for machine translation, with only target language pretraining. We also report ablation experiments that replicate other pretraining schemes within the BART framework, to better measure which factors most influence end-task performance.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Mike Lewis",
+      "Yinhan Liu",
+      "Naman Goyal",
+      "Marjan Ghazvininejad",
+      "Abdelrahman Mohamed",
+      "Omer Levy",
+      "Ves Stoyanov",
+      "Luke Zettlemoyer"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.13461v1",
+    "url": "http://arxiv.org/abs/1910.13461v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.13991v1",
+    "title": "Analysing The Impact of Sequence Composition on Language Model Pre-Training",
+    "abstract": "Most language model pre-training frameworks concatenate multiple documents into fixed-length sequences and use causal masking to compute the likelihood of each token given its context; this strategy is widely adopted due to its simplicity and efficiency. However, to this day, the influence of the pre-training sequence composition strategy on the generalisation properties of the model remains under-explored. In this work, we find that applying causal masking can lead to the inclusion of distracting information from previous documents during pre-training, which negatively impacts the performance of the models on language modelling and downstream tasks. In intra-document causal masking, the likelihood of each token is only conditioned on the previous tokens in the same document, eliminating potential distracting information from previous documents and significantly improving performance. Furthermore, we find that concatenating related documents can reduce some potential distractions during pre-training, and our proposed efficient retrieval-based sequence construction method, BM25Chunk, can improve in-context learning (+11.6\\%), knowledge memorisation (+9.8\\%), and context utilisation (+7.2\\%) abilities of language models without sacrificing efficiency.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yu Zhao",
+      "Yuanbin Qu",
+      "Konrad Staniszewski",
+      "Szymon Tworkowski",
+      "Wei Liu",
+      "Piotr Miłoś",
+      "Yuxiang Wu",
+      "Pasquale Minervini"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.13991v1",
+    "url": "http://arxiv.org/abs/2402.13991v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.06371v1",
+    "title": "A Comprehensive Review of State-of-The-Art Methods for Java Code Generation from Natural Language Text",
+    "abstract": "Java Code Generation consists in generating automatically Java code from a Natural Language Text. This NLP task helps in increasing programmers' productivity by providing them with immediate solutions to the simplest and most repetitive tasks. Code generation is a challenging task because of the hard syntactic rules and the necessity of a deep understanding of the semantic aspect of the programming language. Many works tried to tackle this task using either RNN-based, or Transformer-based models. The latter achieved remarkable advancement in the domain and they can be divided into three groups: (1) encoder-only models, (2) decoder-only models, and (3) encoder-decoder models. In this paper, we provide a comprehensive review of the evolution and progress of deep learning models in Java code generation task. We focus on the most important methods and present their merits and limitations, as well as the objective functions used by the community. In addition, we provide a detailed description of datasets and evaluation metrics used in the literature. Finally, we discuss results of different models on CONCODE dataset, then propose some future directions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jessica López Espejel",
+      "Mahaman Sanoussi Yahaya Alassan",
+      "El Mehdi Chouham",
+      "Walid Dahhane",
+      "El Hassane Ettifouri"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.06371v1",
+    "url": "http://arxiv.org/abs/2306.06371v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.09061v4",
+    "title": "VLP: A Survey on Vision-Language Pre-training",
+    "abstract": "In the past few years, the emergence of pre-training models has brought uni-modal fields such as computer vision (CV) and natural language processing (NLP) to a new era. Substantial works have shown they are beneficial for downstream uni-modal tasks and avoid training a new model from scratch. So can such pre-trained models be applied to multi-modal tasks? Researchers have explored this problem and made significant progress. This paper surveys recent advances and new frontiers in vision-language pre-training (VLP), including image-text and video-text pre-training. To give readers a better overall grasp of VLP, we first review its recent advances from five aspects: feature extraction, model architecture, pre-training objectives, pre-training datasets, and downstream tasks. Then, we summarize the specific VLP models in detail. Finally, we discuss the new frontiers in VLP. To the best of our knowledge, this is the first survey focused on VLP. We hope that this survey can shed light on future research in the VLP field.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Feilong Chen",
+      "Duzhen Zhang",
+      "Minglun Han",
+      "Xiuyi Chen",
+      "Jing Shi",
+      "Shuang Xu",
+      "Bo Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.09061v4",
+    "url": "http://arxiv.org/abs/2202.09061v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.11685v2",
+    "title": "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise",
+    "abstract": "In this paper, we introduce a novel dIffusion language modEl pre-training framework for text generation, which we call GENIE. GENIE is a large-scale pretrained diffusion language model that consists of an encoder and a diffusion-based decoder, which can generate text by gradually transforming a random noise sequence into a coherent text sequence. To pre-train GENIE on a large-scale language corpus, we design a new continuous paragraph denoise objective, which encourages the diffusion-decoder to reconstruct a clean text paragraph from a corrupted version, while preserving the semantic and syntactic coherence. We evaluate GENIE on four downstream text generation benchmarks, namely XSum, CNN/DailyMail, Gigaword, and CommonGen. Our experimental results show that GENIE achieves comparable performance with the state-of-the-art autoregressive models on these benchmarks, and generates more diverse text samples. The code and models of GENIE are available at https://github.com/microsoft/ProphetNet/tree/master/GENIE.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zhenghao Lin",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Tong Wu",
+      "Zhihao Fan",
+      "Chen Lin",
+      "Nan Duan",
+      "Weizhu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.11685v2",
+    "url": "http://arxiv.org/abs/2212.11685v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.14757v1",
+    "title": "An Automated Multiple-Choice Question Generation Using Natural Language Processing Techniques",
+    "abstract": "Automatic multiple-choice question generation (MCQG) is a useful yet challenging task in Natural Language Processing (NLP). It is the task of automatic generation of correct and relevant questions from textual data. Despite its usefulness, manually creating sizeable, meaningful and relevant questions is a time-consuming and challenging task for teachers. In this paper, we present an NLP-based system for automatic MCQG for Computer-Based Testing Examination (CBTE).We used NLP technique to extract keywords that are important words in a given lesson material. To validate that the system is not perverse, five lesson materials were used to check the effectiveness and efficiency of the system. The manually extracted keywords by the teacher were compared to the auto-generated keywords and the result shows that the system was capable of extracting keywords from lesson materials in setting examinable questions. This outcome is presented in a user-friendly interface for easy accessibility.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Chidinma A. Nwafor",
+      "Ikechukwu E. Onyenwe"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.14757v1",
+    "url": "http://arxiv.org/abs/2103.14757v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1908.08206v1",
+    "title": "Denoising based Sequence-to-Sequence Pre-training for Text Generation",
+    "abstract": "This paper presents a new sequence-to-sequence (seq2seq) pre-training method PoDA (Pre-training of Denoising Autoencoders), which learns representations suitable for text generation tasks. Unlike encoder-only (e.g., BERT) or decoder-only (e.g., OpenAI GPT) pre-training approaches, PoDA jointly pre-trains both the encoder and decoder by denoising the noise-corrupted text, and it also has the advantage of keeping the network architecture unchanged in the subsequent fine-tuning stage. Meanwhile, we design a hybrid model of Transformer and pointer-generator networks as the backbone architecture for PoDA. We conduct experiments on two text generation tasks: abstractive summarization, and grammatical error correction. Results on four datasets show that PoDA can improve model performance over strong baselines without using any task-specific techniques and significantly speed up convergence.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Liang Wang",
+      "Wei Zhao",
+      "Ruoyu Jia",
+      "Sujian Li",
+      "Jingming Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "1908.08206v1",
+    "url": "http://arxiv.org/abs/1908.08206v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.06644v1",
+    "title": "Controlling Translation Formality Using Pre-trained Multilingual Language Models",
+    "abstract": "This paper describes the University of Maryland's submission to the Special Task on Formality Control for Spoken Language Translation at \\iwslt, which evaluates translation from English into 6 languages with diverse grammatical formality markers. We investigate to what extent this problem can be addressed with a \\textit{single multilingual model}, simultaneously controlling its output for target language and formality. Results show that this strategy can approach the translation quality and formality control achieved by dedicated translation models. However, the nature of the underlying pre-trained language model and of the finetuning samples greatly impact results.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Elijah Rippeth",
+      "Sweta Agrawal",
+      "Marine Carpuat"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.06644v1",
+    "url": "http://arxiv.org/abs/2205.06644v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2304.01282v2",
+    "title": "PEACH: Pre-Training Sequence-to-Sequence Multilingual Models for Translation with Semi-Supervised Pseudo-Parallel Document Generation",
+    "abstract": "Multilingual pre-training significantly improves many multilingual NLP tasks, including machine translation. Most existing methods are based on some variants of masked language modeling and text-denoising objectives on monolingual data. Multilingual pre-training on monolingual data ignores the availability of parallel data in many language pairs. Also, some other works integrate the available human-generated parallel translation data in their pre-training. This kind of parallel data is definitely helpful, but it is limited even in high-resource language pairs. This paper introduces a novel semi-supervised method, SPDG, that generates high-quality pseudo-parallel data for multilingual pre-training. First, a denoising model is pre-trained on monolingual data to reorder, add, remove, and substitute words, enhancing the pre-training documents' quality. Then, we generate different pseudo-translations for each pre-training document using dictionaries for word-by-word translation and applying the pre-trained denoising model. The resulting pseudo-parallel data is then used to pre-train our multilingual sequence-to-sequence model, PEACH. Our experiments show that PEACH outperforms existing approaches used in training mT5 and mBART on various translation tasks, including supervised, zero- and few-shot scenarios. Moreover, PEACH's ability to transfer knowledge between similar languages makes it particularly useful for low-resource languages. Our results demonstrate that with high-quality dictionaries for generating accurate pseudo-parallel, PEACH can be valuable for low-resource languages.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Alireza Salemi",
+      "Amirhossein Abaskohi",
+      "Sara Tavakoli",
+      "Yadollah Yaghoobzadeh",
+      "Azadeh Shakery"
+    ],
+    "doi": null,
+    "arxiv_id": "2304.01282v2",
+    "url": "http://arxiv.org/abs/2304.01282v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2001.11314v3",
+    "title": "ERNIE-GEN: An Enhanced Multi-Flow Pre-training and Fine-tuning Framework for Natural Language Generation",
+    "abstract": "Current pre-training works in natural language generation pay little attention to the problem of exposure bias on downstream tasks. To address this issue, we propose an enhanced multi-flow sequence to sequence pre-training and fine-tuning framework named ERNIE-GEN, which bridges the discrepancy between training and inference with an infilling generation mechanism and a noise-aware generation method. To make generation closer to human writing patterns, this framework introduces a span-by-span generation flow that trains the model to predict semantically-complete spans consecutively rather than predicting word by word. Unlike existing pre-training methods, ERNIE-GEN incorporates multi-granularity target sampling to construct pre-training data, which enhances the correlation between encoder and decoder. Experimental results demonstrate that ERNIE-GEN achieves state-of-the-art results with a much smaller amount of pre-training data and parameters on a range of language generation tasks, including abstractive summarization (Gigaword and CNN/DailyMail), question generation (SQuAD), dialogue generation (Persona-Chat) and generative question answering (CoQA).",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Dongling Xiao",
+      "Han Zhang",
+      "Yukun Li",
+      "Yu Sun",
+      "Hao Tian",
+      "Hua Wu",
+      "Haifeng Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2001.11314v3",
+    "url": "http://arxiv.org/abs/2001.11314v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cmp-lg/9803002v1",
+    "title": "Time, Tense and Aspect in Natural Language Database Interfaces",
+    "abstract": "Most existing natural language database interfaces (NLDBs) were designed to be used with database systems that provide very limited facilities for manipulating time-dependent data, and they do not support adequately temporal linguistic mechanisms (verb tenses, temporal adverbials, temporal subordinate clauses, etc.). The database community is becoming increasingly interested in temporal database systems, that are intended to store and manipulate in a principled manner information not only about the present, but also about the past and future. When interfacing to temporal databases, supporting temporal linguistic mechanisms becomes crucial. We present a framework for constructing natural language interfaces for temporal databases (NLTDBs), that draws on research in tense and aspect theories, temporal logics, and temporal databases. The framework consists of a temporal intermediate representation language, called TOP, an HPSG grammar that maps a wide range of questions involving temporal mechanisms to appropriate TOP expressions, and a provably correct method for translating from TOP to TSQL2, TSQL2 being a recently proposed temporal extension of the SQL database language. This framework was employed to implement a prototype NLTDB using ALE and Prolog.",
+    "year": 1998,
+    "venue": null,
+    "authors": [
+      "I. Androutsopoulos",
+      "G. D. Ritchie",
+      "P. Thanisch"
+    ],
+    "doi": null,
+    "arxiv_id": "9803002v1",
+    "url": "http://arxiv.org/abs/cmp-lg/9803002v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1804.07878v2",
+    "title": "Massively Parallel Cross-Lingual Learning in Low-Resource Target Language Translation",
+    "abstract": "We work on translation from rich-resource languages to low-resource languages. The main challenges we identify are the lack of low-resource language data, effective methods for cross-lingual transfer, and the variable-binding problem that is common in neural systems. We build a translation system that addresses these challenges using eight European language families as our test ground. Firstly, we add the source and the target family labels and study intra-family and inter-family influences for effective cross-lingual transfer. We achieve an improvement of +9.9 in BLEU score for English-Swedish translation using eight families compared to the single-family multi-source multi-target baseline. Moreover, we find that training on two neighboring families closest to the low-resource language is often enough. Secondly, we construct an ablation study and find that reasonably good results can be achieved even with considerably less target data. Thirdly, we address the variable-binding problem by building an order-preserving named entity translation model. We obtain 60.6% accuracy in qualitative evaluation where our translations are akin to human translations in a preliminary study.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Zhong Zhou",
+      "Matthias Sperber",
+      "Alex Waibel"
+    ],
+    "doi": null,
+    "arxiv_id": "1804.07878v2",
+    "url": "http://arxiv.org/abs/1804.07878v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.10780v3",
+    "title": "An Open Natural Language Processing Development Framework for EHR-based Clinical Research: A case demonstration using the National COVID Cohort Collaborative (N3C)",
+    "abstract": "While we pay attention to the latest advances in clinical natural language processing (NLP), we can notice some resistance in the clinical and translational research community to adopt NLP models due to limited transparency, interpretability, and usability. In this study, we proposed an open natural language processing development framework. We evaluated it through the implementation of NLP algorithms for the National COVID Cohort Collaborative (N3C). Based on the interests in information extraction from COVID-19 related clinical notes, our work includes 1) an open data annotation process using COVID-19 signs and symptoms as the use case, 2) a community-driven ruleset composing platform, and 3) a synthetic text data generation workflow to generate texts for information extraction tasks without involving human subjects. The corpora were derived from texts from three different institutions (Mayo Clinic, University of Kentucky, University of Minnesota). The gold standard annotations were tested with a single institution's (Mayo) ruleset. This resulted in performances of 0.876, 0.706, and 0.694 in F-scores for Mayo, Minnesota, and Kentucky test datasets, respectively. The study as a consortium effort of the N3C NLP subgroup demonstrates the feasibility of creating a federated NLP algorithm development and benchmarking platform to enhance multi-institution clinical NLP study and adoption. Although we use COVID-19 as a use case in this effort, our framework is general enough to be applied to other domains of interest in clinical NLP.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sijia Liu",
+      "Andrew Wen",
+      "Liwei Wang",
+      "Huan He",
+      "Sunyang Fu",
+      "Robert Miller",
+      "Andrew Williams",
+      "Daniel Harris",
+      "Ramakanth Kavuluru",
+      "Mei Liu",
+      "Noor Abu-el-rub",
+      "Dalton Schutte",
+      "Rui Zhang",
+      "Masoud Rouhizadeh",
+      "John D. Osborne",
+      "Yongqun He",
+      "Umit Topaloglu",
+      "Stephanie S Hong",
+      "Joel H Saltz",
+      "Thomas Schaffter",
+      "Emily Pfaff",
+      "Christopher G. Chute",
+      "Tim Duong",
+      "Melissa A. Haendel",
+      "Rafael Fuentes",
+      "Peter Szolovits",
+      "Hua Xu",
+      "Hongfang Liu",
+      "National COVID Cohort Collaborative",
+      "Natural Language Processing",
+      "Subgroup",
+      "National COVID Cohort Collaborative"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.10780v3",
+    "url": "http://arxiv.org/abs/2110.10780v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2001.08210v2",
+    "title": "Multilingual Denoising Pre-training for Neural Machine Translation",
+    "abstract": "This paper demonstrates that multilingual denoising pre-training produces significant performance gains across a wide variety of machine translation (MT) tasks. We present mBART -- a sequence-to-sequence denoising auto-encoder pre-trained on large-scale monolingual corpora in many languages using the BART objective. mBART is one of the first methods for pre-training a complete sequence-to-sequence model by denoising full texts in multiple languages, while previous approaches have focused only on the encoder, decoder, or reconstructing parts of the text. Pre-training a complete model allows it to be directly fine tuned for supervised (both sentence-level and document-level) and unsupervised machine translation, with no task-specific modifications. We demonstrate that adding mBART initialization produces performance gains in all but the highest-resource settings, including up to 12 BLEU points for low resource MT and over 5 BLEU points for many document-level and unsupervised models. We also show it also enables new types of transfer to language pairs with no bi-text or that were not in the pre-training corpus, and present extensive analysis of which factors contribute the most to effective pre-training.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Yinhan Liu",
+      "Jiatao Gu",
+      "Naman Goyal",
+      "Xian Li",
+      "Sergey Edunov",
+      "Marjan Ghazvininejad",
+      "Mike Lewis",
+      "Luke Zettlemoyer"
+    ],
+    "doi": null,
+    "arxiv_id": "2001.08210v2",
+    "url": "http://arxiv.org/abs/2001.08210v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.11259v2",
+    "title": "Sequence-to-Sequence Spanish Pre-trained Language Models",
+    "abstract": "In recent years, significant advancements in pre-trained language models have driven the creation of numerous non-English language variants, with a particular emphasis on encoder-only and decoder-only architectures. While Spanish language models based on BERT and GPT have demonstrated proficiency in natural language understanding and generation, there remains a noticeable scarcity of encoder-decoder models explicitly designed for sequence-to-sequence tasks, which aim to map input sequences to generate output sequences conditionally. This paper breaks new ground by introducing the implementation and evaluation of renowned encoder-decoder architectures exclusively pre-trained on Spanish corpora. Specifically, we present Spanish versions of BART, T5, and BERT2BERT-style models and subject them to a comprehensive assessment across various sequence-to-sequence tasks, including summarization, question answering, split-and-rephrase, dialogue, and translation. Our findings underscore the competitive performance of all models, with the BART- and T5-based models emerging as top performers across all tasks. We have made all models publicly available to the research community to foster future explorations and advancements in Spanish NLP: https://github.com/vgaraujov/Seq2Seq-Spanish-PLMs.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Vladimir Araujo",
+      "Maria Mihaela Trusca",
+      "Rodrigo Tufiño",
+      "Marie-Francine Moens"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.11259v2",
+    "url": "http://arxiv.org/abs/2309.11259v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.03129v1",
+    "title": "Word-based Domain Adaptation for Neural Machine Translation",
+    "abstract": "In this paper, we empirically investigate applying word-level weights to adapt neural machine translation to e-commerce domains, where small e-commerce datasets and large out-of-domain datasets are available. In order to mine in-domain like words in the out-of-domain datasets, we compute word weights by using a domain-specific and a non-domain-specific language model followed by smoothing and binary quantization. The baseline model is trained on mixed in-domain and out-of-domain datasets. Experimental results on English to Chinese e-commerce domain translation show that compared to continuing training without word weights, it improves MT quality by up to 2.11% BLEU absolute and 1.59% TER. We have also trained models using fine-tuning on the in-domain data. Pre-training a model with word weights improves fine-tuning up to 1.24% BLEU absolute and 1.64% TER, respectively.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Shen Yan",
+      "Leonard Dahlmann",
+      "Pavel Petrushkov",
+      "Sanjika Hewavitharana",
+      "Shahram Khadivi"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.03129v1",
+    "url": "http://arxiv.org/abs/1906.03129v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.11421v1",
+    "title": "Towards Cultural Bridge by Bahnaric-Vietnamese Translation Using Transfer Learning of Sequence-To-Sequence Pre-training Language Model",
+    "abstract": "This work explores the journey towards achieving Bahnaric-Vietnamese translation for the sake of culturally bridging the two ethnic groups in Vietnam. However, translating from Bahnaric to Vietnamese also encounters some difficulties. The most prominent challenge is the lack of available original Bahnaric resources source language, including vocabulary, grammar, dialogue patterns and bilingual corpus, which hinders the data collection process for training. To address this, we leverage a transfer learning approach using sequence-to-sequence pre-training language model. First of all, we leverage a pre-trained Vietnamese language model to capture the characteristics of this language. Especially, to further serve the purpose of machine translation, we aim for a sequence-to-sequence model, not encoder-only like BERT or decoder-only like GPT. Taking advantage of significant similarity between the two languages, we continue training the model with the currently limited bilingual resources of Vietnamese-Bahnaric text to perform the transfer learning from language model to machine translation. Thus, this approach can help to handle the problem of imbalanced resources between two languages, while also optimizing the training and computational processes. Additionally, we also enhanced the datasets using data augmentation to generate additional resources and defined some heuristic methods to help the translation more precise. Our approach has been validated to be highly effective for the Bahnaric-Vietnamese translation model, contributing to the expansion and preservation of languages, and facilitating better mutual understanding between the two ethnic people.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Phan Tran Minh Dat",
+      "Vo Hoang Nhat Khang",
+      "Quan Thanh Tho"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.11421v1",
+    "url": "http://arxiv.org/abs/2505.11421v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.08850v3",
+    "title": "Pre-Trained Multilingual Sequence-to-Sequence Models: A Hope for Low-Resource Language Translation?",
+    "abstract": "What can pre-trained multilingual sequence-to-sequence models like mBART contribute to translating low-resource languages? We conduct a thorough empirical experiment in 10 languages to ascertain this, considering five factors: (1) the amount of fine-tuning data, (2) the noise in the fine-tuning data, (3) the amount of pre-training data in the model, (4) the impact of domain mismatch, and (5) language typology. In addition to yielding several heuristics, the experiments form a framework for evaluating the data sensitivities of machine translation systems. While mBART is robust to domain differences, its translations for unseen and typologically distant languages remain below 3.0 BLEU. In answer to our title's question, mBART is not a low-resource panacea; we therefore encourage shifting the emphasis from new models to new data.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "En-Shiun Annie Lee",
+      "Sarubi Thillainathan",
+      "Shravan Nayak",
+      "Surangika Ranathunga",
+      "David Ifeoluwa Adelani",
+      "Ruisi Su",
+      "Arya D. McCarthy"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.08850v3",
+    "url": "http://arxiv.org/abs/2203.08850v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.09263v1",
+    "title": "Vision-Language Pre-training: Basics, Recent Advances, and Future Trends",
+    "abstract": "This paper surveys vision-language pre-training (VLP) methods for multimodal intelligence that have been developed in the last few years. We group these approaches into three categories: ($i$) VLP for image-text tasks, such as image captioning, image-text retrieval, visual question answering, and visual grounding; ($ii$) VLP for core computer vision tasks, such as (open-set) image classification, object detection, and segmentation; and ($iii$) VLP for video-text tasks, such as video captioning, video-text retrieval, and video question answering. For each category, we present a comprehensive review of state-of-the-art methods, and discuss the progress that has been made and challenges still being faced, using specific systems and models as case studies. In addition, for each category, we discuss advanced topics being actively explored in the research community, such as big foundation models, unified modeling, in-context few-shot learning, knowledge, robustness, and computer vision in the wild, to name a few.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zhe Gan",
+      "Linjie Li",
+      "Chunyuan Li",
+      "Lijuan Wang",
+      "Zicheng Liu",
+      "Jianfeng Gao"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.09263v1",
+    "url": "http://arxiv.org/abs/2210.09263v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.09864v2",
+    "title": "Synthetic Pre-Training Tasks for Neural Machine Translation",
+    "abstract": "Pre-training models with large crawled corpora can lead to issues such as toxicity and bias, as well as copyright and privacy concerns. A promising way of alleviating such concerns is to conduct pre-training with synthetic tasks and data, since no real-world information is ingested by the model. Our goal in this paper is to understand the factors that contribute to the effectiveness of pre-training models when using synthetic resources, particularly in the context of neural machine translation. We propose several novel approaches to pre-training translation models that involve different levels of lexical and structural knowledge, including: 1) generating obfuscated data from a large parallel corpus 2) concatenating phrase pairs extracted from a small word-aligned corpus, and 3) generating synthetic parallel data without real human language corpora. Our experiments on multiple language pairs reveal that pre-training benefits can be realized even with high levels of obfuscation or purely synthetic parallel data. We hope the findings from our comprehensive empirical analysis will shed light on understanding what matters for NMT pre-training, as well as pave the way for the development of more efficient and less toxic models.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zexue He",
+      "Graeme Blackwood",
+      "Rameswar Panda",
+      "Julian McAuley",
+      "Rogerio Feris"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.09864v2",
+    "url": "http://arxiv.org/abs/2212.09864v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.00727v1",
+    "title": "Quantum Natural Language Generation on Near-Term Devices",
+    "abstract": "The emergence of noisy medium-scale quantum devices has led to proof-of-concept applications for quantum computing in various domains. Examples include Natural Language Processing (NLP) where sentence classification experiments have been carried out, as well as procedural generation, where tasks such as geopolitical map creation, and image manipulation have been performed. We explore applications at the intersection of these two areas by designing a hybrid quantum-classical algorithm for sentence generation. Our algorithm is based on the well-known simulated annealing technique for combinatorial optimisation. An implementation is provided and used to demonstrate successful sentence generation on both simulated and real quantum hardware. A variant of our algorithm can also be used for music generation. This paper aims to be self-contained, introducing all the necessary background on NLP and quantum computing along the way.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Amin Karamlou",
+      "Marcel Pfaffhauser",
+      "James Wootton"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.00727v1",
+    "url": "http://arxiv.org/abs/2211.00727v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.03197v3",
+    "title": "Unified Language Model Pre-training for Natural Language Understanding and Generation",
+    "abstract": "This paper presents a new Unified pre-trained Language Model (UniLM) that can be fine-tuned for both natural language understanding and generation tasks. The model is pre-trained using three types of language modeling tasks: unidirectional, bidirectional, and sequence-to-sequence prediction. The unified modeling is achieved by employing a shared Transformer network and utilizing specific self-attention masks to control what context the prediction conditions on. UniLM compares favorably with BERT on the GLUE benchmark, and the SQuAD 2.0 and CoQA question answering tasks. Moreover, UniLM achieves new state-of-the-art results on five natural language generation datasets, including improving the CNN/DailyMail abstractive summarization ROUGE-L to 40.51 (2.04 absolute improvement), the Gigaword abstractive summarization ROUGE-L to 35.75 (0.86 absolute improvement), the CoQA generative question answering F1 score to 82.5 (37.1 absolute improvement), the SQuAD question generation BLEU-4 to 22.12 (3.75 absolute improvement), and the DSTC7 document-grounded dialog response generation NIST-4 to 2.67 (human performance is 2.65). The code and pre-trained models are available at https://github.com/microsoft/unilm.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Li Dong",
+      "Nan Yang",
+      "Wenhui Wang",
+      "Furu Wei",
+      "Xiaodong Liu",
+      "Yu Wang",
+      "Jianfeng Gao",
+      "Ming Zhou",
+      "Hsiao-Wuen Hon"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.03197v3",
+    "url": "http://arxiv.org/abs/1905.03197v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.02450v5",
+    "title": "MASS: Masked Sequence to Sequence Pre-training for Language Generation",
+    "abstract": "Pre-training and fine-tuning, e.g., BERT, have achieved great success in language understanding by transferring knowledge from rich-resource pre-training task to the low/zero-resource downstream tasks. Inspired by the success of BERT, we propose MAsked Sequence to Sequence pre-training (MASS) for the encoder-decoder based language generation tasks. MASS adopts the encoder-decoder framework to reconstruct a sentence fragment given the remaining part of the sentence: its encoder takes a sentence with randomly masked fragment (several consecutive tokens) as input, and its decoder tries to predict this masked fragment. In this way, MASS can jointly train the encoder and decoder to develop the capability of representation extraction and language modeling. By further fine-tuning on a variety of zero/low-resource language generation tasks, including neural machine translation, text summarization and conversational response generation (3 tasks and totally 8 datasets), MASS achieves significant improvements over the baselines without pre-training or with other pre-training methods. Specially, we achieve the state-of-the-art accuracy (37.5 in terms of BLEU score) on the unsupervised English-French translation, even beating the early attention-based supervised model.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Kaitao Song",
+      "Xu Tan",
+      "Tao Qin",
+      "Jianfeng Lu",
+      "Tie-Yan Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.02450v5",
+    "url": "http://arxiv.org/abs/1905.02450v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.13552v1",
+    "title": "PrahokBART: A Pre-trained Sequence-to-Sequence Model for Khmer Natural Language Generation",
+    "abstract": "This work introduces {\\it PrahokBART}, a compact pre-trained sequence-to-sequence model trained from scratch for Khmer using carefully curated Khmer and English corpora. We focus on improving the pre-training corpus quality and addressing the linguistic issues of Khmer, which are ignored in existing multilingual models, by incorporating linguistic components such as word segmentation and normalization. We evaluate PrahokBART on three generative tasks: machine translation, text summarization, and headline generation, where our results demonstrate that it outperforms mBART50, a strong multilingual pre-trained model. Additionally, our analysis provides insights into the impact of each linguistic module and evaluates how effectively our model handles space during text generation, which is crucial for the naturalness of texts in Khmer.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hour Kaing",
+      "Raj Dabre",
+      "Haiyue Song",
+      "Van-Hien Tran",
+      "Hideki Tanaka",
+      "Masao Utiyama"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.13552v1",
+    "url": "http://arxiv.org/abs/2512.13552v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.01399v3",
+    "title": "Language Generation with Recurrent Generative Adversarial Networks without Pre-training",
+    "abstract": "Generative Adversarial Networks (GANs) have shown great promise recently in image generation. Training GANs for language generation has proven to be more difficult, because of the non-differentiable nature of generating text with recurrent neural networks. Consequently, past work has either resorted to pre-training with maximum-likelihood or used convolutional networks for generation. In this work, we show that recurrent neural networks can be trained to generate text with GANs from scratch using curriculum learning, by slowly teaching the model to generate sequences of increasing and variable length. We empirically show that our approach vastly improves the quality of generated sequences compared to a convolutional baseline.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Ofir Press",
+      "Amir Bar",
+      "Ben Bogin",
+      "Jonathan Berant",
+      "Lior Wolf"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.01399v3",
+    "url": "http://arxiv.org/abs/1706.01399v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.03361v1",
+    "title": "JASS: Japanese-specific Sequence to Sequence Pre-training for Neural Machine Translation",
+    "abstract": "Neural machine translation (NMT) needs large parallel corpora for state-of-the-art translation quality. Low-resource NMT is typically addressed by transfer learning which leverages large monolingual or parallel corpora for pre-training. Monolingual pre-training approaches such as MASS (MAsked Sequence to Sequence) are extremely effective in boosting NMT quality for languages with small parallel corpora. However, they do not account for linguistic information obtained using syntactic analyzers which is known to be invaluable for several Natural Language Processing (NLP) tasks. To this end, we propose JASS, Japanese-specific Sequence to Sequence, as a novel pre-training alternative to MASS for NMT involving Japanese as the source or target language. JASS is joint BMASS (Bunsetsu MASS) and BRSS (Bunsetsu Reordering Sequence to Sequence) pre-training which focuses on Japanese linguistic units called bunsetsus. In our experiments on ASPEC Japanese--English and News Commentary Japanese--Russian translation we show that JASS can give results that are competitive with if not better than those given by MASS. Furthermore, we show for the first time that joint MASS and JASS pre-training gives results that significantly surpass the individual methods indicating their complementary nature. We will release our code, pre-trained models and bunsetsu annotated data as resources for researchers to use in their own NLP tasks.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Zhuoyuan Mao",
+      "Fabien Cromieres",
+      "Raj Dabre",
+      "Haiyue Song",
+      "Sadao Kurohashi"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.03361v1",
+    "url": "http://arxiv.org/abs/2005.03361v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.09052v1",
+    "title": "DU-VLG: Unifying Vision-and-Language Generation via Dual Sequence-to-Sequence Pre-training",
+    "abstract": "Due to the limitations of the model structure and pre-training objectives, existing vision-and-language generation models cannot utilize pair-wise images and text through bi-directional generation. In this paper, we propose DU-VLG, a framework which unifies vision-and-language generation as sequence generation problems. DU-VLG is trained with novel dual pre-training tasks: multi-modal denoising autoencoder tasks and modality translation tasks. To bridge the gap between image understanding and generation, we further design a novel commitment loss. We compare pre-training objectives on image captioning and text-to-image generation datasets. Results show that DU-VLG yields better performance than variants trained with uni-directional generation objectives or the variant without the commitment loss. We also obtain higher scores compared to previous state-of-the-art systems on three vision-and-language generation tasks. In addition, human judges further confirm that our model generates real and relevant images as well as faithful and informative captions.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Luyang Huang",
+      "Guocheng Niu",
+      "Jiachen Liu",
+      "Xinyan Xiao",
+      "Hua Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.09052v1",
+    "url": "http://arxiv.org/abs/2203.09052v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.12016v1",
+    "title": "Selecting Artificially-Generated Sentences for Fine-Tuning Neural Machine Translation",
+    "abstract": "Neural Machine Translation (NMT) models tend to achieve best performance when larger sets of parallel sentences are provided for training. For this reason, augmenting the training set with artificially-generated sentence pairs can boost performance. Nonetheless, the performance can also be improved with a small number of sentences if they are in the same domain as the test set. Accordingly, we want to explore the use of artificially-generated sentences along with data-selection algorithms to improve German-to-English NMT models trained solely with authentic data. In this work, we show how artificially-generated sentences can be more beneficial than authentic pairs, and demonstrate their advantages when used in combination with data-selection algorithms.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Alberto Poncelas",
+      "Andy Way"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.12016v1",
+    "url": "http://arxiv.org/abs/1909.12016v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.10055v1",
+    "title": "Training Language Models via Neural Cellular Automata",
+    "abstract": "Pre-training is crucial for large language models (LLMs), as it is when most representations and capabilities are acquired. However, natural language pre-training has problems: high-quality text is finite, it contains human biases, and it entangles knowledge with reasoning. This raises a fundamental question: is natural language the only path to intelligence? We propose using neural cellular automata (NCA) to generate synthetic, non-linguistic data for pre-pre-training LLMs--training on synthetic-then-natural language. NCA data exhibits rich spatiotemporal structure and statistics resembling natural language while being controllable and cheap to generate at scale. We find that pre-pre-training on only 164M NCA tokens improves downstream language modeling by up to 6% and accelerates convergence by up to 1.6x. Surprisingly, this even outperforms pre-pre-training on 1.6B tokens of natural language from Common Crawl with more compute. These gains also transfer to reasoning benchmarks, including GSM8K, HumanEval, and BigBench-Lite. Investigating what drives transfer, we find that attention layers are the most transferable, and that optimal NCA complexity varies by domain: code benefits from simpler dynamics, while math and web text favor more complex ones. These results enable systematic tuning of the synthetic distribution to target domains. More broadly, our work opens a path toward more efficient models with fully synthetic pre-training.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Dan Lee",
+      "Seungwook Han",
+      "Akarsh Kumar",
+      "Pulkit Agrawal"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.10055v1",
+    "url": "http://arxiv.org/abs/2603.10055v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1907.12461v2",
+    "title": "Leveraging Pre-trained Checkpoints for Sequence Generation Tasks",
+    "abstract": "Unsupervised pre-training of large neural models has recently revolutionized Natural Language Processing. By warm-starting from the publicly released checkpoints, NLP practitioners have pushed the state-of-the-art on multiple benchmarks while saving significant amounts of compute time. So far the focus has been mainly on the Natural Language Understanding tasks. In this paper, we demonstrate the efficacy of pre-trained checkpoints for Sequence Generation. We developed a Transformer-based sequence-to-sequence model that is compatible with publicly available pre-trained BERT, GPT-2 and RoBERTa checkpoints and conducted an extensive empirical study on the utility of initializing our model, both encoder and decoder, with these checkpoints. Our models result in new state-of-the-art results on Machine Translation, Text Summarization, Sentence Splitting, and Sentence Fusion.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Sascha Rothe",
+      "Shashi Narayan",
+      "Aliaksei Severyn"
+    ],
+    "doi": null,
+    "arxiv_id": "1907.12461v2",
+    "url": "http://arxiv.org/abs/1907.12461v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

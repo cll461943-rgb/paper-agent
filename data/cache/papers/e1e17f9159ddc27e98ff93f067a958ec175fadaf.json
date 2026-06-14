@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.14292v2",
+  "title": "Minimal-Intervention KV Retention via Set-Conditioned Diversity",
+  "abstract": "KV-cache compression at small budgets is a crowded design space spanning cache representation, head-wise routing, compression cadence, decoding behavior, and within-budget scoring. We study seven mechanisms across these five families under matched mean cache on long-form mathematical reasoning (MATH-500~\\cite{hendrycks2021math}) with two distilled-reasoning models (Qwen-7B and Llama-8B variants of DeepSeek-R1-Distill~\\cite{deepseek2025r1}) at budgets $b \\in \\{64, 128\\}$. All seven were rejected. We then propose $α$, a one-function modification to the TriAttention~\\cite{mao2026triattention} retention scorer that replaces argmax-top-$k$ with greedy facility-location-inspired selection under a V-space redundancy penalty controlled by a single weight $λ$. A pre-registered protocol tunes $λ$ on a frozen development split and confirms on a disjoint held-out split; with $λ= 0.5$, $α$ clears Bonferroni on two of the four (model, budget) cells (Qwen $b{=}128$ and Llama $b{=}64$), no cell is significantly negative, and the pre-registered Branch~A triggers. The finding is asymmetric: a minimal scoring modification beat heavier structural redesigns in this regime, and the combined matched-memory, sympy-graded, held-out confirmation protocol is the evidence standard that made the asymmetry visible.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Libo Sun",
+    "Po-wei Harn",
+    "Peixiong He",
+    "Xiao Qin"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.14292v2",
+  "url": "http://arxiv.org/abs/2605.14292v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

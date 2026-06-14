@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2603.21278v1",
+  "title": "Conversation Tree Architecture: A Structured Framework for Context-Aware Multi-Branch LLM Conversations",
+  "abstract": "Large language models (LLMs) are increasingly deployed for extended, multi-topic conversations, yet the flat, append-only structure of current conversation interfaces introduces a fundamental limitation: all context accumulates in a single unbounded window, causing topically distinct threads to bleed into one another and progressively degrade response quality. We term this failure mode logical context poisoning. In this paper, we introduce the Conversation Tree Architecture (CTA), a hierarchical framework that organizes LLM conversations as trees of discrete, context-isolated nodes. Each node maintains its own local context window; structured mechanisms govern how context flows between parent and child nodes, downstream on branch creation and upstream on branch deletion. We additionally introduce volatile nodes, transient branches whose local context must be selectively merged upward or permanently discarded before purging. We formalize the architecture's primitives, characterize the open design problems in context flow, relate our framework to prior work in LLM memory management, and describe a working prototype implementation. The CTA provides a principled foundation for structured conversational context management and extends naturally to multi-agent settings.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Pranav Hemanth",
+    "Sampriti Saha"
+  ],
+  "doi": null,
+  "arxiv_id": "2603.21278v1",
+  "url": "http://arxiv.org/abs/2603.21278v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:title_like",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

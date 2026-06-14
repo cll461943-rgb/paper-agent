@@ -1,8 +1,9 @@
-from __future__ import annotations
-
+import logging
 import re
 
 from scholar_agent.models.schemas import QueryPlan
+
+LOGGER = logging.getLogger(__name__)
 
 COMMON_METHOD_HINTS = [
     "knowledge distillation",
@@ -225,7 +226,9 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
     system_prompt = (
         "You convert a scholarly search request into a strict QueryPlan JSON object. "
         "Return JSON only. Do not assume a domain like medicine unless the user explicitly says so. "
-        "Keep unknown facts in uncertainty instead of inventing them."
+        "Keep unknown facts in uncertainty instead of inventing them. "
+        "CRITICAL: List fields (methods, datasets, entities, venues, must_have_constraints, nice_to_have_constraints, exclude_terms, uncertainty) "
+        "MUST be returned as JSON arrays (e.g. [\"term1\", \"term2\"]), never as raw strings."
     )
     user_prompt = (
         "Output a JSON object matching this shape exactly: "
@@ -242,6 +245,57 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
     try:
         payload = dict(response)
         payload["original_query"] = query
+
+        # 柔性类型转换与格式自适应修复，防止 ValidationError
+        list_fields = [
+            "methods", "datasets", "entities", "venues", 
+            "must_have_constraints", "nice_to_have_constraints", 
+            "exclude_terms", "uncertainty"
+        ]
+        for field in list_fields:
+            val = payload.get(field)
+            if val is None:
+                payload[field] = []
+            elif not isinstance(val, list):
+                if isinstance(val, str):
+                    if val.strip() and val.lower() != "none":
+                        payload[field] = [val]
+                    else:
+                        payload[field] = []
+                else:
+                    payload[field] = [str(val)]
+                    
+        # time_range 兼容性修复
+        t_range = payload.get("time_range")
+        if t_range is not None:
+            if not isinstance(t_range, dict) or not t_range:
+                payload["time_range"] = None
+            else:
+                cleaned_range = {}
+                if "start_year" in t_range and t_range["start_year"] is not None:
+                    try:
+                        cleaned_range["start_year"] = int(t_range["start_year"])
+                    except (ValueError, TypeError):
+                        pass
+                if "end_year" in t_range and t_range["end_year"] is not None:
+                    try:
+                        cleaned_range["end_year"] = int(t_range["end_year"])
+                    except (ValueError, TypeError):
+                        pass
+                payload["time_range"] = cleaned_range if cleaned_range else None
+
+        # language 兼容性修复
+        lang = payload.get("language")
+        if not isinstance(lang, str) or not lang:
+            payload["language"] = "zh" if re.search(r"[\u4e00-\u9fff]", query) else "en"
+        else:
+            lang = lang.lower().strip()
+            if "chinese" in lang or "zh" in lang:
+                payload["language"] = "zh"
+            else:
+                payload["language"] = "en"
+
         return QueryPlan.model_validate(payload)
-    except Exception:
+    except Exception as exc:
+        LOGGER.warning("LLM QueryPlan validation failed: %s. Raw response: %s. Falling back to heuristic.", exc, response)
         return fallback

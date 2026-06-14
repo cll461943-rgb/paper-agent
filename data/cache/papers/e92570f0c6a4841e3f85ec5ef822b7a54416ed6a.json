@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2303.10856v1",
+  "title": "Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering Regularized Self-Training",
+  "abstract": "Deploying models on target domain data subject to distribution shift requires adaptation. Test-time training (TTT) emerges as a solution to this adaptation under a realistic scenario where access to full source domain data is not available, and instant inference on the target domain is required. Despite many efforts into TTT, there is a confusion over the experimental settings, thus leading to unfair comparisons. In this work, we first revisit TTT assumptions and categorize TTT protocols by two key factors. Among the multiple protocols, we adopt a realistic sequential test-time training (sTTT) protocol, under which we develop a test-time anchored clustering (TTAC) approach to enable stronger test-time feature learning. TTAC discovers clusters in both source and target domains and matches the target clusters to the source ones to improve adaptation. When source domain information is strictly absent (i.e. source-free) we further develop an efficient method to infer source domain distributions for anchored clustering. Finally, self-training~(ST) has demonstrated great success in learning from unlabeled data and we empirically figure out that applying ST alone to TTT is prone to confirmation bias. Therefore, a more effective TTT approach is introduced by regularizing self-training with anchored clustering, and the improved model is referred to as TTAC++. We demonstrate that, under all TTT protocols, TTAC++ consistently outperforms the state-of-the-art methods on five TTT datasets, including corrupted target domain, selected hard samples, synthetic-to-real adaptation and adversarially attacked target domain. We hope this work will provide a fair benchmarking of TTT methods, and future research should be compared within respective protocols.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Yongyi Su",
+    "Xun Xu",
+    "Tianrui Li",
+    "Kui Jia"
+  ],
+  "doi": null,
+  "arxiv_id": "2303.10856v1",
+  "url": "http://arxiv.org/abs/2303.10856v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:entity_dataset",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

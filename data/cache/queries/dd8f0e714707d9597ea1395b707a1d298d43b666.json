@@ -1,0 +1,119 @@
+[
+  {
+    "paper_id": "pubmed:42197869",
+    "title": "DB-LIO: Database-Driven LiDAR-Inertial Odometry for Memory-Bounded Persistent Mapping.",
+    "abstract": "This paper proposes DB-LIO (database-driven LiDAR-inertial odometry), a simultaneous localization and mapping (SLAM) system that addresses memory scalability challenges in extended autonomous operation. Existing LiDAR-SLAM systems accumulate keyframe history in memory, leading to O(N) growth and out-of-memory failures during extended operation. To overcome this limitation, DB-LIO introduces three core design elements. First, it proposes a spatially indexed keyframe management scheme that persistently stores keyframes in SQLite with R-Tree spatial indexing, enabling O(logN+k) spatial queries that tightly couple cache eviction with factor-graph optimization requirements-a design that ensures every keyframe potentially involved in the next optimization cycle resides in cache. Second, it presents a four-level memory bounding architecture-SLAM-engine keyframe trimming with transparent on-demand reloading, a DB-level least recently used (LRU) cache with a spatial active window, Scan Context descriptor pool bounding, and iSAM2 sliding window compaction with a sparse global anchor graph-that collectively bounds the dominant memory consumers to O(C). Third, the DB-based persistent storage enables a localization mode that can reload previously built maps-including full point clouds, six-degree-of-freedom poses, timestamps, and inter-keyframe relationships-and perform pose estimation using the stored map, which is particularly valuable for agricultural robots and other autonomous systems requiring map reuse. Experiments on a custom orchard dataset demonstrate an 81.9% reduction in memory usage compared with that of the in-memory baseline (2888 MB → 524 MB), while preserving equivalent trajectory accuracy (absolute trajectory error (ATE) root mean square error (RMSE) 0.305 ± 0.001 m vs. 0.296 m). Validation on the KITTI odometry benchmark confirms that the proposed localization mode generalizes across different LiDAR types (Livox Mid360, Velodyne HDL-64E) and environments (orchard, urban driving).",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Hun-Hee Kim",
+      "Ho-Hyun Kang",
+      "Dong-Hee Noh",
+      "Hea-Min Lee"
+    ],
+    "doi": "10.3390/s26103061",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42197869/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42197869"
+    }
+  },
+  {
+    "paper_id": "pubmed:42133883",
+    "title": "QUASAR: A Universal Autonomous System for Atomistic Simulation and a Benchmark of Its Capabilities.",
+    "abstract": "The integration of large language models (LLMs) into materials science offers a transformative opportunity to streamline computational workflows, yet current agentic systems remain constrained by rigid, carefully crafted domain-specific tool-calling paradigms and narrowly scoped agents. In this work, we introduce QUASAR, a universal autonomous system for atomistic simulations designed to facilitate production-grade scientific discovery. QUASAR autonomously orchestrates complex multiscale workflows across diverse methods, including density functional theory (DFT), machine learning potentials, molecular dynamics (MD), and Monte Carlo (MC) simulations. The system incorporates robust mechanisms for adaptive planning, context-efficient memory management, and hybrid knowledge retrieval to navigate real-world research scenarios without human intervention. We benchmark QUASAR against a series of three-tiered tasks, progressing from routine tasks to frontier research challenges, such as photocatalyst screening and novel material assessment. These results suggest that QUASAR can function as a general atomistic reasoning system rather than as a task-specific automation framework. They also provide initial evidence supporting the potential deployment of agentic AI as a component of computational chemistry research workflows while identifying areas requiring further development.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Fengxu Yang",
+      "Jack D Evans"
+    ],
+    "doi": "10.1021/acs.jcim.6c00295",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42133883/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42133883"
+    }
+  },
+  {
+    "paper_id": "pubmed:41305206",
+    "title": "Enhanced 3D Gaussian Splatting for Real-Scene Reconstruction via Depth Priors, Adaptive Densification, and Denoising.",
+    "abstract": "The application prospects of photorealistic 3D reconstruction are broad in smart cities, cultural heritage preservation, and related domains. However, existing methods face persistent challenges in balancing reconstruction accuracy, computational efficiency, and robustness, particularly in complex scenes characterized by reflective surfaces, vegetation, sparse viewpoints, or large-scale structures. In this study, an enhanced 3D Gaussian Splatting (3DGS) framework that integrates three key innovations is proposed: (i) a depth-aware regularization module that leverages metric depth priors from the pre-trained Depth-Anything V2 model, enabling geometrically informed optimization through a dynamically weighted hybrid loss; (ii) a gradient-driven adaptive densification mechanism that triggers Gaussian adjustments based on local gradient saliency, reducing redundant computation; and (iii) a neighborhood density-based floating artifact detection method that filters outliers using spatial distribution and opacity thresholds. Extensive evaluations are conducted across four diverse datasets-ranging from architectures, urban scenes, natural landscapes with water bodies, and long-range linear infrastructures. Our method achieves state-of-the-art performance in both reconstruction quality and efficiency, attaining a PSNR of 34.15 dB and SSIM of 0.9382 on medium-sized scenes, with real-time rendering speeds exceeding 170 FPS at a resolution of 1600 × 900. It demonstrates superior generalization on challenging materials such as water and foliage, while exhibiting reduced overfitting compared to baseline approaches. Ablation studies confirm the critical contributions of depth regularization and gradient-sensitive adaptation, with the latter improving training efficiency by 38% over depth supervision alone. Furthermore, we analyze the impact of input resolution and depth model selection, revealing non-trivial trade-offs between quantitative metrics and visual fidelity. While aggressive downsampling inflates PSNR and SSIM, it leads to loss of high-frequency detail; we identify 1/4-1/2 resolution scaling as an optimal balance for practical deployment. Among depth models, Vitb achieves the best reconstruction stability. Despite these advances, memory consumption remains a challenge in large-scale scenarios. Future work will focus on lightweight model design, efficient point cloud preprocessing, and dynamic memory management to enhance scalability for industrial applications.",
+    "year": 2025,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Haixing Shang",
+      "Mengyu Chen",
+      "Kenan Feng",
+      "Shiyuan Li",
+      "Zhiyuan Zhang",
+      "Songhua Xu",
+      "Chaofeng Ren",
+      "Jiangbo Xi"
+    ],
+    "doi": "10.3390/s25226999",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41305206/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41305206"
+    }
+  },
+  {
+    "paper_id": "pubmed:40400752",
+    "title": "Enhancing memory retrieval in generative agents through LLM-trained cross attention networks.",
+    "abstract": "The surge in the capabilities of large language models (LLMs) has propelled the development of Artificial General Intelligence (AGI), highlighting generative agents as pivotal components for emulating complex AI behaviors. Given the high costs associated with individually training LLMs for each AI agent, there is a critical need for advanced memory retrieval mechanisms to maintain the unique characteristics and memories of individual AI agents. In this research, we developed a text-based simulation of a generative agent world, constructing a community with multiple agents and locations in which certain levels of interaction were enabled. Within this framework, we introduced a novel memory retrieval system using an Auxiliary Cross Attention Network (ACAN). This system calculates and ranks attention weights between an agent's current state and stored memories, selecting the most relevant memories for any given situation. In a novel approach, we incorporated LLM assistance, comparing memories retrieved by our model with those extracted using a base method during training, and constructing a novel loss function based on these comparisons to optimize the training process effectively. To our knowledge, this is the first study to utilize LLMs to train a dedicated agent memory retrieval network. Our empirical evaluations demonstrate that this approach substantially enhances the quality of memory retrieval, thereby increasing the adaptability and behavioral consistency of agents in fluctuating environments. Our findings not only introduce new perspectives and methodologies for memory retrieval in generative agents but also extend the utility of LLMs in memory management across varied AI agent applications.",
+    "year": 2025,
+    "venue": "Frontiers in psychology",
+    "authors": [
+      "Chuanyang Hong",
+      "Qingyun He"
+    ],
+    "doi": "10.3389/fpsyg.2025.1591618",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40400752/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40400752"
+    }
+  }
+]

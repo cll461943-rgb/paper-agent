@@ -1,0 +1,924 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13160v2",
+    "title": "Data-Driven DRO and Economic Decision Theory: An Analytical Synthesis With Bayesian Nonparametric Advancements",
+    "abstract": "We develop an analytical synthesis that bridges data-driven Distributionally Robust Optimization (DRO) and Economic Decision Theory under Ambiguity (DTA). By reinterpreting standard regularization and DRO techniques as data-driven counterparts of ambiguity-averse decision models, we provide a unified framework that clarifies their intrinsic connections. Building on this synthesis, we propose a novel DRO approach that leverages a popular DTA model of smooth ambiguity-averse preferences together with tools from Bayesian nonparametric statistics. Our baseline framework employs Dirichlet Process (DP) posteriors, which naturally extend to heterogeneous data sources via Hierarchical Dirichlet Processes (HDPs), and can be further refined to induce outlier robustness through a procedure that selectively filters poorly-fitting observations during training. Theoretical performance guarantees and convergence results, together with extensive simulations and real-data experiments, illustrate the method's favorable performance in terms of prediction accuracy and stability.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nicola Bariletto",
+      "Khai Nguyen",
+      "Nhat Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13160v2",
+    "url": "http://arxiv.org/abs/2405.13160v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.23565v1",
+    "title": "DRO: A Python Library for Distributionally Robust Optimization in Machine Learning",
+    "abstract": "We introduce dro, an open-source Python library for distributionally robust optimization (DRO) for regression and classification problems. The library implements 14 DRO formulations and 9 backbone models, enabling 79 distinct DRO methods. Furthermore, dro is compatible with both scikit-learn and PyTorch. Through vectorization and optimization approximation techniques, dro reduces runtime by 10x to over 1000x compared to baseline implementations on large-scale datasets. Comprehensive documentation is available at https://python-dro.org.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiashuo Liu",
+      "Tianyu Wang",
+      "Henry Lam",
+      "Hongseok Namkoong",
+      "Jose Blanchet"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.23565v1",
+    "url": "http://arxiv.org/abs/2505.23565v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.05054v1",
+    "title": "Geometry-Calibrated DRO: Combating Over-Pessimism with Free Energy Implications",
+    "abstract": "Machine learning algorithms minimizing average risk are susceptible to distributional shifts. Distributionally Robust Optimization (DRO) addresses this issue by optimizing the worst-case risk within an uncertainty set. However, DRO suffers from over-pessimism, leading to low-confidence predictions, poor parameter estimations as well as poor generalization. In this work, we conduct a theoretical analysis of a probable root cause of over-pessimism: excessive focus on noisy samples. To alleviate the impact of noise, we incorporate data geometry into calibration terms in DRO, resulting in our novel Geometry-Calibrated DRO (GCDRO) for regression. We establish the connection between our risk objective and the Helmholtz free energy in statistical physics, and this free-energy-based risk can extend to standard DRO methods. Leveraging gradient flow in Wasserstein space, we develop an approximate minimax optimization algorithm with a bounded error ratio and elucidate how our approach mitigates noisy sample effects. Comprehensive experiments confirm GCDRO's superiority over conventional DRO methods.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jiashuo Liu",
+      "Jiayun Wu",
+      "Tianyu Wang",
+      "Hao Zou",
+      "Bo Li",
+      "Peng Cui"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.05054v1",
+    "url": "http://arxiv.org/abs/2311.05054v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.18767v1",
+    "title": "Harmonizing SAA and DRO",
+    "abstract": "Decision-makers often encounter uncertainty, and the distribution of uncertain parameters plays a crucial role in making reliable decisions. However, complete information is rarely available. The sample average approximation (SAA) approach utilizes historical data to address this, but struggles with insufficient data. Conversely, moment-based distributionally robust optimization (DRO) effectively employs partial distributional information but can yield conservative solutions even with ample data. To bridge these approaches, we propose a novel method called harmonizing optimization (HO), which integrates SAA and DRO by adaptively adjusting the weights of data and information based on sample size N. This allows HO to amplify data effects in large samples while emphasizing information in smaller ones. More importantly, HO performs well across varying data sizes without needing to classify them as large or small. We provide practical methods for determining these weights and demonstrate that HO offers finite-sample performance guarantees, proving asymptotic optimality when the weight of information follows a 1/\\sqrt{N}-rate. In addition, HO can be applied to enhance scenario reduction, improving approximation quality and reducing completion time by retaining critical information from reduced scenarios. Numerical results show significant advantages of HO in solution quality compared to Wasserstein-based DRO, and highlight its effectiveness in scenario reduction.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ziliang Jin",
+      "Jianqiang Cheng",
+      "Daniel Zhuoyu Long",
+      "Kai Pan"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.18767v1",
+    "url": "http://arxiv.org/abs/2508.18767v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.02931v2",
+    "title": "Bitrate-Constrained DRO: Beyond Worst Case Robustness To Unknown Group Shifts",
+    "abstract": "Training machine learning models robust to distribution shifts is critical for real-world applications. Some robust training algorithms (e.g., Group DRO) specialize to group shifts and require group information on all training points. Other methods (e.g., CVaR DRO) that do not need group annotations can be overly conservative, since they naively upweight high loss points which may form a contrived set that does not correspond to any meaningful group in the real world (e.g., when the high loss points are randomly mislabeled training points). In this work, we address limitations in prior approaches by assuming a more nuanced form of group shift: conditioned on the label, we assume that the true group function (indicator over group) is simple. For example, we may expect that group shifts occur along low bitrate features (e.g., image background, lighting). Thus, we aim to learn a model that maintains high accuracy on simple group functions realized by these low bitrate features, that need not spend valuable model capacity achieving high accuracy on contrived groups of examples. Based on this, we consider the two-player game formulation of DRO where the adversary's capacity is bitrate-constrained. Our resulting practical algorithm, Bitrate-Constrained DRO (BR-DRO), does not require group information on training samples yet matches the performance of Group DRO on datasets that have training group annotations and that of CVaR DRO on long-tailed distributions. Our theoretical analysis reveals that in some settings BR-DRO objective can provably yield statistically efficient and less conservative solutions than unconstrained CVaR DRO.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Amrith Setlur",
+      "Don Dennis",
+      "Benjamin Eysenbach",
+      "Aditi Raghunathan",
+      "Chelsea Finn",
+      "Virginia Smith",
+      "Sergey Levine"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.02931v2",
+    "url": "http://arxiv.org/abs/2302.02931v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.05740v2",
+    "title": "Stochastic Constrained DRO with a Complexity Independent of Sample Size",
+    "abstract": "Distributionally Robust Optimization (DRO), as a popular method to train robust models against distribution shift between training and test sets, has received tremendous attention in recent years. In this paper, we propose and analyze stochastic algorithms that apply to both non-convex and convex losses for solving Kullback Leibler divergence constrained DRO problem. Compared with existing methods solving this problem, our stochastic algorithms not only enjoy competitive if not better complexity independent of sample size but also just require a constant batch size at every iteration, which is more practical for broad applications. We establish a nearly optimal complexity bound for finding an $ε$ stationary solution for non-convex losses and an optimal complexity for finding an $ε$ optimal solution for convex losses. Empirical studies demonstrate the effectiveness of the proposed algorithms for solving non-convex and convex constrained DRO problems.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Qi Qi",
+      "Jiameng Lyu",
+      "Kung sik Chan",
+      "Er Wei Bai",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.05740v2",
+    "url": "http://arxiv.org/abs/2210.05740v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.05470v1",
+    "title": "DRo: A data-scarce mechanism to revolutionize the performance of Deep Learning based Security Systems",
+    "abstract": "Supervised Deep Learning requires plenty of labeled data to converge, and hence perform optimally for task-specific learning. Therefore, we propose a novel mechanism named DRo (for Deep Routing) for data-scarce domains like security. The DRo approach builds upon some of the recent developments in Deep-Clustering. In particular, it exploits the self-augmented training mechanism using synthetically generated local perturbations. DRo not only allays the challenges with sparse-labeled data but also offers many unique advantages. We also developed a system named DRoID that uses the DRo mechanism for enhancing the performance of an existing Malware Detection System that uses (low information features like the) Android implicit Intent(s) as the only features. We conduct experiments on DRoID using a popular and standardized Android malware dataset and found that the DRo mechanism could successfully reduce the false-alarms generated by the downstream classifier by 67.9%, and also simultaneously boosts its accuracy by 11.3%. This is significant not only because the gains achieved are unparalleled but also because the features used were never considered rich enough to train a classifier on; and hence no decent performance could ever be reported by any malware classification system till-date using these features in isolation. Owing to the results achieved, the DRo mechanism claims a dominant position amongst all known systems that aims to enhance the classification performance of deep learning models with sparse-labeled data.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mohit Sewak",
+      "Sanjay K. Sahay",
+      "Hemant Rathore"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.05470v1",
+    "url": "http://arxiv.org/abs/2109.05470v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.01777v3",
+    "title": "CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition",
+    "abstract": "Modern deep learning models often achieve high overall performance, but consistently fail on specific subgroups. Group distributionally robust optimization (group DRO) addresses this problem by minimizing the worst-group loss, but it fails when group losses misrepresent performance differences between groups. This is common in domains like speech, where the widely used connectionist temporal classification (CTC) loss not only scales with input length but also varies with linguistic and acoustic properties, leading to spurious differences between group losses. We present CTC-DRO, which addresses the shortcomings of the group DRO objective by smoothing the group weight update to prevent overemphasis on consistently high-loss groups, while using input length-matched batching to mitigate CTC's scaling issues. We evaluate CTC-DRO on the task of multilingual automatic speech recognition (ASR) across five language sets from the diverse ML-SUPERB 2.0 benchmark. CTC-DRO consistently outperforms group DRO and CTC-based baseline models, reducing the worst-language error by up to 47.1% and the average error by up to 32.9%. CTC-DRO can be applied to ASR with minimal computational costs, and, while motivated by multilingual ASR, offers the potential for reducing group disparities in other domains with similar challenges.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Martijn Bartelds",
+      "Ananjan Nandi",
+      "Moussa Koulako Bala Doumbouya",
+      "Dan Jurafsky",
+      "Tatsunori Hashimoto",
+      "Karen Livescu"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.01777v3",
+    "url": "http://arxiv.org/abs/2502.01777v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.03585v1",
+    "title": "Decision Making under Model Misspecification: DRO with Robust Bayesian Ambiguity Sets",
+    "abstract": "Distributionally Robust Optimisation (DRO) protects risk-averse decision-makers by considering the worst-case risk within an ambiguity set of distributions based on the empirical distribution or a model. To further guard against finite, noisy data, model-based approaches admit Bayesian formulations that propagate uncertainty from the posterior to the decision-making problem. However, when the model is misspecified, the decision maker must stretch the ambiguity set to contain the data-generating process (DGP), leading to overly conservative decisions. We address this challenge by introducing DRO with Robust, to model misspecification, Bayesian Ambiguity Sets (DRO-RoBAS). These are Maximum Mean Discrepancy ambiguity sets centred at a robust posterior predictive distribution that incorporates beliefs about the DGP. We show that the resulting optimisation problem obtains a dual formulation in the Reproducing Kernel Hilbert Space and we give probabilistic guarantees on the tolerance level of the ambiguity set. Our method outperforms other Bayesian and empirical DRO approaches in out-of-sample performance on the Newsvendor and Portfolio problems with various cases of model misspecification.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Charita Dellaporta",
+      "Patrick O'Hara",
+      "Theodoros Damoulas"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.03585v1",
+    "url": "http://arxiv.org/abs/2505.03585v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.06966v1",
+    "title": "Tractable reformulations of DRO problems over structured optimal transport ambiguity sets",
+    "abstract": "Structuring ambiguity sets in Wasserstein-based distributionally robust optimization (DRO) can improve their statistical properties when the uncertainty consists of multiple independent components. The aim of this paper is to solve stochastic optimization problems with unknown uncertainty when we only have access to a finite set of samples from it. Exploiting strong duality of DRO problems over structured ambiguity sets, we derive tractable reformulations for certain classes of DRO and uncertainty quantification problems. We also derive tractable reformulations for distributionally robust chance-constrained problems. As the complexity of the reformulations may grow exponentially with the number of independent uncertainty components, we employ clustering strategies to obtain informative estimators, which yield problems of manageable complexity. We demonstrate the effectiveness of the theoretical results in a numerical simulation example.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Lotfi M. Chaouach",
+      "Tom Oomen",
+      "Dimitris Boskos"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.06966v1",
+    "url": "http://arxiv.org/abs/2504.06966v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.05573v1",
+    "title": "Outlier-Robust Wasserstein DRO",
+    "abstract": "Distributionally robust optimization (DRO) is an effective approach for data-driven decision-making in the presence of uncertainty. Geometric uncertainty due to sampling or localized perturbations of data points is captured by Wasserstein DRO (WDRO), which seeks to learn a model that performs uniformly well over a Wasserstein ball centered around the observed data distribution. However, WDRO fails to account for non-geometric perturbations such as adversarial outliers, which can greatly distort the Wasserstein distance measurement and impede the learned model. We address this gap by proposing a novel outlier-robust WDRO framework for decision-making under both geometric (Wasserstein) perturbations and non-geometric (total variation (TV)) contamination that allows an $\\varepsilon$-fraction of data to be arbitrarily corrupted. We design an uncertainty set using a certain robust Wasserstein ball that accounts for both perturbation types and derive minimax optimal excess risk bounds for this procedure that explicitly capture the Wasserstein and TV risks. We prove a strong duality result that enables tractable convex reformulations and efficient computation of our outlier-robust WDRO problem. When the loss function depends only on low-dimensional features of the data, we eliminate certain dimension dependencies from the risk bounds that are unavoidable in the general setting. Finally, we present experiments validating our theory on standard regression and classification tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sloan Nietert",
+      "Ziv Goldfeld",
+      "Soroosh Shafiee"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.05573v1",
+    "url": "http://arxiv.org/abs/2311.05573v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.00176v5",
+    "title": "When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee",
+    "abstract": "In this paper, we propose systematic and efficient gradient-based methods for both one-way and two-way partial AUC (pAUC) maximization that are applicable to deep learning. We propose new formulations of pAUC surrogate objectives by using the distributionally robust optimization (DRO) to define the loss for each individual positive data. We consider two formulations of DRO, one of which is based on conditional-value-at-risk (CVaR) that yields a non-smooth but exact estimator for pAUC, and another one is based on a KL divergence regularized DRO that yields an inexact but smooth (soft) estimator for pAUC. For both one-way and two-way pAUC maximization, we propose two algorithms and prove their convergence for optimizing their two formulations, respectively. Experiments demonstrate the effectiveness of the proposed algorithms for pAUC maximization for deep learning on various datasets.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Dixian Zhu",
+      "Gang Li",
+      "Bokun Wang",
+      "Xiaodong Wu",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.00176v5",
+    "url": "http://arxiv.org/abs/2203.00176v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.14665v1",
+    "title": "A Two-Stage Risk-Averse DRO-MILP Methodological Framework for Managing AI/Data Center Demand Shocks",
+    "abstract": "The rapid growth of artificial intelligence (AI)-driven data centers is reshaping electricity demand patterns. This is achieved by introducing fast, multi-gigawatt load ramps that challenge the stability and resilience of modern power systems. Traditional resilience frameworks focus mainly on physical outages and largely overlook these emerging digital-era disturbances. This paper proposes a unified two-stage, risk-aware distributionally robust optimization (DRO)-MILP framework that coordinates the pre-allocation and post-event dispatch of Flexible Capacity Modules (FCMs), including BESS, fast-ramping generation, demand response, and potential long-duration storage. Stage-I optimally positions FCMs using DRO with CVaR to hedge against uncertain AI load surges. Stage-II models real-time stabilization following stochastic demand-shock scenarios, minimizing imbalance, unserved energy, and restoration penalties. The framework is designed to be applied on IEEE 33-bus system or expanded for scalability to larger IEEE test feeders capable of representing AI-scale loads. This contributes a scalable planning tool for resilient, AI-integrated distribution grids.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Sharaf K. Magableh",
+      "Caisheng Wang",
+      "Oraib Dawaghreh"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.14665v1",
+    "url": "http://arxiv.org/abs/2601.14665v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.04658v1",
+    "title": "Where to Experiment? Site Selection Under Distribution Shift via Optimal Transport and Wasserstein DRO",
+    "abstract": "How should researchers select experimental sites when the deployment population differs from observed data? I formulate the problem of experimental site selection as an optimal transport problem, developing methods to minimize downstream estimation error by choosing sites that minimize the Wasserstein distance between population and sample covariate distributions. I develop new theoretical upper bounds on PATE and CATE estimation errors, and show that these different objectives lead to different site selection strategies. I extend this approach by using Wasserstein Distributionally Robust Optimization to develop a site selection procedure robust to adversarial perturbations of covariate information: a specific model of distribution shift. I also propose a novel data-driven procedure for selecting the uncertainty radius the Wasserstein DRO problem, which allows the user to benchmark robustness levels against observed variation in their data. Simulation evidence, and a reanalysis of a randomized microcredit experiment in Morocco (Crépon et al.), show that these methods outperform random and stratified sampling of sites when covariates have prognostic R-squared > .5, and alternative optimization methods i) for moderate-to-large size problem instances ii) when covariates are moderately informative about treatment effects, and iii) under induced distribution shift.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Adam Bouyamourn"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.04658v1",
+    "url": "http://arxiv.org/abs/2511.04658v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.17874v2",
+    "title": "DRO-Augment Framework: Robustness by Synergizing Wasserstein Distributionally Robust Optimization and Data Augmentation",
+    "abstract": "In many real-world applications, ensuring the robustness and stability of deep neural networks (DNNs) is crucial, particularly for image classification tasks that encounter various input perturbations. While data augmentation techniques have been widely adopted to enhance the resilience of a trained model against such perturbations, there remains significant room for improvement in robustness against corrupted data and adversarial attacks simultaneously. To address this challenge, we introduce DRO-Augment, a novel framework that integrates Wasserstein Distributionally Robust Optimization (W-DRO) with various data augmentation strategies to improve the robustness of the models significantly across a broad spectrum of corruptions. Our method outperforms existing augmentation methods under severe data perturbations and adversarial attack scenarios while maintaining the accuracy on the clean datasets on a range of benchmark datasets, including but not limited to CIFAR-10-C, CIFAR-100-C, MNIST, and Fashion-MNIST. On the theoretical side, we establish novel generalization error bounds for neural networks trained using a computationally efficient, variation-regularized loss function closely related to the W-DRO problem.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiaming Hu",
+      "Debarghya Mukherjee",
+      "Ioannis Ch. Paschalidis"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.17874v2",
+    "url": "http://arxiv.org/abs/2506.17874v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.17286v2",
+    "title": "Exploration of vertical self-resonant bifurcations from Distant Retrograde Orbits (DROs) in the Earth-Moon Circular Restricted Three-Body Problem (CR3BP)",
+    "abstract": "The purpose of this paper is to investigate vertical self-resonant (VSR) bifurcations from the distant retrograde orbit (DRO) family in the framework of the Earth-Moon circular restricted three-body problem (CR3BP). To this end, by using a classical corrector-predictor algorithm we compute the vertical stability of the DROs and identify fourteen vertical-critical DROs. We split them into three groups according to orbiting around the libration points $L_i$, $i=1,2,4,5$. (i) We first analyze six VSR bifurcations of higher order periods (of multiplicity from integer multiples of five to ten) associated with the DROs near the Moon. (ii) For the DROs that move near the Moon and additionally around the $L_1$ and $L_2$ libration points, we study six VSR bifurcations of multiplicity from five to ten as well. (iii) Within the DROs orbiting around the $L_4$ and $L_5$ libration points, two vertical single-turn branch points occur. In total, we generate 25 bifurcated families of spatial symmetric periodic solutions and present their orbital characteristics, including bridge families to the Butterfly, prograde orbits, quasi DROs and DROs. We also obtain branches whose members consist of long periods combining almost planar ecliptic motions with several spatial excursions, during which the trajectory repeatedly moves far from and then close to the Moon, being one of Bumble Bee, Hoverfly or Dragonfly shape. We also find spatial orbits that are in resonance with the Earth and the Moon. In order to provide a structured and systematic overview of such bifurcation results, we determine Conley-Zehnder indices and construct bifurcation diagrams in view of symplectic invariants.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Cengiz Aydin"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.17286v2",
+    "url": "http://arxiv.org/abs/2508.17286v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.09109v2",
+    "title": "Portfolio Exponential Utility Maximization with Jump Signals",
+    "abstract": "In this paper, we study the portfolio utility maximization in the case where the risky asset is driven by a Brownian motion and an independent homogeneous Poisson measure, with strategies that may include jump signals. This means that the allowed strategies are no longer predictable but also include the information given by a process driven by the Poisson measure. Using the results of Bank and K{ö}rber [1], we first express the considered portfolio as semi-martingale processes. We then present the martingale optimality principle for the exponential utility maximization. This allows to derive an original BSDE with jumps and to express the optimal value and an optimal strategy using the solution to this original BSDE. We then prove existence of a solution to the considered BSDE. We finally present some numerical experiments to quantify the gain of utility given by the information from the jump signals.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Lokmane Abbas Turki",
+      "Sigui Brice Dro",
+      "Idris Kharroubi"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.09109v2",
+    "url": "http://arxiv.org/abs/2604.09109v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.04575v3",
+    "title": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+    "abstract": "The temperature parameter plays a profound role during training and/or inference with large foundation models (LFMs) such as large language models (LLMs) and CLIP models. Particularly, it adjusts the logits in the softmax function in LLMs, which is crucial for next token generation, and it scales the similarities in the contrastive loss for training CLIP models. A significant question remains: Is it viable to learn a neural network to predict a personalized temperature of any input data for enhancing LFMs\"? In this paper, we present a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs. Our solution is composed of a novel learning framework with a robust loss underpinned by constrained distributionally robust optimization (DRO), and a properly designed TempNet with theoretical inspiration. TempNet can be trained together with a large foundation model from scratch or learned separately given a pretrained foundation model. It is not only useful for predicting personalized temperature to promote the training of LFMs but also generalizable and transferable to new tasks. Our experiments on LLMs and CLIP models demonstrate that TempNet greatly improves the performance of existing solutions or models, e.g. Table 1. The code to reproduce the experimental results in this paper can be found at https://github.com/zhqiu/TempNet.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zi-Hao Qiu",
+      "Siqi Guo",
+      "Mao Xu",
+      "Tuo Zhao",
+      "Lijun Zhang",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.04575v3",
+    "url": "http://arxiv.org/abs/2404.04575v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.15260v1",
+    "title": "DRO-InstructZero: Distributionally Robust Prompt Optimization for Large Language Models",
+    "abstract": "Large language models are highly sensitive to prompt wording. However, popular automatic prompt search methods, including InstructZero, often degrade under distribution shift and adversarial evaluation because they optimize expected performance under a single evaluation distribution. Consequently, prompts that work in one setting frequently fail to transfer. To address this, DRO-InstructZero formulates zero-shot prompt optimization as robust Bayesian optimization. Specifically, an f-divergence ball defines an ambiguity set around the evaluation distribution, and a robust acquisition rule maximizes worst-case expected utility while retaining the query efficiency of Bayesian search. Therefore, the search explicitly targets reliability under distribution shift rather than average behavior alone. Experiments follow the instruction-induction protocol with matched query budgets across formality rewriting, code debugging, and translation. For example, on BIG-Bench informative-to-formal rewriting, accuracy improves from 61.3 +/- 0.7% to approximately 85-90%, yielding an absolute gain of about 25-30 points. Moreover, auto-debugging shows about +25-point gains under domain shift. Meanwhile, stable tasks such as cause-and-effect remain above 96%, indicating no loss on in-distribution cases. Furthermore, improvements are consistent across divergence choices and decoding temperatures. Overall, DRO-InstructZero connects distributionally robust optimization with prompt learning, offering a plug-and-play and general approach for reliable, transferable prompt alignment under real-world uncertainty.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yangyang Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.15260v1",
+    "url": "http://arxiv.org/abs/2510.15260v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.16748v1",
+    "title": "Shift-Aware Gaussian-Supremum Validation for Wasserstein-DRO CVaR Portfolios",
+    "abstract": "We study portfolio selection with a Conditional Value-at-Risk (CVaR) constraint under distribution shift and serial dependence. While Wasserstein distributionally robust optimization (DRO) offers tractable protection via an ambiguity ball around empirical data, choosing the ball radius is delicate: large radii are conservative, small radii risk violation under regime change. We propose a shift-aware Gaussian-supremum (GS) validation framework for Wasserstein-DRO CVaR portfolios, building on the work by Lam and Qian (2019). Phase I of the framework generates a candidate path by solving the exact reformulation of the robust CVaR constraint over a grid of Wasserstein radii. Phase II of the framework learns a target deployment law $Q$ by density-ratio reweighting of a time-ordered validation fold, computes weighted CVaR estimates, and calibrates a simultaneous upper confidence band via a block multiplier bootstrap to account for dependence. We select the least conservative feasible portfolio (or abstain if the effective sample size collapses). Theoretically, we extend the normalized GS validator to non-i.i.d. financial data: under weak dependence and regularity of the weighted scores, any portfolio passing our validator satisfies the CVaR limit under $Q$ with probability at least $1-β$; the Wasserstein term contributes a deterministic margin $(δ/α)\\|x\\|_*$. Empirical results indicate improved return-risk trade-offs versus the naive baseline.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Derek Long"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.16748v1",
+    "url": "http://arxiv.org/abs/2512.16748v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.13201v4",
+    "title": "DRO: Deep Recurrent Optimizer for Video to Depth",
+    "abstract": "There are increasing interests of studying the video-to-depth (V2D) problem with machine learning techniques. While earlier methods directly learn a mapping from images to depth maps and camera poses, more recent works enforce multi-view geometry constraints through optimization embedded in the learning framework. This paper presents a novel optimization method based on recurrent neural networks to further exploit the potential of neural networks in V2D. Specifically, our neural optimizer alternately updates the depth and camera poses through iterations to minimize a feature-metric cost, and two gated recurrent units iteratively improve the results by tracing historical information. Extensive experimental results demonstrate that our method outperforms previous methods and is more efficient in computation and memory consumption than cost-volume-based methods. In particular, our self-supervised method outperforms previous supervised methods on the KITTI and ScanNet datasets. Our source code is available at https://github.com/aliyun/dro-sfm.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Xiaodong Gu",
+      "Weihao Yuan",
+      "Zuozhuo Dai",
+      "Siyu Zhu",
+      "Chengzhou Tang",
+      "Zilong Dong",
+      "Ping Tan"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.13201v4",
+    "url": "http://arxiv.org/abs/2103.13201v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.05710v3",
+    "title": "DRO-EDL-MPC: Evidential Deep Learning-Based Distributionally Robust Model Predictive Control for Safe Autonomous Driving",
+    "abstract": "Safety is a critical concern in motion planning for autonomous vehicles. Modern autonomous vehicles rely on neural network-based perception, but making control decisions based on these inference results poses significant safety risks due to inherent uncertainties. To address this challenge, we present a distributionally robust optimization (DRO) framework that accounts for both aleatoric and epistemic perception uncertainties using evidential deep learning (EDL). Our approach introduces a novel ambiguity set formulation based on evidential distributions that dynamically adjusts the conservativeness according to perception confidence levels. We integrate this uncertainty-aware constraint into model predictive control (MPC), proposing the DRO-EDL-MPC algorithm with computational tractability for autonomous driving applications. Validation in the CARLA simulator demonstrates that our approach maintains efficiency under high perception confidence while enforcing conservative constraints under low confidence.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hyeongchan Ham",
+      "Heejin Ahn"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.05710v3",
+    "url": "http://arxiv.org/abs/2507.05710v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.09737v1",
+    "title": "STaR-DRO: Stateful Tsallis Reweighting for Group-Robust Structured Prediction",
+    "abstract": "Structured prediction requires models to generate ontology-constrained labels, grounded evidence, and valid structure under ambiguity, label skew, and heterogeneous group difficulty. We present a two-part framework for controllable inference and robust fine-tuning. First, we introduce a task-agnostic prompting strategy that combines XML-based instruction structure, disambiguation rules, verification-style reasoning, schema constraints, and self-validation to address format drift, label ambiguity, evidence hallucination, and metadata-conditioned confusion in in-context structured generation. Second, we introduce STaR-DRO, a stateful robust optimization method for group heterogeneity. It combines Tsallis mirror descent with momentum-smoothed, centered group-loss signals and bounded excess-only multipliers so that only persistently hard groups above a neutral baseline are upweighted, concentrating learning where it is most needed while avoiding volatile, dense exponentiated-gradient reweighting and unnecessary loss from downweighting easier groups. We evaluate the combined framework on EPPC Miner, a benchmark for extracting hierarchical labels and evidence spans from patient-provider secure messages. Prompt engineering improves zero-shot by +15.44 average F1 across Code, Sub-code, and Span over four Llama models. Building on supervised fine-tuning, STaR-DRO further improves the hardest semantic decisions: on Llama-3.3-70B-Instruct, Code F1 rises from 79.24 to 81.47 and Sub-code F1 from 67.78 to 69.30, while preserving Span performance and reducing group-wise validation cross-entropy by up to 29.6% on the most difficult clinical categories. Because these rare and difficult groups correspond to clinically consequential communication behaviors, these gains are not merely statistical improvements: they directly strengthen communication mining reliability for patient-centered care analysis.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Samah Fodeh",
+      "Ganesh Puthiaraju",
+      "Elyas Irankhah",
+      "Linhai Ma",
+      "Srivani Talakokkul",
+      "Afshan Khan",
+      "Sreeraj Ramachandran",
+      "Jordan Alpert",
+      "Sarah Schellhorn"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.09737v1",
+    "url": "http://arxiv.org/abs/2604.09737v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.00688v1",
+    "title": "Optimal Merton's Problem under Multivariate Affine Volterra Models with Jumps",
+    "abstract": "This paper is concerned with portfolio selection for an investor with exponential, power, and logarithmic utility in multi-asset financial markets allowing jumps. We investigate the classical Merton's portfolio optimization problem in a Volterra stochastic environment described by a multivariate Volterra--Heston model with jumps driven by an independent Poisson random measure. Owing to the non-Markovian and non-semimartingale nature of the model, classical stochastic control techniques are not directly applicable. Instead, the problem is tackled using the martingale optimality principle by constructing a family of supermartingale processes characterized via solutions to an original Riccati backward stochastic differential equation with jumps (Riccati BSDEJ).The resulting optimal strategies for Merton's problems are derived in semi-closed form depending on the solutions to time-dependent multivariate Riccati-Volterra equations, while the optimal value is expressed using the solution to this original Riccati BSDEJ. Numerical experiments on a two-dimensional rough Heston model illustrate the impact of both path roughness and jumps components on the value function and optimal strategies in the Merton problem.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Sigui Brice Dro",
+      "Emmanuel Gnabeyeu"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.00688v1",
+    "url": "http://arxiv.org/abs/2605.00688v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.20339v1",
+    "title": "DRO: Doppler-Aware Direct Radar Odometry",
+    "abstract": "A renaissance in radar-based sensing for mobile robotic applications is underway. Compared to cameras or lidars, millimetre-wave radars have the ability to `see' through thin walls, vegetation, and adversarial weather conditions such as heavy rain, fog, snow, and dust. In this paper, we propose a novel SE(2) odometry approach for spinning frequency-modulated continuous-wave radars. Our method performs scan-to-local-map registration of the incoming radar data in a direct manner using all the radar intensity information without the need for feature or point cloud extraction. The method performs locally continuous trajectory estimation and accounts for both motion and Doppler distortion of the radar scans. If the radar possesses a specific frequency modulation pattern that makes radial Doppler velocities observable, an additional Doppler-based constraint is formulated to improve the velocity estimate and enable odometry in geometrically feature-deprived scenarios (e.g., featureless tunnels). Our method has been validated on over 250km of on-road data sourced from public datasets (Boreas and MulRan) and collected using our automotive platform. With the aid of a gyroscope, it outperforms state-of-the-art methods and achieves an average relative translation error of 0.26% on the Boreas leaderboard. When using data with the appropriate Doppler-enabling frequency modulation pattern, the translation error is reduced to 0.18% in similar environments. We also benchmarked our algorithm using 1.5 hours of data collected with a mobile robot in off-road environments with various levels of structure to demonstrate its versatility. Our real-time implementation is publicly available: https://github.com/utiasASRL/dro.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Cedric Le Gentil",
+      "Leonardo Brizi",
+      "Daniil Lisus",
+      "Xinyuan Qiao",
+      "Giorgio Grisetti",
+      "Timothy D. Barfoot"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.20339v1",
+    "url": "http://arxiv.org/abs/2504.20339v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.07513v2",
+    "title": "Detector performance of the Gamma-ray Transient Monitor onboard DRO-A Satellite",
+    "abstract": "Gamma-ray Transient Monitor (GTM) is an all-sky monitor onboard the Distant Retrograde Orbit-A (DRO-A) satellite with the scientific objective of detecting gamma-ray transients ranging from 20 keV to 1 MeV. GTM is equipped with 5 Gamma-ray Transient Probe (GTP) detector modules, utilizing the NaI(Tl) scintillator coupled with a SiPM array. To reduce the SiPM noise, GTP makes use of a dedicated dual-channel coincident readout design. In this work, we firstly studied the impact of different coincidence times on detection efficiency and ultimately selected the 500 ns time coincidence window for offline data processing. To test the performance of GTPs and validate the Monte Carlo simulated energy response, we conducted comprehensive ground calibration tests using Hard X-ray Calibration Facility (HXCF) and radioactive sources, including energy response, detection efficiency, spatial response, bias-voltage response, and temperature dependence. We extensively presented the ground calibration results, and validated the design and mass model of GTP detector. These work paved the road for the in-flight observation and science data analysis.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Pei-Yi Feng",
+      "Zheng-Hua An",
+      "Da-Li Zhang",
+      "Chen-Wei Wang",
+      "Chao Zheng",
+      "Sheng Yang",
+      "Shao-Lin Xiong",
+      "Jia-Cong Liu",
+      "Xin-Qiao Li",
+      "Ke Gong",
+      "Xiao-Jing Liu",
+      "Min Gao",
+      "Xiang-Yang Wen",
+      "Ya-Qing liu",
+      "Xiao-Yun Zhao",
+      "Fan Zhang",
+      "Xi-Lei Sun",
+      "Hong Lu"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.07513v2",
+    "url": "http://arxiv.org/abs/2401.07513v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.13289v4",
+    "title": "Achieving the Asymptotically Optimal Sample Complexity of Offline Reinforcement Learning: A DRO-Based Approach",
+    "abstract": "Offline reinforcement learning aims to learn from pre-collected datasets without active exploration. This problem faces significant challenges, including limited data availability and distributional shifts. Existing approaches adopt a pessimistic stance towards uncertainty by penalizing rewards of under-explored state-action pairs to estimate value functions conservatively. In this paper, we show that the distributionally robust optimization (DRO) based approach can also address these challenges and is {asymptotically minimax optimal}. Specifically, we directly model the uncertainty in the transition kernel and construct an uncertainty set of statistically plausible transition kernels. We then show that the policy that optimizes the worst-case performance over this uncertainty set has a near-optimal performance in the underlying problem. We first design a metric-based distribution-based uncertainty set such that with high probability the true transition kernel is in this set. We prove that to achieve a sub-optimality gap of $ε$, the sample complexity is $\\mathcal{O}(S^2C^{π^*}ε^{-2}(1-γ)^{-4})$, where $γ$ is the discount factor, $S$ is the number of states, and $C^{π^*}$ is the single-policy clipped concentrability coefficient which quantifies the distribution shift. To achieve the optimal sample complexity, we further propose a less conservative value-function-based uncertainty set, which, however, does not necessarily include the true transition kernel. We show that an improved sample complexity of $\\mathcal{O}(SC^{π^*}ε^{-2}(1-γ)^{-3})$ can be obtained, which asymptotically matches with the minimax lower bound for offline reinforcement learning, and thus is asymptotically minimax optimal.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yue Wang",
+      "Jinjun Xiong",
+      "Shaofeng Zou"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.13289v4",
+    "url": "http://arxiv.org/abs/2305.13289v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.07845v1",
+    "title": "A Distributionally Robust Boosting Algorithm",
+    "abstract": "Distributionally Robust Optimization (DRO) has been shown to provide a flexible framework for decision making under uncertainty and statistical estimation. For example, recent works in DRO have shown that popular statistical estimators can be interpreted as the solutions of suitable formulated data-driven DRO problems. In turn, this connection is used to optimally select tuning parameters in terms of a principled approach informed by robustness considerations. This paper contributes to this growing literature, connecting DRO and statistics, by showing how boosting algorithms can be studied via DRO. We propose a boosting type algorithm, named DRO-Boosting, as a procedure to solve our DRO formulation. Our DRO-Boosting algorithm recovers Adaptive Boosting (AdaBoost) in particular, thus showing that AdaBoost is effectively solving a DRO problem. We apply our algorithm to a financial dataset on credit card default payment prediction. We find that our approach compares favorably to alternative boosting methods which are widely used in practice.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Jose Blanchet",
+      "Yang Kang",
+      "Fan Zhang",
+      "Zhangyi Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.07845v1",
+    "url": "http://arxiv.org/abs/1905.07845v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.08976v1",
+    "title": "Distributionally Robust Optimization via Generative Ambiguity Modeling",
+    "abstract": "This paper studies Distributionally Robust Optimization (DRO), a fundamental framework for enhancing the robustness and generalization of statistical learning and optimization. An effective ambiguity set for DRO must involve distributions that remain consistent to the nominal distribution while being diverse enough to account for a variety of potential scenarios. Moreover, it should lead to tractable DRO solutions. To this end, we propose generative model-based ambiguity sets that capture various adversarial distributions beyond the nominal support space while maintaining consistency with the nominal distribution. Building on this generative ambiguity modeling, we propose DRO with Generative Ambiguity Set (GAS-DRO), a tractable DRO algorithm that solves the inner maximization over the parameterized generative model space. We formally establish the stationary convergence performance of GAS-DRO. We implement GAS-DRO with a diffusion model and empirically demonstrate its superior Out-of-Distribution (OOD) generalization performance in ML tasks.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jiaqi Wen",
+      "Jianyi Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.08976v1",
+    "url": "http://arxiv.org/abs/2602.08976v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.14655v1",
+    "title": "Distributionally Robust Optimization and Robust Statistics",
+    "abstract": "We review distributionally robust optimization (DRO), a principled approach for constructing statistical estimators that hedge against the impact of deviations in the expected loss between the training and deployment environments. Many well-known estimators in statistics and machine learning (e.g. AdaBoost, LASSO, ridge regression, dropout training, etc.) are distributionally robust in a precise sense. We hope that by discussing the DRO interpretation of well-known estimators, statisticians who may not be too familiar with DRO may find a way to access the DRO literature through the bridge between classical results and their DRO equivalent formulation. On the other hand, the topic of robustness in statistics has a rich tradition associated with removing the impact of contamination. Thus, another objective of this paper is to clarify the difference between DRO and classical statistical robustness. As we will see, these are two fundamentally different philosophies leading to completely different types of estimators. In DRO, the statistician hedges against an environment shift that occurs after the decision is made; thus DRO estimators tend to be pessimistic in an adversarial setting, leading to a min-max type formulation. In classical robust statistics, the statistician seeks to correct contamination that occurred before a decision is made; thus robust statistical estimators tend to be optimistic leading to a min-min type formulation.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jose Blanchet",
+      "Jiajin Li",
+      "Sirui Lin",
+      "Xuhui Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.14655v1",
+    "url": "http://arxiv.org/abs/2401.14655v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

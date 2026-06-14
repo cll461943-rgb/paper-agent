@@ -1,0 +1,251 @@
+[
+  {
+    "paper_id": "https://openalex.org/W4404782783",
+    "title": "Symbolic Working Memory Enhances Language Models for Complex Rule Application",
+    "abstract": "Large Language Models (LLMs) have shown remarkable reasoning performance but struggle with multi-step deductive reasoning involving a series of rule application steps, especially when rules are presented non-sequentially.Our preliminary analysis shows that while LLMs excel in single-step rule application, their performance drops significantly in multi-step scenarios due to the challenge in rule grounding.It requires anchoring the applicable rule and supporting facts at each step, amidst multiple input rules, facts, and inferred facts.To address this, we propose augmenting LLMs with external working memory and introduce a neurosymbolic framework for rule application.The memory stores facts and rules in both natural language and symbolic forms, enabling precise tracking.Utilizing this memory, our framework iteratively performs symbolic rule grounding and LLM-based rule implementation.The former matches predicates and variables of symbolic rules and facts to ground applicable rules at each step.Experiments indicate our framework's effectiveness in rule application and its robustness across various steps and settings 1 .1 Code and data are available at https://github.com/ SiyuanWangw/RuleApplication.[Sequential Input] Facts: Nicole's grandfather, Harold, accompanied her to the basketball match.(F1) Beverly went car shopping with her husband Louis and her daughter Nicole.(F2) Harold bought a new dress for his daughter Marie.(F3) Rules: If B is A's daughter, and C is B's grandfather, then C is the father of A. (R1) If B is the father of A, and C is the daughter of B, then C is the sister of A. (R2) [Non-Sequential Input] Facts: Harold bought a new dress for his daughter Marie.(F3) Nicole's grandfather, Harold, accompanied her to the basketball match.(F1) Beverly went car shopping with her husband Louis and her daughter Nicole.(F2) Rules: If B is A's father, and C is B's daughter, then C is the sister of A. (R2) If B is A's daughter, and C is B's grandfather, then C is the father",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Siyuan Wang",
+      "Zhongyu Wei",
+      "Yejin Choi",
+      "Xiang Ren"
+    ],
+    "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.974",
+    "arxiv_id": null,
+    "url": "http://dx.doi.org/10.18653/v1/2024.emnlp-main.974",
+    "citation_count": 7,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Computer science",
+        "Programming language",
+        "Natural language processing",
+        "Artificial intelligence"
+      ],
+      "cited_by_api_url": null,
+      "related_works": [
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2899084033",
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W2390279801",
+        "https://openalex.org/W4391913857",
+        "https://openalex.org/W2358668433",
+        "https://openalex.org/W4396701345",
+        "https://openalex.org/W2376932109",
+        "https://openalex.org/W2001405890",
+        "https://openalex.org/W3204019825"
+      ]
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W4385774107",
+    "title": "Cumulative Reasoning with Large Language Models",
+    "abstract": "Recent advancements in large language models (LLMs) have shown remarkable progress, yet their ability to solve complex problems remains limited. In this work, we introduce Cumulative Reasoning (CR), a structured framework that enhances LLM problem-solving by emulating human-like iterative and cumulative thought processes. CR orchestrates LLMs in three distinct roles: Proposer, Verifier(s), and Reporter, to systematically decompose tasks, generate and validate intermediate reasoning steps, and compose them into a solution by building a dynamic Directed Acyclic Graph (DAG) of verified propositions. This approach substantially enhances problem-solving capabilities. We demonstrate CR's advantage through several complex reasoning tasks: it outperforms existing methods in logical inference tasks with up to a 9.3% improvement, achieving 98.04% accuracy on the curated FOLIO wiki dataset. In the Game of 24, it achieves 98% accuracy, marking a 24% improvement over previous methods. In solving MATH problems, CR achieves a 4.2% increase from previous methods and a 43% relative improvement in the most challenging level 5 problems. When incorporating a code environment with CR, we further harness LLMs' reasoning capabilities and outperform the Program of Thought (PoT) method by 38.8%.",
+    "year": 2023,
+    "venue": "ArXiv.org",
+    "authors": [
+      "Yifan Zhang",
+      "Jingqin Yang",
+      "Yuan Yang",
+      "Andrew Chi-Chih Yao"
+    ],
+    "doi": "https://doi.org/10.48550/arxiv.2308.04371",
+    "arxiv_id": null,
+    "url": "https://arxiv.org/abs/2308.04371",
+    "citation_count": 11,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Computer science",
+        "Inference",
+        "Mirroring",
+        "Language model",
+        "State (computer science)",
+        "Code (set theory)",
+        "Artificial intelligence",
+        "Theoretical computer science",
+        "Programming language",
+        "Set (abstract data type)",
+        "Communication",
+        "Sociology"
+      ],
+      "cited_by_api_url": null,
+      "related_works": [
+        "https://openalex.org/W2081134829",
+        "https://openalex.org/W2012196799",
+        "https://openalex.org/W2914953798",
+        "https://openalex.org/W2016936103",
+        "https://openalex.org/W2551163313",
+        "https://openalex.org/W1969752774",
+        "https://openalex.org/W2294049764",
+        "https://openalex.org/W2108584188",
+        "https://openalex.org/W1980969160",
+        "https://openalex.org/W2105212949"
+      ]
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W4416034404",
+    "title": "LAVA: Logic-Aware Validation and Augmentation Framework for Large-Scale Financial Document Auditing",
+    "abstract": "Financial document validation in productionsuch as payroll auditing, tax compliance, and loan underwriting-demands exceptional accuracy, consistency, and reproducibility under strict enterprise constraints.In practice, documents arrive with heterogeneous layouts and formats, semantically rich, contextdependent content, and embedded business rules that current pipelines struggle to process reliably.We introduce LAVA (Logic-Aware Validation and Augmentation)-a modular, backbone-agnostic pipeline built on multimodal large language models-that integrates a four-stage design: document-rule retrieval, layout-preserving information extraction, auxiliary metadata enrichment, and auditable symbolic/arithmetic verification.LAVA supports robust rule grounding, fine-grained error attribution, and consistent, traceable end-to-end execution-capabilities essential for high-stakes deployment.Evaluated on a large real-world benchmark with diverse financial documents and dozens of expert-curated validation rules, LAVA outperforms baselines in hallucination control and edge-case handling while maintaining efficient token usage, demonstrating practicality for high-volume, time-critical validation.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ruoqi Shu",
+      "Xuhui Wang",
+      "Isaac Wang",
+      "Yanming Mai",
+      "Bo Wan"
+    ],
+    "doi": "https://doi.org/10.18653/v1/2025.finnlp-2.7",
+    "arxiv_id": null,
+    "url": "https://doi.org/10.18653/v1/2025.finnlp-2.7",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Audit",
+        "Business",
+        "Computer science",
+        "Accounting",
+        "Finance",
+        "Actuarial science",
+        "Financial Audit",
+        "Key (lock)",
+        "Measure (data warehouse)",
+        "Process management",
+        "Risk analysis (engineering)",
+        "Data collection",
+        "Government (linguistics)",
+        "Context (archaeology)",
+        "Work (physics)",
+        "Accounting management",
+        "Financial plan",
+        "Knowledge management",
+        "Information technology audit",
+        "Financial management",
+        "Financial statement"
+      ],
+      "cited_by_api_url": null,
+      "related_works": []
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W7133133710",
+    "title": "LoRAD: Logic-Reasoning Augmented DeBERTa with Adversarial Training for Robust Rumor Detection",
+    "abstract": "Social media has greatly accelerated the speed of information dissemination, but it has also inevitably led to a proliferation of rumors. Due to the deceptive nature of rumors, people often find it difficult to distinguish truth from falsehood, resulting in economic losses and social panic. Existing pre-trained models often focus on keywords while neglecting logic, making them prone to semantic traps. To address this, we propose the Logic-Reasoning Augmented DeBERTa (LoRAD) model. LoRAD utilizes an LLM to generate logical evidence and leverages DeBERTa’s disentangled attention mechanism to effectively integrate this evidence with the source text. We evaluate our method on three public datasets and a newly constructed dataset, Twitter26-Mini. Results show that LoRAD achieves state-of-the-art performance on all datasets. Furthermore, experiments demonstrate that LoRAD offers better performance and robustness than large language models (LLMs) while maintaining high inference speed, making it suitable for real-time rumor detection.",
+    "year": 2026,
+    "venue": "Electronics",
+    "authors": [
+      "Yinhao Zhang",
+      "Farkhana Muchtar",
+      "Mohd Kufaisal Mohd Sidik",
+      "Johan Mohamad Sharif"
+    ],
+    "doi": "https://doi.org/10.3390/electronics15051021",
+    "arxiv_id": null,
+    "url": "https://doi.org/10.3390/electronics15051021",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Rumor",
+        "Computer science",
+        "Robustness (evolution)",
+        "Adversarial system",
+        "Inference",
+        "Focus (optics)",
+        "Artificial intelligence",
+        "Machine learning",
+        "Training set",
+        "Social media",
+        "Deep learning",
+        "Training (meteorology)",
+        "Mechanism (biology)",
+        "Language model",
+        "Data modeling",
+        "Information privacy"
+      ],
+      "cited_by_api_url": null,
+      "related_works": []
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W4402701517",
+    "title": "Symbolic Working Memory Enhances Language Models for Complex Rule Application",
+    "abstract": "Large Language Models (LLMs) have shown remarkable reasoning performance but struggle with multi-step deductive reasoning involving a series of rule application steps, especially when rules are presented non-sequentially. Our preliminary analysis shows that while LLMs excel in single-step rule application, their performance drops significantly in multi-step scenarios due to the challenge in rule grounding. It requires anchoring the applicable rule and supporting facts at each step, amidst multiple input rules, facts, and inferred facts. To address this, we propose augmenting LLMs with external working memory and introduce a neurosymbolic framework for rule application. The memory stores facts and rules in both natural language and symbolic forms, enabling precise tracking. Utilizing this memory, our framework iteratively performs symbolic rule grounding and LLM-based rule implementation. The former matches predicates and variables of symbolic rules and facts to ground applicable rules at each step. Experiments indicate our framework's effectiveness in rule application and its robustness across various steps and settings~\\footnote{Code and data are available at \\url{https://github.com/SiyuanWangw/RuleApplication}.}.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Siyuan Wang",
+      "Zhongyu Wei",
+      "Yejin Choi",
+      "Xiang Ren"
+    ],
+    "doi": "https://doi.org/10.48550/arxiv.2408.13654",
+    "arxiv_id": null,
+    "url": "http://arxiv.org/abs/2408.13654",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Computer science",
+        "Natural language processing",
+        "Linguistics",
+        "Cognitive science",
+        "Programming language",
+        "Psychology",
+        "Philosophy"
+      ],
+      "cited_by_api_url": null,
+      "related_works": [
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W2390279801",
+        "https://openalex.org/W2358668433",
+        "https://openalex.org/W4396701345",
+        "https://openalex.org/W2376932109",
+        "https://openalex.org/W2001405890",
+        "https://openalex.org/W4396696052",
+        "https://openalex.org/W2382290278",
+        "https://openalex.org/W4395014643"
+      ]
+    }
+  }
+]

@@ -1,0 +1,852 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2507.07101v4",
+    "title": "Small Batch Size Training for Language Models: When Vanilla SGD Works, and Why Gradient Accumulation Is Wasteful",
+    "abstract": "Conventional wisdom dictates that small batch sizes make language model pretraining and fine-tuning unstable, motivating gradient accumulation, which trades off the number of optimizer steps for a proportional increase in batch size. While it is common to decrease the learning rate for smaller batch sizes, other hyperparameters are often held fixed. In this work, we revisit small batch sizes all the way down to batch size one, and we propose a rule for scaling Adam hyperparameters to small batch sizes. In particular, rather than holding the decay rate of the second moment fixed across batch sizes, we propose to hold its half-life fixed in terms of tokens. We find that small batch sizes (1) train stably, (2) are consistently more robust to hyperparameter choices, (3) achieve equal or better per-FLOP performance than larger batch sizes, and (4) notably enable stable language model training with vanilla SGD, even without momentum, despite storing no optimizer state. Building on these results, we provide practical recommendations for selecting a batch size and setting optimizer hyperparameters. We further recommend against gradient accumulation unless training on multiple devices with multiple model replicas. Finally, we show that a small batch size combined with an optimizer with a small state size can provide the performance benefits of full fine-tuning while maintaining a similar memory footprint to LoRA.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Martin Marek",
+      "Sanae Lotfi",
+      "Aditya Somasundaram",
+      "Andrew Gordon Wilson",
+      "Micah Goldblum"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.07101v4",
+    "url": "http://arxiv.org/abs/2507.07101v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2102.03983v1",
+    "title": "Partial Is Better Than All: Revisiting Fine-tuning Strategy for Few-shot Learning",
+    "abstract": "The goal of few-shot learning is to learn a classifier that can recognize unseen classes from limited support data with labels. A common practice for this task is to train a model on the base set first and then transfer to novel classes through fine-tuning (Here fine-tuning procedure is defined as transferring knowledge from base to novel data, i.e. learning to transfer in few-shot scenario.) or meta-learning. However, as the base classes have no overlap to the novel set, simply transferring whole knowledge from base data is not an optimal solution since some knowledge in the base model may be biased or even harmful to the novel class. In this paper, we propose to transfer partial knowledge by freezing or fine-tuning particular layer(s) in the base model. Specifically, layers will be imposed different learning rates if they are chosen to be fine-tuned, to control the extent of preserved transferability. To determine which layers to be recast and what values of learning rates for them, we introduce an evolutionary search based method that is efficient to simultaneously locate the target layers and determine their individual learning rates. We conduct extensive experiments on CUB and mini-ImageNet to demonstrate the effectiveness of our proposed method. It achieves the state-of-the-art performance on both meta-learning and non-meta based frameworks. Furthermore, we extend our method to the conventional pre-training + fine-tuning paradigm and obtain consistent improvement.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Zhiqiang Shen",
+      "Zechun Liu",
+      "Jie Qin",
+      "Marios Savvides",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2102.03983v1",
+    "url": "http://arxiv.org/abs/2102.03983v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.21676v4",
+    "title": "How Does Critical Batch Size Scale in Pre-training?",
+    "abstract": "Training large-scale models under given resources requires careful design of parallelism strategies. In particular, the efficiency notion of critical batch size (CBS), concerning the compromise between time and compute, marks the threshold beyond which greater data parallelism leads to diminishing returns. To operationalize it, we propose a measure of CBS and pre-train a series of auto-regressive language models, ranging from 85 million to 1.2 billion parameters, on the C4 dataset. Through extensive hyper-parameter sweeps and careful control of factors such as batch size, momentum, and learning rate along with its scheduling, we systematically investigate the impact of scale on CBS. Then we fit scaling laws with respect to model and data sizes to decouple their effects. Overall, our results demonstrate that CBS scales primarily with data size rather than model size, a finding we justify theoretically through the analysis of infinite-width limits of neural networks and infinite-dimensional least squares regression. Of independent interest, we highlight the importance of common hyper-parameter choices and strategies for studying large-scale pre-training beyond fixed training durations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hanlin Zhang",
+      "Depen Morwani",
+      "Nikhil Vyas",
+      "Jingfeng Wu",
+      "Difan Zou",
+      "Udaya Ghai",
+      "Dean Foster",
+      "Sham Kakade"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.21676v4",
+    "url": "http://arxiv.org/abs/2410.21676v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.05448v2",
+    "title": "Fast Rates in Pool-Based Batch Active Learning",
+    "abstract": "We consider a batch active learning scenario where the learner adaptively issues batches of points to a labeling oracle. Sampling labels in batches is highly desirable in practice due to the smaller number of interactive rounds with the labeling oracle (often human beings). However, batch active learning typically pays the price of a reduced adaptivity, leading to suboptimal results. In this paper we propose a solution which requires a careful trade off between the informativeness of the queried points and their diversity. We theoretically investigate batch active learning in the practically relevant scenario where the unlabeled pool of data is available beforehand ({\\em pool-based} active learning). We analyze a novel stage-wise greedy algorithm and show that, as a function of the label complexity, the excess risk of this algorithm matches the known minimax rates in standard statistical learning settings. Our results also exhibit a mild dependence on the batch size. These are the first theoretical results that employ careful trade offs between informativeness and diversity to rigorously quantify the statistical performance of batch active learning in the pool-based scenario.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Claudio Gentile",
+      "Zhilei Wang",
+      "Tong Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.05448v2",
+    "url": "http://arxiv.org/abs/2202.05448v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.07888v2",
+    "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+    "abstract": "Fine-tuning Large Language Models (LLMs) incurs considerable training costs, driving the need for data-efficient training with optimised data ordering. Human-inspired strategies offer a solution by organising data based on human learning practices. This study evaluates the fine-tuning efficiency of five human-inspired strategies across four language models, three datasets, and both human- and LLM-labelled data in the context of medical question answering. These strategies achieve the best accuracy gain of 1.81% and an average gain of 1.02% across datasets, with interleaved strategies delivering the best average results. However, the best strategy varies across model-dataset combinations, limiting the generalisability of the effects of any single strategy. Additionally, LLM-defined question difficulty outperforms human-defined labels in curriculum-based learning, showing the potential of model-generated data as a cost-effective alternative for optimising fine-tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yushi Yang",
+      "Andrew M. Bean",
+      "Robert McCraith",
+      "Adam Mahdi"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.07888v2",
+    "url": "http://arxiv.org/abs/2408.07888v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.08793v2",
+    "title": "Constraint Programming Models For Serial Batch Scheduling With Minimum Batch Size",
+    "abstract": "In serial batch (s-batch) scheduling, jobs are grouped in batches and processed sequentially within their batch. This paper considers multiple parallel machines, nonidentical job weights and release times, and sequence-dependent setup times between batches of different families. Although s-batch has been widely studied in the literature, very few papers have taken into account a minimum batch size, typical in practical settings such as semiconductor manufacturing and the metal industry. The problem with this minimum batch size requirement has been mostly tackled with dynamic programming and meta-heuristics, and no article has ever used constraint programming (CP) to do so. This paper fills this gap by proposing, three CP models for s-batching with minimum batch size: (i) an \\textit{Interval Assignment} model that computes and bounds the size of the batches using the presence literals of interval variables of the jobs. (ii) A \\textit{Global} model that exclusively uses global constraints that track the size of the batches over time. (iii) And a \\textit{Hybrid} model that combines the benefits of the extra global constraints with the efficiency of the sum-of-presences constraints to ensure the minimum batch sizes. The computational experiments on standard cases compare the three CP models with two existing mixed-integer programming (MIP) models from the literature. The results demonstrate the versatility of the proposed CP models to handle multiple variations of s-batching; and their ability to produce, in large instances, better solutions than the MIP models faster.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jorge A. Huertas",
+      "Pascal Van Hentenryck"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.08793v2",
+    "url": "http://arxiv.org/abs/2504.08793v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.10190v2",
+    "title": "Never Stop Learning: The Effectiveness of Fine-Tuning in Robotic Reinforcement Learning",
+    "abstract": "One of the great promises of robot learning systems is that they will be able to learn from their mistakes and continuously adapt to ever-changing environments. Despite this potential, most of the robot learning systems today are deployed as a fixed policy and they are not being adapted after their deployment. Can we efficiently adapt previously learned behaviors to new environments, objects and percepts in the real world? In this paper, we present a method and empirical evidence towards a robot learning framework that facilitates continuous adaption. In particular, we demonstrate how to adapt vision-based robotic manipulation policies to new variations by fine-tuning via off-policy reinforcement learning, including changes in background, object shape and appearance, lighting conditions, and robot morphology. Further, this adaptation uses less than 0.2% of the data necessary to learn the task from scratch. We find that our approach of adapting pre-trained policies leads to substantial performance gains over the course of fine-tuning, and that pre-training via RL is essential: training from scratch or adapting from supervised ImageNet features are both unsuccessful with such small amounts of data. We also find that these positive results hold in a limited continual learning setting, in which we repeatedly fine-tune a single lineage of policies using data from a succession of new tasks. Our empirical conclusions are consistently supported by experiments on simulated manipulation tasks, and by 52 unique fine-tuning experiments on a real robotic grasping system pre-trained on 580,000 grasps.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ryan Julian",
+      "Benjamin Swanson",
+      "Gaurav S. Sukhatme",
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Karol Hausman"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.10190v2",
+    "url": "http://arxiv.org/abs/2004.10190v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.11770v1",
+    "title": "Rethinking the Hyperparameters for Fine-tuning",
+    "abstract": "Fine-tuning from pre-trained ImageNet models has become the de-facto standard for various computer vision tasks. Current practices for fine-tuning typically involve selecting an ad-hoc choice of hyperparameters and keeping them fixed to values normally used for training from scratch. This paper re-examines several common practices of setting hyperparameters for fine-tuning. Our findings are based on extensive empirical evaluation for fine-tuning on various transfer learning benchmarks. (1) While prior works have thoroughly investigated learning rate and batch size, momentum for fine-tuning is a relatively unexplored parameter. We find that the value of momentum also affects fine-tuning performance and connect it with previous theoretical findings. (2) Optimal hyperparameters for fine-tuning, in particular, the effective learning rate, are not only dataset dependent but also sensitive to the similarity between the source domain and target domain. This is in contrast to hyperparameters for training from scratch. (3) Reference-based regularization that keeps models close to the initial model does not necessarily apply for \"dissimilar\" datasets. Our findings challenge common practices of fine-tuning and encourages deep learning practitioners to rethink the hyperparameters for fine-tuning.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Hao Li",
+      "Pratik Chaudhari",
+      "Hao Yang",
+      "Michael Lam",
+      "Avinash Ravichandran",
+      "Rahul Bhotika",
+      "Stefano Soatto"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.11770v1",
+    "url": "http://arxiv.org/abs/2002.11770v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.12607v1",
+    "title": "Learning to Perform Complex Tasks through Compositional Fine-Tuning of Language Models",
+    "abstract": "How to usefully encode compositional task structure has long been a core challenge in AI. Recent work in chain of thought prompting has shown that for very large neural language models (LMs), explicitly demonstrating the inferential steps involved in a target task may improve performance over end-to-end learning that focuses on the target task alone. However, chain of thought prompting has significant limitations due to its dependency on huge pretrained LMs. In this work, we present compositional fine-tuning (CFT): an approach based on explicitly decomposing a target task into component tasks, and then fine-tuning smaller LMs on a curriculum of such component tasks. We apply CFT to recommendation tasks in two domains, world travel and local dining, as well as a previously studied inferential task (sports understanding). We show that CFT outperforms end-to-end learning even with equal amounts of data, and gets consistently better as more component tasks are modeled via fine-tuning. Compared with chain of thought prompting, CFT performs at least as well using LMs only 7.4% of the size, and is moreover applicable to task domains for which data are not available during pretraining.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Victor S. Bursztyn",
+      "David Demeter",
+      "Doug Downey",
+      "Larry Birnbaum"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.12607v1",
+    "url": "http://arxiv.org/abs/2210.12607v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1612.05086v2",
+    "title": "Coupling Adaptive Batch Sizes with Learning Rates",
+    "abstract": "Mini-batch stochastic gradient descent and variants thereof have become standard for large-scale empirical risk minimization like the training of neural networks. These methods are usually used with a constant batch size chosen by simple empirical inspection. The batch size significantly influences the behavior of the stochastic optimization algorithm, though, since it determines the variance of the gradient estimates. This variance also changes over the optimization process; when using a constant batch size, stability and convergence is thus often enforced by means of a (manually tuned) decreasing learning rate schedule. We propose a practical method for dynamic batch size adaptation. It estimates the variance of the stochastic gradients and adapts the batch size to decrease the variance proportionally to the value of the objective function, removing the need for the aforementioned learning rate decrease. In contrast to recent related work, our algorithm couples the batch size to the learning rate, directly reflecting the known relationship between the two. On popular image classification benchmarks, our batch size adaptation yields faster optimization convergence, while simultaneously simplifying learning rate tuning. A TensorFlow implementation is available.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Lukas Balles",
+      "Javier Romero",
+      "Philipp Hennig"
+    ],
+    "doi": null,
+    "arxiv_id": "1612.05086v2",
+    "url": "http://arxiv.org/abs/1612.05086v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.05457v1",
+    "title": "Legged Robots that Keep on Learning: Fine-Tuning Locomotion Policies in the Real World",
+    "abstract": "Legged robots are physically capable of traversing a wide range of challenging environments, but designing controllers that are sufficiently robust to handle this diversity has been a long-standing challenge in robotics. Reinforcement learning presents an appealing approach for automating the controller design process and has been able to produce remarkably robust controllers when trained in a suitable range of environments. However, it is difficult to predict all likely conditions the robot will encounter during deployment and enumerate them at training-time. What if instead of training controllers that are robust enough to handle any eventuality, we enable the robot to continually learn in any setting it finds itself in? This kind of real-world reinforcement learning poses a number of challenges, including efficiency, safety, and autonomy. To address these challenges, we propose a practical robot reinforcement learning system for fine-tuning locomotion policies in the real world. We demonstrate that a modest amount of real-world training can substantially improve performance during deployment, and this enables a real A1 quadrupedal robot to autonomously fine-tune multiple locomotion skills in a range of environments, including an outdoor lawn and a variety of indoor terrains.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Laura Smith",
+      "J. Chase Kew",
+      "Xue Bin Peng",
+      "Sehoon Ha",
+      "Jie Tan",
+      "Sergey Levine"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.05457v1",
+    "url": "http://arxiv.org/abs/2110.05457v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.06500v2",
+    "title": "Differentially Private Fine-tuning of Language Models",
+    "abstract": "We give simpler, sparser, and faster algorithms for differentially private fine-tuning of large-scale pre-trained language models, which achieve the state-of-the-art privacy versus utility tradeoffs on many standard NLP tasks. We propose a meta-framework for this problem, inspired by the recent success of highly parameter-efficient methods for fine-tuning. Our experiments show that differentially private adaptations of these approaches outperform previous private algorithms in three important dimensions: utility, privacy, and the computational and memory cost of private training. On many commonly studied datasets, the utility of private models approaches that of non-private models. For example, on the MNLI dataset we achieve an accuracy of $87.8\\%$ using RoBERTa-Large and $83.5\\%$ using RoBERTa-Base with a privacy budget of $ε= 6.7$. In comparison, absent privacy constraints, RoBERTa-Large achieves an accuracy of $90.2\\%$. Our findings are similar for natural language generation tasks. Privately fine-tuning with DART, GPT-2-Small, GPT-2-Medium, GPT-2-Large, and GPT-2-XL achieve BLEU scores of 38.5, 42.0, 43.1, and 43.8 respectively (privacy budget of $ε= 6.8,δ=$ 1e-5) whereas the non-private baseline is $48.1$. All our experiments suggest that larger models are better suited for private fine-tuning: while they are well known to achieve superior accuracy non-privately, we find that they also better maintain their accuracy when privacy is introduced.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Da Yu",
+      "Saurabh Naik",
+      "Arturs Backurs",
+      "Sivakanth Gopi",
+      "Huseyin A. Inan",
+      "Gautam Kamath",
+      "Janardhan Kulkarni",
+      "Yin Tat Lee",
+      "Andre Manoel",
+      "Lukas Wutschitz",
+      "Sergey Yekhanin",
+      "Huishuai Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.06500v2",
+    "url": "http://arxiv.org/abs/2110.06500v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.00946v3",
+    "title": "Fine-tuning with Very Large Dropout",
+    "abstract": "It is impossible today to pretend that the practice of machine learning is always compatible with the idea that training and testing data follow the same distribution. Several authors have recently used ensemble techniques to show how scenarios involving multiple data distributions are best served by representations that are both richer than those obtained by regularizing for the best in-distribution performance, and richer than those obtained under the influence of the implicit sparsity bias of common stochastic gradient procedures. This contribution investigates the use of very high dropout rates instead of ensembles to obtain such rich representations. Although training a deep network from scratch using such dropout rates is virtually impossible, fine-tuning a large pre-trained model under such conditions is not only possible but also achieves out-of-distribution performances that exceed those of both ensembles and weight averaging methods such as model soups. This result has practical significance because the importance of the fine-tuning scenario has considerably grown in recent years. This result also provides interesting insights on the nature of rich representations and on the intrinsically linear nature of fine-tuning a large network using a comparatively small dataset.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jianyu Zhang",
+      "Léon Bottou"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.00946v3",
+    "url": "http://arxiv.org/abs/2403.00946v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.01097v2",
+    "title": "Adaptive Learning of the Optimal Batch Size of SGD",
+    "abstract": "Recent advances in the theoretical understanding of SGD led to a formula for the optimal batch size minimizing the number of effective data passes, i.e., the number of iterations times the batch size. However, this formula is of no practical value as it depends on the knowledge of the variance of the stochastic gradients evaluated at the optimum. In this paper we design a practical SGD method capable of learning the optimal batch size adaptively throughout its iterations for strongly convex and smooth functions. Our method does this provably, and in our experiments with synthetic and real data robustly exhibits nearly optimal behaviour; that is, it works as if the optimal batch size was known a-priori. Further, we generalize our method to several new batch strategies not considered in the literature before, including a sampling suitable for distributed implementations.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Motasem Alfarra",
+      "Slavomir Hanzely",
+      "Alyazeed Albasyoni",
+      "Bernard Ghanem",
+      "Peter Richtarik"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.01097v2",
+    "url": "http://arxiv.org/abs/2005.01097v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.15025v1",
+    "title": "Optimal Embedding Learning Rate in LLMs: The Effect of Vocabulary Size",
+    "abstract": "Pretraining large language models is a costly process. To make this process more efficient, several methods have been proposed to optimize model architecture/parametrization and hardware use. On the parametrization side, $μP$ (Maximal Update Parametrization) parametrizes model weights and learning rate (LR) in a way that makes hyperparameters (HPs) transferable with width (embedding dimension): HPs can be tuned for a small model and used for larger models without additional tuning. While $μ$P showed impressive results in practice, recent empirical studies have reported conflicting observations when applied to LLMs. One limitation of the theory behind $μ$P is the fact that input dimension (vocabulary size in LLMs) is considered fixed when taking the width to infinity. This is unrealistic since vocabulary size is generally much larger than width in practice. In this work, we provide a theoretical analysis of the effect of vocabulary size on training dynamics, and subsequently show that as vocabulary size increases, the training dynamics \\emph{interpolate between the $μ$P regime and another regime that we call Large Vocab (LV) Regime}, where optimal scaling rules are different from those predicted by $μ$P. Our analysis reveals that in the LV regime, the optimal embedding LR to hidden LR ratio should roughly scale as $Θ(\\sqrt{width})$, surprisingly close to the empirical findings previously reported in the literature, and different from the $Θ(width)$ ratio predicted by $μ$P. We conduct several experiments to validate our theory, and pretrain a 1B model from scratch to show the benefit of our suggested scaling rule for the embedding LR.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Soufiane Hayou",
+      "Liyuan Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.15025v1",
+    "url": "http://arxiv.org/abs/2506.15025v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.14578v5",
+    "title": "Surge Phenomenon in Optimal Learning Rate and Batch Size Scaling",
+    "abstract": "In current deep learning tasks, Adam style optimizers such as Adam, Adagrad, RMSProp, Adafactor, and Lion have been widely used as alternatives to SGD style optimizers. These optimizers typically update model parameters using the sign of gradients, resulting in more stable convergence curves. The learning rate and the batch size are the most critical hyperparameters for optimizers, which require careful tuning to enable effective convergence. Previous research has shown that the optimal learning rate increases linearly or follows similar rules with batch size for SGD style optimizers. However, this conclusion is not applicable to Adam style optimizers. In this paper, we elucidate the connection between optimal learning rates and batch sizes for Adam style optimizers through both theoretical analysis and extensive experiments. First, we raise the scaling law between batch sizes and optimal learning rates in the sign of gradient case, in which we prove that the optimal learning rate first rises and then falls as the batch size increases. Moreover, the peak value of the surge will gradually move toward the larger batch size as training progresses. Second, we conducted experiments on various CV and NLP tasks and verified the correctness of the scaling law.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Shuaipeng Li",
+      "Penghao Zhao",
+      "Hailin Zhang",
+      "Xingwu Sun",
+      "Hao Wu",
+      "Dian Jiao",
+      "Weiyan Wang",
+      "Chengjun Liu",
+      "Zheng Fang",
+      "Jinbao Xue",
+      "Yangyu Tao",
+      "Bin Cui",
+      "Di Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.14578v5",
+    "url": "http://arxiv.org/abs/2405.14578v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.07435v1",
+    "title": "Alpha MAML: Adaptive Model-Agnostic Meta-Learning",
+    "abstract": "Model-agnostic meta-learning (MAML) is a meta-learning technique to train a model on a multitude of learning tasks in a way that primes the model for few-shot learning of new tasks. The MAML algorithm performs well on few-shot learning problems in classification, regression, and fine-tuning of policy gradients in reinforcement learning, but comes with the need for costly hyperparameter tuning for training stability. We address this shortcoming by introducing an extension to MAML, called Alpha MAML, to incorporate an online hyperparameter adaptation scheme that eliminates the need to tune meta-learning and learning rates. Our results with the Omniglot database demonstrate a substantial reduction in the need to tune MAML training hyperparameters and improvement to training stability with less sensitivity to hyperparameter choice.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Harkirat Singh Behl",
+      "Atılım Güneş Baydin",
+      "Philip H. S. Torr"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.07435v1",
+    "url": "http://arxiv.org/abs/1905.07435v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.04897v3",
+    "title": "From Link Prediction to Forecasting: Addressing Challenges in Batch-based Temporal Graph Learning",
+    "abstract": "Dynamic link prediction is an important problem considered in many recent works that propose approaches for learning temporal edge patterns. To assess their efficacy, models are evaluated on continuous-time and discrete-time temporal graph datasets, typically using a traditional batch-oriented evaluation setup. However, as we show in this work, a batch-oriented evaluation is often unsuitable and can cause several issues. Grouping edges into fixed-sized batches regardless of their occurrence time leads to information loss or leakage, depending on the temporal granularity of the data. Furthermore, fixed-size batches create time windows with different durations, resulting in an inconsistent dynamic link prediction task. In this work, we empirically show how traditional batch-based evaluation leads to skewed model performance and hinders the fair comparison of methods. We mitigate this problem by reformulating dynamic link prediction as a link forecasting task that better accounts for temporal information present in the data.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Moritz Lampert",
+      "Christopher Blöcker",
+      "Ingo Scholtes"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.04897v3",
+    "url": "http://arxiv.org/abs/2406.04897v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.13359v2",
+    "title": "Power Scheduler: A Batch Size and Token Number Agnostic Learning Rate Scheduler",
+    "abstract": "Finding the optimal learning rate for language model pretraining is a challenging task. This is not only because there is a complicated correlation between learning rate, batch size, number of training tokens, model size, and other hyperparameters but also because it is prohibitively expensive to perform a hyperparameter search for large language models with Billions or Trillions of parameters. Recent studies propose using small proxy models and small corpus to perform hyperparameter searches and transposing the optimal parameters to large models and large corpus. While the zero-shot transferability is theoretically and empirically proven for model size related hyperparameters, like depth and width, the zero-shot transfer from small corpus to large corpus is underexplored. In this paper, we study the correlation between optimal learning rate, batch size, and number of training tokens for the recently proposed WSD scheduler. After thousands of small experiments, we found a power-law relationship between variables and demonstrated its transferability across model sizes. Based on the observation, we propose a new learning rate scheduler, Power scheduler, that is agnostic about the number of training tokens and batch size. The experiment shows that combining the Power scheduler with Maximum Update Parameterization (muP) can consistently achieve impressive performance with one set of hyperparameters regardless of the number of training tokens, batch size, model size, and even model architecture. Our 3B dense and MoE models trained with the Power scheduler achieve comparable performance as state-of-the-art small language models. We open-source these pretrained models at https://ibm.biz/BdKhLa.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yikang Shen",
+      "Matthew Stallone",
+      "Mayank Mishra",
+      "Gaoyuan Zhang",
+      "Shawn Tan",
+      "Aditya Prasad",
+      "Adriana Meza Soria",
+      "David D. Cox",
+      "Rameswar Panda"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.13359v2",
+    "url": "http://arxiv.org/abs/2408.13359v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.03105v2",
+    "title": "Accelerating SGDM via Learning Rate and Batch Size Schedules: A Lyapunov-Based Analysis",
+    "abstract": "We analyze the convergence behavior of stochastic gradient descent with momentum (SGDM) under dynamic learning-rate and batch-size schedules by introducing a novel and simpler Lyapunov function. We extend the existing theoretical framework to cover three practical scheduling strategies commonly used in deep learning: a constant batch size with a decaying learning rate, an increasing batch size with a decaying learning rate, and an increasing batch size with an increasing learning rate. Our results reveal a clear hierarchy in convergence: a constant batch size does not guarantee convergence of the expected gradient norm, whereas an increasing batch size does, and simultaneously increasing both the batch size and learning rate achieves a provably faster decay. Empirical results validate our theory, showing that dynamically scheduled SGDM significantly outperforms its fixed-hyperparameter counterpart in convergence speed. We also evaluated a warm-up schedule in experiments, which empirically outperformed all other strategies in convergence behavior.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yuichi Kondo",
+      "Hideaki Iiduka"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.03105v2",
+    "url": "http://arxiv.org/abs/2508.03105v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.05297v1",
+    "title": "Optimal Growth Schedules for Batch Size and Learning Rate in SGD that Reduce SFO Complexity",
+    "abstract": "The unprecedented growth of deep learning models has enabled remarkable advances but introduced substantial computational bottlenecks. A key factor contributing to training efficiency is batch-size and learning-rate scheduling in stochastic gradient methods. However, naive scheduling of these hyperparameters can degrade optimization efficiency and compromise generalization. Motivated by recent theoretical insights, we investigated how the batch size and learning rate should be increased during training to balance efficiency and convergence. We analyzed this problem on the basis of stochastic first-order oracle (SFO) complexity, defined as the expected number of gradient evaluations needed to reach an $ε$-approximate stationary point of the empirical loss. We theoretically derived optimal growth schedules for the batch size and learning rate that reduce SFO complexity and validated them through extensive experiments. Our results offer both theoretical insights and practical guidelines for scalable and efficient large-batch training in deep learning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hikaru Umeda",
+      "Hideaki Iiduka"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.05297v1",
+    "url": "http://arxiv.org/abs/2508.05297v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.14717v1",
+    "title": "Seesaw: Accelerating Training by Balancing Learning Rate and Batch Size Scheduling",
+    "abstract": "Increasing the batch size during training -- a ''batch ramp'' -- is a promising strategy to accelerate large language model pretraining. While for SGD, doubling the batch size can be equivalent to halving the learning rate, the optimal strategy for adaptive optimizers like Adam is less clear. As a result, any batch-ramp scheduling, if used at all, is typically tuned heuristically. This work develops a principled framework for batch-size scheduling and introduces Seesaw: whenever a standard scheduler would halve the learning rate, Seesaw instead multiplies it by $1/\\sqrt{2}$ and doubles the batch size, preserving loss dynamics while reducing serial steps. Theoretically, we provide, to our knowledge, the first finite-sample proof of equivalence between learning-rate decay and batch-size ramp-up for SGD on noisy linear regression, and we extend this equivalence to normalized SGD, a tractable proxy for Adam, under a variance-dominated regime observed in practice. Empirically, on 150M/300M/600M-parameter models trained at Chinchilla scale using a constant (critical) batch size, Seesaw matches cosine decay at equal FLOPs while reducing wall-clock time by $\\approx 36\\%$, approaching the theoretical limit implied by our analysis.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Alexandru Meterez",
+      "Depen Morwani",
+      "Jingfeng Wu",
+      "Costin-Andrei Oncescu",
+      "Cengiz Pehlevan",
+      "Sham Kakade"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.14717v1",
+    "url": "http://arxiv.org/abs/2510.14717v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.05855v1",
+    "title": "Automated Learning Rate Scheduler for Large-batch Training",
+    "abstract": "Large-batch training has been essential in leveraging large-scale datasets and models in deep learning. While it is computationally beneficial to use large batch sizes, it often requires a specially designed learning rate (LR) schedule to achieve a comparable level of performance as in smaller batch training. Especially, when the number of training epochs is constrained, the use of a large LR and a warmup strategy is critical in the final performance of large-batch training due to the reduced number of updating steps. In this work, we propose an automated LR scheduling algorithm which is effective for neural network training with a large batch size under the given epoch budget. In specific, the whole schedule consists of two phases: adaptive warmup and predefined decay, where the LR is increased until the training loss no longer decreases and decreased to zero until the end of training. Here, whether the training loss has reached the minimum value is robustly checked with Gaussian process smoothing in an online manner with a low computational burden. Coupled with adaptive stochastic optimizers such as AdamP and LAMB, the proposed scheduler successfully adjusts the LRs without cumbersome hyperparameter tuning and achieves comparable or better performances than tuned baselines on various image classification benchmarks and architectures with a wide range of batch sizes.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Chiheon Kim",
+      "Saehoon Kim",
+      "Jongmin Kim",
+      "Donghoon Lee",
+      "Sungwoong Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.05855v1",
+    "url": "http://arxiv.org/abs/2107.05855v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1711.00489v2",
+    "title": "Don't Decay the Learning Rate, Increase the Batch Size",
+    "abstract": "It is common practice to decay the learning rate. Here we show one can usually obtain the same learning curve on both training and test sets by instead increasing the batch size during training. This procedure is successful for stochastic gradient descent (SGD), SGD with momentum, Nesterov momentum, and Adam. It reaches equivalent test accuracies after the same number of training epochs, but with fewer parameter updates, leading to greater parallelism and shorter training times. We can further reduce the number of parameter updates by increasing the learning rate $ε$ and scaling the batch size $B \\propto ε$. Finally, one can increase the momentum coefficient $m$ and scale $B \\propto 1/(1-m)$, although this tends to slightly reduce the test accuracy. Crucially, our techniques allow us to repurpose existing training schedules for large batch training with no hyper-parameter tuning. We train ResNet-50 on ImageNet to $76.1\\%$ validation accuracy in under 30 minutes.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Samuel L. Smith",
+      "Pieter-Jan Kindermans",
+      "Chris Ying",
+      "Quoc V. Le"
+    ],
+    "doi": null,
+    "arxiv_id": "1711.00489v2",
+    "url": "http://arxiv.org/abs/1711.00489v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.12406v2",
+    "title": "LightTune: Lightweight Forward-Only Online Fine-Tuning with Applications to Link Adaptation",
+    "abstract": "Deploying machine learning (ML) algorithms on mobile phones is bottlenecked by performance degradation under dynamic, real-world conditions that differ from the offline training conditions. While continual learning and adaptation are essential to mitigate this distributional shift, conventional online learning methods are often computationally prohibitive for resource-constrained devices. In this paper, we propose LightTune, a lightweight, backpropagation-free online fine-tuning framework with provable convergence guarantees. LightTune opportunistically refines ML models using live test-time data only when performance falls below a predefined threshold, ensuring minimal computational overhead and highly efficient responsiveness. As a practical demonstration, we integrate LightTune into a block error rate (BLER) prediction algorithm for 6G mobile systems. This integration enables the ML BLER prediction model to dynamically adapt to previously unseen channel conditions in real-time. Our extensive results show a substantial reduction in the average BLER prediction error of up to 48.8% with online fine-tuning. Furthermore, we leverage this BLER prediction algorithm for link adaptation and demonstrate average throughput improvements of up to 15.5% compared to a conventional table-based outer loop link adaptation (OLLA) algorithm.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ramy E. Ali",
+      "Federico Penna"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.12406v2",
+    "url": "http://arxiv.org/abs/2604.12406v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.08770v4",
+    "title": "Increasing Both Batch Size and Learning Rate Accelerates Stochastic Gradient Descent",
+    "abstract": "The performance of mini-batch stochastic gradient descent (SGD) strongly depends on setting the batch size and learning rate to minimize the empirical loss in training the deep neural network. In this paper, we present theoretical analyses of mini-batch SGD with four schedulers: (i) constant batch size and decaying learning rate scheduler, (ii) increasing batch size and decaying learning rate scheduler, (iii) increasing batch size and increasing learning rate scheduler, and (iv) increasing batch size and warm-up decaying learning rate scheduler. We show that mini-batch SGD using scheduler (i) does not always minimize the expectation of the full gradient norm of the empirical loss, whereas it does using any of schedulers (ii), (iii), and (iv). Furthermore, schedulers (iii) and (iv) accelerate mini-batch SGD. The paper also provides numerical results of supporting analyses showing that using scheduler (iii) or (iv) minimizes the full gradient norm of the empirical loss faster than using scheduler (i) or (ii).",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hikaru Umeda",
+      "Hideaki Iiduka"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.08770v4",
+    "url": "http://arxiv.org/abs/2409.08770v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1804.09859v1",
+    "title": "Competitive Learning Enriches Learning Representation and Accelerates the Fine-tuning of CNNs",
+    "abstract": "In this study, we propose the integration of competitive learning into convolutional neural networks (CNNs) to improve the representation learning and efficiency of fine-tuning. Conventional CNNs use back propagation learning, and it enables powerful representation learning by a discrimination task. However, it requires huge amount of labeled data, and acquisition of labeled data is much harder than that of unlabeled data. Thus, efficient use of unlabeled data is getting crucial for DNNs. To address the problem, we introduce unsupervised competitive learning into the convolutional layer, and utilize unlabeled data for effective representation learning. The results of validation experiments using a toy model demonstrated that strong representation learning effectively extracted bases of images into convolutional filters using unlabeled data, and accelerated the speed of the fine-tuning of subsequent supervised back propagation learning. The leverage was more apparent when the number of filters was sufficiently large, and, in such a case, the error rate steeply decreased in the initial phase of fine-tuning. Thus, the proposed method enlarged the number of filters in CNNs, and enabled a more detailed and generalized representation. It could provide a possibility of not only deep but broad neural networks.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Takashi Shinozaki"
+    ],
+    "doi": null,
+    "arxiv_id": "1804.09859v1",
+    "url": "http://arxiv.org/abs/1804.09859v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:core_topic",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.09984v1",
+    "title": "Convergence of Sharpness-Aware Minimization Algorithms using Increasing Batch Size and Decaying Learning Rate",
+    "abstract": "The sharpness-aware minimization (SAM) algorithm and its variants, including gap guided SAM (GSAM), have been successful at improving the generalization capability of deep neural network models by finding flat local minima of the empirical loss in training. Meanwhile, it has been shown theoretically and practically that increasing the batch size or decaying the learning rate avoids sharp local minima of the empirical loss. In this paper, we consider the GSAM algorithm with increasing batch sizes or decaying learning rates, such as cosine annealing or linear learning rate, and theoretically show its convergence. Moreover, we numerically compare SAM (GSAM) with and without an increasing batch size and conclude that using an increasing batch size or decaying learning rate finds flatter local minima than using a constant batch size and learning rate.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hinata Harada",
+      "Hideaki Iiduka"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.09984v1",
+    "url": "http://arxiv.org/abs/2409.09984v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.14911v1",
+    "title": "Fine-tuning RoBERTa for CVE-to-CWE Classification: A 125M Parameter Model Competitive with LLMs",
+    "abstract": "We present a fine-tuned RoBERTa-base classifier (125M parameters) for mapping Common Vulnerabilities and Exposures (CVE) descriptions to Common Weakness Enumeration (CWE) categories. We construct a large-scale training dataset of 234,770 CVE descriptions with AI-refined CWE labels using Claude Sonnet 4.6, and agreement-filtered evaluation sets where NVD and AI labels agree. On our held-out test set (27,780 samples, 205 CWE classes), the model achieves 87.4% top-1 accuracy and 60.7% Macro F1 -- a +15.5 percentage-point Macro F1 gain over a TF-IDF baseline that already reaches 84.9% top-1, demonstrating the model's advantage on rare weakness categories. On the external CTI-Bench benchmark (NeurIPS 2024), the model achieves 75.6% strict accuracy (95% CI: 72.8-78.2%) -- statistically indistinguishable from Cisco Foundation-Sec-8B-Reasoning (75.3%, 8B parameters) at 64x fewer parameters. We release the dataset, model, and training code.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Nikita Mosievskiy"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.14911v1",
+    "url": "http://arxiv.org/abs/2603.14911v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:42172159",
+  "title": "A Method for Data Augmentation in Vertical Federated Learning Addressing Data Heterogeneity.",
+  "abstract": "Vertical federated learning (VFL) can aggregate data features from participating parties and is applicable to data collaboration in various fields. To address data heterogeneity in VFL, this article proposes a framework tailored for heterogeneous environments. First, to mitigate performance degradation caused by imbalanced local data across clients, we exploit conditional generative adversarial networks (CGANs) for targeted data augmentation, and propose a data balancing model named FeCWGAN-GP based on CGAN. This model pretrains a local CGAN for each client to perform local private data compensation, thereby alleviating the problem of decreased model performance. Second, to handle local model parameter distribution shifts induced by heterogeneity, leveraging both the sample size proportions and the Wasserstein distance in the model parameter space to capture parameter distribution shifts due to data heterogeneity, a parameter aggregation algorithm named WFedDA based on sample size and parameter distribution is proposed. This method calculates weights based on the sample size proportions of participants and the distribution difference between local model parameters and global model parameters, thus optimizing the global model. Finally, to address the instability of local model parameters caused by data heterogeneity, a stochastic gradient descent (SGD) method with a dual smoothing mechanism named SGD-MA is proposed. This method uses an exponential moving average (EMA) to process gradients and parameters sequentially, which reduces the fluctuation of gradients and the instability of parameter updates, thereby improving the stability of the training process. Experiments on the public datasets MNIST, CIFAR-10, Fashion-MNIST, and MIMIC-III demonstrate that the methods proposed in this article can effectively address the issues caused by data heterogeneity in multidata-source environments, significantly improving the generalization capability and stability of the global model.",
+  "year": 2026,
+  "venue": "IEEE transactions on neural networks and learning systems",
+  "authors": [
+    "Yunpeng Xiao",
+    "Tingting Lv",
+    "Dengke Zhao",
+    "Wanjing Zhao",
+    "Tun Li",
+    "Rong Wang",
+    "Guoyin Wang"
+  ],
+  "doi": "10.1109/TNNLS.2026.3691817",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42172159/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42172159"
+  }
+}

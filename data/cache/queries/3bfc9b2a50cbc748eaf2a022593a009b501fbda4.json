@@ -1,0 +1,876 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2210.12607v1",
+    "title": "Learning to Perform Complex Tasks through Compositional Fine-Tuning of Language Models",
+    "abstract": "How to usefully encode compositional task structure has long been a core challenge in AI. Recent work in chain of thought prompting has shown that for very large neural language models (LMs), explicitly demonstrating the inferential steps involved in a target task may improve performance over end-to-end learning that focuses on the target task alone. However, chain of thought prompting has significant limitations due to its dependency on huge pretrained LMs. In this work, we present compositional fine-tuning (CFT): an approach based on explicitly decomposing a target task into component tasks, and then fine-tuning smaller LMs on a curriculum of such component tasks. We apply CFT to recommendation tasks in two domains, world travel and local dining, as well as a previously studied inferential task (sports understanding). We show that CFT outperforms end-to-end learning even with equal amounts of data, and gets consistently better as more component tasks are modeled via fine-tuning. Compared with chain of thought prompting, CFT performs at least as well using LMs only 7.4% of the size, and is moreover applicable to task domains for which data are not available during pretraining.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Victor S. Bursztyn",
+      "David Demeter",
+      "Doug Downey",
+      "Larry Birnbaum"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.12607v1",
+    "url": "http://arxiv.org/abs/2210.12607v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.06500v2",
+    "title": "Differentially Private Fine-tuning of Language Models",
+    "abstract": "We give simpler, sparser, and faster algorithms for differentially private fine-tuning of large-scale pre-trained language models, which achieve the state-of-the-art privacy versus utility tradeoffs on many standard NLP tasks. We propose a meta-framework for this problem, inspired by the recent success of highly parameter-efficient methods for fine-tuning. Our experiments show that differentially private adaptations of these approaches outperform previous private algorithms in three important dimensions: utility, privacy, and the computational and memory cost of private training. On many commonly studied datasets, the utility of private models approaches that of non-private models. For example, on the MNLI dataset we achieve an accuracy of $87.8\\%$ using RoBERTa-Large and $83.5\\%$ using RoBERTa-Base with a privacy budget of $ε= 6.7$. In comparison, absent privacy constraints, RoBERTa-Large achieves an accuracy of $90.2\\%$. Our findings are similar for natural language generation tasks. Privately fine-tuning with DART, GPT-2-Small, GPT-2-Medium, GPT-2-Large, and GPT-2-XL achieve BLEU scores of 38.5, 42.0, 43.1, and 43.8 respectively (privacy budget of $ε= 6.8,δ=$ 1e-5) whereas the non-private baseline is $48.1$. All our experiments suggest that larger models are better suited for private fine-tuning: while they are well known to achieve superior accuracy non-privately, we find that they also better maintain their accuracy when privacy is introduced.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Da Yu",
+      "Saurabh Naik",
+      "Arturs Backurs",
+      "Sivakanth Gopi",
+      "Huseyin A. Inan",
+      "Gautam Kamath",
+      "Janardhan Kulkarni",
+      "Yin Tat Lee",
+      "Andre Manoel",
+      "Lukas Wutschitz",
+      "Sergey Yekhanin",
+      "Huishuai Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.06500v2",
+    "url": "http://arxiv.org/abs/2110.06500v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.15317v5",
+    "title": "Generalized Graph Prompt: Toward a Unification of Pre-Training and Downstream Tasks on Graphs",
+    "abstract": "Graph neural networks have emerged as a powerful tool for graph representation learning, but their performance heavily relies on abundant task-specific supervision. To reduce labeling requirement, the \"pre-train, prompt\" paradigms have become increasingly common. However, existing study of prompting on graphs is limited, lacking a universal treatment to appeal to different downstream tasks. In this paper, we propose GraphPrompt, a novel pre-training and prompting framework on graphs. GraphPrompt not only unifies pre-training and downstream tasks into a common task template but also employs a learnable prompt to assist a downstream task in locating the most relevant knowledge from the pre-trained model in a task-specific manner. To further enhance GraphPrompt in these two stages, we extend it into GraphPrompt+ with two major enhancements. First, we generalize several popular graph pre-training tasks beyond simple link prediction to broaden the compatibility with our task template. Second, we propose a more generalized prompt design that incorporates a series of prompt vectors within every layer of the pre-trained graph encoder, in order to capitalize on the hierarchical information across different layers beyond just the readout layer. Finally, we conduct extensive experiments on five public datasets to evaluate and analyze GraphPrompt and GraphPrompt+.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xingtong Yu",
+      "Zhenghao Liu",
+      "Yuan Fang",
+      "Zemin Liu",
+      "Sihong Chen",
+      "Xinming Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.15317v5",
+    "url": "http://arxiv.org/abs/2311.15317v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.10375v2",
+    "title": "PALI at SemEval-2021 Task 2: Fine-Tune XLM-RoBERTa for Word in Context Disambiguation",
+    "abstract": "This paper presents the PALI team's winning system for SemEval-2021 Task 2: Multilingual and Cross-lingual Word-in-Context Disambiguation. We fine-tune XLM-RoBERTa model to solve the task of word in context disambiguation, i.e., to determine whether the target word in the two contexts contains the same meaning or not. In the implementation, we first specifically design an input tag to emphasize the target word in the contexts. Second, we construct a new vector on the fine-tuned embeddings from XLM-RoBERTa and feed it to a fully-connected network to output the probability of whether the target word in the context has the same meaning or not. The new vector is attained by concatenating the embedding of the [CLS] token and the embeddings of the target word in the contexts. In training, we explore several tricks, such as the Ranger optimizer, data augmentation, and adversarial training, to improve the model prediction. Consequently, we attain first place in all four cross-lingual tasks.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Shuyi Xie",
+      "Jian Ma",
+      "Haiqin Yang",
+      "Lianxin Jiang",
+      "Yang Mo",
+      "Jianping Shen"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.10375v2",
+    "url": "http://arxiv.org/abs/2104.10375v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.01947v1",
+    "title": "Parameter-Efficient Fine-Tuning of Large Pretrained Models for Instance Segmentation Tasks",
+    "abstract": "Research and applications in artificial intelligence have recently shifted with the rise of large pretrained models, which deliver state-of-the-art results across numerous tasks. However, the substantial increase in parameters introduces a need for parameter-efficient training strategies. Despite significant advancements, limited research has explored parameter-efficient fine-tuning (PEFT) methods in the context of transformer-based models for instance segmentation. Addressing this gap, this study investigates the effectiveness of PEFT methods, specifically adapters and Low-Rank Adaptation (LoRA), applied to two models across four benchmark datasets. Integrating sequentially arranged adapter modules and applying LoRA to deformable attention--explored here for the first time--achieves competitive performance while fine-tuning only about 1-6% of model parameters, a marked improvement over the 40-55% required in traditional fine-tuning. Key findings indicate that using 2-3 adapters per transformer block offers an optimal balance of performance and efficiency. Furthermore, LoRA, exhibits strong parameter efficiency when applied to deformable attention, and in certain cases surpasses adapter configurations. These results show that the impact of PEFT techniques varies based on dataset complexity and model architecture, underscoring the importance of context-specific tuning. Overall, this work demonstrates the potential of PEFT to enable scalable, customizable, and computationally efficient transfer learning for instance segmentation tasks.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Nermeen Abou Baker",
+      "David Rohrschneider",
+      "Uwe Handmann"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.01947v1",
+    "url": "http://arxiv.org/abs/2606.01947v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.00946v3",
+    "title": "Fine-tuning with Very Large Dropout",
+    "abstract": "It is impossible today to pretend that the practice of machine learning is always compatible with the idea that training and testing data follow the same distribution. Several authors have recently used ensemble techniques to show how scenarios involving multiple data distributions are best served by representations that are both richer than those obtained by regularizing for the best in-distribution performance, and richer than those obtained under the influence of the implicit sparsity bias of common stochastic gradient procedures. This contribution investigates the use of very high dropout rates instead of ensembles to obtain such rich representations. Although training a deep network from scratch using such dropout rates is virtually impossible, fine-tuning a large pre-trained model under such conditions is not only possible but also achieves out-of-distribution performances that exceed those of both ensembles and weight averaging methods such as model soups. This result has practical significance because the importance of the fine-tuning scenario has considerably grown in recent years. This result also provides interesting insights on the nature of rich representations and on the intrinsically linear nature of fine-tuning a large network using a comparatively small dataset.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jianyu Zhang",
+      "Léon Bottou"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.00946v3",
+    "url": "http://arxiv.org/abs/2403.00946v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2102.03983v1",
+    "title": "Partial Is Better Than All: Revisiting Fine-tuning Strategy for Few-shot Learning",
+    "abstract": "The goal of few-shot learning is to learn a classifier that can recognize unseen classes from limited support data with labels. A common practice for this task is to train a model on the base set first and then transfer to novel classes through fine-tuning (Here fine-tuning procedure is defined as transferring knowledge from base to novel data, i.e. learning to transfer in few-shot scenario.) or meta-learning. However, as the base classes have no overlap to the novel set, simply transferring whole knowledge from base data is not an optimal solution since some knowledge in the base model may be biased or even harmful to the novel class. In this paper, we propose to transfer partial knowledge by freezing or fine-tuning particular layer(s) in the base model. Specifically, layers will be imposed different learning rates if they are chosen to be fine-tuned, to control the extent of preserved transferability. To determine which layers to be recast and what values of learning rates for them, we introduce an evolutionary search based method that is efficient to simultaneously locate the target layers and determine their individual learning rates. We conduct extensive experiments on CUB and mini-ImageNet to demonstrate the effectiveness of our proposed method. It achieves the state-of-the-art performance on both meta-learning and non-meta based frameworks. Furthermore, we extend our method to the conventional pre-training + fine-tuning paradigm and obtain consistent improvement.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Zhiqiang Shen",
+      "Zechun Liu",
+      "Jie Qin",
+      "Marios Savvides",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2102.03983v1",
+    "url": "http://arxiv.org/abs/2102.03983v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.11770v1",
+    "title": "Rethinking the Hyperparameters for Fine-tuning",
+    "abstract": "Fine-tuning from pre-trained ImageNet models has become the de-facto standard for various computer vision tasks. Current practices for fine-tuning typically involve selecting an ad-hoc choice of hyperparameters and keeping them fixed to values normally used for training from scratch. This paper re-examines several common practices of setting hyperparameters for fine-tuning. Our findings are based on extensive empirical evaluation for fine-tuning on various transfer learning benchmarks. (1) While prior works have thoroughly investigated learning rate and batch size, momentum for fine-tuning is a relatively unexplored parameter. We find that the value of momentum also affects fine-tuning performance and connect it with previous theoretical findings. (2) Optimal hyperparameters for fine-tuning, in particular, the effective learning rate, are not only dataset dependent but also sensitive to the similarity between the source domain and target domain. This is in contrast to hyperparameters for training from scratch. (3) Reference-based regularization that keeps models close to the initial model does not necessarily apply for \"dissimilar\" datasets. Our findings challenge common practices of fine-tuning and encourages deep learning practitioners to rethink the hyperparameters for fine-tuning.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Hao Li",
+      "Pratik Chaudhari",
+      "Hao Yang",
+      "Michael Lam",
+      "Avinash Ravichandran",
+      "Rahul Bhotika",
+      "Stefano Soatto"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.11770v1",
+    "url": "http://arxiv.org/abs/2002.11770v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.07888v2",
+    "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+    "abstract": "Fine-tuning Large Language Models (LLMs) incurs considerable training costs, driving the need for data-efficient training with optimised data ordering. Human-inspired strategies offer a solution by organising data based on human learning practices. This study evaluates the fine-tuning efficiency of five human-inspired strategies across four language models, three datasets, and both human- and LLM-labelled data in the context of medical question answering. These strategies achieve the best accuracy gain of 1.81% and an average gain of 1.02% across datasets, with interleaved strategies delivering the best average results. However, the best strategy varies across model-dataset combinations, limiting the generalisability of the effects of any single strategy. Additionally, LLM-defined question difficulty outperforms human-defined labels in curriculum-based learning, showing the potential of model-generated data as a cost-effective alternative for optimising fine-tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yushi Yang",
+      "Andrew M. Bean",
+      "Robert McCraith",
+      "Adam Mahdi"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.07888v2",
+    "url": "http://arxiv.org/abs/2408.07888v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.05457v1",
+    "title": "Legged Robots that Keep on Learning: Fine-Tuning Locomotion Policies in the Real World",
+    "abstract": "Legged robots are physically capable of traversing a wide range of challenging environments, but designing controllers that are sufficiently robust to handle this diversity has been a long-standing challenge in robotics. Reinforcement learning presents an appealing approach for automating the controller design process and has been able to produce remarkably robust controllers when trained in a suitable range of environments. However, it is difficult to predict all likely conditions the robot will encounter during deployment and enumerate them at training-time. What if instead of training controllers that are robust enough to handle any eventuality, we enable the robot to continually learn in any setting it finds itself in? This kind of real-world reinforcement learning poses a number of challenges, including efficiency, safety, and autonomy. To address these challenges, we propose a practical robot reinforcement learning system for fine-tuning locomotion policies in the real world. We demonstrate that a modest amount of real-world training can substantially improve performance during deployment, and this enables a real A1 quadrupedal robot to autonomously fine-tune multiple locomotion skills in a range of environments, including an outdoor lawn and a variety of indoor terrains.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Laura Smith",
+      "J. Chase Kew",
+      "Xue Bin Peng",
+      "Sehoon Ha",
+      "Jie Tan",
+      "Sergey Levine"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.05457v1",
+    "url": "http://arxiv.org/abs/2110.05457v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.14911v1",
+    "title": "Fine-tuning RoBERTa for CVE-to-CWE Classification: A 125M Parameter Model Competitive with LLMs",
+    "abstract": "We present a fine-tuned RoBERTa-base classifier (125M parameters) for mapping Common Vulnerabilities and Exposures (CVE) descriptions to Common Weakness Enumeration (CWE) categories. We construct a large-scale training dataset of 234,770 CVE descriptions with AI-refined CWE labels using Claude Sonnet 4.6, and agreement-filtered evaluation sets where NVD and AI labels agree. On our held-out test set (27,780 samples, 205 CWE classes), the model achieves 87.4% top-1 accuracy and 60.7% Macro F1 -- a +15.5 percentage-point Macro F1 gain over a TF-IDF baseline that already reaches 84.9% top-1, demonstrating the model's advantage on rare weakness categories. On the external CTI-Bench benchmark (NeurIPS 2024), the model achieves 75.6% strict accuracy (95% CI: 72.8-78.2%) -- statistically indistinguishable from Cisco Foundation-Sec-8B-Reasoning (75.3%, 8B parameters) at 64x fewer parameters. We release the dataset, model, and training code.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Nikita Mosievskiy"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.14911v1",
+    "url": "http://arxiv.org/abs/2603.14911v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.01035v5",
+    "title": "Task-Specific Directions: Definition, Exploration, and Utilization in Parameter Efficient Fine-Tuning",
+    "abstract": "Large language models demonstrate impressive performance on downstream tasks, yet they require extensive resource consumption when fully fine-tuning all parameters. To mitigate this, Parameter Efficient Fine-Tuning (PEFT) strategies, such as LoRA, have been developed. In this paper, we delve into the concept of task-specific directions (TSDs), which are critical for transitioning large models from pretrained states to task-specific enhancements in PEFT. We propose a framework to clearly define these directions and explore their properties and practical utilization challenges. We then introduce a novel approach, LoRA-Dash, which aims to maximize the impact of TSDs during the fine-tuning process, thereby enhancing model performance on targeted tasks. Additionally, based on our exploration of TSD, we focus on an important issue in PEFT: the initialization of LoRA. While some works have pointed out the significance of initialization for LoRA's performance and proposed various strategies, these methods are often empirical and not task-specific. To address this issue, we propose LoRA-Init. Starting from TSD, we identify the directions that require the most adjustment during fine-tuning for downstream tasks. By initializing the matrices in LoRA with these directions, LoRA-Init significantly enhances LoRA's performance. Moreover, we can combine LoRA-Dash and LoRA-Init to create the final version of LoRA based on TSDs, which we refer to as LoRA-TSD. Extensive experiments have conclusively demonstrated the effectiveness of these methods, and in-depth analyses further reveal the underlying mechanisms behind their success.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Chongjie Si",
+      "Zhiyi Shi",
+      "Shifan Zhang",
+      "Xiaokang Yang",
+      "Hanspeter Pfister",
+      "Wei Shen"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.01035v5",
+    "url": "http://arxiv.org/abs/2409.01035v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.10190v2",
+    "title": "Never Stop Learning: The Effectiveness of Fine-Tuning in Robotic Reinforcement Learning",
+    "abstract": "One of the great promises of robot learning systems is that they will be able to learn from their mistakes and continuously adapt to ever-changing environments. Despite this potential, most of the robot learning systems today are deployed as a fixed policy and they are not being adapted after their deployment. Can we efficiently adapt previously learned behaviors to new environments, objects and percepts in the real world? In this paper, we present a method and empirical evidence towards a robot learning framework that facilitates continuous adaption. In particular, we demonstrate how to adapt vision-based robotic manipulation policies to new variations by fine-tuning via off-policy reinforcement learning, including changes in background, object shape and appearance, lighting conditions, and robot morphology. Further, this adaptation uses less than 0.2% of the data necessary to learn the task from scratch. We find that our approach of adapting pre-trained policies leads to substantial performance gains over the course of fine-tuning, and that pre-training via RL is essential: training from scratch or adapting from supervised ImageNet features are both unsuccessful with such small amounts of data. We also find that these positive results hold in a limited continual learning setting, in which we repeatedly fine-tune a single lineage of policies using data from a succession of new tasks. Our empirical conclusions are consistently supported by experiments on simulated manipulation tasks, and by 52 unique fine-tuning experiments on a real robotic grasping system pre-trained on 580,000 grasps.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ryan Julian",
+      "Benjamin Swanson",
+      "Gaurav S. Sukhatme",
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Karol Hausman"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.10190v2",
+    "url": "http://arxiv.org/abs/2004.10190v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2304.00571v3",
+    "title": "DropMAE: Learning Representations via Masked Autoencoders with Spatial-Attention Dropout for Temporal Matching Tasks",
+    "abstract": "This paper studies masked autoencoder (MAE) video pre-training for various temporal matching-based downstream tasks, i.e., object-level tracking tasks including video object tracking (VOT) and video object segmentation (VOS), self-supervised visual correspondence learning, dense tracking tasks including optical flow estimation and long-term point tracking, and 3D point cloud tracking. Specifically, our work explores to provide a general representation to boost the temporal matching ability in various downstream tracking tasks. To achieve this, we firstly find that a simple extension of MAE, which randomly masks out frame patches in videos and reconstruct the frame pixels, heavily relies on spatial cues while ignoring temporal relations for frame reconstruction, thus leading to sub-optimal temporal matching representations. To alleviate this, we propose DropMAE, which adaptively performs spatial-attention dropout in the frame reconstruction to facilitate temporal correspondence learning in videos. We obtain several important findings with DropMAE: 1) DropMAE is a strong and efficient temporal matching learner, which achieves better fine-tuning results on matching-based tasks than the ImageNet-based MAE with 2x faster pre-training speed. 2) DropMAE is effective for different tracking tasks, i.e., object-level matching tasks including VOT and VOS, dense tracking tasks including optical flow estimation and tracking any point (TAP), and even 3D tracking in the different modality of point cloud data. Since none exists, we build ViT-based trackers for different downstream tracking tasks, and our pre-trained DropMAE model can be directly loaded in these ViT-based trackers for fine-tuning without further modifications. Experiments on 6 downstream tracking tasks demonstrate the effectiveness of DropMAE as a general pre-trained representation for diverse tracking tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Qiangqiang Wu",
+      "Tianyu Yang",
+      "Ziquan Liu",
+      "Wei Lin",
+      "Baoyuan Wu",
+      "Antoni B. Chan"
+    ],
+    "doi": null,
+    "arxiv_id": "2304.00571v3",
+    "url": "http://arxiv.org/abs/2304.00571v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.10059v1",
+    "title": "Is The Universal Matter - Antimatter Asymmetry Fine Tuned?",
+    "abstract": "The asymmetry between matter and antimatter is key to the existence and nature of our Universe. A measure of the matter - antimatter asymmetry of the Universe is provided by the present value of the universal ratio of baryons (baryons minus antibaryons) to photons (or the ratio of baryons to entropy). The baryon asymmetry parameter is an important physical and cosmological parameter. But how fine tuned is it? A \"natural\" value for this parameter is zero, corresponding to equal amounts of matter and antimatter. Another, also possibly natural, choice for this dimensionless parameter would be of order unity, corresponding to nearly equal amounts (by number) of matter (and essentially no antimatter) and photons in every comoving volume. However, observations suggest that in the Universe we inhabit the value of this parameter is nonzero, but smaller than this natural value by some nine to ten orders of magnitude. In this contribution we review the evidence that our Universe does not contain equal amounts of matter and antimatter. Any change in the magnitude of the baryon asymmetry parameter necessarily leads to a universe with physical characteristics different from those in our own. The degree of fine tuning in the baryon asymmetry parameter is determined by the width of the range over which it can be varied and still allow for the existence of life. Our results suggest that the baryon asymmetry parameter can be varied over a very wide range without impacting the prospects for life; this result is not suggestive of fine tuning. [abridged]",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Gary Steigman",
+      "Robert J. Scherrer"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.10059v1",
+    "url": "http://arxiv.org/abs/1801.10059v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.12406v2",
+    "title": "LightTune: Lightweight Forward-Only Online Fine-Tuning with Applications to Link Adaptation",
+    "abstract": "Deploying machine learning (ML) algorithms on mobile phones is bottlenecked by performance degradation under dynamic, real-world conditions that differ from the offline training conditions. While continual learning and adaptation are essential to mitigate this distributional shift, conventional online learning methods are often computationally prohibitive for resource-constrained devices. In this paper, we propose LightTune, a lightweight, backpropagation-free online fine-tuning framework with provable convergence guarantees. LightTune opportunistically refines ML models using live test-time data only when performance falls below a predefined threshold, ensuring minimal computational overhead and highly efficient responsiveness. As a practical demonstration, we integrate LightTune into a block error rate (BLER) prediction algorithm for 6G mobile systems. This integration enables the ML BLER prediction model to dynamically adapt to previously unseen channel conditions in real-time. Our extensive results show a substantial reduction in the average BLER prediction error of up to 48.8% with online fine-tuning. Furthermore, we leverage this BLER prediction algorithm for link adaptation and demonstrate average throughput improvements of up to 15.5% compared to a conventional table-based outer loop link adaptation (OLLA) algorithm.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ramy E. Ali",
+      "Federico Penna"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.12406v2",
+    "url": "http://arxiv.org/abs/2604.12406v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.03059v8",
+    "title": "Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models",
+    "abstract": "The popularity of pre-trained large models has revolutionized downstream tasks across diverse fields, such as language, vision, and multi-modality. To minimize the adaption cost for downstream tasks, many Parameter-Efficient Fine-Tuning (PEFT) techniques are proposed for language and 2D image pre-trained models. However, the specialized PEFT method for 3D pre-trained models is still under-explored. To this end, we introduce Point-PEFT, a novel framework for adapting point cloud pre-trained models with minimal learnable parameters. Specifically, for a pre-trained 3D model, we freeze most of its parameters, and only tune the newly added PEFT modules on downstream tasks, which consist of a Point-prior Prompt and a Geometry-aware Adapter. The Point-prior Prompt adopts a set of learnable prompt tokens, for which we propose to construct a memory bank with domain-specific knowledge, and utilize a parameter-free attention to enhance the prompt tokens. The Geometry-aware Adapter aims to aggregate point cloud features within spatial neighborhoods to capture fine-grained geometric information through local interactions. Extensive experiments indicate that our Point-PEFT can achieve better performance than the full fine-tuning on various downstream tasks, while using only 5% of the trainable parameters, demonstrating the efficiency and effectiveness of our approach. Code is released at https://github.com/Ivan-Tang-3D/Point-PEFT.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yiwen Tang",
+      "Ray Zhang",
+      "Zoey Guo",
+      "Dong Wang",
+      "Zhigang Wang",
+      "Bin Zhao",
+      "Xuelong Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.03059v8",
+    "url": "http://arxiv.org/abs/2310.03059v8",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.07244v1",
+    "title": "TorontoCL at CMCL 2021 Shared Task: RoBERTa with Multi-Stage Fine-Tuning for Eye-Tracking Prediction",
+    "abstract": "Eye movement data during reading is a useful source of information for understanding language comprehension processes. In this paper, we describe our submission to the CMCL 2021 shared task on predicting human reading patterns. Our model uses RoBERTa with a regression layer to predict 5 eye-tracking features. We train the model in two stages: we first fine-tune on the Provo corpus (another eye-tracking dataset), then fine-tune on the task data. We compare different Transformer models and apply ensembling methods to improve the performance. Our final submission achieves a MAE score of 3.929, ranking 3rd place out of 13 teams that participated in this shared task.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Bai Li",
+      "Frank Rudzicz"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.07244v1",
+    "url": "http://arxiv.org/abs/2104.07244v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.08021v2",
+    "title": "Stage-wise Fine-tuning for Graph-to-Text Generation",
+    "abstract": "Graph-to-text generation has benefited from pre-trained language models (PLMs) in achieving better performance than structured graph encoders. However, they fail to fully utilize the structure information of the input graph. In this paper, we aim to further improve the performance of the pre-trained language model by proposing a structured graph-to-text model with a two-step fine-tuning mechanism which first fine-tunes the model on Wikipedia before adapting to the graph-to-text generation. In addition to using the traditional token and position embeddings to encode the knowledge graph (KG), we propose a novel tree-level embedding method to capture the inter-dependency structures of the input graph. This new approach has significantly improved the performance of all text generation metrics for the English WebNLG 2017 dataset.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Qingyun Wang",
+      "Semih Yavuz",
+      "Victoria Lin",
+      "Heng Ji",
+      "Nazneen Rajani"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.08021v2",
+    "url": "http://arxiv.org/abs/2105.08021v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.28306v1",
+    "title": "Routing-Aligned Fine-Tuning for Multilingual Downstream Tasks in Mixture-of-Experts Models",
+    "abstract": "Mixture-of-Experts (MoE) models have emerged as a dominant paradigm for efficient LLM scaling, yet adapting them to non-English downstream tasks remains challenging. Existing fine-tuning approaches treat MoE models as monolithic learners, ignoring the heterogeneous routing structure that develops during pretraining. We validate across multiple MoE models and downstream tasks that middle layers form a language-universal alignment zone where routing divergence strongly predicts per-language task performance gaps. Building on this observation, we propose RA-MoE (Routing-Aligned MoE Fine-Tuning), a three-stage framework that categorizes parallel task examples into a four-way taxonomy (cc/ci/ic/ii) based on correctness in English and the target language, identifies task-relevant experts in the middle layers, and augments standard SFT with a routing alignment loss that encourages target-language routing on ci-type examples to follow the English task-expert activation pattern. Experiments across three MoE models, three tasks, and six target languages demonstrate that RA-MoE consistently outperforms standard SFT and strong baselines including Routing Steering and RISE, with the ci proportion of a task-language pair serving as a reliable predictor of alignment benefit.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Guanzhi Deng",
+      "Kuan Wu",
+      "Haibo Wang",
+      "Shing Yin Wong",
+      "Sichun Luo",
+      "Linqi Song"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.28306v1",
+    "url": "http://arxiv.org/abs/2605.28306v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1212.2655v2",
+    "title": "Radiative natural supersymmetry: Reconciling electroweak fine-tuning and the Higgs boson mass",
+    "abstract": "Models of natural supersymmetry seek to solve the little hierarchy problem by positing a spectrum of light higgsinos <~ 200-300 GeV and light top squarks <~ 600 GeV along with very heavy squarks and TeV-scale gluinos. Such models have low electroweak fine-tuning and satisfy the LHC constraints. However, in the context of the MSSM, they predict too low a value of m(h), are frequently in conflict with the measured b\\to sγbranching fraction and the relic density of thermally produced higgsino-like WIMPs falls well below dark matter (DM) measurements. We propose \"radiative natural SUSY\" (RNS) which can be realized within the MSSM (avoiding the addition of extra exotic matter) and which maintains features such as gauge coupling unification and radiative electroweak symmetry breaking. The RNS model can be generated from SUSY GUT type models with non-universal Higgs masses (NUHM). Allowing for high scale soft SUSY breaking Higgs mass m_{H_u}> m_0 leads to automatic cancellations during renormalization group (RG) running, and to radiatively-induced low fine-tuning at the electroweak scale. Coupled with large mixing in the top squark sector, RNS allows for fine-tuning at the 3-10% level with TeV-scale top squarks and a 125 GeV light Higgs scalar h. The model allows for at least a partial solution to the SUSY flavor, CP and gravitino problems since first/second generation scalars (and the gravitino) may exist in the 10-30 TeV regime. We outline some possible signatures for RNS at the LHC and at a linear e^+e^- collider. If the strong CP problem is solved by the Peccei-Quinn mechanism, then RNS naturally accommodates mixed axion-higgsino cold dark matter, where the light higgsino-like WIMPS - which in this case make up only a fraction of the measured relic abundance - should be detectable at upcoming WIMP detectors.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Howard Baer",
+      "Vernon Barger",
+      "Peisi Huang",
+      "Dan Mickelson",
+      "Azar Mustafayev",
+      "Xerxes Tata"
+    ],
+    "doi": null,
+    "arxiv_id": "1212.2655v2",
+    "url": "http://arxiv.org/abs/1212.2655v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.01835v1",
+    "title": "TS-SAM: Fine-Tuning Segment-Anything Model for Downstream Tasks",
+    "abstract": "Adapter based fine-tuning has been studied for improving the performance of SAM on downstream tasks. However, there is still a significant performance gap between fine-tuned SAMs and domain-specific models. To reduce the gap, we propose Two-Stream SAM (TS-SAM). On the one hand, inspired by the side network in Parameter-Efficient Fine-Tuning (PEFT), we designed a lightweight Convolutional Side Adapter (CSA), which integrates the powerful features from SAM into side network training for comprehensive feature fusion. On the other hand, in line with the characteristics of segmentation tasks, we designed Multi-scale Refinement Module (MRM) and Feature Fusion Decoder (FFD) to keep both the detailed and semantic features. Extensive experiments on ten public datasets from three tasks demonstrate that TS-SAM not only significantly outperforms the recently proposed SAM-Adapter and SSOM, but achieves competitive performance with the SOTA domain-specific models. Our code is available at: https://github.com/maoyangou147/TS-SAM.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yang Yu",
+      "Chen Xu",
+      "Kai Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.01835v1",
+    "url": "http://arxiv.org/abs/2408.01835v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.04177v3",
+    "title": "Scaling Laws for Downstream Task Performance of Large Language Models",
+    "abstract": "Scaling laws provide important insights that can guide the design of large language models (LLMs). Existing work has primarily focused on studying scaling laws for pretraining (upstream) loss. However, in transfer learning settings, in which LLMs are pretrained on an unsupervised dataset and then finetuned on a downstream task, we often also care about the downstream performance. In this work, we study the scaling behavior in a transfer learning setting, where LLMs are finetuned for machine translation tasks. Specifically, we investigate how the choice of the pretraining data and its size affect downstream performance (translation quality) as judged by: downstream cross-entropy and translation quality metrics such as BLEU and COMET scores. Our experiments indicate that the size of the finetuning dataset and the distribution alignment between the pretraining and downstream data significantly influence the scaling behavior. With sufficient alignment, both downstream cross-entropy and translation quality scores improve monotonically with more pretraining data. In such cases, we show that it is possible to predict the downstream translation quality metrics with good accuracy using a log-law. However, there are cases where moderate misalignment causes the downstream translation scores to fluctuate or get worse with more pretraining, whereas downstream cross-entropy monotonically improves. By analyzing these, we provide new practical insights for choosing appropriate pretraining data.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Berivan Isik",
+      "Natalia Ponomareva",
+      "Hussein Hazimeh",
+      "Dimitris Paparas",
+      "Sergei Vassilvitskii",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.04177v3",
+    "url": "http://arxiv.org/abs/2402.04177v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.03099v2",
+    "title": "Topic Modeling with Fine-tuning LLMs and Bag of Sentences",
+    "abstract": "Large language models (LLMs) are increasingly used for topic modeling, outperforming classical topic models such as LDA. Commonly, pre-trained LLM encoders such as BERT are used out-of-the-box despite the fact that fine-tuning is known to improve LLMs considerably. The challenge lies in obtaining a suitable labeled dataset for fine-tuning. In this paper, we build on the recent idea of using bags of sentences as the elementary unit for computing topics. Based on this idea, we derive an approach called FT-Topic to perform unsupervised fine-tuning, relying primarily on two steps for constructing a training dataset in an automatic fashion. First, a heuristic method identifies pairs of sentence groups that are assumed to belong either to the same topic or to different topics. Second, we remove sentence pairs that are likely labeled incorrectly. The resulting dataset is then used to fine-tune an encoder LLM, which can be leveraged by any topic modeling approach that uses embeddings. In this work, we demonstrate its effectiveness by deriving a novel state-of-the-art topic modeling method called SenClu. The method achieves fast inference through an expectation-maximization algorithm and hard assignments of sentence groups to a single topic, while allowing users to encode prior knowledge about the topic-document distribution. Code is available at https://github.com/JohnTailor/FT-Topic",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Johannes Schneider"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.03099v2",
+    "url": "http://arxiv.org/abs/2408.03099v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.08239v1",
+    "title": "Linearization Explains Fine-Tuning in Large Language Models",
+    "abstract": "Parameter-Efficient Fine-Tuning (PEFT) is a popular class of techniques that strive to adapt large models in a scalable and resource-efficient manner. Yet, the mechanisms underlying their training performance and generalization remain underexplored. In this paper, we provide several insights into such fine-tuning through the lens of linearization. Fine-tuned models are often implicitly encouraged to remain close to the pretrained model. By making this explicit, using an Euclidean distance inductive bias in parameter space, we show that fine-tuning dynamics become equivalent to learning with the positive-definite neural tangent kernel (NTK). We specifically analyze how close the fully linear and the linearized fine-tuning optimizations are, based on the strength of the regularization. This allows us to be pragmatic about how good a model linearization is when fine-tuning large language models (LLMs). When linearization is a good model, our findings reveal a strong correlation between the eigenvalue spectrum of the NTK and the performance of model adaptation. Motivated by this, we give spectral perturbation bounds on the NTK induced by the choice of layers selected for fine-tuning. We empirically validate our theory on Low Rank Adaptation (LoRA) on LLMs. These insights not only characterize fine-tuning but also have the potential to enhance PEFT techniques, paving the way to better informed and more nimble adaptation in LLMs.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Zahra Rahimi Afzal",
+      "Tara Esmaeilbeig",
+      "Mojtaba Soltanalian",
+      "Mesrob I. Ohannessian"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.08239v1",
+    "url": "http://arxiv.org/abs/2602.08239v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.07401v1",
+    "title": "Implementing BERT and fine-tuned RobertA to detect AI generated news by ChatGPT",
+    "abstract": "The abundance of information on social media has increased the necessity of accurate real-time rumour detection. Manual techniques of identifying and verifying fake news generated by AI tools are impracticable and time-consuming given the enormous volume of information generated every day. This has sparked an increase in interest in creating automated systems to find fake news on the Internet. The studies in this research demonstrate that the BERT and RobertA models with fine-tuning had the best success in detecting AI generated news. With a score of 98%, tweaked RobertA in particular showed excellent precision. In conclusion, this study has shown that neural networks can be used to identify bogus news AI generation news created by ChatGPT. The RobertA and BERT models' excellent performance indicates that these models can play a critical role in the fight against misinformation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Zecong Wang",
+      "Jiaxi Cheng",
+      "Chen Cui",
+      "Chenhao Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.07401v1",
+    "url": "http://arxiv.org/abs/2306.07401v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.10928v1",
+    "title": "Learn from Downstream and Be Yourself in Multimodal Large Language Model Fine-Tuning",
+    "abstract": "Multimodal Large Language Model (MLLM) have demonstrated strong generalization capabilities across diverse distributions and tasks, largely due to extensive pre-training datasets. Fine-tuning MLLM has become a common practice to improve performance on specific downstream tasks. However, during fine-tuning, MLLM often faces the risk of forgetting knowledge acquired during pre-training, which can result in a decline in generalization abilities. To balance the trade-off between generalization and specialization, we propose measuring the parameter importance for both pre-trained and fine-tuning distributions, based on frozen pre-trained weight magnitude and accumulated fine-tuning gradient values. We further apply an importance-aware weight allocation strategy, selectively updating relatively important parameters for downstream tasks. We conduct empirical evaluations on both image captioning and visual question-answering tasks using various MLLM architectures. The comprehensive experimental analysis demonstrates the effectiveness of the proposed solution, highlighting the efficiency of the crucial modules in enhancing downstream specialization performance while mitigating generalization degradation in MLLM Fine-Tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Wenke Huang",
+      "Jian Liang",
+      "Zekun Shi",
+      "Didi Zhu",
+      "Guancheng Wan",
+      "He Li",
+      "Bo Du",
+      "Dacheng Tao",
+      "Mang Ye"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.10928v1",
+    "url": "http://arxiv.org/abs/2411.10928v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.10793v3",
+    "title": "Demystifying Instruction Mixing for Fine-tuning Large Language Models",
+    "abstract": "Instruction tuning significantly enhances the performance of large language models (LLMs) across various tasks. However, the procedure to optimizing the mixing of instruction datasets for LLM fine-tuning is still poorly understood. This study categorizes instructions into three primary types: NLP downstream tasks, coding, and general chat. We explore the effects of instruction tuning on different combinations of datasets on LLM performance, and find that certain instruction types are more advantageous for specific applications but can negatively impact other areas. This work provides insights into instruction mixtures, laying the foundations for future research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Minghao Wu",
+      "Yuxia Wang",
+      "Xudong Han",
+      "Chiyu Zhang",
+      "Timothy Baldwin"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.10793v3",
+    "url": "http://arxiv.org/abs/2312.10793v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.15252v1",
+    "title": "NER- RoBERTa: Fine-Tuning RoBERTa for Named Entity Recognition (NER) within low-resource languages",
+    "abstract": "Nowadays, Natural Language Processing (NLP) is an important tool for most people's daily life routines, ranging from understanding speech, translation, named entity recognition (NER), and text categorization, to generative text models such as ChatGPT. Due to the existence of big data and consequently large corpora for widely used languages like English, Spanish, Turkish, Persian, and many more, these applications have been developed accurately. However, the Kurdish language still requires more corpora and large datasets to be included in NLP applications. This is because Kurdish has a rich linguistic structure, varied dialects, and a limited dataset, which poses unique challenges for Kurdish NLP (KNLP) application development. While several studies have been conducted in KNLP for various applications, Kurdish NER (KNER) remains a challenge for many KNLP tasks, including text analysis and classification. In this work, we address this limitation by proposing a methodology for fine-tuning the pre-trained RoBERTa model for KNER. To this end, we first create a Kurdish corpus, followed by designing a modified model architecture and implementing the training procedures. To evaluate the trained model, a set of experiments is conducted to demonstrate the performance of the KNER model using different tokenization methods and trained models. The experimental results show that fine-tuned RoBERTa with the SentencePiece tokenization method substantially improves KNER performance, achieving a 12.8% improvement in F1-score compared to traditional models, and consequently establishes a new benchmark for KNLP.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Abdulhady Abas Abdullah",
+      "Srwa Hasan Abdulla",
+      "Dalia Mohammad Toufiq",
+      "Halgurd S. Maghdid",
+      "Tarik A. Rashid",
+      "Pakshan F. Farho",
+      "Shadan Sh. Sabr",
+      "Akar H. Taher",
+      "Darya S. Hamad",
+      "Hadi Veisi",
+      "Aras T. Asaad"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.15252v1",
+    "url": "http://arxiv.org/abs/2412.15252v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.00949v2",
+    "title": "Hyperparameter Optimization for Large Language Model Instruction-Tuning",
+    "abstract": "The fine-tuning of Large Language Models (LLMs) has enabled them to recently achieve milestones in natural language processing applications. The emergence of ever larger LLMs has paved the way for more efficient fine-tuning methods. Among these, the Low-Rank Adaptation (LoRA) method keeps most of the weights of the pre-trained LLM frozen while introducing a low-rank decomposition of the weight matrix, enabling the tuning of only a very small proportion of the network. The performance on downstream tasks of models fine-tuned with LoRA heavily relies on a set of hyperparameters including the rank of the decomposition. In this work, we investigate the choice of these hyperparameters through two main blackbox optimization (BBO) techniques. We examine the whole pipeline of performing fine-tuning and validation on a pre-trained LLM as a blackbox and efficiently explore the space of hyperparameters with the \\nomad algorithm, achieving a boost in performance and human alignment of the tuned model.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Christophe Tribes",
+      "Sacha Benarroch-Lelong",
+      "Peng Lu",
+      "Ivan Kobyzev"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.00949v2",
+    "url": "http://arxiv.org/abs/2312.00949v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/1910.09359v3",
+  "title": "Building Efficient CNNs Using Depthwise Convolutional Eigen-Filters (DeCEF)",
+  "abstract": "Deep Convolutional Neural Networks (CNNs) have been widely used in various domains due to their impressive capabilities. These models are typically composed of a large number of 2D convolutional (Conv2D) layers with numerous trainable parameters. To reduce the complexity of a network, compression techniques can be applied. These methods typically rely on the analysis of trained deep learning models. However, in some applications, due to reasons such as particular data or system specifications and licensing restrictions, a pre-trained network may not be available. This would require the user to train a CNN from scratch. In this paper, we aim to find an alternative parameterization to Conv2D filters without relying on a pre-trained convolutional network. During the analysis, we observe that the effective rank of the vectorized Conv2D filters decreases with respect to the increasing depth in the network, which then leads to the implementation of the Depthwise Convolutional Eigen-Filter (DeCEF) layer. Essentially, a DeCEF layer is a low rank version of the Conv2D layer with significantly fewer trainable parameters and floating point operations (FLOPs). The way we define the effective rank is different from the previous work and it is easy to implement in any deep learning frameworks. To evaluate the effectiveness of DeCEF, experiments are conducted on the benchmark datasets CIFAR-10 and ImageNet using various network architectures. The results have shown a similar or higher accuracy and robustness using about 2/3 of the original parameters and reducing the number of FLOPs to 2/3 of the base network, which is then compared to the state-of-the-art techniques.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Yinan Yu",
+    "Samuel Scheidegger",
+    "Tomas McKelvey"
+  ],
+  "doi": null,
+  "arxiv_id": "1910.09359v3",
+  "url": "http://arxiv.org/abs/1910.09359v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

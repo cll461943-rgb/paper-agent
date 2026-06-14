@@ -1,0 +1,57 @@
+{
+  "paper_id": "https://openalex.org/W4399317863",
+  "title": "Effective Interplay between Sparsity and Quantization: From Theory to Practice",
+  "abstract": "The increasing size of deep neural networks (DNNs) necessitates effective model compression to reduce their computational and memory footprints. Sparsity and quantization are two prominent compression methods that have been shown to reduce DNNs' computational and memory footprints significantly while preserving model accuracy. However, how these two methods interact when combined together remains a key question for developers, as many tacitly assume that they are orthogonal, meaning that their combined use does not introduce additional errors beyond those introduced by each method independently. In this paper, we provide the first mathematical proof that sparsity and quantization are non-orthogonal. We corroborate these results with experiments spanning a range of large language models, including the OPT and LLaMA model families (with 125M to 8B parameters), and vision models like ViT and ResNet. We show that the order in which we apply these methods matters because applying quantization before sparsity may disrupt the relative importance of tensor elements, which may inadvertently remove significant elements from a tensor. More importantly, we show that even if applied in the correct order, the compounded errors from sparsity and quantization can significantly harm accuracy. Our findings extend to the efficient deployment of large models in resource-constrained compute platforms to reduce serving cost, offering insights into best practices for applying these compression methods to maximize hardware resource efficiency without compromising accuracy.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Simla Burcu Harma",
+    "Ayan Chakraborty",
+    "Elizaveta Kostenok",
+    "Danila Mishin",
+    "Dongho Ha",
+    "Babak Falsafi",
+    "Martin Jaggi",
+    "Ming Liu",
+    "Yunho Oh",
+    "Suvinay Subramanian",
+    "Amir Yazdanbakhsh"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2405.20935",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2405.20935",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Practice theory",
+      "Computer science",
+      "Psychology",
+      "Mathematics",
+      "Epistemology",
+      "Algorithm",
+      "Philosophy"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W1979597421",
+      "https://openalex.org/W2007980826",
+      "https://openalex.org/W2061531152",
+      "https://openalex.org/W3002753104",
+      "https://openalex.org/W2077600819",
+      "https://openalex.org/W2142036596",
+      "https://openalex.org/W2072657027",
+      "https://openalex.org/W2600246793"
+    ]
+  }
+}

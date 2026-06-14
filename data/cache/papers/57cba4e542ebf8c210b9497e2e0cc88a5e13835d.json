@@ -1,0 +1,59 @@
+{
+  "paper_id": "https://openalex.org/W4378770729",
+  "title": "LLM-QAT: Data-Free Quantization Aware Training for Large Language Models",
+  "abstract": "Several post-training quantization methods have been applied to large language models (LLMs), and have been shown to perform well down to 8-bits. We find that these methods break down at lower bit precision, and investigate quantization aware training for LLMs (LLM-QAT) to push quantization levels even further. We propose a data-free distillation method that leverages generations produced by the pre-trained model, which better preserves the original output distribution and allows quantizing any generative model independent of its training data, similar to post-training quantization methods. In addition to quantizing weights and activations, we also quantize the KV cache, which is critical for increasing throughput and support long sequence dependencies at current model sizes. We experiment with LLaMA models of sizes 7B, 13B, and 30B, at quantization levels down to 4-bits. We observe large improvements over training-free methods, especially in the low-bit settings.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Zechun Liu",
+    "Barlas Oğuz",
+    "Changsheng Zhao",
+    "Ernie Chang",
+    "Pierre Stock",
+    "Yashar Mehdad",
+    "Yangyang Shi",
+    "Raghuraman Krishnamoorthi",
+    "Vikas Chandra"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.17888",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.17888",
+  "citation_count": 15,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Language model",
+      "Generative grammar",
+      "Generative model",
+      "Cache",
+      "Linde–Buzo–Gray algorithm",
+      "Training set",
+      "Speech recognition",
+      "Artificial intelligence",
+      "Algorithm",
+      "Parallel computing"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2096936443",
+      "https://openalex.org/W2081863301",
+      "https://openalex.org/W2365109233",
+      "https://openalex.org/W2352648934",
+      "https://openalex.org/W2391875658",
+      "https://openalex.org/W2374856816",
+      "https://openalex.org/W2347940122",
+      "https://openalex.org/W4287644835",
+      "https://openalex.org/W3092281475",
+      "https://openalex.org/W3098003361"
+    ]
+  }
+}

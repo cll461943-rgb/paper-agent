@@ -1,0 +1,27 @@
+{
+  "paper_id": "pubmed:42275896",
+  "title": "WaveMixerNet: A dual-stream wavelet-based MLP-mixer and CNN architecture for long-term time series forecasting.",
+  "abstract": "The core challenge of Long-Term Time Series Forecasting (LTSF) lies in effectively decoupling and modeling the intertwined long-term dependencies and high-frequency short-term perturbations within the data. In recent years, architectures represented by MLP-Mixer have shown great potential in capturing the global, long-range dependencies of sequences. However, their inherent global information mixing mechanism has limited ability to perceive local temporal structures and instantaneous dynamics. To address this limitation, we propose WaveMixerNet, a dual-stream architecture that utilizes wavelet decomposition to explicitly separate and model trend and detail information. Our model first employs a discrete wavelet transform to decompose the input sequence into a low-frequency approximation component and a high-frequency detail component. These components are then fed into two specialized streams for processing: one is the Approximation Feature Extractor (AFE), built upon MLP-Mixer, dedicated to processing the low-frequency component to effectively model the core long-term trend of the sequence; the other is the Detail Feature Extractor (DFE), based on a Convolutional Neural Network (CNN), responsible for processing the high-frequency component to capture instantaneous dynamics and local patterns. By systematically fusing the long-term trend features extracted by the AFE with the short-term detail features extracted by the DFE, WaveMixerNet constructs a comprehensive representation of the time series. This explicit separation and specialized modeling of trends and details greatly enhance the model's long-term forecasting capabilities. Our model achieves strong performance and ranks among the leading methods on multiple datasets. The code is available at https://github.com/wang976/WaveMixerNet.",
+  "year": 2026,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Bo Wang",
+    "Junfen Chen",
+    "Mingyan Yao"
+  ],
+  "doi": "10.1016/j.neunet.2026.109225",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42275896/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42275896"
+  }
+}

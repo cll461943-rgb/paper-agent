@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2604.14552v2",
+  "title": "DEEP-GAP: Deep-learning Evaluation of Execution Parallelism in GPU Architectural Performance",
+  "abstract": "Modern datacenters increasingly rely on low-power, single-slot inference accelerators to balance performance, energy efficiency, and rack density constraints. The NVIDIA T4 GPU has become widely deployed due to strong performance per watt and mature software support. Its successor, the NVIDIA L4 GPU, introduces improvements in Tensor Core throughput, cache capacity, memory bandwidth, and parallel execution capability. However, limited empirical evidence quantifies the practical inference performance gap between these two generations under controlled and reproducible conditions. This work introduces DEEP-GAP, a systematic evaluation extending the GDEV-AI methodology to GPU inference. Using identical configurations and workloads, we evaluate ResNet18, ResNet50, and ResNet101 across FP32, FP16, and INT8 precision modes using PyTorch and TensorRT. Results show that reduced precision significantly improves performance, with INT8 achieving up to 58x throughput improvement over CPU baselines. L4 achieves up to 4.4x higher throughput than T4 while reaching peak efficiency at smaller batch sizes between 16 and 32, improving latency-throughput tradeoffs for latency-sensitive workloads. T4 remains competitive for large batch workloads where cost or power efficiency is important. DEEP-GAP provides practical guidance for selecting precision modes, batch sizes, and GPU architectures for modern inference deployments.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Kathiravan Palaniappan"
+  ],
+  "doi": null,
+  "arxiv_id": "2604.14552v2",
+  "url": "http://arxiv.org/abs/2604.14552v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

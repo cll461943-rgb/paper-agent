@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2406.08155v2",
+  "title": "QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts",
+  "abstract": "Mixture-of-Experts (MoE) is a promising way to scale up the learning capacity of large language models. It increases the number of parameters while keeping FLOPs nearly constant during inference through sparse activation. Yet, it still suffers from significant memory overheads due to the vast parameter size, necessitating model compression techniques. Post-training quantization offers a powerful approach for model compression. Existing methods adopt a fixed quantization precision for the entire MoE model. This rigid setup can lead to suboptimal performance, without considering the inherent sparse structure. For example, MoE's sparse routing mechanism leads to different activation patterns, where shared experts are accessed by all tokens while token-conditioned experts are selectively activated. This activation disparity suggests different quantization requirements, with consistently activated shared experts potentially needing higher precision to maintain model quality. In this paper, we study a fine-grained precision setup for MoE quantization. We explore MoE structure-aware quantization heuristics, ranging from coarse (e.g., MoE layers) to fine granularity (e.g., linear layers). Our investigations reveal critical principles, where different MoE structures require varying numbers of bits for effective quantization. Conclusions are supported by extensive benchmarking across two representative MoE models and six tasks including commonsense reasoning and natural language understanding. We further show that an MoE quantized in a fined-grained mixed precision achieved state-of-the-art 65.35% performance on average compared to the baseline 64.30% (i.e., GPTQ). Moreover, based on the findings, we introduce novel data-driven techniques for optimizing bit allocation in MoE quantization, including the outlier-aware linear layer scorer and MoE block importance predictor.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Pingzhi Li",
+    "Xiaolong Jin",
+    "Zhen Tan",
+    "Yu Cheng",
+    "Tianlong Chen"
+  ],
+  "doi": null,
+  "arxiv_id": "2406.08155v2",
+  "url": "http://arxiv.org/abs/2406.08155v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

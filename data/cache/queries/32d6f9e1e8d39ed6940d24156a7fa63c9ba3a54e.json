@@ -1,0 +1,936 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2605.11396v1",
+    "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization",
+    "abstract": "The Muon optimizer has emerged as a compelling alternative to Adam for training large language models, achieving remarkable computational savings through gradient orthogonalization. However, Muon's optimizer state is more sensitive to quantization errors: because the orthogonalization discards the magnitudes of singular values and retains only directional information, even small quantization errors in singular vector directions are amplified in the update. In this work, we propose MuonQ, a low-bit Muon training framework built on the principle of directional fidelity optimization. First, we apply a pre-quantization normalization so that each step introduces quantization errors of the same magnitude, preventing the accumulated error from developing a preferred direction. Second, we introduce a structural decomposition that separately quantizes the dominant singular components via power iteration, ensuring that quantization errors perturb only singular value magnitudes rather than rotating singular vector directions. Third, we adopt $μ$-law companding quantization to allocate higher resolution to densely packed momentum values, shifting the quantization objective from outlier preservation to dense-region distinguishability. Together, these techniques enable stable 4-bit quantization of Muon's optimizer states. Pre-training experiments on GPT-style and LLaMA-style models demonstrate that MuonQ at 4-bit precision closely matches full-precision Muon in both training loss and downstream task accuracy, while reducing optimizer state memory by up to 7.3 $\\times$. Our code is available at https://github.com/YupengSu/MuonQ.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yupeng Su",
+      "Ruijie Zhang",
+      "Ziyue Liu",
+      "Yequan Zhao",
+      "Zheng Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.11396v1",
+    "url": "http://arxiv.org/abs/2605.11396v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.16299v1",
+    "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+    "abstract": "Emergent Large Language Models (LLMs) use their extraordinary performance and powerful deduction capacity to discern from traditional language models. However, the expenses of computational resources and storage for these LLMs are stunning, quantization then arises as a trending conversation. To address accuracy decay caused by quantization, two streams of works in post-training quantization methods stand out. One uses other weights to compensate existing quantization error, while the other transfers the quantization difficulty to other parts in the model. Combining both merits, we introduce Learnable Singular value Increment (LSI) as an advanced solution. LSI uses Singular Value Decomposition to extract singular values of the weights and make them learnable to help weights compensate each other conditioned on activation. Incorporating LSI with existing techniques, we achieve state-of-the-art performance in diverse quantization settings, no matter in weight-only, weight-activation or extremely low bit scenarios. By unleashing the potential of LSI, efficient finetuning on quantized model is no longer a prohibitive problem.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Yuting Xiao",
+      "Zhiyuan Xiang",
+      "Ruiting Dai",
+      "Jun Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.16299v1",
+    "url": "http://arxiv.org/abs/2406.16299v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.15508v3",
+    "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+    "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Jun Cheng",
+      "Mengchu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.15508v3",
+    "url": "http://arxiv.org/abs/2407.15508v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.12759v1",
+    "title": "decoupleQ: Towards 2-bit Post-Training Uniform Quantization via decoupling Parameters into Integer and Floating Points",
+    "abstract": "Quantization emerges as one of the most promising compression technologies for deploying efficient large models for various real time application in recent years. Considering that the storage and IO of weights take up the vast majority of the overhead inside a large model, weight only quantization can lead to large gains. However, existing quantization schemes suffer from significant accuracy degradation at very low bits, or require some additional computational overhead when deployed, making it difficult to be applied to large-scale applications in industry. In this paper, we propose decoupleQ, achieving a substantial increase in model accuracy, especially at very low bits. decoupleQ abandons the traditional heuristic quantization paradigm and decouples the model parameters into integer and floating-point parts, thus transforming the quantization problem into a traditional mathematical optimization problem with constraints, which is then solved alternatively by off-the-shelf optimization methods. Quantization via decoupleQ is linear and uniform, making it hardware-friendlier than non-uniform counterpart, and enabling the idea to be migrated to high-bit quantization to enhance its robustness. Our method has achieved well on-line accuracy near fp16/bf16 on the 2-bit quantization of large speech models in ByteDance. The code is available at https://github.com/bytedance/decoupleQ",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yi Guo",
+      "Fanliu Kong",
+      "Xiaoyang Li",
+      "Hui Li",
+      "Wei Chen",
+      "Xiaogang Tian",
+      "Jinping Cai",
+      "Yang Zhang",
+      "Shouda Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.12759v1",
+    "url": "http://arxiv.org/abs/2404.12759v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.13144v2",
+    "title": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks",
+    "abstract": "We propose Additive Powers-of-Two~(APoT) quantization, an efficient non-uniform quantization scheme for the bell-shaped and long-tailed distribution of weights and activations in neural networks. By constraining all quantization levels as the sum of Powers-of-Two terms, APoT quantization enjoys high computational efficiency and a good match with the distribution of weights. A simple reparameterization of the clipping function is applied to generate a better-defined gradient for learning the clipping threshold. Moreover, weight normalization is presented to refine the distribution of weights to make the training more stable and consistent. Experimental results show that our proposed method outperforms state-of-the-art methods, and is even competitive with the full-precision models, demonstrating the effectiveness of our proposed APoT quantization. For example, our 4-bit quantized ResNet-50 on ImageNet achieves 76.6% top-1 accuracy without bells and whistles; meanwhile, our model reduces 22% computational cost compared with the uniformly quantized counterpart. The code is available at https://github.com/yhhhli/APoT_Quantization.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Yuhang Li",
+      "Xin Dong",
+      "Wei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.13144v2",
+    "url": "http://arxiv.org/abs/1909.13144v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14302v1",
+    "title": "Scaling Law for Quantization-Aware Training",
+    "abstract": "Large language models (LLMs) demand substantial computational and memory resources, creating deployment challenges. Quantization-aware training (QAT) addresses these challenges by reducing model precision while maintaining performance. However, the scaling behavior of QAT, especially at 4-bit precision (W4A4), is not well understood. Existing QAT scaling laws often ignore key factors such as the number of training tokens and quantization granularity, which limits their applicability. This paper proposes a unified scaling law for QAT that models quantization error as a function of model size, training data volume, and quantization group size. Through 268 QAT experiments, we show that quantization error decreases as model size increases, but rises with more training tokens and coarser quantization granularity. To identify the sources of W4A4 quantization error, we decompose it into weight and activation components. Both components follow the overall trend of W4A4 quantization error, but with different sensitivities. Specifically, weight quantization error increases more rapidly with more training tokens. Further analysis shows that the activation quantization error in the FC2 layer, caused by outliers, is the primary bottleneck of W4A4 QAT quantization error. By applying mixed-precision quantization to address this bottleneck, we demonstrate that weight and activation quantization errors can converge to similar levels. Additionally, with more training data, weight quantization error eventually exceeds activation quantization error, suggesting that reducing weight quantization error is also important in such scenarios. These findings offer key insights for improving QAT research and development.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Chaoyi Zhang",
+      "Jing Liu",
+      "Yutao Zeng",
+      "Zeyue Xue",
+      "Zhiheng Liu",
+      "Yunshui Li",
+      "Jin Ma",
+      "Jie Huang",
+      "Xun Zhou",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14302v1",
+    "url": "http://arxiv.org/abs/2505.14302v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.05265v2",
+    "title": "PrefixQuant: Eliminating Outliers by Prefixed Tokens for Large Language Models Quantization",
+    "abstract": "Existing weight-activation quantization methods for Large Language Models (LLMs) primarily address channel-wise outliers but often neglect token-wise outliers, which limits the accuracy of quantized models. In this work, we propose PrefixQuant, a novel quantization method that achieves state-of-the-art performance across various precision levels (W4A4KV4 and W4A8KV4) and granularities (dynamic and static quantization) by effectively isolating token-wise outliers. First, PrefixQuant eliminates token-wise outliers by prefixing outlier tokens in the KV cache, a process that is training-free and highly efficient (e.g., 1 minutes for Llama-3-70B). Second, PrefixQuant introduces new trainable parameters for block-wise training to compensate for quantization error. Our experiments show that PrefixQuant significantly outperforms existing dynamic quantization methods, even under coarser static quantization settings. For instance, PrefixQuant achieves an average accuracy improvement of +3.08 and +2.85 points over SpinQuant (dynamic quantization) on five zero-shot reasoning tasks under dynamic and static quantization settings, respectively, on W4A4KV4 Llama-3-8B. Additionally, we demonstrate up to 2.74x prefilling speedup and 2.16x decoding speedup for LLMs using W4A4 PrefixQuant. Our code is available at https://github.com/ChenMnZ/PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Yi Liu",
+      "Jiahao Wang",
+      "Yi Bin",
+      "Wenqi Shao",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.05265v2",
+    "url": "http://arxiv.org/abs/2410.05265v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.08047v1",
+    "title": "The Benefits of Affine Quantization",
+    "abstract": "Canonical quantization has served wonderfully for the quantization of a vast number of classical systems. That includes single classical variables, such as $p$ and $q$, and numerous classical Hamiltonians $H(p,q)$, as well as field theories, such as $π(x)$ and $ φ(x)$, and many classical Hamiltonians $H(π,φ)$. However, in all such systems there are situations for which canonical quantization fails. This includes certain particle and field theory problems. Affine quantization involves a simple recombination of classical variables that lead to a new chapter in the process of quantization, and which is able to solve a vast variety of normally insoluble systems, such as quartic interactions in scalar field theory in spacetime dimensions 4 and higher, as well as the quantization of Einstein's gravity in 4 spacetime dimensions.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.08047v1",
+    "url": "http://arxiv.org/abs/1912.08047v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.10998v5",
+    "title": "Pruning Ternary Quantization",
+    "abstract": "Inference time, model size, and accuracy are three key factors in deep model compression. Most of the existing work addresses these three key factors separately as it is difficult to optimize them all at the same time. For example, low-bit quantization aims at obtaining a faster model; weight sharing quantization aims at improving compression ratio and accuracy; and mixed-precision quantization aims at balancing accuracy and inference time. To simultaneously optimize bit-width, model size, and accuracy, we propose pruning ternary quantization (PTQ): a simple, effective, symmetric ternary quantization method. We integrate L2 normalization, pruning, and the weight decay term to reduce the weight discrepancy in the gradient estimator during quantization, thus producing highly compressed ternary weights. Our method brings the highest test accuracy and the highest compression ratio. For example, it produces a 939kb (49$\\times$) 2bit ternary ResNet-18 model with only 4\\% accuracy drop on the ImageNet dataset. It compresses 170MB Mask R-CNN to 5MB (34$\\times$) with only 2.8\\% average precision drop. Our method is verified on image classification, object detection/segmentation tasks with different network structures such as ResNet-18, ResNet-50, and MobileNetV2.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Dan Liu",
+      "Xi Chen",
+      "Jie Fu",
+      "Chen Ma",
+      "Xue Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.10998v5",
+    "url": "http://arxiv.org/abs/2107.10998v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.05530v1",
+    "title": "Low-bit Model Quantization for Deep Neural Networks: A Survey",
+    "abstract": "With unprecedented rapid development, deep neural networks (DNNs) have deeply influenced almost all fields. However, their heavy computation costs and model sizes are usually unacceptable in real-world deployment. Model quantization, an effective weight-lighting technique, has become an indispensable procedure in the whole deployment pipeline. The essence of quantization acceleration is the conversion from continuous floating-point numbers to discrete integer ones, which significantly speeds up the memory I/O and calculation, i.e., addition and multiplication. However, performance degradation also comes with the conversion because of the loss of precision. Therefore, it has become increasingly popular and critical to investigate how to perform the conversion and how to compensate for the information loss. This article surveys the recent five-year progress towards low-bit quantization on DNNs. We discuss and compare the state-of-the-art quantization methods and classify them into 8 main categories and 24 sub-categories according to their core techniques. Furthermore, we shed light on the potential research opportunities in the field of model quantization. A curated list of model quantization is provided at https://github.com/Kai-Liu001/Awesome-Model-Quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kai Liu",
+      "Qian Zheng",
+      "Kaiwen Tao",
+      "Zhiteng Li",
+      "Haotong Qin",
+      "Wenbo Li",
+      "Yong Guo",
+      "Xianglong Liu",
+      "Linghe Kong",
+      "Guihai Chen",
+      "Yulun Zhang",
+      "Xiaokang Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.05530v1",
+    "url": "http://arxiv.org/abs/2505.05530v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07653v1",
+    "title": "A Valid Quantization of a Half-Harmonic Oscillator Field Theory",
+    "abstract": "The usual full- and half-harmonic oscillators are turned into field theories, and that behavior is examined using canonical and affine quantization. The result leads to a valid affine quantization of the half harmonic oscillator field theory, which points toward further valid quantizations of more realistic field theory models.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07653v1",
+    "url": "http://arxiv.org/abs/2206.07653v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0907.0438v1",
+    "title": "Relativistic Quantization of Cooper Pairs and Distributed Electrons in Rotating Superconductors",
+    "abstract": "Relativistic time synchronization along closed integral lines maintains magnetic flux quantization independently from gravitation. All Fermi-volume electrons form time-averaged electromagnetic fields within rotating conductors, while Fermi-surface superelectrons enable flux quantization in SQUID experiments. Inertia is not related to instantaneous self-coherent states of the distributed electric charge and, therefore, the Cooper pair mass can not be measured in principle from magnetic flux quantization.",
+    "year": 2009,
+    "venue": null,
+    "authors": [
+      "I. E. Bulyzhenkov"
+    ],
+    "doi": null,
+    "arxiv_id": "0907.0438v1",
+    "url": "http://arxiv.org/abs/0907.0438v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.08692v2",
+    "title": "AAAC: Activation-Aware Adaptive Codebooks for 4-bit LLM Weight Quantization",
+    "abstract": "Post-training weight-only quantization to 4 bits is widely used to reduce the memory and compute costs of large language model inference. Existing PTQ methods, such as AWQ and GPTQ, improve how weights are mapped onto a fixed 4-bit grid through scaling, clipping, or error compensation. To further improve accuracy, methods such as OmniQuant and QuIP\\# uses gradient-assisted algorithms at the cost of hours of quantization time. In this work, we propose AAAC (Activation-Aware Adaptive Codebooks), a lightweight method for 4-bit LLM weight quantization. AAAC replaces the fixed scalar codebook used in standard quantization with two small learned scalar codebooks (64 bytes) per layer. Each group of weights selects the codebook that minimizes activation-weighted reconstruction error, encoding the choice in the unused sign bit of the group's positive scale and adding zero storage overhead. AAAC completes in 3--30 minutes on a single GPU, and adds no memory beyond the model itself. We evaluate against AWQ, GPTQ, IF4, GPTVQ, OmniQuant, SqueezeLLM, and QuIP\\# across model families. AAAC outperforms baselines at orders-of-magnitude less quantization time.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Beshr IslamBouli",
+      "David Jin"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.08692v2",
+    "url": "http://arxiv.org/abs/2605.08692v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.16989v3",
+    "title": "PTQTP: Post-Training Quantization to Trit-Planes for Large Language Models",
+    "abstract": "Post-training quantization (PTQ) of large language models (LLMs) to extremely low bit-widths remains challenging due to the fundamental trade-off between computational efficiency and representational capacity. While existing ultra-low-bit methods rely on binary approximations or quantization-aware training(QAT), they often suffer from either limited representational capacity or huge training resource overhead. We introduce PTQ to Trit-Planes (PTQTP), a structured PTQ framework that decomposes weight matrices into dual ternary {-1, 0, 1} trit-planes. This approach achieves multiplication-free additive inference by decoupling weights into discrete topology (trit-planes) and continuous magnitude (scales), effectively enabling high-fidelity sparse approximation. PTQTP provides: (1) a theoretically grounded progressive approximation algorithm ensuring global weight consistency; (2) model-agnostic deployment without architectural modifications; and (3) uniform ternary operations that eliminate mixed-precision overhead. Comprehensive experiments on LLaMA3.x and Qwen3 (0.6B-70B) demonstrate that PTQTP significantly outperforms sub-4bit PTQ methods on both language reasoning tasks and mathematical reasoning as well as coding. PTQTP rivals the 1.58-bit QAT performance while requiring only single-hour quantization compared to 10-14 GPU days for training-based methods, and the end-to-end inference speed achieves 4.63$\\times$ faster than the FP16 baseline model, establishing a new and practical solution for efficient LLM deployment in resource-constrained environments. Code will available at https://github.com/HeXiao-55/PTQTP.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "He Xiao",
+      "Runming Yang",
+      "Qingyao Yang",
+      "Wendong Xu",
+      "Zhen Li",
+      "Yupeng Su",
+      "Zhengwu Liu",
+      "Hongxia Yang",
+      "Ngai Wong"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.16989v3",
+    "url": "http://arxiv.org/abs/2509.16989v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1702.03044v2",
+    "title": "Incremental Network Quantization: Towards Lossless CNNs with Low-Precision Weights",
+    "abstract": "This paper presents incremental network quantization (INQ), a novel method, targeting to efficiently convert any pre-trained full-precision convolutional neural network (CNN) model into a low-precision version whose weights are constrained to be either powers of two or zero. Unlike existing methods which are struggled in noticeable accuracy loss, our INQ has the potential to resolve this issue, as benefiting from two innovations. On one hand, we introduce three interdependent operations, namely weight partition, group-wise quantization and re-training. A well-proven measure is employed to divide the weights in each layer of a pre-trained CNN model into two disjoint groups. The weights in the first group are responsible to form a low-precision base, thus they are quantized by a variable-length encoding method. The weights in the other group are responsible to compensate for the accuracy loss from the quantization, thus they are the ones to be re-trained. On the other hand, these three operations are repeated on the latest re-trained group in an iterative manner until all the weights are converted into low-precision ones, acting as an incremental network quantization and accuracy enhancement procedure. Extensive experiments on the ImageNet classification task using almost all known deep CNN architectures including AlexNet, VGG-16, GoogleNet and ResNets well testify the efficacy of the proposed method. Specifically, at 5-bit quantization, our models have improved accuracy than the 32-bit floating-point references. Taking ResNet-18 as an example, we further show that our quantized models with 4-bit, 3-bit and 2-bit ternary weights have improved or very similar accuracy against its 32-bit floating-point baseline. Besides, impressive results with the combination of network pruning and INQ are also reported. The code is available at https://github.com/Zhouaojun/Incremental-Network-Quantization.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Aojun Zhou",
+      "Anbang Yao",
+      "Yiwen Guo",
+      "Lin Xu",
+      "Yurong Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "1702.03044v2",
+    "url": "http://arxiv.org/abs/1702.03044v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/math-ph/0011018v1",
+    "title": "Geometric Quantization on the Super-Disc",
+    "abstract": "In this article we discuss the geometric quantization on a certain type of infinite dimensional super-disc. Such systems are quite natural when we analyze coupled bosons and fermions. The large-N limit of a system like that corresponds to a certain super-homogeneous space. First, we define an example of a super-homogeneous manifold: a super-disc. We show that it has a natural symplectic form, it can be used to introduce classical dynamics once a Hamiltonian is chosen. Existence of moment maps provide a Poisson realization of the underlying symmetry super-group. These are the natural operators to quantize via methods of geometric quantization, and we show that this can be done.",
+    "year": 2000,
+    "venue": null,
+    "authors": [
+      "O. T. Turgut"
+    ],
+    "doi": null,
+    "arxiv_id": "0011018v1",
+    "url": "http://arxiv.org/abs/math-ph/0011018v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.13931v1",
+    "title": "True 4-Bit Quantized Convolutional Neural Network Training on CPU: Achieving Full-Precision Parity",
+    "abstract": "Low-precision neural network training has emerged as a promising direction for reducing computational costs and democratizing access to deep learning research. However, existing 4-bit quantization methods either rely on expensive GPU infrastructure or suffer from significant accuracy degradation. In this work, we present a practical method for training convolutional neural networks at true 4-bit precision using standard PyTorch operations on commodity CPUs. We introduce a novel tanh-based soft weight clipping technique that, combined with symmetric quantization, dynamic per-layer scaling, and straight-through estimators, achieves stable convergence and competitive accuracy. Training a VGG-style architecture with 3.25 million parameters from scratch on CIFAR-10, our method achieves 92.34% test accuracy on Google Colab's free CPU tier -- matching full-precision baseline performance (92.5%) with only a 0.16% gap. We further validate on CIFAR-100, achieving 70.94% test accuracy across 100 classes with the same architecture and training procedure, demonstrating that 4-bit training from scratch generalizes to harder classification tasks. Both experiments achieve 8x memory compression over FP32 while maintaining exactly 15 unique weight values per layer throughout training. We additionally validate hardware independence by demonstrating rapid convergence on a consumer mobile device (OnePlus 9R), achieving 83.16% accuracy in only 6 epochs. To the best of our knowledge, no prior work has demonstrated 4-bit quantization-aware training achieving full-precision parity on standard CPU hardware without specialized kernels or post-training quantization.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Shivnath Tathe"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.13931v1",
+    "url": "http://arxiv.org/abs/2603.13931v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.16836v1",
+    "title": "LLM-FP4: 4-Bit Floating-Point Quantized Transformers",
+    "abstract": "We propose LLM-FP4 for quantizing both weights and activations in large language models (LLMs) down to 4-bit floating-point values, in a post-training manner. Existing post-training quantization (PTQ) solutions are primarily integer-based and struggle with bit widths below 8 bits. Compared to integer quantization, floating-point (FP) quantization is more flexible and can better handle long-tail or bell-shaped distributions, and it has emerged as a default choice in many hardware platforms. One characteristic of FP quantization is that its performance largely depends on the choice of exponent bits and clipping range. In this regard, we construct a strong FP-PTQ baseline by searching for the optimal quantization parameters. Furthermore, we observe a high inter-channel variance and low intra-channel variance pattern in activation distributions, which adds activation quantization difficulty. We recognize this pattern to be consistent across a spectrum of transformer models designed for diverse tasks, such as LLMs, BERT, and Vision Transformer models. To tackle this, we propose per-channel activation quantization and show that these additional scaling factors can be reparameterized as exponential biases of weights, incurring a negligible cost. Our method, for the first time, can quantize both weights and activations in the LLaMA-13B to only 4-bit and achieves an average score of 63.1 on the common sense zero-shot reasoning tasks, which is only 5.8 lower than the full-precision model, significantly outperforming the previous state-of-the-art by 12.7 points. Code is available at: https://github.com/nbasyl/LLM-FP4.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shih-yang Liu",
+      "Zechun Liu",
+      "Xijie Huang",
+      "Pingcheng Dong",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.16836v1",
+    "url": "http://arxiv.org/abs/2310.16836v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1808.04002v3",
+    "title": "Shifting operators in geometric quantization",
+    "abstract": "In a series of papers on Bohr-Sommerfeld-Heisenberg quantization of completely integrable systems we interpreted shifting operators as quantization of functions ${\\mathrm{e}}^{ \\pm iθ_j}$ , where $(I_j , θ_j )$ are action angle coordinates. The aim of this paper is to show how these operators occur in geometric quantization.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Richard Cushman",
+      "Jedrzej Sniatycki"
+    ],
+    "doi": null,
+    "arxiv_id": "1808.04002v3",
+    "url": "http://arxiv.org/abs/1808.04002v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.04083v1",
+    "title": "A Simple Factor in Canonical Quantization yields Affine Quantization Even for Quantum Gravity",
+    "abstract": "Canonical quantization (CQ) is built around $[Q,P]=i\\hbar1\\!\\!1$, while affine quantization (AQ) is built around $[Q,D]=i\\hbar\\,Q$, where $D\\equiv(PQ+QP)/2$. The basic CQ operators must fit $-\\infty< P, Q <\\infty$, while the basic AQ operators can fit $-\\infty<P<\\infty$ and $ 0<Q<\\infty$, $-\\infty <Q<0$, or even $-\\infty<Q\\neq0<\\infty$. AQ can also be the key to quantum gravity, as our simple outline demonstrates.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.04083v1",
+    "url": "http://arxiv.org/abs/2108.04083v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1802.04919v2",
+    "title": "New Universal Deformation Formulas for deformation quantization",
+    "abstract": "Universal Deformation Formulas (UDFs) for the deformation of associative algebras play a key role in deformation quantization. Here we present examples for certain classes of infinitesimals. A basic representable 2-cocycle $F$ of an associative algebra $\\mathcal A$ is one for which there exist commuting derivations $D,\\dots, D_n$ of $\\mathcal A$ such that $F = \\sum_{ij}a_{ij}D_i \\smile D_j$, where the $a_{ij}$ are central elements of $\\mathcal A$. When $\\mathcal A$ is defined over the rationals, there is a natural definition of the exponential of such a cocycle. With this $\\exp \\hbar F$ defines a formal one-parameter family of deformations of $\\mathcal A$, where $\\hbar$ is a deformation parameter. The rational quantization of smooth functions on a smooth manifold using a bivector field as an infinitesimal deformation is a special case.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Murray Gerstenhaber"
+    ],
+    "doi": null,
+    "arxiv_id": "1802.04919v2",
+    "url": "http://arxiv.org/abs/1802.04919v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.00331v2",
+    "title": "Quantization Variation: A New Perspective on Training Transformers with Low-Bit Precision",
+    "abstract": "Despite the outstanding performance of transformers in both language and vision tasks, the expanding computation and model size have increased the demand for efficient deployment. To address the heavy computation and parameter drawbacks, quantization is frequently studied in the community as a representative model compression technique and has seen extensive use on ConvNets. However, due to the unique properties of transformers, the low-bit quantization applications are still limited and underexplored. In this paper, we identify the difficulty of transformer low-bit quantization-aware training on its unique variation behaviors, which significantly differ from ConvNets. Based on comprehensive quantitative analysis, we observe variation in three hierarchies: various module quantization sensitivities, outliers in static weight and activation distribution, and oscillation in dynamic parameter fluctuations. These variations of transformers bring instability to the quantization-aware training (QAT) and negatively influence the performance. We explore the best practices to alleviate the variation's influence during low-bit transformer QAT and propose a variation-aware quantization scheme for both vision and language transformers. We extensively verify and show our scheme can alleviate the variation and improve the performance of transformers across various models and tasks. Our solution substantially improves the 2-bit Swin-T and binary BERT-base, achieving a 3.35% and 1.4% accuracy improvement over previous state-of-the-art methods on ImageNet-1K and GLUE. Codes and models are available at https://github.com/HuangOwen/Quantization-Variation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xijie Huang",
+      "Zhiqiang Shen",
+      "Pingcheng Dong",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.00331v2",
+    "url": "http://arxiv.org/abs/2307.00331v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.21591v1",
+    "title": "Pioneering 4-Bit FP Quantization for Diffusion Models: Mixup-Sign Quantization and Timestep-Aware Fine-Tuning",
+    "abstract": "Model quantization reduces the bit-width of weights and activations, improving memory efficiency and inference speed in diffusion models. However, achieving 4-bit quantization remains challenging. Existing methods, primarily based on integer quantization and post-training quantization fine-tuning, struggle with inconsistent performance. Inspired by the success of floating-point (FP) quantization in large language models, we explore low-bit FP quantization for diffusion models and identify key challenges: the failure of signed FP quantization to handle asymmetric activation distributions, the insufficient consideration of temporal complexity in the denoising process during fine-tuning, and the misalignment between fine-tuning loss and quantization error. To address these challenges, we propose the mixup-sign floating-point quantization (MSFP) framework, first introducing unsigned FP quantization in model quantization, along with timestep-aware LoRA (TALoRA) and denoising-factor loss alignment (DFA), which ensure precise and stable fine-tuning. Extensive experiments show that we are the first to achieve superior performance in 4-bit FP quantization for diffusion models, outperforming existing PTQ fine-tuning methods in 4-bit INT quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Maosen Zhao",
+      "Pengtao Chen",
+      "Chong Yu",
+      "Yan Wen",
+      "Xudong Tan",
+      "Tao Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.21591v1",
+    "url": "http://arxiv.org/abs/2505.21591v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/math/0309290v4",
+    "title": "Fedosov quantization in algebraic context",
+    "abstract": "We consider the problem of quantization of smooth symplectic varieties in the algebro-geometric setting. We show that, under appropriate cohomological assumptions, the Fedosov quantization procedure goes through with minimal changes. The assumptions are satisfied, for example, for affine and for projective varieties. We also give a classification of all possible quantizations.",
+    "year": 2003,
+    "venue": null,
+    "authors": [
+      "R. Bezrukavnikov",
+      "D. Kaledin"
+    ],
+    "doi": null,
+    "arxiv_id": "0309290v4",
+    "url": "http://arxiv.org/abs/math/0309290v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.08155v2",
+    "title": "QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts",
+    "abstract": "Mixture-of-Experts (MoE) is a promising way to scale up the learning capacity of large language models. It increases the number of parameters while keeping FLOPs nearly constant during inference through sparse activation. Yet, it still suffers from significant memory overheads due to the vast parameter size, necessitating model compression techniques. Post-training quantization offers a powerful approach for model compression. Existing methods adopt a fixed quantization precision for the entire MoE model. This rigid setup can lead to suboptimal performance, without considering the inherent sparse structure. For example, MoE's sparse routing mechanism leads to different activation patterns, where shared experts are accessed by all tokens while token-conditioned experts are selectively activated. This activation disparity suggests different quantization requirements, with consistently activated shared experts potentially needing higher precision to maintain model quality. In this paper, we study a fine-grained precision setup for MoE quantization. We explore MoE structure-aware quantization heuristics, ranging from coarse (e.g., MoE layers) to fine granularity (e.g., linear layers). Our investigations reveal critical principles, where different MoE structures require varying numbers of bits for effective quantization. Conclusions are supported by extensive benchmarking across two representative MoE models and six tasks including commonsense reasoning and natural language understanding. We further show that an MoE quantized in a fined-grained mixed precision achieved state-of-the-art 65.35% performance on average compared to the baseline 64.30% (i.e., GPTQ). Moreover, based on the findings, we introduce novel data-driven techniques for optimizing bit allocation in MoE quantization, including the outlier-aware linear layer scorer and MoE block importance predictor.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Pingzhi Li",
+      "Xiaolong Jin",
+      "Zhen Tan",
+      "Yu Cheng",
+      "Tianlong Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.08155v2",
+    "url": "http://arxiv.org/abs/2406.08155v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.03332v2",
+    "title": "Exploring Layer-wise Information Effectiveness for Post-Training Quantization in Small Language Models",
+    "abstract": "Large language models with billions of parameters are often over-provisioned: many layers contribute little unique information yet dominate the memory and energy footprint during inference. We present LieQ Layer-wise information effectiveness Quantization, a hardware-native, metric-driven post-training quantization framework that addresses the critical challenge of maintaining accuracy in sub-8B models, model parameters less than 8B, under extreme low-bit compression. LieQ keeps uniform bit-width within each layer while mixing precision across layers, preserving standard multiplication kernels and avoiding irregular memory access, codebooks, or irregular formats at inference time. Our method uncovers a strong correlation between layer-wise functional saliency and representational compactness, revealing that layers with higher training-induced energy concentration are functionally irreplaceable. Leveraging this insight, we propose a purely geometry-driven sensitivity proxy that enables automatic bit-width allocation under a target average-bit budget without expensive gradient updates or inference-based perplexity probing. At sub 2-bit, LieQ consistently reduces the large accuracy gap typically observed for naive 2-bit baselines on Qwen3 and LLaMA3.x families, while retaining standard-kernel efficiency. These properties make LieQ a practical path toward deploying small language models on resource-constrained edge devices. Code will available here: https://github.com/HeXiao-55/LieQ-official.git.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "He Xiao",
+      "Qingyao Yang",
+      "Dirui Xie",
+      "Wendong Xu",
+      "Zunhai Su",
+      "Runming yang",
+      "Wenyong Zhou",
+      "Haobo Liu",
+      "Zhengwu Liu",
+      "Ngai Wong"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.03332v2",
+    "url": "http://arxiv.org/abs/2508.03332v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.04532v3",
+    "title": "QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving",
+    "abstract": "Quantization can accelerate large language model (LLM) inference. Going beyond INT8 quantization, the research community is actively exploring even lower precision, such as INT4. Nonetheless, state-of-the-art INT4 quantization techniques only accelerate low-batch, edge LLM inference, failing to deliver performance gains in large-batch, cloud-based LLM serving. We uncover a critical issue: existing INT4 quantization methods suffer from significant runtime overhead (20-90%) when dequantizing either weights or partial sums on GPUs. To address this challenge, we introduce QoQ, a W4A8KV4 quantization algorithm with 4-bit weight, 8-bit activation, and 4-bit KV cache. QoQ stands for quattuor-octo-quattuor, which represents 4-8-4 in Latin. QoQ is implemented by the QServe inference library that achieves measured speedup. The key insight driving QServe is that the efficiency of LLM serving on GPUs is critically influenced by operations on low-throughput CUDA cores. Building upon this insight, in QoQ algorithm, we introduce progressive quantization that can allow low dequantization overhead in W4A8 GEMM. Additionally, we develop SmoothAttention to effectively mitigate the accuracy degradation incurred by 4-bit KV quantization. In the QServe system, we perform compute-aware weight reordering and take advantage of register-level parallelism to reduce dequantization latency. We also make fused attention memory-bound, harnessing the performance gain brought by KV4 quantization. As a result, QServe improves the maximum achievable serving throughput of Llama-3-8B by 1.2x on A100, 1.4x on L40S; and Qwen1.5-72B by 2.4x on A100, 3.5x on L40S, compared to TensorRT-LLM. Remarkably, QServe on L40S GPU can achieve even higher throughput than TensorRT-LLM on A100. Thus, QServe effectively reduces the dollar cost of LLM serving by 3x. Code is available at https://github.com/mit-han-lab/omniserve.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yujun Lin",
+      "Haotian Tang",
+      "Shang Yang",
+      "Zhekai Zhang",
+      "Guangxuan Xiao",
+      "Chuang Gan",
+      "Song Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.04532v3",
+    "url": "http://arxiv.org/abs/2405.04532v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.03180v1",
+    "title": "How to Secure Valid Quantizations",
+    "abstract": "Classical mechanics involves position and momentum variables that must be special coordinates chosen to promote to suitable quantum operators. Since classical variables may be broadly chosen, only unique variables should be chosen. We will outline how the favored variables and their suitable quantum operators is guaranteed to assure a truly valid quantization. Invalid quantizations may be mistaken for valid ones, which then leads to incorrect physics. Besides particle examples, there is also a brief run-through for fields and gravity.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.03180v1",
+    "url": "http://arxiv.org/abs/2209.03180v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0903.3702v5",
+    "title": "Operadic quantization",
+    "abstract": "Based on a simple example, quantization of some 3-spaces is explained.",
+    "year": 2009,
+    "venue": null,
+    "authors": [
+      "E. Paal",
+      "J. Virkepu"
+    ],
+    "doi": null,
+    "arxiv_id": "0903.3702v5",
+    "url": "http://arxiv.org/abs/0903.3702v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12356v1",
+    "title": "Integer or Floating Point? New Outlooks for Low-Bit Quantization on Large Language Models",
+    "abstract": "Efficient deployment of large language models (LLMs) necessitates low-bit quantization to minimize model size and inference cost. While low-bit integer formats (e.g., INT8/INT4) have been the conventional choice, emerging low-bit floating-point formats (e.g., FP8/FP4) offer a compelling alternative and are gaining support from cutting-edge hardware, such as NVIDIA's H100 GPU. However, the superiority of low-bit INT versus FP formats for quantization on LLMs remains unclear. In this study, we conduct a comparative analysis of INT and FP quantization with the same bit-width, revealing that the optimal quantization format varies across different layers due to the complexity and diversity of tensor distribution. Consequently, we advocate the Mixture of Formats Quantization (MoFQ), which selects the optimal format on a layer-wise basis. This simple yet effective approach achieves state-of-the-art results in both weight-only (W-only) and weight-activation (WA) post-training quantization scenarios when tested on LLaMA across various tasks. In 4-bit W-only quantization, MoFQ surpasses GPTQ without complex hyperparameter tuning and with an order of magnitude faster quantization speed. While in 8-bit WA quantization, MoFQ significantly outperforms INT/FP-only methods, achieving performance close to the full precision model. Notably, MoFQ incurs no hardware overhead compared to INT/FP-only quantization, as the bit-width remains unchanged.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yijia Zhang",
+      "Lingran Zhao",
+      "Shijie Cao",
+      "Wenqiang Wang",
+      "Ting Cao",
+      "Fan Yang",
+      "Mao Yang",
+      "Shanghang Zhang",
+      "Ningyi Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12356v1",
+    "url": "http://arxiv.org/abs/2305.12356v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

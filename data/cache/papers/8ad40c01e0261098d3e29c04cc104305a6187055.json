@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2408.00923v2",
+  "title": "Reclaiming Residual Knowledge: A Novel Paradigm to Low-Bit Quantization",
+  "abstract": "This paper explores a novel paradigm in low-bit (i.e. 4-bits or lower) quantization, differing from existing state-of-the-art methods, by framing optimal quantization as an architecture search problem within convolutional neural networks (ConvNets). Our framework, dubbed \\textbf{CoRa} (Optimal Quantization Residual \\textbf{Co}nvolutional Operator Low-\\textbf{Ra}nk Adaptation), is motivated by two key aspects. Firstly, quantization residual knowledge, i.e. the lost information between floating-point weights and quantized weights, has long been neglected by the research community. Reclaiming the critical residual knowledge, with an infinitesimal extra parameter cost, can reverse performance degradation without training. Secondly, state-of-the-art quantization frameworks search for optimal quantized weights to address the performance degradation. Yet, the vast search spaces in weight optimization pose a challenge for the efficient optimization in large models. For example, state-of-the-art BRECQ necessitates $2 \\times 10^4$ iterations to quantize models. Fundamentally differing from existing methods, \\textbf{CoRa} searches for the optimal architectures of low-rank adapters, reclaiming critical quantization residual knowledge, within the search spaces smaller compared to the weight spaces, by many orders of magnitude. The low-rank adapters approximate the quantization residual weights, discarded in previous methods. We evaluate our approach over multiple pre-trained ConvNets on ImageNet. \\textbf{CoRa} achieves comparable performance against both state-of-the-art quantization-aware training and post-training quantization baselines, in $4$-bit and $3$-bit quantization, by using less than $250$ iterations on a small calibration set with $1600$ images. Thus, \\textbf{CoRa} establishes a new state-of-the-art in terms of the optimization efficiency in low-bit quantization.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Róisín Luo",
+    "Alexandru Drimbarean",
+    "James McDermott",
+    "Colm O'Riordan"
+  ],
+  "doi": null,
+  "arxiv_id": "2408.00923v2",
+  "url": "http://arxiv.org/abs/2408.00923v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

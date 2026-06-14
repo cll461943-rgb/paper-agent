@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42281045",
+  "title": "Dynamic Occlusion-Predictive Neural Network for Robust Roadside Multi-Vehicle Tracking.",
+  "abstract": "Despite their extended detection ranges and superior precision compared with onboard sensors, roadside perception systems suffer from severe occlusion artifacts in complex traffic, causing significant tracking failures and ID switches. To address this, we propose a novel Dynamic Occlusion-Predictive Neural Network tailored to challenging roadside environments. First, we introduce a Transformer-based Dynamic Occlusion State Predictor to explicitly model the temporal evolution of occlusion. Unlike traditional tracking methods, this module continuously forecasts future occlusion ratios for each target by analyzing historical occlusion patterns. Critically, these predictions are integrated into the tracking framework as dynamic weighting factors in the loss function, enabling the model to adaptively penalize tracking errors based on the predicted occlusion severity and significantly enhancing robustness against dynamic occlusion scenarios. Second, leveraging the predicted occlusion states, we propose a GNN-based Spatial Reasoning Module to address trajectory fragmentation. This module constructs a heterogeneous graph integrating road occupancy information and neighboring vehicle poses to infer the existence and motion patterns of targets within occluded regions. By analyzing scene-level physical constraints, it generates motion predictions for invisible targets and links these inferred states to fragmented trajectories, ensuring temporally continuous tracking even during prolonged visual occlusions. Experiments on the DAIR-V2X and our self-collected roadside dataset show that our framework outperforms state-of-the-art methods in precision and robustness, achieving a 5.1% MOTA gain over the best baseline. This advantage peaks under high occlusion, where preserving ID continuity and minimizing failures validates its efficacy for real-world roadside multi-target tracking.",
+  "year": 2026,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Shuai Wang",
+    "Yafei Wang",
+    "Bowen Wang",
+    "Chongfeng Wei",
+    "Hao Liu"
+  ],
+  "doi": "10.3390/s26113529",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42281045/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42281045"
+  }
+}

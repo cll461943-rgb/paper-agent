@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2107.05855v1",
+  "title": "Automated Learning Rate Scheduler for Large-batch Training",
+  "abstract": "Large-batch training has been essential in leveraging large-scale datasets and models in deep learning. While it is computationally beneficial to use large batch sizes, it often requires a specially designed learning rate (LR) schedule to achieve a comparable level of performance as in smaller batch training. Especially, when the number of training epochs is constrained, the use of a large LR and a warmup strategy is critical in the final performance of large-batch training due to the reduced number of updating steps. In this work, we propose an automated LR scheduling algorithm which is effective for neural network training with a large batch size under the given epoch budget. In specific, the whole schedule consists of two phases: adaptive warmup and predefined decay, where the LR is increased until the training loss no longer decreases and decreased to zero until the end of training. Here, whether the training loss has reached the minimum value is robustly checked with Gaussian process smoothing in an online manner with a low computational burden. Coupled with adaptive stochastic optimizers such as AdamP and LAMB, the proposed scheduler successfully adjusts the LRs without cumbersome hyperparameter tuning and achieves comparable or better performances than tuned baselines on various image classification benchmarks and architectures with a wide range of batch sizes.",
+  "year": 2021,
+  "venue": null,
+  "authors": [
+    "Chiheon Kim",
+    "Saehoon Kim",
+    "Jongmin Kim",
+    "Donghoon Lee",
+    "Sungwoong Kim"
+  ],
+  "doi": null,
+  "arxiv_id": "2107.05855v1",
+  "url": "http://arxiv.org/abs/2107.05855v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

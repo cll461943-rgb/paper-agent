@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42197869",
+  "title": "DB-LIO: Database-Driven LiDAR-Inertial Odometry for Memory-Bounded Persistent Mapping.",
+  "abstract": "This paper proposes DB-LIO (database-driven LiDAR-inertial odometry), a simultaneous localization and mapping (SLAM) system that addresses memory scalability challenges in extended autonomous operation. Existing LiDAR-SLAM systems accumulate keyframe history in memory, leading to O(N) growth and out-of-memory failures during extended operation. To overcome this limitation, DB-LIO introduces three core design elements. First, it proposes a spatially indexed keyframe management scheme that persistently stores keyframes in SQLite with R-Tree spatial indexing, enabling O(logN+k) spatial queries that tightly couple cache eviction with factor-graph optimization requirements-a design that ensures every keyframe potentially involved in the next optimization cycle resides in cache. Second, it presents a four-level memory bounding architecture-SLAM-engine keyframe trimming with transparent on-demand reloading, a DB-level least recently used (LRU) cache with a spatial active window, Scan Context descriptor pool bounding, and iSAM2 sliding window compaction with a sparse global anchor graph-that collectively bounds the dominant memory consumers to O(C). Third, the DB-based persistent storage enables a localization mode that can reload previously built maps-including full point clouds, six-degree-of-freedom poses, timestamps, and inter-keyframe relationships-and perform pose estimation using the stored map, which is particularly valuable for agricultural robots and other autonomous systems requiring map reuse. Experiments on a custom orchard dataset demonstrate an 81.9% reduction in memory usage compared with that of the in-memory baseline (2888 MB → 524 MB), while preserving equivalent trajectory accuracy (absolute trajectory error (ATE) root mean square error (RMSE) 0.305 ± 0.001 m vs. 0.296 m). Validation on the KITTI odometry benchmark confirms that the proposed localization mode generalizes across different LiDAR types (Livox Mid360, Velodyne HDL-64E) and environments (orchard, urban driving).",
+  "year": 2026,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Hun-Hee Kim",
+    "Ho-Hyun Kang",
+    "Dong-Hee Noh",
+    "Hea-Min Lee"
+  ],
+  "doi": "10.3390/s26103061",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42197869/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde",
+    "route:original_clean",
+    "route:title_like",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42197869"
+  }
+}

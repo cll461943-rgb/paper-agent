@@ -1,0 +1,886 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2605.09678v1",
+    "title": "Absurd World: A Simple Yet Powerful Method to Absurdify the Real-world for Probing LLM Reasoning Capabilities",
+    "abstract": "While extremely powerful and versatile at various tasks, the thinking capabilities of large language models (LLMs) are often put under scrutiny as they sometimes fail to solve problems that humans can systematically solve. However, recent literature focuses on breaking LLM reasoning with increasingly complex problems, and whether an LLM is robust in simple logical reasoning remains underexplored. This paper proposes Absurd World, a benchmarking framework, to test LLMs against altered realism, where scenarios are logically coherent, and humans can easily solve the tasks. Absurd World breaks a real-world model into symbols, actions, sequences, and events, which are automatically altered to create absurd worlds where the logic to solve the tasks remains the same. It evaluates a large collection of models with simple and advanced prompting techniques, and proves that it is an effective tool to determine LLMs' ability to think logically, ignoring the patterns learned from the real world. One can use this framework to extensively test an LLM against a real-world problem to verify whether the LLM's reasoning capability is robust against variations of the task.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ryan Albright",
+      "Golam Md Muktadir",
+      "Zarif Ikram",
+      "S M Jubaer",
+      "Mehrab Hossain",
+      "Dianbo Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.09678v1",
+    "url": "http://arxiv.org/abs/2605.09678v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.00802v1",
+    "title": "Leveraging LLM Reasoning Enhances Personalized Recommender Systems",
+    "abstract": "Recent advancements have showcased the potential of Large Language Models (LLMs) in executing reasoning tasks, particularly facilitated by Chain-of-Thought (CoT) prompting. While tasks like arithmetic reasoning involve clear, definitive answers and logical chains of thought, the application of LLM reasoning in recommendation systems (RecSys) presents a distinct challenge. RecSys tasks revolve around subjectivity and personalized preferences, an under-explored domain in utilizing LLMs' reasoning capabilities. Our study explores several aspects to better understand reasoning for RecSys and demonstrate how task quality improves by utilizing LLM reasoning in both zero-shot and finetuning settings. Additionally, we propose RecSAVER (Recommender Systems Automatic Verification and Evaluation of Reasoning) to automatically assess the quality of LLM reasoning responses without the requirement of curated gold references or human raters. We show that our framework aligns with real human judgment on the coherence and faithfulness of reasoning responses. Overall, our work shows that incorporating reasoning into RecSys can improve personalized tasks, paving the way for further advancements in recommender system methodologies.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Alicia Y. Tsai",
+      "Adam Kraft",
+      "Long Jin",
+      "Chenwei Cai",
+      "Anahita Hosseini",
+      "Taibai Xu",
+      "Zemin Zhang",
+      "Lichan Hong",
+      "Ed H. Chi",
+      "Xinyang Yi"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.00802v1",
+    "url": "http://arxiv.org/abs/2408.00802v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.06241v2",
+    "title": "DiPT: Enhancing LLM reasoning through diversified perspective-taking",
+    "abstract": "Existing work on improving language model reasoning typically explores a single solution path, which can be prone to errors. Inspired by perspective-taking in social studies, this paper introduces DiPT, a novel approach that complements current reasoning methods by explicitly incorporating diversified viewpoints. This approach allows the model to gain a deeper understanding of the problem's context and identify the most effective solution path during the inference stage. Additionally, it provides a general data-centric AI recipe for augmenting existing data to improve their quality for fine-tuning. Our empirical results demonstrate that DiPT can be flexibly integrated into existing methods that focus on a single reasoning approach, enhancing their reasoning performance and stability when presented with paraphrased problems. Furthermore, we illustrate improved context understanding by maintaining the model's safe outputs against \"jailbreaking\" prompts intentionally designed to bypass safeguards built into deployed models. Lastly, we show that fine-tuning with data enriched with diverse perspectives can boost the reasoning capabilities of the model compared to fine-tuning with raw data alone.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hoang Anh Just",
+      "Mahavir Dabas",
+      "Lifu Huang",
+      "Ming Jin",
+      "Ruoxi Jia"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.06241v2",
+    "url": "http://arxiv.org/abs/2409.06241v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.18547v5",
+    "title": "Token-Budget-Aware LLM Reasoning",
+    "abstract": "Reasoning is critical for large language models (LLMs) to excel in a wide range of tasks. While methods like Chain-of-Thought (CoT) reasoning and enhance LLM performance by decomposing problems into intermediate steps, they also incur significant overhead in token usage, leading to increased costs. We find that the reasoning process of current LLMs is unnecessarily lengthy and it can be compressed by including a reasonable token budget in the prompt, but the choice of token budget plays a crucial role in the actual compression effectiveness. We then propose a token-budget-aware LLM reasoning framework that dynamically adjusts the number of reasoning tokens based on the reasoning complexity of each problem. Experiments show that our method effectively reduces token costs in CoT reasoning with only a slight performance reduction, offering a practical solution to balance efficiency and accuracy in LLM reasoning. Code: https://github.com/GeniusHTX/TALE",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Tingxu Han",
+      "Zhenting Wang",
+      "Chunrong Fang",
+      "Shiyu Zhao",
+      "Shiqing Ma",
+      "Zhenyu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.18547v5",
+    "url": "http://arxiv.org/abs/2412.18547v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.07627v2",
+    "title": "Automatic Curriculum Expert Iteration for Reliable LLM Reasoning",
+    "abstract": "Hallucinations (i.e., generating plausible but inaccurate content) and laziness (i.e. excessive refusals or defaulting to \"I don't know\") persist as major challenges in LLM reasoning. Current efforts to reduce hallucinations primarily focus on factual errors in knowledge-grounded tasks, often neglecting hallucinations related to faulty reasoning. Meanwhile, some approaches render LLMs overly conservative, limiting their problem-solving capabilities. To mitigate hallucination and laziness in reasoning tasks, we propose Automatic Curriculum Expert Iteration (Auto-CEI) to enhance LLM reasoning and align responses to the model's capabilities--assertively answering within its limits and declining when tasks exceed them. In our method, Expert Iteration explores the reasoning trajectories near the LLM policy, guiding incorrect paths back on track to reduce compounding errors and improve robustness; it also promotes appropriate \"I don't know\" responses after sufficient reasoning attempts. The curriculum automatically adjusts rewards, incentivizing extended reasoning before acknowledging incapability, thereby pushing the limits of LLM reasoning and aligning its behaviour with these limits. We compare Auto-CEI with various SOTA baselines across logical reasoning, mathematics, and planning tasks, where Auto-CEI achieves superior alignment by effectively balancing assertiveness and conservativeness. The code is available at https://github.com/SalesforceAIResearch/Auto-CEI .",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zirui Zhao",
+      "Hanze Dong",
+      "Amrita Saha",
+      "Caiming Xiong",
+      "Doyen Sahoo"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.07627v2",
+    "url": "http://arxiv.org/abs/2410.07627v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.19815v1",
+    "title": "Deciphering Trajectory-Aided LLM Reasoning: An Optimization Perspective",
+    "abstract": "We propose a novel framework for comprehending the reasoning capabilities of large language models (LLMs) through the perspective of meta-learning. By conceptualizing reasoning trajectories as pseudo-gradient descent updates to the LLM's parameters, we identify parallels between LLM reasoning and various meta-learning paradigms. We formalize the training process for reasoning tasks as a meta-learning setup, with each question treated as an individual task, and reasoning trajectories serving as the inner loop optimization for adapting model parameters. Once trained on a diverse set of questions, the LLM develops fundamental reasoning capabilities that can generalize to previously unseen questions. Extensive empirical evaluations substantiate the strong connection between LLM reasoning and meta-learning, exploring several issues of significant interest from a meta-learning standpoint. Our work not only enhances the understanding of LLM reasoning but also provides practical insights for improving these models through established meta-learning techniques.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Junnan Liu",
+      "Hongwei Liu",
+      "Linchen Xiao",
+      "Shudong Liu",
+      "Taolin Zhang",
+      "Zihan Ma",
+      "Songyang Zhang",
+      "Kai Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.19815v1",
+    "url": "http://arxiv.org/abs/2505.19815v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.18391v1",
+    "title": "Revisiting LLM Reasoning via Information Bottleneck",
+    "abstract": "Large language models (LLMs) have recently demonstrated remarkable progress in reasoning capabilities through reinforcement learning with verifiable rewards (RLVR). By leveraging simple rule-based rewards, RL effectively incentivizes LLMs to produce extended chain-of-thought (CoT) reasoning trajectories, progressively guiding them toward correct answers. However, existing approaches remain largely heuristic and intuition-driven, limiting the development of principled methodologies. In this paper, we present a theoretical characterization of LLM reasoning grounded in information bottleneck (IB) principle, introducing IB-aware reasoning optimization (IBRO), a framework that encourages reasoning trajectories to be both informative about the final correct answer and generalizable across diverse prompts. We derive a practical token-level surrogate objective and propose an efficient approximation, resulting in the lightweight IB regularization method. This technique integrates seamlessly into existing RL-based post-training frameworks without additional computational overhead, requiring only a one-line code modification. Empirically, we validate IB regularization across multiple mathematical reasoning benchmarks and RL algorithms, demonstrating consistent improvements in LLM reasoning performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Shiye Lei",
+      "Zhihao Cheng",
+      "Kai Jia",
+      "Dacheng Tao"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.18391v1",
+    "url": "http://arxiv.org/abs/2507.18391v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.06394v5",
+    "title": "GameArena: Evaluating LLM Reasoning through Live Computer Games",
+    "abstract": "Evaluating the reasoning abilities of large language models (LLMs) is challenging. Existing benchmarks often depend on static datasets, which are vulnerable to data contamination and may get saturated over time, or on binary live human feedback that conflates reasoning with other abilities. As the most prominent dynamic benchmark, Chatbot Arena evaluates open-ended questions in real-world settings, but lacks the granularity in assessing specific reasoning capabilities. We introduce GameArena, a dynamic benchmark designed to evaluate LLM reasoning capabilities through interactive gameplay with humans. GameArena consists of three games designed to test specific reasoning capabilities (e.g., deductive and inductive reasoning), while keeping participants entertained and engaged. We analyze the gaming data retrospectively to uncover the underlying reasoning processes of LLMs and measure their fine-grained reasoning capabilities. We collect over 2000 game sessions and provide detailed assessments of various reasoning capabilities for five state-of-the-art LLMs. Our user study with 100 participants suggests that GameArena improves user engagement compared to Chatbot Arena. For the first time, GameArena enables the collection of step-by-step LLM reasoning data in the wild.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lanxiang Hu",
+      "Qiyu Li",
+      "Anze Xie",
+      "Nan Jiang",
+      "Ion Stoica",
+      "Haojian Jin",
+      "Hao Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.06394v5",
+    "url": "http://arxiv.org/abs/2412.06394v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.12201v1",
+    "title": "AdversarialCoT: Single-Document Retrieval Poisoning for LLM Reasoning",
+    "abstract": "Retrieval-augmented generation (RAG) enhances large language model (LLM) reasoning by retrieving external documents, but also opens up new attack surfaces. We study knowledge-base poisoning attacks in RAG, where an attacker injects malicious content into the retrieval corpus, which is then naturally surfaced by the retriever and consumed by the LLM during reasoning. Unlike prior work that floods the corpus with poisoned documents, we propose AdversarialCoT, a query-specific attack that poisons only a single document in the corpus. AdversarialCoT first extracts the target LLM's reasoning framework to guide the construction of an initial adversarial chain-of-thought (CoT). The adversarial document is iteratively refined through interactions with the LLM, progressively exposing and exploiting critical reasoning vulnerabilities. Experiments on benchmark LLMs show that a single adversarial document can significantly degrade reasoning accuracy, revealing subtle yet impactful weaknesses. This study exposes security risks in RAG systems and provides actionable insights for designing more robust LLM reasoning pipelines.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Hongru Song",
+      "Yu-An Liu",
+      "Ruqing Zhang",
+      "Jiafeng Guo",
+      "Maarten de Rijke",
+      "Yixing Fan",
+      "Xueqi Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.12201v1",
+    "url": "http://arxiv.org/abs/2604.12201v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.00127v1",
+    "title": "ALIGN: Aligned Delegation with Performance Guarantees for Multi-Agent LLM Reasoning",
+    "abstract": "LLMs often underperform on complex reasoning tasks when relying on a single generation-and-selection pipeline. Inference-time ensemble methods can improve performance by sampling diverse reasoning paths or aggregating multiple candidate answers, but they typically treat candidates independently and provide no formal guarantees that ensembling improves reasoning quality. We propose a novel method, Aligned Delegation for Multi-Agent LLM Reasoning (ALIGN), which formulates LLM reasoning as an aligned delegation game. In ALIGN, a principal delegates a task to multiple agents that generate candidate solutions under designed incentives, and then selects among their outputs to produce a final answer. This formulation induces structured interaction among agents while preserving alignment between agent and principal objectives. We establish theoretical guarantees showing that, under a fair comparison with equal access to candidate solutions, ALIGN provably improves expected performance over single-agent generation. Our analysis accommodates correlated candidate answers and relaxes independence assumptions that are commonly used in prior work. Empirical results across a broad range of LLM reasoning benchmarks consistently demonstrate that ALIGN outperforms strong single-agent and ensemble baselines.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Tong Zhu",
+      "Baiting Chen",
+      "Jin Zhou",
+      "Hua Zhou",
+      "Sriram Sankararaman",
+      "Xiaowu Dai"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.00127v1",
+    "url": "http://arxiv.org/abs/2602.00127v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.26306v4",
+    "title": "Interactive Learning for LLM Reasoning",
+    "abstract": "Existing multi-agent learning approaches have developed interactive training environments to explicitly promote collaboration among multiple Large Language Models (LLMs), thereby constructing stronger multi-agent systems (MAS). However, during inference, they require re-executing the MAS to obtain final solutions, which diverges from human cognition that individuals can enhance their reasoning capabilities through interactions with others and resolve questions independently in the future. To investigate whether multi-agent interaction can enhance LLMs' independent problem-solving ability, we introduce ILR, a novel co-learning framework for MAS that integrates two key components: Dynamic Interaction and Perception Calibration. Specifically, Dynamic Interaction first adaptively selects either cooperative or competitive strategies depending on question difficulty and model ability. LLMs then exchange information through Idea3, an innovative interaction paradigm designed to mimic human discussion, before deriving their respective final answers. In Perception Calibration, ILR employs Group Relative Policy Optimization (GRPO) to train LLMs while integrating one LLM's reward distribution characteristics into another's reward function, thereby enhancing the cohesion of multi-agent interactions. We evaluate the effectiveness of ILR across three LLMs from two model families of varying scales on five mathematical, one coding, one general question answering, and one scientific reasoning benchmarks. Experimental results show that ILR consistently outperforms single-agent learning, yielding an improvement of up to 5% over the strongest baseline. We further discover that Idea3 can enhance the robustness of stronger LLMs during multi-agent inference, and dynamic interaction types can boost multi-agent learning compared to pure cooperative or competitive strategies.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hehai Lin",
+      "Shilei Cao",
+      "Sudong Wang",
+      "Haotian Wu",
+      "Minzhi Li",
+      "Linyi Yang",
+      "Juepeng Zheng",
+      "Chengwei Qin"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.26306v4",
+    "url": "http://arxiv.org/abs/2509.26306v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.06772v2",
+    "title": "ReasonFlux: Hierarchical LLM Reasoning via Scaling Thought Templates",
+    "abstract": "We present that hierarchical LLM reasoning via scaling thought templates can effectively optimize the reasoning search space and outperform the mathematical reasoning capabilities of powerful LLMs like OpenAI o1-preview and DeepSeek V3. We train our ReasonFlux-32B model with only 8 GPUs and introduces three innovations: (i) a structured and generic thought template library, containing around 500 high-level thought templates capable of generalizing to similar or relevant reasoning problems; (ii) performing hierarchical reinforcement learning on a sequence of thought templates instead of long CoTs, optimizing a base LLM to plan out an optimal template trajectory for gradually handling complex problems; (iii) a brand new inference scaling system that enables hierarchical LLM reasoning by adaptively scaling thought templates at inference time. With a template trajectory containing more explainable reasoning structures than DeepSeek-R1 and o3-mini, our ReasonFlux-32B significantly advances math reasoning capabilities to state-of-the-art levels. Notably, on the MATH benchmark, it achieves an accuracy of 91.2% and surpasses o1-preview by 6.7%. On the USA Math Olympiad (AIME) benchmark, ReasonFlux-32B solves an average of 56.7% of problems, surpassing o1-preview and DeepSeek-V3 by 27% and 45%, respectively. Code: https://github.com/Gen-Verse/ReasonFlux",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ling Yang",
+      "Zhaochen Yu",
+      "Bin Cui",
+      "Mengdi Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.06772v2",
+    "url": "http://arxiv.org/abs/2502.06772v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.08989v1",
+    "title": "SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning",
+    "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has proven effective for training large language models (LLMs) on complex reasoning tasks, such as mathematical problem solving. A prerequisite for the scalability of RLVR is a high-quality problem set with precise and verifiable answers. However, the scarcity of well-crafted human-labeled math problems and limited-verification answers in existing distillation-oriented synthetic datasets limit their effectiveness in RL. Additionally, most problem synthesis strategies indiscriminately expand the problem set without considering the model's capabilities, leading to low efficiency in generating useful questions. To mitigate this issue, we introduce a Self-aware Weakness-driven problem Synthesis framework (SwS) that systematically identifies model deficiencies and leverages them for problem augmentation. Specifically, we define weaknesses as questions that the model consistently fails to learn through its iterative sampling during RL training. We then extract the core concepts from these failure cases and synthesize new problems to strengthen the model's weak areas in subsequent augmented training, enabling it to focus on and gradually overcome its weaknesses. Without relying on external knowledge distillation, our framework enables robust generalization byempowering the model to self-identify and address its weaknesses in RL, yielding average performance gains of 10.0% and 7.7% on 7B and 32B models across eight mainstream reasoning benchmarks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xiao Liang",
+      "Zhong-Zhi Li",
+      "Yeyun Gong",
+      "Yang Wang",
+      "Hengyuan Zhang",
+      "Yelong Shen",
+      "Ying Nian Wu",
+      "Weizhu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.08989v1",
+    "url": "http://arxiv.org/abs/2506.08989v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.13602v2",
+    "title": "GAMEBoT: Transparent Assessment of LLM Reasoning in Games",
+    "abstract": "Large Language Models (LLMs) are increasingly deployed in real-world applications that demand complex reasoning. To track progress, robust benchmarks are required to evaluate their capabilities beyond superficial pattern recognition. However, current LLM reasoning benchmarks often face challenges such as insufficient interpretability, performance saturation or data contamination. To address these challenges, we introduce GAMEBoT, a gaming arena designed for rigorous and transparent assessment of LLM reasoning capabilities. GAMEBoT decomposes complex reasoning in games into predefined modular subproblems. This decomposition allows us to design a suite of Chain-of-Thought (CoT) prompts that leverage domain knowledge to guide LLMs in addressing these subproblems before action selection. Furthermore, we develop a suite of rule-based algorithms to generate ground truth for these subproblems, enabling rigorous validation of the LLMs' intermediate reasoning steps. This approach facilitates evaluation of both the quality of final actions and the accuracy of the underlying reasoning process. GAMEBoT also naturally alleviates the risk of data contamination through dynamic games and head-to-head LLM competitions. We benchmark 17 prominent LLMs across eight games, encompassing various strategic abilities and game characteristics. Our results suggest that GAMEBoT presents a significant challenge, even when LLMs are provided with detailed CoT prompts. Project page: https://visual-ai.github.io/gamebot",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Wenye Lin",
+      "Jonathan Roberts",
+      "Yunhan Yang",
+      "Samuel Albanie",
+      "Zongqing Lu",
+      "Kai Han"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.13602v2",
+    "url": "http://arxiv.org/abs/2412.13602v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.00833v2",
+    "title": "HumanoidGen: Data Generation for Bimanual Dexterous Manipulation via LLM Reasoning",
+    "abstract": "For robotic manipulation, existing robotics datasets and simulation benchmarks predominantly cater to robot-arm platforms. However, for humanoid robots equipped with dual arms and dexterous hands, simulation tasks and high-quality demonstrations are notably lacking. Bimanual dexterous manipulation is inherently more complex, as it requires coordinated arm movements and hand operations, making autonomous data collection challenging. This paper presents HumanoidGen, an automated task creation and demonstration collection framework that leverages atomic dexterous operations and LLM reasoning to generate relational constraints. Specifically, we provide spatial annotations for both assets and dexterous hands based on the atomic operations, and perform an LLM planner to generate a chain of actionable spatial constraints for arm movements based on object affordances and scenes. To further improve planning ability, we employ a variant of Monte Carlo tree search to enhance LLM reasoning for long-horizon tasks and insufficient annotation. In experiments, we create a novel benchmark with augmented scenarios to evaluate the quality of the collected data. The results show that the performance of the 2D and 3D diffusion policies can scale with the generated dataset. Project page is https://openhumanoidgen.github.io.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zhi Jing",
+      "Siyuan Yang",
+      "Jicong Ao",
+      "Ting Xiao",
+      "Yu-Gang Jiang",
+      "Chenjia Bai"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.00833v2",
+    "url": "http://arxiv.org/abs/2507.00833v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1112.1988v2",
+    "title": "Regarding how Tycho Brahe noted the absurdity of the Copernican Theory regarding the Bigness of Stars, while the Copernicans appealed to God to answer that absurdity",
+    "abstract": "Tycho Brahe, the most prominent and accomplished astronomer of his era, made measurements of the apparent sizes of the Sun, Moon, stars, and planets. From these he showed that within a geocentric cosmos these bodies were of comparable sizes, with the Sun being the largest body and the Moon the smallest. He further showed that within a heliocentric cosmos, the stars had to be absurdly large - with the smallest star dwarfing even the Sun. (The results of Tycho's calculations are illustrated in this paper.) Various Copernicans responded to this issue of observation and geometry by appealing to the power of God: They argued that giant stars were not absurd because even such giant objects were nothing compared to an infinite God, and that in fact the Copernican stars pointed out the power of God to humankind. Tycho rejected this argument.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Christopher M. Graney"
+    ],
+    "doi": null,
+    "arxiv_id": "1112.1988v2",
+    "url": "http://arxiv.org/abs/1112.1988v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.17216v2",
+    "title": "Intermediate Languages Matter: Formal Choice Drives Neurosymbolic LLM Reasoning",
+    "abstract": "Large language models (LLMs) achieve astonishing results on a wide range of tasks. However, their formal reasoning ability still lags behind. A promising approach is Neurosymbolic LLM reasoning. It works by using LLMs as translators from natural to formal languages and symbolic solvers for deriving correct results. Still, it remains unclear what the contributing factors to the success of Neurosymbolic LLM reasoning are. This paper shows that one important factor is the choice of the formal language. By comparing 4 formal languages on 3 datasets over 6 LLMs, we show that the choice of formal language affects both the syntactic and the semantic reasoning capability. Thereby, we introduce the intermediate language challenge, which is the challenge of picking a suitable formal language for neurosymbolic reasoning. Further, we compare the effects of using different in-context-learning examples in an ablation study. We conclude that on average, context-aware encodings help LLMs to reason, while there is no apparent effect of using comments or markdown syntax.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Alexander Beiser",
+      "David Penz",
+      "Nysret Musliu"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.17216v2",
+    "url": "http://arxiv.org/abs/2502.17216v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14140v3",
+    "title": "RL of Thoughts: Navigating LLM Reasoning with Inference-time Reinforcement Learning",
+    "abstract": "Despite rapid advancements in large language models (LLMs), the token-level autoregressive nature constrains their complex reasoning capabilities. To enhance LLM reasoning, inference-time techniques, including Chain/Tree/Graph-of-Thought(s), successfully improve the performance, as they are fairly cost-effective by guiding reasoning through sophisticated logical structures without modifying LLMs' parameters. However, these manually predefined, task-agnostic frameworks are applied uniformly across diverse tasks, lacking adaptability. To improve this, we propose RL-of-Thoughts (RLoT), where we train a lightweight navigator model with reinforcement learning (RL) to adaptively enhance LLM reasoning at inference time. Specifically, we design five basic logic blocks from the perspective of human cognition. During the reasoning process, the trained RL navigator dynamically selects the suitable logic blocks and combines them into task-specific logical structures according to problem characteristics. Experiments across multiple reasoning benchmarks (AIME, MATH, GPQA, etc.) with multiple LLMs (GPT, Llama, Qwen, and DeepSeek) illustrate that RLoT outperforms established inference-time techniques by up to 13.4%. Remarkably, with less than 3K parameters, our RL navigator is able to make sub-10B LLMs comparable to 100B-scale counterparts. Moreover, the RL navigator demonstrates strong transferability: a model trained on one specific LLM-task pair can effectively generalize to unseen LLMs and tasks. Our code is open-source at https://github.com/tsinghua-fib-lab/RL-LLM-Reasoning for reproducibility.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Qianyue Hao",
+      "Sibo Li",
+      "Jian Yuan",
+      "Yong Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14140v3",
+    "url": "http://arxiv.org/abs/2505.14140v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1008.1501v1",
+    "title": "Dodgson's Rule Approximations and Absurdity",
+    "abstract": "With the Dodgson rule, cloning the electorate can change the winner, which Young (1977) considers an \"absurdity\". Removing this absurdity results in a new rule (Fishburn, 1977) for which we can compute the winner in polynomial time (Rothe et al., 2003), unlike the traditional Dodgson rule. We call this rule DC and introduce two new related rules (DR and D&). Dodgson did not explicitly propose the \"Dodgson rule\" (Tideman, 1987); we argue that DC and DR are better realizations of the principle behind the Dodgson rule than the traditional Dodgson rule. These rules, especially D&, are also effective approximations to the traditional Dodgson's rule. We show that, unlike the rules we have considered previously, the DC, DR and D& scores differ from the Dodgson score by no more than a fixed amount given a fixed number of alternatives, and thus these new rules converge to Dodgson under any reasonable assumption on voter behaviour, including the Impartial Anonymous Culture assumption.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "John C. McCabe-Dansted"
+    ],
+    "doi": null,
+    "arxiv_id": "1008.1501v1",
+    "url": "http://arxiv.org/abs/1008.1501v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.15726v1",
+    "title": "LLM Reasoning Is Latent, Not the Chain of Thought",
+    "abstract": "This position paper argues that large language model (LLM) reasoning should be studied as latent-state trajectory formation rather than as faithful surface chain-of-thought (CoT). This matters because claims about faithfulness, interpretability, reasoning benchmarks, and inference-time intervention all depend on what the field takes the primary object of reasoning to be. We ask what that object should be once three often-confounded factors are separated and formalize three competing hypotheses: H1, reasoning is primarily mediated by latent-state trajectories; H2, reasoning is primarily mediated by explicit surface CoT; and H0, most apparent reasoning gains are better explained by generic serial compute than by any privileged representational object. Reorganizing recent empirical, mechanistic, and survey work under this framework, and adding compute-audited worked exemplars that factorize surface traces, latent interventions, and matched budget expansions, we find that current evidence most strongly supports H1 as a default working hypothesis rather than as a task-independent verdict. We therefore make two recommendations: the field should treat latent-state dynamics as the default object of study for LLM reasoning, and it should evaluate reasoning with designs that explicitly disentangle surface traces, latent states, and serial compute.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Wenshuo Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.15726v1",
+    "url": "http://arxiv.org/abs/2604.15726v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.06953v3",
+    "title": "Revisiting the Uniform Information Density Hypothesis in LLM Reasoning",
+    "abstract": "The Uniform Information Density (UID) hypothesis proposes that effective communication is achieved by maintaining a stable flow of information. In this work, we revisit this principle in the context of Large Language Model (LLM) reasoning, asking whether step-level uniformity reflects reasoning quality. To this end, we introduce a novel framework to quantify uniformity of information flow at both local and global levels, using an entropy-based stepwise density metric. Across experiments on seven reasoning benchmarks, we see a counter-intuitive pattern: while high-quality reasoning exhibit smooth step-by-step transitions local uniformity and structured, non-uniform information flow at the trajectory level global non-uniformity. The results demonstrate that these uniformities outperform alternative internal signals as predictors of reasoning quality, and such divergence with human communication is not a model deficiency, but a byproduct of distinct objectives between human communication and LLM reasoning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Minju Gwak",
+      "Guijin Son",
+      "Jaehyung Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.06953v3",
+    "url": "http://arxiv.org/abs/2510.06953v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.11176v4",
+    "title": "LogiDynamics: Unraveling the Dynamics of Inductive, Abductive and Deductive Logical Inferences in LLM Reasoning",
+    "abstract": "Modern large language models (LLMs) employ diverse logical inference mechanisms for reasoning, making the strategic optimization of these approaches critical for advancing their capabilities. This paper systematically investigate the comparative dynamics of inductive (System 1) versus abductive/deductive (System 2) inference in LLMs. We utilize a controlled analogical reasoning environment, varying modality (textual, visual, symbolic), difficulty, and task format (MCQ / free-text). Our analysis reveals System 2 pipelines generally excel, particularly in visual/symbolic modalities and harder tasks, while System 1 is competitive for textual and easier problems. Crucially, task format significantly influences their relative advantage, with System 1 sometimes outperforming System 2 in free-text rule-execution. These core findings generalize to broader in-context learning. Furthermore, we demonstrate that advanced System 2 strategies like hypothesis selection and iterative refinement can substantially scale LLM reasoning. This study offers foundational insights and actionable guidelines for strategically deploying logical inference to enhance LLM reasoning. Resources are available at https://github.com/HKUST-KnowComp/LogiDynamics.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Tianshi Zheng",
+      "Jiayang Cheng",
+      "Chunyang Li",
+      "Haochen Shi",
+      "Zihao Wang",
+      "Jiaxin Bai",
+      "Yangqiu Song",
+      "Ginny Y. Wong",
+      "Simon See"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.11176v4",
+    "url": "http://arxiv.org/abs/2502.11176v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.26578v2",
+    "title": "Linking Process to Outcome: Conditional Reward Modeling for LLM Reasoning",
+    "abstract": "Process Reward Models (PRMs) have emerged as a promising approach to enhance the reasoning capabilities of large language models (LLMs) by guiding their step-by-step reasoning toward a final answer. However, existing PRMs either treat each reasoning step in isolation, failing to capture inter-step dependencies, or struggle to align process rewards with the final outcome. Consequently, the reward signal fails to respect temporal causality in sequential reasoning and faces ambiguous credit assignment. These limitations make downstream models vulnerable to reward hacking and lead to suboptimal performance. In this work, we propose Conditional Reward Modeling (CRM) that frames LLM reasoning as a temporal process leading to a correct answer. The reward of each reasoning step is not only conditioned on the preceding steps but also explicitly linked to the final outcome of the reasoning trajectory. By enforcing conditional probability rules, our design captures the causal relationships among reasoning steps, with the link to the outcome allowing precise attribution of each intermediate step, thereby resolving credit assignment ambiguity. Further, through this consistent probabilistic modeling, the rewards produced by CRM enable more reliable cross-sample comparison. Experiments across Best-of-N sampling, beam search and reinforcement learning demonstrate that CRM consistently outperforms existing reward models, offering a principled framework for enhancing LLM reasoning. In particular, CRM is more robust to reward hacking and delivers stable downstream improvements without relying on verifiable rewards derived from ground truth.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zheng Zhang",
+      "Ziwei Shan",
+      "Kaitao Song",
+      "Yexin Li",
+      "Kan Ren"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.26578v2",
+    "url": "http://arxiv.org/abs/2509.26578v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.16614v2",
+    "title": "Count Counts: Motivating Exploration in LLM Reasoning with Count-based Intrinsic Rewards",
+    "abstract": "Reinforcement Learning (RL) has become a compelling way to strengthen the multi step reasoning ability of Large Language Models (LLMs). However, prevalent RL paradigms still lean on sparse outcome-based rewards and limited exploration, which often drives LLMs toward repetitive and suboptimal reasoning patterns. In this paper, we study the central question of how to design exploration for LLM reasoning and introduce MERCI (Motivating Exploration in LLM Reasoning with Count-based Intrinsic Rewards), a novel RL algorithm that augments policy optimization with a principled intrinsic reward. Building on the idea of count-based exploration, MERCI leverages a lightweight Coin Flipping Network (CFN) to estimate the pseudo count and further epistemic uncertainty over reasoning trajectories, and converts them into an intrinsic reward that values novelty while preserving the learning signal from task rewards. We integrate MERCI into some advanced RL frameworks like Group Relative Policy Optimization (GRPO). Experiments on complex reasoning benchmarks demonstrate that MERCI encourages richer and more varied chains of thought, significantly improves performance over strong baselines, and helps the policy escape local routines to discover better solutions. It indicates that our targeted intrinsic motivation can make exploration reliable for language model reasoning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xuan Zhang",
+      "Ruixiao Li",
+      "Zhijian Zhou",
+      "Long Li",
+      "Yulei Qin",
+      "Ke Li",
+      "Xing Sun",
+      "Xiaoyu Tan",
+      "Chao Qu",
+      "Yuan Qi"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.16614v2",
+    "url": "http://arxiv.org/abs/2510.16614v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14652v5",
+    "title": "General-Reasoner: Advancing LLM Reasoning Across All Domains",
+    "abstract": "Reinforcement learning (RL) has recently demonstrated strong potential in enhancing the reasoning capabilities of large language models (LLMs). Particularly, the \"Zero\" reinforcement learning introduced by Deepseek-R1-Zero, enables direct RL training of base LLMs without relying on an intermediate supervised fine-tuning stage. Despite these advancements, current works for LLM reasoning mainly focus on mathematical and coding domains, largely due to data abundance and the ease of answer verification. This limits the applicability and generalization of such models to broader domains, where questions often have diverse answer representations, and data is more scarce. In this paper, we propose General-Reasoner, a novel training paradigm designed to enhance LLM reasoning capabilities across diverse domains. Our key contributions include: (1) constructing a large-scale, high-quality dataset of questions with verifiable answers curated by web crawling, covering a wide range of disciplines; and (2) developing a generative model-based answer verifier, which replaces traditional rule-based verification with the capability of chain-of-thought and context-awareness. We train a series of models and evaluate them on a wide range of datasets covering wide domains like physics, chemistry, finance, electronics etc. Our comprehensive evaluation across these 12 benchmarks (e.g. MMLU-Pro, GPQA, SuperGPQA, TheoremQA, BBEH and MATH AMC) demonstrates that General-Reasoner outperforms existing baseline methods, achieving robust and generalizable reasoning performance while maintaining superior effectiveness in mathematical reasoning tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Xueguang Ma",
+      "Qian Liu",
+      "Dongfu Jiang",
+      "Ge Zhang",
+      "Zejun Ma",
+      "Wenhu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14652v5",
+    "url": "http://arxiv.org/abs/2505.14652v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.25666v2",
+    "title": "Nudging the Boundaries of LLM Reasoning",
+    "abstract": "Current online reinforcement learning (RL) algorithms like GRPO share a key limitation in LLM reasoning: they cannot learn from problems that are \"unsolvable\" to the model. In other words, they can only improve performance on problems where the model is capable of exploring the correct answer. Consequently, the model's \"upper limit\" remains unchanged after RL training, even though the likelihood of solving easier, solvable problems may increase. These hard samples cannot contribute to training, as no rollouts yield rewards and thus no gradients are produced. To unlock learning from these hard samples, we propose NuRL, a \"nudging\" method that aims to push the upper bound of LLM reasoning using self-generated hints, i.e., abstract cues that help reduce the problem difficulty for the model. Given a question and its gold answer, the model generates a CoT and then produces a hint containing the core knowledge needed to solve the problem. During training, we generate G rollouts from the base policy and use the pass rate to decide whether the hint should be injected. For hard samples with a 0% pass rate, we inject the hint and regenerate a new batch of trajectories. This yields two benefits: (1) the hint boosts pass rates (from 0% to non-zero), thereby introducing training signals for previously unsolvable samples, and (2) the hints are self-generated, avoiding distributional shift and do not rely on external models. NuRL achieves consistent improvements across 6 benchmarks and 3 models, while remaining complementary to test-time scaling. Notably, NuRL can raise the model's upper limit, whereas GRPO leaves pass@1024 unchanged from the base model. Furthermore, we present a systematic study of what makes an effective hint and when hints are most useful. Interestingly, the best hints are abstract and high-level, and are most beneficial when applied necessarily and after GRPO has converged.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Justin Chih-Yao Chen",
+      "Becky Xiangyu Peng",
+      "Prafulla Kumar Choubey",
+      "Kung-Hsiang Huang",
+      "Jiaxin Zhang",
+      "Mohit Bansal",
+      "Chien-Sheng Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.25666v2",
+    "url": "http://arxiv.org/abs/2509.25666v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.23248v3",
+    "title": "Resource-Aware LLM Reasoning for Mobile Edge General Intelligence",
+    "abstract": "The rapid advancement of large language models (LLMs) has enabled an emergence of agentic artificial intelligence (AI) with powerful reasoning and autonomous decision-making capabilities. This integration with edge computing has led to the development of Mobile Edge General Intelligence (MEGI), which brings real-time, privacy-preserving reasoning to the network edge. However, deploying LLM-based agentic AI reasoning in MEGI environments poses significant challenges due to the high computational demands of reasoning and the limited resources of edge devices. To address these challenges, we propose a joint optimization framework for efficient LLM reasoning deployment in MEGI. First, we systematically review enhancement methods to identify mechanisms suitable for edge adaptation. Subsequently, we present a distributed framework that synergizes reasoning enhancement via adaptive CoT prompting with scalable deployment through a distributed MoE architecture. An important innovation of this approach involves modeling reasoning depth as a dynamic network resource variable, which is optimized jointly with expert activation and transmission power. This mechanism allows the system to dynamically regulate expert networks and reasoning complexity according to task requirements and device capabilities. Experimental evaluations in mobile edge environments demonstrate that the proposed framework effectively balances reasoning quality and resource efficiency. The results show that with less than one second of additional inference time, both accuracy and latency satisfaction rate can reach 90\\%, validating the practical viability of deploying sophisticated LLM reasoning in resource-constrained MEGI systems.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mingyi Luo",
+      "Ruichen Zhang",
+      "Xiangwang Hou",
+      "Jun Du",
+      "Chunxiao Jiang",
+      "Yong Ren",
+      "Shiwen Mao"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.23248v3",
+    "url": "http://arxiv.org/abs/2509.23248v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.20643v1",
+    "title": "Can Past Experience Accelerate LLM Reasoning?",
+    "abstract": "Allocating more compute to large language models (LLMs) reasoning has generally been demonstrated to improve their effectiveness, but also results in increased inference time. In contrast, humans can perform tasks faster and better with increased experience and exposure. Hence, this paper aims to investigate the question: Can LLMs also become faster at reasoning through recurrent exposure on relevant tasks, and if so, how can it be achieved? To address these questions, we first formalize the problem setting of LLM reasoning speedup systematically in the dimensions of task relevancy and compute budget calculation. We then propose SpeedupLLM, a theoretically guaranteed framework to implement and benchmark such reasoning speedup behaviour based on adaptive compute allocation and memory mechanisms. We further conduct comprehensive experiments to benchmark such behaviour across different question similarity levels, memory methods, and reasoning methods. Results show that LLMs can generally reason faster with past experience, achieving up to a 56% reduction in compute cost when equipped with appropriate memory and reasoning methods.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Bo Pan",
+      "Liang Zhao"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.20643v1",
+    "url": "http://arxiv.org/abs/2505.20643v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.31492v1",
+    "title": "LinTree: Improving LLM Reasoning with Explicitly Structured Search Histories",
+    "abstract": "Large language models (LLMs) often solve reasoning problems by generating intermediate traces that explore and revise partial solutions. From a search perspective, these traces can be viewed as linearized search trees, where the model extends a partial solution, abandons it when it fails, and backtracks to try alternatives. Compared with traditional heuristic-guided search, such a policy has a potential advantage: it conditions on the whole search trace rather than only on the current local state. We first test whether LLMs utilize this advantage by comparing trace-conditioned reasoning policies against best-first search equipped with an LLM heuristic that only observes the current local state. Across three controlled reasoning environments, Blocks World, grid Navigation, and Sokoban, we find that raw access to search history alone is not enough to reliably outperform heuristic search. We then study one possible reason: in LLM reasoning traces, the underlying search tree is only implicitly represented, and when the model backtracks or switches branches, the trace does not explicitly identify which earlier search state is being revisited. We show that adding simple parent pointers to explicitly represent the linearized tree (LinTree) structure improves both task performance and search efficiency relative to implicit reasoning models and LLM-heuristic-guided search. These results suggest that search history becomes most useful when its tree structure is made explicit, motivating more structure-aware representations for LLM reasoning.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Liwei Kang",
+      "Yee Whye Teh",
+      "Wee Sun Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.31492v1",
+    "url": "http://arxiv.org/abs/2605.31492v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.19895v1",
+    "title": "DSDR: Dual-Scale Diversity Regularization for Exploration in LLM Reasoning",
+    "abstract": "Reinforcement learning with verifiers (RLVR) is a central paradigm for improving large language model (LLM) reasoning, yet existing methods often suffer from limited exploration. Policies tend to collapse onto a few reasoning patterns and prematurely stop deep exploration, while conventional entropy regularization introduces only local stochasticity and fails to induce meaningful path-level diversity, leading to weak and unstable learning signals in group-based policy optimization. We propose DSDR, a Dual-Scale Diversity Regularization reinforcement learning framework that decomposes diversity in LLM reasoning into global and coupling components. Globally, DSDR promotes diversity among correct reasoning trajectories to explore distinct solution modes. Locally, it applies a length-invariant, token-level entropy regularization restricted to correct trajectories, preventing entropy collapse within each mode while preserving correctness. The two scales are coupled through a global-to-local allocation mechanism that emphasizes local regularization for more distinctive correct trajectories. We provide theoretical support showing that DSDR preserves optimal correctness under bounded regularization, sustains informative learning signals in group-based optimization, and yields a principled global-to-local coupling rule. Experiments on multiple reasoning benchmarks demonstrate consistent improvements in accuracy and pass@k, highlighting the importance of dual-scale diversity for deep exploration in RLVR. Code is available at https://github.com/SUSTechBruce/DSDR.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Zhongwei Wan",
+      "Yun Shen",
+      "Zhihao Dou",
+      "Donghao Zhou",
+      "Yu Zhang",
+      "Xin Wang",
+      "Hui Shen",
+      "Jing Xiong",
+      "Chaofan Tao",
+      "Zixuan Zhong",
+      "Peizhou Huang",
+      "Mi Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.19895v1",
+    "url": "http://arxiv.org/abs/2602.19895v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

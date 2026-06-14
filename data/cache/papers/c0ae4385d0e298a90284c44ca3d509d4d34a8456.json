@@ -1,0 +1,40 @@
+{
+  "paper_id": "pubmed:40882236",
+  "title": "A Machine Learning Approach for Identifying People With Neuroinfectious Diseases in Electronic Health Records: Algorithm Development and Validation.",
+  "abstract": "Identifying neuroinfectious disease (NID) cases using International Classification of Diseases billing codes is often imprecise, while manual chart reviews are labor-intensive. Machine learning models can leverage unstructured electronic health records to detect subtle NID indicators, process large data volumes efficiently, and reduce misclassification. While accurate NID classification is needed for research and clinical decision support, using unstructured notes for this purpose remains underexplored. The objective of this study is to develop and validate a machine learning model to identify NIDs from unstructured patient notes. Clinical notes from patients who had undergone lumbar puncture were obtained using the electronic health record of an academic hospital network (Mass General Brigham [MGB]), with half associated with NID-related diagnostic codes. Ground truth was established by chart review with 6 NID-expert physicians. NID keywords were generated with regular expressions, and extracted texts were converted into bag-of-words representations using n-grams (n=1, 2, 3). Notes were randomly split into training (80%), 2400 notes out of 3000, and hold-out testing (20%), 600 notes out of 3000, sets. Feature selection was performed using logistic regression with L1 regularization. An extreme gradient boosting (XGBoost) model classified NID cases, and performance was evaluated using the area under the receiver operating curve (AUROC) and the precision-recall curve (AUPRC). The performance of the natural language processing (NLP) model was contrasted with the Llama 3.2 auto-regressive model on the MGB test set. The NLP model was additionally validated on external data from an independent hospital (Beth Israel Deaconess Medical Center [BIDMC]). This study included 3000 patient notes from MGB from January 22, 2010, to September 21, 2023. Of 1284 initial n-gram features, 342 were selected, with the most significant features being \"meningitis,\" \"ventriculitis,\" and \"meningoencephalitis.\" The XGBoost model achieved an AUROC of 0.98 (95% CI 0.96-0.99) and AUPRC of 0.89 (95% CI 0.83-0.94) on MGB test data. In comparison, NID identification using International Classification of Diseases billing codes showed high sensitivity (0.97) but poor specificity (0.59), overestimating NID cases. Llama 3.2 improved specificity (0.94) but had low sensitivity (0.64) and an AUROC of 0.80. In contrast, our NLP model balanced specificity (0.96) and sensitivity (0.84), outperforming both methods in accuracy and reliability on MGB data. When tested on external data from BIDMC, the NLP model maintained an AUROC of 0.98 (95% CI 0.96-0.99), with an AUPRC of 0.78 (95% CI 0.66-0.89). The NLP model accurately identifies NID cases from clinical notes. Validated across 2 independent hospital datasets, the model demonstrates feasibility for large-scale NID research and cohort generation. With further external validation, our results could be more generalizable to other institutions.",
+  "year": 2025,
+  "venue": "JMIR medical informatics",
+  "authors": [
+    "Arjun Singh",
+    "Shadi Sartipi",
+    "Haoqi Sun",
+    "Rebecca Milde",
+    "Niels Turley",
+    "Carson Quinn",
+    "G Kyle Harrold",
+    "Rebecca L Gillani",
+    "Sarah E Turbett",
+    "Sudeshna Das",
+    "Sahar Zafar",
+    "Marta Fernandes",
+    "M Brandon Westover",
+    "Shibani S Mukerji"
+  ],
+  "doi": "10.2196/63157",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40882236/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40882236"
+  }
+}

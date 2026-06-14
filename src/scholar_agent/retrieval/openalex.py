@@ -36,34 +36,39 @@ def _decode_abstract(index: dict[str, list[int]] | None) -> str | None:
 
 
 def _sanitize_openalex_search(query: SearchQuery) -> str:
-    raw = " ".join(
-        part
-        for part in [
-            query.query,
-            " ".join(query.required_terms),
-            " ".join(query.optional_terms),
-        ]
-        if part
-    ).strip()
+    # 如果是特定路由或者大模型生成的检索词本身就已经净化，避免去拼 required_terms / optional_terms
+    if query.route in {"title_exact", "title_like", "query2doc", "hyde"} or len(query.query.split()) > 2:
+        raw = query.query.strip()
+    else:
+        raw = " ".join(
+            part
+            for part in [
+                query.query,
+                " ".join(query.required_terms),
+                " ".join(query.optional_terms),
+            ]
+            if part
+        ).strip()
+        
     if not raw:
         return "research paper"
 
-    ascii_tokens = re.findall(r"[A-Za-z0-9][A-Za-z0-9\-\+\.]*", raw)
+    # 提取 token 并支持引号包裹的短语
+    ascii_tokens = re.findall(r'"[^"]+"|[A-Za-z0-9][A-Za-z0-9\-\+\.]*', raw)
     has_non_ascii = any(ord(char) > 127 for char in raw)
     question_mark_ratio = raw.count("?") / max(len(raw), 1)
     looks_like_question = bool(re.match(r"(?i)^\s*(what|how|why|which|are|is|does|do|can)\b", raw)) or "?" in raw
 
-    # 只要包含了非 ASCII，或者像疑问句，或者总单词数大于 5 个，就强行进行停用词净化并限制长度
+    # 提高过滤与限制上限到 10 个词，防止过度截断导致零召回
     if has_non_ascii or question_mark_ratio > 0.15 or looks_like_question or len(ascii_tokens) > 5:
         if ascii_tokens:
-            filtered = [
-                token.strip(" .")
-                for token in ascii_tokens
-                if token.strip(" .") and token.strip(" .").lower() not in OPENALEX_QUERY_STOPWORDS
-            ]
-            # 限制有效词数最多为 5，防止 openalex 检索因 AND 条件过多而返回空
+            filtered = []
+            for token in ascii_tokens:
+                clean_tok = token.strip(' ."').lower()
+                if clean_tok and clean_tok not in OPENALEX_QUERY_STOPWORDS:
+                    filtered.append(token)
             result_tokens = dict.fromkeys(filtered or ascii_tokens)
-            final_tokens = list(result_tokens.keys())[:5]
+            final_tokens = list(result_tokens.keys())[:10]
             return " ".join(final_tokens)[:180]
         return " ".join(token for token in ["research", "paper", query.route] if token)
 

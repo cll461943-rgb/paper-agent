@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:38896468",
+  "title": "Retrieval-Based Diagnostic Decision Support: Mixed Methods Study.",
+  "abstract": "Diagnostic errors pose significant health risks and contribute to patient mortality. With the growing accessibility of electronic health records, machine learning models offer a promising avenue for enhancing diagnosis quality. Current research has primarily focused on a limited set of diseases with ample training data, neglecting diagnostic scenarios with limited data availability. This study aims to develop an information retrieval (IR)-based framework that accommodates data sparsity to facilitate broader diagnostic decision support. We introduced an IR-based diagnostic decision support framework called CliniqIR. It uses clinical text records, the Unified Medical Language System Metathesaurus, and 33 million PubMed abstracts to classify a broad spectrum of diagnoses independent of training data availability. CliniqIR is designed to be compatible with any IR framework. Therefore, we implemented it using both dense and sparse retrieval approaches. We compared CliniqIR's performance to that of pretrained clinical transformer models such as Clinical Bidirectional Encoder Representations from Transformers (ClinicalBERT) in supervised and zero-shot settings. Subsequently, we combined the strength of supervised fine-tuned ClinicalBERT and CliniqIR to build an ensemble framework that delivers state-of-the-art diagnostic predictions. On a complex diagnosis data set (DC3) without any training data, CliniqIR models returned the correct diagnosis within their top 3 predictions. On the Medical Information Mart for Intensive Care III data set, CliniqIR models surpassed ClinicalBERT in predicting diagnoses with <5 training samples by an average difference in mean reciprocal rank of 0.10. In a zero-shot setting where models received no disease-specific training, CliniqIR still outperformed the pretrained transformer models with a greater mean reciprocal rank of at least 0.10. Furthermore, in most conditions, our ensemble framework surpassed the performance of its individual components, demonstrating its enhanced ability to make precise diagnostic predictions. Our experiments highlight the importance of IR in leveraging unstructured knowledge resources to identify infrequently encountered diagnoses. In addition, our ensemble framework benefits from combining the complementary strengths of the supervised and retrieval-based models to diagnose a broad spectrum of diseases.",
+  "year": 2024,
+  "venue": "JMIR medical informatics",
+  "authors": [
+    "Tassallah Abdullahi",
+    "Laura Mercurio",
+    "Ritambhara Singh",
+    "Carsten Eickhoff"
+  ],
+  "doi": "10.2196/50209",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38896468/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "38896468"
+  }
+}

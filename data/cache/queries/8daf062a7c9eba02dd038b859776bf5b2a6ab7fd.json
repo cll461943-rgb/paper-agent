@@ -1,0 +1,849 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2105.00760v2",
+    "title": "A Unified Theory of Robust and Distributionally Robust Optimization via the Primal-Worst-Equals-Dual-Best Principle",
+    "abstract": "Robust and distributionally robust optimization are modeling paradigms for decision-making under uncertainty where the uncertain parameters are only known to reside in an uncertainty set or are governed by any probability distribution from within an ambiguity set, respectively, and a decision is sought that minimizes a cost function under the most adverse outcome of the uncertainty. In this paper, we develop a rigorous and general theory of robust and distributionally robust nonlinear optimization using the language of convex analysis. Our framework is based on a generalized `primal-worst-equals-dual-best' principle that establishes strong duality between a semi-infinite primal worst and a non-convex dual best formulation, both of which admit finite convex reformulations. This principle offers an alternative formulation for robust optimization problems that obviates the need to mobilize the machinery of abstract semi-infinite duality theory to prove strong duality in distributionally robust optimization. We illustrate the modeling power of our approach through convex reformulations for distributionally robust optimization problems whose ambiguity sets are defined through general optimal transport distances, which generalize earlier results for Wasserstein ambiguity sets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jianzhe Zhen",
+      "Daniel Kuhn",
+      "Wolfram Wiesemann"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.00760v2",
+    "url": "http://arxiv.org/abs/2105.00760v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.05314v2",
+    "title": "A Distributionally Robust Optimization Approach for Unit Commitment in Microgrids",
+    "abstract": "This paper proposes a distributionally robust unit commitment approach for microgrids under net load and electricity market price uncertainty. The key thrust of the proposed approach is to leverage the Kullback-Leibler divergence to construct an ambiguity set of probability distributions and formulate an optimization problem that minimizes the expected costs brought about by the worst-case distribution in the ambiguity set. The proposed approach effectively exploits historical data and capitalizes on the k-means clustering algorithm, in conjunction with the soft dynamic time warping score, to form the nominal probability distribution and its associated support. A two-level decomposition method is developed to enable the efficient solution of the devised problem. We carry out representative studies and quantify the relative merits of the proposed approach vis-à-vis a stochastic optimization-based model under different divergence tolerance values.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ogun Yurdakul",
+      "Fikret Sivrikaya",
+      "Sahin Albayrak"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.05314v2",
+    "url": "http://arxiv.org/abs/2011.05314v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.13269v3",
+    "title": "Wasserstein Distributionally Robust Estimation in High Dimensions: Performance Analysis and Optimal Hyperparameter Tuning",
+    "abstract": "Distributionally robust optimization (DRO) has become a powerful framework for estimation under uncertainty, offering strong out-of-sample performance and principled regularization. In this paper, we propose a DRO-based method for linear regression and address a central question: how to optimally choose the robustness radius, which controls the trade-off between robustness and accuracy. Focusing on high-dimensional settings where the dimension and the number of samples are both large and comparable in size, we employ tools from high-dimensional asymptotic statistics to precisely characterize the estimation error of the resulting estimator. Remarkably, this error can be recovered by solving a simple convex-concave optimization problem involving only four scalar variables. This characterization enables efficient selection of the radius that minimizes the estimation error. In doing so, it achieves the same effect as cross-validation, but at a fraction of the computational cost. Numerical experiments confirm that our theoretical predictions closely match empirical performance and that the optimal radius selected through our method aligns with that chosen by cross-validation, highlighting both the accuracy and the practical benefits of our approach.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Liviu Aolaritei",
+      "Soroosh Shafiee",
+      "Florian Dörfler"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.13269v3",
+    "url": "http://arxiv.org/abs/2206.13269v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2007.08428v4",
+    "title": "On Adversarial Robustness: A Neural Architecture Search perspective",
+    "abstract": "Adversarial robustness of deep learning models has gained much traction in the last few years. Various attacks and defenses are proposed to improve the adversarial robustness of modern-day deep learning architectures. While all these approaches help improve the robustness, one promising direction for improving adversarial robustness is unexplored, i.e., the complex topology of the neural network architecture. In this work, we address the following question: Can the complex topology of a neural network give adversarial robustness without any form of adversarial training?. We answer this empirically by experimenting with different hand-crafted and NAS-based architectures. Our findings show that, for small-scale attacks, NAS-based architectures are more robust for small-scale datasets and simple tasks than hand-crafted architectures. However, as the size of the dataset or the complexity of task increases, hand-crafted architectures are more robust than NAS-based architectures. Our work is the first large-scale study to understand adversarial robustness purely from an architectural perspective. Our study shows that random sampling in the search space of DARTS (a popular NAS method) with simple ensembling can improve the robustness to PGD attack by nearly~12\\%. We show that NAS, which is popular for achieving SoTA accuracy, can provide adversarial accuracy as a free add-on without any form of adversarial training. Our results show that leveraging the search space of NAS methods with methods like ensembles can be an excellent way to achieve adversarial robustness without any form of adversarial training. We also introduce a metric that can be used to calculate the trade-off between clean accuracy and adversarial robustness. Code and pre-trained models will be made available at \\url{https://github.com/tdchaitanya/nas-robustness}",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Chaitanya Devaguptapu",
+      "Devansh Agarwal",
+      "Gaurav Mittal",
+      "Pulkit Gopalani",
+      "Vineeth N Balasubramanian"
+    ],
+    "doi": null,
+    "arxiv_id": "2007.08428v4",
+    "url": "http://arxiv.org/abs/2007.08428v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.15670v3",
+    "title": "On the Adversarial Robustness of Vision Transformers",
+    "abstract": "Following the success in advancing natural language processing and understanding, transformers are expected to bring revolutionary changes to computer vision. This work provides a comprehensive study on the robustness of vision transformers (ViTs) against adversarial perturbations. Tested on various white-box and transfer attack settings, we find that ViTs possess better adversarial robustness when compared with MLP-Mixer and convolutional neural networks (CNNs) including ConvNeXt, and this observation also holds for certified robustness. Through frequency analysis and feature visualization, we summarize the following main observations contributing to the improved robustness of ViTs: 1) Features learned by ViTs contain less high-frequency patterns that have spurious correlation, which helps explain why ViTs are less sensitive to high-frequency perturbations than CNNs and MLP-Mixer, and there is a high correlation between how much the model learns high-frequency features and its robustness against different frequency-based perturbations. 2) Introducing convolutional or tokens-to-token blocks for learning high-frequency features in ViTs can improve classification accuracy but at the cost of adversarial robustness. 3) Modern CNN designs that borrow techniques from ViTs including activation function, layer norm, larger kernel size to imitate the global attention, and patchify the images as inputs, etc., could help bridge the performance gap between ViTs and CNNs not only in terms of performance, but also certified and empirical adversarial robustness. Moreover, we show adversarial training is also applicable to ViT for training robust models, and sharpness-aware minimization can also help improve robustness, while pre-training with clean images on larger datasets does not significantly improve adversarial robustness.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rulin Shao",
+      "Zhouxing Shi",
+      "Jinfeng Yi",
+      "Pin-Yu Chen",
+      "Cho-Jui Hsieh"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.15670v3",
+    "url": "http://arxiv.org/abs/2103.15670v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2008.07651v1",
+    "title": "A Deep Dive into Adversarial Robustness in Zero-Shot Learning",
+    "abstract": "Machine learning (ML) systems have introduced significant advances in various fields, due to the introduction of highly complex models. Despite their success, it has been shown multiple times that machine learning models are prone to imperceptible perturbations that can severely degrade their accuracy. So far, existing studies have primarily focused on models where supervision across all classes were available. In constrast, Zero-shot Learning (ZSL) and Generalized Zero-shot Learning (GZSL) tasks inherently lack supervision across all classes. In this paper, we present a study aimed on evaluating the adversarial robustness of ZSL and GZSL models. We leverage the well-established label embedding model and subject it to a set of established adversarial attacks and defenses across multiple datasets. In addition to creating possibly the first benchmark on adversarial robustness of ZSL models, we also present analyses on important points that require attention for better interpretation of ZSL robustness results. We hope these points, along with the benchmark, will help researchers establish a better understanding what challenges lie ahead and help guide their work.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Mehmet Kerim Yucel",
+      "Ramazan Gokberk Cinbis",
+      "Pinar Duygulu"
+    ],
+    "doi": null,
+    "arxiv_id": "2008.07651v1",
+    "url": "http://arxiv.org/abs/2008.07651v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.06353v6",
+    "title": "Distributionally Robust Policy Learning via Adversarial Environment Generation",
+    "abstract": "Our goal is to train control policies that generalize well to unseen environments. Inspired by the Distributionally Robust Optimization (DRO) framework, we propose DRAGEN - Distributionally Robust policy learning via Adversarial Generation of ENvironments - for iteratively improving robustness of policies to realistic distribution shifts by generating adversarial environments. The key idea is to learn a generative model for environments whose latent variables capture cost-predictive and realistic variations in environments. We perform DRO with respect to a Wasserstein ball around the empirical distribution of environments by generating realistic adversarial environments via gradient ascent on the latent space. We demonstrate strong Out-of-Distribution (OoD) generalization in simulation for (i) swinging up a pendulum with onboard vision and (ii) grasping realistic 3D objects. Grasping experiments on hardware demonstrate better sim2real performance compared to domain randomization.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Allen Z. Ren",
+      "Anirudha Majumdar"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.06353v6",
+    "url": "http://arxiv.org/abs/2107.06353v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.07201v3",
+    "title": "Holistic Adversarial Robustness of Deep Learning Models",
+    "abstract": "Adversarial robustness studies the worst-case performance of a machine learning model to ensure safety and reliability. With the proliferation of deep-learning-based technology, the potential risks associated with model development and deployment can be amplified and become dreadful vulnerabilities. This paper provides a comprehensive overview of research topics and foundational principles of research methods for adversarial robustness of deep learning models, including attacks, defenses, verification, and novel applications.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Pin-Yu Chen",
+      "Sijia Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.07201v3",
+    "url": "http://arxiv.org/abs/2202.07201v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.19280v1",
+    "title": "Group Distributionally Robust Optimization-Driven Reinforcement Learning for LLM Reasoning",
+    "abstract": "Recent progress in Large Language Model (LLM) reasoning is increasingly driven by the refinement of post-training loss functions and alignment strategies. However, standard Reinforcement Learning (RL) paradigms like Group Relative Policy Optimization (GRPO) remain constrained by static uniformity: uniform prompt sampling and a fixed number of rollouts per prompt. For heterogeneous, heavy-tailed reasoning data, this creates structural inefficiencies that waste compute on already-solved patterns while under-training the long tail of hard problems. To address this, we propose Multi-Adversary Group Distributionally Robust Optimization (GDRO), an optimization-first framework that moves beyond uniform reasoning models by dynamically adapting the training distribution. We introduce an Online Difficulty Classifier that partitions prompts into dynamic pass@k difficulty groups. We then propose two independent GDRO games for post-training: (1) Prompt-GDRO, which employs an EMA-debiased multiplicative-weights bandit sampler to target the intensive difficulty margin and upweight persistently hard groups without frequency bias; and (2) Rollout-GDRO, which uses a shadow-price controller to reallocate rollouts across groups, maximizing gradient variance reduction on hard tasks under a fixed mean budget (compute-neutral). We provide no-regret guarantees for both controllers and additionally a variance-proxy analysis motivating a square-root optimal rollout allocation for Rollout-GDRO. We validate our framework on the DAPO 14.1k dataset using Qwen3-Base models. Prompt-GDRO and Rollout-GDRO achieve average relative gains of +10.6% and +10.1%, respectively, in pass@8 accuracy across 1.7B, 4B, and 8B scales compared to the GRPO baseline. Qualitative analysis shows an emergent curriculum: the adversaries shift resources to the evolving reasoning frontier, enhancing the reasoning model's performance.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Kishan Panaganti",
+      "Zhenwen Liang",
+      "Wenhao Yu",
+      "Haitao Mi",
+      "Dong Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.19280v1",
+    "url": "http://arxiv.org/abs/2601.19280v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.10250v1",
+    "title": "Certifying Joint Adversarial Robustness for Model Ensembles",
+    "abstract": "Deep Neural Networks (DNNs) are often vulnerable to adversarial examples.Several proposed defenses deploy an ensemble of models with the hope that, although the individual models may be vulnerable, an adversary will not be able to find an adversarial example that succeeds against the ensemble. Depending on how the ensemble is used, an attacker may need to find a single adversarial example that succeeds against all, or a majority, of the models in the ensemble. The effectiveness of ensemble defenses against strong adversaries depends on the vulnerability spaces of models in the ensemble being disjoint. We consider the joint vulnerability of an ensemble of models, and propose a novel technique for certifying the joint robustness of ensembles, building upon prior works on single-model robustness certification. We evaluate the robustness of various models ensembles, including models trained using cost-sensitive robustness to be diverse, to improve understanding of the potential effectiveness of ensemble models as a defense against adversarial examples.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Mainuddin Ahmad Jonas",
+      "David Evans"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.10250v1",
+    "url": "http://arxiv.org/abs/2004.10250v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.11318v5",
+    "title": "Can we have it all? On the Trade-off between Spatial and Adversarial Robustness of Neural Networks",
+    "abstract": "(Non-)robustness of neural networks to small, adversarial pixel-wise perturbations, and as more recently shown, to even random spatial transformations (e.g., translations, rotations) entreats both theoretical and empirical understanding. Spatial robustness to random translations and rotations is commonly attained via equivariant models (e.g., StdCNNs, GCNNs) and training augmentation, whereas adversarial robustness is typically achieved by adversarial training. In this paper, we prove a quantitative trade-off between spatial and adversarial robustness in a simple statistical setting. We complement this empirically by showing that: (a) as the spatial robustness of equivariant models improves by training augmentation with progressively larger transformations, their adversarial robustness worsens progressively, and (b) as the state-of-the-art robust models are adversarially trained with progressively larger pixel-wise perturbations, their spatial robustness drops progressively. Towards achieving pareto-optimality in this trade-off, we propose a method based on curriculum learning that trains gradually on more difficult perturbations (both spatial and adversarial) to improve spatial and adversarial robustness simultaneously.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Sandesh Kamath",
+      "Amit Deshpande",
+      "K V Subrahmanyam",
+      "Vineeth N Balasubramanian"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.11318v5",
+    "url": "http://arxiv.org/abs/2002.11318v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.04693v1",
+    "title": "Towards Imperceptible and Robust Adversarial Example Attacks against Neural Networks",
+    "abstract": "Machine learning systems based on deep neural networks, being able to produce state-of-the-art results on various perception tasks, have gained mainstream adoption in many applications. However, they are shown to be vulnerable to adversarial example attack, which generates malicious output by adding slight perturbations to the input. Previous adversarial example crafting methods, however, use simple metrics to evaluate the distances between the original examples and the adversarial ones, which could be easily detected by human eyes. In addition, these attacks are often not robust due to the inevitable noises and deviation in the physical world. In this work, we present a new adversarial example attack crafting method, which takes the human perceptual system into consideration and maximizes the noise tolerance of the crafted adversarial example. Experimental results demonstrate the efficacy of the proposed technique.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Bo Luo",
+      "Yannan Liu",
+      "Lingxiao Wei",
+      "Qiang Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.04693v1",
+    "url": "http://arxiv.org/abs/1801.04693v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.11066v2",
+    "title": "Adversarial Robustness of Prompt-based Few-Shot Learning for Natural Language Understanding",
+    "abstract": "State-of-the-art few-shot learning (FSL) methods leverage prompt-based fine-tuning to obtain remarkable results for natural language understanding (NLU) tasks. While much of the prior FSL methods focus on improving downstream task performance, there is a limited understanding of the adversarial robustness of such methods. In this work, we conduct an extensive study of several state-of-the-art FSL methods to assess their robustness to adversarial perturbations. To better understand the impact of various factors towards robustness (or the lack of it), we evaluate prompt-based FSL methods against fully fine-tuned models for aspects such as the use of unlabeled data, multiple prompts, number of few-shot examples, model size and type. Our results on six GLUE tasks indicate that compared to fully fine-tuned models, vanilla FSL methods lead to a notable relative drop in task performance (i.e., are less robust) in the face of adversarial perturbations. However, using (i) unlabeled data for prompt-based FSL and (ii) multiple prompts flip the trend. We further demonstrate that increasing the number of few-shot examples and model size lead to increased adversarial robustness of vanilla FSL methods. Broadly, our work sheds light on the adversarial robustness evaluation of prompt-based FSL methods for NLU tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Venkata Prabhakara Sarath Nookala",
+      "Gaurav Verma",
+      "Subhabrata Mukherjee",
+      "Srijan Kumar"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.11066v2",
+    "url": "http://arxiv.org/abs/2306.11066v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2012.07116v1",
+    "title": "Kullback-Leibler Divergence-Based Distributionally Robust Unit Commitment Under Net Load Uncertainty",
+    "abstract": "The deepening penetration of renewable resources into power systems entails great difficulties that have not been surmounted satisfactorily. An issue that merits special attention is the short-term planning of power systems under net load uncertainty. To this end, we work out a distributionally robust unit commitment methodology that expressly assesses the uncertainty associated with net load. The principal strength of the proposed methodology lies in its ability to represent the probabilistic nature of net load without having to set forth its probability distribution. This strength is brought about by the notion of ambiguity set, for the construction of which the Kullback-Leibler divergence is employed in this paper. We demonstrate the effectiveness of the proposed methodology on real-world data using representative studies. The sensitivity analyses performed provide quantitative answers to a broad array of what if questions on the influence of divergence tolerance and dataset size on optimal solutions.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ogun Yurdakul",
+      "Fikret Sivrikaya",
+      "Sahin Albayrak"
+    ],
+    "doi": null,
+    "arxiv_id": "2012.07116v1",
+    "url": "http://arxiv.org/abs/2012.07116v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.17717v2",
+    "title": "A Distributionally Robust Framework for Nuisance in Causal Effect Estimation",
+    "abstract": "Causal inference requires evaluating models on balanced distributions between treatment and control groups, while training data often exhibits imbalance due to historical decision-making policies. Most conventional statistical methods address this distribution shift through inverse probability weighting (IPW), which requires estimating propensity scores as an intermediate step. These methods face two key challenges: inaccurate propensity estimation and instability from extreme weights. We decompose the generalization error to isolate these issues--propensity ambiguity and statistical instability--and address them through an adversarial loss function. Our approach combines distributionally robust optimization for handling propensity uncertainty with weight regularization based on weighted Rademacher complexity. Experiments on synthetic and real-world datasets demonstrate consistent improvements over existing methods.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Akira Tanimoto"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.17717v2",
+    "url": "http://arxiv.org/abs/2505.17717v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.11604v1",
+    "title": "How do SGD hyperparameters in natural training affect adversarial robustness?",
+    "abstract": "Learning rate, batch size and momentum are three important hyperparameters in the SGD algorithm. It is known from the work of Jastrzebski et al. arXiv:1711.04623 that large batch size training of neural networks yields models which do not generalize well. Yao et al. arXiv:1802.08241 observe that large batch training yields models that have poor adversarial robustness. In the same paper, the authors train models with different batch sizes and compute the eigenvalues of the Hessian of loss function. They observe that as the batch size increases, the dominant eigenvalues of the Hessian become larger. They also show that both adversarial training and small-batch training leads to a drop in the dominant eigenvalues of the Hessian or lowering its spectrum. They combine adversarial training and second order information to come up with a new large-batch training algorithm and obtain robust models with good generalization. In this paper, we empirically observe the effect of the SGD hyperparameters on the accuracy and adversarial robustness of networks trained with unperturbed samples. Jastrzebski et al. considered training models with a fixed learning rate to batch size ratio. They observed that higher the ratio, better is the generalization. We observe that networks trained with constant learning rate to batch size ratio, as proposed in Jastrzebski et al., yield models which generalize well and also have almost constant adversarial robustness, independent of the batch size. We observe that momentum is more effective with varying batch sizes and a fixed learning rate than with constant learning rate to batch size ratio based SGD training.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Sandesh Kamath",
+      "Amit Deshpande",
+      "K V Subrahmanyam"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.11604v1",
+    "url": "http://arxiv.org/abs/2006.11604v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2208.00428v1",
+    "title": "Robust Real-World Image Super-Resolution against Adversarial Attacks",
+    "abstract": "Recently deep neural networks (DNNs) have achieved significant success in real-world image super-resolution (SR). However, adversarial image samples with quasi-imperceptible noises could threaten deep learning SR models. In this paper, we propose a robust deep learning framework for real-world SR that randomly erases potential adversarial noises in the frequency domain of input images or features. The rationale is that on the SR task clean images or features have a different pattern from the attacked ones in the frequency domain. Observing that existing adversarial attacks usually add high-frequency noises to input images, we introduce a novel random frequency mask module that blocks out high-frequency components possibly containing the harmful perturbations in a stochastic manner. Since the frequency masking may not only destroys the adversarial perturbations but also affects the sharp details in a clean image, we further develop an adversarial sample classifier based on the frequency domain of images to determine if applying the proposed mask module. Based on the above ideas, we devise a novel real-world image SR framework that combines the proposed frequency mask modules and the proposed adversarial classifier with an existing super-resolution backbone network. Experiments show that our proposed method is more insensitive to adversarial attacks and presents more stable SR results than existing models and defenses.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Jiutao Yue",
+      "Haofeng Li",
+      "Pengxu Wei",
+      "Guanbin Li",
+      "Liang Lin"
+    ],
+    "doi": null,
+    "arxiv_id": "2208.00428v1",
+    "url": "http://arxiv.org/abs/2208.00428v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1712.06050v3",
+    "title": "Wasserstein Distributionally Robust Optimization and Variation Regularization",
+    "abstract": "Wasserstein distributionally robust optimization (DRO) has recently achieved empirical success for various applications in operations research and machine learning, owing partly to its regularization effect. Although connection between Wasserstein DRO and regularization has been established in several settings, existing results often require restrictive assumptions, such as smoothness or convexity, that are not satisfied for many problems. In this paper, we develop a general theory on the variation regularization effect of the Wasserstein DRO - a new form of regularization that generalizes total-variation regularization, Lipschitz regularization and gradient regularization. Our results cover possibly non-convex and non-smooth losses and losses on non-Euclidean spaces. Examples include multi-item newsvendor, portfolio selection, linear prediction, neural networks, manifold learning, and intensity estimation for Poisson processes, etc. As an application of our theory of variation regularization, we derive new generalization guarantees for adversarial robust learning.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Rui Gao",
+      "Xi Chen",
+      "Anton J. Kleywegt"
+    ],
+    "doi": null,
+    "arxiv_id": "1712.06050v3",
+    "url": "http://arxiv.org/abs/1712.06050v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1910.08108v2",
+    "title": "Enforcing Linearity in DNN succours Robustness and Adversarial Image Generation",
+    "abstract": "Recent studies on the adversarial vulnerability of neural networks have shown that models trained with the objective of minimizing an upper bound on the worst-case loss over all possible adversarial perturbations improve robustness against adversarial attacks. Beside exploiting adversarial training framework, we show that by enforcing a Deep Neural Network (DNN) to be linear in transformed input and feature space improves robustness significantly. We also demonstrate that by augmenting the objective function with Local Lipschitz regularizer boost robustness of the model further. Our method outperforms most sophisticated adversarial training methods and achieves state of the art adversarial accuracy on MNIST, CIFAR10 and SVHN dataset. In this paper, we also propose a novel adversarial image generation method by leveraging Inverse Representation Learning and Linearity aspect of an adversarially trained deep neural network classifier.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Anindya Sarkar",
+      "Nikhil Kumar Gupta",
+      "Raghu Iyengar"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.08108v2",
+    "url": "http://arxiv.org/abs/1910.08108v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1902.10365v2",
+    "title": "A Distributionally Robust Optimization Method for Adversarial Multiple Kernel Learning",
+    "abstract": "We propose a novel data-driven method to learn a mixture of multiple kernels with random features that is certifiabaly robust against adverserial inputs. Specifically, we consider a distributionally robust optimization of the kernel-target alignment with respect to the distribution of training samples over a distributional ball defined by the Kullback-Leibler (KL) divergence. The distributionally robust optimization problem can be recast as a min-max optimization whose objective function includes a log-sum term. We develop a mini-batch biased stochastic primal-dual proximal method to solve the min-max optimization. To debias the minibatch algorithm, we use the Gumbel perturbation technique to estimate the log-sum term. We establish theoretical guarantees for the performance of the proposed multiple kernel learning method. In particular, we prove the consistency, asymptotic normality, stochastic equicontinuity, and the minimax rate of the empirical estimators. In addition, based on the notion of Rademacher and Gaussian complexities, we establish distributionally robust generalization bounds that are tighter than previous known bounds. More specifically, we leverage matrix concentration inequalities to establish distributionally robust generalization bounds. We validate our kernel learning approach for classification with the kernel SVMs on synthetic dataset generated by sampling multvariate Gaussian distributions with differernt variance structures. We also apply our kernel learning approach to the MNIST data-set and evaluate its robustness to perturbation of input images under different adversarial models. More specifically, we examine the robustness of the proposed kernel model selection technique against FGSM, PGM, C\\&W, and DDN adversarial perturbations, and compare its performance with alternative state-of-the-art multiple kernel learning paradigms.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Masoud Badiei Khuzani",
+      "Hongyi Ren",
+      "Md Tauhidul Islam",
+      "Lei Xing"
+    ],
+    "doi": null,
+    "arxiv_id": "1902.10365v2",
+    "url": "http://arxiv.org/abs/1902.10365v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1908.08016v4",
+    "title": "Testing Robustness Against Unforeseen Adversaries",
+    "abstract": "Adversarial robustness research primarily focuses on L_p perturbations, and most defenses are developed with identical training-time and test-time adversaries. However, in real-world applications developers are unlikely to have access to the full range of attacks or corruptions their system will face. Furthermore, worst-case inputs are likely to be diverse and need not be constrained to the L_p ball. To narrow in on this discrepancy between research and reality we introduce ImageNet-UA, a framework for evaluating model robustness against a range of unforeseen adversaries, including eighteen new non-L_p attacks. To perform well on ImageNet-UA, defenses must overcome a generalization gap and be robust to a diverse attacks not encountered during training. In extensive experiments, we find that existing robustness measures do not capture unforeseen robustness, that standard robustness techniques are beat by alternative training strategies, and that novel methods can improve unforeseen robustness. We present ImageNet-UA as a useful tool for the community for improving the worst-case behavior of machine learning systems.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Max Kaufmann",
+      "Daniel Kang",
+      "Yi Sun",
+      "Steven Basart",
+      "Xuwang Yin",
+      "Mantas Mazeika",
+      "Akul Arora",
+      "Adam Dziedzic",
+      "Franziska Boenisch",
+      "Tom Brown",
+      "Jacob Steinhardt",
+      "Dan Hendrycks"
+    ],
+    "doi": null,
+    "arxiv_id": "1908.08016v4",
+    "url": "http://arxiv.org/abs/1908.08016v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.11785v1",
+    "title": "A Hierarchical Assessment of Adversarial Severity",
+    "abstract": "Adversarial Robustness is a growing field that evidences the brittleness of neural networks. Although the literature on adversarial robustness is vast, a dimension is missing in these studies: assessing how severe the mistakes are. We call this notion \"Adversarial Severity\" since it quantifies the downstream impact of adversarial corruptions by computing the semantic error between the misclassification and the proper label. We propose to study the effects of adversarial noise by measuring the Robustness and Severity into a large-scale dataset: iNaturalist-H. Our contributions are: (i) we introduce novel Hierarchical Attacks that harness the rich structured space of labels to create adversarial examples. (ii) These attacks allow us to benchmark the Adversarial Robustness and Severity of classification models. (iii) We enhance the traditional adversarial training with a simple yet effective Hierarchical Curriculum Training to learn these nodes gradually within the hierarchical tree. We perform extensive experiments showing that hierarchical defenses allow deep models to boost the adversarial Robustness by 1.85% and reduce the severity of all attacks by 0.17, on average.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Guillaume Jeanneret",
+      "Juan C Perez",
+      "Pablo Arbelaez"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.11785v1",
+    "url": "http://arxiv.org/abs/2108.11785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.09534v2",
+    "title": "Adversarial Visual Robustness by Causal Intervention",
+    "abstract": "Adversarial training is the de facto most promising defense against adversarial examples. Yet, its passive nature inevitably prevents it from being immune to unknown attackers. To achieve a proactive defense, we need a more fundamental understanding of adversarial examples, beyond the popular bounded threat model. In this paper, we provide a causal viewpoint of adversarial vulnerability: the cause is the spurious correlation ubiquitously existing in learning, i.e., the confounding effect, where attackers are precisely exploiting these effects. Therefore, a fundamental solution for adversarial robustness is by causal intervention. As these visual confounders are imperceptible in general, we propose to use the instrumental variable that achieves causal intervention without the need for confounder observation. We term our robust training method as Causal intervention by instrumental Variable (CiiV). It's a causal regularization that 1) augments the image with multiple retinotopic centers and 2) encourages the model to learn causal features, rather than local confounding patterns, by favoring features linearly responding to spatial interpolations. Extensive experiments on a wide spectrum of attackers and settings applied in CIFAR-10, CIFAR-100, and mini-ImageNet demonstrate that CiiV is robust to adaptive attacks, including the recent AutoAttack. Besides, as a general causal regularization, it can be easily plugged into other methods to further boost the robustness.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Kaihua Tang",
+      "Mingyuan Tao",
+      "Hanwang Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.09534v2",
+    "url": "http://arxiv.org/abs/2106.09534v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.04898v1",
+    "title": "CDPM-Align: Multi-Scale Guidance-Aligned Diffusion Pretraining for Robust Few-Shot Anatomical Landmark Detection",
+    "abstract": "Anatomical landmark detection is a fundamental task in medical image analysis supporting a wide range of diagnostic and interventional workflows. Although recent methods have achieved sub-millimetric localisation, accuracy alone is not sufficient for clinical deployment, requiring reliability and robustness in prediction. Despite its clinical relevance, the impact of representation learning in this context is still underexplored. In this work, we introduce CDPM-align, a multi-scale guidance-aligned conditional diffusion pre-training for anatomical landmark detection. Our experimental setup focuses on a few images and a few annotation regimes. Specifically, we employ three popular heterogeneous small-scale benchmark datasets for representation learning via conditional generative pre-training. Furthermore, we consider low-annotation scenarios for the downstream task of landmark detection, with 10 and 25 annotated images, reflecting realistic trade-offs between clinical effort and resource constraints for annotations. Our results confirm that generative pre-training enables the model to learn a robust representation. This improves both accuracy and uncertainty on the downstream tasks, advancing towards safe and efficient clinical deployment.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Roberto Di Via",
+      "Irina Voiculescu",
+      "Francesca Odone",
+      "Vito Paolo Pastore"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.04898v1",
+    "url": "http://arxiv.org/abs/2606.04898v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.08993v1",
+    "title": "Distributionally Robust Learning",
+    "abstract": "This monograph develops a comprehensive statistical learning framework that is robust to (distributional) perturbations in the data using Distributionally Robust Optimization (DRO) under the Wasserstein metric. Beginning with fundamental properties of the Wasserstein metric and the DRO formulation, we explore duality to arrive at tractable formulations and develop finite-sample, as well as asymptotic, performance guarantees. We consider a series of learning problems, including (i) distributionally robust linear regression; (ii) distributionally robust regression with group structure in the predictors; (iii) distributionally robust multi-output regression and multiclass classification, (iv) optimal decision making that combines distributionally robust regression with nearest-neighbor estimation; (v) distributionally robust semi-supervised learning, and (vi) distributionally robust reinforcement learning. A tractable DRO relaxation for each problem is being derived, establishing a connection between robustness and regularization, and obtaining bounds on the prediction and estimation errors of the solution. Beyond theory, we include numerical experiments and case studies using synthetic and real data. The real data experiments are all associated with various health informatics problems, an application area which provided the initial impetus for this work.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Ruidi Chen",
+      "Ioannis Ch. Paschalidis"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.08993v1",
+    "url": "http://arxiv.org/abs/2108.08993v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.09038v3",
+    "title": "Distributionally Robust Bayesian Optimization",
+    "abstract": "Robustness to distributional shift is one of the key challenges of contemporary machine learning. Attaining such robustness is the goal of distributionally robust optimization, which seeks a solution to an optimization problem that is worst-case robust under a specified distributional shift of an uncontrolled covariate. In this paper, we study such a problem when the distributional shift is measured via the maximum mean discrepancy (MMD). For the setting of zeroth-order, noisy optimization, we present a novel distributionally robust Bayesian optimization algorithm (DRBO). Our algorithm provably obtains sub-linear robust regret in various settings that differ in how the uncertain covariate is observed. We demonstrate the robust performance of our method on both synthetic and real-world benchmarks.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Johannes Kirschner",
+      "Ilija Bogunovic",
+      "Stefanie Jegelka",
+      "Andreas Krause"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.09038v3",
+    "url": "http://arxiv.org/abs/2002.09038v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.06564v3",
+    "title": "Distributionally Robust Adaptive Beamforming",
+    "abstract": "As a fundamental technique in array signal processing, beamforming plays a crucial role in amplifying signals of interest (SoI) while mitigating interference plus noise (IPN). When uncertainties exist in the signal model or the data size of snapshots is limited, the performance of beamformers significantly degrades. In this article, we comprehensively study the conceptual system, theoretical analysis, and algorithmic design for robust beamforming against uncertainties in the assumed snapshot or IPN covariances. Since such robustness is specific to the probabilistic uncertainties of snapshots or IPN signals, it is referred to as distributional robustness. Particularly, four technical approaches for distributionally robust beamforming are proposed, including locally distributionally robust beamforming, globally distributionally robust beamforming, regularized beamforming, and Bayesian-nonparametric beamforming. In addition, we investigate the equivalence among the four technical approaches and suggest a unified distributionally robust beamforming framework. Moreover, we show that the resolution of power spectra estimation using distributionally robust beamforming can be greatly refined by incorporating the characteristics of subspace methods, and hence, the accuracy of IPN covariance reconstruction can be improved, especially when the interferers are close to the SoI. As a result, the robustness of beamformers based on IPN covariance estimation can be further enhanced.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Shixiong Wang",
+      "Wei Dai",
+      "Geoffrey Ye Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.06564v3",
+    "url": "http://arxiv.org/abs/2411.06564v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.09659v2",
+    "title": "Double Pessimism is Provably Efficient for Distributionally Robust Offline Reinforcement Learning: Generic Algorithm and Robust Partial Coverage",
+    "abstract": "In this paper, we study distributionally robust offline reinforcement learning (robust offline RL), which seeks to find an optimal policy purely from an offline dataset that can perform well in perturbed environments. In specific, we propose a generic algorithm framework called Doubly Pessimistic Model-based Policy Optimization ($P^2MPO$), which features a novel combination of a flexible model estimation subroutine and a doubly pessimistic policy optimization step. Notably, the double pessimism principle is crucial to overcome the distributional shifts incurred by (i) the mismatch between the behavior policy and the target policies; and (ii) the perturbation of the nominal model. Under certain accuracy conditions on the model estimation subroutine, we prove that $P^2MPO$ is sample-efficient with robust partial coverage data, which only requires the offline data to have good coverage of the distributions induced by the optimal robust policy and the perturbed models around the nominal model. By tailoring specific model estimation subroutines for concrete examples of RMDPs, including tabular RMDPs, factored RMDPs, kernel and neural RMDPs, we prove that $P^2MPO$ enjoys a $\\tilde{\\mathcal{O}}(n^{-1/2})$ convergence rate, where $n$ is the dataset size. We highlight that all these examples, except tabular RMDPs, are first identified and proven tractable by this work. Furthermore, we continue our study of robust offline RL in the robust Markov games (RMGs). By extending the double pessimism principle identified for single-agent RMDPs, we propose another algorithm framework that can efficiently find the robust Nash equilibria among players using only robust unilateral (partial) coverage data. To our best knowledge, this work proposes the first general learning principle -- double pessimism -- for robust offline RL and shows that it is provably efficient with general function approximation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jose Blanchet",
+      "Miao Lu",
+      "Tong Zhang",
+      "Han Zhong"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.09659v2",
+    "url": "http://arxiv.org/abs/2305.09659v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.02188v4",
+    "title": "Implicit Generative Modeling of Random Noise during Training for Adversarial Robustness",
+    "abstract": "We introduce a Noise-based prior Learning (NoL) approach for training neural networks that are intrinsically robust to adversarial attacks. We find that the implicit generative modeling of random noise with the same loss function used during posterior maximization, improves a model's understanding of the data manifold furthering adversarial robustness. We evaluate our approach's efficacy and provide a simplistic visualization tool for understanding adversarial data, using Principal Component Analysis. Our analysis reveals that adversarial robustness, in general, manifests in models with higher variance along the high-ranked principal components. We show that models learnt with our approach perform remarkably well against a wide-range of attacks. Furthermore, combining NoL with state-of-the-art adversarial training extends the robustness of a model, even beyond what it is adversarially trained for, in both white-box and black-box attack scenarios.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Priyadarshini Panda",
+      "Kaushik Roy"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.02188v4",
+    "url": "http://arxiv.org/abs/1807.02188v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.10718v2",
+    "title": "Distributionally Robust Optimization with Adversarial Data Contamination",
+    "abstract": "Distributionally Robust Optimization (DRO) provides a framework for decision-making under distributional uncertainty, yet its effectiveness can be compromised by outliers in the training data. This paper introduces a principled approach to simultaneously address both challenges. We focus on optimizing Wasserstein-1 DRO objectives for generalized linear models with convex Lipschitz loss functions, where an $ε$-fraction of the training data is adversarially corrupted. Our primary contribution lies in a novel modeling framework that integrates robustness against training data contamination with robustness against distributional shifts, alongside an efficient algorithm inspired by robust statistics to solve the resulting optimization problem. We prove that our method achieves an estimation error of $O(\\sqrtε)$ for the true DRO objective value using only the contaminated data under the bounded covariance assumption. This work establishes the first rigorous guarantees, supported by efficient computation, for learning under the dual challenges of data contamination and distributional shifts.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Shuyao Li",
+      "Ilias Diakonikolas",
+      "Jelena Diakonikolas"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.10718v2",
+    "url": "http://arxiv.org/abs/2507.10718v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

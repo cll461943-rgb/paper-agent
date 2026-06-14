@@ -1,0 +1,79 @@
+{
+  "paper_id": "https://openalex.org/W2984306354",
+  "title": "Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks",
+  "abstract": "Labeled medical imaging data is scarce and expensive to generate. To achieve generalizable deep learning models large amounts of data are needed. Standard data augmentation is a method to increase generalizability and is routinely performed. Generative adversarial networks offer a novel method for data augmentation. We evaluate the use of CycleGAN for data augmentation in CT segmentation tasks. Using a large image database we trained a CycleGAN to transform contrast CT images into non-contrast images. We then used the trained CycleGAN to augment our training using these synthetic non-contrast images. We compared the segmentation performance of a U-Net trained on the original dataset compared to a U-Net trained on the combined dataset of original data and synthetic non-contrast images. We further evaluated the U-Net segmentation performance on two separate datasets: The original contrast CT dataset on which segmentations were created and a second dataset from a different hospital containing only non-contrast CTs. We refer to these 2 separate datasets as the in-distribution and out-of-distribution datasets, respectively. We show that in several CT segmentation tasks performance is improved significantly, especially in out-of-distribution (noncontrast CT) data. For example, when training the model with standard augmentation techniques, performance of segmentation of the kidneys on out-of-distribution non-contrast images was dramatically lower than for in-distribution data (Dice score of 0.09 vs. 0.94 for out-of-distribution vs. in-distribution data, respectively, p < 0.001). When the kidney model was trained with CycleGAN augmentation techniques, the out-of-distribution (non-contrast) performance increased dramatically (from a Dice score of 0.09 to 0.66, p < 0.001). Improvements for the liver and spleen were smaller, from 0.86 to 0.89 and 0.65 to 0.69, respectively. We believe this method will be valuable to medical imaging researchers to reduce manual segmentation effort and cost in CT imaging.",
+  "year": 2019,
+  "venue": "Scientific Reports",
+  "authors": [
+    "Veit Sandfort",
+    "Ke Yan",
+    "Perry J. Pickhardt",
+    "Ronald M. Summers"
+  ],
+  "doi": "https://doi.org/10.1038/s41598-019-52737-x",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1038/s41598-019-52737-x",
+  "citation_count": 681,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean"
+  ],
+  "references": [
+    "https://openalex.org/W2028138594",
+    "https://openalex.org/W2099471712",
+    "https://openalex.org/W2464708700",
+    "https://openalex.org/W2578877523",
+    "https://openalex.org/W2765811365",
+    "https://openalex.org/W2770173563",
+    "https://openalex.org/W2787928077",
+    "https://openalex.org/W2883683269",
+    "https://openalex.org/W2894737833",
+    "https://openalex.org/W2896359486",
+    "https://openalex.org/W2898091194",
+    "https://openalex.org/W2898197178",
+    "https://openalex.org/W2901889759",
+    "https://openalex.org/W2962713370",
+    "https://openalex.org/W2962793481",
+    "https://openalex.org/W2962825119",
+    "https://openalex.org/W2963276418",
+    "https://openalex.org/W2963709863",
+    "https://openalex.org/W3103943044"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Generalizability theory",
+      "Adversarial system",
+      "Generative grammar",
+      "Computer science",
+      "Segmentation",
+      "Artificial intelligence",
+      "Generative adversarial network",
+      "Machine learning",
+      "Pattern recognition (psychology)",
+      "Natural language processing",
+      "Image (mathematics)",
+      "Mathematics",
+      "Statistics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4312352990",
+      "https://openalex.org/W4394780863",
+      "https://openalex.org/W2888032422",
+      "https://openalex.org/W2996316059",
+      "https://openalex.org/W4385421777",
+      "https://openalex.org/W4377980832",
+      "https://openalex.org/W2897769091",
+      "https://openalex.org/W2845413374",
+      "https://openalex.org/W3005996785",
+      "https://openalex.org/W4297411772"
+    ]
+  }
+}

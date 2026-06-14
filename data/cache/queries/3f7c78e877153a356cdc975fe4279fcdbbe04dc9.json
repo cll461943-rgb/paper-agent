@@ -1,0 +1,924 @@
+[
+  {
+    "paper_id": "pubmed:42277236",
+    "title": "Benchmarking GPT-5, Gemini 2.5 Pro, Grok 4, and other LLMs on pediatric dentistry questions from a dental specialization exam.",
+    "abstract": "Artificial intelligence (AI), particularly large language models (LLMs), is an increasingly prominent tool in medical and dental education. Trained with deep learning and NLP techniques, these models interpret meaning, generate text, and manage complex information. They hold potential for practical educational applications, such as supporting exam preparation and personalized learning. Moreover, their performance in clinical case recognition suggests an emerging potential for use in diagnostic decision-support systems. This study aimed to evaluate the performance of state-of-the-art large language models (LLMs) on pediatric dentistry questions from the Dentistry Specialization Examination (DUS) in Türkiye, a high-stakes national exam for postgraduate training. A total of 119 pediatric dentistry questions from the past ten years of the DUS were compiled and presented to 11 recently developed LLMs (17 with reasoning mode activations), including GPT-5, Gemini 2.5 Pro, Grok-4, and DeepSeek R1. Each model's accuracy (%) and average response generation time (seconds) were calculated and compared. The Gemini 2.5 Pro (92.44%) demonstrated significantly higher mean scores compared to all other models except GPT-4 (78.15%), GPT-5 (90.76%), GPTOSS (78.99, 75.63%), and Grok-4 (88.24%). Similar patterns were also observed for GPT-5 and Grok-4. In contrast, Qwen-3 (49.58 - Reasoning, 54.62 - No Reasoning), and MedGemma (58.82%) exhibited notably lower accuracy rates across most comparisons. Overall, these findings highlight Gemini 2.5 Pro and GPT-5 as achieving the highest accuracy levels among the models, whereas Qwen-3, Qwen-3 (R), and MedGemma demonstrated the weakest performance. While models such as Gemma, LLaMA, and Mistral demonstrated faster response times (<1 s), they exhibited relatively low accuracy. In contrast, reasoning-intensive modes (e.g., DeepSeek R1) improved accuracy but required excessively long generation times (up to 68 s). LLM performance on pediatric dentistry questions was highly variable. Top models, notably Gemini 2.5 Pro (92.44%) and GPT-5 (90.76%), approached expert-level accuracy, while others (e.g., Qwen-3) performed poorly. A critical speed-accuracy trade-off was evident: reasoning modes improved scores but were impractically slow, whereas faster models had low accuracy. This variability necessitates careful validation before LLMs are used in high-stakes dental education or assessment.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sukriye Turkoglu Kayaci",
+      "Hamza Osman Ilhan",
+      "Melek Tassoker",
+      "Taha Cap",
+      "Helin Demir"
+    ],
+    "doi": "10.1038/s41598-026-57392-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42277236/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42277236"
+    }
+  },
+  {
+    "paper_id": "pubmed:42257822",
+    "title": "On the recoverability of cognitive levels in educational text: a multi-task transformer analysis.",
+    "abstract": "Artificial intelligence systems have demonstrated strong performance in educational reasoning and classification tasks; however, the extent to which transformer-based representations encode structured cognitive abstractions remains insufficiently understood. This study investigates the recoverability of cognitive levels from educational question-answer text using a Cognitive-Conditioned Multi-Task Transformer (CC-MTT) framework. To ensure methodological rigor, a leakage-controlled dataset reconstruction pipeline was developed using question-level partitioning and majority-vote label stabilization. The proposed framework jointly models reasoning and cognitive classification, enabling analysis of predictive performance, representational structure, and stability across multiple random seed initializations. Experimental results show that fine-grained Bloom taxonomy levels remain only weakly recoverable from text-only representations, achieving performance close to random baseline under leakage-controlled evaluation. In contrast, hierarchical abstraction (higher-order vs. lower-order thinking) consistently achieved higher predictive recoverability across multiple runs, although quantitative geometry analysis revealed limited cluster separability in the learned embedding space. Statistical analysis further indicated a consistent trend toward improved binary abstraction performance compared with fine-grained categorization, despite the absence of strong statistical significance under Wilcoxon testing. These findings suggest that coarse-grained cognitive abstraction may be partially encoded in transformer representations, while fine-grained pedagogical categories remain structurally difficult to recover from textual representations alone. The study provides methodological and analytical insights for the development of more reliable AI-driven educational assessment systems.",
+    "year": 2026,
+    "venue": "Cognitive processing",
+    "authors": [
+      "Bashar Alhajahmad"
+    ],
+    "doi": "10.1007/s10339-026-01359-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42257822/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42257822"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224305",
+    "title": "Evaluating mobile app performance through sentiment analysis with SimCLR and MobileBERT.",
+    "abstract": "Mobile apps have significantly enhanced user engagement and convenience, providing seamless access to services anytime, anywhere. This paper presents a sentiment analysis (SA) model comprising SimCLR (Simple Contrastive Learning of Representations) and MobileBERT to measure the perceived performance of the mobile apps. The reviews of mobile apps are manually labeled as High and Low based on performance parameters (insightfulness, transparency, pertinence, precision, consistency, elaboration, and practical usability insights). These labels are aligned with attitudinal components, i.e., appreciation and judgment from appraisal theory. Appreciation concerns insightfulness, transparency, and pertinence of mobile app features, while judgment pertains to precision, consistency, elaboration, and practical usability. By integrating appraisal theory into this proposed model, a more comprehensive insight into user sentiment is achieved as compared to traditional SA models, which are heavily dependent on a very limited set of sentiment categories, i.e., positive and negative. The accuracy of manual annotation is ensured by the SHAP (SHapley Additive exPlanations) method of Explainable AI (XAI). In this study, SimCLR, a self-supervised learning framework, is employed to improve feature extraction and enhance the model's ability to generalize across different datasets, while MobileBERT, a lightweight transformer model for sentiment classification, ensures computational efficiency and high performance. The MobileBERT makes the proposed approach scalable, efficient, and highly suitable for real-time SA in resource-limited environments. Knowledge distillation is incorporated to teach a student model that is similar to the teacher model, increasing the robustness of the system. In this work, the Augmentation of data by replacing synonyms in the data using WordNet increases the quantity of the training data to make the model more robust to linguistic variations. The proposed model is optimized using the PCA (Principal Component Analysis) method for dimensionality reduction. The Optuna method is used for hyperparameter optimization, automating the search for the most effective configuration, including learning rate, batch sizes, etc. K-fold stratified cross-validation ensures model robustness. The results demonstrated that the integration of SimCLR, MobileBERT, distillation, data augmentation techniques, and fine-tuning using Optuna provides a highly efficient and accurate SA-based model, with a mean fold accuracy and ROC AUC of 88.63% and 90.91%, respectively. This approach offers a scalable solution for NLP (Natural Language Processing) tasks. The proposed approach will be highly beneficial not only for the developers, yielding a deeper and nuanced understanding of the user feedback to identify specific areas for improvement in app performance, but also to stakeholders like marketers, product managers, and user experience (UX) researchers.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Ruping Zhang",
+      "Aman Ullah",
+      "Khair Ullah Khan",
+      "Muhammad Nawaz Khan",
+      "Rehan Tariq Chohan",
+      "Farhan Aadil"
+    ],
+    "doi": "10.1371/journal.pone.0349555",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224305/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224305"
+    }
+  },
+  {
+    "paper_id": "pubmed:42116134",
+    "title": "Clinical-ShiftEval: a framework for simulating and evaluating model adaptation in dynamic clinical NLP tasks.",
+    "abstract": "Clinical natural language processing (NLP) models are widely used to extract information from electronic health records (EHR) and support healthcare decision-making. However, most existing models are evaluated under the assumption of static data distributions and fixed task definitions, overlooking the dynamic and evolving nature of real clinical environments. Distributional changes arising from updated guidelines, emerging diseases, or institutional restructuring can lead to substantial model degradation in practice. We introduce Clinical-ShiftEval, a framework designed to simulate and evaluate model adaptation in dynamic clinical NLP tasks using real-world clinical text data. Our framework parameterizes two prevalent types of evolution observed in healthcare: (1) label-set incompatibility (LSI), where the set of prediction targets changes over time, and (2) task definition evolution (TDE), where the clinical meaning or labeling rule is revised. These changes are operationalized through controlled transitions between two periods in real datasets. As a case study, we applied Clinical-ShiftEval to the Chilean Waiting List Corpus, using referral specialty classification to model LSI and disease prioritization to model TDE, and systematically compared continual training, in-context learning with large language models, and a hybrid approach. We validated that Clinical-ShiftEval reliably simulates realistic levels of clinical change and produces controlled, interpretable performance drops. This confirms its utility as a framework to generate reproducible scenarios for benchmarking model robustness. As a case study, we compared multiple model adaptation strategies under LSI and TDE. Conventional supervised models showed severe degradation under these shifts (up to a drop of 82% F1 in LSI and 43% in TDE). In contrast, in-context learning reduced the drop to 35% in LSI and 10% in TDE, while a hybrid method further improved robustness, limiting the drop to approximately 8% in both settings. Continual adaptation with incremental retraining gradually restored performance, but only surpassed in-context and hybrid approaches after incorporating at least 30% of data from the second period. Clinical-ShiftEval enables robust benchmarking of model adaptation in realistic, dynamic settings using authentic EHR text. Both in-context learning and hybrid approaches substantially mitigate the impact of evolving clinical data, achieving strong performance even without access to new labeled data. For optimal recovery of baseline accuracy, continual training with a moderate amount of new data is most effective, eventually surpassing the other methods as more new data become available. These findings provide practical guidance for the deployment of resilient NLP models in dynamic healthcare settings.",
+    "year": 2026,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Fabián Villena",
+      "Felipe Bravo-Marquez",
+      "Jocelyn Dunstan"
+    ],
+    "doi": "10.1186/s12911-026-03538-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42116134/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42116134"
+    }
+  },
+  {
+    "paper_id": "pubmed:42081529",
+    "title": "FairCareNLP: An AI-driven patient review analyzer for healthcare.",
+    "abstract": "To develop and evaluate an automatic patient review analyzer that applies advanced Natural Language Processing (NLP) and machine learning methods to improve the efficiency, fairness, and accuracy of healthcare feedback analysis. We designed a multi-component pipeline incorporating sentiment analysis, key theme extraction, clinical Named Entity Recognition (NER), and fairness modules. Bias mitigation was addressed through the integration of three complementary approaches: adversarial debiasing, Hard Debiasing, and Iterative Null-space Projection (INLP). Multiple BERT-based models (DistilBERT, BioBERT, RoBERTa-base, BERT-base-uncased) were trained and evaluated under varying hyperparameters and fairness/adversarial loss configurations. Model performance was assessed using accuracy, F1, recall, precision, AUC, Equalized Odds (EOD), and Word Embedding Association Test (WEAT) metrics. Adversarial loss ([Formula: see text]) consistently decreased model performance across accuracy, F1, precision, and recall. In contrast, Hard Debiasing and INLP improved WEAT scores while preserving or enhancing other metrics, with INLP yielding the best overall performance. Specifically, INLP with fairness loss improved EOD by 14%, gender WEAT scores by 15%, and achieved slight gains for ethnicity and socioeconomic WEAT scores. The best model achieved accuracy of 0.856, F1 score of 0.812, recall of 0.798, and precision of 0.829. The key theme analysis module identified 82% of expert-labeled themes, though 21% of patient comments lacked expert labels for valence or related attributes. Our results demonstrate the trade-offs between fairness and performance in bias mitigation strategies. While adversarial debiasing reduced predictive accuracy, INLP and Hard Debiasing improved fairness without significant degradation in task performance. Gender bias was easier to mitigate than multi-class sensitive attributes such as ethnicity and income. This difference indicates a need for fairness techniques designed for multi-class sensitive attributes. This work presents an NLP pipeline for patient feedback analysis with multiple debiasing strategies. This pipeline improves the fairness and accuracy of insights from unstructured patient reviews and supports inclusive patient-centered care.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Sayyed Mohammad Pourya Momtaz Esfahani",
+      "Davey Seeman",
+      "Christoffer Dharma",
+      "Mohammad Noaeen",
+      "Shion Guha",
+      "Zahra Shakeri"
+    ],
+    "doi": "10.1371/journal.pone.0337676",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42081529/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42081529"
+    }
+  },
+  {
+    "paper_id": "pubmed:42027777",
+    "title": "SSABE-TSCM: drift-aware and interpretable financial sentiment analysis for low-resource Bangla via adaptive semi-supervised and temporal contrastive modeling.",
+    "abstract": "Analyzing the tone of Bangla financial news is challenging because labeled data are scarce, the language is morphologically rich, and economic discourse shifts over time. We address these hurdles with a three-part framework. First, ",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Iftakhar Ali Khandokar",
+      "Priya Deshpande"
+    ],
+    "doi": "10.3389/frai.2026.1724407",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42027777/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42027777"
+    }
+  },
+  {
+    "paper_id": "pubmed:42013611",
+    "title": "Automated detection of superior mesenteric artery occlusion on post-contrast CT Using a 3D deep learning model.",
+    "abstract": "To develop and evaluate a 3D deep learning model for detecting superior mesenteric artery occlusion (SMAO) on post-contrast abdominal CT examinations and to assess its performance and clinical impact in a prospective setting. A natural language processing (NLP) model was used to identify reports positive for SMAO, which were manually annotated to create training data. A 3D convolutional neural network was trained to localize SMAO and was tested on cases with previously missed findings. The model was prospectively deployed over a 6-week period to analyze 79,163 post-contrast CT examinations. Sensitivity, specificity, area under the curve (AUC), delay times, and quality assurance (QA) metrics were measured. On the test dataset, a classification threshold of 0.90 yielded 50.0% sensitivity and 100.0% specificity. Prospectively, sensitivity was 67.6% and specificity was 99.6% (AUC = 0.917). The model flagged 237 cases for QA review, of which 83 (35.0%) were confirmed as missed SMAO, indicating that 40.7% of SMAO cases were undiagnosed on the initial read. SMAO incidence was 0.26%. Median delay time was shorter for cases with positive image model results (5.1 min [IQR 2.9-9.6] vs 27.9 min [IQR 8.7-52.7]; p < .001). QA-detected SMAO occurred more often on non-CTA exams (2.4% vs 46.3%; p < .001) and never mentioned SMAO or mesenteric ischemia in their clinical indication (0.0% vs 17.4%; p < .001). A 3D deep learning model accurately detected SMAO on post-contrast abdominal CT with high specificity, reduced reporting delays, and identified clinically important missed findings.",
+    "year": 2026,
+    "venue": "Clinical imaging",
+    "authors": [
+      "Robert J Harris",
+      "Scott G Baginski",
+      "Yulia Bronstein",
+      "Dietrich Schultze",
+      "Kay D Lozano",
+      "Parthiv N Mehta",
+      "Michael C Rethy",
+      "Kohl L Sparrman",
+      "Shwan Kim"
+    ],
+    "doi": "10.1016/j.clinimag.2026.110810",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42013611/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42013611"
+    }
+  },
+  {
+    "paper_id": "pubmed:41785455",
+    "title": "Cross-Cultural Differences in Public Discourse on COVID-19 Vaccination in the United States and South Korea: Cross-Sectional Analysis Using Natural Language Processing.",
+    "abstract": "The COVID-19 vaccine was introduced as a crucial tool to combat the pandemic. However, concerns about its effectiveness, side effects, and misinformation spread remain. Prior research largely relied on survey-based approaches with limited populations. To address these limitations, social media offers a broader, more naturalistic lens into public discourse on COVID-19 vaccination. Accordingly, our study leverages social media data to identify factors shaping vaccine-related information needs, perceptions, and communication dynamics. This study investigated public discourse about COVID-19 vaccines on community-driven question-and-answer sites in the United States (Quora; Quora, Inc) and South Korea (Naver Knowledge-iN; Naver Corp) to identify cross-national similarities and differences in vaccine-related information needs, sentiment patterns, and public perceptions over time. We analyzed publicly available COVID-19 vaccine-related questions and answers posted between June 27, 2020, and June 27, 2021, on 2 community-driven question-and-answer platforms: Quora (United States) and Naver Knowledge-iN (South Korea). After preprocessing and sample-size matching, the dataset included 3952 question-answer pairs per platform, with one community-selected (most upvoted) answer analyzed per question. Natural language processing (NLP) techniques were applied for topic classification and sentiment analysis. Questions were categorized using a hybrid topic modeling approach combining Latent Dirichlet Allocation (LDA) and Top2Vec, identifying 5 topics on Quora and 7 topics on Naver Knowledge-iN. Answer sentiments were classified using an ensemble of Bidirectional Encoder Representations from Transformers (BERT; Google LLC)- and Efficiently Learning an Encoder that Classifies Token Replacements Accurately (ELECTRA; Google LLC)-based transformer models, and temporal sentiment trends were examined using monthly aggregation. Five shared information needs emerged, including effects of vaccines, variants, government policy, visiting overseas, and different vaccines, while South Korea uniquely exhibited vaccination appointments (711/3952, 18%) and school and education (513/3592, 13%). Negative sentiment predominated in US (Quora) answers across 4 of 5 topics, whereas positive sentiment exceeded 50% (498/790, 337/474, 367/592, 218/316, 348/553, 562/711, and 364/513) across all 7 topics on Naver Knowledge-iN. Temporally, US sentiment exhibited multiple positive-negative crossovers, whereas Korean sentiment stabilized toward positivity after February 2021, coinciding with the national vaccine rollout. Question-answer sentiment pairs showed contrasting interaction patterns, including negative-negative pairs dominated in the United States (eg, 504/978, 51.5% for different vaccines), while in South Korea, positive-positive and negative-positive pairs accounted for more than 63% (498/790, 337/474, 367/592, 218/316, 348/553, 562/711, and 364/513) of interactions in 7 topics, with positive-positive pairs most prevalent in 6 of 7 topics, except for variants. Public perceptions of COVID-19 vaccines and related information needs differ between the 2 countries, shaped by cultural context, trust in government, and information-seeking environments. Analysis of social question and answer data from the 2 countries reveals shared information needs but divergent sentiment patterns. These findings highlight the value of social media data for public health research and the need for culturally and platform-specific communication strategies.",
+    "year": 2026,
+    "venue": "JMIR formative research",
+    "authors": [
+      "Sangpil Youm",
+      "Sou Hyun Jang",
+      "Haewoon Kwak",
+      "Jaeyoung Choi",
+      "Yong Jeong Yi"
+    ],
+    "doi": "10.2196/84791",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41785455/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41785455"
+    }
+  },
+  {
+    "paper_id": "pubmed:41627879",
+    "title": "Using semantic search to find publicly available gene-expression datasets.",
+    "abstract": "Millions of high-throughput, molecular datasets have been shared in public repositories. Researchers can reuse such data to validate their own findings and explore novel questions. A frequent goal is to find multiple datasets that address similar research topics and to either combine them directly or integrate inferences from them. However, a major challenge is finding relevant datasets due to the vast number of candidates, inconsistencies in their descriptions, and a lack of semantic annotations. This challenge is first among the FAIR principles for scientific data. Here we focus on dataset discovery within Gene Expression Omnibus (GEO), a repository containing 100 000 s of data series. GEO supports queries based on keywords, ontology terms, and other annotations. However, reviewing these results is time-consuming and tedious, and it often misses relevant datasets. We hypothesized that language models could address this problem by summarizing dataset descriptions as numeric representations (embeddings). Assuming a researcher has previously found some relevant datasets, we evaluated the potential to find additional relevant datasets. For six human medical conditions, we used 30 models to generate embeddings for datasets that human curators had previously associated with the conditions and identified other datasets with the most similar descriptions. This approach was often, but not always, more effective than GEO's search engine. The top-performing models were trained on general corpora, used contrastive-learning strategies, and used relatively large embeddings. Our findings suggest that language models have the potential to improve dataset discovery, likely in combination with existing search tools. Our analysis code and a Web-based tool that enables others to use our methodology are available from https://github.com/srp33/GEO_NLP and https://github.com/srp33/GEOfinder3.0, respectively.",
+    "year": 2026,
+    "venue": "Bioinformatics (Oxford, England)",
+    "authors": [
+      "Grace S Brown",
+      "James Wengler",
+      "Aaron Joyce S Fabelico",
+      "Abigail Muir",
+      "Anna Tubbs",
+      "Amanda Warren",
+      "Alexandra N Millett",
+      "Xinrui Xiang Yu",
+      "Paul Pavlidis",
+      "Sanja Rogic",
+      "Stephen R Piccolo"
+    ],
+    "doi": "10.1093/bioinformatics/btag053",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41627879/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41627879"
+    }
+  },
+  {
+    "paper_id": "pubmed:41623886",
+    "title": "Using natural language processing to explore differences in healthcare professionals' language on Functional Neurological Disorder: a comparative topic and sentiment analysis study.",
+    "abstract": "Effective communication is essential for delivering quality healthcare, particularly for individuals with Functional Neurological Disorders (FND), who are often subject to misdiagnosis and stigmatising language that implies symptom fabrication. Variability in communication styles among healthcare professionals may contribute to these challenges, affecting patient understanding and care outcomes. This study employed natural language processing (NLP) to analyse clinician-to-clinician and clinician-to-patient communication regarding FND. A total of 869 electronic health records (EHRs) were examined to assess differences in language use and emotional tone across various professionals-specifically, neurologists and psychologists-and different document types, such as discharge summaries and letters to general practitioners (GPs). Latent Dirichlet Allocation (LDA) topic modelling and two complementary sentiment models (VADER and Flair) were applied to the corpus. Sentiment analysis was also applied to evaluate the emotional tone of communications. Findings revealed distinct communication patterns between neurologists and psychologists. Psychologists frequently used terms related to subjective experiences, such as \"trauma\" and \"awareness,\" aiming to help patients understand their diagnosis. In contrast, neurologists focused on medicalised narratives, emphasising symptoms like \"seizures\" and clinical interventions, including assessment (\"telemetry\") and treatment (\"medication\"). Sentiment analysis indicated that psychologists tended to use more positive and proactive language, whereas neurologists generally adopted a neutral or cautious tone. These findings highlight differences in communication styles and emotional tones among professionals involved in FND care. The study underscores the importance of fostering integrated, multidisciplinary care pathways and developing standardised guidelines for clinical terminology in FND to improve communication and patient outcomes. Future research should explore how these communication patterns influence patient experiences and treatment adherence.",
+    "year": 2025,
+    "venue": "Frontiers in digital health",
+    "authors": [
+      "Md Shadab Mashuk",
+      "Yang Lu",
+      "Lana Y H Lai",
+      "Matthew Shardlow",
+      "Shumit Saha",
+      "Ashley Williams",
+      "Anna Lee",
+      "Sarah Lloyd",
+      "Rajiv Mohanraj",
+      "Daniela Di Basilio"
+    ],
+    "doi": "10.3389/fdgth.2025.1691724",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41623886/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41623886"
+    }
+  },
+  {
+    "paper_id": "pubmed:41602313",
+    "title": "Positive sentiments in early academic literature on DeepSeek: a cross-disciplinary mini review.",
+    "abstract": "DeepSeek is a free and self-hostable large language model (LLM) that recently became the most downloaded app across 156 countries. As early academic literature on ChatGPT was predominantly critical of the model, this mini-review is interested in examining how DeepSeek is being evaluated across academic disciplines. The review analyzes available articles with DeepSeek in the title, abstract, or keywords, using the VADER sentiment analysis library. Due to limitations in comparing sentiment across languages, we excluded Chinese literature in our selection. We found that Computer Science, Engineering, and Medicine are the most prominent fields studying DeepSeek, showing an overall positive sentiment. Notably, Computer Science had the highest mean sentiment and the most positive articles. Other fields of interest included Mathematics, Business, and Environmental Science. While there is substantial academic interest in DeepSeek's practicality and performance, discussions on its political or ethical implications are limited in academic literature. In contrast to ChatGPT, where all early literature carried a negative sentiment, DeepSeek literature is mainly positive. This study enhances our understanding of DeepSeek's reception in the scientific community and suggests that further research could explore regional perspectives.",
+    "year": 2025,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Yuxing He",
+      "Angie Giangan",
+      "Nam Vu",
+      "Casey Watters"
+    ],
+    "doi": "10.3389/frai.2025.1725853",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41602313/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41602313"
+    }
+  },
+  {
+    "paper_id": "pubmed:41574036",
+    "title": "Artificial intelligence methods to detect heart failure with preserved ejection fraction within electronic health records: an equitable disease detection model.",
+    "abstract": "Heart failure with preserved ejection fraction (HFpEF) accounts for approximately half of all heart failure cases, with high levels of morbidity and mortality. However, many patients who meet diagnostic criteria for HFpEF do not have a documented diagnosis, particularly in non-White populations where conventional risk scores may underestimate risk. Our aim was to develop and validate a diagnostic prediction model to detect HFpEF based on ESC criteria, AIM-HFpEF. We applied natural language processing (NLP) and machine learning methods to routinely collected electronic health record (EHR) data from a tertiary centre hospital trust in London, UK, to derive the AIM-HFpEF model. We then externally validated the model and performed benchmarking against existing HFpEF prediction models (H2FPEF and HFpEF-ABA) for diagnostic power on the entire external cohort and in patients of non-White ethnicity and patients from areas of increased socioeconomic deprivation. An XGBoost model combining demographic, clinical, and echocardiogram data showed strong diagnostic performance in the derivation dataset [ AIM-HFpEF represents a validated equitable diagnostic model for HFpEF, which can be embedded within an EHR to allow for fully automated HFpEF detection.",
+    "year": 2026,
+    "venue": "European heart journal. Digital health",
+    "authors": [
+      "Jack Wu",
+      "Dhruva Biswas",
+      "Samuel Brown",
+      "Matthew Ryan",
+      "Brett S Bernstein",
+      "Brian Tam To",
+      "Tom Searle",
+      "Maleeha Rizvi",
+      "Natalie Fairhurst",
+      "George Kaye",
+      "Ranu Baral",
+      "Dhanushan Vijayakumar",
+      "Daksh Mehta",
+      "Narbeh Melikian",
+      "Daniel Sado",
+      "Gerald Carr-White",
+      "Phil Chowienczyk",
+      "James Teo",
+      "Richard J B Dobson",
+      "Daniel I Bromage",
+      "Thomas F Lüscher",
+      "Ali Vazir",
+      "Theresa A McDonagh",
+      "Jessica Webb",
+      "Ajay M Shah",
+      "Kevin O'Gallagher"
+    ],
+    "doi": "10.1093/ehjdh/ztaf107",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41574036/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41574036"
+    }
+  },
+  {
+    "paper_id": "pubmed:41554804",
+    "title": "A hybrid intelligent assessment model for English translation education with improved BERT and SVM.",
+    "abstract": "Assessing student translations in real classrooms still leans heavily on human judgment, which can vary across raters, is time-consuming, and scales poorly. With the rapid advancement of natural language processing (NLP), automatic assessment models have shown potential to enhance objectivity and consistency in translation evaluation. This paper proposes BERT-SVM EduScore, a hybrid assessment model designed for English translation education. The model couples a BERT-base encoder adapted with domain-/task-specific training and a contrastive objective with compact linguistic and alignment features, and feeds the resulting representations into margin-based Support Vector Machines (SVM) heads with monotonic calibration to produce holistic and rubric-aligned sub-scores. We conduct experiments on the English–Chinese portion of the MLQE-PE machine-translation quality estimation dataset, which we use as a proxy for sentence-level scoring in classroom-like settings. BERT-SVM EduScore is compared against string-based metrics (BLEU, METEOR, TER, chrF++), embedding-based semantic metrics (YiSi-1, MoverScore, BERTScore), and learned evaluators (BLEURT, COMET, PRISM, BARTScore, TransQuest) using Quadratic Weighted Kappa (QWK), mean absolute error (MAE), Pearson’s r, and runtime. On MLQE-PE it achieves QWK 0.76, MAE 0.12, and r 0.84, improving QWK over COMET by + 0.08 and over TransQuest by + 0.05 while running at about 22.5 ms per sentence (≈ 44 sentences per second) on commodity GPU hardware. Ablation studies show that domain-adaptive pretraining yields the largest gains, contrastive learning provides additional improvements, and metric distillation contributes smaller but consistent benefits. These quantitative results suggest that the proposed model can serve as a technically feasible component for translation education, offering calibrated scores and lightweight diagnostic signals under realistic latency constraints; validation on real course assignments and with teachers and students in the loop is left for future work.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Chuan Lin"
+    ],
+    "doi": "10.1038/s41598-026-35042-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41554804/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41554804"
+    }
+  },
+  {
+    "paper_id": "pubmed:41554176",
+    "title": "Mapping Five Years of #FOAMed: Trends, Engagement, and Shifting Topics on Twitter/X.",
+    "abstract": "Free Open Access Medical Education (FOAMed) has emerged as a prominent component of online medical communication, with X (formerly Twitter) serving as an active hub for professional exchange among clinicians. Despite its reach and influence, few longitudinal studies have examined how FOAMed content and engagement patterns evolve over time. In this study we aimed to analyze thematic shifts and user interaction trends in #FOAMed tweets over a five-year period. We conducted a retrospective bibliometric and natural language processing (NLP) study of 6,000 high-engagement, English-language tweets tagged with #FOAMed, posted between January 1, 2020-December 31, 2024. Each month, the 100 tweets were selected from Twitter's \"Top\" tab and manually curated. We used latent Dirichlet allocation (LDA) to identify thematic clusters. Hashtag usage and engagement metrics were assessed using descriptive statistics and linear regression. We identified 10 distinct topics were identified through LDA modeling: point-of-care ultrasound (POCUS) education; neuro-radiology, cardiology-electrocardiogram (ECG); nephrology; and intensive care unit; ultrasound; prehospital/policy; webinars and learning; resuscitation scenarios; pediatric imaging; medical student education; and critical care and publications. Topic prevalence shifted over time: Early tweets focused on COVID-19 and critical care, while later years showed increasing attention to prehospital care, diagnostics, and POCUS. Mean tweet engagement peaked in 2023 (236.9 ± 914.6). Notably, hashtags such as #POCUS and #MedEd showed substantial increases in both usage and engagement, with #MedEd reaching a peak mean engagement of 287.7. In contrast, COVID-19 declined steadily, both in frequency (from 126 tweets in 2020 to just six in 2023) and in engagement (mean: 67.1 → 18.5). Spearman correlation analysis revealed that hashtag count had a weak but statistically significant correlation with engagement (ρ = 0.047, P < .001), suggesting that content quality, rather than volume, was the primary driver of visibility. FOAMed discourse on Twitter/X remains dynamic, responsive to clinical priorities and shaped by peer interaction. Natural language processing and topic modeling are valuable tools to uncover longitudinal trends in digital medical education, reinforcing Twitter/X's role in informal, real-time learning communities.",
+    "year": 2025,
+    "venue": "The western journal of emergency medicine",
+    "authors": [
+      "Ertuğ Günsoy",
+      "Ahmet Aykut",
+      "Cem Yildirim",
+      "Mehmet Veysel Öncül"
+    ],
+    "doi": "10.5811/westjem.47392",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41554176/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41554176"
+    }
+  },
+  {
+    "paper_id": "pubmed:41418319",
+    "title": "Intersection of Big Five Personality Traits and Substance Use on Social Media Discourse: AI-Powered Observational Study.",
+    "abstract": "Personality traits are known predictors of substance use (SU), but their expression and association with SU in digital discourse remain largely unexamined. During the COVID-19 pandemic, the online social engagement heightened and led to an amplification in SU rates, thereby creating a unique natural opportunity to investigate these dynamics through large-scale digital discourse data. In our study, we offer insights beyond traditional self-report methods, which are crucial for developing timely and targeted public health interventions. We aim to evaluate whether the associations between the Big Five personality traits and SU discourse shifted during the 2019-2021 period, and to conduct a focused analysis of how these traits predict SU and relate to specific substance types, emotional expression, and demographic factors. We analyzed a corpus of several hundred million public posts from a major social media platform from 2019 to 2021. Using a pipeline of natural language processing and deep learning models, we identified SU-related posts and subsequently extracted scores for the Big Five personality traits, emotions, and user demographics. We used trend analysis to compare annual shifts in trait-SU associations, while detailed 2020 data underwent rigorous modeling using logistic regression, correlation analysis, and topic modeling to elucidate the core relationships. Our analysis revealed that Extraversion (odds ratio [OR] 3.22, 95% CI 2.98-3.49) and, most strikingly, agreeableness (OR 4.04, 95% CI 3.71-4.41) were the strongest positive predictors of being a substance user. In stark contrast to the conventional self-medication hypothesis, neuroticism emerged as a robust protective factor against SU (OR 0.29, 95% CI 0.26-0.31). This counterintuitive finding was supported by a decreased association between neuroticism and SU posts at the pandemic's onset in 2020 (Cohen d=-0.13, 95% CI) and a negative correlation with the expression of negative emotions online. Topic modeling further indicated that SU discourse was frequently embedded in social contexts (social drinking and friendly beverage choices) rather than themes of solitary coping. Our findings challenge traditional models by demonstrating that in large-scale online discourse, SU expression is more powerfully linked to social-affiliative traits than to negative emotionality. The paradoxical protective role of neuroticism suggests that established risk profiles may not apply uniformly to digital environments, particularly during a public health crisis. These insights are vital for refining computational methods for public health surveillance and developing interventions that recognize the potent social drivers of SU in the digital age.",
+    "year": 2025,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Julina Maharjan",
+      "Ruoming Jin",
+      "Jianfeng Zhu",
+      "Deric Kenne"
+    ],
+    "doi": "10.2196/79454",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41418319/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41418319"
+    }
+  },
+  {
+    "paper_id": "pubmed:41394549",
+    "title": "Utilizing natural language processing to identify cancer-relevant publications at a National Cancer Institute-designated cancer center.",
+    "abstract": "The objective of this study was to develop and test natural language processing (NLP) methods for screening and, ultimately, predicting the cancer relevance of peer-reviewed publications. Two datasets were used: (1) manually curated publications labeled for cancer relevance, co-authored by members of The University of Kansas Cancer Center (KUCC) and (2) a derived dataset containing cancer-related abstracts from American Association for Cancer Research journals and noncancer-related abstracts from other medical journals. Two text encoding methods were explored: term frequency-inverse document frequency (TF-IDF) vectorization and various BERT embeddings. These representations served as inputs to 3 supervised machine learning classifiers: Support Vector Classification (SVC), Gradient Boosting Classification, and Multilayer Perceptron (MLP) neural networks. Model performance was evaluated by comparing predictions to the \"true\" cancer-relevant labels in a withheld test set. All machine learning models performed best when trained and tested within the derived dataset. Across the datasets, SVC and MLP both exhibited strong performance, with F1 scores as high as 0.976 and 0.997, respectively. BioBERT embeddings resulted in slightly higher metrics when compared to TF-IDF vectorization across most models. Models trained on the derived data performed very well internally; however, weaker performance was noted when these models were tested on the KUCC dataset. This finding highlights the subjective nature of cancer-relevant determinations. In contrast, KUCC trained models had high predictive performance when tested on the derived-specific classifications, showing that models trained on the KUCC dataset may be suitable for wider cancer-relevant prediction. Overall, our results suggest that NLP can effectively automate the classification of cancer-relevant publications, enhancing research productivity tracking; however, great care should be taken in selecting the appropriate data, text representation approach, and machine learning approach.",
+    "year": 2025,
+    "venue": "JAMIA open",
+    "authors": [
+      "Whitney Shae",
+      "Md Saiful Islam Saif",
+      "John Fife",
+      "Dinesh Pal Mudaranthakam",
+      "Dong Pei",
+      "Lisa Harlan-Williams",
+      "Jeffrey A Thompson",
+      "Devin C Koestler"
+    ],
+    "doi": "10.1093/jamiaopen/ooaf156",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41394549/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41394549"
+    }
+  },
+  {
+    "paper_id": "pubmed:41384677",
+    "title": "Advancing the Prediction and Understanding of Placebo Responses in Chronic Back Pain Using Large Language Models.",
+    "abstract": "Placebo analgesia is a widely studied clinical phenomenon, yet placebo responses vary widely across individuals. Prior research has identified biopsychosocial factors that determine the likelihood of an individual to respond to placebo, yet generalizability and ecological validity in those studies have been limited due to the inability to account for dynamic personal and treatment effects. We assessed fine-tuned large language models (LLMs) for the prediction of placebo responses in chronic low-back pain using contextual features extracted from patient interviews, as they speak about their lifestyle, pain, and treatment history. Interviews were conducted as part of two RCTs designed to study the placebo effect. These interviews were collected after treatment in the first trial (discovery cohort) and prior to treatment in the second trial (validation cohort). Semantic features extracted with LLMs can predict which individuals respond to a placebo, with an accuracy of 74% in unseen data, and validating with 70% accuracy in an independent cohort. Furthermore, in contrast to previous work, LLMs eliminated the need for pre-selecting search terms, enabling a fully data-driven approach, and provided interpretable insights into psychosocial factors underlying placebo responses. These findings expand on prior research by integrating state-of-art NLP techniques to address limitations in interpretability and context sensitivity of the traditional methods in related work. This method highlights the role of language models to link language and psychological states, paving the way for a deeper quantitative exploration of biopsychosocial phenomena, and to understand how they relate to treatment outcomes. This study paves the way for a deeper yet quantitative exploration of biopsychosocial phenomena through language, and to understand how they relate to treatment outcomes, namely placebo. In this case it highlights nuanced linguistic patterns linked to responder status, which tap into semantic dimensions such as \"anxiety,\" \"resignation,\" and \"hope\".",
+    "year": 2026,
+    "venue": "European journal of pain (London, England)",
+    "authors": [
+      "Diogo A P Nunes",
+      "Dan Furrer",
+      "Sara Berger",
+      "Guillermo Cecchi",
+      "Joana Ferreira-Gomes",
+      "Fani Neto",
+      "David Martins de Matos",
+      "A Vania Apkarian",
+      "Paulo Branco"
+    ],
+    "doi": "10.1002/ejp.70184",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41384677/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41384677"
+    }
+  },
+  {
+    "paper_id": "pubmed:41270181",
+    "title": "Benchmarking retrieval-augmented large language models in biomedical NLP: Application, robustness, and self-awareness.",
+    "abstract": "To reduce hallucinations in large language models (LLMs), retrieval-augmented LLMs (RALs) retrieve supporting knowledge from external databases. However, their performance on biomedical natural language processing (NLP) tasks remains underexplored. We introduce Biomedical Retrieval-Augmented Generation Benchmark, a comprehensive evaluation framework assessing RALs across five biomedical NLP tasks and 11 datasets, using four testbeds: unlabeled robustness, counterfactual robustness, diverse robustness, and self-awareness. To improve RALs' robustness and negative awareness, we propose a detect-and-correct strategy and a contrastive learning approach. Experimental results show that RALs generally outperform standard LLMs on most biomedical tasks, but still struggle with robustness and self-awareness, particularly under counterfactual and diverse scenarios. Our proposed methods significantly improve performance in robustness to unlabeled and counterfactual data, and increase the model's ability to detect and avoid incorrect predictions. These findings highlight key limitations in current RALs and underscore the need for continued refinement to ensure reliability and accuracy in high-stakes biomedical applications.",
+    "year": 2025,
+    "venue": "Science advances",
+    "authors": [
+      "Mingchen Li",
+      "Zaifu Zhan",
+      "Han Yang",
+      "Yongkang Xiao",
+      "Huixue Zhou",
+      "Jiatan Huang",
+      "Rui Zhang"
+    ],
+    "doi": "10.1126/sciadv.adr1443",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41270181/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41270181"
+    }
+  },
+  {
+    "paper_id": "pubmed:41253878",
+    "title": "Fusion of deep transfer learning models with Gannet optimisation algorithm for an advanced image captioning system for visual disabilities.",
+    "abstract": "The issue of generating a natural language explanation of images to define their visual content has garnered significant attention in computer vision (CV) and natural language processing (NLP). It is driven by applications such as image virtual assistants, indexing and retrieval, image perception, and assistance for visually challenged people. While this kind of person utilizes other senses, such as hearing and touch, for identifying events and objects, their quality of life is reduced to a typical level. Automated Image captioning generates captions that will be spoken aloud to individuals with disabilities, thereby recognizing objects and events happening nearby them. With the aid of image captioning techniques and artificial intelligence (AI) speech recognition methods, visually impaired individuals can quickly understand the content of an image, as these methods can automatically generate text captions that accurately describe the image's content. Therefore, this study presents a novel Fusion of Deep Transfer Learning Models and the Gannet Optimisation Algorithm for an Advanced Image Captioning System for Visual Disabilities (FDTLGO-AICSVD) model. The aim is to present a robust and efficient image captioning framework specifically designed to assist visually impaired persons through precise and descriptive image-to-text conversion. Initially, the FDTLGO-AICSVD approach comprises two distinct types of image preprocessing: noise removal and contrast enhancement, aimed at improving the clarity of visual features. Text preprocessing involves distinct steps to standardize and prepare the textual data for analysis. Furthermore, DenseNet121, VGG19, and MobileNetV2 models are utilized for extracting features from image data, whereas Term Frequency Inverse Document Frequency (TF-IDF) is applied for extracting features from text data. To achieve optimal performance, the Gannet optimization algorithm (GOA) model is employed for hyperparameter tuning, enabling the method to generate precise and context-aware captions. A wide range of experimentation of the FDTLGO-AICSVD method is performed under the Flickr8k and Flickr30k datasets. The comparison study of the FDTLGO-AICSVD method portrayed a superior BLEU-4 score of 45.11% over the Flickr8K dataset and 58.91% over the Flickr30K dataset, along with a significantly higher CIDEr score of 63.17 on Flickr8K and 69.81 on Flickr30K, demonstrating the enhanced descriptive accuracy and language generation capability of the model across both datasets.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Tareq M Alkhaldi",
+      "Mashael M Asiri",
+      "Fahad Alzahrani",
+      "Mahir Mohammed Sharif"
+    ],
+    "doi": "10.1038/s41598-025-24171-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41253878/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41253878"
+    }
+  },
+  {
+    "paper_id": "pubmed:40989476",
+    "title": "A social information sensitive model for conversational recommender systems.",
+    "abstract": "Conversational recommender systems (CRS) facilitate natural language interactions for more effective item suggestions. While these systems show promise, they face challenges in effectively utilizing and integrating informative data with conversation history through semantic fusion. In this study we present an innovative framework for extracting social information from conversational datasets by inferring ratings and constructing user-item interaction and user-user relationship graphs. We introduce a social information sensitive semantic fusion (SISSF) method that employs contrastive learning (CL) to bridge the semantic gap between generated social information and conversation history. We evaluated the framework on two public datasets (ReDial and INSPIRED) using both automatic and human evaluation metrics. Our SISSF framework demonstrated significant improvements over baseline models across all metrics. For the ReDial dataset, SISSF achieved superior performance in recommendation tasks (R@1: 0.062, R@50: 0.437) and conversational quality metrics (Distinct-2: 4.223, Distinct-3: 5.595, Distinct-4: 6.155). Human evaluation showed marked improvement in both fluency (1.81) and informativeness (1.63). We observed similar performance gains on the INSPIRED dataset, with notable improvements in recommendation accuracy (R@1: 0.046, R@10: 0.129, R@50: 0.269) and response diversity (Distinct-2: 2.061, Distinct-3: 4.293, Distinct-4: 6.242). The experimental results consistently validate the effectiveness of our approach in both recommendation and conversational tasks. These findings suggest that incorporating social context through CL can significantly improve the personalization and relevance of recommendations in conversational systems.",
+    "year": 2025,
+    "venue": "PeerJ. Computer science",
+    "authors": [
+      "Abdulaziz Mohammed",
+      "Mingwei Zhang",
+      "Gehad Abdullah Amran",
+      "Husam M Alawadh",
+      "Ruizhe Wang",
+      "Amerah Alabrah",
+      "Ali A Al-Bakhrani"
+    ],
+    "doi": "10.7717/peerj-cs.3067",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40989476/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40989476"
+    }
+  },
+  {
+    "paper_id": "pubmed:40974639",
+    "title": "Explaining anxiety prediction in psychotherapy transcripts: The role of patient linguistic features and theoretical constructs.",
+    "abstract": "Linguistics can be a helpful tool when researching psychological processes and symptoms. This study aimed to predict anxiety severity from patient language in psychotherapy transcripts. In contrast to prior work focusing on isolated feature types, we combine theory-driven psychological constructs with state-of-the-art NLP and machine learning techniques to enhance both performance and interpretability. Specifically, we asked (1) how well anxiety can be predicted, (2) which models perform best, (3) which features are most important. We extracted LIWC features, unigrams and bigrams, Transformer emotions, and topics from 529 psychotherapy transcripts from 118 patients. In addition, we constructed theory-driven features to measure negative self-focused attention, self-insight, future focus of perceived threat, and uncertainty avoidance. Each feature set was modeled using multiple machine learning algorithms. To gain insights into the most informative predictors of anxiety, eXplainable Artificial Intelligence was applied. The Unigram-Bigram Model achieved the best predictive performance (r = .77; 95 %-CI = .75-0.80). However, the Anxiety Process Model achieved notable predictive accuracy despite having only four interpretable, theory-based features. Features related to leisure, social relationships, and insecurity were associated with lower anxiety severity, health-related features and \"certainty words\" (e.g., totally) with higher severity. Our findings highlight a trade-off between performance and interpretability. Unigram-bigram models maximized predictive accuracy, whereas theory-driven constructs provided clinically meaningful insights into core psychological processes. Identifying predictive linguistic features, especially those linked to psychological theory, may guide future research on feedback systems and clinical applications by providing interpretable and theory-aligned insights.",
+    "year": 2025,
+    "venue": "Behaviour research and therapy",
+    "authors": [
+      "Tobias Steinbrenner",
+      "Christopher Lalk",
+      "Kim Targan",
+      "Jana Schaffrath",
+      "Steffen Eberhardt",
+      "Anke Haberkamp",
+      "Wolfgang Lutz",
+      "Julian Rubel"
+    ],
+    "doi": "10.1016/j.brat.2025.104857",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40974639/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40974639"
+    }
+  },
+  {
+    "paper_id": "pubmed:40882236",
+    "title": "A Machine Learning Approach for Identifying People With Neuroinfectious Diseases in Electronic Health Records: Algorithm Development and Validation.",
+    "abstract": "Identifying neuroinfectious disease (NID) cases using International Classification of Diseases billing codes is often imprecise, while manual chart reviews are labor-intensive. Machine learning models can leverage unstructured electronic health records to detect subtle NID indicators, process large data volumes efficiently, and reduce misclassification. While accurate NID classification is needed for research and clinical decision support, using unstructured notes for this purpose remains underexplored. The objective of this study is to develop and validate a machine learning model to identify NIDs from unstructured patient notes. Clinical notes from patients who had undergone lumbar puncture were obtained using the electronic health record of an academic hospital network (Mass General Brigham [MGB]), with half associated with NID-related diagnostic codes. Ground truth was established by chart review with 6 NID-expert physicians. NID keywords were generated with regular expressions, and extracted texts were converted into bag-of-words representations using n-grams (n=1, 2, 3). Notes were randomly split into training (80%), 2400 notes out of 3000, and hold-out testing (20%), 600 notes out of 3000, sets. Feature selection was performed using logistic regression with L1 regularization. An extreme gradient boosting (XGBoost) model classified NID cases, and performance was evaluated using the area under the receiver operating curve (AUROC) and the precision-recall curve (AUPRC). The performance of the natural language processing (NLP) model was contrasted with the Llama 3.2 auto-regressive model on the MGB test set. The NLP model was additionally validated on external data from an independent hospital (Beth Israel Deaconess Medical Center [BIDMC]). This study included 3000 patient notes from MGB from January 22, 2010, to September 21, 2023. Of 1284 initial n-gram features, 342 were selected, with the most significant features being \"meningitis,\" \"ventriculitis,\" and \"meningoencephalitis.\" The XGBoost model achieved an AUROC of 0.98 (95% CI 0.96-0.99) and AUPRC of 0.89 (95% CI 0.83-0.94) on MGB test data. In comparison, NID identification using International Classification of Diseases billing codes showed high sensitivity (0.97) but poor specificity (0.59), overestimating NID cases. Llama 3.2 improved specificity (0.94) but had low sensitivity (0.64) and an AUROC of 0.80. In contrast, our NLP model balanced specificity (0.96) and sensitivity (0.84), outperforming both methods in accuracy and reliability on MGB data. When tested on external data from BIDMC, the NLP model maintained an AUROC of 0.98 (95% CI 0.96-0.99), with an AUPRC of 0.78 (95% CI 0.66-0.89). The NLP model accurately identifies NID cases from clinical notes. Validated across 2 independent hospital datasets, the model demonstrates feasibility for large-scale NID research and cohort generation. With further external validation, our results could be more generalizable to other institutions.",
+    "year": 2025,
+    "venue": "JMIR medical informatics",
+    "authors": [
+      "Arjun Singh",
+      "Shadi Sartipi",
+      "Haoqi Sun",
+      "Rebecca Milde",
+      "Niels Turley",
+      "Carson Quinn",
+      "G Kyle Harrold",
+      "Rebecca L Gillani",
+      "Sarah E Turbett",
+      "Sudeshna Das",
+      "Sahar Zafar",
+      "Marta Fernandes",
+      "M Brandon Westover",
+      "Shibani S Mukerji"
+    ],
+    "doi": "10.2196/63157",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40882236/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40882236"
+    }
+  },
+  {
+    "paper_id": "pubmed:40882190",
+    "title": "Token Probabilities to Mitigate Large Language Models Overconfidence in Answering Medical Questions: Quantitative Study.",
+    "abstract": "Chatbots have demonstrated promising capabilities in medicine, scoring passing grades for board examinations across various specialties. However, their tendency to express high levels of confidence in their responses, even when incorrect, poses a limitation to their utility in clinical settings. The aim of the study is to examine whether token probabilities outperform chatbots' expressed confidence levels in predicting the accuracy of their responses to medical questions. In total, 9 large language models, comprising both commercial (GPT-3.5, GPT-4, and GPT-4o) and open source (Llama 3.1-8b, Llama 3.1-70b, Phi-3-Mini, Phi-3-Medium, Gemma 2-9b, and Gemma 2-27b), were prompted to respond to a set of 2522 questions from the United States Medical Licensing Examination (MedQA database). Additionally, the models rated their confidence from 0 to 100, and the token probability of each response was extracted. The models' success rates were measured, and the predictive performances of both expressed confidence and response token probability in predicting response accuracy were evaluated using area under the receiver operating characteristic curves (AUROCs), adapted calibration error, and Brier score. Sensitivity analyses were conducted using additional questions sourced from other databases in English (MedMCQA: n=2797), Chinese (MedQA Mainland China: n=3413 and Taiwan: n=2808), and French (FrMedMCQA: n=1079), different prompting strategies, and temperature settings. Overall, mean accuracy ranged from 56.5% (95% CI 54.6-58.5) for Phi-3-Mini to 89% (95% CI 87.7-90.2) for GPT-4o. Across the United States Medical Licensing Examination questions, all chatbots consistently expressed high levels of confidence in their responses (ranging from 90, 95% CI 90-90 for Llama 3.1-70b to 100, 95% CI 100-100 for GPT-3.5). However, expressed confidence failed to predict response accuracy (AUROC ranging from 0.52, 95% CI 0.50-0.53 for Phi-3-Mini to 0.68, 95% CI 0.65-0.71 for GPT-4o). In contrast, the response token probability consistently outperformed expressed confidence for predicting response accuracy (AUROCs ranging from 0.71, 95% CI 0.69-0.73 for Phi-3-Mini to 0.87, 95% CI 0.85-0.89 for GPT-4o; all P<.001). Furthermore, all models demonstrated imperfect calibration, with a general trend toward overconfidence. These findings were consistent in sensitivity analyses. Due to the limited capacity of chatbots to accurately evaluate their confidence when responding to medical queries, clinicians and patients should abstain from relying on their self-rated certainty. Instead, token probabilities emerge as a promising and easily accessible alternative for gauging the inner doubts of these models.",
+    "year": 2025,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Raphaël Bentegeac",
+      "Bastien Le Guellec",
+      "Grégory Kuchcinski",
+      "Philippe Amouyel",
+      "Aghiles Hamroun"
+    ],
+    "doi": "10.2196/64348",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40882190/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40882190"
+    }
+  },
+  {
+    "paper_id": "pubmed:40882207",
+    "title": "Natural Language Processing and ",
+    "abstract": "Bleeding adverse drug events (ADEs), particularly among older inpatients receiving antithrombotic therapy, represent a major safety concern in hospitals. These events are often underdetected by conventional rule-based systems relying on structured electronic medical record data, such as the ICD-10 (International Statistical Classification of Diseases and Related Health Problems 10th Revision) codes, which lack the granularity to capture nuanced clinical narratives. This study aimed to develop and evaluate a natural language processing (NLP) model to detect and categorize bleeding ADEs in discharge summaries of older adults. Specifically, the model was designed to distinguish between \"clinically significant bleeding,\" \"severe bleeding,\" \"history of bleeding,\" and \"no bleeding,\" and was compared with a rule-based algorithm using ICD-10 codes. Clinicians manually annotated 400 discharge summaries, comprising 65,706 sentences, into four categories: \"no bleeding,\" \"clinically significant bleeding,\" \"severe bleeding,\" and \"history of bleeding.\" The dataset was divided into a training set (70%, 47,100 sentences) and a test set (30%, 18,606 sentences). Two detection approaches were developed and evaluated: (1) an NLP model using binary logistic regression and support vector machine classifiers, and (2) a traditional rule-based algorithm relying exclusively on predefined ICD-10 codes. To address class imbalance, with most sentences categorized as irrelevant (\"no bleeding\"), a class-weighting strategy was applied in the NLP model. Model performance was assessed using accuracy, precision, recall, F1-score, and receiver operating characteristic (ROC) curve analyses, with manual annotations as the gold standard. The NLP model significantly outperformed the rule-based approach across all evaluation metrics. At the document level, the NLP model achieved macro-average scores of 0.81 for accuracy and 0.80 for F1-score. Precision was particularly high for detecting severe (0.92) and clinically significant bleeding events (0.87), demonstrating strong classification capability despite class imbalance. ROC analyses confirmed the model's robust diagnostic performance, yielding an area under the curve (AUC) of 0.91 when distinguishing irrelevant sentences from potential bleeding events, 0.88 for identifying historical mentions of bleeding, and notably, 0.94 for differentiating clinically significant from severe bleeding. In contrast, the rule-based ICD-10 model demonstrated high precision (0.94) for clinically significant bleeding but poor recall (0.03) for severe bleeding events, reflecting frequent missed detections. This limitation arose due to its reliance on commonly used ICD-10 codes (eg, gastrointestinal hemorrhage) and inadequate capture of rare severe bleeding conditions such as shock due to hemorrhage. This study highlights the considerable advantage of NLP over traditional ICD-10-based methods for detecting bleeding ADEs within electronic medical records. The NLP model effectively captured nuanced clinical narratives, including severity, negations, and historical bleeding events, demonstrating substantial promise for improving patient safety surveillance and clinical decision-making. Future research should extend validation across multiple institutions, diversify annotated datasets, and further refine temporal reasoning capabilities within NLP algorithms.",
+    "year": 2025,
+    "venue": "JMIR medical informatics",
+    "authors": [
+      "Frederic Gaspar",
+      "Mehdi Zayene",
+      "Claire Coumau",
+      "Elliott Bertrand",
+      "Marie Bettex",
+      "Marie Annick Le Pogam",
+      "Chantal Csajka"
+    ],
+    "doi": "10.2196/67837",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40882207/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40882207"
+    }
+  },
+  {
+    "paper_id": "pubmed:40861510",
+    "title": "Multilingual Virtual Healthcare Assistant.",
+    "abstract": "This study proposes a virtual healthcare assistant framework designed to provide support in multiple languages for efficient and accurate healthcare assistance. The system employs a transformer model to process sophisticated, multilingual user inputs and gain improved contextual understanding compared to conventional models, including long short-term memory (LSTM) models. In contrast to LSTMs, which sequence processes information and may experience challenges with long-range dependencies, transformers utilize self-attention to learn relationships among every aspect of the input in parallel. This enables them to execute more accurately in various languages and contexts, making them well-suited for applications such as translation, summarization, and conversational Comparative evaluations revealed the superiority of the transformer model (accuracy rate: 85%) compared with that of the LSTM model (accuracy rate: 65%). The experiments revealed several advantages of the transformer architecture over the LSTM model, such as more effective self-attention, the ability for models to work in parallel with each other, and contextual understanding for better multilingual compatibility. Additionally, our prediction model exhibited effectiveness for disease diagnosis, with accuracy of 85% or greater in identifying the relationship between symptoms and diseases among different demographics. The system provides translation support from English to other languages, with conversion to French (Bilingual Evaluation Understudy score: 0.7), followed by English to Hindi (0.6). The lowest Bilingual Evaluation Understudy score was found for English to Telugu (0.39). This virtual assistant can also perform symptom analysis and disease prediction, with output given in the preferred language of the user.",
+    "year": 2025,
+    "venue": "Health care science",
+    "authors": [
+      "Geetika Munjal",
+      "Piyush Agarwal",
+      "Lakshay Goyal",
+      "Nandy Samiran"
+    ],
+    "doi": "10.1002/hcs2.70031",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40861510/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40861510"
+    }
+  },
+  {
+    "paper_id": "pubmed:40824638",
+    "title": "Performance of 4 Methods to Assess Health-Related Social Needs.",
+    "abstract": "Organizations use health-related social needs (HRSN) information to identify patients in need of referrals, to increase clinician awareness, to improve analytics, and for quality reporting. To contrast the performance of screening questionnaires, natural language processing (NLP) of clinical notes, rule-based computable phenotypes, and machine learning (ML) classification models in measuring HRSNs. This cross-sectional study assessed 4 measurement approaches for 5 HRSNs in parallel. Each approach was treated as a screening test. Data included notes from adult patients treated at primary care clinics in 2 health systems in Indianapolis, Indiana, from January 2022 to June 2023. Data were analyzed from December 2024 to February 2025. Reference standard instruments measured food insecurity, housing instability, financial strain, transportation barriers, and history of legal problems. Participants completed the HRSN screening questions in the electronic health record (EHR). NLP algorithms, gradient-boosted decision tree ML classifiers, and refined versions of human-defined rule-based computable phenotypes were applied to participants' past 12 months EHR data. Sensitivity, specificity, area under the curve (AUC), and positive predictive values (PPV) described performance of each approach against the reference standard measures. False-negative rates were used to explore fairness. Data from a total of 1252 adult patients (407 [32.51%] aged 30 to 49 years; 821 [65.58%] female) were assessed, including 94 (7.51%) who identified as Hispanic, 602 (48.08%) as non-Hispanic Black or African American, and 442 (35.30%) as non-Hispanic White. The screening questions method had the strongest overall performance for food insecurity (AUC, 0.94; 95% CI, 0.93-0.95), housing instability (AUC, 0.78; 95% CI, 0.75-0.80), transportation barriers (AUC, 0.77; 95% CI, 0.74-0.79), and legal problems (AUC, 0.81; 95% CI, 0.77-0.85). The screening questions had poor performance for financial strain (AUC, 0.62; 95% CI, 0.60-0.65). The PPV for screening tools ranged from 0.77 to 0.92, indicating utility for individual-level decision-making. NLP and rule-based computable phenotypes had poor performance. ML classification resulted in higher sensitivities than the other methods. False-negative rates indicated differential, unfair performance for all measurement approaches by gender, race and ethnicity, and age groups. In this cross-sectional study of HRSN measurement, no approach performed strongly for every HRSN, and every approach had indication of unfair performance. These findings suggest that practitioners, health care and public health organizations, researchers, and policymakers who rely on a single method to collect HRSN data will likely underestimate patients' true social burden.",
+    "year": 2025,
+    "venue": "JAMA network open",
+    "authors": [
+      "Joshua R Vest",
+      "Wei Wu",
+      "Megan E Gregory",
+      "Suranga N Kasturi",
+      "Eneida A Mendonca",
+      "Jiang Bian",
+      "Tanja Magoc",
+      "Shaun Grannis",
+      "Cassidy McNamee",
+      "Christopher A Harle"
+    ],
+    "doi": "10.1001/jamanetworkopen.2025.27426",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40824638/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40824638"
+    }
+  },
+  {
+    "paper_id": "pubmed:40647638",
+    "title": "Correlating Patient Symptoms and CT Morphology in AI-Detected Incidental Pulmonary Embolisms.",
+    "abstract": null,
+    "year": 2025,
+    "venue": "Diagnostics (Basel, Switzerland)",
+    "authors": [
+      "Selim Abed",
+      "Lucas Brandstetter",
+      "Klaus Hergan"
+    ],
+    "doi": "10.3390/diagnostics15131639",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40647638/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40647638"
+    }
+  },
+  {
+    "paper_id": "pubmed:40611214",
+    "title": "Keyword-optimized template insertion for clinical note classification via prompt-based learning.",
+    "abstract": "Prompt-based learning involves the additions of prompts (i.e., templates) to the input of pre-trained large language models (PLMs) to adapt them to specific tasks with minimal training. This technique is particularly advantageous in clinical scenarios where the amount of annotated data is limited. This study aims to investigate the impact of template position on model performance and training efficiency in clinical note classification tasks using prompt-based learning, especially in zero- and few-shot settings. We developed a keyword-optimized template insertion method (KOTI) to enhance model performance by strategically placing prompt templates near relevant clinical information within the notes. The method involves defining task-specific keywords, identifying sentences containing these keywords, and inserting the prompt template in their vicinity. We compared KOTI with standard template insertion (STI) methods in which the template is directly appended at the end of the input text. Specifically, we compared STI with naïve tail-truncation (STI-s) and STI with keyword-optimized input truncation (STI-k). Experiments were conducted using two pre-trained encoder models, GatorTron and ClinicalBERT, and two decoder models, BioGPT and ClinicalT5, across five classification tasks, including dysmenorrhea, peripheral vascular disease, depression, osteoarthritis, and smoking status classification. Our experiments revealed that the KOTI approach consistently outperformed both STI-s and STI-k in zero-shot and few-shot scenarios for encoder models, with KOTI yielding a significant 24% F1 improvement over STI-k for GatorTron and 8% for Clinical BERT. Additionally, training with balanced examples further enhanced performance, particularly under few-shot conditions. In contrast, decoder-based models exhibited inconsistent results, with KOTI showing significant improvement in F1 score over STI-k for BioGPT (+19%), but a significant drop for ClinicalT5 (-18%), suggesting that KOTI is not beneficial across all transformer model architectures. Our findings underscore the significance of template position in prompt-based fine-tuning of encoder models and highlights KOTI's potential to optimize real-world clinical note classification tasks with few training examples.",
+    "year": 2025,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Eugenia Alleva",
+      "Isotta Landi",
+      "Leslee J Shaw",
+      "Erwin Böttinger",
+      "Ipek Ensari",
+      "Thomas J Fuchs"
+    ],
+    "doi": "10.1186/s12911-025-03071-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40611214/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40611214"
+    }
+  },
+  {
+    "paper_id": "pubmed:40424107",
+    "title": "Comparing Text-Based Clinical Risk Prediction in Critical Care: A Note-Specific Hierarchical Network and Large Language Models.",
+    "abstract": "Clinical predictive analysis is a crucial task with numerous applications and has been extensively studied using machine learning approaches. Clinical notes, a vital data source, have been employed to develop natural language processing (NLP) models for risk prediction in healthcare with robust performance. However, clinical notes vary considerably in text composition-written by diverse healthcare providers for different purposes-and the impact of these variations on NLP modeling is also underexplored. It also remains uncertain whether the recent Large Language Models (LLMs) with instruction-following capabilities can effectively handle the risk prediction task out-of-the-box, especially when using routinely collected clinical notes instead of polished text. We address these two important research questions in the context of in-hospital mortality prediction within the critical care setting. Specifically, we propose a supervised hierarchical network with note-specific modules to account for variations across different note categories, and provide a detailed comparison with strong supervised baselines and LLMs. We benchmark 34 instruction-following LLMs based on zero-shot, few-shot, and chain-of-thought prompting with diverse prompt templates. Our results demonstrate that the note-specific network delivers improved risk prediction performance compared to established supervised baselines from both measurement-based and text-based modeling. In contrast, LLMs consistently underperform on this critical task, despite their remarkable performances in other domains. This highlights important limitations and raises caution regarding the use of LLMs for risk assessment in the critical setting. Additionally, we show that the proposed model can be leveraged to select informative clinical notes to enhance the training of other models.",
+    "year": 2025,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Jinghui Liu",
+      "Anthony Nguyen",
+      "Daniel Capurro",
+      "Karin Verspoor"
+    ],
+    "doi": "10.1109/JBHI.2025.3574254",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40424107/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40424107"
+    }
+  },
+  {
+    "paper_id": "pubmed:40395375",
+    "title": "\"Amide - amine + alcohol = carboxylic acid.\" chemical reactions as linear algebraic analogies in graph neural networks.",
+    "abstract": "In deep learning methods, especially in the context of chemistry, there is an increasing urgency to uncover the hidden learning mechanisms often dubbed as \"black box.\" In this work, we show that graph models built on computational chemical data behave similar to natural language processing (NLP) models built on text data. Crucially, we show that atom-embeddings, a.k.a atom-parsed graph neural activation patterns, exhibit arithmetic properties that represent valid reaction formulas. This is very similar to how word-embeddings can be combined to make word analogies, thus preserving the semantic meaning behind the words, as in the famous example \"King\" - \"Man\" + \"Woman\" = \"Queen.\" For instance, we show how the reaction from an alcohol to a carbonyl is represented by a constant vector in the embedding space, implicitly representing \"-H",
+    "year": 2025,
+    "venue": "Chemical science",
+    "authors": [
+      "Amer Marwan El-Samman",
+      "Stijn De Baerdemacker"
+    ],
+    "doi": "10.1039/d4sc05655h",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40395375/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40395375"
+    }
+  }
+]

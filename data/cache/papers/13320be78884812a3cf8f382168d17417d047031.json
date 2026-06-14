@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2312.05933v1",
+  "title": "Temporal Supervised Contrastive Learning for Modeling Patient Risk Progression",
+  "abstract": "We consider the problem of predicting how the likelihood of an outcome of interest for a patient changes over time as we observe more of the patient data. To solve this problem, we propose a supervised contrastive learning framework that learns an embedding representation for each time step of a patient time series. Our framework learns the embedding space to have the following properties: (1) nearby points in the embedding space have similar predicted class probabilities, (2) adjacent time steps of the same time series map to nearby points in the embedding space, and (3) time steps with very different raw feature vectors map to far apart regions of the embedding space. To achieve property (3), we employ a nearest neighbor pairing mechanism in the raw feature space. This mechanism also serves as an alternative to data augmentation, a key ingredient of contrastive learning, which lacks a standard procedure that is adequately realistic for clinical tabular data, to our knowledge. We demonstrate that our approach outperforms state-of-the-art baselines in predicting mortality of septic patients (MIMIC-III dataset) and tracking progression of cognitive impairment (ADNI dataset). Our method also consistently recovers the correct synthetic dataset embedding structure across experiments, a feat not achieved by baselines. Our ablation experiments show the pivotal role of our nearest neighbor pairing.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Shahriar Noroozizadeh",
+    "Jeremy C. Weiss",
+    "George H. Chen"
+  ],
+  "doi": null,
+  "arxiv_id": "2312.05933v1",
+  "url": "http://arxiv.org/abs/2312.05933v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:original_clean",
+    "route:broad_synonym",
+    "route:query2doc",
+    "route:core_topic",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:title_like",
+    "route:hybrid",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

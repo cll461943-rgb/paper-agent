@@ -1,0 +1,840 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2006.05987v3",
+    "title": "Revisiting Few-sample BERT Fine-tuning",
+    "abstract": "This paper is a study of fine-tuning of BERT contextual representations, with focus on commonly observed instabilities in few-sample scenarios. We identify several factors that cause this instability: the common use of a non-standard optimization method with biased gradient estimation; the limited applicability of significant parts of the BERT network for down-stream tasks; and the prevalent practice of using a pre-determined, and small number of training iterations. We empirically test the impact of these factors, and identify alternative practices that resolve the commonly observed instability of the process. In light of these observations, we re-visit recently proposed methods to improve few-sample fine-tuning with BERT and re-evaluate their effectiveness. Generally, we observe the impact of these methods diminishes significantly with our modified process.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Tianyi Zhang",
+      "Felix Wu",
+      "Arzoo Katiyar",
+      "Kilian Q. Weinberger",
+      "Yoav Artzi"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.05987v3",
+    "url": "http://arxiv.org/abs/2006.05987v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05583v3",
+    "title": "How to Fine-Tune BERT for Text Classification?",
+    "abstract": "Language model pre-training has proven to be useful in learning universal language representations. As a state-of-the-art language model pre-training model, BERT (Bidirectional Encoder Representations from Transformers) has achieved amazing results in many language understanding tasks. In this paper, we conduct exhaustive experiments to investigate different fine-tuning methods of BERT on text classification task and provide a general solution for BERT fine-tuning. Finally, the proposed solution obtains new state-of-the-art results on eight widely-studied text classification datasets.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Chi Sun",
+      "Xipeng Qiu",
+      "Yige Xu",
+      "Xuanjing Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05583v3",
+    "url": "http://arxiv.org/abs/1905.05583v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.00946v3",
+    "title": "Fine-tuning with Very Large Dropout",
+    "abstract": "It is impossible today to pretend that the practice of machine learning is always compatible with the idea that training and testing data follow the same distribution. Several authors have recently used ensemble techniques to show how scenarios involving multiple data distributions are best served by representations that are both richer than those obtained by regularizing for the best in-distribution performance, and richer than those obtained under the influence of the implicit sparsity bias of common stochastic gradient procedures. This contribution investigates the use of very high dropout rates instead of ensembles to obtain such rich representations. Although training a deep network from scratch using such dropout rates is virtually impossible, fine-tuning a large pre-trained model under such conditions is not only possible but also achieves out-of-distribution performances that exceed those of both ensembles and weight averaging methods such as model soups. This result has practical significance because the importance of the fine-tuning scenario has considerably grown in recent years. This result also provides interesting insights on the nature of rich representations and on the intrinsically linear nature of fine-tuning a large network using a comparatively small dataset.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jianyu Zhang",
+      "Léon Bottou"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.00946v3",
+    "url": "http://arxiv.org/abs/2403.00946v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.08254v2",
+    "title": "BEiT: BERT Pre-Training of Image Transformers",
+    "abstract": "We introduce a self-supervised vision representation model BEiT, which stands for Bidirectional Encoder representation from Image Transformers. Following BERT developed in the natural language processing area, we propose a masked image modeling task to pretrain vision Transformers. Specifically, each image has two views in our pre-training, i.e, image patches (such as 16x16 pixels), and visual tokens (i.e., discrete tokens). We first \"tokenize\" the original image into visual tokens. Then we randomly mask some image patches and fed them into the backbone Transformer. The pre-training objective is to recover the original visual tokens based on the corrupted image patches. After pre-training BEiT, we directly fine-tune the model parameters on downstream tasks by appending task layers upon the pretrained encoder. Experimental results on image classification and semantic segmentation show that our model achieves competitive results with previous pre-training methods. For example, base-size BEiT achieves 83.2% top-1 accuracy on ImageNet-1K, significantly outperforming from-scratch DeiT training (81.8%) with the same setup. Moreover, large-size BEiT obtains 86.3% only using ImageNet-1K, even outperforming ViT-L with supervised pre-training on ImageNet-22K (85.2%). The code and pretrained models are available at https://aka.ms/beit.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Hangbo Bao",
+      "Li Dong",
+      "Songhao Piao",
+      "Furu Wei"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.08254v2",
+    "url": "http://arxiv.org/abs/2106.08254v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.17677v1",
+    "title": "A Hybrid Classical-Quantum Fine Tuned BERT for Text Classification",
+    "abstract": "Fine-tuning BERT for text classification can be computationally challenging and requires careful hyper-parameter tuning. Recent studies have highlighted the potential of quantum algorithms to outperform conventional methods in machine learning and text classification tasks. In this work, we propose a hybrid approach that integrates an n-qubit quantum circuit with a classical BERT model for text classification. We evaluate the performance of the fine-tuned classical-quantum BERT and demonstrate its feasibility as well as its potential in advancing this research area. Our experimental results show that the proposed hybrid model achieves performance that is competitive with, and in some cases better than, the classical baselines on standard benchmark datasets. Furthermore, our approach demonstrates the adaptability of classical-quantum models for fine-tuning pre-trained models across diverse datasets. Overall, the hybrid model highlights the promise of quantum computing in achieving improved performance for text classification tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Abu Kaisar Mohammad Masum",
+      "Naveed Mahmud",
+      "M. Hassan Najafi",
+      "Sercan Aygun"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.17677v1",
+    "url": "http://arxiv.org/abs/2511.17677v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.02124v2",
+    "title": "PatentBERT: Patent Classification with Fine-Tuning a pre-trained BERT Model",
+    "abstract": "In this work we focus on fine-tuning a pre-trained BERT model and applying it to patent classification. When applied to large datasets of over two millions patents, our approach outperforms the state of the art by an approach using CNN with word embeddings. In addition, we focus on patent claims without other parts in patent documents. Our contributions include: (1) a new state-of-the-art method based on pre-trained BERT model and fine-tuning for patent classification, (2) a large dataset USPTO-3M at the CPC subclass level with SQL statements that can be used by future researchers, (3) showing that patent claims alone are sufficient for classification task, in contrast to conventional wisdom.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Jieh-Sheng Lee",
+      "Jieh Hsiang"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.02124v2",
+    "url": "http://arxiv.org/abs/1906.02124v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.06500v2",
+    "title": "Differentially Private Fine-tuning of Language Models",
+    "abstract": "We give simpler, sparser, and faster algorithms for differentially private fine-tuning of large-scale pre-trained language models, which achieve the state-of-the-art privacy versus utility tradeoffs on many standard NLP tasks. We propose a meta-framework for this problem, inspired by the recent success of highly parameter-efficient methods for fine-tuning. Our experiments show that differentially private adaptations of these approaches outperform previous private algorithms in three important dimensions: utility, privacy, and the computational and memory cost of private training. On many commonly studied datasets, the utility of private models approaches that of non-private models. For example, on the MNLI dataset we achieve an accuracy of $87.8\\%$ using RoBERTa-Large and $83.5\\%$ using RoBERTa-Base with a privacy budget of $ε= 6.7$. In comparison, absent privacy constraints, RoBERTa-Large achieves an accuracy of $90.2\\%$. Our findings are similar for natural language generation tasks. Privately fine-tuning with DART, GPT-2-Small, GPT-2-Medium, GPT-2-Large, and GPT-2-XL achieve BLEU scores of 38.5, 42.0, 43.1, and 43.8 respectively (privacy budget of $ε= 6.8,δ=$ 1e-5) whereas the non-private baseline is $48.1$. All our experiments suggest that larger models are better suited for private fine-tuning: while they are well known to achieve superior accuracy non-privately, we find that they also better maintain their accuracy when privacy is introduced.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Da Yu",
+      "Saurabh Naik",
+      "Arturs Backurs",
+      "Sivakanth Gopi",
+      "Huseyin A. Inan",
+      "Gautam Kamath",
+      "Janardhan Kulkarni",
+      "Yin Tat Lee",
+      "Andre Manoel",
+      "Lukas Wutschitz",
+      "Sergey Yekhanin",
+      "Huishuai Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.06500v2",
+    "url": "http://arxiv.org/abs/2110.06500v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.01991v1",
+    "title": "FinAI-BERT: A Transformer-Based Model for Sentence-Level Detection of AI Disclosures in Financial Reports",
+    "abstract": "The proliferation of artificial intelligence (AI) in financial services has prompted growing demand for tools that can systematically detect AI-related disclosures in corporate filings. While prior approaches often rely on keyword expansion or document-level classification, they fall short in granularity, interpretability, and robustness. This study introduces FinAI-BERT, a domain-adapted transformer-based language model designed to classify AI-related content at the sentence level within financial texts. The model was fine-tuned on a manually curated and balanced dataset of 1,586 sentences drawn from 669 annual reports of U.S. banks (2015 to 2023). FinAI-BERT achieved near-perfect classification performance (accuracy of 99.37 percent, F1 score of 0.993), outperforming traditional baselines such as Logistic Regression, Naive Bayes, Random Forest, and XGBoost. Interpretability was ensured through SHAP-based token attribution, while bias analysis and robustness checks confirmed the model's stability across sentence lengths, adversarial inputs, and temporal samples. Theoretically, the study advances financial NLP by operationalizing fine-grained, theme-specific classification using transformer architectures. Practically, it offers a scalable, transparent solution for analysts, regulators, and scholars seeking to monitor the diffusion and framing of AI across financial institutions.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Muhammad Bilal Zafar"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.01991v1",
+    "url": "http://arxiv.org/abs/2507.01991v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2102.03983v1",
+    "title": "Partial Is Better Than All: Revisiting Fine-tuning Strategy for Few-shot Learning",
+    "abstract": "The goal of few-shot learning is to learn a classifier that can recognize unseen classes from limited support data with labels. A common practice for this task is to train a model on the base set first and then transfer to novel classes through fine-tuning (Here fine-tuning procedure is defined as transferring knowledge from base to novel data, i.e. learning to transfer in few-shot scenario.) or meta-learning. However, as the base classes have no overlap to the novel set, simply transferring whole knowledge from base data is not an optimal solution since some knowledge in the base model may be biased or even harmful to the novel class. In this paper, we propose to transfer partial knowledge by freezing or fine-tuning particular layer(s) in the base model. Specifically, layers will be imposed different learning rates if they are chosen to be fine-tuned, to control the extent of preserved transferability. To determine which layers to be recast and what values of learning rates for them, we introduce an evolutionary search based method that is efficient to simultaneously locate the target layers and determine their individual learning rates. We conduct extensive experiments on CUB and mini-ImageNet to demonstrate the effectiveness of our proposed method. It achieves the state-of-the-art performance on both meta-learning and non-meta based frameworks. Furthermore, we extend our method to the conventional pre-training + fine-tuning paradigm and obtain consistent improvement.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Zhiqiang Shen",
+      "Zechun Liu",
+      "Jie Qin",
+      "Marios Savvides",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2102.03983v1",
+    "url": "http://arxiv.org/abs/2102.03983v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.07888v2",
+    "title": "Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering",
+    "abstract": "Fine-tuning Large Language Models (LLMs) incurs considerable training costs, driving the need for data-efficient training with optimised data ordering. Human-inspired strategies offer a solution by organising data based on human learning practices. This study evaluates the fine-tuning efficiency of five human-inspired strategies across four language models, three datasets, and both human- and LLM-labelled data in the context of medical question answering. These strategies achieve the best accuracy gain of 1.81% and an average gain of 1.02% across datasets, with interleaved strategies delivering the best average results. However, the best strategy varies across model-dataset combinations, limiting the generalisability of the effects of any single strategy. Additionally, LLM-defined question difficulty outperforms human-defined labels in curriculum-based learning, showing the potential of model-generated data as a cost-effective alternative for optimising fine-tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yushi Yang",
+      "Andrew M. Bean",
+      "Robert McCraith",
+      "Adam Mahdi"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.07888v2",
+    "url": "http://arxiv.org/abs/2408.07888v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.05457v1",
+    "title": "Legged Robots that Keep on Learning: Fine-Tuning Locomotion Policies in the Real World",
+    "abstract": "Legged robots are physically capable of traversing a wide range of challenging environments, but designing controllers that are sufficiently robust to handle this diversity has been a long-standing challenge in robotics. Reinforcement learning presents an appealing approach for automating the controller design process and has been able to produce remarkably robust controllers when trained in a suitable range of environments. However, it is difficult to predict all likely conditions the robot will encounter during deployment and enumerate them at training-time. What if instead of training controllers that are robust enough to handle any eventuality, we enable the robot to continually learn in any setting it finds itself in? This kind of real-world reinforcement learning poses a number of challenges, including efficiency, safety, and autonomy. To address these challenges, we propose a practical robot reinforcement learning system for fine-tuning locomotion policies in the real world. We demonstrate that a modest amount of real-world training can substantially improve performance during deployment, and this enables a real A1 quadrupedal robot to autonomously fine-tune multiple locomotion skills in a range of environments, including an outdoor lawn and a variety of indoor terrains.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Laura Smith",
+      "J. Chase Kew",
+      "Xue Bin Peng",
+      "Sehoon Ha",
+      "Jie Tan",
+      "Sergey Levine"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.05457v1",
+    "url": "http://arxiv.org/abs/2110.05457v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1911.03918v2",
+    "title": "Improving BERT Fine-tuning with Embedding Normalization",
+    "abstract": "Large pre-trained sentence encoders like BERT start a new chapter in natural language processing. A common practice to apply pre-trained BERT to sequence classification tasks (e.g., classification of sentences or sentence pairs) is by feeding the embedding of [CLS] token (in the last layer) to a task-specific classification layer, and then fine tune the model parameters of BERT and classifier jointly. In this paper, we conduct systematic analysis over several sequence classification datasets to examine the embedding values of [CLS] token before the fine tuning phase, and present the biased embedding distribution issue---i.e., embedding values of [CLS] concentrate on a few dimensions and are non-zero centered. Such biased embedding brings challenge to the optimization process during fine-tuning as gradients of [CLS] embedding may explode and result in degraded model performance. We further propose several simple yet effective normalization methods to modify the [CLS] embedding during the fine-tuning. Compared with the previous practice, neural classification model with the normalized embedding shows improvements on several text classification tasks, demonstrates the effectiveness of our method.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Wenxuan Zhou",
+      "Junyi Du",
+      "Xiang Ren"
+    ],
+    "doi": null,
+    "arxiv_id": "1911.03918v2",
+    "url": "http://arxiv.org/abs/1911.03918v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.10059v1",
+    "title": "Is The Universal Matter - Antimatter Asymmetry Fine Tuned?",
+    "abstract": "The asymmetry between matter and antimatter is key to the existence and nature of our Universe. A measure of the matter - antimatter asymmetry of the Universe is provided by the present value of the universal ratio of baryons (baryons minus antibaryons) to photons (or the ratio of baryons to entropy). The baryon asymmetry parameter is an important physical and cosmological parameter. But how fine tuned is it? A \"natural\" value for this parameter is zero, corresponding to equal amounts of matter and antimatter. Another, also possibly natural, choice for this dimensionless parameter would be of order unity, corresponding to nearly equal amounts (by number) of matter (and essentially no antimatter) and photons in every comoving volume. However, observations suggest that in the Universe we inhabit the value of this parameter is nonzero, but smaller than this natural value by some nine to ten orders of magnitude. In this contribution we review the evidence that our Universe does not contain equal amounts of matter and antimatter. Any change in the magnitude of the baryon asymmetry parameter necessarily leads to a universe with physical characteristics different from those in our own. The degree of fine tuning in the baryon asymmetry parameter is determined by the width of the range over which it can be varied and still allow for the existence of life. Our results suggest that the baryon asymmetry parameter can be varied over a very wide range without impacting the prospects for life; this result is not suggestive of fine tuning. [abridged]",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Gary Steigman",
+      "Robert J. Scherrer"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.10059v1",
+    "url": "http://arxiv.org/abs/1801.10059v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.12607v1",
+    "title": "Learning to Perform Complex Tasks through Compositional Fine-Tuning of Language Models",
+    "abstract": "How to usefully encode compositional task structure has long been a core challenge in AI. Recent work in chain of thought prompting has shown that for very large neural language models (LMs), explicitly demonstrating the inferential steps involved in a target task may improve performance over end-to-end learning that focuses on the target task alone. However, chain of thought prompting has significant limitations due to its dependency on huge pretrained LMs. In this work, we present compositional fine-tuning (CFT): an approach based on explicitly decomposing a target task into component tasks, and then fine-tuning smaller LMs on a curriculum of such component tasks. We apply CFT to recommendation tasks in two domains, world travel and local dining, as well as a previously studied inferential task (sports understanding). We show that CFT outperforms end-to-end learning even with equal amounts of data, and gets consistently better as more component tasks are modeled via fine-tuning. Compared with chain of thought prompting, CFT performs at least as well using LMs only 7.4% of the size, and is moreover applicable to task domains for which data are not available during pretraining.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Victor S. Bursztyn",
+      "David Demeter",
+      "Doug Downey",
+      "Larry Birnbaum"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.12607v1",
+    "url": "http://arxiv.org/abs/2210.12607v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.10097v1",
+    "title": "LegalPro-BERT: Classification of Legal Provisions by fine-tuning BERT Large Language Model",
+    "abstract": "A contract is a type of legal document commonly used in organizations. Contract review is an integral and repetitive process to avoid business risk and liability. Contract analysis requires the identification and classification of key provisions and paragraphs within an agreement. Identification and validation of contract clauses can be a time-consuming and challenging task demanding the services of trained and expensive lawyers, paralegals or other legal assistants. Classification of legal provisions in contracts using artificial intelligence and natural language processing is complex due to the requirement of domain-specialized legal language for model training and the scarcity of sufficient labeled data in the legal domain. Using general-purpose models is not effective in this context due to the use of specialized legal vocabulary in contracts which may not be recognized by a general model. To address this problem, we propose the use of a pre-trained large language model which is subsequently calibrated on legal taxonomy. We propose LegalPro-BERT, a BERT transformer architecture model that we fine-tune to efficiently handle classification task for legal provisions. We conducted experiments to measure and compare metrics with current benchmark results. We found that LegalPro-BERT outperforms the previous benchmark used for comparison in this research.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Amit Tewari"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.10097v1",
+    "url": "http://arxiv.org/abs/2404.10097v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.11764v2",
+    "title": "Sensi-BERT: Towards Sensitivity Driven Fine-Tuning for Parameter-Efficient BERT",
+    "abstract": "Large pre-trained language models have recently gained significant traction due to their improved performance on various down-stream tasks like text classification and question answering, requiring only few epochs of fine-tuning. However, their large model sizes often prohibit their applications on resource-constrained edge devices. Existing solutions of yielding parameter-efficient BERT models largely rely on compute-exhaustive training and fine-tuning. Moreover, they often rely on additional compute heavy models to mitigate the performance gap. In this paper, we present Sensi-BERT, a sensitivity driven efficient fine-tuning of BERT models that can take an off-the-shelf pre-trained BERT model and yield highly parameter-efficient models for downstream tasks. In particular, we perform sensitivity analysis to rank each individual parameter tensor, that then is used to trim them accordingly during fine-tuning for a given parameter or FLOPs budget. Our experiments show the efficacy of Sensi-BERT across different downstream tasks including MNLI, QQP, QNLI, SST-2 and SQuAD, showing better performance at similar or smaller parameter budget compared to various alternatives.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Souvik Kundu",
+      "Sharath Nittur Sridhar",
+      "Maciej Szankin",
+      "Sairam Sundaresan"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.11764v2",
+    "url": "http://arxiv.org/abs/2307.11764v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.06370v1",
+    "title": "Cost-Aware Model Selection for Text Classification: Multi-Objective Trade-offs Between Fine-Tuned Encoders and LLM Prompting in Production",
+    "abstract": "Large language models (LLMs) such as GPT-4o and Claude Sonnet 4.5 have demonstrated strong capabilities in open-ended reasoning and generative language tasks, leading to their widespread adoption across a broad range of NLP applications. However, for structured text classification problems with fixed label spaces, model selection is often driven by predictive performance alone, overlooking operational constraints encountered in production systems. In this work, we present a systematic comparison of two contrasting paradigms for text classification: zero- and few-shot prompt-based large language models, and fully fine-tuned encoder-only architectures. We evaluate these approaches across four canonical benchmarks (IMDB, SST-2, AG News, and DBPedia), measuring predictive quality (macro F1), inference latency, and monetary cost. We frame model evaluation as a multi-objective decision problem and analyze trade-offs using Pareto frontier projections and a parameterized utility function reflecting different deployment regimes. Our results show that fine-tuned encoder-based models from the BERT family achieve competitive, and often superior, classification performance while operating at one to two orders of magnitude lower cost and latency compared to zero- and few-shot LLM prompting. Overall, our findings suggest that indiscriminate use of large language models for standard text classification workloads can lead to suboptimal system-level outcomes. Instead, fine-tuned encoders emerge as robust and efficient components for structured NLP pipelines, while LLMs are better positioned as complementary elements within hybrid architectures. We release all code, datasets, and evaluation protocols to support reproducibility and cost-aware NLP system design.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Alberto Andres Valdes Gonzalez"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.06370v1",
+    "url": "http://arxiv.org/abs/2602.06370v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.12406v2",
+    "title": "LightTune: Lightweight Forward-Only Online Fine-Tuning with Applications to Link Adaptation",
+    "abstract": "Deploying machine learning (ML) algorithms on mobile phones is bottlenecked by performance degradation under dynamic, real-world conditions that differ from the offline training conditions. While continual learning and adaptation are essential to mitigate this distributional shift, conventional online learning methods are often computationally prohibitive for resource-constrained devices. In this paper, we propose LightTune, a lightweight, backpropagation-free online fine-tuning framework with provable convergence guarantees. LightTune opportunistically refines ML models using live test-time data only when performance falls below a predefined threshold, ensuring minimal computational overhead and highly efficient responsiveness. As a practical demonstration, we integrate LightTune into a block error rate (BLER) prediction algorithm for 6G mobile systems. This integration enables the ML BLER prediction model to dynamically adapt to previously unseen channel conditions in real-time. Our extensive results show a substantial reduction in the average BLER prediction error of up to 48.8% with online fine-tuning. Furthermore, we leverage this BLER prediction algorithm for link adaptation and demonstrate average throughput improvements of up to 15.5% compared to a conventional table-based outer loop link adaptation (OLLA) algorithm.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ramy E. Ali",
+      "Federico Penna"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.12406v2",
+    "url": "http://arxiv.org/abs/2604.12406v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.03099v2",
+    "title": "Topic Modeling with Fine-tuning LLMs and Bag of Sentences",
+    "abstract": "Large language models (LLMs) are increasingly used for topic modeling, outperforming classical topic models such as LDA. Commonly, pre-trained LLM encoders such as BERT are used out-of-the-box despite the fact that fine-tuning is known to improve LLMs considerably. The challenge lies in obtaining a suitable labeled dataset for fine-tuning. In this paper, we build on the recent idea of using bags of sentences as the elementary unit for computing topics. Based on this idea, we derive an approach called FT-Topic to perform unsupervised fine-tuning, relying primarily on two steps for constructing a training dataset in an automatic fashion. First, a heuristic method identifies pairs of sentence groups that are assumed to belong either to the same topic or to different topics. Second, we remove sentence pairs that are likely labeled incorrectly. The resulting dataset is then used to fine-tune an encoder LLM, which can be leveraged by any topic modeling approach that uses embeddings. In this work, we demonstrate its effectiveness by deriving a novel state-of-the-art topic modeling method called SenClu. The method achieves fast inference through an expectation-maximization algorithm and hard assignments of sentence groups to a single topic, while allowing users to encode prior knowledge about the topic-document distribution. Code is available at https://github.com/JohnTailor/FT-Topic",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Johannes Schneider"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.03099v2",
+    "url": "http://arxiv.org/abs/2408.03099v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.10345v1",
+    "title": "Improving BERT Fine-Tuning via Self-Ensemble and Self-Distillation",
+    "abstract": "Fine-tuning pre-trained language models like BERT has become an effective way in NLP and yields state-of-the-art results on many downstream tasks. Recent studies on adapting BERT to new tasks mainly focus on modifying the model structure, re-designing the pre-train tasks, and leveraging external data and knowledge. The fine-tuning strategy itself has yet to be fully explored. In this paper, we improve the fine-tuning of BERT with two effective mechanisms: self-ensemble and self-distillation. The experiments on text classification and natural language inference tasks show our proposed methods can significantly improve the adaption of BERT without any external data or knowledge.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Yige Xu",
+      "Xipeng Qiu",
+      "Ligao Zhou",
+      "Xuanjing Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.10345v1",
+    "url": "http://arxiv.org/abs/2002.10345v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.02054v3",
+    "title": "Emoji Prediction in Tweets using BERT",
+    "abstract": "In recent years, the use of emojis in social media has increased dramatically, making them an important element in understanding online communication. However, predicting the meaning of emojis in a given text is a challenging task due to their ambiguous nature. In this study, we propose a transformer-based approach for emoji prediction using BERT, a widely-used pre-trained language model. We fine-tuned BERT on a large corpus of text (tweets) containing both text and emojis to predict the most appropriate emoji for a given text. Our experimental results demonstrate that our approach outperforms several state-of-the-art models in predicting emojis with an accuracy of over 75 percent. This work has potential applications in natural language processing, sentiment analysis, and social media marketing.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Muhammad Osama Nusrat",
+      "Zeeshan Habib",
+      "Mehreen Alam",
+      "Saad Ahmed Jamal"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.02054v3",
+    "url": "http://arxiv.org/abs/2307.02054v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.03749v3",
+    "title": "Memorization of Named Entities in Fine-tuned BERT Models",
+    "abstract": "Privacy preserving deep learning is an emerging field in machine learning that aims to mitigate the privacy risks in the use of deep neural networks. One such risk is training data extraction from language models that have been trained on datasets, which contain personal and privacy sensitive information. In our study, we investigate the extent of named entity memorization in fine-tuned BERT models. We use single-label text classification as representative downstream task and employ three different fine-tuning setups in our experiments, including one with Differential Privacy (DP). We create a large number of text samples from the fine-tuned BERT models utilizing a custom sequential sampling strategy with two prompting strategies. We search in these samples for named entities and check if they are also present in the fine-tuning datasets. We experiment with two benchmark datasets in the domains of emails and blogs. We show that the application of DP has a detrimental effect on the text generation capabilities of BERT. Furthermore, we show that a fine-tuned BERT does not generate more named entities specific to the fine-tuning dataset than a BERT model that is pre-trained only. This suggests that BERT is unlikely to emit personal or privacy sensitive named entities. Overall, our results are important to understand to what extent BERT-based services are prone to training data extraction attacks.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Andor Diera",
+      "Nicolas Lell",
+      "Aygul Garifullina",
+      "Ansgar Scherp"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.03749v3",
+    "url": "http://arxiv.org/abs/2212.03749v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.10190v2",
+    "title": "Never Stop Learning: The Effectiveness of Fine-Tuning in Robotic Reinforcement Learning",
+    "abstract": "One of the great promises of robot learning systems is that they will be able to learn from their mistakes and continuously adapt to ever-changing environments. Despite this potential, most of the robot learning systems today are deployed as a fixed policy and they are not being adapted after their deployment. Can we efficiently adapt previously learned behaviors to new environments, objects and percepts in the real world? In this paper, we present a method and empirical evidence towards a robot learning framework that facilitates continuous adaption. In particular, we demonstrate how to adapt vision-based robotic manipulation policies to new variations by fine-tuning via off-policy reinforcement learning, including changes in background, object shape and appearance, lighting conditions, and robot morphology. Further, this adaptation uses less than 0.2% of the data necessary to learn the task from scratch. We find that our approach of adapting pre-trained policies leads to substantial performance gains over the course of fine-tuning, and that pre-training via RL is essential: training from scratch or adapting from supervised ImageNet features are both unsuccessful with such small amounts of data. We also find that these positive results hold in a limited continual learning setting, in which we repeatedly fine-tune a single lineage of policies using data from a succession of new tasks. Our empirical conclusions are consistently supported by experiments on simulated manipulation tasks, and by 52 unique fine-tuning experiments on a real robotic grasping system pre-trained on 580,000 grasps.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ryan Julian",
+      "Benjamin Swanson",
+      "Gaurav S. Sukhatme",
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Karol Hausman"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.10190v2",
+    "url": "http://arxiv.org/abs/2004.10190v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.27364v1",
+    "title": "Fine-Tuning Open Video Generators for Cinematic Scene Synthesis: A Small-Data Pipeline with LoRA and Wan2.1 I2V",
+    "abstract": "We present a practical pipeline for fine-tuning open-source video diffusion transformers to synthesize cinematic scenes for television and film production from small datasets. The proposed two-stage process decouples visual style learning from motion generation. In the first stage, Low-Rank Adaptation (LoRA) modules are integrated into the cross-attention layers of the Wan2.1 I2V-14B model to adapt its visual representations using a compact dataset of short clips from Ay Yapim's historical television film El Turco. This enables efficient domain transfer within hours on a single GPU. In the second stage, the fine-tuned model produces stylistically consistent keyframes that preserve costume, lighting, and color grading, which are then temporally expanded into coherent 720p sequences through the model's video decoder. We further apply lightweight parallelization and sequence partitioning strategies to accelerate inference without quality degradation. Quantitative and qualitative evaluations using FVD, CLIP-SIM, and LPIPS metrics, supported by a small expert user study, demonstrate measurable improvements in cinematic fidelity and temporal stability over the base model. The complete training and inference pipeline is released to support reproducibility and adaptation across cinematic domains.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Meftun Akarsu",
+      "Kerem Catay",
+      "Sedat Bin Vedat",
+      "Enes Kutay Yarkan",
+      "Ilke Senturk",
+      "Arda Sar",
+      "Dafne Eksioglu"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.27364v1",
+    "url": "http://arxiv.org/abs/2510.27364v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.08021v2",
+    "title": "Stage-wise Fine-tuning for Graph-to-Text Generation",
+    "abstract": "Graph-to-text generation has benefited from pre-trained language models (PLMs) in achieving better performance than structured graph encoders. However, they fail to fully utilize the structure information of the input graph. In this paper, we aim to further improve the performance of the pre-trained language model by proposing a structured graph-to-text model with a two-step fine-tuning mechanism which first fine-tunes the model on Wikipedia before adapting to the graph-to-text generation. In addition to using the traditional token and position embeddings to encode the knowledge graph (KG), we propose a novel tree-level embedding method to capture the inter-dependency structures of the input graph. This new approach has significantly improved the performance of all text generation metrics for the English WebNLG 2017 dataset.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Qingyun Wang",
+      "Semih Yavuz",
+      "Victoria Lin",
+      "Heng Ji",
+      "Nazneen Rajani"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.08021v2",
+    "url": "http://arxiv.org/abs/2105.08021v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.04970v1",
+    "title": "Analysis Acoustic Features for Acoustic Scene Classification and Score fusion of multi-classification systems applied to DCASE 2016 challenge",
+    "abstract": "This paper describes an acoustic scene classification method which achieved the 4th ranking result in the IEEE AASP challenge of Detection and Classification of Acoustic Scenes and Events 2016. In order to accomplish the ensuing task, several methods are explored in three aspects: feature extraction, feature transformation, and score fusion for final decision. In the part of feature extraction, several features are investigated for effective acoustic scene classification. For resolving the issue that the same sound can be heard in different places, a feature transformation is applied for better separation for classification. From these, several systems based on different feature sets are devised for classification. The final result is determined by fusing the individual systems. The method is demonstrated and validated by the experiment conducted using the Challenge database.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Sangwook Park",
+      "Seongkyu Mun",
+      "Younglo Lee",
+      "David K. Han",
+      "Hanseok Ko"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.04970v1",
+    "url": "http://arxiv.org/abs/1807.04970v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.10426v1",
+    "title": "Fine-Tuning BERT for Sentiment Analysis of Vietnamese Reviews",
+    "abstract": "Sentiment analysis is an important task in the field ofNature Language Processing (NLP), in which users' feedbackdata on a specific issue are evaluated and analyzed. Manydeep learning models have been proposed to tackle this task, including the recently-introduced Bidirectional Encoder Rep-resentations from Transformers (BERT) model. In this paper,we experiment with two BERT fine-tuning methods for thesentiment analysis task on datasets of Vietnamese reviews: 1) a method that uses only the [CLS] token as the input for anattached feed-forward neural network, and 2) another methodin which all BERT output vectors are used as the input forclassification. Experimental results on two datasets show thatmodels using BERT slightly outperform other models usingGloVe and FastText. Also, regarding the datasets employed inthis study, our proposed BERT fine-tuning method produces amodel with better performance than the original BERT fine-tuning method.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Quoc Thai Nguyen",
+      "Thoai Linh Nguyen",
+      "Ngoc Hoang Luong",
+      "Quoc Hung Ngo"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.10426v1",
+    "url": "http://arxiv.org/abs/2011.10426v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1212.2655v2",
+    "title": "Radiative natural supersymmetry: Reconciling electroweak fine-tuning and the Higgs boson mass",
+    "abstract": "Models of natural supersymmetry seek to solve the little hierarchy problem by positing a spectrum of light higgsinos <~ 200-300 GeV and light top squarks <~ 600 GeV along with very heavy squarks and TeV-scale gluinos. Such models have low electroweak fine-tuning and satisfy the LHC constraints. However, in the context of the MSSM, they predict too low a value of m(h), are frequently in conflict with the measured b\\to sγbranching fraction and the relic density of thermally produced higgsino-like WIMPs falls well below dark matter (DM) measurements. We propose \"radiative natural SUSY\" (RNS) which can be realized within the MSSM (avoiding the addition of extra exotic matter) and which maintains features such as gauge coupling unification and radiative electroweak symmetry breaking. The RNS model can be generated from SUSY GUT type models with non-universal Higgs masses (NUHM). Allowing for high scale soft SUSY breaking Higgs mass m_{H_u}> m_0 leads to automatic cancellations during renormalization group (RG) running, and to radiatively-induced low fine-tuning at the electroweak scale. Coupled with large mixing in the top squark sector, RNS allows for fine-tuning at the 3-10% level with TeV-scale top squarks and a 125 GeV light Higgs scalar h. The model allows for at least a partial solution to the SUSY flavor, CP and gravitino problems since first/second generation scalars (and the gravitino) may exist in the 10-30 TeV regime. We outline some possible signatures for RNS at the LHC and at a linear e^+e^- collider. If the strong CP problem is solved by the Peccei-Quinn mechanism, then RNS naturally accommodates mixed axion-higgsino cold dark matter, where the light higgsino-like WIMPS - which in this case make up only a fraction of the measured relic abundance - should be detectable at upcoming WIMP detectors.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Howard Baer",
+      "Vernon Barger",
+      "Peisi Huang",
+      "Dan Mickelson",
+      "Azar Mustafayev",
+      "Xerxes Tata"
+    ],
+    "doi": null,
+    "arxiv_id": "1212.2655v2",
+    "url": "http://arxiv.org/abs/1212.2655v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.11163v1",
+    "title": "Same Side Stance Classification Task: Facilitating Argument Stance Classification by Fine-tuning a BERT Model",
+    "abstract": "Research on computational argumentation is currently being intensively investigated. The goal of this community is to find the best pro and con arguments for a user given topic either to form an opinion for oneself, or to persuade others to adopt a certain standpoint. While existing argument mining methods can find appropriate arguments for a topic, a correct classification into pro and con is not yet reliable. The same side stance classification task provides a dataset of argument pairs classified by whether or not both arguments share the same stance and does not need to distinguish between topic-specific pro and con vocabulary but only the argument similarity within a stance needs to be assessed. The results of our contribution to the task are build on a setup based on the BERT architecture. We fine-tuned a pre-trained BERT model for three epochs and used the first 512 tokens of each argument to predict if two arguments share the same stance.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Stefan Ollinger",
+      "Lorik Dumani",
+      "Premtim Sahitaj",
+      "Ralph Bergmann",
+      "Ralf Schenkel"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.11163v1",
+    "url": "http://arxiv.org/abs/2004.11163v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2102.00291v1",
+    "title": "Speech Recognition by Simply Fine-tuning BERT",
+    "abstract": "We propose a simple method for automatic speech recognition (ASR) by fine-tuning BERT, which is a language model (LM) trained on large-scale unlabeled text data and can generate rich contextual representations. Our assumption is that given a history context sequence, a powerful LM can narrow the range of possible choices and the speech signal can be used as a simple clue. Hence, comparing to conventional ASR systems that train a powerful acoustic model (AM) from scratch, we believe that speech recognition is possible by simply fine-tuning a BERT model. As an initial study, we demonstrate the effectiveness of the proposed idea on the AISHELL dataset and show that stacking a very simple AM on top of BERT can yield reasonable performance.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Wen-Chin Huang",
+      "Chia-Hua Wu",
+      "Shang-Bao Luo",
+      "Kuan-Yu Chen",
+      "Hsin-Min Wang",
+      "Tomoki Toda"
+    ],
+    "doi": null,
+    "arxiv_id": "2102.00291v1",
+    "url": "http://arxiv.org/abs/2102.00291v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

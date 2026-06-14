@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2309.16119v2",
+  "title": "ModuLoRA: Finetuning 2-Bit LLMs on Consumer GPUs by Integrating with Modular Quantizers",
+  "abstract": "We propose a memory-efficient finetuning algorithm for large language models (LLMs) that supports finetuning LLMs with 65B parameters in 2/3/4-bit precision on as little as one 24GB GPU. Our method, modular low-rank adaptation (ModuLoRA), integrates any user-specified weight quantizer with finetuning via low-rank adapters (LoRAs). Our approach relies on a simple quantization-agnostic backward pass that adaptively materializes low-precision LLM weights from a custom black-box quantization module. This approach enables finetuning 2-bit and 3-bit LLMs for the first time -- leveraging state-of-the-art 2-bit QuIP\\# quantization and 3-bit OPTQ quantization -- outperforming finetuning that relies on less sophisticated 4-bit and 8-bit methods. In our experiments, \\lplora~attains competitive performance on text classification, natural language inference, and instruction following tasks using significantly less memory than existing approaches, and we also surpass the state-of-the-art ROUGE score on a popular summarization task. We release \\lplora~together with a series of low-precision models as part of \\llmtune, a user-friendly library for quantizing, running, and finetuning LLMs on consumer GPUs.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Junjie Yin",
+    "Jiahao Dong",
+    "Yingheng Wang",
+    "Christopher De Sa",
+    "Volodymyr Kuleshov"
+  ],
+  "doi": null,
+  "arxiv_id": "2309.16119v2",
+  "url": "http://arxiv.org/abs/2309.16119v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

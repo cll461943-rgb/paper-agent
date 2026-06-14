@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:41946121",
+  "title": "Beyond block time: a head-to-head comparison of reinforcement learning, genetic algorithms, and predict-then-optimize scheduling for operating room workflow using discrete-event simulation.",
+  "abstract": "Operating room (OR) inefficiency persists despite decades of process improvement, largely due to stochastic case durations, emergency disruptions, and resource coupling across pre-, intra-, and postoperative steps. While artificial intelligence (AI) methods are increasingly proposed for OR scheduling and allocation, most evaluations are single-method, single-site, or non-comparative, limiting actionable adoption decisions. The specific unresolved gap is not whether AI can improve isolated OR subproblems, but whether distinct algorithmic paradigms can be benchmarked head-to-head under identical stochastic conditions, shared-resource constraints, and downstream bottlenecks to support implementation choices. We conducted a simulation-based comparative study using a discrete-event simulation (DES) model representing a general surgery OR suite with elective and emergency arrivals, shared anesthesia and nursing resources, turnover processes, and downstream constraints. The model was implemented in Python 3.10 using SimPy and compared four strategies: a fully specified rule-based baseline, predict-then-optimize (PTO), genetic algorithm (GA), and reinforcement learning (RL). Across 500 replications with common random numbers, strategies were compared using repeated-measures inference with multiplicity control. Calibration targeted operational plausibility rather than institution-specific emulation: input distributions were anchored to general-surgery workflow patterns and literature-consistent throughput assumptions, and the scope of inference was therefore bounded to comparative performance within a stylized but resource-coupled OR environment. Compared with baseline, all AI strategies reduced delays and overtime and improved utilization. RL achieved the greatest gains, reducing total delay from 182.4 ± 45.1 to 104.2 ± 31.0 min (42.9% relative reduction), overtime from 76.3 ± 28.4 to 41.2 ± 18.1 min (46.0%), increasing utilization from 73.2 ± 4.1% to 80.1 ± 3.4% (+6.9 percentage points), and decreasing same-day cancellations from 0.42 ± 0.19 to 0.19 ± 0.12 (54.8%) (all overall p < 0.001). RL also showed the narrowest delay dispersion (IQR 22.5 min versus 48.2 min for baseline and 35.6 min for PTO). In a controlled DES environment, AI-based scheduling meaningfully improved OR workflow metrics versus conventional rules, with RL offering the most robust performance. However, RL's advantage should be interpreted as conditional on the modeled reward structure, resequencing latitude, and disruption profile; accordingly, the present findings are best viewed as decision-support evidence for staged local validation rather than as proof of universal real-world superiority.",
+  "year": 2026,
+  "venue": "International journal of medical informatics",
+  "authors": [
+    "Yahya Kemal Çalışkan",
+    "Fatih Başak",
+    "Olgun Erdem",
+    "İlyas Kudaş"
+  ],
+  "doi": "10.1016/j.ijmedinf.2026.106426",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41946121/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41946121"
+  }
+}

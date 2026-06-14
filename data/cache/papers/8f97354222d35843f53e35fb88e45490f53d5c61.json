@@ -1,0 +1,38 @@
+{
+  "paper_id": "pubmed:42259903",
+  "title": "From raw audio to structure: an agent-based pipeline that boosts medical LLM performance.",
+  "abstract": "Large language models (LLMs) are increasingly applied in clinical communication, yet their reliability depends on high-quality conversational corpora. Real-world doctor-patient recordings are frequently degraded by noise, transcription errors, speaker overlap, and fragmented dialogue structure, limiting their usability for downstream model training. Here, we present an agent-based transcription framework that autonomously converts raw unstructured conversation transcriptions (RUCT) into structured conversation transcriptions (SCT) suitable for LLM fine-tuning. The system integrates three coordinated modules-Planner, Memory, and Executor-to orchestrate noise removal, content correction, speaker identification, and dialogue segmentation within a self-correcting workflow. Applied to 7197 minutes of Chinese clinical recordings across eight departments, with an additional 240 minutes of English-language dialogues used as a limited portability check, the agent achieved high reconstruction accuracy (94.7% denoising, 96.9% content correction, 88.6% speaker identification, 92.7% segmentation) and operated 3.6× faster than manual processing. In controlled comparisons against a cascaded deep-learning pipeline, a sequential non-agent execution, and an end-to-end large-context model, the agent achieved consistently higher performance across all four processing tasks. Architectural ablation further revealed marked degradation when Planner or Memory modules were removed (e.g., up to 47.6% reduction in speaker identification), supporting the contribution of coordinated task decomposition and cross-step state retention. To assess downstream impact, we fine-tuned an independent open-weight model (Qwen3-32B) on agent-generated SCT versus RUCT derived from an identical training set. Agent-generated SCT fine-tuning significantly improved overall quality scores (3.1 to 3.7; P < 0.001; Fleiss' κ = 0.82) in blinded expert evaluation across six clinically grounded dimensions, and also yielded higher scores on an external medical dialogue benchmark (HealthBench) than both RUCT fine-tuning and the non-fine-tuned baseline. These findings indicate that agent-structured clinical corpora enhance LLM fine-tuning performance and provide a scalable framework for reliable medical conversational AI development.",
+  "year": 2026,
+  "venue": "NPJ digital medicine",
+  "authors": [
+    "Hao Qin",
+    "Wenjun Tang",
+    "Zigeng Huang",
+    "Guihan Liang",
+    "Xinti Sun",
+    "Mengyan Zhang",
+    "Wenqian Wu",
+    "Erping Long",
+    "Peixing Wan"
+  ],
+  "doi": "10.1038/s41746-026-02867-0",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42259903/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym",
+    "route:entity_dataset",
+    "route:title_like",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42259903"
+  }
+}

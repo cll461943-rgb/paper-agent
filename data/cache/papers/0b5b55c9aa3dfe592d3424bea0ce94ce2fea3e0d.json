@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2409.01035v5",
+  "title": "Task-Specific Directions: Definition, Exploration, and Utilization in Parameter Efficient Fine-Tuning",
+  "abstract": "Large language models demonstrate impressive performance on downstream tasks, yet they require extensive resource consumption when fully fine-tuning all parameters. To mitigate this, Parameter Efficient Fine-Tuning (PEFT) strategies, such as LoRA, have been developed. In this paper, we delve into the concept of task-specific directions (TSDs), which are critical for transitioning large models from pretrained states to task-specific enhancements in PEFT. We propose a framework to clearly define these directions and explore their properties and practical utilization challenges. We then introduce a novel approach, LoRA-Dash, which aims to maximize the impact of TSDs during the fine-tuning process, thereby enhancing model performance on targeted tasks. Additionally, based on our exploration of TSD, we focus on an important issue in PEFT: the initialization of LoRA. While some works have pointed out the significance of initialization for LoRA's performance and proposed various strategies, these methods are often empirical and not task-specific. To address this issue, we propose LoRA-Init. Starting from TSD, we identify the directions that require the most adjustment during fine-tuning for downstream tasks. By initializing the matrices in LoRA with these directions, LoRA-Init significantly enhances LoRA's performance. Moreover, we can combine LoRA-Dash and LoRA-Init to create the final version of LoRA based on TSDs, which we refer to as LoRA-TSD. Extensive experiments have conclusively demonstrated the effectiveness of these methods, and in-depth analyses further reveal the underlying mechanisms behind their success.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Chongjie Si",
+    "Zhiyi Shi",
+    "Shifan Zhang",
+    "Xiaokang Yang",
+    "Hanspeter Pfister",
+    "Wei Shen"
+  ],
+  "doi": null,
+  "arxiv_id": "2409.01035v5",
+  "url": "http://arxiv.org/abs/2409.01035v5",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

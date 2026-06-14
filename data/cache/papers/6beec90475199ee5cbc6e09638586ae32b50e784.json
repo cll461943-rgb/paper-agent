@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W4402672004",
+  "title": "Improving Text Embeddings with Large Language Models",
+  "abstract": "In this paper, we introduce a novel and simple method for obtaining high-quality text embeddings using only synthetic data and less than 1k training steps.Unlike existing methods that often depend on multi-stage intermediate pretraining with billions of weakly-supervised text pairs, followed by fine-tuning with a few labeled datasets, our method does not require building complex training pipelines or relying on manually collected datasets that are often constrained by task diversity and language coverage.We leverage proprietary LLMs to generate diverse synthetic data for hundreds of thousands of text embedding tasks across 93 languages.We then fine-tune open-source decoder-only LLMs on the synthetic data using standard contrastive loss.Experiments demonstrate that our method achieves strong performance on highly competitive text embedding benchmarks without using any labeled data.Furthermore, when fine-tuned with a mixture of synthetic and labeled data, our model sets new state-of-the-art results on the BEIR and MTEB benchmarks.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Liang Wang",
+    "Nan Yang",
+    "Xiaolong Huang",
+    "Linjun Yang",
+    "Rangan Majumder",
+    "Furu Wei"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.acl-long.642",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.acl-long.642",
+  "citation_count": 82,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Natural language processing",
+      "Language model",
+      "Artificial intelligence"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W4396696052",
+      "https://openalex.org/W2382290278",
+      "https://openalex.org/W3204019825"
+    ]
+  }
+}

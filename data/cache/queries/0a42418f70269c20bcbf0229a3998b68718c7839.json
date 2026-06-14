@@ -1,0 +1,845 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2308.13875v1",
+    "title": "Performance of Genetic Algorithms in the Context of Software Model Refactoring",
+    "abstract": "Software systems continuously evolve due to new functionalities, requirements, or maintenance activities. In the context of software evolution, software refactoring has gained a strategic relevance. The space of possible software refactoring is usually very large, as it is given by the combinations of different refactoring actions that can produce software system alternatives. Multi-objective algorithms have shown the ability to discover alternatives by pursuing different objectives simultaneously. Performance of such algorithms in the context of software model refactoring is of paramount importance. Therefore, in this paper, we conduct a performance analysis of three genetic algorithms to compare them in terms of performance and quality of solutions. Our results show that there are significant differences in performance among the algorithms (e.g., PESA2 seems to be the fastest one, while NSGA-II shows the least memory usage).",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Vittorio Cortellessa",
+      "Daniele Di Pompeo",
+      "Michele Tucci"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.13875v1",
+    "url": "http://arxiv.org/abs/2308.13875v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.05265v2",
+    "title": "PrefixQuant: Eliminating Outliers by Prefixed Tokens for Large Language Models Quantization",
+    "abstract": "Existing weight-activation quantization methods for Large Language Models (LLMs) primarily address channel-wise outliers but often neglect token-wise outliers, which limits the accuracy of quantized models. In this work, we propose PrefixQuant, a novel quantization method that achieves state-of-the-art performance across various precision levels (W4A4KV4 and W4A8KV4) and granularities (dynamic and static quantization) by effectively isolating token-wise outliers. First, PrefixQuant eliminates token-wise outliers by prefixing outlier tokens in the KV cache, a process that is training-free and highly efficient (e.g., 1 minutes for Llama-3-70B). Second, PrefixQuant introduces new trainable parameters for block-wise training to compensate for quantization error. Our experiments show that PrefixQuant significantly outperforms existing dynamic quantization methods, even under coarser static quantization settings. For instance, PrefixQuant achieves an average accuracy improvement of +3.08 and +2.85 points over SpinQuant (dynamic quantization) on five zero-shot reasoning tasks under dynamic and static quantization settings, respectively, on W4A4KV4 Llama-3-8B. Additionally, we demonstrate up to 2.74x prefilling speedup and 2.16x decoding speedup for LLMs using W4A4 PrefixQuant. Our code is available at https://github.com/ChenMnZ/PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Yi Liu",
+      "Jiahao Wang",
+      "Yi Bin",
+      "Wenqi Shao",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.05265v2",
+    "url": "http://arxiv.org/abs/2410.05265v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1149v1",
+    "title": "A Performance Study of GA and LSH in Multiprocessor Job Scheduling",
+    "abstract": "Multiprocessor task scheduling is an important and computationally difficult problem. This paper proposes a comparison study of genetic algorithm and list scheduling algorithm. Both algorithms are naturally parallelizable but have heavy data dependencies. Based on experimental results, this paper presents a detailed analysis of the scalability, advantages and disadvantages of each algorithm. Multiprocessors have emerged as a powerful computing means for running real-time applications, especially where a uni-processor system would not be sufficient enough to execute all the tasks. The high performance and reliability of multiprocessors have made them a powerful computing resource. Such computing environment requires an efficient algorithm to determine when and on which processor a given task should execute. In multiprocessor systems, an efficient scheduling of a parallel program onto the processors that minimizes the entire execution time is vital for achieving a high performance. This scheduling problem is known to be NP- Hard. In multiprocessor scheduling problem, a given program is to be scheduled in a given multiprocessor system such that the program's execution time is minimized. The last job must be completed as early as possible. Genetic algorithm (GA) is one of the widely used techniques for constrained optimization.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "S. R. Vijayalakshmi",
+      "G. Padmavathi"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1149v1",
+    "url": "http://arxiv.org/abs/1002.1149v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12246v2",
+    "title": "On the Quantum Performance Evaluation of Two Distributed Quantum Architectures",
+    "abstract": "Distributed quantum applications impose requirements on the quality of the quantum states that they consume. When analyzing architecture implementations of quantum hardware, characterizing this quality forms an important factor in understanding their performance. Fundamental characteristics of quantum hardware lead to inherent tradeoffs between the quality of states and traditional performance metrics such as throughput. Furthermore, any real-world implementation of quantum hardware exhibits time-dependent noise that degrades the quality of quantum states over time. Here, we study the performance of two possible architectures for interfacing a quantum processor with a quantum network. The first corresponds to the current experimental state of the art in which the same device functions both as a processor and a network device. The second corresponds to a future architecture that separates these two functions over two distinct devices. We model these architectures as Markov chains and compare their quality of executing quantum operations and producing entangled quantum states as functions of their memory lifetimes, as well as the time that it takes to perform various operations within each architecture. As an illustrative example, we apply our analysis to architectures based on Nitrogen-Vacancy centers in diamond, where we find that for present-day device parameters one architecture is more suited to computation-heavy applications, and the other for network-heavy ones. Besides the detailed study of these architectures, a novel contribution of our work are several formulas that connect an understanding of waiting time distributions to the decay of quantum quality over time for the most common noise models employed in quantum technologies. This provides a valuable new tool for performance evaluation experts, and its applications extend beyond the two architectures studied in this work.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Gayane Vardoyan",
+      "Matthew Skrzypczyk",
+      "Stephanie Wehner"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12246v2",
+    "url": "http://arxiv.org/abs/2107.12246v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.15508v3",
+    "title": "Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners",
+    "abstract": "The quantization of large language models (LLMs) has been a prominent research area aimed at enabling their lightweight deployment in practice. Existing research about LLM's quantization has mainly explored the interplay between weights and activations, or employing auxiliary components while neglecting the necessity of adjusting weights during quantization. Consequently, original weight distributions frequently fail to yield desired results after round-to-nearest (RTN) quantization. Even though incorporating techniques such as mixed precision and low-rank error approximation in LLM's quantization can yield improved results, they inevitably introduce additional computational overhead. On the other hand, traditional techniques for weight quantization, such as Generative Post-Training Quantization, rely on manually tweaking weight distributions to minimize local errors, but they fall short of achieving globally optimal outcomes. Although the recently proposed Learnable Singular-value Increment improves global weight quantization by modifying weight distributions, it disrupts the original distribution considerably. This introduces pronounced bias toward the training data and can degrade downstream task performance. In this paper, we introduce Singular-value Diagonal Expansion, a more nuanced approach to refining weight distributions to achieve better quantization alignment. Furthermore, we introduce Cross-layer Learning that improves overall quantization outcomes by distributing errors more evenly across layers. Our plug-and-play weight-quantization methods demonstrate substantial performance improvements over state-of-the-art approaches, including OmniQuant, DuQuant, and PrefixQuant.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Jun Cheng",
+      "Mengchu Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.15508v3",
+    "url": "http://arxiv.org/abs/2407.15508v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1154v1",
+    "title": "Performance Analysis of Software to Hardware Task Migration in Codesign",
+    "abstract": "The complexity of multimedia applications in terms of intensity of computation and heterogeneity of treated data led the designers to embark them on multiprocessor systems on chip. The complexity of these systems on one hand and the expectations of the consumers on the other hand complicate the designers job to conceive and supply strong and successful systems in the shortest deadlines. They have to explore the different solutions of the design space and estimate their performances in order to deduce the solution that respects their design constraints. In this context, we propose the modeling of one of the design space possible solutions: the software to hardware task migration. This modeling exploits the synchronous dataflow graphs to take into account the different migration impacts and estimate their performances in terms of throughput.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "Dorsaf Sebai",
+      "Abderrazak Jemai",
+      "Imed Bennour"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1154v1",
+    "url": "http://arxiv.org/abs/1002.1154v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0709.4307v2",
+    "title": "The rapid decline of the prompt emission in Gamma-Ray Bursts",
+    "abstract": "Many gamma ray bursts (GRBs) have been observed with the Burst-Alert and X-Ray telescopes of the Swift satellite. The successive `pulses' of these GRBs end with a fast decline and a fast spectral softening, until they are overtaken by another pulse, or the last pulse's decline is overtaken by a less rapidly-varying `afterglow'. The fast decline-phase has been attributed, in the currently-explored standard fireball model of GRBs, to `high-latitude' synchrotron emission from a collision of two conical shells. This high latitude emission does not explain the observed spectral softening. In contrast, the temporal behaviour and the spectral evolution during the fast-decline phase agree with the predictions of the cannonball model of GRBs.",
+    "year": 2007,
+    "venue": null,
+    "authors": [
+      "Shlomo Dado",
+      "Arnon Dar",
+      "A. De Rujula"
+    ],
+    "doi": null,
+    "arxiv_id": "0709.4307v2",
+    "url": "http://arxiv.org/abs/0709.4307v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.14494v1",
+    "title": "Free-Bloom: Zero-Shot Text-to-Video Generator with LLM Director and LDM Animator",
+    "abstract": "Text-to-video is a rapidly growing research area that aims to generate a semantic, identical, and temporal coherence sequence of frames that accurately align with the input text prompt. This study focuses on zero-shot text-to-video generation considering the data- and cost-efficient. To generate a semantic-coherent video, exhibiting a rich portrayal of temporal semantics such as the whole process of flower blooming rather than a set of \"moving images\", we propose a novel Free-Bloom pipeline that harnesses large language models (LLMs) as the director to generate a semantic-coherence prompt sequence, while pre-trained latent diffusion models (LDMs) as the animator to generate the high fidelity frames. Furthermore, to ensure temporal and identical coherence while maintaining semantic coherence, we propose a series of annotative modifications to adapting LDMs in the reverse process, including joint noise sampling, step-aware attention shift, and dual-path interpolation. Without any video data and training requirements, Free-Bloom generates vivid and high-quality videos, awe-inspiring in generating complex scenes with semantic meaningful frame sequences. In addition, Free-Bloom is naturally compatible with LDMs-based extensions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Hanzhuo Huang",
+      "Yufan Feng",
+      "Cheng Shi",
+      "Lan Xu",
+      "Jingyi Yu",
+      "Sibei Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.14494v1",
+    "url": "http://arxiv.org/abs/2309.14494v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.07409v1",
+    "title": "A Metric for Performance Portability",
+    "abstract": "The term \"performance portability\" has been informally used in computing to refer to a variety of notions which generally include: 1) the ability to run one application across multiple hardware platforms; and 2) achieving some notional level of performance on these platforms. However, there has been a noticeable lack of consensus on the precise meaning of the term, and authors' conclusions regarding their success (or failure) to achieve performance portability have thus been subjective. Comparing one approach to performance portability with another has generally been marked with vague claims and verbose, qualitative explanation of the comparison. This paper presents a concise definition for performance portability, along with a simple metric that accurately captures the performance and portability of an application across different platforms. The utility of this metric is then demonstrated with a retroactive application to previous work.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "S. J. Pennycook",
+      "J. D. Sewall",
+      "V. W. Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.07409v1",
+    "url": "http://arxiv.org/abs/1611.07409v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.16299v1",
+    "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+    "abstract": "Emergent Large Language Models (LLMs) use their extraordinary performance and powerful deduction capacity to discern from traditional language models. However, the expenses of computational resources and storage for these LLMs are stunning, quantization then arises as a trending conversation. To address accuracy decay caused by quantization, two streams of works in post-training quantization methods stand out. One uses other weights to compensate existing quantization error, while the other transfers the quantization difficulty to other parts in the model. Combining both merits, we introduce Learnable Singular value Increment (LSI) as an advanced solution. LSI uses Singular Value Decomposition to extract singular values of the weights and make them learnable to help weights compensate each other conditioned on activation. Incorporating LSI with existing techniques, we achieve state-of-the-art performance in diverse quantization settings, no matter in weight-only, weight-activation or extremely low bit scenarios. By unleashing the potential of LSI, efficient finetuning on quantized model is no longer a prohibitive problem.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yifei Gao",
+      "Jie Ou",
+      "Lei Wang",
+      "Yuting Xiao",
+      "Zhiyuan Xiang",
+      "Ruiting Dai",
+      "Jun Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.16299v1",
+    "url": "http://arxiv.org/abs/2406.16299v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1404.2266v1",
+    "title": "Enhanced Cluster Computing Performance Through Proportional Fairness",
+    "abstract": "The performance of cluster computing depends on how concurrent jobs share multiple data center resource types like CPU, RAM and disk storage. Recent research has discussed efficiency and fairness requirements and identified a number of desirable scheduling objectives including so-called dominant resource fairness (DRF). We argue here that proportional fairness (PF), long recognized as a desirable objective in sharing network bandwidth between ongoing flows, is preferable to DRF. The superiority of PF is manifest under the realistic modelling assumption that the population of jobs in progress is a stochastic process. In random traffic the strategy-proof property of DRF proves unimportant while PF is shown by analysis and simulation to offer a significantly better efficiency-fairness tradeoff.",
+    "year": 2014,
+    "venue": null,
+    "authors": [
+      "Thomas Bonald",
+      "James Roberts"
+    ],
+    "doi": null,
+    "arxiv_id": "1404.2266v1",
+    "url": "http://arxiv.org/abs/1404.2266v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.08047v1",
+    "title": "The Benefits of Affine Quantization",
+    "abstract": "Canonical quantization has served wonderfully for the quantization of a vast number of classical systems. That includes single classical variables, such as $p$ and $q$, and numerous classical Hamiltonians $H(p,q)$, as well as field theories, such as $π(x)$ and $ φ(x)$, and many classical Hamiltonians $H(π,φ)$. However, in all such systems there are situations for which canonical quantization fails. This includes certain particle and field theory problems. Affine quantization involves a simple recombination of classical variables that lead to a new chapter in the process of quantization, and which is able to solve a vast variety of normally insoluble systems, such as quartic interactions in scalar field theory in spacetime dimensions 4 and higher, as well as the quantization of Einstein's gravity in 4 spacetime dimensions.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.08047v1",
+    "url": "http://arxiv.org/abs/1912.08047v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.14552v2",
+    "title": "DEEP-GAP: Deep-learning Evaluation of Execution Parallelism in GPU Architectural Performance",
+    "abstract": "Modern datacenters increasingly rely on low-power, single-slot inference accelerators to balance performance, energy efficiency, and rack density constraints. The NVIDIA T4 GPU has become widely deployed due to strong performance per watt and mature software support. Its successor, the NVIDIA L4 GPU, introduces improvements in Tensor Core throughput, cache capacity, memory bandwidth, and parallel execution capability. However, limited empirical evidence quantifies the practical inference performance gap between these two generations under controlled and reproducible conditions. This work introduces DEEP-GAP, a systematic evaluation extending the GDEV-AI methodology to GPU inference. Using identical configurations and workloads, we evaluate ResNet18, ResNet50, and ResNet101 across FP32, FP16, and INT8 precision modes using PyTorch and TensorRT. Results show that reduced precision significantly improves performance, with INT8 achieving up to 58x throughput improvement over CPU baselines. L4 achieves up to 4.4x higher throughput than T4 while reaching peak efficiency at smaller batch sizes between 16 and 32, improving latency-throughput tradeoffs for latency-sensitive workloads. T4 remains competitive for large batch workloads where cost or power efficiency is important. DEEP-GAP provides practical guidance for selecting precision modes, batch sizes, and GPU architectures for modern inference deployments.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Kathiravan Palaniappan"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.14552v2",
+    "url": "http://arxiv.org/abs/2604.14552v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.14302v1",
+    "title": "Scaling Law for Quantization-Aware Training",
+    "abstract": "Large language models (LLMs) demand substantial computational and memory resources, creating deployment challenges. Quantization-aware training (QAT) addresses these challenges by reducing model precision while maintaining performance. However, the scaling behavior of QAT, especially at 4-bit precision (W4A4), is not well understood. Existing QAT scaling laws often ignore key factors such as the number of training tokens and quantization granularity, which limits their applicability. This paper proposes a unified scaling law for QAT that models quantization error as a function of model size, training data volume, and quantization group size. Through 268 QAT experiments, we show that quantization error decreases as model size increases, but rises with more training tokens and coarser quantization granularity. To identify the sources of W4A4 quantization error, we decompose it into weight and activation components. Both components follow the overall trend of W4A4 quantization error, but with different sensitivities. Specifically, weight quantization error increases more rapidly with more training tokens. Further analysis shows that the activation quantization error in the FC2 layer, caused by outliers, is the primary bottleneck of W4A4 QAT quantization error. By applying mixed-precision quantization to address this bottleneck, we demonstrate that weight and activation quantization errors can converge to similar levels. Additionally, with more training data, weight quantization error eventually exceeds activation quantization error, suggesting that reducing weight quantization error is also important in such scenarios. These findings offer key insights for improving QAT research and development.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mengzhao Chen",
+      "Chaoyi Zhang",
+      "Jing Liu",
+      "Yutao Zeng",
+      "Zeyue Xue",
+      "Zhiheng Liu",
+      "Yunshui Li",
+      "Jin Ma",
+      "Jie Huang",
+      "Xun Zhou",
+      "Ping Luo"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.14302v1",
+    "url": "http://arxiv.org/abs/2505.14302v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2009.07935v3",
+    "title": "Towards an Objective Metric for the Performance of Exact Triangle Count",
+    "abstract": "The performance of graph algorithms is often measured in terms of the number of traversed edges per second (TEPS). However, this performance metric is inadequate for a graph operation such as exact triangle counting. In triangle counting, execution times on graphs with a similar number of edges can be distinctly different as demonstrated by results from the past Graph Challenge entries. We discuss the need for an objective performance metric for graph operations and the desired characteristics of such a metric such that it more accurately captures the interactions between the amount of work performed and the capabilities of the hardware on which the code is executed. Using exact triangle counting as an example, we derive a metric that captures how certain techniques employed in many implementations improve performance. We demonstrate that our proposed metric can be used to evaluate and compare multiple approaches for triangle counting, using a SIMD approach as a case study against a scalar baseline.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Mark P. Blanco",
+      "Scott McMillan",
+      "Tze Meng Low"
+    ],
+    "doi": null,
+    "arxiv_id": "2009.07935v3",
+    "url": "http://arxiv.org/abs/2009.07935v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.12759v1",
+    "title": "decoupleQ: Towards 2-bit Post-Training Uniform Quantization via decoupling Parameters into Integer and Floating Points",
+    "abstract": "Quantization emerges as one of the most promising compression technologies for deploying efficient large models for various real time application in recent years. Considering that the storage and IO of weights take up the vast majority of the overhead inside a large model, weight only quantization can lead to large gains. However, existing quantization schemes suffer from significant accuracy degradation at very low bits, or require some additional computational overhead when deployed, making it difficult to be applied to large-scale applications in industry. In this paper, we propose decoupleQ, achieving a substantial increase in model accuracy, especially at very low bits. decoupleQ abandons the traditional heuristic quantization paradigm and decouples the model parameters into integer and floating-point parts, thus transforming the quantization problem into a traditional mathematical optimization problem with constraints, which is then solved alternatively by off-the-shelf optimization methods. Quantization via decoupleQ is linear and uniform, making it hardware-friendlier than non-uniform counterpart, and enabling the idea to be migrated to high-bit quantization to enhance its robustness. Our method has achieved well on-line accuracy near fp16/bf16 on the 2-bit quantization of large speech models in ByteDance. The code is available at https://github.com/bytedance/decoupleQ",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yi Guo",
+      "Fanliu Kong",
+      "Xiaoyang Li",
+      "Hui Li",
+      "Wei Chen",
+      "Xiaogang Tian",
+      "Jinping Cai",
+      "Yang Zhang",
+      "Shouda Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.12759v1",
+    "url": "http://arxiv.org/abs/2404.12759v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0802.2249v1",
+    "title": "Towards a Real-time Transient Classification Engine",
+    "abstract": "Temporal sampling does more than add another axis to the vector of observables. Instead, under the recognition that how objects change (and move) in time speaks directly to the physics underlying astronomical phenomena, next-generation wide-field synoptic surveys are poised to revolutionize our understanding of just about anything that goes bump in the night (which is just about everything at some level). Still, even the most ambitious surveys will require targeted spectroscopic follow-up to fill in the physical details of newly discovered transients. We are now building a new system intended to ingest and classify transient phenomena in near real-time from high-throughput imaging data streams. Described herein, the Transient Classification Project at Berkeley will be making use of classification techniques operating on ``features'' extracted from time series and contextual (static) information. We also highlight the need for a community adoption of a standard representation of astronomical time series data (i.e., ``VOTimeseries'').",
+    "year": 2008,
+    "venue": null,
+    "authors": [
+      "J. S. Bloom",
+      "D. L. Starr",
+      "N. R. Butler",
+      "P. Nugent",
+      "M. Rischard",
+      "D. Eads",
+      "D. Poznanski"
+    ],
+    "doi": null,
+    "arxiv_id": "0802.2249v1",
+    "url": "http://arxiv.org/abs/0802.2249v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1701.01232v1",
+    "title": "Scalable Multi-Database Privacy-Preserving Record Linkage using Counting Bloom Filters",
+    "abstract": "Privacy-preserving record linkage (PPRL) aims at integrating sensitive information from multiple disparate databases of different organizations. PPRL approaches are increasingly required in real-world application areas such as healthcare, national security, and business. Previous approaches have mostly focused on linking only two databases as well as the use of a dedicated linkage unit. Scaling PPRL to more databases (multi-party PPRL) is an open challenge since privacy threats as well as the computation and communication costs for record linkage increase significantly with the number of databases. We thus propose the use of a new encoding method of sensitive data based on Counting Bloom Filters (CBF) to improve privacy for multi-party PPRL. We also investigate optimizations to reduce communication and computation costs for CBF-based multi-party PPRL with and without the use of a dedicated linkage unit. Empirical evaluations conducted with real datasets show the viability of the proposed approaches and demonstrate their scalability, linkage quality, and privacy protection.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Dinusha Vatsalan",
+      "Peter Christen",
+      "Erhard Rahm"
+    ],
+    "doi": null,
+    "arxiv_id": "1701.01232v1",
+    "url": "http://arxiv.org/abs/1701.01232v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.00331v2",
+    "title": "Quantization Variation: A New Perspective on Training Transformers with Low-Bit Precision",
+    "abstract": "Despite the outstanding performance of transformers in both language and vision tasks, the expanding computation and model size have increased the demand for efficient deployment. To address the heavy computation and parameter drawbacks, quantization is frequently studied in the community as a representative model compression technique and has seen extensive use on ConvNets. However, due to the unique properties of transformers, the low-bit quantization applications are still limited and underexplored. In this paper, we identify the difficulty of transformer low-bit quantization-aware training on its unique variation behaviors, which significantly differ from ConvNets. Based on comprehensive quantitative analysis, we observe variation in three hierarchies: various module quantization sensitivities, outliers in static weight and activation distribution, and oscillation in dynamic parameter fluctuations. These variations of transformers bring instability to the quantization-aware training (QAT) and negatively influence the performance. We explore the best practices to alleviate the variation's influence during low-bit transformer QAT and propose a variation-aware quantization scheme for both vision and language transformers. We extensively verify and show our scheme can alleviate the variation and improve the performance of transformers across various models and tasks. Our solution substantially improves the 2-bit Swin-T and binary BERT-base, achieving a 3.35% and 1.4% accuracy improvement over previous state-of-the-art methods on ImageNet-1K and GLUE. Codes and models are available at https://github.com/HuangOwen/Quantization-Variation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xijie Huang",
+      "Zhiqiang Shen",
+      "Pingcheng Dong",
+      "Kwang-Ting Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.00331v2",
+    "url": "http://arxiv.org/abs/2307.00331v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.13144v2",
+    "title": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks",
+    "abstract": "We propose Additive Powers-of-Two~(APoT) quantization, an efficient non-uniform quantization scheme for the bell-shaped and long-tailed distribution of weights and activations in neural networks. By constraining all quantization levels as the sum of Powers-of-Two terms, APoT quantization enjoys high computational efficiency and a good match with the distribution of weights. A simple reparameterization of the clipping function is applied to generate a better-defined gradient for learning the clipping threshold. Moreover, weight normalization is presented to refine the distribution of weights to make the training more stable and consistent. Experimental results show that our proposed method outperforms state-of-the-art methods, and is even competitive with the full-precision models, demonstrating the effectiveness of our proposed APoT quantization. For example, our 4-bit quantized ResNet-50 on ImageNet achieves 76.6% top-1 accuracy without bells and whistles; meanwhile, our model reduces 22% computational cost compared with the uniformly quantized counterpart. The code is available at https://github.com/yhhhli/APoT_Quantization.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Yuhang Li",
+      "Xin Dong",
+      "Wei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.13144v2",
+    "url": "http://arxiv.org/abs/1909.13144v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.16122v1",
+    "title": "A Performance-Portable SYCL Implementation of CRK-HACC for Exascale",
+    "abstract": "The first generation of exascale systems will include a variety of machine architectures, featuring GPUs from multiple vendors. As a result, many developers are interested in adopting portable programming models to avoid maintaining multiple versions of their code. It is necessary to document experiences with such programming models to assist developers in understanding the advantages and disadvantages of different approaches. To this end, this paper evaluates the performance portability of a SYCL implementation of a large-scale cosmology application (CRK-HACC) running on GPUs from three different vendors: AMD, Intel, and NVIDIA. We detail the process of migrating the original code from CUDA to SYCL and show that specializing kernels for specific targets can greatly improve performance portability without significantly impacting programmer productivity. The SYCL version of CRK-HACC achieves a performance portability of 0.96 with a code divergence of almost 0, demonstrating that SYCL is a viable programming model for performance-portable applications.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Esteban M. Rangel",
+      "S. John Pennycook",
+      "Adrian Pope",
+      "Nicholas Frontiere",
+      "Zhiqiang Ma",
+      "Varsha Madananth"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.16122v1",
+    "url": "http://arxiv.org/abs/2310.16122v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1709.10140v1",
+    "title": "Performance Evaluation of Container-based Virtualization for High Performance Computing Environments",
+    "abstract": "Virtualization technologies have evolved along with the development of computational environments since virtualization offered needed features at that time such as isolation, accountability, resource allocation, resource fair sharing and so on. Novel processor technologies bring to commodity computers the possibility to emulate diverse environments where a wide range of computational scenarios can be run. Along with processors evolution, system developers have created different virtualization mechanisms where each new development enhanced the performance of previous virtualized environments. Recently, operating system-based virtualization technologies captured the attention of communities abroad (from industry to academy and research) because their important improvements on performance area. In this paper, the features of three container-based operating systems virtualization tools (LXC, Docker and Singularity) are presented. LXC, Docker, Singularity and bare metal are put under test through a customized single node HPL-Benchmark and a MPI-based application for the multi node testbed. Also the disk I/O performance, Memory (RAM) performance, Network bandwidth and GPU performance are tested for the COS technologies vs bare metal. Preliminary results and conclusions around them are presented and discussed.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Carlos Arango",
+      "Rémy Dernat",
+      "John Sanabria"
+    ],
+    "doi": null,
+    "arxiv_id": "1709.10140v1",
+    "url": "http://arxiv.org/abs/1709.10140v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1209.2364v2",
+    "title": "Performance Modeling for Dense Linear Algebra",
+    "abstract": "It is well known that the behavior of dense linear algebra algorithms is greatly influenced by factors like target architecture, underlying libraries and even problem size; because of this, the accurate prediction of their performance is a real challenge. In this article, we are not interested in creating accurate models for a given algorithm, but in correctly ranking a set of equivalent algorithms according to their performance. Aware of the hierarchical structure of dense linear algebra routines, we approach the problem by developing a framework for the automatic generation of statistical performance models for BLAS and LAPACK libraries. This allows us to obtain predictions through evaluating and combining such models. We demonstrate that our approach is successful in both single- and multi-core environments, not only in the ranking of algorithms but also in tuning their parameters.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Elmar Peise",
+      "Paolo Bientinesi"
+    ],
+    "doi": null,
+    "arxiv_id": "1209.2364v2",
+    "url": "http://arxiv.org/abs/1209.2364v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.13313v1",
+    "title": "Performance Enhancement of the Ozaki Scheme on Integer Matrix Multiplication Unit",
+    "abstract": "This study was aimed at simultaneously achieving sufficient accuracy and high performance for general matrix multiplications. Recent architectures, such as NVIDIA GPUs, feature high-performance units designed for low-precision matrix multiplications in machine learning models, and next-generation architectures are expected to follow the same design principle. The key to achieving superior performance is to fully leverage such architectures. The Ozaki scheme, a highly accurate matrix multiplication algorithm using error-free transformations, enables higher-precision matrix multiplication to be performed through multiple lower-precision matrix multiplications and higher-precision matrix additions. Ootomo et al. implemented the Ozaki scheme on high-performance matrix multiplication units with the aim of achieving both sufficient accuracy and high performance. This paper proposes alternative approaches to improving performance by reducing the numbers of lower-precision matrix multiplications and higher-precision matrix additions. Numerical experiments demonstrate the accuracy of the results and conduct performance benchmarks of the proposed approaches. These approaches are expected to yield more efficient results in next-generation architectures.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yuki Uchino",
+      "Katsuhisa Ozaki",
+      "Toshiyuki Imamura"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.13313v1",
+    "url": "http://arxiv.org/abs/2409.13313v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.06085v3",
+    "title": "Assessing Tenstorrent's RISC-V MatMul Acceleration Capabilities",
+    "abstract": "The increasing demand for generative AI as Large Language Models (LLMs) services has driven the need for specialized hardware architectures that optimize computational efficiency and energy consumption. This paper evaluates the performance of the Tenstorrent Grayskull e75 RISC-V accelerator for basic linear algebra kernels at reduced numerical precision, a fundamental operation in LLM computations. We present a detailed characterization of Grayskull's execution model, gridsize, matrix dimensions, data formats, and numerical precision impact computational efficiency. Furthermore, we compare Grayskull's performance against state-of-the-art architectures with tensor acceleration, including Intel Sapphire Rapids processors and two NVIDIA GPUs (V100 and A100). Whilst NVIDIA GPUs dominate raw performance, Grayskull demonstrates a competitive trade-off between power consumption and computational throughput, reaching a peak of 1.55 TFLOPs/Watt with BF16.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hiari Pizzini Cavagna",
+      "Daniele Cesarini",
+      "Andrea Bartolini"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.06085v3",
+    "url": "http://arxiv.org/abs/2505.06085v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.03535v1",
+    "title": "Enhancing Performance Monitoring in C/C++ Programs with EDPM: A Domain-Specific Language for Performance Monitoring",
+    "abstract": "The utilization of performance monitoring probes is a valuable tool for programmers to gather performance data. However, the manual insertion of these probes can result in an increase in code size, code obfuscation, and an added burden of learning different APIs associated with performance monitoring tools. To mitigate these issues, EDPM, an embedded domain-specific language, was developed to provide a higher level of abstraction for annotating regions of code that require instrumentation in C and C++ programs. This paper presents the design and implementation of EDPM and compares it to the well-known tool PAPI, in terms of required lines of code, flexibility in configuring regions, and performance overhead. The results of this study demonstrate that EDPM is a low-resolution profiling tool that offers a reduction in required lines of code and enables programmers to express various configurations of regions. Furthermore, the design of EDPM is such that its pragmas are ignored by the standard compiler, allowing for seamless integration into existing software processes without disrupting build systems or increasing the size of the executable. Additionally, the design of the EDPM pre-compiler allows for the extension of available performance counters while maintaining a high level of abstraction for programmers. Therefore, EDPM offers a promising solution to simplify and optimize performance monitoring in C and C++ programs.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "David Weisskopf Holmqvist",
+      "Suejb Memeti"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.03535v1",
+    "url": "http://arxiv.org/abs/2311.03535v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1708.01419v1",
+    "title": "DoKnowMe: Towards a Domain Knowledge-driven Methodology for Performance Evaluation",
+    "abstract": "Software engineering considers performance evaluation to be one of the key portions of software quality assurance. Unfortunately, there seems to be a lack of standard methodologies for performance evaluation even in the scope of experimental computer science. Inspired by the concept of \"instantiation\" in object-oriented programming, we distinguish the generic performance evaluation logic from the distributed and ad-hoc relevant studies, and develop an abstract evaluation methodology (by analogy of \"class\") we name Domain Knowledge-driven Methodology (DoKnowMe). By replacing five predefined domain-specific knowledge artefacts, DoKnowMe could be instantiated into specific methodologies (by analogy of \"object\") to guide evaluators in performance evaluation of different software and even computing systems. We also propose a generic validation framework with four indicators (i.e.~usefulness, feasibility, effectiveness and repeatability), and use it to validate DoKnowMe in the Cloud services evaluation domain. Given the positive and promising validation result, we plan to integrate more common evaluation strategies to improve DoKnowMe and further focus on the performance evaluation of Cloud autoscaler systems.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Zheng Li",
+      "Liam O'Brien",
+      "Maria Kihl"
+    ],
+    "doi": null,
+    "arxiv_id": "1708.01419v1",
+    "url": "http://arxiv.org/abs/1708.01419v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.07653v1",
+    "title": "A Valid Quantization of a Half-Harmonic Oscillator Field Theory",
+    "abstract": "The usual full- and half-harmonic oscillators are turned into field theories, and that behavior is examined using canonical and affine quantization. The result leads to a valid affine quantization of the half harmonic oscillator field theory, which points toward further valid quantizations of more realistic field theory models.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "John R. Klauder"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.07653v1",
+    "url": "http://arxiv.org/abs/2206.07653v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.11396v1",
+    "title": "MuonQ: Enhancing Low-Bit Muon Quantization via Directional Fidelity Optimization",
+    "abstract": "The Muon optimizer has emerged as a compelling alternative to Adam for training large language models, achieving remarkable computational savings through gradient orthogonalization. However, Muon's optimizer state is more sensitive to quantization errors: because the orthogonalization discards the magnitudes of singular values and retains only directional information, even small quantization errors in singular vector directions are amplified in the update. In this work, we propose MuonQ, a low-bit Muon training framework built on the principle of directional fidelity optimization. First, we apply a pre-quantization normalization so that each step introduces quantization errors of the same magnitude, preventing the accumulated error from developing a preferred direction. Second, we introduce a structural decomposition that separately quantizes the dominant singular components via power iteration, ensuring that quantization errors perturb only singular value magnitudes rather than rotating singular vector directions. Third, we adopt $μ$-law companding quantization to allocate higher resolution to densely packed momentum values, shifting the quantization objective from outlier preservation to dense-region distinguishability. Together, these techniques enable stable 4-bit quantization of Muon's optimizer states. Pre-training experiments on GPT-style and LLaMA-style models demonstrate that MuonQ at 4-bit precision closely matches full-precision Muon in both training loss and downstream task accuracy, while reducing optimizer state memory by up to 7.3 $\\times$. Our code is available at https://github.com/YupengSu/MuonQ.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yupeng Su",
+      "Ruijie Zhang",
+      "Ziyue Liu",
+      "Yequan Zhao",
+      "Zheng Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.11396v1",
+    "url": "http://arxiv.org/abs/2605.11396v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.05530v1",
+    "title": "Low-bit Model Quantization for Deep Neural Networks: A Survey",
+    "abstract": "With unprecedented rapid development, deep neural networks (DNNs) have deeply influenced almost all fields. However, their heavy computation costs and model sizes are usually unacceptable in real-world deployment. Model quantization, an effective weight-lighting technique, has become an indispensable procedure in the whole deployment pipeline. The essence of quantization acceleration is the conversion from continuous floating-point numbers to discrete integer ones, which significantly speeds up the memory I/O and calculation, i.e., addition and multiplication. However, performance degradation also comes with the conversion because of the loss of precision. Therefore, it has become increasingly popular and critical to investigate how to perform the conversion and how to compensate for the information loss. This article surveys the recent five-year progress towards low-bit quantization on DNNs. We discuss and compare the state-of-the-art quantization methods and classify them into 8 main categories and 24 sub-categories according to their core techniques. Furthermore, we shed light on the potential research opportunities in the field of model quantization. A curated list of model quantization is provided at https://github.com/Kai-Liu001/Awesome-Model-Quantization.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kai Liu",
+      "Qian Zheng",
+      "Kaiwen Tao",
+      "Zhiteng Li",
+      "Haotong Qin",
+      "Wenbo Li",
+      "Yong Guo",
+      "Xianglong Liu",
+      "Linghe Kong",
+      "Guihai Chen",
+      "Yulun Zhang",
+      "Xiaokang Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.05530v1",
+    "url": "http://arxiv.org/abs/2505.05530v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

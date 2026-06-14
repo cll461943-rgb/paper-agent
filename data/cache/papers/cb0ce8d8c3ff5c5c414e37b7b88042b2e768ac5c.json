@@ -1,0 +1,35 @@
+{
+  "paper_id": "pubmed:41772010",
+  "title": "Evaluating routing stability and coordination in swarm-based multi-agent task-oriented dialogue systems.",
+  "abstract": "Conversational systems are becoming a primary interface for services and enterprise automation, and rapid market growth is pushing deployments into safety- and cost-sensitive settings. Reliability remains a bottleneck when interactions span multiple domains: an orchestrator must choose the next specialist, maintain shared dialogue state, and recover from mistakes before they cascade across handoffs. Despite rising interest in swarm-like multi-agent designs, orchestration is rarely evaluated with coordination-centric metrics, making it hard to compare routing policies beyond surface fluency. We present an evaluation-first pipeline for multi-domain task-oriented dialogue on MultiWOZ 2.2 that decouples routing from generation and exposes measurable failure modes. A DeBERTa-based router selects domain specialists, while a FLAN-T5 generator produces structured actions and belief-state updates under a shared memory interface. The protocol tracks delegation correctness, slot-progress coverage, switching and bouncing instability, loop behavior, and recovery after misroutes, and it links early-turn errors to downstream collapse using cascading-error attribution. We further introduce stress tests that simulate reformulation, long-horizon corrections, and tool-latency delays to probe robustness beyond static annotations. Across routing variants, confidence-aware gating yields the strongest stability improvement, achieving routing accuracy of 0.77 while substantially reducing handoff churn, with switching 0.11 and bounce 0.01, relative to a learned baseline with 0.65 accuracy, switching 0.44, and bounce 0.09. At the same time, confidence gating can trade progress for precision when it suppresses belief updates, highlighting an accuracy-progress tension that is important for deployment tuning. Diagnostic summaries identify misrouting and empty-state updates as dominant contributors, while looping is comparatively rare. Finally, applying the same evaluation to SGD shows that coordination challenges persist under schema shift. Overall, the proposed metrics and implementation blueprint provide a reproducible basis for diagnosing coordination failures and selecting orchestration policies for deployment.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Abuzar Khan",
+    "Fahad Masood",
+    "Abid Iqbal",
+    "Ahmad Junaid",
+    "Saad Arif",
+    "Mohammed Al-Naeem",
+    "Ghassan Husnain",
+    "Ali Saeed Alzahrani"
+  ],
+  "doi": "10.1038/s41598-026-42158-y",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41772010/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like",
+    "route:entity_dataset",
+    "route:core_topic",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41772010"
+  }
+}

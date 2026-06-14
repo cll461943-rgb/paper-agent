@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2505.09142v1",
+  "title": "ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor",
+  "abstract": "We propose ELIS, a serving system for Large Language Models (LLMs) featuring an Iterative Shortest Remaining Time First (ISRTF) scheduler designed to efficiently manage inference tasks with the shortest remaining tokens. Current LLM serving systems often employ a first-come-first-served scheduling strategy, which can lead to the \"head-of-line blocking\" problem. To overcome this limitation, it is necessary to predict LLM inference times and apply a shortest job first scheduling strategy. However, due to the auto-regressive nature of LLMs, predicting the inference latency is challenging. ELIS addresses this challenge by training a response length predictor for LLMs using the BGE model, an encoder-based state-of-the-art model. Additionally, we have devised the ISRTF scheduling strategy, an optimization of shortest remaining time first tailored to existing LLM iteration batching. To evaluate our work in an industrial setting, we simulate streams of requests based on our study of real-world user LLM serving trace records. Furthermore, we implemented ELIS as a cloud-native scheduler system on Kubernetes to evaluate its performance in production environments. Our experimental results demonstrate that ISRTF reduces the average job completion time by up to 19.6%.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Seungbeom Choi",
+    "Jeonghoe Goo",
+    "Eunjoo Jeon",
+    "Mingyu Yang",
+    "Minsung Jang"
+  ],
+  "doi": null,
+  "arxiv_id": "2505.09142v1",
+  "url": "http://arxiv.org/abs/2505.09142v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

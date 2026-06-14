@@ -1,0 +1,25 @@
+{
+  "paper_id": "pubmed:42056198",
+  "title": "Robust online multi-object tracking with conditional diffusion motion hypotheses and time-aware contrastive prototypes.",
+  "abstract": "Online multi-object tracking (MOT) is typically implemented as tracking-by-detection: a motion prior propagates each track to the current frame, and appearance cues drive data association. Despite strong detectors and association heuristics, two practical failure modes persist in crowded, interaction-heavy videos: (i) deterministic, unimodal propagation over-commits under non-linear motion and short-term ambiguity, causing overlap-based gating to discard correct matches; and (ii) appearance embeddings drift over time, so stale historical features can dominate similarity scores after long gaps. This paper proposes DiffuTrack, a generative online MOT framework that addresses both issues while retaining the standard predict-associate-update loop. The Motion Diffusion Module (MDM) replaces point motion propagation with a conditional diffusion generator over normalized bounding-box states, producing distributional hypotheses via accelerated DDIM sampling. To stabilize identity association, Time-Aware Prototype Contrastive Learning (TPCL) maintains temporally decayed identity prototypes and trains embeddings with a time-weighted contrastive objective that down-weights stale positives. Experiments on MOT17/MOT20 and DanceTrack under a shared-detection pedestrian-tracking protocol show consistent gains in association-centric metrics, with the largest improvements concentrated on highly non-linear trajectories and occlusion-heavy sequences. Diagnostic uncertainty-coverage analyses further indicate that diffusion-based hypotheses retain a wider region of support than linear-Gaussian propagation, supporting probabilistic motion generation as a practical alternative to deterministic tracking priors in the standard online MOT loop.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Xiangqin Chen"
+  ],
+  "doi": "10.1038/s41598-026-50731-8",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42056198/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42056198"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "paper_id": "http://arxiv.org/abs/1904.00962v5",
+  "title": "Large Batch Optimization for Deep Learning: Training BERT in 76 minutes",
+  "abstract": "Training large deep neural networks on massive datasets is computationally very challenging. There has been recent surge in interest in using large batch stochastic optimization methods to tackle this issue. The most prominent algorithm in this line of research is LARS, which by employing layerwise adaptive learning rates trains ResNet on ImageNet in a few minutes. However, LARS performs poorly for attention models like BERT, indicating that its performance gains are not consistent across tasks. In this paper, we first study a principled layerwise adaptation strategy to accelerate training of deep neural networks using large mini-batches. Using this strategy, we develop a new layerwise adaptive large batch optimization technique called LAMB; we then provide convergence analysis of LAMB as well as LARS, showing convergence to a stationary point in general nonconvex settings. Our empirical results demonstrate the superior performance of LAMB across various tasks such as BERT and ResNet-50 training with very little hyperparameter tuning. In particular, for BERT training, our optimizer enables use of very large batch sizes of 32868 without any degradation of performance. By increasing the batch size to the memory limit of a TPUv3 Pod, BERT training time can be reduced from 3 days to just 76 minutes (Table 1). The LAMB implementation is available at https://github.com/tensorflow/addons/blob/master/tensorflow_addons/optimizers/lamb.py",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Yang You",
+    "Jing Li",
+    "Sashank Reddi",
+    "Jonathan Hseu",
+    "Sanjiv Kumar",
+    "Srinadh Bhojanapalli",
+    "Xiaodan Song",
+    "James Demmel",
+    "Kurt Keutzer",
+    "Cho-Jui Hsieh"
+  ],
+  "doi": null,
+  "arxiv_id": "1904.00962v5",
+  "url": "http://arxiv.org/abs/1904.00962v5",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

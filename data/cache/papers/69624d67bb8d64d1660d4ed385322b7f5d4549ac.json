@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:41558385",
+  "title": "Transformer-based feature extraction approach for hematopoietic cancer subtype classification.",
+  "abstract": "Accurate classification of hematopoietic cancer subtypes remains challenging due to the multipotent nature of hematopoietic cells and the absence of definitive genetic markers. To address this, we propose a Transformer-based Autoencoder that captures compact and biologically informative embeddings from gene expression data. Specifically, our method employs multi-head self-attention in the encoder to learn complex nonlinear interactions among genes, with a reconstruction decoder that enforces biological feature retention. We benchmarked our approach against four widely-used feature extraction methods-Principal Component Analysis, Non-negative Matrix Factorization, Autoencoder, and Variational Autoencoder-using transcriptomic data from five hematopoietic cancer subtypes in The Cancer Genome Atlas, totaling 2452 samples. Data were split 60:20:20 into training, validation, and test sets with stratification, and feature-extractor hyperparameters were chosen on the validation set. Each method produced 100-dimensional feature vectors, subsequently evaluated using eight multi-class classifiers: Light Gradient Boosting Machine, Extreme Gradient Boosting, Logistic Regression, Random Forest, Decision Tree, Support Vector Machine, and Neural Networks. On the independent test set, the Transformer-based Autoencoder embeddings combined with Light Gradient Boosting Machine achieved F1-score: 0.969, accuracy: 0.986, precision: 0.975, recall: 0.964, specificity: 0.996, G-mean: 0.980, and balanced accuracy: 0.954. For context, we additionally included a supervised tabular Transformer (FT-Transformer) as a reference; while strong, it is not directly comparable to our unsupervised feature extractor. To enhance interpretability and clinical relevance, we applied Shapley Additive exPlanations to identify the twenty most influential genes contributing to subtype discrimination. This analysis revealed key biomarkers related to endoplasmic reticulum function, antigen processing, and ribonucleic acid regulation. These findings demonstrate that transformer-based unsupervised feature extraction substantially improves predictive accuracy and yields valuable biological insights for complex hematologic malignancies. Overall, the study supports attention-driven representation learning for tabular biomedical data and motivates future work in generative/self-supervised representations for gene expression.",
+  "year": 2026,
+  "venue": "Computers in biology and medicine",
+  "authors": [
+    "Kwang Ho Park",
+    "Younghee Lee",
+    "Wei Ding",
+    "Kwang Sun Ryu",
+    "Keun Ho Ryu"
+  ],
+  "doi": "10.1016/j.compbiomed.2026.111466",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41558385/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde",
+    "route:broad_synonym",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41558385"
+  }
+}

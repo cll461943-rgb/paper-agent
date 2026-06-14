@@ -1,0 +1,58 @@
+{
+  "paper_id": "https://openalex.org/W4281383119",
+  "title": "Improving Multi-Task Generalization via Regularizing Spurious Correlation",
+  "abstract": "Multi-Task Learning (MTL) is a powerful learning paradigm to improve generalization performance via knowledge sharing. However, existing studies find that MTL could sometimes hurt generalization, especially when two tasks are less correlated. One possible reason that hurts generalization is spurious correlation, i.e., some knowledge is spurious and not causally related to task labels, but the model could mistakenly utilize them and thus fail when such correlation changes. In MTL setup, there exist several unique challenges of spurious correlation. First, the risk of having non-causal knowledge is higher, as the shared MTL model needs to encode all knowledge from different tasks, and causal knowledge for one task could be potentially spurious to the other. Second, the confounder between task labels brings in a different type of spurious correlation to MTL. We theoretically prove that MTL is more prone to taking non-causal knowledge from other tasks than single-task learning, and thus generalize worse. To solve this problem, we propose Multi-Task Causal Representation Learning framework, aiming to represent multi-task knowledge via disentangled neural modules, and learn which module is causally related to each task via MTL-specific invariant regularization. Experiments show that it could enhance MTL model's performance by 5.5% on average over Multi-MNIST, MovieLens, Taskonomy, CityScape, and NYUv2, via alleviating spurious correlation problem.",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Ziniu Hu",
+    "Zhe Zhao",
+    "Xinyang Yi",
+    "Tiansheng Yao",
+    "Lichan Hong",
+    "Yizhou Sun",
+    "Ed H."
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2205.09797",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2205.09797",
+  "citation_count": 13,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Spurious relationship",
+      "Generalization",
+      "Computer science",
+      "Artificial intelligence",
+      "Machine learning",
+      "Correlation",
+      "Multi-task learning",
+      "Task (project management)",
+      "Mathematics",
+      "Economics",
+      "Mathematical analysis",
+      "Management",
+      "Geometry"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3113091479",
+      "https://openalex.org/W2162899405",
+      "https://openalex.org/W941090075",
+      "https://openalex.org/W2044987316",
+      "https://openalex.org/W3134374554",
+      "https://openalex.org/W2237480245",
+      "https://openalex.org/W2075065631",
+      "https://openalex.org/W2519167559",
+      "https://openalex.org/W2951720331",
+      "https://openalex.org/W3162538529"
+    ]
+  }
+}

@@ -1,0 +1,907 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2603.16309v3",
+    "title": "Omnilingual MT: Machine Translation for 1,600 Languages",
+    "abstract": "High-quality machine translation (MT) can scale to hundreds of languages, setting a high bar for multilingual systems. However, compared to the world's 7,000 languages, current systems still offer only limited coverage: about 200 languages on the target side, and maybe a few hundreds more on the source side, supported due to cross-lingual transfer. And even these numbers have been hard to evaluate due to the lack of reliable benchmarks and metrics. We present Omnilingual Machine Translation (OMT), the first MT system supporting more than 1,600 languages. This scale is enabled by a comprehensive data strategy that integrates large public multilingual corpora with newly created datasets, including manually curated MeDLEY bitext. We explore two ways of specializing a Large Language model (LLM) for machine translation: as a decoder-only model (OMT-LLaMA) or as a module in an encoder-decoder architecture (OMT-NLLB). Notably, all our 1B to 8B parameter models match or exceed the MT performance of a 70B LLM baseline, revealing a clear specialization advantage and enabling strong translation quality in low-compute settings. Moreover, our evaluation of English-to-1,600 translations further shows that while baseline models can interpret undersupported languages, they frequently fail to generate them with meaningful fidelity; OMT-LLaMA models substantially expand the set of languages for which coherent generation is feasible. Additionally, OMT models improve in cross-lingual transfer, being close to solving the \"understanding\" part of the puzzle in MT for the 1,600 evaluated. Our leaderboard and main human-created evaluation datasets (BOUQuET and Met-BOUQuET) are dynamically evolving towards Omnilinguality and freely available.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Omnilingual MT Team",
+      "Belen Alastruey",
+      "Niyati Bafna",
+      "Andrea Caciolai",
+      "Kevin Heffernan",
+      "Artyom Kozhevnikov",
+      "Christophe Ropers",
+      "Eduardo Sánchez",
+      "Charles-Eric Saint-James",
+      "Ioannis Tsiamas",
+      "Xiang \"Tony\" Cao",
+      "Chierh Cheng",
+      "Joe Chuang",
+      "Paul-Ambroise Duquenne",
+      "Mark Duppenthaler",
+      "Nate Ekberg",
+      "Cynthia Gao",
+      "Pere Lluís Huguet Cabot",
+      "João Maria Janeiro",
+      "Jean Maillard",
+      "Gabriel Mejia Gonzalez",
+      "Holger Schwenk",
+      "Edan Toledo",
+      "Arina Turkatenko",
+      "Albert Ventayol-Boada",
+      "Rashel Moritz",
+      "Alexandre Mourachko",
+      "Surya Parimi",
+      "Mary Williamson",
+      "Shireen Yates",
+      "David Dale",
+      "Marta R. Costa-jussà"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.16309v3",
+    "url": "http://arxiv.org/abs/2603.16309v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.09775v6",
+    "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+    "abstract": "Modern LLM serving now spans multi-stage pipelines including RAG retrieval and KV cache reuse, each with distinct compute, memory, and latency demands. Inference engines expose a large configuration space with no systematic navigation methodology, and exhaustively benchmarking configurations can exceed 40K in cloud costs. Simultaneously, the hardware landscape is rapidly diversifying across AMD GPUs, TPUs, and custom ASICs, while cross-vendor prefill-decode (PD) disaggregated configurations lack unified software stacks for end-to-end evaluation today. To address this gap, we present MIST, a Heterogeneous Multi-stage LLM inference Execution Simulator. MIST models diverse request stages; including RAG, KV retrieval, reasoning, prefill, and decode across complex hardware hierarchies. MIST supports heterogeneous clients executing multiple models concurrently unlike prior frameworks while incorporating advanced batching strategies and multi-level memory hierarchies. By integrating real hardware traces with analytical modeling, MIST captures critical trade-offs such as memory bandwidth contention, inter-cluster communication latency, and batching efficiency in hybrid CPU-accelerator deployments. Through case studies, we explore the impact of reasoning stages on end-to-end latency, optimal batching strategies for hybrid pipelines, and the architectural implications of remote KV cache retrieval. MIST empowers system designers to navigate the evolving landscape of LLM inference, providing actionable insights into optimizing hardware-software co-design for next-generation AI workloads.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Abhimanyu Rajeshkumar Bambhaniya",
+      "Hanjiang Wu",
+      "Suvinay Subramanian",
+      "Sudarshan Srinivasan",
+      "Souvik Kundu",
+      "Amir Yazdanbakhsh",
+      "Midhilesh Elavazhagan",
+      "Madhu Kumar",
+      "Minlan Yu",
+      "Arijit Raychowdhury",
+      "Tushar Krishna"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.09775v6",
+    "url": "http://arxiv.org/abs/2504.09775v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1709.00678v1",
+    "title": "Disentangling ASR and MT Errors in Speech Translation",
+    "abstract": "The main aim of this paper is to investigate automatic quality assessment for spoken language translation (SLT). More precisely, we investigate SLT errors that can be due to transcription (ASR) or to translation (MT) modules. This paper investigates automatic detection of SLT errors using a single classifier based on joint ASR and MT features. We evaluate both 2-class (good/bad) and 3-class (good/badASR/badMT ) labeling tasks. The 3-class problem necessitates to disentangle ASR and MT errors in the speech translation output and we propose two label extraction methods for this non trivial step. This enables - as a by-product - qualitative analysis on the SLT errors and their origin (are they due to transcription or to translation step?) on our large in-house corpus for French-to-English speech translation.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Ngoc-Tien Le",
+      "Benjamin Lecouteux",
+      "Laurent Besacier"
+    ],
+    "doi": null,
+    "arxiv_id": "1709.00678v1",
+    "url": "http://arxiv.org/abs/1709.00678v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.05805v1",
+    "title": "Online ML Self-adaptation in Face of Traps",
+    "abstract": "Online machine learning (ML) is often used in self-adaptive systems to strengthen the adaptation mechanism and improve the system utility. Despite such benefits, applying online ML for self-adaptation can be challenging, and not many papers report its limitations. Recently, we experimented with applying online ML for self-adaptation of a smart farming scenario and we had faced several unexpected difficulties -- traps -- that, to our knowledge, are not discussed enough in the community. In this paper, we report our experience with these traps. Specifically, we discuss several traps that relate to the specification and online training of the ML-based estimators, their impact on self-adaptation, and the approach used to evaluate the estimators. Our overview of these traps provides a list of lessons learned, which can serve as guidance for other researchers and practitioners when applying online ML for self-adaptation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Michal Töpfer",
+      "František Plášil",
+      "Tomáš Bureš",
+      "Petr Hnětynka",
+      "Martin Kruliš",
+      "Danny Weyns"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.05805v1",
+    "url": "http://arxiv.org/abs/2309.05805v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1609.04846v1",
+    "title": "A Tutorial about Random Neural Networks in Supervised Learning",
+    "abstract": "Random Neural Networks (RNNs) are a class of Neural Networks (NNs) that can also be seen as a specific type of queuing network. They have been successfully used in several domains during the last 25 years, as queuing networks to analyze the performance of resource sharing in many engineering areas, as learning tools and in combinatorial optimization, where they are seen as neural systems, and also as models of neurological aspects of living beings. In this article we focus on their learning capabilities, and more specifically, we present a practical guide for using the RNN to solve supervised learning problems. We give a general description of these models using almost indistinctly the terminology of Queuing Theory and the neural one. We present the standard learning procedures used by RNNs, adapted from similar well-established improvements in the standard NN field. We describe in particular a set of learning algorithms covering techniques based on the use of first order and, then, of second order derivatives. We also discuss some issues related to these objects and present new perspectives about their use in supervised learning problems. The tutorial describes their most relevant applications, and also provides a large bibliography.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Sebastián Basterrech",
+      "Gerardo Rubino"
+    ],
+    "doi": null,
+    "arxiv_id": "1609.04846v1",
+    "url": "http://arxiv.org/abs/1609.04846v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.05910v5",
+    "title": "Ensemble Kalman Filtering Meets Gaussian Process SSM for Non-Mean-Field and Online Inference",
+    "abstract": "The Gaussian process state-space models (GPSSMs) represent a versatile class of data-driven nonlinear dynamical system models. However, the presence of numerous latent variables in GPSSM incurs unresolved issues for existing variational inference approaches, particularly under the more realistic non-mean-field (NMF) assumption, including extensive training effort, compromised inference accuracy, and infeasibility for online applications, among others. In this paper, we tackle these challenges by incorporating the ensemble Kalman filter (EnKF), a well-established model-based filtering technique, into the NMF variational inference framework to approximate the posterior distribution of the latent states. This novel marriage between EnKF and GPSSM not only eliminates the need for extensive parameterization in learning variational distributions, but also enables an interpretable, closed-form approximation of the evidence lower bound (ELBO). Moreover, owing to the streamlined parameterization via the EnKF, the new GPSSM model can be easily accommodated in online learning applications. We demonstrate that the resulting EnKF-aided online algorithm embodies a principled objective function by ensuring data-fitting accuracy while incorporating model regularizations to mitigate overfitting. We also provide detailed analysis and fresh insights for the proposed algorithms. Comprehensive evaluation across diverse real and synthetic datasets corroborates the superior learning and inference performance of our EnKF-aided variational inference algorithms compared to existing methods.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Zhidi Lin",
+      "Yiyong Sun",
+      "Feng Yin",
+      "Alexandre Hoang Thiéry"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.05910v5",
+    "url": "http://arxiv.org/abs/2312.05910v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.14753v1",
+    "title": "The Deep Arbitrary Polynomial Chaos Neural Network or how Deep Artificial Neural Networks could benefit from Data-Driven Homogeneous Chaos Theory",
+    "abstract": "Artificial Intelligence and Machine learning have been widely used in various fields of mathematical computing, physical modeling, computational science, communication science, and stochastic analysis. Approaches based on Deep Artificial Neural Networks (DANN) are very popular in our days. Depending on the learning task, the exact form of DANNs is determined via their multi-layer architecture, activation functions and the so-called loss function. However, for a majority of deep learning approaches based on DANNs, the kernel structure of neural signal processing remains the same, where the node response is encoded as a linear superposition of neural activity, while the non-linearity is triggered by the activation functions. In the current paper, we suggest to analyze the neural signal processing in DANNs from the point of view of homogeneous chaos theory as known from polynomial chaos expansion (PCE). From the PCE perspective, the (linear) response on each node of a DANN could be seen as a $1^{st}$ degree multi-variate polynomial of single neurons from the previous layer, i.e. linear weighted sum of monomials. From this point of view, the conventional DANN structure relies implicitly (but erroneously) on a Gaussian distribution of neural signals. Additionally, this view revels that by design DANNs do not necessarily fulfill any orthogonality or orthonormality condition for a majority of data-driven applications. Therefore, the prevailing handling of neural signals in DANNs could lead to redundant representation as any neural signal could contain some partial information from other neural signals. To tackle that challenge, we suggest to employ the data-driven generalization of PCE theory known as arbitrary polynomial chaos (aPC) to construct a corresponding multi-variate orthonormal representations on each node of a DANN to obtain Deep arbitrary polynomial chaos neural networks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sergey Oladyshkin",
+      "Timothy Praditia",
+      "Ilja Kröker",
+      "Farid Mohammadi",
+      "Wolfgang Nowak",
+      "Sebastian Otte"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.14753v1",
+    "url": "http://arxiv.org/abs/2306.14753v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1512.05702v2",
+    "title": "Synthesis of recurrent neural networks for dynamical system simulation",
+    "abstract": "We review several of the most widely used techniques for training recurrent neural networks to approximate dynamical systems, then describe a novel algorithm for this task. The algorithm is based on an earlier theoretical result that guarantees the quality of the network approximation. We show that a feedforward neural network can be trained on the vector field representation of a given dynamical system using backpropagation, then recast, using matrix manipulations, as a recurrent network that replicates the original system's dynamics. After detailing this algorithm and its relation to earlier approaches, we present numerical examples that demonstrate its capabilities. One of the distinguishing features of our approach is that both the original dynamical systems and the recurrent networks that simulate them operate in continuous time.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Adam Trischler",
+      "Gabriele MT D'Eleuterio"
+    ],
+    "doi": null,
+    "arxiv_id": "1512.05702v2",
+    "url": "http://arxiv.org/abs/1512.05702v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.05291v2",
+    "title": "Online Self-Training for Co-Adaptation in Hierarchical Diffusion Policies",
+    "abstract": "Hierarchical policies decompose language-conditioned long-horizon robotic manipulation into a high-level planner and a low-level controller. However, effective coordination between HL and LL requires that both components operate on compatible subgoal distributions. We propose ORCHID, a self-training framework that enables stable online improvement of hierarchical diffusion policies by aligning planning and control through iterative refinement. By filtering policy samples via environment feedback, ORCHID identifies trajectories where the planner and controller are jointly successful and distills them back into both modules via supervised learning. This process induces a bidirectional co-adaptation: the planner grounds its subgoals in the actual reaching capabilities of the controller, while the controller specializes in the trajectory structures the planner produces. By relying on supervised distillation of filtered on-policy samples, ORCHID avoids the instability typical of online hierarchical gradient-based RL training with diffusion models. On the CALVIN benchmark, ORCHID allows a lightweight, initially weak model to outperform pure offline methods, including a Vision-Language-Action model twice its size.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Clemence Grislain",
+      "Mathilde Kappel",
+      "Olivier Sigaud",
+      "Mohamed Chetouani"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.05291v2",
+    "url": "http://arxiv.org/abs/2603.05291v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.00632v2",
+    "title": "Neural Unsupervised Domain Adaptation in NLP---A Survey",
+    "abstract": "Deep neural networks excel at learning from labeled data and achieve state-of-the-art resultson a wide array of Natural Language Processing tasks. In contrast, learning from unlabeled data, especially under domain shift, remains a challenge. Motivated by the latest advances, in this survey we review neural unsupervised domain adaptation techniques which do not require labeled target domain data. This is a more challenging yet a more widely applicable setup. We outline methods, from early traditional non-neural methods to pre-trained model transfer. We also revisit the notion of domain, and we uncover a bias in the type of Natural Language Processing tasks which received most attention. Lastly, we outline future directions, particularly the broader need for out-of-distribution generalization of future NLP.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Alan Ramponi",
+      "Barbara Plank"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.00632v2",
+    "url": "http://arxiv.org/abs/2006.00632v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.10160v1",
+    "title": "MT-R1-Zero: Advancing LLM-based Machine Translation via R1-Zero-like Reinforcement Learning",
+    "abstract": "Large-scale reinforcement learning (RL) methods have proven highly effective in enhancing the reasoning abilities of large language models (LLMs), particularly for tasks with verifiable solutions such as mathematics and coding. However, applying this idea to machine translation (MT), where outputs are flexibly formatted and difficult to automatically evaluate with explicit rules, remains underexplored. In this work, we introduce MT-R1-Zero, the first open-source adaptation of the R1-Zero RL framework for MT without supervised fine-tuning or cold-start. We propose a rule-metric mixed reward mechanism to guide LLMs towards improved translation quality via emergent reasoning. On the WMT 24 English-Chinese benchmark, our MT-R1-Zero-3B-Mix achieves competitive performance, surpassing TowerInstruct-7B-v0.2 by an average of 1.26 points. Meanwhile, our MT-R1-Zero-7B-Mix attains a high average score of 62.25 across all metrics, placing it on par with advanced proprietary models such as GPT-4o and Claude-3.5-Sonnet, while the MT-R1-Zero-7B-Sem variant achieves state-of-the-art scores on semantic metrics. Moreover, our work exhibits strong generalization capabilities on out-of-distribution MT tasks, robustly supporting multilingual and low-resource settings. Extensive analysis of model behavior across different initializations and reward metrics offers pioneering insight into the critical role of reward design, LLM adaptability, training dynamics, and emergent reasoning patterns within the R1-Zero paradigm for MT. Our code is available at https://github.com/fzp0424/MT-R1-Zero.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zhaopeng Feng",
+      "Shaosheng Cao",
+      "Jiahan Ren",
+      "Jiayuan Su",
+      "Ruizhe Chen",
+      "Yan Zhang",
+      "Zhe Xu",
+      "Yao Hu",
+      "Jian Wu",
+      "Zuozhu Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.10160v1",
+    "url": "http://arxiv.org/abs/2504.10160v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1609.06049v1",
+    "title": "Automatic Quality Assessment for Speech Translation Using Joint ASR and MT Features",
+    "abstract": "This paper addresses automatic quality assessment of spoken language translation (SLT). This relatively new task is defined and formalized as a sequence labeling problem where each word in the SLT hypothesis is tagged as good or bad according to a large feature set. We propose several word confidence estimators (WCE) based on our automatic evaluation of transcription (ASR) quality, translation (MT) quality, or both (combined ASR+MT). This research work is possible because we built a specific corpus which contains 6.7k utterances for which a quintuplet containing: ASR output, verbatim transcript, text translation, speech translation and post-edition of translation is built. The conclusion of our multiple experiments using joint ASR and MT features for WCE is that MT features remain the most influent while ASR feature can bring interesting complementary information. Our robust quality estimators for SLT can be used for re-scoring speech translation graphs or for providing feedback to the user in interactive speech translation or computer-assisted speech-to-text scenarios.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Ngoc-Tien Le",
+      "Benjamin Lecouteux",
+      "Laurent Besacier"
+    ],
+    "doi": null,
+    "arxiv_id": "1609.06049v1",
+    "url": "http://arxiv.org/abs/1609.06049v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05894v3",
+    "title": "Online Normalization for Training Neural Networks",
+    "abstract": "Online Normalization is a new technique for normalizing the hidden activations of a neural network. Like Batch Normalization, it normalizes the sample dimension. While Online Normalization does not use batches, it is as accurate as Batch Normalization. We resolve a theoretical limitation of Batch Normalization by introducing an unbiased technique for computing the gradient of normalized activations. Online Normalization works with automatic differentiation by adding statistical normalization as a primitive. This technique can be used in cases not covered by some other normalizers, such as recurrent networks, fully connected networks, and networks with activation memory requirements prohibitive for batching. We show its applications to image classification, image segmentation, and language modeling. We present formal proofs and experimental results on ImageNet, CIFAR, and PTB datasets.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Vitaliy Chiley",
+      "Ilya Sharapov",
+      "Atli Kosson",
+      "Urs Koster",
+      "Ryan Reece",
+      "Sofia Samaniego de la Fuente",
+      "Vishal Subbiah",
+      "Michael James"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05894v3",
+    "url": "http://arxiv.org/abs/1905.05894v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.17099v1",
+    "title": "MT-Ranker: Reference-free machine translation evaluation by inter-system ranking",
+    "abstract": "Traditionally, Machine Translation (MT) Evaluation has been treated as a regression problem -- producing an absolute translation-quality score. This approach has two limitations: i) the scores lack interpretability, and human annotators struggle with giving consistent scores; ii) most scoring methods are based on (reference, translation) pairs, limiting their applicability in real-world scenarios where references are absent. In practice, we often care about whether a new MT system is better or worse than some competitors. In addition, reference-free MT evaluation is increasingly practical and necessary. Unfortunately, these two practical considerations have yet to be jointly explored. In this work, we formulate the reference-free MT evaluation into a pairwise ranking problem. Given the source sentence and a pair of translations, our system predicts which translation is better. In addition to proposing this new formulation, we further show that this new paradigm can demonstrate superior correlation with human judgments by merely using indirect supervision from natural language inference and weak supervision from our synthetic data. In the context of reference-free evaluation, MT-Ranker, trained without any human annotations, achieves state-of-the-art results on the WMT Shared Metrics Task benchmarks DARR20, MQM20, and MQM21. On a more challenging benchmark, ACES, which contains fine-grained evaluation criteria such as addition, omission, and mistranslation errors, MT-Ranker marks state-of-the-art against reference-free as well as reference-based baselines.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ibraheem Muhammad Moosa",
+      "Rui Zhang",
+      "Wenpeng Yin"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.17099v1",
+    "url": "http://arxiv.org/abs/2401.17099v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.20848v1",
+    "title": "Analog Alchemy: Neural Computation with In-Memory Inference, Learning and Routing",
+    "abstract": "As neural computation is revolutionizing the field of Artificial Intelligence (AI), rethinking the ideal neural hardware is becoming the next frontier. Fast and reliable von Neumann architecture has been the hosting platform for neural computation. Although capable, its separation of memory and computation creates the bottleneck for the energy efficiency of neural computation, contrasting the biological brain. The question remains: how can we efficiently combine memory and computation, while exploiting the physics of the substrate, to build intelligent systems? In this thesis, I explore an alternative way with memristive devices for neural computation, where the unique physical dynamics of the devices are used for inference, learning and routing. Guided by the principles of gradient-based learning, we selected functions that need to be materialized, and analyzed connectomics principles for efficient wiring. Despite non-idealities and noise inherent in analog physics, I will provide hardware evidence of adaptability of local learning to memristive substrates, new material stacks and circuit blocks that aid in solving the credit assignment problem and efficient routing between analog crossbars for scalable architectures.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yigit Demirag"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.20848v1",
+    "url": "http://arxiv.org/abs/2412.20848v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1110.3161v1",
+    "title": "Intrinsic adaptation in autonomous recurrent neural networks",
+    "abstract": "A massively recurrent neural network responds on one side to input stimuli and is autonomously active, on the other side, in the absence of sensory inputs. Stimuli and information processing depends crucially on the qualia of the autonomous-state dynamics of the ongoing neural activity. This default neural activity may be dynamically structured in time and space, showing regular, synchronized, bursting or chaotic activity patterns. We study the influence of non-synaptic plasticity on the default dynamical state of recurrent neural networks. The non-synaptic adaption considered acts on intrinsic neural parameters, such as the threshold and the gain, and is driven by the optimization of the information entropy. We observe, in the presence of the intrinsic adaptation processes, three distinct and globally attracting dynamical regimes, a regular synchronized, an overall chaotic and an intermittent bursting regime. The intermittent bursting regime is characterized by intervals of regular flows, which are quite insensitive to external stimuli, interseeded by chaotic bursts which respond sensitively to input signals. We discuss these finding in the context of self-organized information processing and critical brain dynamics.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Dimitrije Markovic",
+      "Claudius Gros"
+    ],
+    "doi": null,
+    "arxiv_id": "1110.3161v1",
+    "url": "http://arxiv.org/abs/1110.3161v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1604.00502v1",
+    "title": "Online Updating of Word Representations for Part-of-Speech Tagging",
+    "abstract": "We propose online unsupervised domain adaptation (DA), which is performed incrementally as data comes in and is applicable when batch DA is not possible. In a part-of-speech (POS) tagging evaluation, we find that online unsupervised DA performs as well as batch DA.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Wenpeng Yin",
+      "Tobias Schnabel",
+      "Hinrich Schütze"
+    ],
+    "doi": null,
+    "arxiv_id": "1604.00502v1",
+    "url": "http://arxiv.org/abs/1604.00502v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.19850v1",
+    "title": "To MT or not to MT: An eye-tracking study on the reception by Dutch readers of different translation and creativity levels",
+    "abstract": "This article presents the results of a pilot study involving the reception of a fictional short story translated from English into Dutch under four conditions: machine translation (MT), post-editing (PE), human translation (HT) and original source text (ST). The aim is to understand how creativity and errors in different translation modalities affect readers, specifically regarding cognitive load. Eight participants filled in a questionnaire, read a story using an eye-tracker, and conducted a retrospective think-aloud (RTA) interview. The results show that units of creative potential (UCP) increase cognitive load and that this effect is highest for HT and lowest for MT; no effect of error was observed. Triangulating the data with RTAs leads us to hypothesize that the higher cognitive load in UCPs is linked to increases in reader enjoyment and immersion. The effect of translation creativity on cognitive load in different translation modalities at word-level is novel and opens up new avenues for further research. All the code and data are available at https://github.com/INCREC/Pilot_to_MT_or_not_to_MT",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kyo Gerrits",
+      "Ana Guerberof-Arenas"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.19850v1",
+    "url": "http://arxiv.org/abs/2504.19850v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.15189v1",
+    "title": "Partially Oblivious Neural Network Inference",
+    "abstract": "Oblivious inference is the task of outsourcing a ML model, like neural-networks, without disclosing critical and sensitive information, like the model's parameters. One of the most prominent solutions for secure oblivious inference is based on a powerful cryptographic tools, like Homomorphic Encryption (HE) and/or multi-party computation (MPC). Even though the implementation of oblivious inference systems schemes has impressively improved the last decade, there are still significant limitations on the ML models that they can practically implement. Especially when both the ML model and the input data's confidentiality must be protected. In this paper, we introduce the notion of partially oblivious inference. We empirically show that for neural network models, like CNNs, some information leakage can be acceptable. We therefore propose a novel trade-off between security and efficiency. In our research, we investigate the impact on security and inference runtime performance from the CNN model's weights partial leakage. We experimentally demonstrate that in a CIFAR-10 network we can leak up to $80\\%$ of the model's weights with practically no security impact, while the necessary HE-mutliplications are performed four times faster.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Panagiotis Rizomiliotis",
+      "Christos Diou",
+      "Aikaterini Triakosia",
+      "Ilias Kyrannas",
+      "Konstantinos Tserpes"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.15189v1",
+    "url": "http://arxiv.org/abs/2210.15189v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1512.00242v1",
+    "title": "Towards Dropout Training for Convolutional Neural Networks",
+    "abstract": "Recently, dropout has seen increasing use in deep learning. For deep convolutional neural networks, dropout is known to work well in fully-connected layers. However, its effect in convolutional and pooling layers is still not clear. This paper demonstrates that max-pooling dropout is equivalent to randomly picking activation based on a multinomial distribution at training time. In light of this insight, we advocate employing our proposed probabilistic weighted pooling, instead of commonly used max-pooling, to act as model averaging at test time. Empirical evidence validates the superiority of probabilistic weighted pooling. We also empirically show that the effect of convolutional dropout is not trivial, despite the dramatically reduced possibility of over-fitting due to the convolutional architecture. Elaborately designing dropout training simultaneously in max-pooling and fully-connected layers, we achieve state-of-the-art performance on MNIST, and very competitive results on CIFAR-10 and CIFAR-100, relative to other approaches without data augmentation. Finally, we compare max-pooling dropout and stochastic pooling, both of which introduce stochasticity based on multinomial distributions at pooling stage.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Haibing Wu",
+      "Xiaodong Gu"
+    ],
+    "doi": null,
+    "arxiv_id": "1512.00242v1",
+    "url": "http://arxiv.org/abs/1512.00242v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.06539v1",
+    "title": "Efficient Stochastic Inference of Bitwise Deep Neural Networks",
+    "abstract": "Recently published methods enable training of bitwise neural networks which allow reduced representation of down to a single bit per weight. We present a method that exploits ensemble decisions based on multiple stochastically sampled network models to increase performance figures of bitwise neural networks in terms of classification accuracy at inference. Our experiments with the CIFAR-10 and GTSRB datasets show that the performance of such network ensembles surpasses the performance of the high-precision base model. With this technique we achieve 5.81% best classification error on CIFAR-10 test set using bitwise networks. Concerning inference on embedded systems we evaluate these bitwise networks using a hardware efficient stochastic rounding procedure. Our work contributes to efficient embedded bitwise neural networks.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Sebastian Vogel",
+      "Christoph Schorn",
+      "Andre Guntoro",
+      "Gerd Ascheid"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.06539v1",
+    "url": "http://arxiv.org/abs/1611.06539v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.05639v2",
+    "title": "Learning Active Subspaces and Discovering Important Features with Gaussian Radial Basis Functions Neural Networks",
+    "abstract": "Providing a model that achieves a strong predictive performance and is simultaneously interpretable by humans is one of the most difficult challenges in machine learning research due to the conflicting nature of these two objectives. To address this challenge, we propose a modification of the radial basis function neural network model by equipping its Gaussian kernel with a learnable precision matrix. We show that precious information is contained in the spectrum of the precision matrix that can be extracted once the training of the model is completed. In particular, the eigenvectors explain the directions of maximum sensitivity of the model revealing the active subspace and suggesting potential applications for supervised dimensionality reduction. At the same time, the eigenvectors highlight the relationship in terms of absolute variation between the input and the latent variables, thereby allowing us to extract a ranking of the input variables based on their importance to the prediction task enhancing the model interpretability. We conducted numerical experiments for regression, classification, and feature selection tasks, comparing our model against popular machine learning models, the state-of-the-art deep learning-based embedding feature selection techniques, and a transformer model for tabular data. Our results demonstrate that the proposed model does not only yield an attractive prediction performance compared to the competitors but also provides meaningful and interpretable results that potentially could assist the decision-making process in real-world applications. A PyTorch implementation of the model is available on GitHub at the following link. https://github.com/dannyzx/Gaussian-RBFNN",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Danny D'Agostino",
+      "Ilija Ilievski",
+      "Christine Annette Shoemaker"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.05639v2",
+    "url": "http://arxiv.org/abs/2307.05639v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1901.06610v2",
+    "title": "Hierarchical Attentional Hybrid Neural Networks for Document Classification",
+    "abstract": "Document classification is a challenging task with important applications. The deep learning approaches to the problem have gained much attention recently. Despite the progress, the proposed models do not incorporate the knowledge of the document structure in the architecture efficiently and not take into account the contexting importance of words and sentences. In this paper, we propose a new approach based on a combination of convolutional neural networks, gated recurrent units, and attention mechanisms for document classification tasks. The main contribution of this work is the use of convolution layers to extract more meaningful, generalizable and abstract features by the hierarchical representation. The proposed method in this paper improves the results of the current attention-based approaches for document classification.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Jader Abreu",
+      "Luis Fred",
+      "David Macêdo",
+      "Cleber Zanchettin"
+    ],
+    "doi": null,
+    "arxiv_id": "1901.06610v2",
+    "url": "http://arxiv.org/abs/1901.06610v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.05918v1",
+    "title": "A Neural Network-Evolutionary Computational Framework for Remaining Useful Life Estimation of Mechanical Systems",
+    "abstract": "This paper presents a framework for estimating the remaining useful life (RUL) of mechanical systems. The framework consists of a multi-layer perceptron and an evolutionary algorithm for optimizing the data-related parameters. The framework makes use of a strided time window to estimate the RUL for mechanical components. Tuning the data-related parameters can become a very time consuming task. The framework presented here automatically reshapes the data such that the efficiency of the model is increased. Furthermore, the complexity of the model is kept low, e.g. neural networks with few hidden layers and few neurons at each layer. Having simple models has several advantages like short training times and the capacity of being in environments with limited computational resources such as embedded systems. The proposed method is evaluated on the publicly available C-MAPSS dataset, its accuracy is compared against other state-of-the art methods for the same dataset.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "David Laredo",
+      "Zhaoyin Chen",
+      "Oliver Schütze",
+      "Jian-Qiao Sun"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.05918v1",
+    "url": "http://arxiv.org/abs/1905.05918v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.02477v1",
+    "title": "Development of a sensory-neural network for medical diagnosing",
+    "abstract": "Performance of a sensory-neural network developed for diagnosing of diseases is described. Information about patient's condition is provided by answers to the questionnaire. Questions correspond to sensors generating signals when patients acknowledge symptoms. These signals excite neurons in which characteristics of the diseases are represented by synaptic weights associated with indicators of symptoms. The disease corresponding to the most excited neuron is proposed as the result of diagnosing. Its reliability is estimated by the likelihood defined by the ratio of excitation of the most excited neuron and the complete neural network.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Igor Grabec",
+      "Eva Švegl",
+      "Mihael Sok"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.02477v1",
+    "url": "http://arxiv.org/abs/1807.02477v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1411.1792v1",
+    "title": "How transferable are features in deep neural networks?",
+    "abstract": "Many deep neural networks trained on natural images exhibit a curious phenomenon in common: on the first layer they learn features similar to Gabor filters and color blobs. Such first-layer features appear not to be specific to a particular dataset or task, but general in that they are applicable to many datasets and tasks. Features must eventually transition from general to specific by the last layer of the network, but this transition has not been studied extensively. In this paper we experimentally quantify the generality versus specificity of neurons in each layer of a deep convolutional neural network and report a few surprising results. Transferability is negatively affected by two distinct issues: (1) the specialization of higher layer neurons to their original task at the expense of performance on the target task, which was expected, and (2) optimization difficulties related to splitting networks between co-adapted neurons, which was not expected. In an example network trained on ImageNet, we demonstrate that either of these two issues may dominate, depending on whether features are transferred from the bottom, middle, or top of the network. We also document that the transferability of features decreases as the distance between the base task and target task increases, but that transferring features even from distant tasks can be better than using random features. A final surprising result is that initializing a network with transferred features from almost any number of layers can produce a boost to generalization that lingers even after fine-tuning to the target dataset.",
+    "year": 2014,
+    "venue": null,
+    "authors": [
+      "Jason Yosinski",
+      "Jeff Clune",
+      "Yoshua Bengio",
+      "Hod Lipson"
+    ],
+    "doi": null,
+    "arxiv_id": "1411.1792v1",
+    "url": "http://arxiv.org/abs/1411.1792v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.14601v1",
+    "title": "A Metalearned Neural Circuit for Nonparametric Bayesian Inference",
+    "abstract": "Most applications of machine learning to classification assume a closed set of balanced classes. This is at odds with the real world, where class occurrence statistics often follow a long-tailed power-law distribution and it is unlikely that all classes are seen in a single sample. Nonparametric Bayesian models naturally capture this phenomenon, but have significant practical barriers to widespread adoption, namely implementation complexity and computational inefficiency. To address this, we present a method for extracting the inductive bias from a nonparametric Bayesian model and transferring it to an artificial neural network. By simulating data with a nonparametric Bayesian prior, we can metalearn a sequence model that performs inference over an unlimited set of classes. After training, this \"neural circuit\" has distilled the corresponding inductive bias and can successfully perform sequential inference over an open set of classes. Our experimental results show that the metalearned neural circuit achieves comparable or better performance than particle filter-based methods for inference in these models while being faster and simpler to use than methods that explicitly incorporate Bayesian nonparametric inference.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jake C. Snell",
+      "Gianluca Bencomo",
+      "Thomas L. Griffiths"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.14601v1",
+    "url": "http://arxiv.org/abs/2311.14601v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.10015v2",
+    "title": "A Review on Neural Network Models of Schizophrenia and Autism Spectrum Disorder",
+    "abstract": "This survey presents the most relevant neural network models of autism spectrum disorder and schizophrenia, from the first connectionist models to recent deep network architectures. We analyzed and compared the most representative symptoms with its neural model counterpart, detailing the alteration introduced in the network that generates each of the symptoms, and identifying their strengths and weaknesses. We additionally cross-compared Bayesian and free-energy approaches, as they are widely applied to modeling psychiatric disorders and share basic mechanisms with neural networks. Models of schizophrenia mainly focused on hallucinations and delusional thoughts using neural dysconnections or inhibitory imbalance as the predominating alteration. Models of autism rather focused on perceptual difficulties, mainly excessive attention to environment details, implemented as excessive inhibitory connections or increased sensory precision. We found an excessive tight view of the psychopathologies around one specific and simplified effect, usually constrained to the technical idiosyncrasy of the used network architecture. Recent theories and evidence on sensorimotor integration and body perception combined with modern neural network architectures could offer a broader and novel spectrum to approach these psychopathologies. This review emphasizes the power of artificial neural networks for modeling some symptoms of neurological disorders but also calls for further developing these techniques in the field of computational psychiatry.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Pablo Lanillos",
+      "Daniel Oliva",
+      "Anja Philippsen",
+      "Yuichi Yamashita",
+      "Yukie Nagai",
+      "Gordon Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.10015v2",
+    "url": "http://arxiv.org/abs/1906.10015v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.02682v1",
+    "title": "Neural Networks and Schramm-Loewner Evolutions",
+    "abstract": "In this manuscript, we explore the application of neural networks to predict the natural parameter $κ\\geq 0$ of Schramm-Loewner Evolution (SLE$_κ$) theory. SLE$_κ$ is a family of random fractal curves that has significant implications in Statistical Mechanics and Conformal Field Theory. This parameter $κ\\geq 0$ plays an important role in the theory as there are models of Planar Statistical Physics that are proven to have SLE as scaling limits as well as others that are conjectured to have this limit for various choices of the parameter $κ\\geq 0$. In addition, there are three different statistical behaviors of the SLE curves as the parameter $κ$ changes in $[0, \\infty).$ Leveraging the powerful pattern recognition capabilities of neural networks, this study aims to develop a predictive model that can estimate the $κ$ parameter with good accuracy.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Neilesh Shrotri",
+      "Vlad Margarint"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.02682v1",
+    "url": "http://arxiv.org/abs/2606.02682v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.04937v1",
+    "title": "Using statistics and mathematical modelling to understand infectious disease outbreaks: COVID-19 as an example",
+    "abstract": "During an infectious disease outbreak, biases in the data and complexities of the underlying dynamics pose significant challenges in mathematically modelling the outbreak and designing policy. Motivated by the ongoing response to COVID-19, we provide a toolkit of statistical and mathematical models beyond the simple SIR-type differential equation models for analysing the early stages of an outbreak and assessing interventions. In particular, we focus on parameter estimation in the presence of known biases in the data, and the effect of non-pharmaceutical interventions in enclosed subpopulations, such as households and care homes. We illustrate these methods by applying them to the COVID-19 pandemic.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Christopher E. Overton",
+      "Helena B. Stage",
+      "Shazaad Ahmad",
+      "Jacob Curran-Sebastian",
+      "Paul Dark",
+      "Rajenki Das",
+      "Elizabeth Fearon",
+      "Timothy Felton",
+      "Martyn Fyles",
+      "Nick Gent",
+      "Ian Hall",
+      "Thomas House",
+      "Hugo Lewkowicz",
+      "Xiaoxi Pang",
+      "Lorenzo Pellis",
+      "Robert Sawko",
+      "Andrew Ustianowski",
+      "Bindu Vekaria",
+      "Luke Webb"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.04937v1",
+    "url": "http://arxiv.org/abs/2005.04937v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

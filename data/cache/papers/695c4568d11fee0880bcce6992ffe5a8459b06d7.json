@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W4327810129",
+  "title": "ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+  "abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Zhewei Yao",
+    "Xiaoxia Wu",
+    "Cheng Li",
+    "Stephen Youn",
+    "Yuxiong He"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2303.08302",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2303.08302",
+  "citation_count": 15,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hyde",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Vector quantization",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2051487156",
+      "https://openalex.org/W2073681303",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W2121067345",
+      "https://openalex.org/W3209251257"
+    ]
+  }
+}

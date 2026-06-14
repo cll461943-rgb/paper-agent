@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W4221159612",
+  "title": "QDrop: Randomly Dropping Quantization for Extremely Low-bit Post-Training Quantization",
+  "abstract": "Recently, post-training quantization (PTQ) has driven much attention to produce efficient neural networks without long-time retraining. Despite its low cost, current PTQ works tend to fail under the extremely low-bit setting. In this study, we pioneeringly confirm that properly incorporating activation quantization into the PTQ reconstruction benefits the final accuracy. To deeply understand the inherent reason, a theoretical framework is established, indicating that the flatness of the optimized low-bit model on calibration and test data is crucial. Based on the conclusion, a simple yet effective approach dubbed as QDROP is proposed, which randomly drops the quantization of activations during PTQ. Extensive experiments on various tasks including computer vision (image classification, object detection) and natural language processing (text classification and question answering) prove its superiority. With QDROP, the limit of PTQ is pushed to the 2-bit activation for the first time and the accuracy boost can be up to 51.49%. Without bells and whistles, QDROP establishes a new state of the art for PTQ. Our code is available at https://github.com/wimh966/QDrop and has been integrated into MQBench (https://github.com/ModelTC/MQBench)",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Xiuying Wei",
+    "Ruihao Gong",
+    "Yuhang Li",
+    "Xianglong Liu",
+    "Fengwei Yu"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2203.05740",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2203.05740",
+  "citation_count": 44,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Speech recognition",
+      "Artificial intelligence",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2051487156",
+      "https://openalex.org/W2073681303",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W2382290278",
+      "https://openalex.org/W4391913857"
+    ]
+  }
+}

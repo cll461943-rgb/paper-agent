@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:40882207",
+  "title": "Natural Language Processing and ",
+  "abstract": "Bleeding adverse drug events (ADEs), particularly among older inpatients receiving antithrombotic therapy, represent a major safety concern in hospitals. These events are often underdetected by conventional rule-based systems relying on structured electronic medical record data, such as the ICD-10 (International Statistical Classification of Diseases and Related Health Problems 10th Revision) codes, which lack the granularity to capture nuanced clinical narratives. This study aimed to develop and evaluate a natural language processing (NLP) model to detect and categorize bleeding ADEs in discharge summaries of older adults. Specifically, the model was designed to distinguish between \"clinically significant bleeding,\" \"severe bleeding,\" \"history of bleeding,\" and \"no bleeding,\" and was compared with a rule-based algorithm using ICD-10 codes. Clinicians manually annotated 400 discharge summaries, comprising 65,706 sentences, into four categories: \"no bleeding,\" \"clinically significant bleeding,\" \"severe bleeding,\" and \"history of bleeding.\" The dataset was divided into a training set (70%, 47,100 sentences) and a test set (30%, 18,606 sentences). Two detection approaches were developed and evaluated: (1) an NLP model using binary logistic regression and support vector machine classifiers, and (2) a traditional rule-based algorithm relying exclusively on predefined ICD-10 codes. To address class imbalance, with most sentences categorized as irrelevant (\"no bleeding\"), a class-weighting strategy was applied in the NLP model. Model performance was assessed using accuracy, precision, recall, F1-score, and receiver operating characteristic (ROC) curve analyses, with manual annotations as the gold standard. The NLP model significantly outperformed the rule-based approach across all evaluation metrics. At the document level, the NLP model achieved macro-average scores of 0.81 for accuracy and 0.80 for F1-score. Precision was particularly high for detecting severe (0.92) and clinically significant bleeding events (0.87), demonstrating strong classification capability despite class imbalance. ROC analyses confirmed the model's robust diagnostic performance, yielding an area under the curve (AUC) of 0.91 when distinguishing irrelevant sentences from potential bleeding events, 0.88 for identifying historical mentions of bleeding, and notably, 0.94 for differentiating clinically significant from severe bleeding. In contrast, the rule-based ICD-10 model demonstrated high precision (0.94) for clinically significant bleeding but poor recall (0.03) for severe bleeding events, reflecting frequent missed detections. This limitation arose due to its reliance on commonly used ICD-10 codes (eg, gastrointestinal hemorrhage) and inadequate capture of rare severe bleeding conditions such as shock due to hemorrhage. This study highlights the considerable advantage of NLP over traditional ICD-10-based methods for detecting bleeding ADEs within electronic medical records. The NLP model effectively captured nuanced clinical narratives, including severity, negations, and historical bleeding events, demonstrating substantial promise for improving patient safety surveillance and clinical decision-making. Future research should extend validation across multiple institutions, diversify annotated datasets, and further refine temporal reasoning capabilities within NLP algorithms.",
+  "year": 2025,
+  "venue": "JMIR medical informatics",
+  "authors": [
+    "Frederic Gaspar",
+    "Mehdi Zayene",
+    "Claire Coumau",
+    "Elliott Bertrand",
+    "Marie Bettex",
+    "Marie Annick Le Pogam",
+    "Chantal Csajka"
+  ],
+  "doi": "10.2196/67837",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40882207/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40882207"
+  }
+}

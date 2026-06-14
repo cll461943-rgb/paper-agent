@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:38691432",
+  "title": "Learning With Noisy Labels Over Imbalanced Subpopulations.",
+  "abstract": "Learning with noisy labels (LNL) has attracted significant attention from the research community. Many recent LNL methods rely on the assumption that clean samples tend to have a \"small loss.\" However, this assumption often fails to generalize to some real-world cases with imbalanced subpopulations, that is, training subpopulations that vary in sample size or recognition difficulty. Therefore, recent LNL methods face the risk of misclassifying those \"informative\" samples (e.g., hard samples or samples in the tail subpopulations) into noisy samples, leading to poor generalization performance. To address this issue, we propose a novel LNL method to deal with noisy labels and imbalanced subpopulations simultaneously. It first leverages sample correlation to estimate samples' clean probabilities for label correction and then utilizes corrected labels for distributionally robust optimization (DRO) to further improve the robustness. Specifically, in contrast to previous works using classification loss as the selection criterion, we introduce a feature-based metric that takes the sample correlation into account for estimating samples' clean probabilities. Then, we refurbish the noisy labels using the estimated clean probabilities and the pseudo-labels from the model's predictions. With refurbished labels, we use DRO to train the model to be robust to subpopulation imbalance. Extensive experiments on a wide range of benchmarks demonstrate that our technique can consistently improve state-of-the-art (SOTA) robust learning paradigms against noisy labels, especially when encountering imbalanced subpopulations. We provide our code in https://github.com/chenmc1996/LNL-IS.",
+  "year": 2025,
+  "venue": "IEEE transactions on neural networks and learning systems",
+  "authors": [
+    "Mingcai Chen",
+    "Yu Zhao",
+    "Bing He",
+    "Zongbo Han",
+    "Junzhou Huang",
+    "Bingzhe Wu",
+    "Jianhua Yao"
+  ],
+  "doi": "10.1109/TNNLS.2024.3389676",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38691432/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "38691432"
+  }
+}

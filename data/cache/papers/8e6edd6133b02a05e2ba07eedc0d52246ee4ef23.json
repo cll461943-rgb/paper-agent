@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2601.12347v1",
+  "title": "RIPPLE++: An Incremental Framework for Efficient GNN Inference on Evolving Graphs",
+  "abstract": "Real-world graphs are dynamic, with frequent updates to their structure and features due to evolving vertex and edge properties. These continual changes pose significant challenges for efficient inference in graph neural networks (GNNs). Existing vertex-wise and layer-wise inference approaches are ill-suited for dynamic graphs, as they incur redundant computations, large neighborhood traversals, and high communication costs, especially in distributed settings. Additionally, while sampling-based approaches can be adopted to approximate final layer embeddings, these are often not preferred in critical applications due to their non-determinism. These limitations hinder low-latency inference required in real-time applications. To address this, we propose RIPPLE++, a framework for streaming GNN inference that efficiently and accurately updates embeddings in response to changes in the graph structure or features. RIPPLE++ introduces a generalized incremental programming model that captures the semantics of GNN aggregation functions and incrementally propagates updates to affected neighborhoods. RIPPLE++ accommodates all common graph updates, including vertex/edge addition/deletions and vertex feature updates. RIPPLE++ supports both single-machine and distributed deployments. On a single machine, it achieves up to $56$K updates/sec on sparse graphs like Arxiv ($169$K vertices, $1.2$M edges), and about $7.6$K updates/sec on denser graphs like Products ($2.5$M vertices, $123.7$M edges), with latencies of $0.06$--$960$ms, and outperforming state-of-the-art baselines by $2.2$--$24\\times$ on throughput. In distributed settings, RIPPLE++ offers up to $\\approx25\\times$ higher throughput and $20\\times$ lower communication costs compared to recomputing baselines.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Pranjal Naman",
+    "Parv Agarwal",
+    "Hrishikesh Haritas",
+    "Yogesh Simmhan"
+  ],
+  "doi": null,
+  "arxiv_id": "2601.12347v1",
+  "url": "http://arxiv.org/abs/2601.12347v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,879 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/1810.04805v2",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jacob Devlin",
+      "Ming-Wei Chang",
+      "Kenton Lee",
+      "Kristina Toutanova"
+    ],
+    "doi": null,
+    "arxiv_id": "1810.04805v2",
+    "url": "http://arxiv.org/abs/1810.04805v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.09061v4",
+    "title": "VLP: A Survey on Vision-Language Pre-training",
+    "abstract": "In the past few years, the emergence of pre-training models has brought uni-modal fields such as computer vision (CV) and natural language processing (NLP) to a new era. Substantial works have shown they are beneficial for downstream uni-modal tasks and avoid training a new model from scratch. So can such pre-trained models be applied to multi-modal tasks? Researchers have explored this problem and made significant progress. This paper surveys recent advances and new frontiers in vision-language pre-training (VLP), including image-text and video-text pre-training. To give readers a better overall grasp of VLP, we first review its recent advances from five aspects: feature extraction, model architecture, pre-training objectives, pre-training datasets, and downstream tasks. Then, we summarize the specific VLP models in detail. Finally, we discuss the new frontiers in VLP. To the best of our knowledge, this is the first survey focused on VLP. We hope that this survey can shed light on future research in the VLP field.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Feilong Chen",
+      "Duzhen Zhang",
+      "Minglun Han",
+      "Xiuyi Chen",
+      "Jing Shi",
+      "Shuang Xu",
+      "Bo Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.09061v4",
+    "url": "http://arxiv.org/abs/2202.09061v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.08254v2",
+    "title": "BEiT: BERT Pre-Training of Image Transformers",
+    "abstract": "We introduce a self-supervised vision representation model BEiT, which stands for Bidirectional Encoder representation from Image Transformers. Following BERT developed in the natural language processing area, we propose a masked image modeling task to pretrain vision Transformers. Specifically, each image has two views in our pre-training, i.e, image patches (such as 16x16 pixels), and visual tokens (i.e., discrete tokens). We first \"tokenize\" the original image into visual tokens. Then we randomly mask some image patches and fed them into the backbone Transformer. The pre-training objective is to recover the original visual tokens based on the corrupted image patches. After pre-training BEiT, we directly fine-tune the model parameters on downstream tasks by appending task layers upon the pretrained encoder. Experimental results on image classification and semantic segmentation show that our model achieves competitive results with previous pre-training methods. For example, base-size BEiT achieves 83.2% top-1 accuracy on ImageNet-1K, significantly outperforming from-scratch DeiT training (81.8%) with the same setup. Moreover, large-size BEiT obtains 86.3% only using ImageNet-1K, even outperforming ViT-L with supervised pre-training on ImageNet-22K (85.2%). The code and pretrained models are available at https://aka.ms/beit.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Hangbo Bao",
+      "Li Dong",
+      "Songhao Piao",
+      "Furu Wei"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.08254v2",
+    "url": "http://arxiv.org/abs/2106.08254v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.07202v3",
+    "title": "Pre-training technique to localize medical BERT and enhance biomedical BERT",
+    "abstract": "Pre-training large-scale neural language models on raw texts has made a significant contribution to improving transfer learning in natural language processing (NLP). With the introduction of transformer-based language models, such as bidirectional encoder representations from transformers (BERT), the performance of information extraction from a free text by NLP has significantly improved for both the general domain and medical domain; however, it is difficult to train specific BERT models that perform well for domains in which there are few publicly available databases of high quality and large size. We hypothesized that this problem can be addressed by up-sampling a domain-specific corpus and using it for pre-training with a larger corpus in a balanced manner. Our proposed method consists of a single intervention with one option: simultaneous pre-training after up-sampling and amplified vocabulary. We conducted three experiments and evaluated the resulting products. We confirmed that our Japanese medical BERT outperformed conventional baselines and the other BERT models in terms of the medical document classification task and that our English BERT pre-trained using both the general and medical-domain corpora performed sufficiently well for practical use in terms of the biomedical language understanding evaluation (BLUE) benchmark. Moreover, our enhanced biomedical BERT model, in which clinical notes were not used during pre-training, showed that both the clinical and biomedical scores of the BLUE benchmark were 0.3 points above that of the ablation model trained without our proposed method. Well-balanced pre-training by up-sampling instances derived from a corpus appropriate for the target task allows us to construct a high-performance BERT model.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Shoya Wada",
+      "Toshihiro Takeda",
+      "Shiro Manabe",
+      "Shozo Konishi",
+      "Jun Kamohara",
+      "Yasushi Matsumura"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.07202v3",
+    "url": "http://arxiv.org/abs/2005.07202v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.09263v1",
+    "title": "Vision-Language Pre-training: Basics, Recent Advances, and Future Trends",
+    "abstract": "This paper surveys vision-language pre-training (VLP) methods for multimodal intelligence that have been developed in the last few years. We group these approaches into three categories: ($i$) VLP for image-text tasks, such as image captioning, image-text retrieval, visual question answering, and visual grounding; ($ii$) VLP for core computer vision tasks, such as (open-set) image classification, object detection, and segmentation; and ($iii$) VLP for video-text tasks, such as video captioning, video-text retrieval, and video question answering. For each category, we present a comprehensive review of state-of-the-art methods, and discuss the progress that has been made and challenges still being faced, using specific systems and models as case studies. In addition, for each category, we discuss advanced topics being actively explored in the research community, such as big foundation models, unified modeling, in-context few-shot learning, knowledge, robustness, and computer vision in the wild, to name a few.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zhe Gan",
+      "Linjie Li",
+      "Chunyuan Li",
+      "Lijuan Wang",
+      "Zicheng Liu",
+      "Jianfeng Gao"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.09263v1",
+    "url": "http://arxiv.org/abs/2210.09263v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.16110v3",
+    "title": "Kaleido-BERT: Vision-Language Pre-training on Fashion Domain",
+    "abstract": "We present a new vision-language (VL) pre-training model dubbed Kaleido-BERT, which introduces a novel kaleido strategy for fashion cross-modality representations from transformers. In contrast to random masking strategy of recent VL models, we design alignment guided masking to jointly focus more on image-text semantic relations. To this end, we carry out five novel tasks, i.e., rotation, jigsaw, camouflage, grey-to-color, and blank-to-color for self-supervised VL pre-training at patches of different scale. Kaleido-BERT is conceptually simple and easy to extend to the existing BERT framework, it attains new state-of-the-art results by large margins on four downstream tasks, including text retrieval (R@1: 4.03% absolute improvement), image retrieval (R@1: 7.13% abs imv.), category recognition (ACC: 3.28% abs imv.), and fashion captioning (Bleu4: 1.2 abs imv.). We validate the efficiency of Kaleido-BERT on a wide range of e-commerical websites, demonstrating its broader potential in real-world applications.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mingchen Zhuge",
+      "Dehong Gao",
+      "Deng-Ping Fan",
+      "Linbo Jin",
+      "Ben Chen",
+      "Haoming Zhou",
+      "Minghui Qiu",
+      "Ling Shao"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.16110v3",
+    "url": "http://arxiv.org/abs/2103.16110v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.07142v2",
+    "title": "Semantic Importance-Aware Communications Using Pre-trained Language Models",
+    "abstract": "This letter proposes a semantic importance-aware communication (SIAC) scheme using pre-trained language models (e.g., ChatGPT, BERT, etc.). Specifically, we propose a cross-layer design with a pre-trained language model embedded in/connected by the cross-layer manager. The pre-trained language model is utilized to quantify the semantic importance of data frames. Based on the quantified semantic importance, we investigate semantic importance-aware power allocation. Unlike existing deep joint source-channel coding (Deep-JSCC)-based semantic communication schemes, SIAC can be directly embedded into current communication systems by only introducing a cross-layer manager. Our experimental results show that the proposed SIAC scheme can achieve lower semantic loss than existing equal-priority communications.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shuaishuai Guo",
+      "Yanhu Wang",
+      "Shujing Li",
+      "Nasir Saeed"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.07142v2",
+    "url": "http://arxiv.org/abs/2302.07142v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.13991v1",
+    "title": "Analysing The Impact of Sequence Composition on Language Model Pre-Training",
+    "abstract": "Most language model pre-training frameworks concatenate multiple documents into fixed-length sequences and use causal masking to compute the likelihood of each token given its context; this strategy is widely adopted due to its simplicity and efficiency. However, to this day, the influence of the pre-training sequence composition strategy on the generalisation properties of the model remains under-explored. In this work, we find that applying causal masking can lead to the inclusion of distracting information from previous documents during pre-training, which negatively impacts the performance of the models on language modelling and downstream tasks. In intra-document causal masking, the likelihood of each token is only conditioned on the previous tokens in the same document, eliminating potential distracting information from previous documents and significantly improving performance. Furthermore, we find that concatenating related documents can reduce some potential distractions during pre-training, and our proposed efficient retrieval-based sequence construction method, BM25Chunk, can improve in-context learning (+11.6\\%), knowledge memorisation (+9.8\\%), and context utilisation (+7.2\\%) abilities of language models without sacrificing efficiency.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yu Zhao",
+      "Yuanbin Qu",
+      "Konrad Staniszewski",
+      "Szymon Tworkowski",
+      "Wei Liu",
+      "Piotr Miłoś",
+      "Yuxiang Wu",
+      "Pasquale Minervini"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.13991v1",
+    "url": "http://arxiv.org/abs/2402.13991v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.12440v1",
+    "title": "Spectrum-BERT: Pre-training of Deep Bidirectional Transformers for Spectral Classification of Chinese Liquors",
+    "abstract": "Spectral detection technology, as a non-invasive method for rapid detection of substances, combined with deep learning algorithms, has been widely used in food detection. However, in real scenarios, acquiring and labeling spectral data is an extremely labor-intensive task, which makes it impossible to provide enough high-quality data for training efficient supervised deep learning models. To better leverage limited samples, we apply pre-training & fine-tuning paradigm to the field of spectral detection for the first time and propose a pre-training method of deep bidirectional transformers for spectral classification of Chinese liquors, abbreviated as Spectrum-BERT. Specifically, first, to retain the model's sensitivity to the characteristic peak position and local information of the spectral curve, we innovatively partition the curve into multiple blocks and obtain the embeddings of different blocks, as the feature input for the next calculation. Second, in the pre-training stage, we elaborately design two pre-training tasks, Next Curve Prediction (NCP) and Masked Curve Model (MCM), so that the model can effectively utilize unlabeled samples to capture the potential knowledge of spectral data, breaking the restrictions of the insufficient labeled samples, and improving the applicability and performance of the model in practical scenarios. Finally, we conduct a large number of experiments on the real liquor spectral dataset. In the comparative experiments, the proposed Spectrum-BERT significantly outperforms the baselines in multiple metrics and this advantage is more significant on the imbalanced dataset. Moreover, in the parameter sensitivity experiment, we also analyze the model performance under different parameter settings, to provide a reference for subsequent research.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Yansong Wang",
+      "Yundong Sun",
+      "Yansheng Fu",
+      "Dongjie Zhu",
+      "Zhaoshuo Tian"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.12440v1",
+    "url": "http://arxiv.org/abs/2210.12440v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.03197v3",
+    "title": "Unified Language Model Pre-training for Natural Language Understanding and Generation",
+    "abstract": "This paper presents a new Unified pre-trained Language Model (UniLM) that can be fine-tuned for both natural language understanding and generation tasks. The model is pre-trained using three types of language modeling tasks: unidirectional, bidirectional, and sequence-to-sequence prediction. The unified modeling is achieved by employing a shared Transformer network and utilizing specific self-attention masks to control what context the prediction conditions on. UniLM compares favorably with BERT on the GLUE benchmark, and the SQuAD 2.0 and CoQA question answering tasks. Moreover, UniLM achieves new state-of-the-art results on five natural language generation datasets, including improving the CNN/DailyMail abstractive summarization ROUGE-L to 40.51 (2.04 absolute improvement), the Gigaword abstractive summarization ROUGE-L to 35.75 (0.86 absolute improvement), the CoQA generative question answering F1 score to 82.5 (37.1 absolute improvement), the SQuAD question generation BLEU-4 to 22.12 (3.75 absolute improvement), and the DSTC7 document-grounded dialog response generation NIST-4 to 2.67 (human performance is 2.65). The code and pre-trained models are available at https://github.com/microsoft/unilm.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Li Dong",
+      "Nan Yang",
+      "Wenhui Wang",
+      "Furu Wei",
+      "Xiaodong Liu",
+      "Yu Wang",
+      "Jianfeng Gao",
+      "Ming Zhou",
+      "Hsiao-Wuen Hon"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.03197v3",
+    "url": "http://arxiv.org/abs/1905.03197v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.10063v1",
+    "title": "Uniform Masking: Enabling MAE Pre-training for Pyramid-based Vision Transformers with Locality",
+    "abstract": "Masked AutoEncoder (MAE) has recently led the trends of visual self-supervision area by an elegant asymmetric encoder-decoder design, which significantly optimizes both the pre-training efficiency and fine-tuning accuracy. Notably, the success of the asymmetric structure relies on the \"global\" property of Vanilla Vision Transformer (ViT), whose self-attention mechanism reasons over arbitrary subset of discrete image patches. However, it is still unclear how the advanced Pyramid-based ViTs (e.g., PVT, Swin) can be adopted in MAE pre-training as they commonly introduce operators within \"local\" windows, making it difficult to handle the random sequence of partial vision tokens. In this paper, we propose Uniform Masking (UM), successfully enabling MAE pre-training for Pyramid-based ViTs with locality (termed \"UM-MAE\" for short). Specifically, UM includes a Uniform Sampling (US) that strictly samples $1$ random patch from each $2 \\times 2$ grid, and a Secondary Masking (SM) which randomly masks a portion of (usually $25\\%$) the already sampled regions as learnable tokens. US preserves equivalent elements across multiple non-overlapped local windows, resulting in the smooth support for popular Pyramid-based ViTs; whilst SM is designed for better transferable visual representations since US reduces the difficulty of pixel recovery pre-task that hinders the semantic learning. We demonstrate that UM-MAE significantly improves the pre-training efficiency (e.g., it speeds up and reduces the GPU memory by $\\sim 2\\times$) of Pyramid-based ViTs, but maintains the competitive fine-tuning performance across downstream tasks. For example using HTC++ detector, the pre-trained Swin-Large backbone self-supervised under UM-MAE only in ImageNet-1K can even outperform the one supervised in ImageNet-22K. The codes are available at https://github.com/implus/UM-MAE.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Xiang Li",
+      "Wenhai Wang",
+      "Lingfeng Yang",
+      "Jian Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.10063v1",
+    "url": "http://arxiv.org/abs/2205.10063v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.00942v1",
+    "title": "Deep Learning and Computational Physics (Lecture Notes)",
+    "abstract": "These notes were compiled as lecture notes for a course developed and taught at the University of the Southern California. They should be accessible to a typical engineering graduate student with a strong background in Applied Mathematics. The main objective of these notes is to introduce a student who is familiar with concepts in linear algebra and partial differential equations to select topics in deep learning. These lecture notes exploit the strong connections between deep learning algorithms and the more conventional techniques of computational physics to achieve two goals. First, they use concepts from computational physics to develop an understanding of deep learning algorithms. Not surprisingly, many concepts in deep learning can be connected to similar concepts in computational physics, and one can utilize this connection to better understand these algorithms. Second, several novel deep learning algorithms can be used to solve challenging problems in computational physics. Thus, they offer someone who is interested in modeling a physical phenomena with a complementary set of tools.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Deep Ray",
+      "Orazio Pinti",
+      "Assad A. Oberai"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.00942v1",
+    "url": "http://arxiv.org/abs/2301.00942v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.04788v1",
+    "title": "Language Cognition and Language Computation -- Human and Machine Language Understanding",
+    "abstract": "Language understanding is a key scientific issue in the fields of cognitive and computer science. However, the two disciplines differ substantially in the specific research questions. Cognitive science focuses on analyzing the specific mechanism of the brain and investigating the brain's response to language; few studies have examined the brain's language system as a whole. By contrast, computer scientists focus on the efficiency of practical applications when choosing research questions but may ignore the most essential laws of language. Given these differences, can a combination of the disciplines offer new insights for building intelligent language models and studying language cognitive mechanisms? In the following text, we first review the research questions, history, and methods of language understanding in cognitive and computer science, focusing on the current progress and challenges. We then compare and contrast the research of language understanding in cognitive and computer sciences. Finally, we review existing work that combines insights from language cognition and language computation and offer prospects for future development trends.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Shaonan Wang",
+      "Nai Ding",
+      "Nan Lin",
+      "Jiajun Zhang",
+      "Chengqing Zong"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.04788v1",
+    "url": "http://arxiv.org/abs/2301.04788v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.10055v1",
+    "title": "Training Language Models via Neural Cellular Automata",
+    "abstract": "Pre-training is crucial for large language models (LLMs), as it is when most representations and capabilities are acquired. However, natural language pre-training has problems: high-quality text is finite, it contains human biases, and it entangles knowledge with reasoning. This raises a fundamental question: is natural language the only path to intelligence? We propose using neural cellular automata (NCA) to generate synthetic, non-linguistic data for pre-pre-training LLMs--training on synthetic-then-natural language. NCA data exhibits rich spatiotemporal structure and statistics resembling natural language while being controllable and cheap to generate at scale. We find that pre-pre-training on only 164M NCA tokens improves downstream language modeling by up to 6% and accelerates convergence by up to 1.6x. Surprisingly, this even outperforms pre-pre-training on 1.6B tokens of natural language from Common Crawl with more compute. These gains also transfer to reasoning benchmarks, including GSM8K, HumanEval, and BigBench-Lite. Investigating what drives transfer, we find that attention layers are the most transferable, and that optimal NCA complexity varies by domain: code benefits from simpler dynamics, while math and web text favor more complex ones. These results enable systematic tuning of the synthetic distribution to target domains. More broadly, our work opens a path toward more efficient models with fully synthetic pre-training.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Dan Lee",
+      "Seungwook Han",
+      "Akarsh Kumar",
+      "Pulkit Agrawal"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.10055v1",
+    "url": "http://arxiv.org/abs/2603.10055v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2207.08179v1",
+    "title": "End-to-End Spoken Language Understanding: Performance analyses of a voice command task in a low resource setting",
+    "abstract": "Spoken Language Understanding (SLU) is a core task in most human-machine interaction systems. With the emergence of smart homes, smart phones and smart speakers, SLU has become a key technology for the industry. In a classical SLU approach, an Automatic Speech Recognition (ASR) module transcribes the speech signal into a textual representation from which a Natural Language Understanding (NLU) module extracts semantic information. Recently End-to-End SLU (E2E SLU) based on Deep Neural Networks has gained momentum since it benefits from the joint optimization of the ASR and the NLU parts, hence limiting the cascade of error effect of the pipeline architecture. However, little is known about the actual linguistic properties used by E2E models to predict concepts and intents from speech input. In this paper, we present a study identifying the signal features and other linguistic properties used by an E2E model to perform the SLU task. The study is carried out in the application domain of a smart home that has to handle non-English (here French) voice commands. The results show that a good E2E SLU performance does not always require a perfect ASR capability. Furthermore, the results show the superior capabilities of the E2E model in handling background noise and syntactic variation compared to the pipeline model. Finally, a finer-grained analysis suggests that the E2E model uses the pitch information of the input signal to identify voice command concepts. The results and methodology outlined in this paper provide a springboard for further analyses of E2E models in speech processing.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Thierry Desot",
+      "François Portet",
+      "Michel Vacher"
+    ],
+    "doi": null,
+    "arxiv_id": "2207.08179v1",
+    "url": "http://arxiv.org/abs/2207.08179v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.12283v2",
+    "title": "ST-BERT: Cross-modal Language Model Pre-training For End-to-end Spoken Language Understanding",
+    "abstract": "Language model pre-training has shown promising results in various downstream tasks. In this context, we introduce a cross-modal pre-trained language model, called Speech-Text BERT (ST-BERT), to tackle end-to-end spoken language understanding (E2E SLU) tasks. Taking phoneme posterior and subword-level text as an input, ST-BERT learns a contextualized cross-modal alignment via our two proposed pre-training tasks: Cross-modal Masked Language Modeling (CM-MLM) and Cross-modal Conditioned Language Modeling (CM-CLM). Experimental results on three benchmarks present that our approach is effective for various SLU datasets and shows a surprisingly marginal performance degradation even when 1% of the training data are available. Also, our method shows further SLU performance gain via domain-adaptive pre-training with domain-specific speech-text pair data.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Minjeong Kim",
+      "Gyuwan Kim",
+      "Sang-Woo Lee",
+      "Jung-Woo Ha"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.12283v2",
+    "url": "http://arxiv.org/abs/2010.12283v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.11685v2",
+    "title": "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise",
+    "abstract": "In this paper, we introduce a novel dIffusion language modEl pre-training framework for text generation, which we call GENIE. GENIE is a large-scale pretrained diffusion language model that consists of an encoder and a diffusion-based decoder, which can generate text by gradually transforming a random noise sequence into a coherent text sequence. To pre-train GENIE on a large-scale language corpus, we design a new continuous paragraph denoise objective, which encourages the diffusion-decoder to reconstruct a clean text paragraph from a corrupted version, while preserving the semantic and syntactic coherence. We evaluate GENIE on four downstream text generation benchmarks, namely XSum, CNN/DailyMail, Gigaword, and CommonGen. Our experimental results show that GENIE achieves comparable performance with the state-of-the-art autoregressive models on these benchmarks, and generates more diverse text samples. The code and models of GENIE are available at https://github.com/microsoft/ProphetNet/tree/master/GENIE.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zhenghao Lin",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Tong Wu",
+      "Zhihao Fan",
+      "Chen Lin",
+      "Nan Duan",
+      "Weizhu Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.11685v2",
+    "url": "http://arxiv.org/abs/2212.11685v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2012.06469v1",
+    "title": "DILIE: Deep Internal Learning for Image Enhancement",
+    "abstract": "We consider the generic deep image enhancement problem where an input image is transformed into a perceptually better-looking image. Recent methods for image enhancement consider the problem by performing style transfer and image restoration. The methods mostly fall into two categories: training data-based and training data-independent (deep internal learning methods). We perform image enhancement in the deep internal learning framework. Our Deep Internal Learning for Image Enhancement framework enhances content features and style features and uses contextual content loss for preserving image context in the enhanced image. We show results on both hazy and noisy image enhancement. To validate the results, we use structure similarity and perceptual error, which is efficient in measuring the unrealistic deformation present in the images. We show that the proposed framework outperforms the relevant state-of-the-art works for image enhancement.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Indra Deep Mastan",
+      "Shanmuganathan Raman"
+    ],
+    "doi": null,
+    "arxiv_id": "2012.06469v1",
+    "url": "http://arxiv.org/abs/2012.06469v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1908.04577v3",
+    "title": "StructBERT: Incorporating Language Structures into Pre-training for Deep Language Understanding",
+    "abstract": "Recently, the pre-trained language model, BERT (and its robustly optimized version RoBERTa), has attracted a lot of attention in natural language understanding (NLU), and achieved state-of-the-art accuracy in various NLU tasks, such as sentiment classification, natural language inference, semantic textual similarity and question answering. Inspired by the linearization exploration work of Elman [8], we extend BERT to a new model, StructBERT, by incorporating language structures into pre-training. Specifically, we pre-train StructBERT with two auxiliary tasks to make the most of the sequential order of words and sentences, which leverage language structures at the word and sentence levels, respectively. As a result, the new model is adapted to different levels of language understanding required by downstream tasks. The StructBERT with structural pre-training gives surprisingly good empirical results on a variety of downstream tasks, including pushing the state-of-the-art on the GLUE benchmark to 89.0 (outperforming all published models), the F1 score on SQuAD v1.1 question answering to 93.0, the accuracy on SNLI to 91.7.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Wei Wang",
+      "Bin Bi",
+      "Ming Yan",
+      "Chen Wu",
+      "Zuyi Bao",
+      "Jiangnan Xia",
+      "Liwei Peng",
+      "Luo Si"
+    ],
+    "doi": null,
+    "arxiv_id": "1908.04577v3",
+    "url": "http://arxiv.org/abs/1908.04577v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.09957v2",
+    "title": "Memorization in Deep Neural Networks: Does the Loss Function matter?",
+    "abstract": "Deep Neural Networks, often owing to the overparameterization, are shown to be capable of exactly memorizing even randomly labelled data. Empirical studies have also shown that none of the standard regularization techniques mitigate such overfitting. We investigate whether the choice of the loss function can affect this memorization. We empirically show, with benchmark data sets MNIST and CIFAR-10, that a symmetric loss function, as opposed to either cross-entropy or squared error loss, results in significant improvement in the ability of the network to resist such overfitting. We then provide a formal definition for robustness to memorization and provide a theoretical explanation as to why the symmetric losses provide this robustness. Our results clearly bring out the role loss functions alone can play in this phenomenon of memorization.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Deep Patel",
+      "P. S. Sastry"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.09957v2",
+    "url": "http://arxiv.org/abs/2107.09957v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.06732v2",
+    "title": "On the approximation of rough functions with deep neural networks",
+    "abstract": "Deep neural networks and the ENO procedure are both efficient frameworks for approximating rough functions. We prove that at any order, the ENO interpolation procedure can be cast as a deep ReLU neural network. This surprising fact enables the transfer of several desirable properties of the ENO procedure to deep neural networks, including its high-order accuracy at approximating Lipschitz functions. Numerical tests for the resulting neural networks show excellent performance for approximating solutions of nonlinear conservation laws and at data compression.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Tim De Ryck",
+      "Siddhartha Mishra",
+      "Deep Ray"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.06732v2",
+    "url": "http://arxiv.org/abs/1912.06732v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.08815v1",
+    "title": "Efficient Vision-Language Pre-training by Cluster Masking",
+    "abstract": "We propose a simple strategy for masking image patches during visual-language contrastive learning that improves the quality of the learned representations and the training speed. During each iteration of training, we randomly mask clusters of visually similar image patches, as measured by their raw pixel intensities. This provides an extra learning signal, beyond the contrastive training itself, since it forces a model to predict words for masked visual structures solely from context. It also speeds up training by reducing the amount of data used in each image. We evaluate the effectiveness of our model by pre-training on a number of benchmarks, finding that it outperforms other masking strategies, such as FLIP, on the quality of the learned representation.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zihao Wei",
+      "Zixuan Pan",
+      "Andrew Owens"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.08815v1",
+    "url": "http://arxiv.org/abs/2405.08815v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.15283v1",
+    "title": "ERNIE-ViLG: Unified Generative Pre-training for Bidirectional Vision-Language Generation",
+    "abstract": "Conventional methods for the image-text generation tasks mainly tackle the naturally bidirectional generation tasks separately, focusing on designing task-specific frameworks to improve the quality and fidelity of the generated samples. Recently, Vision-Language Pre-training models have greatly improved the performance of the image-to-text generation tasks, but large-scale pre-training models for text-to-image synthesis task are still under-developed. In this paper, we propose ERNIE-ViLG, a unified generative pre-training framework for bidirectional image-text generation with transformer model. Based on the image quantization models, we formulate both image generation and text generation as autoregressive generative tasks conditioned on the text/image input. The bidirectional image-text generative modeling eases the semantic alignments across vision and language. For the text-to-image generation process, we further propose an end-to-end training method to jointly learn the visual sequence generator and the image reconstructor. To explore the landscape of large-scale pre-training for bidirectional text-image generation, we train a 10-billion parameter ERNIE-ViLG model on a large-scale dataset of 145 million (Chinese) image-text pairs which achieves state-of-the-art performance for both text-to-image and image-to-text tasks, obtaining an FID of 7.9 on MS-COCO for text-to-image synthesis and best results on COCO-CN and AIC-ICC for image captioning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Han Zhang",
+      "Weichong Yin",
+      "Yewei Fang",
+      "Lanxin Li",
+      "Boqiang Duan",
+      "Zhihua Wu",
+      "Yu Sun",
+      "Hao Tian",
+      "Hua Wu",
+      "Haifeng Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.15283v1",
+    "url": "http://arxiv.org/abs/2112.15283v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.11113v2",
+    "title": "Learn to Accumulate Evidence from All Training Samples: Theory and Practice",
+    "abstract": "Evidential deep learning, built upon belief theory and subjective logic, offers a principled and computationally efficient way to turn a deterministic neural network uncertainty-aware. The resultant evidential models can quantify fine-grained uncertainty using the learned evidence. To ensure theoretically sound evidential models, the evidence needs to be non-negative, which requires special activation functions for model training and inference. This constraint often leads to inferior predictive performance compared to standard softmax models, making it challenging to extend them to many large-scale datasets. To unveil the real cause of this undesired behavior, we theoretically investigate evidential models and identify a fundamental limitation that explains the inferior performance: existing evidential activation functions create zero evidence regions, which prevent the model to learn from training samples falling into such regions. A deeper analysis of evidential activation functions based on our theoretical underpinning inspires the design of a novel regularizer that effectively alleviates this fundamental limitation. Extensive experiments over many challenging real-world datasets and settings confirm our theoretical findings and demonstrate the effectiveness of our proposed approach.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Deep Pandey",
+      "Qi Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.11113v2",
+    "url": "http://arxiv.org/abs/2306.11113v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.13006v1",
+    "title": "RuleBert: Teaching Soft Rules to Pre-trained Language Models",
+    "abstract": "While pre-trained language models (PLMs) are the go-to solution to tackle many natural language processing problems, they are still very limited in their ability to capture and to use common-sense knowledge. In fact, even if information is available in the form of approximate (soft) logical rules, it is not clear how to transfer it to a PLM in order to improve its performance for deductive reasoning tasks. Here, we aim to bridge this gap by teaching PLMs how to reason with soft Horn rules. We introduce a classification task where, given facts and soft rules, the PLM should return a prediction with a probability for a given hypothesis. We release the first dataset for this task, and we propose a revised loss function that enables the PLM to learn how to predict precise probabilities for the task. Our evaluation results show that the resulting fine-tuned models achieve very high performance, even on logical rules that were unseen at training. Moreover, we demonstrate that logical notions expressed by the rules are transferred to the fine-tuned model, yielding state-of-the-art results on external datasets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mohammed Saeed",
+      "Naser Ahmadi",
+      "Preslav Nakov",
+      "Paolo Papotti"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.13006v1",
+    "url": "http://arxiv.org/abs/2109.13006v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.06490v2",
+    "title": "Dict-BERT: Enhancing Language Model Pre-training with Dictionary",
+    "abstract": "Pre-trained language models (PLMs) aim to learn universal language representations by conducting self-supervised training tasks on large-scale corpora. Since PLMs capture word semantics in different contexts, the quality of word representations highly depends on word frequency, which usually follows a heavy-tailed distributions in the pre-training corpus. Therefore, the embeddings of rare words on the tail are usually poorly optimized. In this work, we focus on enhancing language model pre-training by leveraging definitions of the rare words in dictionaries (e.g., Wiktionary). To incorporate a rare word definition as a part of input, we fetch its definition from the dictionary and append it to the end of the input text sequence. In addition to training with the masked language modeling objective, we propose two novel self-supervised pre-training tasks on word and sentence-level alignment between input text sequence and rare word definitions to enhance language modeling representation with dictionary. We evaluate the proposed Dict-BERT model on the language understanding benchmark GLUE and eight specialized domain benchmark datasets. Extensive experiments demonstrate that Dict-BERT can significantly improve the understanding of rare words and boost model performance on various NLP downstream tasks.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Wenhao Yu",
+      "Chenguang Zhu",
+      "Yuwei Fang",
+      "Donghan Yu",
+      "Shuohang Wang",
+      "Yichong Xu",
+      "Michael Zeng",
+      "Meng Jiang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.06490v2",
+    "url": "http://arxiv.org/abs/2110.06490v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.06561v6",
+    "title": "WenLan: Bridging Vision and Language by Large-Scale Multi-Modal Pre-Training",
+    "abstract": "Multi-modal pre-training models have been intensively explored to bridge vision and language in recent years. However, most of them explicitly model the cross-modal interaction between image-text pairs, by assuming that there exists strong semantic correlation between the text and image modalities. Since this strong assumption is often invalid in real-world scenarios, we choose to implicitly model the cross-modal correlation for large-scale multi-modal pre-training, which is the focus of the Chinese project `WenLan' led by our team. Specifically, with the weak correlation assumption over image-text pairs, we propose a two-tower pre-training model called BriVL within the cross-modal contrastive learning framework. Unlike OpenAI CLIP that adopts a simple contrastive learning method, we devise a more advanced algorithm by adapting the latest method MoCo into the cross-modal scenario. By building a large queue-based dictionary, our BriVL can incorporate more negative samples in limited GPU resources. We further construct a large Chinese multi-source image-text dataset called RUC-CAS-WenLan for pre-training our BriVL model. Extensive experiments demonstrate that the pre-trained BriVL model outperforms both UNITER and OpenAI CLIP on various downstream tasks.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Yuqi Huo",
+      "Manli Zhang",
+      "Guangzhen Liu",
+      "Haoyu Lu",
+      "Yizhao Gao",
+      "Guoxing Yang",
+      "Jingyuan Wen",
+      "Heng Zhang",
+      "Baogui Xu",
+      "Weihao Zheng",
+      "Zongzheng Xi",
+      "Yueqian Yang",
+      "Anwen Hu",
+      "Jinming Zhao",
+      "Ruichen Li",
+      "Yida Zhao",
+      "Liang Zhang",
+      "Yuqing Song",
+      "Xin Hong",
+      "Wanqing Cui",
+      "Danyang Hou",
+      "Yingyan Li",
+      "Junyi Li",
+      "Peiyu Liu",
+      "Zheng Gong",
+      "Chuhao Jin",
+      "Yuchong Sun",
+      "Shizhe Chen",
+      "Zhiwu Lu",
+      "Zhicheng Dou",
+      "Qin Jin",
+      "Yanyan Lan",
+      "Wayne Xin Zhao",
+      "Ruihua Song",
+      "Ji-Rong Wen"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.06561v6",
+    "url": "http://arxiv.org/abs/2103.06561v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.03084v2",
+    "title": "Hybrid deep learning-based strategy for the hepatocellular carcinoma cancer grade classification of H&E stained liver histopathology images",
+    "abstract": "Hepatocellular carcinoma (HCC) is a common type of liver cancer whose early-stage diagnosis is a common challenge, mainly due to the manual assessment of hematoxylin and eosin-stained whole slide images, which is a time-consuming process and may lead to variability in decision-making. For accurate detection of HCC, we propose a hybrid deep learning-based architecture that uses transfer learning to extract the features from pre-trained convolutional neural network (CNN) models and a classifier made up of a sequence of fully connected layers. This study uses a publicly available The Cancer Genome Atlas Hepatocellular Carcinoma (TCGA-LIHC)database (n=491) for model development and database of Kasturba Gandhi Medical College (KMC), India for validation. The pre-processing step involves patch extraction, colour normalization, and augmentation that results in 3920 patches for the TCGA dataset. The developed hybrid deep neural network consisting of a CNN-based pre-trained feature extractor and a customized artificial neural network-based classifier is trained using five-fold cross-validation. For this study, eight different state-of-the-art models are trained and tested as feature extractors for the proposed hybrid model. The proposed hybrid model with ResNet50-based feature extractor provided the sensitivity, specificity, F1-score, accuracy, and AUC of 100.00%, 100.00%, 100.00%, 100.00%, and 1.00, respectively on the TCGA database. On the KMC database, EfficientNetb3 resulted in the optimal choice of the feature extractor giving sensitivity, specificity, F1-score, accuracy, and AUC of 96.97, 98.85, 96.71, 96.71, and 0.99, respectively. The proposed hybrid models showed improvement in accuracy of 2% and 4% over the pre-trained models in TCGA-LIHC and KMC databases.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ajinkya Deshpande",
+      "Deep Gupta",
+      "Ankit Bhurane",
+      "Nisha Meshram",
+      "Sneha Singh",
+      "Petia Radeva"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.03084v2",
+    "url": "http://arxiv.org/abs/2412.03084v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.04350v1",
+    "title": "Syntax-BERT: Improving Pre-trained Transformers with Syntax Trees",
+    "abstract": "Pre-trained language models like BERT achieve superior performances in various NLP tasks without explicit consideration of syntactic information. Meanwhile, syntactic information has been proved to be crucial for the success of NLP applications. However, how to incorporate the syntax trees effectively and efficiently into pre-trained Transformers is still unsettled. In this paper, we address this problem by proposing a novel framework named Syntax-BERT. This framework works in a plug-and-play mode and is applicable to an arbitrary pre-trained checkpoint based on Transformer architecture. Experiments on various datasets of natural language understanding verify the effectiveness of syntax trees and achieve consistent improvement over multiple pre-trained models, including BERT, RoBERTa, and T5.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jiangang Bai",
+      "Yujing Wang",
+      "Yiren Chen",
+      "Yaming Yang",
+      "Jing Bai",
+      "Jing Yu",
+      "Yunhai Tong"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.04350v1",
+    "url": "http://arxiv.org/abs/2103.04350v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.09864v2",
+    "title": "Synthetic Pre-Training Tasks for Neural Machine Translation",
+    "abstract": "Pre-training models with large crawled corpora can lead to issues such as toxicity and bias, as well as copyright and privacy concerns. A promising way of alleviating such concerns is to conduct pre-training with synthetic tasks and data, since no real-world information is ingested by the model. Our goal in this paper is to understand the factors that contribute to the effectiveness of pre-training models when using synthetic resources, particularly in the context of neural machine translation. We propose several novel approaches to pre-training translation models that involve different levels of lexical and structural knowledge, including: 1) generating obfuscated data from a large parallel corpus 2) concatenating phrase pairs extracted from a small word-aligned corpus, and 3) generating synthetic parallel data without real human language corpora. Our experiments on multiple language pairs reveal that pre-training benefits can be realized even with high levels of obfuscation or purely synthetic parallel data. We hope the findings from our comprehensive empirical analysis will shed light on understanding what matters for NMT pre-training, as well as pave the way for the development of more efficient and less toxic models.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zexue He",
+      "Graeme Blackwood",
+      "Rameswar Panda",
+      "Julian McAuley",
+      "Rogerio Feris"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.09864v2",
+    "url": "http://arxiv.org/abs/2212.09864v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

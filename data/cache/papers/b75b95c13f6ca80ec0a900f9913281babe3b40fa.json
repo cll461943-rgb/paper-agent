@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42068634",
+  "title": "Optimizing speculative decoding via dynamic multi-path and dual-stream networks.",
+  "abstract": "The Transformer architecture widely adopted in the large language models (LLMs) suffers from limited inference efficiency due to the inherently sequential nature of autoregressive token generation. To address this issue, speculative decoding (SD) has been proposed to accelerate LLM inference by employing small speculative models (SSMs) to generate candidate tokens that are subsequently verified by the target LLM. However, the SD methods is often constrained by the key challenges: the low acceptance rate of tokens predicted by SSMs. To overcome the limitation, this paper proposes a Dual-Stream Network Architecture (DSNA), the architecture introduces two parallel processing streams that simultaneously model word sequences and feature sequences. The outputs of these two streams are progressively fused in subsequent stages to enhance the quality of candidate predictions. Furthermore, a dynamic multi-path decoding (DMPD) mechanism is introduced to leverage the enriched representations produced by the dual-stream architecture. This mechanism allows multiple candidate token paths to be evaluated simultaneously, enabling the model to accept multiple tokens within a single forward propagation step during the inference process. Extensive experiments show that our proposed the method consistently outperforms the state-of-the-art SD approaches, achieving significant improvements in both inference throughput and generation accuracy across multiple benchmarks.",
+  "year": 2026,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Yong Yang",
+    "Ting Ting Yang",
+    "Shao Shuai Gao",
+    "Jia Hong Ning",
+    "Ling Zheng Kong"
+  ],
+  "doi": "10.1016/j.neunet.2026.109014",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42068634/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42068634"
+  }
+}

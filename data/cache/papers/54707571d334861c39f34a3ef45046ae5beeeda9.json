@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W4403783974",
+  "title": "AlignedKV: Reducing Memory Access of KV-Cache with Precision-Aligned Quantization",
+  "abstract": "Model quantization has become a crucial technique to address the issues of large memory consumption and long inference times associated with LLMs. Mixed-precision quantization, which distinguishes between important and unimportant parameters, stands out among numerous quantization schemes as it achieves a balance between precision and compression rate. However, existing approaches can only identify important parameters through qualitative analysis and manual experiments without quantitatively analyzing how their importance is determined. We propose a new criterion, so-called 'precision alignment', to build a quantitative framework to holistically evaluate the importance of parameters in mixed-precision quantization. Our observations on floating point addition under various real-world scenarios suggest that two addends should have identical precision, otherwise the information in the higher-precision number will be wasted. Such an observation offers an essential principle to determine the precision of each parameter in matrix multiplication operation. As the first step towards applying the above discovery to large model inference, we develop a dynamic KV-Cache quantization technique to effectively reduce memory access latency. Different from existing quantization approaches that focus on memory saving, this work directly aims to accelerate LLM inference through quantifying floating numbers. The proposed technique attains a 25% saving of memory access and delivers up to 1.3x speedup in the computation of attention in the decoding phase of LLM, with almost no loss of precision.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Tan, Yifan",
+    "Haoze Wang",
+    "Chao Yan",
+    "Yangdong Deng"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2409.16546",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2409.16546",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Cache",
+      "Computer science",
+      "CPU cache",
+      "Quantization (signal processing)",
+      "Parallel computing",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2133682266",
+      "https://openalex.org/W2497617944",
+      "https://openalex.org/W2167303720",
+      "https://openalex.org/W1563139915",
+      "https://openalex.org/W2109715593",
+      "https://openalex.org/W2061075966",
+      "https://openalex.org/W3147501184",
+      "https://openalex.org/W2268996566",
+      "https://openalex.org/W4256652509",
+      "https://openalex.org/W2140219379"
+    ]
+  }
+}

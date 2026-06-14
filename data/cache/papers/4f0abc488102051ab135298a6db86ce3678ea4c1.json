@@ -1,0 +1,54 @@
+{
+  "paper_id": "https://openalex.org/W4399115018",
+  "title": "CLAQ: Pushing the Limits of Low-Bit Post-Training Quantization for LLMs",
+  "abstract": "Parameter quantization for Large Language Models (LLMs) has attracted increasing attentions recently in reducing memory costs and improving computational efficiency. Early approaches have been widely adopted. However, the existing methods suffer from poor performance in low-bit (such as 2 to 3 bits) scenarios. In this paper, we present a novel and effective Column-Level Adaptive weight Quantization (CLAQ) framework by introducing three different types of adaptive strategies for LLM quantization. Firstly, a K-Means clustering based algorithm is proposed that allows dynamic generation of quantization centroids for each column of a parameter matrix. Secondly, we design an outlier-guided adaptive precision search strategy which can dynamically assign varying bit-widths to different columns. Finally, a dynamic outlier reservation scheme is developed to retain some parameters in their original float point precision, in trade off of boosted model performance. Experiments on various mainstream open source LLMs including LLaMA-1, LLaMA-2 and Yi demonstrate that our methods achieve the state-of-the-art results across different bit settings, especially in extremely low-bit scenarios. Code is available at https://github.com/fayuge/CLAQ.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Haoyu Wang",
+    "Bei Liu",
+    "Hang Shao",
+    "Bo Xiao",
+    "Ke Zeng",
+    "Guanglu Wan",
+    "Yanmin Qian"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2405.17233",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2405.17233",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:broad_synonym",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Bit (key)",
+      "Quantization (signal processing)",
+      "Training (meteorology)",
+      "Computer science",
+      "Physics",
+      "Computer security",
+      "Algorithm",
+      "Meteorology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2411923897",
+      "https://openalex.org/W4394546135",
+      "https://openalex.org/W4285347720",
+      "https://openalex.org/W4200259850",
+      "https://openalex.org/W2333831899",
+      "https://openalex.org/W230091440",
+      "https://openalex.org/W2484894494",
+      "https://openalex.org/W2367385042"
+    ]
+  }
+}

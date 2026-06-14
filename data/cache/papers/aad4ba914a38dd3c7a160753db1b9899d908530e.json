@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2508.04047v2",
+  "title": "LaPA$^2$: Length-Aware Prefix and Prompt Attention Augmentation for Long-Form Controllable Text Generation",
+  "abstract": "Prefix-based methods have emerged as a promising paradigm for Controllable Text Generation (CTG) due to their parameter efficiency. However, while effective in short sequences, their controllability tends to diminish as the generated sequence grows. In this paper, we identify Attention Dilution as a key factor behind this phenomenon: as the sequence length increases, the attention allocated to the control signal naturally decays due to the softmax mechanism, leading to a \"fading\" control effect. To address this, we propose LaPA$^2$ (Length-aware Prefix and Prompt Attention Augmentation), a training-free and model-agnostic framework designed to sustain robust control in long contexts. Specifically, LaPA$^2$ employs Length-Aware Logarithmic Scaling to dynamically amplify prefix attention weights, mathematically counteracting the dilution effect, while an optional Contextual Anchor Reinforcement applies synchronized augmentation to prompt tokens, preserving semantic coherence when strong attribute control risks overshadowing the original prompt. LaPA$^2$ is versatile, supporting both soft prefixes (continuous embeddings) and hard prefixes (discrete instructions). Experiments on multiple CTG tasks demonstrate that LaPA$^2$ consistently improves the performance of various prefix-based methods in long-form settings, leading to superior attribute controllability while preserving content relevance and fluency. Our code and data are publicly available at https://github.com/jiabingyang01/LaPA2.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Jiabing Yang",
+    "Yixiang Chen",
+    "Zichen Wen",
+    "Chenhang Cui",
+    "Peiyan Li",
+    "Yuan Xu",
+    "Bowen Fang",
+    "Tao Yu",
+    "Ruikang Lin",
+    "Yan Huang",
+    "Liang Wang"
+  ],
+  "doi": null,
+  "arxiv_id": "2508.04047v2",
+  "url": "http://arxiv.org/abs/2508.04047v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

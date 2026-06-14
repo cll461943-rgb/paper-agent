@@ -1,0 +1,36 @@
+{
+  "paper_id": "pubmed:42282016",
+  "title": "A real-world feasibility evaluation of LLM-based clinical prediction: emergency department return visit admission across two academic medical centers.",
+  "abstract": "Large language models (LLMs) are increasingly applied to clinical prediction tasks and offer significant promise for real-world impact. Whether that promise translates into deployment, however, depends on several feasibility constraints, performance, data requirements, operational cost, and safety, that are rarely evaluated together. Using emergency department (ED) return visit admission (RVA) prediction as a clinical use case, we developed and tested a two-stage LLM-based approach at two academic medical centers. In the first stage, an LLM generates structured severity summaries from ED documentation and structured EHR variables; in the second stage, these summaries inform RVA prediction via zero-shot or in-context learning (ICL). We evaluated the framework on four feasibility axes simultaneously: discrimination performance, data requirements, per-encounter token consumption, and hallucination risk in LLM-generated severity summaries. The LLM-based pipeline outperformed the strongest traditional ML baseline at WCM (Gemini ICL = 3 AUC 0.746 vs. CatBoost AUC 0.723; DeLong p = 0.044), but not at VUMC, where logistic regression on structured data alone (AUC 0.799) matched the best LLM configuration (GPT-5 mini AUC 0.789, n.s.). Absolute discrimination at VUMC was higher than at WCM for both approaches, indicating that the cross-site difference reflects local documentation and structured-data informativeness rather than LLM failure. We find that the deploy-or-not decision for an LLM-based clinical prediction pipeline is primarily a feasibility question first, rather than an architectural one. This decision is site-conditional, tied to how much of the predictive signal is already captured by structured EHR variables at a given site.",
+  "year": 2026,
+  "venue": "Research square",
+  "authors": [
+    "Jinsong Liu",
+    "Katherine Brown",
+    "Michelle J Ma",
+    "Arindam RoyChoudhury",
+    "Bradley A Malin",
+    "Allison McCoy",
+    "Adam Wright",
+    "Jessica S Ancker",
+    "Tony Rosen",
+    "Jin Ho Han",
+    "Peter A D Steel",
+    "Yiye Zhang"
+  ],
+  "doi": "10.21203/rs.3.rs-9733941/v1",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42282016/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42282016"
+  }
+}

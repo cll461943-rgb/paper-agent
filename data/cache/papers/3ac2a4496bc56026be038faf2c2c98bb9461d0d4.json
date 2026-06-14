@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:42245942",
+  "title": "Dual contextual learning for semi-supervised medical image classification.",
+  "abstract": "Semi-supervised learning (SSL) has emerged as a promising paradigm for medical image classification, addressing the critical challenge of limited labeled data in healthcare where expert annotation is expensive and time-consuming. Existing pseudo-labeling methods generate labels for each unlabeled sample independently based on model confidence, which often proves unreliable when dealing with ambiguous pathological features in early-stage lesions or borderline cases, leading to error accumulation. However, medical images contain rich contextual information-samples with similar pathological characteristics naturally cluster in feature space, and maintaining consistency within these neighborhoods could provide more robust supervision. In this paper, we propose a Hierarchical Semantic Calibration (HSC) framework that leverages these contextual relationships to enhance pseudo-labeling reliability. We introduce two complementary modules: (1) a local semantic neighborhood alignment that enforces consistency among mutual k-nearest neighbors sharing similar pathological features, reducing isolated labeling errors through collective evidence; and (2) a global cluster-prototype calibration that aligns class-level representations across different augmented views through contrastive learning, ensuring disease categories maintain consistent patterns despite imaging variations. Additionally, we introduce a neighborhood-prototype consistency regularization that bridges these two scales, adaptively weighting the alignment between local neighborhoods and global prototypes based on neighborhood compactness, ensuring hierarchical consistency from local pathological features to global disease patterns. Extensive experiments demonstrate that HSC consistently outperforms state-of-the-art methods, achieving 92.24% accuracy on NCT-CRC-HE with only 200 labeled samples (2.97% improvement over PEFAT) and 94.17% on ISIC2018 with 20% labeled data (2.21% improvement).",
+  "year": 2026,
+  "venue": "Frontiers in medicine",
+  "authors": [
+    "Jiaying Liu",
+    "Chengyang Li",
+    "Sangsha Fang",
+    "Fangfang Deng",
+    "Qinghu He",
+    "Miao Cao"
+  ],
+  "doi": "10.3389/fmed.2026.1810643",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42245942/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42245942"
+  }
+}

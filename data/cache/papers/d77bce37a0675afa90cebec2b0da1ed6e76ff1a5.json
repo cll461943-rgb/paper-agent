@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/1612.05086v2",
+  "title": "Coupling Adaptive Batch Sizes with Learning Rates",
+  "abstract": "Mini-batch stochastic gradient descent and variants thereof have become standard for large-scale empirical risk minimization like the training of neural networks. These methods are usually used with a constant batch size chosen by simple empirical inspection. The batch size significantly influences the behavior of the stochastic optimization algorithm, though, since it determines the variance of the gradient estimates. This variance also changes over the optimization process; when using a constant batch size, stability and convergence is thus often enforced by means of a (manually tuned) decreasing learning rate schedule. We propose a practical method for dynamic batch size adaptation. It estimates the variance of the stochastic gradients and adapts the batch size to decrease the variance proportionally to the value of the objective function, removing the need for the aforementioned learning rate decrease. In contrast to recent related work, our algorithm couples the batch size to the learning rate, directly reflecting the known relationship between the two. On popular image classification benchmarks, our batch size adaptation yields faster optimization convergence, while simultaneously simplifying learning rate tuning. A TensorFlow implementation is available.",
+  "year": 2016,
+  "venue": null,
+  "authors": [
+    "Lukas Balles",
+    "Javier Romero",
+    "Philipp Hennig"
+  ],
+  "doi": null,
+  "arxiv_id": "1612.05086v2",
+  "url": "http://arxiv.org/abs/1612.05086v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "paper_id": "http://arxiv.org/abs/2006.11604v1",
+  "title": "How do SGD hyperparameters in natural training affect adversarial robustness?",
+  "abstract": "Learning rate, batch size and momentum are three important hyperparameters in the SGD algorithm. It is known from the work of Jastrzebski et al. arXiv:1711.04623 that large batch size training of neural networks yields models which do not generalize well. Yao et al. arXiv:1802.08241 observe that large batch training yields models that have poor adversarial robustness. In the same paper, the authors train models with different batch sizes and compute the eigenvalues of the Hessian of loss function. They observe that as the batch size increases, the dominant eigenvalues of the Hessian become larger. They also show that both adversarial training and small-batch training leads to a drop in the dominant eigenvalues of the Hessian or lowering its spectrum. They combine adversarial training and second order information to come up with a new large-batch training algorithm and obtain robust models with good generalization. In this paper, we empirically observe the effect of the SGD hyperparameters on the accuracy and adversarial robustness of networks trained with unperturbed samples. Jastrzebski et al. considered training models with a fixed learning rate to batch size ratio. They observed that higher the ratio, better is the generalization. We observe that networks trained with constant learning rate to batch size ratio, as proposed in Jastrzebski et al., yield models which generalize well and also have almost constant adversarial robustness, independent of the batch size. We observe that momentum is more effective with varying batch sizes and a fixed learning rate than with constant learning rate to batch size ratio based SGD training.",
+  "year": 2020,
+  "venue": null,
+  "authors": [
+    "Sandesh Kamath",
+    "Amit Deshpande",
+    "K V Subrahmanyam"
+  ],
+  "doi": null,
+  "arxiv_id": "2006.11604v1",
+  "url": "http://arxiv.org/abs/2006.11604v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like",
+    "route:core_topic",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean",
+    "route:query2doc",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:32379942",
+  "title": "Estimation of pharmacokinetic parameters from DCE-MRI by extracting long and short time-dependent features using an LSTM network.",
+  "abstract": "T A Long Short-Term Memory (LSTM) network, widely used for processing sequence data, was employed to map DCE-MRI time-series accompanied with an arterial input function to parameters of the extended Tofts model. Head and neck DCE-MRI from 103 patients were used for training and testing the LSTM model. Arterial input functions (AIFs) from 78 patients were used to generate synthetic DCE-MRI time-series for training, during which data augmentation was used to overcome the limited size of in vivo data. The model was tested on independent synthesized DCE data using AIFs from 25 patients. The LSTM performance was optimized for the numbers of layers and hidden state features. The performance of the LSTM was tested for different temporal resolution, total acquisition time, and contrast-to-noise ratio (CNR), and compared to the conventional LS fitting and a CNN-based method. Compared to LS fitting, the LSTM model had comparable accuracy in PK parameter estimations from fully temporal-sampled DCE-MRI data (~3 s per frame), but much better accuracy for the data with temporally subsampling (4s or greater per frame), total acquisition time truncation by 48%-16%, or low CNR (5 and 10). The LSTM reduced normalized root mean squared error by 40.4%, 46.9%, and 53.0% for sampling intervals of 4s, 5s, and 6s, respectively, compared to LS fitting. Compared to the CNN model, the LSTM model reduced the error in the parameter estimates up to 55.2%. Also, the LSTM improved the inference time by ~ 14 times on CPU compared to LS fitting. Our study suggests that the LSTM model could achieve improved robustness and computation speed for PK parameter estimation compared to LS fitting and the CNN based network, particularly for suboptimal data.",
+  "year": 2020,
+  "venue": "Medical physics",
+  "authors": [
+    "Jiaren Zou",
+    "James M Balter",
+    "Yue Cao"
+  ],
+  "doi": "10.1002/mp.14222",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/32379942/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "32379942"
+  }
+}

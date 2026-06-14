@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42227874",
+  "title": "Detection of Self-Harm in Electronic Mental Health Records Using Privacy-Preserving Local Language Models: Methodological Study.",
+  "abstract": "Self-harm is the strongest risk factor for suicide and an important outcome for mental health care. Although prevalent in clinical populations, it is often imprecisely captured in routinely collected clinical data, where it is often recorded and stored as unstructured free text. Contemporary language models, such as GPT (OpenAI) and Gemini (Google), can analyze free-text clinical notes, but such models may violate data governance of processing sensitive patient data. This study aimed to evaluate whether a privacy-preserving language model running entirely within an institution's secure computing infrastructure (here, the UK National Health Service [NHS]) could accurately identify the presence and timing of self-harm using electronic health records from secondary mental health care. Clinical notes were drawn from Oxford Health NHS Foundation Trust using a multistage workflow: (1) a random sample of 1000 patients with a psychiatric diagnosis, defined according to the ICD-10 (International Statistical Classification of Diseases, Tenth Revision; codes F00-F99); (2) candidate-note identification using a Gemma3-4b language model to flag notes containing self-harm content; and (3) from those candidates, 1352 randomly sampled notes were selected for expert annotation, resulting in gold-standard corpus enriched for self-harm content. Clinical notes were annotated for the presence of self-harm and its timing (≤90 days, >90 days, or unknown). A privacy-preserving locally served 27-billion-parameter Gemma 3 language model (\"Gemma3-27b\") was used as the core model. Prompts were systematically developed and refined using a labeled development set to identify self-harm and generate a structured output per clinical record. Gemma3-27b performance was compared against a strong baseline multilabel text classification model based on robustly optimized BERT pretraining approach (RoBERTa), a transformer-based language model architecture. Model performance was evaluated using precision, recall, and the F1-score (harmonic mean of precision and recall), with 95% CIs estimated from 1000 bootstrap samples with replacement. Gemma3-27b outperformed the RoBERTa classifier across all categories, achieving Precision=0.92, Recall=0.92 (sensitivity), and F1-score=0.92 for notes containing self-harm, and Precision=0.97, Recall=0.97 (specificity), and F1-score=0.97 for notes without self-harm. For the 51 notes labeled as recent self-harm in the held-out test set, Gemma3-27b achieved Precision=0.84, Recall=0.75, and F1-score=0.79. The global weighted F1-score of Gemma3-27b across all categories was 0.88, compared to 0.85 for RoBERTa. With systematic prompt development on a labeled development set, but no gradient-based fine-tuning, the current Gemma3-27b language model matched or exceeded a fine-tuned RoBERTa classifier for ascertaining self-harm events and their timing. Aggregate gains were modest, while improvements were largest in the most challenging, lower-frequency timing categories. On a simplified binary recent-versus-other task, RoBERTa performed marginally better, indicating that supervised classifiers remain highly effective when the task is simplified and sufficient labeled data exist. This work demonstrates the technical feasibility of privacy-preserving self-harm detection within a secure NHS research environment.",
+  "year": 2026,
+  "venue": "JMIR mental health",
+  "authors": [
+    "Andrey Kormilitzin",
+    "Dan W Joyce",
+    "Apostolos Tsiachristas",
+    "Rohan Borschmann",
+    "Navneet Kapur",
+    "Galit Geulayov"
+  ],
+  "doi": "10.2196/87586",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42227874/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42227874"
+  }
+}

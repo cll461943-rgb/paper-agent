@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:39922158",
+  "title": "RotInv-PCT: Rotation-Invariant Point Cloud Transformer via feature separation and aggregation.",
+  "abstract": "The widespread use of point clouds has spurred the rapid development of neural networks for point cloud processing. A crucial property of these networks is maintaining consistent output results under random rotations of the input point cloud, namely, rotation invariance. The dominant approach achieves rotation invariance is to construct local coordinate systems for computing invariant local point cloud coordinates. However, this method neglects the relative pose relationships between local point cloud structures, leading to a decline in network performance. To address this limitation, we propose a novel Rotation-Invariant Point Cloud Transformer (RotInv-PCT). This method extracts the local abstract shape features of the point cloud using Local Reference Frames (LRFs) and explicitly computes the spatial relative pose features between local point clouds, both of which are proven to be rotation-invariant. Furthermore, to capture the long-range pose dependencies between points, we introduce an innovative Feature Aggregation Transformer (FAT) model, which seamlessly fuses the pose features with the shape features to obtain a globally rotation-invariant representation. Moreover, to manage large-scale point clouds, we utilize hierarchical random downsampling to gradually decrease the scale of point clouds, followed by feature aggregation through FAT. To demonstrate the effectiveness of RotInv-PCT, we conducted comparative experiments across various tasks and datasets, including point cloud classification on ScanObjectNN and ModelNet40, part segmentation on ShapeNet, and semantic segmentation on S3DIS and KITTI. Thanks to our provable rotation-invariant features and FAT, our method generally outperforms state-of-the-art networks. In particular, we highlight that RotInv-PCT achieved a 2% improvement in real-world point cloud classification tasks compared to the strongest baseline. Furthermore, in the semantic segmentation task, we improved the performance on the S3DIS dataset by 10% and, for the first time, realized rotation-invariant point cloud semantic segmentation on the KITTI dataset.",
+  "year": 2025,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Cheng He",
+    "Zhenjie Zhao",
+    "Xuebo Zhang",
+    "Hang Yu",
+    "Runhua Wang"
+  ],
+  "doi": "10.1016/j.neunet.2025.107223",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39922158/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "39922158"
+  }
+}

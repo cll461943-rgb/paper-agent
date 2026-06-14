@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:42249001",
+  "title": "Learning multi-granularity skeleton representations via hierarchical graph contrastive learning.",
+  "abstract": "Skeleton-based action recognition offers inherent robustness to illumination variations and background interference, yet faces challenges such as heavy label reliance, topological destruction during augmentation, and underutilized joint confidence. This paper proposes Hierarchical Graph Contrastive Learning (HGCL), in which the three challenges are addressed in a coupled manner rather than through independently inserted modules. The augmentation strategy combines joint masking, spatial rotation, and Gaussian jittering under a unified topology constraint, with perturbation intensity adapted to the graph distance from core joints and a provable upper bound on bone length deviation. The hierarchical contrastive objective decomposes the InfoNCE loss into a global sequence branch and a part-level branch in which negative pairs are restricted within the same body region, so that local motion signatures and holistic action semantics are jointly optimized rather than entangled at a single granularity. The detection confidence is propagated through both the adjacency matrix used for graph convolution and the pooling operator used for representation aggregation, providing a single mechanism that suppresses unreliable joints throughout the pipeline. Experiments on UCF101 and HMDB51 show that HGCL achieves 91.2% and 66.8% Top-1 accuracy respectively, outperforming InfoGCN by 3.9 and 5.3 percentage points. In 1% few-shot scenarios, HGCL improves upon training-from-scratch by 21.6 percentage points on UCF101. Controlled degradation experiments further demonstrate that the performance advantage of HGCL over baselines widens under increasing coordinate noise and joint occlusion. Feature space analysis reveals a 54.5% reduction in intra-class distance and a 90.3% increase in inter-class distance, validating its effectiveness for self-supervised representation learning.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Yaxiong Liu",
+    "Xianfeng Zhai"
+  ],
+  "doi": "10.1038/s41598-026-56157-6",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42249001/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42249001"
+  }
+}

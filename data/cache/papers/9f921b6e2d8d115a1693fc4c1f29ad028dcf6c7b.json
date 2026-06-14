@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:41895183",
+  "title": "PASS-Tr: PAtch-wise swin slice attention to leverage generalization of 2D large vision model to universal lesion detection.",
+  "abstract": "Universal Lesion Detection (ULD) in computed tomography (CT) is essential for computer-aided diagnosis. A long-standing debate in ULD research concerns the choice between 3D and 2D networks. While 3D networks offer superior spatial context modeling and 2D networks are more efficient and benefit from pretrained models, neither fully addresses the challenges posed by CT's pseudo-3D nature. To address this, multi-slice fusion has emerged as a promising approach in ULD. It typically extracts features from adjacent slices using separate 2D encoders and then fuses them to incorporate 3D context. However, current ULD methods still face several limitations: (1) Inefficient fusion granularity: Fusion at the entire-slice level often introduces redundant or irrelevant information. (2) Underutilization of 2D vision foundation models: Despite being 2D-based, few methods leverage powerful pretrained models such as SAM, SAM2, ViT, MedSAM, or SAM-Med2D. (3) Limited cross-task evaluation: Although multi-slice fusion is designed to address CT-specific challenges and should benefit a broad range of CT analysis tasks, existing methods are rarely tested beyond ULD. We propose PASS-Tr (Patch-wise Swin Slice Attention Transformer), which builds on the observation that meaningful 3D context often resides in local neighboring regions. PASS-Tr adopts a windowed fusion strategy inspired by the Swin Transformer, enabling patch-level attention across slices while avoiding redundancy. In addition, it integrates 2D vision foundation models to boost performance and improve transferability to other CT tasks. Experiments on DeepLesion show that PASS-Tr outperforms existing ULD methods. It also generalizes well to other 3D CT tasks, including COVID lesion segmentation and 104-organ segmentation on the TotalSegmentator benchmark.",
+  "year": 2026,
+  "venue": "Medical image analysis",
+  "authors": [
+    "Han Li",
+    "Jingsong Liu",
+    "Zhen Huang",
+    "Zhicheng Li",
+    "Xun Ma",
+    "Peter Schüffler",
+    "Nassir Navab",
+    "S Kevin Zhou"
+  ],
+  "doi": "10.1016/j.media.2026.104036",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41895183/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41895183"
+  }
+}

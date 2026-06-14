@@ -1,0 +1,54 @@
+{
+  "paper_id": "https://openalex.org/W4378446728",
+  "title": "Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization",
+  "abstract": "Large language models (LLMs) face the challenges in fine-tuning and deployment due to their high memory demands and computational costs. While parameter-efficient fine-tuning (PEFT) methods aim to reduce the memory usage of the optimizer state during fine-tuning, the inherent size of pre-trained LLM weights continues to be a pressing concern. Even though quantization techniques are widely proposed to ease memory demands and accelerate LLM inference, most of these techniques are geared towards the deployment phase. To bridge this gap, this paper presents Parameter-Efficient and Quantization-aware Adaptation (PEQA) - a simple yet effective method that combines the advantages of PEFT with quantized LLMs. By updating solely the quantization scales, PEQA can be directly applied to quantized LLMs, ensuring seamless task transitions. Parallel to existing PEFT methods, PEQA significantly reduces the memory overhead associated with the optimizer state. Furthermore, it leverages the advantages of quantization to substantially reduce model sizes. Even after fine-tuning, the quantization structure of a PEQA-tuned LLM remains intact, allowing for accelerated inference on the deployment stage. We employ PEQA-tuning for task-specific adaptation on LLMs with up to 65 billion parameters. To assess the logical reasoning and language comprehension of PEQA-tuned LLMs, we fine-tune low-bit quantized LLMs using a instruction dataset. Our results show that even when LLMs are quantized to below 4-bit precision, their capabilities in language modeling, few-shot in-context learning, and comprehension can be resiliently restored to (or even improved over) their full-precision original performances with PEQA.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Jeonghoon Kim",
+    "Jung Hyun Lee",
+    "Sungdong Kim",
+    "Joonsuk Park",
+    "Kang Min Yoo",
+    "Se Jung Kwon",
+    "Dongsoo Lee"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.14152",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.14152",
+  "citation_count": 28,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Inference",
+      "Software deployment",
+      "Language model",
+      "Computer engineering",
+      "Artificial intelligence",
+      "Algorithm",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2770234245",
+      "https://openalex.org/W96612179",
+      "https://openalex.org/W4229499248",
+      "https://openalex.org/W2566006169",
+      "https://openalex.org/W2987774938",
+      "https://openalex.org/W3204400881",
+      "https://openalex.org/W3214410901",
+      "https://openalex.org/W3204296682",
+      "https://openalex.org/W3183118997",
+      "https://openalex.org/W2917767146"
+    ]
+  }
+}

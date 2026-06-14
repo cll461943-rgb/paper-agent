@@ -1,0 +1,38 @@
+{
+  "paper_id": "pubmed:42076661",
+  "title": "Temporal and Behaviour-Aware Multimodal Modelling for Hour-Ahead Hypoglycaemia Prediction During Ramadan Fasting in Type 1 Diabetes.",
+  "abstract": "Ramadan fasting substantially alters meal timing, sleep patterns, and daily activity, thereby increasing the risk of hypoglycaemia in adults with type 1 diabetes (T1D). Although continuous glucose monitoring (CGM) systems provide real-time alerts, these are largely reactive or limited to short prediction horizons, offering insufficient warning under fasting-related behavioural and circadian disruption. This study aims to evaluate whether behaviour-aware, temporally enriched recurrent deep learning models, leveraging multimodal CGM and wearable-derived signals, can forecast hypoglycaemia one hour ahead during Ramadan and the post-fasting period. In an observational, free-living cohort study conducted in Qatar, 33 adults with T1D were monitored using CGM and a wrist-worn wearable during Ramadan 2023 and the subsequent month. Multimodal data were aggregated into hourly features and organised into rolling 36 h sequences. In addition to physiological signals, explicit temporal and circadian proxy features were engineered, including cyclic time encodings, day-night indicators, and Ramadan-specific behavioural windows (e.g., pre-iftar, iftar, post-iftar, and fasting phases). Recurrent models, including LSTM and BiLSTM architectures, were trained using patient-wise, leak-free splits, with focal loss applied to address class imbalance. Model performance was evaluated on a held-out, naturally imbalanced test set using ROC AUC, precision-recall AUC, recall, and probability calibration, alongside cross-phase evaluation between Ramadan and post-fasting periods. Following quality control, 1164 participant-days were retained, with hypoglycaemia accounting for approximately 4% of hourly observations. Temporal feature enrichment and the use of a 36 h lookback window improved both discrimination and calibration, with performance stabilizing beyond this horizon. On the imbalanced test set, the best-performing multimodal model achieved an ROC AUC of 0.867 and a precision-recall AUC of 0.341, identifying 77% of next-hour hypoglycaemic events at a sensitivity-focused operating point (precision = 0.14). The selected BiLSTM model demonstrated good probability calibration (Brier score ≈ 0.03). Models trained using wearable-derived inputs alone achieved comparable discrimination and, in some configurations, higher precision-recall AUC than CGM-only baselines. Notably, models trained on the original imbalanced data outperformed resampled variants, suggesting that temporal and behavioural features provided sufficient discriminatory signal without requiring aggressive class balancing. Cross-phase evaluation indicated robust generalisation, particularly for the BiLSTM model. Overall, behaviour-aware, temporally enriched multimodal models can provide calibrated, hour-ahead hypoglycaemia risk estimates during Ramadan fasting in adults with T1D, enabling proactive intervention beyond reactive CGM alerts. Explicit modelling of circadian and behavioural dynamics enhances predictive performance under real-world class imbalance. Furthermore, integrating wearable-derived behavioural and physiological signals adds predictive value beyond CGM alone, supporting robustness across varying levels of contextual data availability. External validation and prospective clinical evaluation are required prior to deployment.",
+  "year": 2026,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Mais Alkhateeb",
+    "Rawan AlSaad",
+    "Samir Brahim Belhaouari",
+    "Sarah Aziz",
+    "Arfan Ahmed",
+    "Hamda Ali",
+    "Dabia Al-Mohanadi",
+    "Kawsar Mohamud",
+    "Najla Al-Naimi",
+    "Arwa Alsaud",
+    "Hamad Al-Sharshani",
+    "Javaid I Sheikh",
+    "Khaled Baagar",
+    "Alaa Abd-Alrazaq"
+  ],
+  "doi": "10.3390/s26082552",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42076661/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42076661"
+  }
+}

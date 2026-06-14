@@ -1,0 +1,827 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2005.01107v4",
+    "title": "Simplifying Paragraph-level Question Generation via Transformer Language Models",
+    "abstract": "Question generation (QG) is a natural language generation task where a model is trained to ask questions corresponding to some input text. Most recent approaches frame QG as a sequence-to-sequence problem and rely on additional features and mechanisms to increase performance; however, these often increase model complexity, and can rely on auxiliary data unavailable in practical use. A single Transformer-based unidirectional language model leveraging transfer learning can be used to produce high quality questions while disposing of additional task-specific complexity. Our QG model, finetuned from GPT-2 Small, outperforms several paragraph-level QG baselines on the SQuAD dataset by 0.95 METEOR points. Human evaluators rated questions as easy to answer, relevant to their context paragraph, and corresponding well to natural human speech. Also introduced is a new set of baseline scores on the RACE dataset, which has not previously been used for QG tasks. Further experimentation with varying model capacities and datasets with non-identification type questions is recommended in order to further verify the robustness of pretrained Transformer-based LMs as question generators.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Luis Enrico Lopez",
+      "Diane Kathryn Cruz",
+      "Jan Christian Blaise Cruz",
+      "Charibeth Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.01107v4",
+    "url": "http://arxiv.org/abs/2005.01107v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.05395v2",
+    "title": "Why is constrained neural language generation particularly challenging?",
+    "abstract": "Recent advances in deep neural language models combined with the capacity of large scale datasets have accelerated the development of natural language generation systems that produce fluent and coherent texts (to various degrees of success) in a multitude of tasks and application contexts. However, controlling the output of these models for desired user and task needs is still an open challenge. This is crucial not only to customizing the content and style of the generated language, but also to their safe and reliable deployment in the real world. We present an extensive survey on the emerging topic of constrained neural language generation in which we formally define and categorize the problems of natural language generation by distinguishing between conditions and constraints (the latter being testable conditions on the output text instead of the input), present constrained text generation tasks, and review existing methods and evaluation metrics for constrained text generation. Our aim is to highlight recent progress and trends in this emerging field, informing on the most promising directions and limitations towards advancing the state-of-the-art of constrained neural language generation research.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Cristina Garbacea",
+      "Qiaozhu Mei"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.05395v2",
+    "url": "http://arxiv.org/abs/2206.05395v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.02228v1",
+    "title": "Unforgettable Generalization in Language Models",
+    "abstract": "When language models (LMs) are trained to forget (or \"unlearn'') a skill, how precisely does their behavior change? We study the behavior of transformer LMs in which tasks have been forgotten via fine-tuning on randomized labels. Such LMs learn to generate near-random predictions for individual examples in the \"training'' set used for forgetting. Across tasks, however, LMs exhibit extreme variability in whether LM predictions change on examples outside the training set. In some tasks (like entailment classification), forgetting generalizes robustly, and causes models to produce uninformative predictions on new task instances; in other tasks (like physical commonsense reasoning and scientific question answering) forgetting affects only the training examples, and models continue to perform the \"forgotten'' task accurately even for examples very similar to those that appeared in the training set. Dataset difficulty is not predictive of whether a behavior can be forgotten; instead, generalization in forgetting is (weakly) predicted by the confidence of LMs' initial task predictions and the variability of LM representations of training data, with low confidence and low variability both associated with greater generalization. Perhaps most surprisingly, random-label forgetting appears to be somewhat insensitive to the contents of the training set: for example, models trained on science questions with random labels continue to answer other science questions accurately, but begin to produce random labels on entailment classification tasks. Finally, we show that even generalizable forgetting is shallow: linear probes trained on LMs' representations can still perform tasks reliably after forgetting. Our results highlight the difficulty and unpredictability of performing targeted skill removal from models via fine-tuning.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Eric Zhang",
+      "Leshem Chosen",
+      "Jacob Andreas"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.02228v1",
+    "url": "http://arxiv.org/abs/2409.02228v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.06371v1",
+    "title": "A Comprehensive Review of State-of-The-Art Methods for Java Code Generation from Natural Language Text",
+    "abstract": "Java Code Generation consists in generating automatically Java code from a Natural Language Text. This NLP task helps in increasing programmers' productivity by providing them with immediate solutions to the simplest and most repetitive tasks. Code generation is a challenging task because of the hard syntactic rules and the necessity of a deep understanding of the semantic aspect of the programming language. Many works tried to tackle this task using either RNN-based, or Transformer-based models. The latter achieved remarkable advancement in the domain and they can be divided into three groups: (1) encoder-only models, (2) decoder-only models, and (3) encoder-decoder models. In this paper, we provide a comprehensive review of the evolution and progress of deep learning models in Java code generation task. We focus on the most important methods and present their merits and limitations, as well as the objective functions used by the community. In addition, we provide a detailed description of datasets and evaluation metrics used in the literature. Finally, we discuss results of different models on CONCODE dataset, then propose some future directions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jessica López Espejel",
+      "Mahaman Sanoussi Yahaya Alassan",
+      "El Mehdi Chouham",
+      "Walid Dahhane",
+      "El Hassane Ettifouri"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.06371v1",
+    "url": "http://arxiv.org/abs/2306.06371v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.03844v3",
+    "title": "A Review of Bangla Natural Language Processing Tasks and the Utility of Transformer Models",
+    "abstract": "Bangla -- ranked as the 6th most widely spoken language across the world (https://www.ethnologue.com/guides/ethnologue200), with 230 million native speakers -- is still considered as a low-resource language in the natural language processing (NLP) community. With three decades of research, Bangla NLP (BNLP) is still lagging behind mainly due to the scarcity of resources and the challenges that come with it. There is sparse work in different areas of BNLP; however, a thorough survey reporting previous work and recent advances is yet to be done. In this study, we first provide a review of Bangla NLP tasks, resources, and tools available to the research community; we benchmark datasets collected from various platforms for nine NLP tasks using current state-of-the-art algorithms (i.e., transformer-based models). We provide comparative results for the studied NLP tasks by comparing monolingual vs. multilingual models of varying sizes. We report our results using both individual and consolidated datasets and provide data splits for future research. We reviewed a total of 108 papers and conducted 175 sets of experiments. Our results show promising performance using transformer-based models while highlighting the trade-off with computational costs. We hope that such a comprehensive survey will motivate the community to build on and further advance the research on Bangla NLP.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Firoj Alam",
+      "Arid Hasan",
+      "Tanvirul Alam",
+      "Akib Khan",
+      "Janntatul Tajrin",
+      "Naira Khan",
+      "Shammur Absar Chowdhury"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.03844v3",
+    "url": "http://arxiv.org/abs/2107.03844v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.08975v2",
+    "title": "Deep Transfer Learning & Beyond: Transformer Language Models in Information Systems Research",
+    "abstract": "AI is widely thought to be poised to transform business, yet current perceptions of the scope of this transformation may be myopic. Recent progress in natural language processing involving transformer language models (TLMs) offers a potential avenue for AI-driven business and societal transformation that is beyond the scope of what most currently foresee. We review this recent progress as well as recent literature utilizing text mining in top IS journals to develop an outline for how future IS research can benefit from these new techniques. Our review of existing IS literature reveals that suboptimal text mining techniques are prevalent and that the more advanced TLMs could be applied to enhance and increase IS research involving text data, and to enable new IS research topics, thus creating more value for the research community. This is possible because these techniques make it easier to develop very powerful custom systems and their performance is superior to existing methods for a wide range of tasks and applications. Further, multilingual language models make possible higher quality text analytics for research in multiple languages. We also identify new avenues for IS research, like language user interfaces, that may offer even greater potential for future IS research.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Ross Gruetzemacher",
+      "David Paradice"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.08975v2",
+    "url": "http://arxiv.org/abs/2110.08975v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.21676v2",
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "abstract": "Large language models accumulate vast knowledge during pre-training, yet the dynamics governing this acquisition remain poorly understood. This work investigates the learning dynamics of language models on a synthetic factual recall task, uncovering three key findings: First, language models learn in three phases, exhibiting a performance plateau before acquiring precise factual knowledge. Mechanistically, this plateau coincides with the formation of attention-based circuits that support recall. Second, the training data distribution significantly impacts learning dynamics, as imbalanced distributions lead to shorter plateaus. Finally, hallucinations emerge simultaneously with knowledge, and integrating new knowledge into the model through fine-tuning is challenging, as it quickly corrupts its existing parametric memories. Our results emphasize the importance of data distribution in knowledge acquisition and suggest novel data scheduling strategies to accelerate neural network training.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Nicolas Zucchet",
+      "Jörg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu",
+      "Soham De"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.21676v2",
+    "url": "http://arxiv.org/abs/2503.21676v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1610.00031v1",
+    "title": "Discriminating Similar Languages: Evaluations and Explorations",
+    "abstract": "We present an analysis of the performance of machine learning classifiers on discriminating between similar languages and language varieties. We carried out a number of experiments using the results of the two editions of the Discriminating between Similar Languages (DSL) shared task. We investigate the progress made between the two tasks, estimate an upper bound on possible performance using ensemble and oracle combination, and provide learning curves to help us understand which languages are more challenging. A number of difficult sentences are identified and investigated further with human annotation.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Cyril Goutte",
+      "Serge Léger",
+      "Shervin Malmasi",
+      "Marcos Zampieri"
+    ],
+    "doi": null,
+    "arxiv_id": "1610.00031v1",
+    "url": "http://arxiv.org/abs/1610.00031v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.08187v1",
+    "title": "Visual Question Generation in Bengali",
+    "abstract": "The task of Visual Question Generation (VQG) is to generate human-like questions relevant to the given image. As VQG is an emerging research field, existing works tend to focus only on resource-rich language such as English due to the availability of datasets. In this paper, we propose the first Bengali Visual Question Generation task and develop a novel transformer-based encoder-decoder architecture that generates questions in Bengali when given an image. We propose multiple variants of models - (i) image-only: baseline model of generating questions from images without additional information, (ii) image-category and image-answer-category: guided VQG where we condition the model to generate questions based on the answer and the category of expected question. These models are trained and evaluated on the translated VQAv2.0 dataset. Our quantitative and qualitative results establish the first state of the art models for VQG task in Bengali and demonstrate that our models are capable of generating grammatically correct and relevant questions. Our quantitative results show that our image-cat model achieves a BLUE-1 score of 33.12 and BLEU-3 score of 7.56 which is the highest of the other two variants. We also perform a human evaluation to assess the quality of the generation tasks. Human evaluation suggests that image-cat model is capable of generating goal-driven and attribute-specific questions and also stays relevant to the corresponding image.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Mahmud Hasan",
+      "Labiba Islam",
+      "Jannatul Ferdous Ruma",
+      "Tasmiah Tahsin Mayeesha",
+      "Rashedur M. Rahman"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.08187v1",
+    "url": "http://arxiv.org/abs/2310.08187v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.00727v1",
+    "title": "Quantum Natural Language Generation on Near-Term Devices",
+    "abstract": "The emergence of noisy medium-scale quantum devices has led to proof-of-concept applications for quantum computing in various domains. Examples include Natural Language Processing (NLP) where sentence classification experiments have been carried out, as well as procedural generation, where tasks such as geopolitical map creation, and image manipulation have been performed. We explore applications at the intersection of these two areas by designing a hybrid quantum-classical algorithm for sentence generation. Our algorithm is based on the well-known simulated annealing technique for combinatorial optimisation. An implementation is provided and used to demonstrate successful sentence generation on both simulated and real quantum hardware. A variant of our algorithm can also be used for music generation. This paper aims to be self-contained, introducing all the necessary background on NLP and quantum computing along the way.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Amin Karamlou",
+      "Marcel Pfaffhauser",
+      "James Wootton"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.00727v1",
+    "url": "http://arxiv.org/abs/2211.00727v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.06434v1",
+    "title": "Topical Language Generation using Transformers",
+    "abstract": "Large-scale transformer-based language models (LMs) demonstrate impressive capabilities in open text generation. However, controlling the generated text's properties such as the topic, style, and sentiment is challenging and often requires significant changes to the model architecture or retraining and fine-tuning the model on new supervised data. This paper presents a novel approach for Topical Language Generation (TLG) by combining a pre-trained LM with topic modeling information. We cast the problem using Bayesian probability formulation with topic probabilities as a prior, LM probabilities as the likelihood, and topical language generation probability as the posterior. In learning the model, we derive the topic probability distribution from the user-provided document's natural structure. Furthermore, we extend our model by introducing new parameters and functions to influence the quantity of the topical features presented in the generated text. This feature would allow us to easily control the topical properties of the generated text. Our experimental results demonstrate that our model outperforms the state-of-the-art results on coherency, diversity, and fluency while being faster in decoding.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rohola Zandie",
+      "Mohammad H. Mahoor"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.06434v1",
+    "url": "http://arxiv.org/abs/2103.06434v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.05406v1",
+    "title": "Adversarial Transformer Language Models for Contextual Commonsense Inference",
+    "abstract": "Contextualized or discourse aware commonsense inference is the task of generating coherent commonsense assertions (i.e., facts) from a given story, and a particular sentence from that story. Some problems with the task are: lack of controllability for topics of the inferred facts; lack of commonsense knowledge during training; and, possibly, hallucinated or false facts. In this work, we utilize a transformer model for this task and develop techniques to address the aforementioned problems in the task. We control the inference by introducing a new technique we call \"hinting\". Hinting is a kind of language model prompting, that utilizes both hard prompts (specific words) and soft prompts (virtual learnable templates). This serves as a control signal to advise the language model \"what to talk about\". Next, we establish a methodology for performing joint inference with multiple commonsense knowledge bases. Joint inference of commonsense requires care, because it is imprecise and the level of generality is more flexible. You want to be sure that the results \"still make sense\" for the context. To this end, we align the textual version of assertions from three knowledge graphs (ConceptNet, ATOMIC2020, and GLUCOSE) with a story and a target sentence. This combination allows us to train a single model to perform joint inference with multiple knowledge graphs. We show experimental results for the three knowledge graphs on joint inference. Our final contribution is exploring a GAN architecture that generates the contextualized commonsense assertions and scores them as to their plausibility through a discriminator. The result is an integrated system for contextual commonsense inference in stories, that can controllably generate plausible commonsense assertions, and takes advantage of joint inference between multiple commonsense knowledge bases.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Pedro Colon-Hernandez",
+      "Henry Lieberman",
+      "Yida Xin",
+      "Claire Yin",
+      "Cynthia Breazeal",
+      "Peter Chin"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.05406v1",
+    "url": "http://arxiv.org/abs/2302.05406v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1907.13362v1",
+    "title": "On conducting better validation studies of automatic metrics in natural language generation evaluation",
+    "abstract": "Natural language generation (NLG) has received increasing attention, which has highlighted evaluation as a central methodological concern. Since human evaluations for these systems are costly, automatic metrics have broad appeal in NLG. Research in language generation often finds situations where it is appropriate to apply existing metrics or propose new ones. The application of these metrics are entirely dependent on validation studies - studies that determine a metric's correlation to human judgment. However, there are many details and considerations in conducting strong validation studies. This document is intended for those validating existing metrics or proposing new ones in the broad context of NLG: we 1) begin with a write-up of best practices in validation studies, 2) outline how to adopt these practices, 3) conduct analyses in the WMT'17 metrics shared task\\footnote{Our jupyter notebook containing the analyses is available at \\url{https://github.com}}, and 4) highlight promising approaches to NLG metrics 5) conclude with our opinions on the future of this area.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Johnny Tian-Zheng Wei"
+    ],
+    "doi": null,
+    "arxiv_id": "1907.13362v1",
+    "url": "http://arxiv.org/abs/1907.13362v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.00073v1",
+    "title": "Trustworthiness of Children Stories Generated by Large Language Models",
+    "abstract": "Large Language Models (LLMs) have shown a tremendous capacity for generating literary text. However, their effectiveness in generating children's stories has yet to be thoroughly examined. In this study, we evaluate the trustworthiness of children's stories generated by LLMs using various measures, and we compare and contrast our results with both old and new children's stories to better assess their significance. Our findings suggest that LLMs still struggle to generate children's stories at the level of quality and nuance found in actual stories",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Prabin Bhandari",
+      "Hannah Marie Brennan"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.00073v1",
+    "url": "http://arxiv.org/abs/2308.00073v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.04186v2",
+    "title": "Analogy Generation by Prompting Large Language Models: A Case Study of InstructGPT",
+    "abstract": "We propose a novel application of prompting Pre-trained Language Models (PLMs) to generate analogies and study how to design effective prompts for two task settings: generating a source concept analogous to a given target concept (aka Analogous Concept Generation or ACG), and generating an explanation of the similarity between a given pair of target concept and source concept (aka Analogous Explanation Generation or AEG). We found that it is feasible to prompt InstructGPT to generate meaningful analogies and the best prompts tend to be precise imperative statements especially with a low temperature setting. We also systematically analyzed the sensitivity of the InstructGPT model to prompt design, temperature, and injected spelling errors, and found that the model is particularly sensitive to certain variations (e.g., questions vs. imperative statements). Further, we conducted human evaluation on 1.4k of the generated analogies and found that the quality of generations varies substantially by model size. The largest InstructGPT model can achieve human-level performance at generating meaningful analogies for a given target while there is still room for improvement on the AEG task.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Bhavya Bhavya",
+      "Jinjun Xiong",
+      "Chengxiang Zhai"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.04186v2",
+    "url": "http://arxiv.org/abs/2210.04186v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.27043v2",
+    "title": "Introducing MELI: the Mandarin-English Language Interview Corpus",
+    "abstract": "We introduce the Mandarin-English Language Interview (MELI) Corpus, an open-source resource of 29.8 hours of speech from 51 Mandarin-English bilingual speakers. MELI combines matched sessions in Mandarin and English with two speaking styles: read sentences and spontaneous interviews about language varieties, standardness, and learning experiences. Audio was recorded at 44.1 kHz (16-bit, stereo). Interviews were fully transcribed, force-aligned at word and phone levels, and anonymized. Descriptively, the Mandarin component totals ~14.7 hours (mean duration 17.3 minutes) and the English component ~15.1 hours (mean duration 17.8 minutes). We report token/type statistics for each language and document code-switching patterns (frequent in Mandarin sessions; more limited in English sessions). The corpus design supports within-/cross-speaker, within/cross-language acoustic comparison and links acoustics to speakers' stated language attitudes, enabling both quantitative and qualitative analyses. The MELI Corpus will be released with transcriptions, alignments, metadata, scans of labelled maps and documentation under a CC BY-NC 4.0 license.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Suyuan Liu",
+      "Molly Babel"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.27043v2",
+    "url": "http://arxiv.org/abs/2603.27043v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.05964v2",
+    "title": "A Survey on Transformer Compression",
+    "abstract": "Transformer plays a vital role in the realms of natural language processing (NLP) and computer vision (CV), specially for constructing large language models (LLM) and large vision models (LVM). Model compression methods reduce the memory and computational cost of Transformer, which is a necessary step to implement large language/vision models on practical devices. Given the unique architecture of Transformer, featuring alternative attention and feedforward neural network (FFN) modules, specific compression techniques are usually required. The efficiency of these compression methods is also paramount, as retraining large models on the entire training dataset is usually impractical. This survey provides a comprehensive review of recent compression methods, with a specific focus on their application to Transformer-based models. The compression methods are primarily categorized into pruning, quantization, knowledge distillation, and efficient architecture design (Mamba, RetNet, RWKV, etc.). In each category, we discuss compression methods for both language and vision tasks, highlighting common underlying principles. Finally, we delve into the relation between various compression methods, and discuss further directions in this domain.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yehui Tang",
+      "Yunhe Wang",
+      "Jianyuan Guo",
+      "Zhijun Tu",
+      "Kai Han",
+      "Hailin Hu",
+      "Dacheng Tao"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.05964v2",
+    "url": "http://arxiv.org/abs/2402.05964v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1501.03191v1",
+    "title": "Annotating Cognates and Etymological Origin in Turkic Languages",
+    "abstract": "Turkic languages exhibit extensive and diverse etymological relationships among lexical items. These relationships make the Turkic languages promising for exploring automated translation lexicon induction by leveraging cognate and other etymological information. However, due to the extent and diversity of the types of relationships between words, it is not clear how to annotate such information. In this paper, we present a methodology for annotating cognates and etymological origin in Turkic languages. Our method strives to balance the amount of research effort the annotator expends with the utility of the annotations for supporting research on improving automated translation lexicon induction.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Benjamin S. Mericli",
+      "Michael Bloodgood"
+    ],
+    "doi": null,
+    "arxiv_id": "1501.03191v1",
+    "url": "http://arxiv.org/abs/1501.03191v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.12016v1",
+    "title": "Selecting Artificially-Generated Sentences for Fine-Tuning Neural Machine Translation",
+    "abstract": "Neural Machine Translation (NMT) models tend to achieve best performance when larger sets of parallel sentences are provided for training. For this reason, augmenting the training set with artificially-generated sentence pairs can boost performance. Nonetheless, the performance can also be improved with a small number of sentences if they are in the same domain as the test set. Accordingly, we want to explore the use of artificially-generated sentences along with data-selection algorithms to improve German-to-English NMT models trained solely with authentic data. In this work, we show how artificially-generated sentences can be more beneficial than authentic pairs, and demonstrate their advantages when used in combination with data-selection algorithms.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Alberto Poncelas",
+      "Andy Way"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.12016v1",
+    "url": "http://arxiv.org/abs/1909.12016v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.14757v1",
+    "title": "An Automated Multiple-Choice Question Generation Using Natural Language Processing Techniques",
+    "abstract": "Automatic multiple-choice question generation (MCQG) is a useful yet challenging task in Natural Language Processing (NLP). It is the task of automatic generation of correct and relevant questions from textual data. Despite its usefulness, manually creating sizeable, meaningful and relevant questions is a time-consuming and challenging task for teachers. In this paper, we present an NLP-based system for automatic MCQG for Computer-Based Testing Examination (CBTE).We used NLP technique to extract keywords that are important words in a given lesson material. To validate that the system is not perverse, five lesson materials were used to check the effectiveness and efficiency of the system. The manually extracted keywords by the teacher were compared to the auto-generated keywords and the result shows that the system was capable of extracting keywords from lesson materials in setting examinable questions. This outcome is presented in a user-friendly interface for easy accessibility.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Chidinma A. Nwafor",
+      "Ikechukwu E. Onyenwe"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.14757v1",
+    "url": "http://arxiv.org/abs/2103.14757v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.11371v1",
+    "title": "The Dynamics of Human and AI-Generated Language: How Semantics Fluctuates across Different Timescales",
+    "abstract": "Spoken language, whether produced by humans or large language models (LLM), unfolds over time with varying semantic content. However, we still lack simple, interpretable time-series features that capture how generic versus specific content is distributed over time, and that can be used to compare human and AI-generated speech. We introduce a semantic-timescale analysis pipeline that turns word-level transcripts with timestamps into semantic time-series. For each spoken narrative, we compute (i) semantic specificity using WordNet-based word depth and (ii) contextual similarity using SBERT embeddings and quantify their temporal dependence using autocorrelation-window measures (ACW-0 and related metrics). We then compare original speech to multiple shuffled controls that selectively disrupt lexical identity, temporal order, and word duration. Across human-read autobiographical narratives, TTS readings, and LLM-generated texts rendered with TTS, we find that segments with longer ACW-0 in the semantic time-series tend to contain more generic vocabulary, whereas segments with shorter ACW-0 are enriched in more specific words. These associations are strongly attenuated or abolished when word order and timing are randomized, indicating that ACW-based measures capture non-trivial temporal organization of semantic content beyond static lexical distributions. Our results suggest that ACW-based semantic timescales are a useful family of features for analyzing and comparing the temporal structure of human and AI-generated speech.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Han-Jen Chang",
+      "Yasir Çatal",
+      "Angelika Wolman",
+      "Agustín Ibáñez",
+      "David Smith",
+      "I-Wen Su",
+      "Kai-Yuan Cheng",
+      "Georg Northoff"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.11371v1",
+    "url": "http://arxiv.org/abs/2606.11371v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.14025v1",
+    "title": "Large Language Models and Multimodal Retrieval for Visual Word Sense Disambiguation",
+    "abstract": "Visual Word Sense Disambiguation (VWSD) is a novel challenging task with the goal of retrieving an image among a set of candidates, which better represents the meaning of an ambiguous word within a given context. In this paper, we make a substantial step towards unveiling this interesting task by applying a varying set of approaches. Since VWSD is primarily a text-image retrieval task, we explore the latest transformer-based methods for multimodal retrieval. Additionally, we utilize Large Language Models (LLMs) as knowledge bases to enhance the given phrases and resolve ambiguity related to the target word. We also study VWSD as a unimodal problem by converting to text-to-text and image-to-image retrieval, as well as question-answering (QA), to fully explore the capabilities of relevant models. To tap into the implicit knowledge of LLMs, we experiment with Chain-of-Thought (CoT) prompting to guide explainable answer generation. On top of all, we train a learn to rank (LTR) model in order to combine our different modules, achieving competitive ranking results. Extensive experiments on VWSD demonstrate valuable insights to effectively drive future directions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Anastasia Kritharoula",
+      "Maria Lymperaiou",
+      "Giorgos Stamou"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.14025v1",
+    "url": "http://arxiv.org/abs/2310.14025v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.10117v1",
+    "title": "Scaling Native Language Identification with Transformer Adapters",
+    "abstract": "Native language identification (NLI) is the task of automatically identifying the native language (L1) of an individual based on their language production in a learned language. It is useful for a variety of purposes including marketing, security and educational applications. NLI is usually framed as a multi-label classification task, where numerous designed features are combined to achieve state-of-the-art results. Recently deep generative approach based on transformer decoders (GPT-2) outperformed its counterparts and achieved the best results on the NLI benchmark datasets. We investigate this approach to determine the practical implications compared to traditional state-of-the-art NLI systems. We introduce transformer adapters to address memory limitations and improve training/inference speed to scale NLI applications for production.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ahmet Yavuz Uluslu",
+      "Gerold Schneider"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.10117v1",
+    "url": "http://arxiv.org/abs/2211.10117v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01912v1",
+    "title": "A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation",
+    "abstract": "This work tackles the information loss bottleneck of vector-quantization (VQ) autoregressive image generation by introducing a novel model architecture called the 2-Dimensional Autoregression (DnD) Transformer. The DnD-Transformer predicts more codes for an image by introducing a new autoregression direction, \\textit{model depth}, along with the sequence length direction. Compared to traditional 1D autoregression and previous work utilizing similar 2D image decomposition such as RQ-Transformer, the DnD-Transformer is an end-to-end model that can generate higher quality images with the same backbone model size and sequence length, opening a new optimization perspective for autoregressive image generation. Furthermore, our experiments reveal that the DnD-Transformer's potential extends beyond generating natural images. It can even generate images with rich text and graphical elements in a self-supervised manner, demonstrating an understanding of these combined modalities. This has not been previously demonstrated for popular vision generative models such as diffusion models, showing a spark of vision-language intelligence when trained solely on images. Code, datasets and models are open at https://github.com/chenllliang/DnD-Transformer.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Liang Chen",
+      "Sinan Tan",
+      "Zefan Cai",
+      "Weichu Xie",
+      "Haozhe Zhao",
+      "Yichi Zhang",
+      "Junyang Lin",
+      "Jinze Bai",
+      "Tianyu Liu",
+      "Baobao Chang"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01912v1",
+    "url": "http://arxiv.org/abs/2410.01912v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.14437v1",
+    "title": "Natural Language Generation",
+    "abstract": "This book provides a broad overview of Natural Language Generation (NLG), including technology, user requirements, evaluation, and real-world applications. The focus is on concepts and insights which hopefully will remain relevant for many years, not on the latest LLM innovations. It draws on decades of work by the author and others on NLG. The book has the following chapters: Introduction to NLG; Rule-Based NLG; Machine Learning and Neural NLG; Requirements; Evaluation; Safety, Maintenance, and Testing; and Applications. All chapters include examples and anecdotes from the author's personal experiences, and end with a Further Reading section. The book should be especially useful to people working on applied NLG, including NLG researchers, people in other fields who want to use NLG, and commercial developers. It will not however be useful to people who want to understand the latest LLM technology. There is a companion site with more information at https://ehudreiter.com/book/",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ehud Reiter"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.14437v1",
+    "url": "http://arxiv.org/abs/2502.14437v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.13040v1",
+    "title": "SpeechPrompt: Prompting Speech Language Models for Speech Processing Tasks",
+    "abstract": "Prompting has become a practical method for utilizing pre-trained language models (LMs). This approach offers several advantages. It allows an LM to adapt to new tasks with minimal training and parameter updates, thus achieving efficiency in both storage and computation. Additionally, prompting modifies only the LM's inputs and harnesses the generative capabilities of language models to address various downstream tasks in a unified manner. This significantly reduces the need for human labor in designing task-specific models. These advantages become even more evident as the number of tasks served by the LM scales up. Motivated by the strengths of prompting, we are the first to explore the potential of prompting speech LMs in the domain of speech processing. Recently, there has been a growing interest in converting speech into discrete units for language modeling. Our pioneer research demonstrates that these quantized speech units are highly versatile within our unified prompting framework. Not only can they serve as class labels, but they also contain rich phonetic information that can be re-synthesized back into speech signals for speech generation tasks. Specifically, we reformulate speech processing tasks into speech-to-unit generation tasks. As a result, we can seamlessly integrate tasks such as speech classification, sequence generation, and speech generation within a single, unified prompting framework. The experiment results show that the prompting method can achieve competitive performance compared to the strong fine-tuning method based on self-supervised learning models with a similar number of trainable parameters. The prompting method also shows promising results in the few-shot setting. Moreover, with the advanced speech LMs coming into the stage, the proposed prompting framework attains great potential.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Kai-Wei Chang",
+      "Haibin Wu",
+      "Yu-Kai Wang",
+      "Yuan-Kuei Wu",
+      "Hua Shen",
+      "Wei-Cheng Tseng",
+      "Iu-thing Kang",
+      "Shang-Wen Li",
+      "Hung-yi Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.13040v1",
+    "url": "http://arxiv.org/abs/2408.13040v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1610.00030v1",
+    "title": "Modeling Language Change in Historical Corpora: The Case of Portuguese",
+    "abstract": "This paper presents a number of experiments to model changes in a historical Portuguese corpus composed of literary texts for the purpose of temporal text classification. Algorithms were trained to classify texts with respect to their publication date taking into account lexical variation represented as word n-grams, and morphosyntactic variation represented by part-of-speech (POS) distribution. We report results of 99.8% accuracy using word unigram features with a Support Vector Machines classifier to predict the publication date of documents in time intervals of both one century and half a century. A feature analysis is performed to investigate the most informative features for this task and how they are linked to language change.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Marcos Zampieri",
+      "Shervin Malmasi",
+      "Mark Dras"
+    ],
+    "doi": null,
+    "arxiv_id": "1610.00030v1",
+    "url": "http://arxiv.org/abs/1610.00030v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.14850v6",
+    "title": "Turkish Native Language Identification V2",
+    "abstract": "This paper presents the first application of Native Language Identification (NLI) for the Turkish language. NLI is the task of automatically identifying an individual's native language (L1) based on their writing or speech in a non-native language (L2). While most NLI research has focused on L2 English, our study extends this scope to L2 Turkish by analyzing a corpus of texts written by native speakers of Albanian, Arabic and Persian. We leverage a cleaned version of the Turkish Learner Corpus and demonstrate the effectiveness of syntactic features, comparing a structural Part-of-Speech n-gram model to a hybrid model that retains function words. Our models achieve promising results, and we analyze the most predictive features to reveal L1-specific transfer effects. We make our data and code publicly available for further study.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ahmet Yavuz Uluslu",
+      "Gerold Schneider"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.14850v6",
+    "url": "http://arxiv.org/abs/2307.14850v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cs/0306062v1",
+    "title": "Learning to Order Facts for Discourse Planning in Natural Language Generation",
+    "abstract": "This paper presents a machine learning approach to discourse planning in natural language generation. More specifically, we address the problem of learning the most natural ordering of facts in discourse plans for a specific domain. We discuss our methodology and how it was instantiated using two different machine learning algorithms. A quantitative evaluation performed in the domain of museum exhibit descriptions indicates that our approach performs significantly better than manually constructed ordering rules. Being retrainable, the resulting planners can be ported easily to other similar domains, without requiring language technology expertise.",
+    "year": 2003,
+    "venue": null,
+    "authors": [
+      "Aggeliki Dimitromanolaki",
+      "Ion Androutsopoulos"
+    ],
+    "doi": null,
+    "arxiv_id": "0306062v1",
+    "url": "http://arxiv.org/abs/cs/0306062v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.07374v1",
+    "title": "Reusable Templates and Guides For Documenting Datasets and Models for Natural Language Processing and Generation: A Case Study of the HuggingFace and GEM Data and Model Cards",
+    "abstract": "Developing documentation guidelines and easy-to-use templates for datasets and models is a challenging task, especially given the variety of backgrounds, skills, and incentives of the people involved in the building of natural language processing (NLP) tools. Nevertheless, the adoption of standard documentation practices across the field of NLP promotes more accessible and detailed descriptions of NLP datasets and models, while supporting researchers and developers in reflecting on their work. To help with the standardization of documentation, we present two case studies of efforts that aim to develop reusable documentation templates -- the HuggingFace data card, a general purpose card for datasets in NLP, and the GEM benchmark data and model cards with a focus on natural language generation. We describe our process for developing these templates, including the identification of relevant stakeholder groups, the definition of a set of guiding principles, the use of existing templates as our foundation, and iterative revisions based on feedback.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Angelina McMillan-Major",
+      "Salomey Osei",
+      "Juan Diego Rodriguez",
+      "Pawan Sasanka Ammanamanchi",
+      "Sebastian Gehrmann",
+      "Yacine Jernite"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.07374v1",
+    "url": "http://arxiv.org/abs/2108.07374v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

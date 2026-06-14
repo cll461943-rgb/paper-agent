@@ -1,0 +1,56 @@
+{
+  "paper_id": "https://openalex.org/W4387800173",
+  "title": "CareerX: A Retrieval-Augmented Generation Framework for Personalized AI-Driven Career Guidance",
+  "abstract": "Career guidance systems must adapt to rapidly shifting labor markets, yet traditional platforms rely on static databases while standalone large language models (LLMs) are limited by training data cutoffs and prone to hallucination. This paper presents CareerX, a web-based career guidance system that augments LLM generation with live web retrieval through a SearXNG-based meta-search pipeline. The system dynamically generates personalized intake questionnaires via LLM-driven schema generation, formulates targeted search queries, scrapes and cleans live web sources, and synthesizes structured career dashboards through Zod-enforced schema-constrained generation. Unlike canonical RAG architectures that retrieve from pre-built vector stores, CareerX performs direct web retrieval — live search results are scraped and injected into the LLM context window, trading embedding-based semantic precision for real-time data currency. The system produces location-specific salary data, source-attributed university recommendations, and traceable URL citations that standalone LLMs cannot provide without retrieval augmentation. Initial measurements across three successful test profiles indicate a mean end-to-end pipeline time of 66.7 seconds (SD = 6.2s), of which LLM synthesis accounts for approximately 15–20 seconds, with an average of 37.7 web sources retrieved per session and 79% schema completeness.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Akari Asai",
+    "Zeqiu Wu",
+    "Yizhong Wang",
+    "Avirup Sil",
+    "Hannaneh Hajishirzi"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2310.11511",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2310.11511",
+  "citation_count": 86,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Task (project management)",
+      "Reflection (computer programming)",
+      "Set (abstract data type)",
+      "Inference",
+      "Information retrieval",
+      "Parametric statistics",
+      "Artificial intelligence",
+      "Programming language",
+      "Mathematics",
+      "Economics",
+      "Management",
+      "Statistics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2055243143",
+      "https://openalex.org/W4321636575",
+      "https://openalex.org/W2371168111",
+      "https://openalex.org/W1986418932",
+      "https://openalex.org/W2357796999",
+      "https://openalex.org/W2494809169",
+      "https://openalex.org/W2045526782",
+      "https://openalex.org/W2741131631",
+      "https://openalex.org/W2156919374",
+      "https://openalex.org/W4386392971"
+    ]
+  }
+}

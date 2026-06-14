@@ -1,0 +1,651 @@
+[
+  {
+    "paper_id": "pubmed:42091953",
+    "title": "Autonomous policy evolution and decision robustness in hybrid learning-optimization frameworks for energy systems with distributed renewables.",
+    "abstract": "This study presents a hybrid reinforcement learning-assisted distributionally robust optimization (RL-DRO) framework for resilient and low-carbon energy system operation under uncertainty. The proposed model integrates a multi-agent reinforcement learning structure with a Wasserstein-metric distributionally robust formulation to capture both adaptive decision-making and conservative risk management. Reinforcement learning agents, representing distributed subsystems such as renewable generators, storage units, and flexible loads, are trained to minimize a composite objective combining expected cost and risk, while the DRO layer ensures robustness against distributional ambiguity. A case study on a renewable-dominated microgrid demonstrates that the RL-DRO framework converges smoothly within 4000 training iterations, achieving a 9.7 % reduction in expected cost and a 28 % improvement in robustness compared with stochastic optimization. The optimal ambiguity radius balances efficiency and resilience, while renewable curtailment and storage utilization exhibit clear compensatory dynamics across uncertainty scenarios. Emission trajectories show an exponential decay from 200 to 140 tCO[Formula: see text] across learning epochs, confirming the model's ability to internalize environmental objectives. Overall, the RL-DRO architecture unifies data-driven learning and mathematical robustness, enabling distributed agents to achieve stable coordination and sustainable operation under high renewable penetration. The framework establishes a practical foundation for intelligent, risk-aware, and carbon-efficient decision-making in modern power systems.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Yongle Zheng",
+      "Shiqian Wang",
+      "Zhongfu Tan",
+      "Yihan Zhang",
+      "Peng Li",
+      "Yijun Jiang",
+      "Huixuan Li",
+      "Hongkai Zhang"
+    ],
+    "doi": "10.1038/s41598-026-50532-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42091953/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42091953"
+    }
+  },
+  {
+    "paper_id": "pubmed:42079392",
+    "title": "Structure-informed Risk Minimization for Robust Ensemble Learning.",
+    "abstract": "Ensemble learning is a powerful approach for improving generalization under distribution shifts, but its effectiveness heavily depends on how individual models are combined. Existing methods often optimize ensemble weights based on validation data, which may not represent unseen test distributions, leading to suboptimal performance in out-of-distribution (OoD) settings. Inspired by Distributionally Robust Optimization (DRO), we propose Structure-informed Risk Minimization (SRM), a principled framework that learns robust ensemble weights without access to test data. Unlike standard DRO, which defines uncertainty sets based on divergence metrics alone, SRM incorporates structural information of training distributions, ensuring that the uncertainty set aligns with plausible real-world shifts. This approach mitigates the over-pessimism of traditional worst-case optimization while maintaining robustness. We introduce a computationally efficient optimization algorithm with theoretical guarantees and demonstrate that SRM achieves superior OoD generalization compared to existing ensemble combination strategies across diverse benchmarks. Code is available at: https://github.com/deep-real/SRM.",
+    "year": 2025,
+    "venue": "Proceedings of machine learning research",
+    "authors": [
+      "Fengchun Qiao",
+      "Yanlin Chen",
+      "Xi Peng"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42079392/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42079392"
+    }
+  },
+  {
+    "paper_id": "pubmed:42072555",
+    "title": "Decision-Making Under Model Misspecification: DRO with Robust Bayesian Ambiguity Sets.",
+    "abstract": "Distributionally Robust Optimisation (DRO) protects risk-averse decision-makers by considering the worst-case risk within an ambiguity set of distributions based on the empirical distribution or a model. To further guard against finite, noisy data, model-based approaches admit Bayesian formulations that propagate uncertainty from the posterior to the decision-making problem. However, when the model is misspecified, the decision-maker must stretch the ambiguity set to contain the data-generating process (DGP), leading to overly conservative decisions. We address this challenge by introducing DRO with Robust ayesian Ambiguity Sets (DRO-RoBAS) to model misspecification. These are Maximum Mean Discrepancy ambiguity sets centred at a robust posterior predictive distribution that incorporates beliefs about the DGP. We show that the resulting optimisation problem obtains a dual formulation in the Reproducing Kernel Hilbert Space and we give probabilistic guarantees on the tolerance level of the ambiguity set. Our method outperforms other Bayesian and empirical DRO approaches in out-of-sample performance on the Newsvendor and Portfolio problems with various cases of model misspecification.",
+    "year": 2026,
+    "venue": "Entropy (Basel, Switzerland)",
+    "authors": [
+      "Charita Dellaporta",
+      "Patrick O'Hara",
+      "Theodoros Damoulas"
+    ],
+    "doi": "10.3390/e28040430",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42072555/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42072555"
+    }
+  },
+  {
+    "paper_id": "pubmed:42045310",
+    "title": "Robust topology and dispatch optimization for renewable distribution networks with electric vehicle mobility uncertainty.",
+    "abstract": "The increasing interdependence between power distribution networks and transportation systems introduces unprecedented operational complexity under high renewable penetration and stochastic electric vehicle (EV) mobility. This study proposes a spatiotemporally coupled distributionally robust topology-dispatch co-optimization framework to coordinate network reconfiguration, dispatch scheduling, and EV charging operations under dual-layer uncertainty from renewable generation and transportation flows. A Wasserstein metric-based distributionally robust optimization (DRO) model is developed to capture ambiguity in the joint probability distributions of wind-solar availability and EV traffic intensity, ensuring robust feasibility against distributional shifts. The upper-level problem minimizes the expected operational cost, switching losses, and travel-related energy cost, while the lower-level subproblem represents the worst-case realization of uncertain parameters within a data-driven ambiguity set. The resulting min-max structure is decomposed through a column-and-constraint generation algorithm augmented by Benders cuts, enabling tractable convergence for large-scale mixed-integer nonlinear decision spaces. Case studies on a 10-node distribution network coupled with 20-route EV mobility scenarios demonstrate that the proposed framework achieves 12.4% lower operational cost variance and 45% voltage deviation reduction compared with deterministic optimization. The Wasserstein ambiguity radius ɛ is shown to critically shape the robustness-efficiency trade-off, with ɛ = 0.05 yielding a near-optimal balance- improving out-of-sample reliability by 39% with only a 12.7% cost penalty. Moreover, scenario-wise analyses reveal adaptive reconfiguration patterns that dynamically align switching actions with renewable curtailment and traffic congestion, leading to coordinated mitigation of spatiotemporal imbalances. These findings confirm that integrating topology flexibility with distributionally robust dispatch and mobility coordination can substantially enhance the resilience and economic efficiency of renewable-dominated urban energy systems.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Liang Xu",
+      "Jianjian Jiang",
+      "Shizhao Hu",
+      "Tianlin Wang",
+      "Jiadu Dong"
+    ],
+    "doi": "10.1038/s41598-026-41486-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42045310/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42045310"
+    }
+  },
+  {
+    "paper_id": "pubmed:41530242",
+    "title": "Multi-agent coordination and uncertainty adaptation in deep learning-assisted hierarchical optimization for renewable-dominated distribution networks.",
+    "abstract": "The rapid proliferation of renewable energy sources has introduced multi-layered uncertainty into modern power system operation, challenging conventional deterministic and stochastic optimization frameworks. To address this complexity, this study proposes a deep learning-assisted distributionally robust optimization (Deep-DRO) framework designed to enhance both economic efficiency and operational reliability under uncertainty. The model integrates a hierarchical coordination architecture, wherein deep learning modules infer the probabilistic structure of uncertain variables-such as solar irradiance, wind availability, and load fluctuation-while the DRO layer enforces system-wide robustness through an adaptively reshaped ambiguity set. The learning-assisted ambiguity reconstruction enables the optimization to dynamically adjust conservativeness, improving the tradeoff between cost, reliability, and renewable utilization. Methodologically, the proposed framework employs a multi-agent dispatch structure consisting of three decision layers-county, feeder, and distributed energy resource (DER)-each learning distinct policy mappings through reinforcement-guided coordination. Deep networks trained on high-resolution meteorological and operational data estimate scenario distributions, while the robust optimization core minimizes expected cost and reliability penalties under distributional ambiguity. The resulting hybrid system seamlessly couples data-driven forecasting and model-based optimization, bridging the gap between predictive intelligence and operational robustness. To ensure scalability and interpretability, convergence diagnostics, sensitivity analyses, and cost decomposition studies are performed across multiple test systems and uncertainty scenarios. Simulation results on a benchmark multi-region distribution network demonstrate substantial performance gains. Compared to conventional DRO, the Deep-DRO model reduces total operational cost by 11.0-13.5%, improves reliability indices from 0.864 to 0.911, and raises renewable utilization from 85.6% to 89.7%. The integrated deep learning mechanism effectively captures latent correlations among stochastic parameters, enabling the system to maintain resilience even under 30% higher uncertainty variance. Furthermore, carbon emissions decline by 28.6% relative to baseline, confirming that the proposed method achieves an intrinsic balance between economic optimization and environmental sustainability. The analysis reveals that hierarchical learning fosters adaptive coordination among agents, while the robust layer guarantees performance consistency across uncertain conditions. The study thus advances a generalizable paradigm for intelligent, risk-aware energy management, offering theoretical and practical implications for future power system restoration, smart grid autonomy, and sustainable dispatch design.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Yongle Zheng",
+      "Huixuan Li",
+      "Shiqian Wang",
+      "Zhongfu Tan",
+      "Xiaoliang Jiang",
+      "Peng Li",
+      "Yijun Jiang",
+      "Hongkai Zhang"
+    ],
+    "doi": "10.1038/s41598-026-35945-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41530242/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41530242"
+    }
+  },
+  {
+    "paper_id": "pubmed:41526429",
+    "title": "Optimized economic scheduling of demand response in integrated energy systems considering dynamic energy efficiency and dynamic carbon trading.",
+    "abstract": "Addressing uncertainties on the demand side caused by electricity price fluctuations during integrated energy system (IES) dispatch, modeling biases resulting from static assumptions about equipment energy efficiency, and cost redundancy issues stemming from unreasonable seasonal allocation of carbon quotas, this study constructs an electricity PDR economic dispatch optimization model incorporating dynamic energy efficiency and dynamic carbon trading. It proposes a \"distributed robust optimization (DRO)-model predictive control (MPC)\" collaborative framework and a tiered dynamic carbon quota allocation strategy accounting for seasonal output and efficiency variations of equipment, tailored to match carbon emission characteristics across different seasons. At the demand response level, an electricity price elasticity coefficient matrix is introduced to quantify the impact of real-time price fluctuations on load, integrating it into the MPC model to resolve the time-scale mismatch between day-ahead and intraday scheduling. Simulation results demonstrate: The coupled dynamic energy efficiency and carbon trading model reduces total system costs by 13.07% and carbon trading costs by 11.57% compared to the conventional approach. Regarding tracking error, the combination of rolling optimization and feedback correction improves tracking accuracy by 14.66% and 6.13% compared to cases without feedback correction and rolling optimization, respectively, while reducing total costs by 4.36% compared to the case without rolling optimization. This study provides a scientifically feasible optimization solution for low-carbon economic dispatch of IES under uncertainty.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Haoyu Mao",
+      "Qiyue Deng",
+      "Zihao Zhang",
+      "Xiaohui Yang"
+    ],
+    "doi": "10.1038/s41598-025-33497-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41526429/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41526429"
+    }
+  },
+  {
+    "paper_id": "pubmed:41028206",
+    "title": "Hybrid learning-based fault prediction and cascading failure mitigation in multi-network energy systems.",
+    "abstract": "This paper introduces a novel approach for managing fault propagation in interconnected energy networks comprising electric, gas, and heating systems. As energy infrastructures become increasingly integrated, the risk of cascading failures across these networks grows, making it critical to develop robust models for predicting and mitigating fault propagation. To tackle the complexity of fault propagation in interconnected energy systems, we develop a novel AI-based management architecture that couples adversarial learning mechanisms with graph-structured predictive models. Specifically, a generative network is employed to synthesize plausible fault evolution patterns from historical records, while a graph-based neural architecture captures the spatiotemporal correlations among the subsystems. Furthermore, a robust optimization scheme under distributional uncertainty is incorporated to devise adaptive recovery strategies, enhancing the resilience and reliability of system restoration processes. The proposed model is tested using a synthetic case study based on the IEEE 123-bus electric network, the Belgian gas transmission system, and a standard heating network. The results demonstrate the effectiveness of the model in accurately predicting fault propagation and optimizing recovery strategies, significantly reducing recovery time and minimizing the impact of cascading failures. The primary innovations presented in this study are the development of an integrated fault propagation framework spanning multiple energy networks, the pioneering use of adversarial and graph-based learning techniques for fault trajectory prediction, and the incorporation of distributionally robust optimization to strengthen recovery planning. Collectively, these advancements contribute to a deeper understanding of fault dynamics in interconnected infrastructures and propose a scalable pathway for enhancing system resilience in modern energy networks.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Xiaoyu Wu",
+      "Yuchen Cao",
+      "Hengtian Wu",
+      "Shaokang Qi",
+      "Mengen Zhao",
+      "Yuan Feng",
+      "Qinyi Yu"
+    ],
+    "doi": "10.1038/s41598-025-10304-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41028206/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41028206"
+    }
+  },
+  {
+    "paper_id": "pubmed:40910150",
+    "title": "A Positive Semidefinite Safe Approximation of Multivariate Distributionally Robust Constraints Determined by Simple Functions.",
+    "abstract": "Single-level reformulations of (nonconvex) distributionally robust optimization (DRO) problems are often intractable, as they contain semi-infinite dual constraints. Based on such a semi-infinite reformulation, we present a safe approximation that allows for the computation of feasible solutions for DROs that depend on nonconvex multivariate simple functions. Moreover, the approximation allows to address ambiguity sets that can incorporate information on moments as well as confidence sets. The typical strong assumptions on the structure of the underlying constraints, such as convexity in the decisions or concavity in the uncertainty found in the literature were, at least in part, recently overcome in [16]. We start from the duality-based reformulation approach in [16] that can be applied for DRO constraints based on simple functions that are univariate in the uncertainty parameters. We significantly extend their approach to multivariate simple functions, which leads to a considerably wider applicability of the proposed reformulation approach. In order to achieve algorithmic tractability, the presented safe approximation is then realized by a discretized counterpart for the semi-infinite dual constraints. The approximation leads to a computationally tractable mixed-integer positive semidefinite problem for which state-of-the-art software implementations are readily available. The tractable safe approximation provides sufficient conditions for distributional robustness of the original problem, i.e., obtained solutions are provably robust.",
+    "year": 2026,
+    "venue": "Journal of optimization theory and applications",
+    "authors": [
+      "Jana Dienstbier",
+      "Frauke Liers",
+      "Jan Rolfes"
+    ],
+    "doi": "10.1007/s10957-025-02791-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40910150/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40910150"
+    }
+  },
+  {
+    "paper_id": "pubmed:40681612",
+    "title": "Distributionally robust hybrid energy management in smart mining using process-coupled primal-dual mirror descent.",
+    "abstract": "This study presents a process-centric hybrid energy management framework tailored for large-scale smart mining operations. The framework addresses three major challenges: (i) multi-source uncertainty propagation, (ii) cross-process energy coupling, and (iii) time-varying, safety-critical operational constraints. The energy scheduling problem is formulated as a process-constrained, multi-period optimization under uncertainty, explicitly modeling the spatio-temporal correlations among renewable power generation, ventilation loads, dewatering demands, and blasting energy requirements. To tackle high-dimensional uncertainties with non-Gaussian distributions, a Wasserstein metric-based distributionally robust optimization (DRO) model is constructed. The ambiguity set is dynamically refined through adaptive scenario generation and clustering, capturing worst-case energy supply-demand mismatches. The objective function jointly minimizes total energy cost, carbon emissions, and process-specific operational risks, subject to nonlinear thermodynamic process constraints, piecewise convex ventilation characteristics, and interdependent hydraulic-ventilation-thermal (HVT) processes. Mining safety regulations are integrated via chance constraints, embedding safety-critical margins related to pressure, airflow, and gas concentration. To alleviate the computational burden caused by nested risk formulations, a Primal-Dual Reformulated Distributionally Robust Process Scheduling (PDR-DRPS) algorithm is proposed. This method recursively updates process-coupled dual variables, enabling fast convergence within joint physical-energy feasible subspaces. The proposed framework is validated using a synthetic open-pit mining benchmark incorporating real-world meteorological data, empirical process dynamics, and regulatory thresholds. Numerical results indicate a 25.4% reduction in operational costs, a 31.2% cut in carbon emissions, and consistent adherence to safety constraints within a 3% tolerance under all uncertainty scenarios. Sensitivity analysis further highlights that process inertia and time delays significantly amplify uncertainty propagation, underscoring the necessity of process-aware robust energy scheduling in safety-critical industrial systems. The framework offers a generalizable paradigm applicable to smart mining, tunnel construction, and underground industrial infrastructures.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Dawei Wang",
+      "Yifei Li",
+      "Cheng Gong",
+      "Tianle Li",
+      "Fang Wang",
+      "Shanna Luo",
+      "Jun Li"
+    ],
+    "doi": "10.1038/s41598-025-11013-x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40681612/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40681612"
+    }
+  },
+  {
+    "paper_id": "pubmed:39178077",
+    "title": "Robust Distributed Learning Against Both Distributional Shifts and Byzantine Attacks.",
+    "abstract": "In distributed learning systems, robustness threat may arise from two major sources. On the one hand, due to distributional shifts between training data and test data, the trained model could exhibit poor out-of-sample performance. On the other hand, a portion of working nodes might be subject to Byzantine attacks, which could invalidate the learning result. In this article, we propose a new research direction that jointly considers distributional shifts and Byzantine attacks. We illuminate the major challenges in addressing these two issues simultaneously. Accordingly, we design a new algorithm that equips distributed learning with both distributional robustness and Byzantine robustness. Our algorithm is built on recent advances in distributionally robust optimization (DRO) as well as norm-based screening (NBS), a robust aggregation scheme against Byzantine attacks. We provide convergence proofs in three cases of the learning model being nonconvex, convex, and strongly convex for the proposed algorithm, shedding light on its convergence behaviors and endurability against Byzantine attacks. In particular, we deduce that any algorithm employing NBS (including ours) cannot converge when the percentage of Byzantine nodes is $(1/3)$ or higher, instead of $(1/2)$ , which is the common belief in current literature. The experimental results verify our theoretical findings (on the breakpoint of NBS and others) and also demonstrate the effectiveness of our algorithm against both robustness issues, justifying our choice of NBS over other widely used robust aggregation schemes. To the best of our knowledge, this is the first work to address distributional shifts and Byzantine attacks simultaneously.",
+    "year": 2025,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Guanqiang Zhou",
+      "Ping Xu",
+      "Yue Wang",
+      "Zhi Tian"
+    ],
+    "doi": "10.1109/TNNLS.2024.3436149",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39178077/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39178077"
+    }
+  },
+  {
+    "paper_id": "pubmed:38495189",
+    "title": "Distributionally robust optimization scheduling of port energy system considering hydrogen production and ammonia synthesis.",
+    "abstract": "In order to effectively address the uncertainty risks of port energy system caused by intermittence and fluctuation of renewable energy, this paper proposes a scheduling method for port energy system based on distributionally robust optimization (DRO) considering ammonia synthesis after hydrogen production by water electrolysis (P2H2A), and uses real data from Tianjin Port for example analysis. The calculation results show that 1 h selected for the scheduling interval of P2H2A is reasonable, it can ensure that the ammonia synthesis reaction transitions smoothly to the new steady state, and the temperature and pressure of the ammonia converter meet safety constraints. The two-stage scheduling of port energy system based on DRO can be divided into pre-scheduling in the day-ahead stage and rescheduling in the intraday stage, which can improve the capacity of anti-risk for stochastic optimization and overcome the conservatism of robust optimization, and consider economy and robustness. Moreover, the rescheduling decision can be transformed to a prediction error function, the result of two-stage scheduling based on DRO is the pre-scheduling result, which is between the cost of stochastic optimization and robust optimization. As the Wasserstein distance-based sphere radius increases, the pre-scheduling cost of DRO gradually deviates from risk neutral stochastic optimization and leans towards risk averse robust optimization. When the Wasserstein distance-based sphere radius remains constant, the variance gradually decreases as the number of scenarios increases, which can promote the Wasserstein distance-based fuzzy set to converge to the true distribution. When the number of scenarios is greater than 15, the pre-scheduling cost will no longer fluctuate significantly, and the calculation time is in the range of 1200 s-6600 s. It can meet the demands of day-ahead scheduling calculation time. Therefore, the scheduling model has outstanding advantages in the computing time to improve the flexibility and economy of Tianjin Port's energy system scheduling, considering ammonia synthesis after hydrogen production using renewable energy.",
+    "year": 2024,
+    "venue": "Heliyon",
+    "authors": [
+      "Xiaoou Liu"
+    ],
+    "doi": "10.1016/j.heliyon.2024.e27615",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38495189/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38495189"
+    }
+  },
+  {
+    "paper_id": "pubmed:37738203",
+    "title": "Distributionally Robust Memory Evolution With Generalized Divergence for Continual Learning.",
+    "abstract": "Continual learning (CL) aims to learn a non-stationary data distribution and not forget previous knowledge. The effectiveness of existing approaches that rely on memory replay can decrease over time as the model tends to overfit the stored examples. As a result, the model's ability to generalize well is significantly constrained. Additionally, these methods often overlook the inherent uncertainty in the memory data distribution, which differs significantly from the distribution of all previous data examples. To overcome these issues, we propose a principled memory evolution framework that dynamically adjusts the memory data distribution. This evolution is achieved by employing distributionally robust optimization (DRO) to make the memory buffer increasingly difficult to memorize. We consider two types of constraints in DRO: f-divergence and Wasserstein ball constraints. For f-divergence constraint, we derive a family of methods to evolve the memory buffer data in the continuous probability measure space with Wasserstein gradient flow (WGF). For Wasserstein ball constraint, we directly solve it in the euclidean space. Extensive experiments on existing benchmarks demonstrate the effectiveness of the proposed methods for alleviating forgetting. As a by-product of the proposed framework, our method is more robust to adversarial examples than compared CL methods.",
+    "year": 2023,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Zhenyi Wang",
+      "Li Shen",
+      "Tiehang Duan",
+      "Qiuling Suo",
+      "Le Fang",
+      "Wei Liu",
+      "Mingchen Gao"
+    ],
+    "doi": "10.1109/TPAMI.2023.3317874",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37738203/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37738203"
+    }
+  },
+  {
+    "paper_id": "pubmed:37514805",
+    "title": "Exploring Regularization Methods for Domain Generalization in Accelerometer-Based Human Activity Recognition.",
+    "abstract": "The study of Domain Generalization (DG) has gained considerable momentum in the Machine Learning (ML) field. Human Activity Recognition (HAR) inherently encompasses diverse domains (e.g., users, devices, or datasets), rendering it an ideal testbed for exploring Domain Generalization. Building upon recent work, this paper investigates the application of regularization methods to bridge the generalization gap between traditional models based on handcrafted features and deep neural networks. We apply various regularizers, including sparse training, Mixup, Distributionally Robust Optimization (DRO), and Sharpness-Aware Minimization (SAM), to deep learning models and assess their performance in Out-of-Distribution (OOD) settings across multiple domains using homogenized public datasets. Our results show that Mixup and SAM are the best-performing regularizers. However, they are unable to match the performance of models based on handcrafted features. This suggests that while regularization techniques can improve OOD robustness to some extent, handcrafted features remain superior for domain generalization in HAR tasks.",
+    "year": 2023,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Nuno Bento",
+      "Joana Rebelo",
+      "André V Carreiro",
+      "François Ravache",
+      "Marília Barandas"
+    ],
+    "doi": "10.3390/s23146511",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37514805/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37514805"
+    }
+  },
+  {
+    "paper_id": "pubmed:37319273",
+    "title": "A data-driven robust EVaR-PC with application to portfolio management.",
+    "abstract": "We investigate the robust chance constrained optimization problem (RCCOP), which is a combination of the distributionally robust optimization (DRO) and the chance constraint (CC). The RCCOP plays an important role in modeling uncertain parameters within a decision-making framework. The chance constraint, which is equivalent to a constraint of Value-at-risk (VaR), is approximated by risk measures such as Entropic Value-at-risk (EVaR) or Conditional Value-at-risk (CVaR) due to its difficulty to be evaluated. An excellent approximation requires both tractability and non-conservativeness. In addition, the DRO assumes that we know partial information about the distribution of uncertain parameters instead of their known true underlying probability distribution. In this article, we develop a novel approximation EVaR- PC based on EVaR for CC. Then, we evaluate the proposed approximation EVaR- PC using a discrepancy-based ambiguity set with the wasserstein distance. From a theoretical perspective, the EVaR- PC is less conservative than EVaR and the wasserstein distance possesses many good theoretical properties; from a practical perspective, the discrepancy-based ambiguity set can make full use of the data to estimate the nominal distribution and reduce the sensitivity of decisions to priori knowledges. To show the advantages of our method, we show its application in portfolio management in detail and give the relevant experimental results.",
+    "year": 2023,
+    "venue": "PloS one",
+    "authors": [
+      "Qingyun He",
+      "Chuanyang Hong"
+    ],
+    "doi": "10.1371/journal.pone.0287093",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37319273/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37319273"
+    }
+  },
+  {
+    "paper_id": "pubmed:36996130",
+    "title": "Distributionally robust learning-to-rank under the Wasserstein metric.",
+    "abstract": "Despite their satisfactory performance, most existing listwise Learning-To-Rank (LTR) models do not consider the crucial issue of robustness. A data set can be contaminated in various ways, including human error in labeling or annotation, distributional data shift, and malicious adversaries who wish to degrade the algorithm's performance. It has been shown that Distributionally Robust Optimization (DRO) is resilient against various types of noise and perturbations. To fill this gap, we introduce a new listwise LTR model called Distributionally Robust Multi-output Regression Ranking (DRMRR). Different from existing methods, the scoring function of DRMRR was designed as a multivariate mapping from a feature vector to a vector of deviation scores, which captures local context information and cross-document interactions. In this way, we are able to incorporate the LTR metrics into our model. DRMRR uses a Wasserstein DRO framework to minimize a multi-output loss function under the most adverse distributions in the neighborhood of the empirical data distribution defined by a Wasserstein ball. We present a compact and computationally solvable reformulation of the min-max formulation of DRMRR. Our experiments were conducted on two real-world applications: medical document retrieval and drug response prediction, showing that DRMRR notably outperforms state-of-the-art LTR models. We also conducted an extensive analysis to examine the resilience of DRMRR against various types of noise: Gaussian noise, adversarial perturbations, and label poisoning. Accordingly, DRMRR is not only able to achieve significantly better performance than other baselines, but it can maintain a relatively stable performance as more noise is added to the data.",
+    "year": 2023,
+    "venue": "PloS one",
+    "authors": [
+      "Shahabeddin Sotudian",
+      "Ruidi Chen",
+      "Ioannis Ch Paschalidis"
+    ],
+    "doi": "10.1371/journal.pone.0283574",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36996130/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36996130"
+    }
+  },
+  {
+    "paper_id": "pubmed:35802008",
+    "title": "Improving the resilience of power grids against typhoons with data-driven spatial distributionally robust optimization.",
+    "abstract": "In recent years, the increased frequency of natural hazards has led to more disruptions in power grids, potentially causing severe infrastructural damages and cascading failures. Therefore, it is important that the power system resilience be improved by implementing new technology and utilizing optimization methods. This paper proposes a data-driven spatial distributionally robust optimization (DS-DRO) model to provide an optimal plan to install and dispatch distributed energy resources (DERs) against the uncertain impact of natural hazards such as typhoons. We adopt an accurate spatial model to evaluate the failure probability with regard to system components based on wind speed. We construct a moment-based ambiguity set of the failure distribution based on historical typhoon data. A two-stage DS-DRO model is then formulated to obtain an optimal resilience enhancement strategy. We employ the combination of dual reformulation and a column-and-constraints generation algorithm, and showcase the effectiveness of the proposed approach with a modified IEEE 13-node reliability test system projected in the Hong Kong region.",
+    "year": 2023,
+    "venue": "Risk analysis : an official publication of the Society for Risk Analysis",
+    "authors": [
+      "Zhaoyuan Yin",
+      "Chao Fang",
+      "Haoxiang Yang",
+      "Yiping Fang",
+      "Min Xie"
+    ],
+    "doi": "10.1111/risa.13995",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35802008/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "35802008"
+    }
+  },
+  {
+    "paper_id": "pubmed:34976428",
+    "title": "A Distributionally Robust Optimization Method for Passenger Flow Control Strategy and Train Scheduling on an Urban Rail Transit Line.",
+    "abstract": "Regular coronavirus disease 2019 (COVID-19) epidemic prevention and control have raised new requirements that necessitate operation-strategy innovation in urban rail transit. To alleviate increasingly serious congestion and further reduce the risk of cross-infection, a novel two-stage distributionally robust optimization (DRO) model is explicitly constructed, in which the probability distribution of stochastic scenarios is only partially known in advance. In the proposed model, the mean-conditional value-at-risk (CVaR) criterion is employed to obtain a tradeoff between the expected number of waiting passengers and the risk of congestion on an urban rail transit line. The relationship between the proposed DRO model and the traditional two-stage stochastic programming (SP) model is also depicted. Furthermore, to overcome the obstacle of model solvability resulting from imprecise probability distributions, a discrepancy-based ambiguity set is used to transform the robust counterpart into its computationally tractable form. A hybrid algorithm that combines a local search algorithm with a mixed-integer linear programming (MILP) solver is developed to improve the computational efficiency of large-scale instances. Finally, a series of numerical examples with real-world operation data are executed to validate the proposed approaches.",
+    "year": 2022,
+    "venue": "Engineering (Beijing, China)",
+    "authors": [
+      "Yahan Lu",
+      "Lixing Yang",
+      "Kai Yang",
+      "Ziyou Gao",
+      "Housheng Zhou",
+      "Fanting Meng",
+      "Jianguo Qi"
+    ],
+    "doi": "10.1016/j.eng.2021.09.016",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34976428/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "34976428"
+    }
+  },
+  {
+    "paper_id": "pubmed:34534974",
+    "title": "Image intensity histograms as imaging biomarkers: application to immune-related colitis.",
+    "abstract": null,
+    "year": 2021,
+    "venue": "Biomedical physics & engineering express",
+    "authors": [
+      "Daniel T Huff",
+      "Peter Ferjancic",
+      "Mauro Namías",
+      "Hamid Emamekhoo",
+      "Scott B Perlman",
+      "Robert Jeraj"
+    ],
+    "doi": "10.1088/2057-1976/ac27c3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34534974/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "34534974"
+    }
+  },
+  {
+    "paper_id": "pubmed:34421397",
+    "title": "A Robust Learning Approach for Regression Models Based on Distributionally Robust Optimization.",
+    "abstract": "We present a ",
+    "year": 2018,
+    "venue": "Journal of machine learning research : JMLR",
+    "authors": [
+      "Ruidi Chen",
+      "Ioannis Ch Paschalidis"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34421397/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "34421397"
+    }
+  },
+  {
+    "paper_id": "pubmed:28365524",
+    "title": "Pancreas and liver uptake of new radiolabeled incretins (GLP-1 and Exendin-4) in models of diet-induced and diet-restricted obesity.",
+    "abstract": "Radiolabeled GLP-1 and its analog Exendin-4, have been employed in diabetes and insulinoma. No protocol in conventional Diet-Induced Obesity (DIO), and Diet-Restricted Obesity (DRO), has been identified. Aiming to assess pancreatic beta cell uptake in DIO and DRO, a protocol was designed. GLP-1-βAla-HYNIC and HYNIC-βAla-Exendin-4 were labeled with technetium-99m. Four Swiss mouse models were adopted: Controls (C), Alloxan Diabetes Controls (ADC), DIO and DRO. Biodistribution and ex-vivo planar imaging were documented. Radiolabeling yield was in the range of 97% and both agents were hydrophilic. Fasting Blood Glucose (FBG) was 79.2±8.2mg/dl in C, 590.4±23.3mg/dl in ADC, 234.3±66.7mg/dl in DIO, and 96.6±9.3 in DRO (p=0.010). Biodistribution confirmed predominantly urinary excretion. DIO mice exhibited depressed uptake in liver and pancreas, for both radiomarkers, in the range of ADC. DRO only partially restored such values.  1) Diet-induced obesity remarkably depressed beta cell uptake; 2) Restriction of obesity failed to normalize uptake, despite robust improvement of FBG; 3) HYNIC-βAla-Exendin-4 was the most useful marker; 4) Further studies are recommended in obesity and dieting, including bariatric surgery.",
+    "year": 2017,
+    "venue": "Nuclear medicine and biology",
+    "authors": [
+      "Daniele Seo",
+      "Bluma Linkowski Faintuch",
+      "Erica Aparecida de Oliveira",
+      "Joel Faintuch"
+    ],
+    "doi": "10.1016/j.nucmedbio.2017.03.002",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28365524/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "28365524"
+    }
+  },
+  {
+    "paper_id": "pubmed:27740509",
+    "title": "Distributed Robust Optimization in Networked System.",
+    "abstract": "In this paper, we consider a distributed robust optimization (DRO) problem, where multiple agents in a networked system cooperatively minimize a global convex objective function with respect to a global variable under the global constraints. The objective function can be represented by a sum of local objective functions. The global constraints contain some uncertain parameters which are partially known, and can be characterized by some inequality constraints. After problem transformation, we adopt the Lagrangian primal-dual method to solve this problem. We prove that the primal and dual optimal solutions of the problem are restricted in some specific sets, and we give a method to construct these sets. Then, we propose a DRO algorithm to find the primal-dual optimal solutions of the Lagrangian function, which consists of a subgradient step, a projection step, and a diffusion step, and in the projection step of the algorithm, the optimized variables are projected onto the specific sets to guarantee the boundedness of the subgradients. Convergence analysis and numerical simulations verifying the performance of the proposed algorithm are then provided. Further, for nonconvex DRO problem, the corresponding approach and algorithm framework are also provided.",
+    "year": 2017,
+    "venue": "IEEE transactions on cybernetics",
+    "authors": [
+      "Shengnan Wang",
+      "Chunguang Li"
+    ],
+    "doi": "10.1109/TCYB.2016.2613129",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27740509/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "27740509"
+    }
+  }
+]

@@ -1,0 +1,849 @@
+[
+  {
+    "paper_id": "pubmed:42280922",
+    "title": "Intrusion Detection in the Internet of Things: A Comprehensive Review of Techniques, Architectures, Datasets, and Emerging Trends.",
+    "abstract": "As the Internet of Things (IoT) grows, strong, scalable, and adaptive intrusion detection systems (IDS) become increasingly critical for protecting IoT environments. This paper presents a comprehensive and systematic survey of IDS techniques for IoT environments, covering literature from 2021 to early 2026. The review introduces a multidimensional taxonomy that categorizes IDS approaches by detection strategy, learning paradigm, deployment architecture, and evaluation methodology. We examine conventional techniques, such as signature-based and anomaly-based detection, as well as modern machine-learning and deep-learning approaches. Furthermore, emerging paradigms, including Federated Learning, Explainable AI (XAI), TinyML, Large Language Models (LLMs), Transformer, Quantum Machine Learning, Generative Adversarial Networks and Incremental Learning, are analyzed with respect to their applicability to resource-constrained IoT environments. The paper also provides a detailed analysis of publicly available IDS datasets, validation protocols, and evaluation metrics used for benchmarking detection systems. In addition, critical challenges, including dataset realism, adversarial robustness, scalability, privacy preservation, and ethical considerations, are discussed. Finally, we highlight open research directions and propose guidelines for designing next-generation, trustworthy, and scalable IDS frameworks for IoT networks.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Asma Komal",
+      "Shuaiyong Li"
+    ],
+    "doi": "10.3390/s26113405",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42280922/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42280922"
+    }
+  },
+  {
+    "paper_id": "pubmed:42122295",
+    "title": "A Lightweight 1D-CNN-Transformer for Bearing Fault Diagnosis Under Limited Data and AWGN Interference.",
+    "abstract": "Intelligent bearing fault diagnosis is essential for maintaining the reliability of rotating machinery. However, deploying deep learning models in industrial environments is often constrained by a lack of labeled data, environmental noise, and strict hardware limits. To address these connected challenges, this paper proposes 1D-CNN-Trans, a flexible and resource-efficient hybrid framework. Designed for supervised diagnosis with restricted data, the configurable model combines a compact one-dimensional convolutional neural network (1D-CNN) for local feature extraction, a Transformer encoder for capturing long-range temporal dependencies, and an optional squeeze-and-excitation (SE) module for channel recalibration under favorable conditions. The method is evaluated on two standard mechanical benchmarks under limited sample conditions, controlled additive white Gaussian noise (AWGN), and dynamic non-stationary interference. Experimental results indicate that 1D-CNN-Trans shows improved robustness under interference compared to selected baselines, notably improving accuracy against a standard CNN backbone. Furthermore, findings indicate that while the Transformer ensures noise robustness, channel recalibration (via SE) introduces optimization instability under extreme sparsity and noise. Consequently, we reposition the architecture as a configurable framework where recalibration is conditionally activated. Finally, theoretical complexity analysis is provided to validate the model's low computational burden, indicating its general feasibility for resource-constrained scenarios.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Yifan Guo",
+      "Yijie Zhi",
+      "Renyi Qi",
+      "Ming Cai"
+    ],
+    "doi": "10.3390/s26092574",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42122295/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42122295"
+    }
+  },
+  {
+    "paper_id": "pubmed:42068634",
+    "title": "Optimizing speculative decoding via dynamic multi-path and dual-stream networks.",
+    "abstract": "The Transformer architecture widely adopted in the large language models (LLMs) suffers from limited inference efficiency due to the inherently sequential nature of autoregressive token generation. To address this issue, speculative decoding (SD) has been proposed to accelerate LLM inference by employing small speculative models (SSMs) to generate candidate tokens that are subsequently verified by the target LLM. However, the SD methods is often constrained by the key challenges: the low acceptance rate of tokens predicted by SSMs. To overcome the limitation, this paper proposes a Dual-Stream Network Architecture (DSNA), the architecture introduces two parallel processing streams that simultaneously model word sequences and feature sequences. The outputs of these two streams are progressively fused in subsequent stages to enhance the quality of candidate predictions. Furthermore, a dynamic multi-path decoding (DMPD) mechanism is introduced to leverage the enriched representations produced by the dual-stream architecture. This mechanism allows multiple candidate token paths to be evaluated simultaneously, enabling the model to accept multiple tokens within a single forward propagation step during the inference process. Extensive experiments show that our proposed the method consistently outperforms the state-of-the-art SD approaches, achieving significant improvements in both inference throughput and generation accuracy across multiple benchmarks.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Yong Yang",
+      "Ting Ting Yang",
+      "Shao Shuai Gao",
+      "Jia Hong Ning",
+      "Ling Zheng Kong"
+    ],
+    "doi": "10.1016/j.neunet.2026.109014",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42068634/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42068634"
+    }
+  },
+  {
+    "paper_id": "pubmed:42035569",
+    "title": "ViSymRe: Vision multimodal symbolic regression.",
+    "abstract": "Extracting interpretable equations from observational datasets to describe complex natural phenomena is one of the core goals of artificial intelligence. This field is known as symbolic regression (SR). In recent years, Transformer-based paradigms have become a new trend in SR, addressing the well-known problem of inefficient search. However, the modal heterogeneity between datasets and equations often hinders the convergence and generalization of these models. In this paper, we propose ViSymRe, a Vision Symbolic Regression framework, to explore the positive role of visual modality in enhancing the performance of Transformer-based SR paradigms. To overcome the challenge where the visual SR model is untrainable in high-dimensional scenarios, we present Multi-View Random Slicing (MVRS). By projecting multivariate equations into 2D space using random affine transformations, MVRS avoids common defects in high-dimensional visualization, such as variable degradation, missing non-linear interactions, and exponentially increasing sampling complexity, enabling ViSymRe to be trained with low computational costs. To support dataset-only deployment of ViSymRe, we design a dual-visual pipeline architecture based on generative techniques, which reconstructs visual features directly from the datasets via an auxiliary Visual Decoder and automatically suppresses the attention weights of reconstruction noise through a proposed Biased Cross-Attention feature fusion module, ensuring that subsequent processes are not affected by noisy modalities. Ablation studies demonstrate the positive contribution of visual modality to improving model convergence level and enhancing various SR metrics. Furthermore, evaluation results on mainstream benchmarks indicate that ViSymRe achieves competitive performance compared to baselines, particularly in low-complexity and rapid-inference scenarios. Our code can be found at https://github.com/aidalee123/Vision-SR.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Da Li",
+      "Junping Yin",
+      "Jin Xu",
+      "Xinxin Li",
+      "Juan Zhang"
+    ],
+    "doi": "10.1016/j.neunet.2026.109017",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42035569/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42035569"
+    }
+  },
+  {
+    "paper_id": "pubmed:42025178",
+    "title": "SAM2HIPT: a hybrid deep learning framework integrating SAM2 and HIPT with joint loss optimization for immunohistochemical cell nucleus segmentation.",
+    "abstract": "Nucleus segmentation in immunohistochemistry images plays a critical role in cancer diagnosis and treatment assessment. However, existing methods remain limited in segmentation accuracy and boundary delineation due to staining heterogeneity, densely packed cell distributions, and complex background interference. To address these challenges, this paper proposes a two-stage nucleus segmentation framework, termed SAM2HIPT. In the first stage, the pre-trained Segment Anything Model 2 (SAM2) is employed to generate initial segmentation predictions for input images, wherein the image encoder is kept frozen to preserve the pre-trained visual representation capacity while the mask decoder is fine-tuned to adapt to the characteristics of the pathological image domain; local texture, morphological, and boundary information are extracted through visual feature encoding to produce initial nucleus segmentation masks and spatial prior representations. In the second stage, the Hierarchical Image Pyramid Transformer is introduced to refine the initial segmentation results, performing multi-scale, multi-level feature representation and fusion of morphological, textural, and spatial structural information through a hierarchical vision Transformer architecture, thereby enhancing nuclear structural representation and boundary consistency. To enable collaborative optimization across both stages, a joint loss function is designed to impose unified constraints on segmentation accuracy and feature representation. Evaluated on two public histopathological benchmark datasets, BCData and DeepLIIF, the proposed method achieves Dice coefficients of 0.92 and 0.91, respectively, and HD95 boundary error values of 1.05 pixels and 1.10 pixels, demonstrating superior segmentation performance and robustness over multiple state-of-the-art baseline methods.",
+    "year": 2026,
+    "venue": "Biomedical physics & engineering express",
+    "authors": [
+      "Yu Yao",
+      "Simin Li",
+      "Yangsheng Hu",
+      "Yuanchao Xue",
+      "Jie Huang",
+      "Jianfeng He",
+      "Siming Li"
+    ],
+    "doi": "10.1088/2057-1976/ae63d6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42025178/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42025178"
+    }
+  },
+  {
+    "paper_id": "pubmed:42008487",
+    "title": "Local causal dynamic integrated global mode guidance transformer network for pedestrian trajectory prediction.",
+    "abstract": "Pedestrian trajectory prediction is crucial for autonomous vehicles, which face challenges in integrating complex spatiotemporal dynamics, managing multi-modal future behaviors, and ensuring real-time performance. This paper introduces the Local-Global Collaborative Transformer Network (LGCMT) to address these issues. LGCMT features an innovative local-global collaborative encoder comprising two key modules: a Sparse Causal Temporal Attention (SCT-MSA) module, designed to extract fine-grained local causal dynamics, and a Global Context Encoder that utilizes Cosine Similarity Attention to capture macro-level spatiotemporal patterns. For multi-modal prediction, LGCMT employs a parallel Non-Autoregressive (NAR) decoder guided by a motion pattern library, which efficiently generates diverse trajectory candidates covering key future likelihoods. Extensive evaluations on the standard ETH/UCY benchmarks and the large-scale Stanford Drone Dataset (SDD) demonstrate LGCMT's robust performance. On ETH/UCY, the model improves ADE and FDE by approximately 4.8% and 5.6% compared to the competitive TUTR baseline. Moreover, the proposed framework achieves exceptional inference efficiency, establishing LGCMT as a potent solution that effectively balances accuracy, multi-modality, and operational speed for real-time applications.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Sunwei Gong",
+      "Yinxin Bao",
+      "Yingyan Hou",
+      "Wanxuan Lu",
+      "Quan Shi"
+    ],
+    "doi": "10.1371/journal.pone.0347049",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42008487/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42008487"
+    }
+  },
+  {
+    "paper_id": "pubmed:42000653",
+    "title": "DiSCNet: Directional Split Convolution for compute-efficient brain tumor diagnosis.",
+    "abstract": "Brain tumor classification from magnetic resonance imaging (MRI) remains challenging because tumor appearance varies substantially across patients, while scanner- and protocol-related differences can alter image intensity distributions and weaken model generalization. This study aims to develop a compact yet high-performing deep learning framework that can classify heterogeneous brain MRI more reliably without relying on large-capacity backbones. To this end, we propose DiSCNet, a lightweight architecture built on an InceptionNeXt-inspired hierarchical design and centered on a novel Directional Split Convolution (DiSC) block. The proposed block diversifies receptive fields through complementary local and directional depthwise branches, while Global Response Normalization and Efficient Channel Attention are incorporated to improve feature stability and channel selectivity under acquisition variability. The model was evaluated on a unified benchmark constructed from five publicly available MRI repositories, comprising 17,888 images across four classes: glioma, meningioma, pituitary and non-tumor. Under a single training and evaluation protocol, DiSCNet was compared against 71 contemporary convolutional, transformer-based, and hybrid architectures. DiSCNet achieved the best overall performance, with 0.9922 accuracy, 0.9916 precision, 0.9930 recall, and 0.9923 F1-score, while using only 2.78 million parameters. Class-wise analysis further showed strong and balanced recognition across all diagnostic categories, and Grad-CAM visualizations indicated that the model predominantly focused on lesion-relevant regions. These findings demonstrate that a carefully designed lightweight architecture can outperform substantially larger models and provide an efficient, robust, and clinically relevant solution for four-class brain tumor MRI classification.",
+    "year": 2026,
+    "venue": "Computational biology and chemistry",
+    "authors": [
+      "Shahid Mohammad Ganie",
+      "Ishak Pacal"
+    ],
+    "doi": "10.1016/j.compbiolchem.2026.109066",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42000653/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42000653"
+    }
+  },
+  {
+    "paper_id": "pubmed:41996403",
+    "title": "An explainable multi-head attention network for healthcare IoT threat detection based on the MedDefender-MHAN framework.",
+    "abstract": "The rapid proliferation of Internet of Medical Things (IoMT) devices in healthcare environments has created critical cybersecurity vulnerabilities that demand both accurate and interpretable intrusion detection solutions. Existing deep learning-based intrusion detection systems (IDS) achieve high detection accuracy but lack inherent explainability, limiting their clinical adoption under regulatory frameworks such as GDPR and FDA guidelines. This paper presents MedDefender-MHAN, an explainable multi-head attention network specifically designed for healthcare IoT threat detection. The proposed framework introduces a novel dual-stream architecture that combines convolutional neural networks for local spatial feature extraction with transformer-based encoders for long-range temporal dependency modeling. Unlike existing approaches that apply explainability as a post-hoc process, MedDefender-MHAN embeds interpretability directly into the multi-head attention mechanism, enabling real-time gradient-weighted explanation generation without external XAI pipelines. Evaluated on CICIDS2017 and TON_IoT benchmark datasets, MedDefender-MHAN achieves detection accuracies of 99.47% and 98.92% respectively, with sub-3ms inference latency and a throughput of 435 samples per second. Explainability evaluation demonstrates 94.6% alignment with expert-annotated attack signatures and 91.9% temporal accuracy, outperforming post-hoc methods such as SHAP and Integrated Gradients. These results confirm that MedDefender-MHAN provides a clinically viable, regulatory-compliant security solution for real-world healthcare IoT infrastructure. The proposed framework addresses the dual imperatives of methodological transparency and clinical impact, directly responding to the growing need for trustworthy AI-driven security solutions in regulated healthcare IoMT environments.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Ali Alqazzaz"
+    ],
+    "doi": "10.1371/journal.pone.0346677",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41996403/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41996403"
+    }
+  },
+  {
+    "paper_id": "pubmed:41972362",
+    "title": "A preliminary study of a hybrid transformer with enhanced local feature fusion for nuchal translucency ultrasound image segmentation.",
+    "abstract": "Nuchal translucency (NT) is an important ultrasound indicator in early pregnancy. Increased NT is strongly associated with chromosomal abnormalities, structural defects, and other adverse outcomes. However, the low signal-to-noise ratio (SNR), numerous artifacts, and poor contrast present in ultrasound images pose considerable challenges to existing segmentation methods. To address these challenges, this paper proposes a novel Transformer model, TransNTSeg, for NT segmentation. This study serves as a preliminary proof-of-concept to evaluate the feasibility of the proposed architecture. A clinical dataset of 123 B-mode ultrasound images is collected. To ensure rigorous evaluation, the dataset is partitioned into 98 images for training/validation (using 5-fold cross-validation) and 25 images for independent testing. The architecture incorporates two main innovations: first, an enhanced Dense Dilated Mixed Feed-Forward Network (DDMix-FFN) module within the Transformer that more robustly integrates global dependencies and local context to handle image noise and boundary ambiguity; and second, a DDMix-FFN Transformer context bridge that fuses multi-scale encoder features for precise localization of the small NT region. Performance is compared against eight state-of-the-art benchmarks (e.g., U-Net, MT-UNet) using Intersection over Union (IoU) and Dice Similarity Coefficient (DSC). Statistical significance is assessed using the paired t-test with Bonferroni correction to control for multiple comparisons (adjusted p < 0.0015625), and practical significance is quantified using Cohen's d TransNTSeg achieves the highest performance on the test dataset, with a mean IoU of 0.763 ± 0.05 and a mean DSC of 0.852 ± 0.03. Rigorous statistical analysis (Bonferroni corrected p < 0.0015625) confirms considerable improvements. Based on the evaluation of effect sizes, TransNTSeg is identified as the best-performing method, demonstrating a substantial effect size (d = 0.745) against the closest competitor (MT-UNet). While demonstrating competitive performance within this controlled setting, these promising outcomes highlight the potential of TransNTSeg for accurate NT segmentation. This warrants further validation on multicenter, multi-vendor datasets to establish its generalizability for broad clinical use.",
+    "year": 2026,
+    "venue": "Medical physics",
+    "authors": [
+      "Shuang Wang",
+      "Bingling Chen",
+      "Huixia Yang",
+      "Lihan Liu",
+      "Zhuwei Wang"
+    ],
+    "doi": "10.1002/mp.70418",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41972362/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41972362"
+    }
+  },
+  {
+    "paper_id": "pubmed:41970471",
+    "title": "NeuralVisionNet: a probabilistic neural process model for continuous visual anticipation.",
+    "abstract": "The ability to anticipate future events continuously is a hallmark of biological vision, yet standard deep learning models often struggle with long-term coherence due to the rigid discretization of time. In this paper, we propose NeuralVisionNet, a probabilistic framework that models visual anticipation as a continuous generative process, drawing inspiration from the predictive coding mechanisms of the hippocampal-entorhinal circuit. Our architecture synergizes hierarchical Video Swin Transformers with Attentive Neural Processes, employing a novel grid-like coding scheme to represent spatiotemporal dynamics as a continuous function rather than a fixed sequence of frames. Furthermore, we introduce a variational global latent variable to encode the \"event gist,\" ensuring semantic consistency over extended horizons. Extensive evaluations on KTH, Human 3.6M, and UCF 101 benchmarks demonstrate that NeuralVisionNet significantly outperforms state-of-the-art stochastic baselines in perceptual quality (FVD) and structural fidelity (SSIM), offering a robust computational proof-of-concept for continuous, bio-inspired visual forecasting.",
+    "year": 2026,
+    "venue": "Frontiers in computational neuroscience",
+    "authors": [
+      "Han He",
+      "Ruinan Chen",
+      "Yixiang Wang",
+      "Xia Chen"
+    ],
+    "doi": "10.3389/fncom.2026.1781080",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41970471/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41970471"
+    }
+  },
+  {
+    "paper_id": "pubmed:41950277",
+    "title": "A transfer-aware, deployment-oriented evaluation framework for NetFlow-based intrusion detection systems (TAN-IDS).",
+    "abstract": "Machine learning-based Intrusion Detection Systems (IDS) often report high detection accuracy under controlled, single-dataset evaluation, yet experience severe performance degradation when deployed in unseen network environments due to domain shift. To bridge this gap between laboratory benchmarking and real-world deployment, this paper presents TAN-IDS, a transfer-aware and deployment-oriented evaluation framework for NetFlow-based intrusion detection. Rather than proposing a new detection model, TAN-IDS contributes a methodological evaluation framework that unifies heterogeneous traffic datasets under a compact 8-dimensional NetFlow feature interface. This constrained representation supports interoperable and deployment-realistic evaluation across datasets collected in different network settings, enabling performance degradation to be more reliably attributed to domain shift rather than feature-space incompatibilities. Within this unified interface, TAN-IDS formalizes key deployment conditions as explicit evaluation scenarios, including in-dataset evaluation, direct cross-dataset transfer, mixed-domain training, and lightweight target-domain fine-tuning. Extensive experiments conducted within the proposed evaluation framework, using representative machine learning models and neural architectures, including a lightweight Transformer-based control model, show that strong in-dataset performance does not translate to cross-dataset robustness and that increased model complexity alone is insufficient to mitigate domain shift. In contrast, domain-aware training strategies are effective: mixed-domain training improves generalization, while fine-tuning with only 5% labeled target-domain data substantially recovers attack-class recall and F1-macro, exceeding 95% in several scenarios. Overall, TAN-IDS provides a reproducible, deployment-centric evaluation framework that reveals robustness limitations overlooked by benchmark-centric IDS evaluation.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Dung Ha Thanh"
+    ],
+    "doi": "10.1371/journal.pone.0346801",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41950277/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41950277"
+    }
+  },
+  {
+    "paper_id": "pubmed:41942573",
+    "title": "Smart medical system integrating clinical workflows for robust skin cancer detection across heterogeneous pathologies.",
+    "abstract": "Skin cancer is among the most prevalent and life-threatening dermatological diseases worldwide, with melanoma responsible for a substantial proportion of skin cancer-related deaths due to delayed and unreliable diagnosis. Conventional clinical screening based on visual inspection and expert interpretation is inherently subjective and often affected by inter-observer variability, lesion heterogeneity, and imaging artifacts, highlighting the need for accurate and generalizable automated diagnostic systems. This study proposes a novel hybrid deep learning architecture for skin cancer classification that integrates an attention-guided autoencoder with a transformer-inspired global context modeling module, forming a unified and robust representation learning framework. The encoder-decoder structure is designed to suppress noise and reconstruct salient lesion features, while an embedded attention mechanism emphasizes diagnostically relevant regions such as irregular boundaries and pigmentation patterns. The encoded representations are subsequently refined using transformer-style self-attention to capture long-range spatial dependencies and complex color-texture correlations, enabling superior discrimination compared to conventional CNNs and standalone transformers. In addition, a new hybrid hyperparameter optimization strategy is introduced by synergistically combining Bayesian Optimization with Grey Wolf Optimization (GWO) and Whale Optimization Algorithm (WOA) into a coordinated meta-heuristic framework. Bayesian Optimization provides probabilistic guidance for efficient global search, while GWO and WOA enhance exploration-exploitation balance and prevent premature convergence by modeling collective hunting and encircling behaviors. This hybrid optimizer dynamically tunes both architectural and training hyperparameters, including learning rate, batch size, latent dimension size, attention depth, and transformer token resolution. The proposed framework is comprehensively evaluated on three benchmark dermoscopic datasets-HAM10000, ISIC-2019, and ISIC-2020-using standardized preprocessing and data augmentation to mitigate class imbalance and illumination variability. Experimental results demonstrate that the proposed approach consistently outperforms state-of-the-art CNN, transformer, and hybrid models, achieving classification accuracy exceeding 98% with improved F1-score and AUROC.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Ahed Abugabah",
+      "Prashant Kumar Shukla",
+      "Suchi Mishra",
+      "Abhishek Dwivedi"
+    ],
+    "doi": "10.1038/s41598-026-45132-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41942573/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41942573"
+    }
+  },
+  {
+    "paper_id": "pubmed:41895183",
+    "title": "PASS-Tr: PAtch-wise swin slice attention to leverage generalization of 2D large vision model to universal lesion detection.",
+    "abstract": "Universal Lesion Detection (ULD) in computed tomography (CT) is essential for computer-aided diagnosis. A long-standing debate in ULD research concerns the choice between 3D and 2D networks. While 3D networks offer superior spatial context modeling and 2D networks are more efficient and benefit from pretrained models, neither fully addresses the challenges posed by CT's pseudo-3D nature. To address this, multi-slice fusion has emerged as a promising approach in ULD. It typically extracts features from adjacent slices using separate 2D encoders and then fuses them to incorporate 3D context. However, current ULD methods still face several limitations: (1) Inefficient fusion granularity: Fusion at the entire-slice level often introduces redundant or irrelevant information. (2) Underutilization of 2D vision foundation models: Despite being 2D-based, few methods leverage powerful pretrained models such as SAM, SAM2, ViT, MedSAM, or SAM-Med2D. (3) Limited cross-task evaluation: Although multi-slice fusion is designed to address CT-specific challenges and should benefit a broad range of CT analysis tasks, existing methods are rarely tested beyond ULD. We propose PASS-Tr (Patch-wise Swin Slice Attention Transformer), which builds on the observation that meaningful 3D context often resides in local neighboring regions. PASS-Tr adopts a windowed fusion strategy inspired by the Swin Transformer, enabling patch-level attention across slices while avoiding redundancy. In addition, it integrates 2D vision foundation models to boost performance and improve transferability to other CT tasks. Experiments on DeepLesion show that PASS-Tr outperforms existing ULD methods. It also generalizes well to other 3D CT tasks, including COVID lesion segmentation and 104-organ segmentation on the TotalSegmentator benchmark.",
+    "year": 2026,
+    "venue": "Medical image analysis",
+    "authors": [
+      "Han Li",
+      "Jingsong Liu",
+      "Zhen Huang",
+      "Zhicheng Li",
+      "Xun Ma",
+      "Peter Schüffler",
+      "Nassir Navab",
+      "S Kevin Zhou"
+    ],
+    "doi": "10.1016/j.media.2026.104036",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41895183/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41895183"
+    }
+  },
+  {
+    "paper_id": "pubmed:41855845",
+    "title": "TransDTAP: A multimodal transformer architecture for drug-target affinity prediction using sequence and biochemical properties.",
+    "abstract": "Accurate drug-target affinity (DTA) prediction is essential for virtual screening and early-stage drug discovery. We propose TransDTAP, a multimodal Transformer-based architecture that integrates ligand SMILES sequences, protein amino-acid sequences, molecular physicochemical descriptors, and protein biochemical features within a unified regression framework. A curated dataset comprising 4793 protein targets, 23,531 ligands, and 33,457 experimentally measured IC",
+    "year": 2026,
+    "venue": "Computational biology and chemistry",
+    "authors": [
+      "Abdelkader Bouguessa",
+      "Sid Ahmed Mokhtar Mostefaoui",
+      "Mohamed Amine Daoud"
+    ],
+    "doi": "10.1016/j.compbiolchem.2026.109010",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41855845/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41855845"
+    }
+  },
+  {
+    "paper_id": "pubmed:41850037",
+    "title": "Med-ViX-Ray: Enhancing explainable chest X-ray analysis with clinical knowledge graphs.",
+    "abstract": "Deep learning has achieved remarkable success in chest x-ray interpretation, yet most models remain black boxes, producing accurate predictions without exposing the clinical reasoning behind them. This opacity limits trust and adoption in real-world practice. We introduce Med-ViX-Ray, a knowledge-guided and interpretable framework that integrates symbolic clinical reasoning into a vision Transformer backbone. The model leverages a structured graph of radiological signs and conditions, aligning image attention maps with domain knowledge through a probabilistic soft-matching module and a nudging mechanism that refines classifier outputs. This dual integration allows predictions to be explained in terms of clinically meaningful signs and corresponding image regions, offering transparency beyond post-hoc heatmaps. We evaluated Med-ViX-Ray on MIMIC-CXR for training and internal validation, and tested its generalization on VinDR-CXR and RSNA Pneumonia benchmarks. The proposed method improves recall and F1-score compared to a strong SwinV2 baseline (Respectively, F1-micro: 0.561 - 0.456; Precision: 0.462 - 0-529; Recall: 0.715 - 0.466; ROC: 0.788 - 0.744), while maintaining competitive overall performance. Qualitative analyses confirm that the model highlights clinically relevant regions and sign-activations aligned with radiological practice. These results suggest that knowledge-guided attention and sign-based explanations can enhance interpretability and recall in chest X-ray classification models. Future work will extend the framework toward report generation and prospective clinical evaluation.",
+    "year": 2026,
+    "venue": "Computer methods and programs in biomedicine",
+    "authors": [
+      "Manuel Cieri",
+      "Fabio Palomba"
+    ],
+    "doi": "10.1016/j.cmpb.2026.109313",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41850037/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41850037"
+    }
+  },
+  {
+    "paper_id": "pubmed:41839680",
+    "title": "ResSGA-Net: A deep learning approach for enhanced brain tumor detection and accurate classification in healthcare imaging systems.",
+    "abstract": "Accurate and reliable brain tumor classification from magnetic resonance imaging (MRI) is a critical component of computer-aided diagnosis systems, directly impacting clinical decision-making and patient outcomes. This study presents ResSGA-Net, a hybrid deep learning framework that integrates a ResNet50 backbone with dual attention mechanisms (global and gated) and a Swin Transformer to capture both fine-grained local features and long-range contextual dependencies effectively. A fusion strategy is employed to unify convolutional, attention-refined, and transformer-enhanced representations into a robust feature space for multi-class classification. The proposed model is evaluated on two publicly available benchmark datasets, including a four-class and a three-class brain tumor classification task, using stratified cross-validation. Extensive quantitative analysis demonstrates that ResSGA-Net achieves state-of-the-art performance, with accuracies exceeding 98% on Dataset I and strong generalization on Dataset II (accuracy of 93.18% and macro-averaged AUC of 0.989). Comprehensive statistical significance testing confirms that the observed improvements are highly significant and not attributable to random chance. Ablation studies further validate the individual contributions of attention mechanisms and data augmentation strategies, demonstrating that performance gains arise from tumor-specific feature learning rather than artificial data diversity. Qualitative analyses, including confusion matrices, training dynamics, ROC curves, and confidence-based visualizations, confirm stable convergence, robust generalization, and reliable decision confidence across tumor classes. These results indicate that ResSGA-Net provides an accurate, stable, and clinically meaningful solution for automated brain tumor classification, with strong potential for integration into real-world diagnostic imaging workflows.",
+    "year": 2026,
+    "venue": "Journal, genetic engineering & biotechnology",
+    "authors": [
+      "Yucheng Guan",
+      "Ahmad Alshammari",
+      "Yu Wang",
+      "Jahan Zeb Gul",
+      "Azhar Imran"
+    ],
+    "doi": "10.1016/j.jgeb.2026.100658",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41839680/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41839680"
+    }
+  },
+  {
+    "paper_id": "pubmed:41563056",
+    "title": "PTET-DDI: Dual-Channel Drug-Drug Interaction Prediction with a Pre-Trained Language Model and Equivariant Graph Transformer.",
+    "abstract": "Combination therapy is widely used in clinical practice, rendering accurate prediction of drug-drug interactions (DDIs) essential for treatment safety and efficacy. This paper proposes PTET-DDI, a novel dual-channel framework that synergizes chemical semantics with geometric structural insights for DDI prediction. Unlike existing approaches that rely solely on 1D sequences or 2D graphs, PTET-DDI integrates a pretrained molecular language model (ChemBERTa) to capture rich context-aware semantic representations, while simultaneously employing an improved fully equivariant graph Transformer to explicitly encode 3D molecular conformations and geometric symmetries. By fusing these complementary modalities, the model not only achieves a comprehensive understanding of molecular properties but also provides interpretability by identifying key structures driving the interactions. Extensive evaluations via 5-fold cross-validation across three benchmark data sets demonstrate that PTET-DDI significantly outperforms existing deep learning-based methods and shows strong generalization capability.",
+    "year": 2026,
+    "venue": "ACS synthetic biology",
+    "authors": [
+      "Xiaofeng Man",
+      "Chao Sun",
+      "Zhuo Chen",
+      "Yuanyuan Ji",
+      "Junwei Du",
+      "Bin Yu"
+    ],
+    "doi": "10.1021/acssynbio.5c00722",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41563056/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41563056"
+    }
+  },
+  {
+    "paper_id": "pubmed:41558385",
+    "title": "Transformer-based feature extraction approach for hematopoietic cancer subtype classification.",
+    "abstract": "Accurate classification of hematopoietic cancer subtypes remains challenging due to the multipotent nature of hematopoietic cells and the absence of definitive genetic markers. To address this, we propose a Transformer-based Autoencoder that captures compact and biologically informative embeddings from gene expression data. Specifically, our method employs multi-head self-attention in the encoder to learn complex nonlinear interactions among genes, with a reconstruction decoder that enforces biological feature retention. We benchmarked our approach against four widely-used feature extraction methods-Principal Component Analysis, Non-negative Matrix Factorization, Autoencoder, and Variational Autoencoder-using transcriptomic data from five hematopoietic cancer subtypes in The Cancer Genome Atlas, totaling 2452 samples. Data were split 60:20:20 into training, validation, and test sets with stratification, and feature-extractor hyperparameters were chosen on the validation set. Each method produced 100-dimensional feature vectors, subsequently evaluated using eight multi-class classifiers: Light Gradient Boosting Machine, Extreme Gradient Boosting, Logistic Regression, Random Forest, Decision Tree, Support Vector Machine, and Neural Networks. On the independent test set, the Transformer-based Autoencoder embeddings combined with Light Gradient Boosting Machine achieved F1-score: 0.969, accuracy: 0.986, precision: 0.975, recall: 0.964, specificity: 0.996, G-mean: 0.980, and balanced accuracy: 0.954. For context, we additionally included a supervised tabular Transformer (FT-Transformer) as a reference; while strong, it is not directly comparable to our unsupervised feature extractor. To enhance interpretability and clinical relevance, we applied Shapley Additive exPlanations to identify the twenty most influential genes contributing to subtype discrimination. This analysis revealed key biomarkers related to endoplasmic reticulum function, antigen processing, and ribonucleic acid regulation. These findings demonstrate that transformer-based unsupervised feature extraction substantially improves predictive accuracy and yields valuable biological insights for complex hematologic malignancies. Overall, the study supports attention-driven representation learning for tabular biomedical data and motivates future work in generative/self-supervised representations for gene expression.",
+    "year": 2026,
+    "venue": "Computers in biology and medicine",
+    "authors": [
+      "Kwang Ho Park",
+      "Younghee Lee",
+      "Wei Ding",
+      "Kwang Sun Ryu",
+      "Keun Ho Ryu"
+    ],
+    "doi": "10.1016/j.compbiomed.2026.111466",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41558385/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41558385"
+    }
+  },
+  {
+    "paper_id": "pubmed:41461831",
+    "title": "Adaptive deep clustering integrating DINOv2 embeddings, graph attention, and bio-inspired optimization.",
+    "abstract": "This paper presents a unified and adaptively integrated framework for unsupervised image clustering that establishes a novel synergistic interaction between self-supervised representation learning, graph-based embedding refinement, and bio-inspired optimization. Rather than employing DINOv2, GAT, and the Bat Algorithm as isolated components, the proposed DINOv2-GAT-BAT pipeline introduces a closed-loop adaptive mechanism in which semantic embeddings, attention-guided structural information, and cluster-shaping optimization dynamically influence one another. The framework first extracts high-level visual features using pretrained DINOv2 Vision Transformers, then refines relational structures through a multi-head Graph Attention Network (GAT), and finally employs a bat-inspired metaheuristic that jointly estimates the optimal number of clusters and adaptively tunes structural and hyperparameter configurations. This tightly coupled interaction results in a new form of adaptive deep clustering not present in existing transformer- or GNN-based systems. To improve interpretability, two composite internal indices-[Formula: see text] and [Formula: see text]-are introduced, jointly capturing separability, entropy, compactness, stability, and outlier sensitivity. These indices exhibit strong correlations with external evaluation metrics, enabling reliable and meaningful assessment in fully unsupervised scenarios. Extensive experiments on CIFAR-10, Oxford-IIIT Pet, and STL-10 demonstrate the effectiveness and generalization capability of the proposed framework. On CIFAR-10, it achieves NMI = 0.938, ARI = 0.932, and a Composite Score = 0.894, surpassing several state-of-the-art baselines. Overall, this work (1) introduces a novel adaptive integration mechanism linking transformers, graph attention, and metaheuristic optimization, (2) proposes interpretable composite metrics for unsupervised evaluation, and (3) achieves state-of-the-art clustering performance across diverse benchmarks.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Mai Abdrabo",
+      "Hossam Refaat",
+      "Mohammed Abdallah",
+      "Osama Farouk"
+    ],
+    "doi": "10.1038/s41598-025-31496-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41461831/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41461831"
+    }
+  },
+  {
+    "paper_id": "pubmed:41412372",
+    "title": "Classification of EEG-fNIRS bimodal brain signals for motor imagery tasks based on wavelet transform and spatio-temporal domain processing.",
+    "abstract": "The fusion of Electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS) provides richer neural information for brain-computer interface decoding. However, due to their distinct physiological mechanisms and heterogeneous temporal and statistical properties, EEG and fNIRS are difficult to temporally align and to project into a shared latent representation. To address this challenge, we propose BiCAT, a lightweight bimodal decoding framework that integrates wavelet-based preprocessing, artifact-aware time-domain refinement, and early feature-level fusion with a compact Transformer encoder. Wavelet transform is first applied to separate signal and noise components across frequency bands, after which spatio-temporal domain processing suppresses motion and physiological artifacts while preserving task-relevant patterns. The cleaned EEG and fNIRS features are concatenated and fed into a single-encoder Transformer, where joint self-attention captures salient temporal cues within each segment.BiCAT is evaluated on two publicly available EEG-fNIRS datasets covering motor imagery (MI), mental arithmetic (MA), and word generation (WG) tasks. The model achieves 93.41 % accuracy on MI, outperforming the strongest unimodal baseline (fNIRS) by 4.39 percentage points. On MA and WG, BiCAT attains 96.47 % and 96.41 % accuracy, corresponding to gains of 10.39 and 3.86 points over the best unimodal fNIRS and HbR baselines, respectively. Despite having only 111 k parameters, BiCAT performs competitively with representative multimodal fusion methods on the same benchmarks. These results demonstrate that BiCAT provides effective bimodal feature integration and robust performance across multiple EEG-fNIRS tasks while maintaining low computational complexity.",
+    "year": 2026,
+    "venue": "Neuroscience",
+    "authors": [
+      "Lingyue Zhang",
+      "Baojiang Li",
+      "Manliang Cao",
+      "Cheng Peng",
+      "Haiyan Wang"
+    ],
+    "doi": "10.1016/j.neuroscience.2025.12.036",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41412372/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41412372"
+    }
+  },
+  {
+    "paper_id": "pubmed:41406671",
+    "title": "CIA-net: Cross-modality interaction and aggregation network for ovarian tumor segmentation from multi-modal MRI.",
+    "abstract": "Magnetic resonance imaging (MRI) is an essential examination for ovarian cancer, in which ovarian tumor segmentation is crucial for personalized diagnosis and treatment planning. However, ovarian tumors often present with mixed cystic and solid regions in imaging, posing additional difficulties for automatic segmentation. In clinical practice, radiologists use T2-weighted imaging as the main modality to delineate tumor boundaries. In comparison, multi-modal MRI provides complementary information across modalities that can improve tumor segmentation. Therefore, it is important to fuse salient features from other modalities to the main modality. In this paper, we propose a cross-modality interaction and aggregation network (CIA-Net), a hybrid convolutional and Transformer architecture, for automatic ovarian tumor segmentation from multi-modal MRI. CIA-Net divides multi-modal MRI into one main (T2) and three minor modalities (T1, ADC, DWI), each with independent encoders. The novel cross-modality collaboration block selectively aggregates complementary features from minor modalities into the main modality through a progressive context injection module. Additionally, we introduce the progressive neighborhood integrated module to filter intra- and inter-modality noise and redundancies by refining adjacent slices of each modality. We evaluate our proposed method on a diverse, multi-center ovarian tumor dataset comprising 739 patients, and further validate its generalization and robustness on two public benchmarks for brain and cardiac segmentation. Comparative experiments with other cutting-edge techniques demonstrate the effectiveness of CIA-Net, highlighting its potential to be applied in clinical scenarios.",
+    "year": 2026,
+    "venue": "Medical image analysis",
+    "authors": [
+      "Yifan Gao",
+      "Yong'ai Li",
+      "Xin Gao"
+    ],
+    "doi": "10.1016/j.media.2025.103907",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41406671/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41406671"
+    }
+  },
+  {
+    "paper_id": "pubmed:41381643",
+    "title": "Graph-augmented transformer ensemble framework for robust and scalable fake news detection in social media ecosystems.",
+    "abstract": "The recent boom in the spread of false information on social media and web platforms has emerged as a worldwide threat to public opinion, social coherence, and democratic establishments. Traditional fact checking strategies are not sufficient to address the scale and speed of disinformation spreading. So, scalable, automatic, and intelligent fake news detection systems are now in high demand. In this paper, we present a new hybrid model named Graph-Augmented Transformer Ensemble (GETE) for efficient and scalable fake news detection. The primary objective of GETE is to leverage both linguistic and relational features of news spreading by integrating transformer-based language models with graph neural networks (GNNs) with a meta-learned ensemble strategy. The proposed architecture combines the semantic strength of transformer-based models such as BERT (Bidirectional Encoder Representations from Transformers) and RoBERTa (Robustly Optimized BERT Pretraining Approach) with the structure understanding provided by GNNs constructed from user-news interactions and source credibility graphs. The fusion module based on meta-learning is used to train the fusion of these heterogeneous modalities to allow dynamic weighting based on the characteristics of the input data. The combination of deep contextual language understanding and graph-based relational modeling produces synergistic advantages in detection accuracy and generalization. Experimental evaluations on benchmarking datasets FakeNewsNet and LIAR demonstrate GETE's better performance than existing state-of-the-art methods. Specifically, GETE achieves 96.5% accuracy, 96.5% F1-score, and ROC-AUC of 97.3%, boosting F1-score by 4.2% and AUC by 5.6% over high-performing baseline methods. Additionally, proposed model demonstrates enhanced scalability, explainable predictions, and robustness across diversified domains and source distributions. The integration of the meta-ensemble module facilitates adaptive decision-making, hence enabling enhanced detection performance in real-world noisy situations. \"With its high performance, explainability, and scalability, the GETE framework presents a solid foundation for the next generation of reliable and adaptive fake news detection systems.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Chanchal Kumar",
+      "Mani Bansal",
+      "Mohd Anas Khan",
+      "Vinay Kaushik",
+      "Md Arquam",
+      "Abdulatif Alabdultif"
+    ],
+    "doi": "10.1038/s41598-025-31653-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41381643/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41381643"
+    }
+  },
+  {
+    "paper_id": "pubmed:41381637",
+    "title": "Attention-guided hybrid learning for accurate defect classification in manufacturing environments.",
+    "abstract": "Industrial defect classification remains a crucial challenge due to the visual complexity, rarity, and diversity of defect types encountered in manufacturing. In this paper, we present a hybrid deep learning framework that integrates YOLOv11 and EfficientNet-B7 to perform robust multi-class defect classification. Our model combines the semantic richness of YOLO's spatial features with the fine-grained representation power of EfficientNet, further enhanced by a Convolutional Block Attention Module (CBAM) and a lightweight Feature Pyramid Network (FPN) for attention-guided multi-scale refinement. Unlike conventional anomaly detectors or class-specific models, our framework supports unified classification across diverse object categories and defect types. We evaluate the proposed model on two datasets: the MVTec-FS benchmark, which includes 46 defect types across 14 industrial categories, and our proprietary Window dataset, which comprises three real-world defect classes under variable conditions. The model achieves a state-of-the-art accuracy of 91.90% on MVTec-FS and 96.13% on the Window dataset, outperforming existing CNN, transformer, and ensemble baselines. Ablation studies further demonstrate the incremental contribution of each module to the overall performance. These results validate our model's ability to generalize across domains and offer practical utility in industrial quality control pipelines.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Mahmoud SalahEldin Kasem",
+      "Mohamed Mahmoud",
+      "Mostafa Farouk Senussi",
+      "Mahmoud Abdalla",
+      "Hyun-Soo Kang"
+    ],
+    "doi": "10.1038/s41598-025-31654-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41381637/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41381637"
+    }
+  },
+  {
+    "paper_id": "pubmed:41365912",
+    "title": "Malicious user classification in cognitive 5G networks using novel improved bidirectional encoder representations from transformers model.",
+    "abstract": "In cognitive 5G networks, identifying malicious users is essential for protecting dynamic spectrum access against attacks like jamming as well as spectrum sensing fraud. However, the complexity associated with many 5G settings, limited labelled information, as well as evolving attack methods make it extremely challenging to detect these individuals. In order to provide dependable effectiveness as well as confidence in cognitive radio-enabled 5G communication frameworks, these networks need real-time, efficient, and adaptable classification approaches that can reduce false alarms while generalizing successfully. Therefore, this paper performs the Malicious User Classification in Cognitive 5G Networks (MUC-C5GN) using novel intelligent machine learning-oriented optimization methodology. The data is first collected from the standard benchmark sources called 5G Network Intrusion Detection Dataset (5G‑NIDD). The pre-processing of this collected data is accomplished by the normalization and scaling methods. Next, the feature extraction of this pre-processed data takes place by the Self-Attention RNN-AE (Recurrent Neural Network-Autoencoder) approach. Finally, the classification of the malicious users in cognitive 5G networks is performed by the novel Improved Bidirectional Encoder Representations from Transformers (IBERT) model. The parameter tweaking in BERT is done by the nature inspired optimization algorithm called Revolution Optimization Algorithm (ROA). Accuracy maximization is considered as the fitness function for the overall MUC-C5GN model. Over seven types of attack as well as benign traffic, the proposed IBERT-ROA method is evaluated against LSTM-GRU, MLP, Chaotic DBN, and Detectron2 + YOLOv7. According to simulation results, IBERT-ROA achieves the best results with 99.74% accuracy, 98.48% sensitivity, 98.91% precision, 97.82% MCC, as well as 98.91% specificity-demonstrating improvements of up to 5.99% in sensitivity and 2.74% in accuracy over the state-of-the-art technique. These results demonstrate the effectiveness, scalability, as well as suitability of IBERT-ROA for real-time malicious user detection in dynamic cognitive 5G environments.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Saranya S",
+      "N Malligeswari",
+      "F Twinkle Graf",
+      "V Murugan"
+    ],
+    "doi": "10.1038/s41598-025-19156-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41365912/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41365912"
+    }
+  },
+  {
+    "paper_id": "pubmed:41349436",
+    "title": "TiDE-Net: A time-guided dual-encoder ResUNet for Positron Emission Tomography (PET) image denoising.",
+    "abstract": "Positron emission tomography (PET) imaging enables quantitative assessment of metabolic activity in the human body and is widely used for clinical diagnosis and monitoring treatment. PET imaging, however, is inherently affected by noise due to a number of factors including radioactive decay from the injected radiotracer, the amount of radiotracer injected, attenuation of photons, patient characteristics (e.g Body Mass Index), the underlying condition and the characteristics of the instrumentation employed (the type of PET-CT scanner). Low-dose imaging protocols have been in vogue to minimize patient radiation exposure. As such, extensive research has been focused on reducing noise levels while minimizing the administered radiotracer dose. State-of-the-art denoising methods are trained on data with fixed noise levels, i.e., noise with consistent statistical properties across all samples. This assumption limits their ability to generalize to real-world PET imaging scenarios, where noise levels differ from those seen during training for the reason outlined above. We propose a time-guided dual-encoder ResUNet (TiDE-Net) to remove reliance on fixed noise levels at both training and inference stages for PET image denoising. TiDE-Net incorporates a Dual-Encoder with Complementary Attention (DECA) to extract global context and local structure, enhancing feature representation under varying noise conditions. To enhance adaptability, we introduce a Time-Guided Mechanism (TGM), where a scalar timestep variable represents and controls the level of simulated noise, where higher timesteps correspond to higher noise levels. By simulating varying noise levels from standard-dose PET (stndPET) data, TiDE-Net learns a continuous representation of noise characteristics. In our experiments, TiDE-Net outperformed state-of-the-art comparison methods on two benchmark datasets (664 patient studies from Siemens Biograph Vision Quadra and United Imaging uEXPLORER total body scanners), across all noise levels. Ablation studies further demonstrated that our proposed TGM and DECA modules markedly improved performance, particularly on dose levels not seen during training. Clinical evaluation through SUV analysis further demonstrates the model's ability to preserve quantitative accuracy across different regions. Our experiments demonstrate that conditioning on a timestep enables TiDE-Net to generalize across unseen noise levels, achieving consistent denoising performance across different noise conditions.",
+    "year": 2026,
+    "venue": "Computer methods and programs in biomedicine",
+    "authors": [
+      "Boyuan Tan",
+      "Yuxin Xue",
+      "Lei Bi",
+      "Michael Fulham",
+      "Jinman Kim"
+    ],
+    "doi": "10.1016/j.cmpb.2025.109200",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41349436/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41349436"
+    }
+  },
+  {
+    "paper_id": "pubmed:41331659",
+    "title": "Advancing WBC Classification: A Hybrid ConvNextV2-Swin Transformer Framework with R3GAN Data Balancing and CLAHE Preprocessing.",
+    "abstract": "White blood cell (WBC) classification remains a critical challenge in hematological diagnostics, particularly for rare cell types such as basophils and imbalanced datasets. This study introduces a novel three-component hybrid framework that synergistically integrates: (1) ConvNeXtV2-Swin Transformer for dual-scale hierarchical feature extraction-combining ConvNeXtV2's depthwise convolutions with Swin Transformer's shifted window attention to capture both local cellular morphology and global contextual dependencies; (2) R3GAN (Reinforced Reliable Robust Generative Adversarial Network) for intelligent minority class augmentation through reinforcement learning-guided sample generation, effectively mitigating class imbalance while preserving biological fidelity; and (3) CLAHE (Contrast-Limited Adaptive Histogram Equalization) for adaptive preprocessing to normalize imaging variations. Evaluated on the challenging Raabin dataset-characterized by severe class imbalance (301 basophils vs. 8887 neutrophils) and limited diversity-the proposed architecture achieves 99.1% accuracy, surpassing state-of-the-art methods by 2-10%. Notably, the framework demonstrates exceptional data efficiency, maintaining 94% accuracy with only 50% training data. The synergistic integration of architectural innovation, intelligent data synthesis, and adaptive preprocessing establishes a robust paradigm for clinical deployment in resource-constrained environments. Source code is publicly available at https://github.com/momenianmohammad/wbc-convnextv2swin-r3gan-eccgan .",
+    "year": 2025,
+    "venue": "Journal of imaging informatics in medicine",
+    "authors": [
+      "Mohammad Momenian",
+      "Seyed Vahab Shojaedini"
+    ],
+    "doi": "10.1007/s10278-025-01740-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41331659/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41331659"
+    }
+  },
+  {
+    "paper_id": "pubmed:41273802",
+    "title": "A novel Transformer-MLP fusion network for metabolite identification from mass spectra.",
+    "abstract": "Accurate metabolite identification remains a major challenge in untargeted metabolomics, particularly for novel compounds that are absent from existing spectral libraries. In this work, we propose a novel Feature Fusion Network (FFNet) based on Transformer and multilayer perceptron (MLP), a dual-stream architecture specifically designed to predict molecular fingerprints from mass spectra. FFNet incorporates a transformer-based pathway that captures the global context of spectral data and an MLP-based pathway that focuses on extracting local spectral features. These complementary representations are integrated through an attentive fusion mechanism to produce comprehensive molecular fingerprints. Extensive evaluations on the General Metabolite Identification Set (GMIS, 17,267 spectra), a custom-built test set designed for benchmarking metabolite identification, and the MassBank of North America (MoNA, 1243 spectra) dataset demonstrate that FFNet consistently outperforms baseline neural network models in both fingerprint prediction and metabolite identification tasks. Moreover, in structure elucidation experiments using the CASMI 2022 dataset, FFNet effectively retrieves candidate molecules with high structural similarity to unknown compounds, even in the absence of exact matches within the spectral library. These findings suggest that neural feature fusion significantly improves mass spectral analysis and enables more reliable metabolite identification in complex biological samples.",
+    "year": 2026,
+    "venue": "Talanta",
+    "authors": [
+      "Xiaofeng Zhang",
+      "Ming Yan",
+      "Yian Liu",
+      "Lingyun Xue",
+      "Anqi Chen",
+      "Shundi Hu",
+      "Luhong Wen",
+      "Ping Xu"
+    ],
+    "doi": "10.1016/j.talanta.2025.129123",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41273802/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41273802"
+    }
+  },
+  {
+    "paper_id": "pubmed:41249960",
+    "title": "SegResDeiT: a hybrid SegNet-ResNet-50-DeiT framework for automated cervical cancer segmentation and classification.",
+    "abstract": "The prompt and precise identification of cervical cancer via cytology screening is essential for decreasing mortality; yet, traditional manual microscopy is impeded by subjectivity, operator tiredness, and limited throughput, resulting in diagnostic discrepancies. Conventional deep learning models have been investigated for automation; however, these methods frequently encounter difficulties in reconciling accurate spatial boundary segmentation with effective global contextual reasoning, thereby constraining their clinical precision and dependability. This paper introduces SegResDeiT, an innovative hybrid framework designed for the concurrent segmentation and classification of cervical cytology images. Our model incorporates a SegNet backbone for precise pixel-wise segmentation, a ResNet-50 encoder for hierarchical feature extraction, and a Data-efficient Image Transformer (DeiT) head for enhanced global context modelling and classification. The proposed model underwent thorough evaluation against leading benchmarks, achieving exceptional performance with an accuracy of 94.47%, precision of 95.66%, recall of 96.47%, F1-score of 96.06%, and outstanding segmentation quality, as demonstrated by a Dice coefficient of 96.06% and an IoU of 92.43%. An ablation investigation validated the collaborative impact of each architectural element, while a computational analysis illustrated a feasible equilibrium between superior performance and practical inference duration. The results unequivocally indicate that SegResDeiT outperforms current methodologies, providing a reliable and effective alternative likely to improve the precision and availability of automated cervical cancer screening, with considerable prospects for practical use.",
+    "year": 2025,
+    "venue": "BMC medical imaging",
+    "authors": [
+      "Aaseegha M D",
+      "Venkataramana B"
+    ],
+    "doi": "10.1186/s12880-025-02001-8",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41249960/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41249960"
+    }
+  },
+  {
+    "paper_id": "pubmed:41242196",
+    "title": "Diffusion for Diffusion: A versatile multiphysics fields refinement framework in pollutants transportation.",
+    "abstract": "Refining coupled multiphysics fields in pollutant transport from sparse measurements is critical for environmental risk assessment and industrial pollution mitigation. However, existing numerical solvers and machine learning architectures exhibit inherent limitations in computational efficiency, generalizability, and predicting accuracy. To address these limitations, we present a diffusion-model-based deep learning framework. The target problem involves pollutant diffusion driven by coupled concentration and temperature gradients, examined in both two-dimensional transient and three-dimensional steady-state scenarios. Our approach integrates a physics-informed, equation-constrained scheme with a conditional diffusion model, enabling accurate recovery of high-dimensional spatiotemporal fields from limited observations. To validate the proposed method, we construct benchmark datasets using high-fidelity finite element simulations and double-color siren imaging under varied source distributions and boundary conditions. Quantitative evaluations demonstrate that our framework consistently outperforms state-of-the-art baselines-including ResNet, Transformer, and Fourier Neural Operator-in terms of super-resolution accuracy and robustness. These results suggest that the proposed approach offers a promising pathway toward real-time monitoring and analysis of pollutant transport in both environmental and industrial contexts.",
+    "year": 2026,
+    "venue": "Water research",
+    "authors": [
+      "Yinpeng Wang",
+      "Yuancheng Zhan"
+    ],
+    "doi": "10.1016/j.watres.2025.124962",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41242196/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41242196"
+    }
+  },
+  {
+    "paper_id": "pubmed:41221087",
+    "title": "Hybrid AI Model With CNNs and Vision Transformers for Precision Pest Classification in Crops.",
+    "abstract": "Crop pests pose a significant threat to agricultural productivity, making it essential to develop effective pest management techniques. Prompt and accurate identification of pests is necessary for effective pest management and preventing significant damage. This paper proposes HyPest-Net, a hybrid deep learning architecture that integrates convolutional neural networks (CNNs) for local feature extraction, channel and spatial attention mechanisms for refining salient features, and a vision transformer (ViT-B/16) module for modeling long-range dependencies. This integrated hybrid architecture enables accurate pest classification by resolving challenges posed by visually similar species, background clutter, and varied illumination issues that standalone CNNs or ViTs inadequately address. Preprocessing and augmentation have been used to enhance the generalizability of the proposed model over the dataset. The proposed model was evaluated on two benchmark datasets: a rice pest dataset (5 classes) and the dangerous farm insects dataset (15 classes). Experimental results demonstrate that HyPest-Net achieved an accuracy of 0.95 on the rice pest dataset. The proposed model achieved a precision of 0.95, a sensitivity of 0.95, a specificity of 0.94, and an F1 score of 0.94. The proposed model achieved an accuracy of 0.93 on the dangerous farm insects dataset. The proposed HyPest-Net model offers a lightweight yet powerful solution for real-time, explainable pest classification, supporting practical applications in precision agriculture.",
+    "year": 2025,
+    "venue": "Food science & nutrition",
+    "authors": [
+      "Neha Sharma",
+      "Fuad Ali Mohammed Al-Yarimi",
+      "Salil Bharany",
+      "Ateeq Ur Rehman",
+      "Belayneh Matebie Taye"
+    ],
+    "doi": "10.1002/fsn3.71174",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41221087/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41221087"
+    }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "paper_id": "https://openalex.org/W4318751318",
+  "title": "Understanding INT4 Quantization for Transformer Models: Latency Speedup, Composability, and Failure Cases",
+  "abstract": "Improving the deployment efficiency of transformer-based language models has been challenging given their high computation and memory cost. While INT8 quantization has recently been shown to be effective in reducing both the memory cost and latency while preserving model accuracy, it remains unclear whether we can leverage INT4 (which doubles peak hardware throughput) to achieve further latency improvement. In this study, we explore the feasibility of employing INT4 weight and activation (W4A4) quantization for language models. Our findings indicate that W4A4 quantization introduces no to negligible accuracy degradation for encoder-only and encoder-decoder models, but causes a significant accuracy drop for decoder-only models. To materialize the performance gain using W4A4, we develop a highly optimized end-to-end W4A4 encoder inference pipeline supporting different quantization strategies. Our INT4 pipeline is $8.5\\times$ faster for latency-oriented scenarios and up to $3\\times$ for throughput-oriented scenarios compared to the inference of FP16, and improves the SOTA BERT INT8 performance from FasterTransformer by up to $1.7\\times$. We provide insights into the failure cases when applying W4A4 to decoder-only models, and further explore the compatibility of INT4 quantization with other compression methods, like pruning and layer reduction.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Xiaoxia Wu",
+    "Cheng Li",
+    "Reza Yazdani Aminabadi",
+    "Zhewei Yao",
+    "Yuxiong He"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2301.12017",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2301.12017",
+  "citation_count": 6,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Quantization (signal processing)",
+      "Encoder",
+      "Inference",
+      "Computer engineering",
+      "Computation",
+      "Speedup",
+      "Algorithm",
+      "Parallel computing",
+      "Artificial intelligence",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2058965144",
+      "https://openalex.org/W2164382479",
+      "https://openalex.org/W2146343568",
+      "https://openalex.org/W98480971",
+      "https://openalex.org/W2097707447",
+      "https://openalex.org/W3204400881",
+      "https://openalex.org/W3214410901",
+      "https://openalex.org/W3204296682",
+      "https://openalex.org/W3183118997",
+      "https://openalex.org/W2917767146"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "paper_id": "https://openalex.org/W4377371819",
+  "title": "LLM-Pruner: On the Structural Pruning of Large Language Models",
+  "abstract": "Large language models (LLMs) have shown remarkable capabilities in language understanding and generation. However, such impressive capability typically comes with a substantial model size, which presents significant challenges in both the deployment, inference, and training stages. With LLM being a general-purpose task solver, we explore its compression in a task-agnostic manner, which aims to preserve the multi-task solving and language generation ability of the original LLM. One challenge to achieving this is the enormous size of the training corpus of LLM, which makes both data transfer and model post-training over-burdensome. Thus, we tackle the compression of LLMs within the bound of two constraints: being task-agnostic and minimizing the reliance on the original training dataset. Our method, named LLM-Pruner, adopts structural pruning that selectively removes non-critical coupled structures based on gradient information, maximally preserving the majority of the LLM's functionality. To this end, the performance of pruned models can be efficiently recovered through tuning techniques, LoRA, in merely 3 hours, requiring only 50K data. We validate the LLM-Pruner on three LLMs, including LLaMA, Vicuna, and ChatGLM, and demonstrate that the compressed models still exhibit satisfactory capabilities in zero-shot classification and generation. The code is available at: https://github.com/horseee/LLM-Pruner",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Xinyin Ma",
+    "Gongfan Fang",
+    "Xinchao Wang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.11627",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.11627",
+  "citation_count": 74,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:broad_synonym",
+    "route:title_like",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Pruning",
+      "Computer science",
+      "Language model",
+      "Task (project management)",
+      "Code (set theory)",
+      "Inference",
+      "Artificial intelligence",
+      "Machine learning",
+      "Software deployment",
+      "Solver",
+      "Obstacle",
+      "Natural language processing",
+      "Software engineering",
+      "Programming language",
+      "Political science",
+      "Law",
+      "Agronomy",
+      "Economics",
+      "Set (abstract data type)",
+      "Management",
+      "Biology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2794103424",
+      "https://openalex.org/W1996530509",
+      "https://openalex.org/W3028317537",
+      "https://openalex.org/W2389515972",
+      "https://openalex.org/W4245435724",
+      "https://openalex.org/W2770234245",
+      "https://openalex.org/W2055301889",
+      "https://openalex.org/W96612179",
+      "https://openalex.org/W4229499248",
+      "https://openalex.org/W2376554934"
+    ]
+  }
+}

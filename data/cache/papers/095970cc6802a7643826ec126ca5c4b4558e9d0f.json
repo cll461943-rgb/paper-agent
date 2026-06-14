@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42025178",
+  "title": "SAM2HIPT: a hybrid deep learning framework integrating SAM2 and HIPT with joint loss optimization for immunohistochemical cell nucleus segmentation.",
+  "abstract": "Nucleus segmentation in immunohistochemistry images plays a critical role in cancer diagnosis and treatment assessment. However, existing methods remain limited in segmentation accuracy and boundary delineation due to staining heterogeneity, densely packed cell distributions, and complex background interference. To address these challenges, this paper proposes a two-stage nucleus segmentation framework, termed SAM2HIPT. In the first stage, the pre-trained Segment Anything Model 2 (SAM2) is employed to generate initial segmentation predictions for input images, wherein the image encoder is kept frozen to preserve the pre-trained visual representation capacity while the mask decoder is fine-tuned to adapt to the characteristics of the pathological image domain; local texture, morphological, and boundary information are extracted through visual feature encoding to produce initial nucleus segmentation masks and spatial prior representations. In the second stage, the Hierarchical Image Pyramid Transformer is introduced to refine the initial segmentation results, performing multi-scale, multi-level feature representation and fusion of morphological, textural, and spatial structural information through a hierarchical vision Transformer architecture, thereby enhancing nuclear structural representation and boundary consistency. To enable collaborative optimization across both stages, a joint loss function is designed to impose unified constraints on segmentation accuracy and feature representation. Evaluated on two public histopathological benchmark datasets, BCData and DeepLIIF, the proposed method achieves Dice coefficients of 0.92 and 0.91, respectively, and HD95 boundary error values of 1.05 pixels and 1.10 pixels, demonstrating superior segmentation performance and robustness over multiple state-of-the-art baseline methods.",
+  "year": 2026,
+  "venue": "Biomedical physics & engineering express",
+  "authors": [
+    "Yu Yao",
+    "Simin Li",
+    "Yangsheng Hu",
+    "Yuanchao Xue",
+    "Jie Huang",
+    "Jianfeng He",
+    "Siming Li"
+  ],
+  "doi": "10.1088/2057-1976/ae63d6",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42025178/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42025178"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "pubmed:42228739",
+  "title": "A comparative study of simulation-based inference methods for epidemic models with identifiability considerations.",
+  "abstract": "Epidemic models play a critical role in understanding transmission dynamics, generating forecasts, and informing public health interventions when they are properly calibrated to epidemiological data. Traditional Bayesian inference methods rely on the likelihood function to update prior knowledge using observed data. However, for realistic epidemic models, likelihood functions are often analytically intractable or computationally prohibitive, which can limit the applicability of these methods. Simulation-based inference provides a promising alternative by approximating posterior distributions through forward simulations rather than an explicit likelihood evaluation. In this study, we present a systematic comparison of four approaches: Approximate Bayesian Computation (ABC), Neural Posterior Estimation (NPE), a neural method with temporal embedding, and Preconditioned Neural Posterior Estimation (PNPE), which integrates elements of both classical and neural techniques. These methods are evaluated across epidemic models of increasing complexity under fixed simulation budgets and varying levels of observational noise, with explicit attention to both structural and practical identifiability. Our results show that neural methods generally improve posterior fidelity and predictive accuracy compared with ABC under constrained simulation budgets. PNPE achieved strong performance in several simulation settings, whereas temporal embeddings improved inference in models with complex epidemic dynamics by capturing sequential dependencies. These gains come with important trade-offs: PNPE required substantially greater computational resources and, unlike fully amortized NPE-based methods, may require reconditioning for each new observation. In contrast, ABC remained computationally efficient and provided reasonable, though often more conservative, posterior estimates. Overall, our findings highlight trade-offs among computational efficiency, posterior accuracy, uncertainty calibration, and inference reusability, suggesting that method selection should depend on model complexity, data quality, identifiability, and available computational resources.",
+  "year": 2026,
+  "venue": "PLoS computational biology",
+  "authors": [
+    "Geunsoo Jang",
+    "K Selçuk Candan",
+    "Gerardo Chowell"
+  ],
+  "doi": "10.1371/journal.pcbi.1014364",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42228739/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42228739"
+  }
+}

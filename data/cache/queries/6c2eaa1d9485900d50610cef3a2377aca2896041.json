@@ -1,0 +1,880 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2601.05960v2",
+    "title": "Distilling Feedback into Memory-as-a-Tool",
+    "abstract": "We propose a framework that amortizes the cost of inference-time reasoning by converting transient critiques into retrievable guidelines, through a file-based memory system and agent-controlled tool calls. We evaluate this method on the Rubric Feedback Bench, a novel dataset for rubric-based learning. Experiments demonstrate that our augmented LLMs rapidly match the performance of test-time refinement pipelines while drastically reducing inference cost.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Víctor Gallego"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.05960v2",
+    "url": "http://arxiv.org/abs/2601.05960v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:core_topic",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2605.00721v1",
+    "title": "Towards Improving Speaker Distance Estimation through Generative Impulse Response Augmentation",
+    "abstract": "The Room Acoustics and Speaker Distance Estimation (SDE) Challenge at ICASSP 2025 explores the effectiveness of augmented room impulse response (RIR) data for improving SDE model performance. This challenge at GenDARA involves generating RIRs to supplement sparse datasets and fine-tuning SDE models with the augmented data. We employ the open-source fast diffuse room impulse response generator (FastRIR) conditioned only on speaker and listener locations. We design a quality filter to ensure generated RIR alignment with challenge RIRs, and hyperparameter optimization is employed for model fine-tuning. Our approach reduces the mean absolute error (MAE) of the five positions from 1.66m to 0.6m for GWA rooms and from 2.18m to 0.69m for Treble rooms, with results demonstrating that the augmentation approach significantly improves estimation accuracy, particularly at medium to long distances.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Anton Ratnarajah",
+      "Mehmet Ergezer",
+      "Arun Nair",
+      "Mrudula Athi"
+    ],
+    "doi": null,
+    "arxiv_id": "2605.00721v1",
+    "url": "http://arxiv.org/abs/2605.00721v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.11553v2",
+    "title": "Target-Guided Open-Domain Conversation",
+    "abstract": "Many real-world open-domain conversation applications have specific goals to achieve during open-ended chats, such as recommendation, psychotherapy, education, etc. We study the problem of imposing conversational goals on open-domain chat agents. In particular, we want a conversational system to chat naturally with human and proactively guide the conversation to a designated target subject. The problem is challenging as no public data is available for learning such a target-guided strategy. We propose a structured approach that introduces coarse-grained keywords to control the intended content of system responses. We then attain smooth conversation transition through turn-level supervised learning, and drive the conversation towards the target with discourse-level constraints. We further derive a keyword-augmented conversation dataset for the study. Quantitative and human evaluations show our system can produce meaningful and effective conversations, significantly improving over other approaches.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Jianheng Tang",
+      "Tiancheng Zhao",
+      "Chenyan Xiong",
+      "Xiaodan Liang",
+      "Eric P. Xing",
+      "Zhiting Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.11553v2",
+    "url": "http://arxiv.org/abs/1905.11553v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.21278v1",
+    "title": "Conversation Tree Architecture: A Structured Framework for Context-Aware Multi-Branch LLM Conversations",
+    "abstract": "Large language models (LLMs) are increasingly deployed for extended, multi-topic conversations, yet the flat, append-only structure of current conversation interfaces introduces a fundamental limitation: all context accumulates in a single unbounded window, causing topically distinct threads to bleed into one another and progressively degrade response quality. We term this failure mode logical context poisoning. In this paper, we introduce the Conversation Tree Architecture (CTA), a hierarchical framework that organizes LLM conversations as trees of discrete, context-isolated nodes. Each node maintains its own local context window; structured mechanisms govern how context flows between parent and child nodes, downstream on branch creation and upstream on branch deletion. We additionally introduce volatile nodes, transient branches whose local context must be selectively merged upward or permanently discarded before purging. We formalize the architecture's primitives, characterize the open design problems in context flow, relate our framework to prior work in LLM memory management, and describe a working prototype implementation. The CTA provides a principled foundation for structured conversational context management and extends naturally to multi-agent settings.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Pranav Hemanth",
+      "Sampriti Saha"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.21278v1",
+    "url": "http://arxiv.org/abs/2603.21278v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.07440v2",
+    "title": "End-to-end Conversation Modeling Track in DSTC6",
+    "abstract": "End-to-end training of neural networks is a promising approach to automatic construction of dialog systems using a human-to-human dialog corpus. Recently, Vinyals et al. tested neural conversation models using OpenSubtitles. Lowe et al. released the Ubuntu Dialogue Corpus for researching unstructured multi-turn dialogue systems. Furthermore, the approach has been extended to accomplish task oriented dialogs to provide information properly with natural conversation. For example, Ghazvininejad et al. proposed a knowledge grounded neural conversation model [3], where the research is aiming at combining conversational dialogs with task-oriented knowledge using unstructured data such as Twitter data for conversation and Foursquare data for external knowledge.However, the task is still limited to a restaurant information service, and has not yet been tested with a wide variety of dialog tasks. In addition, it is still unclear how to create intelligent dialog systems that can respond like a human agent. In consideration of these problems, we proposed a challenge track to the 6th dialog system technology challenges (DSTC6) using human-to-human dialog data to mimic human dialog behaviors. The focus of the challenge track is to train end-to-end conversation models from human-to-human conversation and accomplish end-to-end dialog tasks in various situations assuming a customer service, in which a system plays a role of human agent and generates natural and informative sentences in response to user's questions or comments given dialog context.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Chiori Hori",
+      "Takaaki Hori"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.07440v2",
+    "url": "http://arxiv.org/abs/1706.07440v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.13420v1",
+    "title": "Conversation Chronicles: Towards Diverse Temporal and Relational Dynamics in Multi-Session Conversations",
+    "abstract": "In the field of natural language processing, open-domain chatbots have emerged as an important research topic. However, a major limitation of existing open-domain chatbot research is its singular focus on short single-session dialogue, neglecting the potential need for understanding contextual information in multiple consecutive sessions that precede an ongoing dialogue. Among the elements that compose the context in multi-session conversation settings, the time intervals between sessions and the relationships between speakers would be particularly important. Despite their importance, current research efforts have not sufficiently addressed these dialogical components. In this paper, we introduce a new 1M multi-session dialogue dataset, called Conversation Chronicles, for implementing a long-term conversation setup in which time intervals and fine-grained speaker relationships are incorporated. Following recent works, we exploit a large language model to produce the data. The extensive human evaluation shows that dialogue episodes in Conversation Chronicles reflect those properties while maintaining coherent and consistent interactions across all the sessions. We also propose a dialogue model, called ReBot, which consists of chronological summarization and dialogue generation modules using only around 630M parameters. When trained on Conversation Chronicles, ReBot demonstrates long-term context understanding with a high human engagement score.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jihyoung Jang",
+      "Minseong Boo",
+      "Hyounghun Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.13420v1",
+    "url": "http://arxiv.org/abs/2310.13420v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1509.00070v1",
+    "title": "In-Line-Test of Variability and Bit-Error-Rate of HfOx-Based Resistive Memory",
+    "abstract": "Spatial and temporal variability of HfOx-based resistive random access memory (RRAM) are investigated for manufacturing and product designs. Manufacturing variability is characterized at different levels including lots, wafers, and chips. Bit-error-rate (BER) is proposed as a holistic parameter for the write cycle resistance statistics. Using the electrical in-line-test cycle data, a method is developed to derive BERs as functions of the design margin, to provide guidance for technology evaluation and product design. The proposed BER calculation can also be used in the off-line bench test and build-in-self-test (BIST) for adaptive error correction and for the other types of random access memories.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "B. L. Ji",
+      "H. Li",
+      "Q. Ye",
+      "S. Gausepohl",
+      "S. Deora",
+      "D. Veksler",
+      "S. Vivekanand",
+      "H. Chong",
+      "H. Stamper",
+      "T. Burroughs",
+      "C. Johnson",
+      "M. Smalley",
+      "S. Bennett",
+      "V. Kaushik",
+      "J. Piccirillo",
+      "M. Rodgers",
+      "M. Passaro",
+      "M. Liehr"
+    ],
+    "doi": null,
+    "arxiv_id": "1509.00070v1",
+    "url": "http://arxiv.org/abs/1509.00070v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1308.2881v1",
+    "title": "Opacity of Memory Management in Software Transactional Memory",
+    "abstract": "Opacity of Transactional Memory is proposed to be established by incremental validation. Quiescence in terms of epoch-based memory reclamation is applied to deal with doomed transactions causing memory access violations. This method unfortunately involves increased memory consumption and does not cover reclamations outside of transactions. This paper introduces a different method which combines incremental validation with elements of sandboxing to solve these issues.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Holger Machens",
+      "Volker Turau"
+    ],
+    "doi": null,
+    "arxiv_id": "1308.2881v1",
+    "url": "http://arxiv.org/abs/1308.2881v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.08363v3",
+    "title": "Data-Efficient Augmentation for Training Neural Networks",
+    "abstract": "Data augmentation is essential to achieve state-of-the-art performance in many deep learning applications. However, the most effective augmentation techniques become computationally prohibitive for even medium-sized datasets. To address this, we propose a rigorous technique to select subsets of data points that when augmented, closely capture the training dynamics of full data augmentation. We first show that data augmentation, modeled as additive perturbations, improves learning and generalization by relatively enlarging and perturbing the smaller singular values of the network Jacobian, while preserving its prominent directions. This prevents overfitting and enhances learning the harder to learn information. Then, we propose a framework to iteratively extract small subsets of training data that when augmented, closely capture the alignment of the fully augmented Jacobian with labels/residuals. We prove that stochastic gradient descent applied to the augmented subsets found by our approach has similar training dynamics to that of fully augmented data. Our experiments demonstrate that our method achieves 6.3x speedup on CIFAR10 and 2.2x speedup on SVHN, and outperforms the baselines by up to 10% across various subset sizes. Similarly, on TinyImageNet and ImageNet, our method beats the baselines by up to 8%, while achieving up to 3.3x speedup across various subset sizes. Finally, training on and augmenting 50% subsets using our method on a version of CIFAR10 corrupted with label noise even outperforms using the full dataset. Our code is available at: https://github.com/tianyu139/data-efficient-augmentation",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Tian Yu Liu",
+      "Baharan Mirzasoleiman"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.08363v3",
+    "url": "http://arxiv.org/abs/2210.08363v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01088v2",
+    "title": "Exploring Empty Spaces: Human-in-the-Loop Data Augmentation",
+    "abstract": "Data augmentation is crucial to make machine learning models more robust and safe. However, augmenting data can be challenging as it requires generating diverse data points to rigorously evaluate model behavior on edge cases and mitigate potential harms. Creating high-quality augmentations that cover these \"unknown unknowns\" is a time- and creativity-intensive task. In this work, we introduce Amplio, an interactive tool to help practitioners navigate \"unknown unknowns\" in unstructured text datasets and improve data diversity by systematically identifying empty data spaces to explore. Amplio includes three human-in-the-loop data augmentation techniques: Augment With Concepts, Augment by Interpolation, and Augment with Large Language Model. In a user study with 18 professional red teamers, we demonstrate the utility of our augmentation methods in helping generate high-quality, diverse, and relevant model safety prompts. We find that Amplio enabled red teamers to augment data quickly and creatively, highlighting the transformative potential of interactive augmentation workflows.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Catherine Yeh",
+      "Donghao Ren",
+      "Yannick Assogba",
+      "Dominik Moritz",
+      "Fred Hohman"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01088v2",
+    "url": "http://arxiv.org/abs/2410.01088v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.01584v1",
+    "title": "Wearable Affective Memory Augmentation",
+    "abstract": "Human memory prioritizes the storage and recall of information that is emotionally-arousing and/or important in a process known as value-directed memory. When experiencing a stream of information (e.g. conversation, book, lecture, etc.), the individual makes conscious and subconscious value assessments of the incoming information and uses this as a metric to determine what to remember. In order to improve automatic recall of memory, previous memory augmentation systems have sensed users' physiological state to determine which sensory media should be prioritized. Here, we propose to prioritize memories using the affective state of individuals that the user is interacting with. Thereby, the proposed wearable Affective Memory Augmentation system uses affective information from the user's social companions in order to facilitate value-directed memory.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Cayden Pierce",
+      "Steve Mann"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.01584v1",
+    "url": "http://arxiv.org/abs/2112.01584v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1002.1191v1",
+    "title": "Unidirectional Error Correcting Codes for Memory Systems: A Comparative Study",
+    "abstract": "In order to achieve fault tolerance, highly reliable system often require the ability to detect errors as soon as they occur and prevent the speared of erroneous information throughout the system. Thus, the need for codes capable of detecting and correcting byte errors are extremely important since many memory systems use b-bit-per-chip organization. Redundancy on the chip must be put to make fault-tolerant design available. This paper examined several methods of computer memory systems, and then a proposed technique is designed to choose a suitable method depending on the organization of memory systems. The constructed codes require a minimum number of check bits with respect to codes used previously, then it is optimized to fit the organization of memory systems according to the requirements for data and byte lengths.",
+    "year": 2010,
+    "venue": null,
+    "authors": [
+      "Muzhir Al-Ani",
+      "Qeethara Al-Shayea"
+    ],
+    "doi": null,
+    "arxiv_id": "1002.1191v1",
+    "url": "http://arxiv.org/abs/1002.1191v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.20474v1",
+    "title": "Critical Role of Artificially Intelligent Conversational Chatbot",
+    "abstract": "Artificially intelligent chatbot, such as ChatGPT, represents a recent and powerful advancement in the AI domain. Users prefer them for obtaining quick and precise answers, avoiding the usual hassle of clicking through multiple links in traditional searches. ChatGPT's conversational approach makes it comfortable and accessible for finding answers quickly and in an organized manner. However, it is important to note that these chatbots have limitations, especially in terms of providing accurate answers as well as ethical concerns. In this study, we explore various scenarios involving ChatGPT's ethical implications within academic contexts, its limitations, and the potential misuse by specific user groups. To address these challenges, we propose architectural solutions aimed at preventing inappropriate use and promoting responsible AI interactions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Seraj A. M. Mostafa",
+      "Md Z. Islam",
+      "Mohammad Z. Islam",
+      "Fairose Jeehan",
+      "Saujanna Jafreen",
+      "Raihan U. Islam"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.20474v1",
+    "url": "http://arxiv.org/abs/2310.20474v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.15658v1",
+    "title": "Did You Check the Right Pocket? Cost-Sensitive Store Routing for Memory-Augmented Agents",
+    "abstract": "Memory-augmented agents maintain multiple specialized stores, yet most systems retrieve from all stores for every query, increasing cost and introducing irrelevant context. We formulate memory retrieval as a store-routing problem and evaluate it using coverage, exact match, and token efficiency metrics. On downstream question answering, an oracle router achieves higher accuracy while using substantially fewer context tokens compared to uniform retrieval, demonstrating that selective retrieval improves both efficiency and performance. Our results show that routing decisions are a first-class component of memory-augmented agent design and motivate learned routing mechanisms for scalable multi-store systems. We additionally formalize store selection as a cost-sensitive decision problem that trades answer accuracy against retrieval cost, providing a principled interpretation of routing policies.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Madhava Gaikwad"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.15658v1",
+    "url": "http://arxiv.org/abs/2603.15658v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.09828v1",
+    "title": "Analyzing Data Augmentation for Medical Images: A Case Study in Ultrasound Images",
+    "abstract": "Data augmentation is one of the most effective techniques to improve the generalization performance of deep neural networks. Yet, despite often facing limited data availability in medical image analysis, it is frequently underutilized. This appears to be due to a gap in our collective understanding of the efficacy of different augmentation techniques across medical imaging tasks and modalities. One domain where this is especially true is breast ultrasound images. This work addresses this issue by analyzing the effectiveness of different augmentation techniques for the classification of breast lesions in ultrasound images. We assess the generalizability of our findings across several datasets, demonstrate that certain augmentations are far more effective than others, and show that their usage leads to significant performance gains.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Adam Tupper",
+      "Christian Gagné"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.09828v1",
+    "url": "http://arxiv.org/abs/2403.09828v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.05589v3",
+    "title": "On Memory Construction and Retrieval for Personalized Conversational Agents",
+    "abstract": "To deliver coherent and personalized experiences in long-term conversations, existing approaches typically perform retrieval augmented response generation by constructing memory banks from conversation history at either the turn-level, session-level, or through summarization techniques.In this paper, we present two key findings: (1) The granularity of memory unit matters: turn-level, session-level, and summarization-based methods each exhibit limitations in both memory retrieval accuracy and the semantic quality of the retrieved content. (2) Prompt compression methods, such as LLMLingua-2, can effectively serve as a denoising mechanism, enhancing memory retrieval accuracy across different granularities. Building on these insights, we propose SeCom, a method that constructs the memory bank at segment level by introducing a conversation segmentation model that partitions long-term conversations into topically coherent segments, while applying compression based denoising on memory units to enhance memory retrieval. Experimental results show that SeCom exhibits a significant performance advantage over baselines on long-term conversation benchmarks LOCOMO and Long-MT-Bench+. Additionally, the proposed conversation segmentation method demonstrates superior performance on dialogue segmentation datasets such as DialSeg711, TIAGE, and SuperDialSeg.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zhuoshi Pan",
+      "Qianhui Wu",
+      "Huiqiang Jiang",
+      "Xufang Luo",
+      "Hao Cheng",
+      "Dongsheng Li",
+      "Yuqing Yang",
+      "Chin-Yew Lin",
+      "H. Vicky Zhao",
+      "Lili Qiu",
+      "Jianfeng Gao"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.05589v3",
+    "url": "http://arxiv.org/abs/2502.05589v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.06949v1",
+    "title": "Data Augmentation for Scene Text Recognition",
+    "abstract": "Scene text recognition (STR) is a challenging task in computer vision due to the large number of possible text appearances in natural scenes. Most STR models rely on synthetic datasets for training since there are no sufficiently big and publicly available labelled real datasets. Since STR models are evaluated using real data, the mismatch between training and testing data distributions results into poor performance of models especially on challenging text that are affected by noise, artifacts, geometry, structure, etc. In this paper, we introduce STRAug which is made of 36 image augmentation functions designed for STR. Each function mimics certain text image properties that can be found in natural scenes, caused by camera sensors, or induced by signal processing operations but poorly represented in the training dataset. When applied to strong baseline models using RandAugment, STRAug significantly increases the overall absolute accuracy of STR models across regular and irregular test datasets by as much as 2.10% on Rosetta, 1.48% on R2AM, 1.30% on CRNN, 1.35% on RARE, 1.06% on TRBA and 0.89% on GCRNN. The diversity and simplicity of API provided by STRAug functions enable easy replication and validation of existing data augmentation methods for STR. STRAug is available at https://github.com/roatienza/straug.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rowel Atienza"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.06949v1",
+    "url": "http://arxiv.org/abs/2108.06949v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.21523v1",
+    "title": "Tabular Data Augmentation for Machine Learning: Progress and Prospects of Embracing Generative AI",
+    "abstract": "Machine learning (ML) on tabular data is ubiquitous, yet obtaining abundant high-quality tabular data for model training remains a significant obstacle. Numerous works have focused on tabular data augmentation (TDA) to enhance the original table with additional data, thereby improving downstream ML tasks. Recently, there has been a growing interest in leveraging the capabilities of generative AI for TDA. Therefore, we believe it is time to provide a comprehensive review of the progress and future prospects of TDA, with a particular emphasis on the trending generative AI. Specifically, we present an architectural view of the TDA pipeline, comprising three main procedures: pre-augmentation, augmentation, and post-augmentation. Pre-augmentation encompasses preparation tasks that facilitate subsequent TDA, including error handling, table annotation, table simplification, table representation, table indexing, table navigation, schema matching, and entity matching. Augmentation systematically analyzes current TDA methods, categorized into retrieval-based methods, which retrieve external data, and generation-based methods, which generate synthetic data. We further subdivide these methods based on the granularity of the augmentation process at the row, column, cell, and table levels. Post-augmentation focuses on the datasets, evaluation and optimization aspects of TDA. We also summarize current trends and future directions for TDA, highlighting promising opportunities in the era of generative AI. In addition, the accompanying papers and related resources are continuously updated and maintained in the GitHub repository at https://github.com/SuDIS-ZJU/awesome-tabular-data-augmentation to reflect ongoing advancements in the field.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lingxi Cui",
+      "Huan Li",
+      "Ke Chen",
+      "Lidan Shou",
+      "Gang Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.21523v1",
+    "url": "http://arxiv.org/abs/2407.21523v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.04739v2",
+    "title": "Data Augmentation for Conversational AI",
+    "abstract": "Advancements in conversational systems have revolutionized information access, surpassing the limitations of single queries. However, developing dialogue systems requires a large amount of training data, which is a challenge in low-resource domains and languages. Traditional data collection methods like crowd-sourcing are labor-intensive and time-consuming, making them ineffective in this context. Data augmentation (DA) is an affective approach to alleviate the data scarcity problem in conversational systems. This tutorial provides a comprehensive and up-to-date overview of DA approaches in the context of conversational systems. It highlights recent advances in conversation augmentation, open domain and task-oriented conversation generation, and different paradigms of evaluating these models. We also discuss current challenges and future directions in order to help researchers and practitioners to further advance the field in this area.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Heydar Soudani",
+      "Evangelos Kanoulas",
+      "Faegheh Hasibi"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.04739v2",
+    "url": "http://arxiv.org/abs/2309.04739v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.01542v1",
+    "title": "Memory Sandbox: Transparent and Interactive Memory Management for Conversational Agents",
+    "abstract": "The recent advent of large language models (LLM) has resulted in high-performing conversational agents such as chatGPT. These agents must remember key information from an ongoing conversation to provide responses that are contextually relevant to the user. However, these agents have limited memory and can be distracted by irrelevant parts of the conversation. While many strategies exist to manage conversational memory, users currently lack affordances for viewing and controlling what the agent remembers, resulting in a poor mental model and conversational breakdowns. In this paper, we present Memory Sandbox, an interactive system and design probe that allows users to manage the conversational memory of LLM-powered agents. By treating memories as data objects that can be viewed, manipulated, recorded, summarized, and shared across conversations, Memory Sandbox provides interaction affordances for users to manage how the agent should `see' the conversation.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ziheng Huang",
+      "Sebastian Gutierrez",
+      "Hemanth Kamana",
+      "Stephen MacNeil"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.01542v1",
+    "url": "http://arxiv.org/abs/2308.01542v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.18038v1",
+    "title": "Designing for Affective Augmentation: Assistive, Harmful, or Unfamiliar?",
+    "abstract": "In what capacity are affective augmentations helpful to humans, and what risks (if any) do they pose? In this position paper, we outline three works on affective augmentation systems, where our studies suggest these systems have the ability to influence our cognitive, affective, and (social) bodily perceptions in perhaps unusual ways. We provide considerations on whether these systems, outside clinical settings, are assistive, harmful, or as of now largely unfamiliar to users.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Abdallah El Ali"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.18038v1",
+    "url": "http://arxiv.org/abs/2303.18038v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.23863v1",
+    "title": "Puzzles: Unbounded Video-Depth Augmentation for Scalable End-to-End 3D Reconstruction",
+    "abstract": "Multi-view 3D reconstruction remains a core challenge in computer vision. Recent methods, such as DUST3R and its successors, directly regress pointmaps from image pairs without relying on known scene geometry or camera parameters. However, the performance of these models is constrained by the diversity and scale of available training data. In this work, we introduce Puzzles, a data augmentation strategy that synthesizes an unbounded volume of high-quality posed video-depth data from a single image or video clip. By simulating diverse camera trajectories and realistic scene geometry through targeted image transformations, Puzzles significantly enhances data variety. Extensive experiments show that integrating Puzzles into existing video-based 3D reconstruction pipelines consistently boosts performance without modifying the underlying network architecture. Notably, models trained on only ten percent of the original data augmented with Puzzles still achieve accuracy comparable to those trained on the full dataset. Code is available at https://jiahao-ma.github.io/puzzles/.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiahao Ma",
+      "Lei Wang",
+      "Miaomiao liu",
+      "David Ahmedt-Aristizabal",
+      "Chuong Nguyen"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.23863v1",
+    "url": "http://arxiv.org/abs/2506.23863v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:hybrid",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2004.07997v2",
+    "title": "Random Memory Walk",
+    "abstract": "We present a simple model of a random walk with partial memory, which we call the \\emph{random memory walk}. We introduce this model motivated by the belief that it mimics the behavior of the once-reinforced random walk in high dimensions and with small reinforcement. We establish the transience of the random memory walk in dimensions three and higher, and show that its scaling limit is a Brownian motion.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Alexander Fribergh",
+      "Daniel Kious",
+      "Vladas Sidoravicius",
+      "Alexandre Stauffer"
+    ],
+    "doi": null,
+    "arxiv_id": "2004.07997v2",
+    "url": "http://arxiv.org/abs/2004.07997v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.11848v1",
+    "title": "Phase-Coded Memory and Morphological Resonance: A Next-Generation Retrieval-Augmented Generator Architecture",
+    "abstract": "This paper introduces a cognitive Retrieval-Augmented Generator (RAG) architecture that transcends transformer context-length limitations through phase-coded memory and morphological-semantic resonance. Instead of token embeddings, the system encodes meaning as complex wave patterns with amplitude-phase structure. A three-tier design is presented: a Morphological Mapper that transforms inputs into semantic waveforms, a Field Memory Layer that stores knowledge as distributed holographic traces and retrieves it via phase interference, and a Non-Contextual Generator that produces coherent output guided by resonance rather than fixed context. This approach eliminates sequential token dependence, greatly reduces memory and computational overhead, and enables unlimited effective context through frequency-based semantic access. The paper outlines theoretical foundations, pseudocode implementation, and experimental evidence from related complex-valued neural models, emphasizing substantial energy, storage, and time savings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Denis V. Saklakov"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.11848v1",
+    "url": "http://arxiv.org/abs/2511.11848v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.02503v1",
+    "title": "Mixed-Session Conversation with Egocentric Memory",
+    "abstract": "Recently introduced dialogue systems have demonstrated high usability. However, they still fall short of reflecting real-world conversation scenarios. Current dialogue systems exhibit an inability to replicate the dynamic, continuous, long-term interactions involving multiple partners. This shortfall arises because there have been limited efforts to account for both aspects of real-world dialogues: deeply layered interactions over the long-term dialogue and widely expanded conversation networks involving multiple participants. As the effort to incorporate these aspects combined, we introduce Mixed-Session Conversation, a dialogue system designed to construct conversations with various partners in a multi-session dialogue setup. We propose a new dataset called MiSC to implement this system. The dialogue episodes of MiSC consist of 6 consecutive sessions, with four speakers (one main speaker and three partners) appearing in each episode. Also, we propose a new dialogue model with a novel memory management mechanism, called Egocentric Memory Enhanced Mixed-Session Conversation Agent (EMMA). EMMA collects and retains memories from the main speaker's perspective during conversations with partners, enabling seamless continuity in subsequent interactions. Extensive human evaluations validate that the dialogues in MiSC demonstrate a seamless conversational flow, even when conversation partners change in each session. EMMA trained with MiSC is also evaluated to maintain high memorability without contradiction throughout the entire conversation.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jihyoung Jang",
+      "Taeyoung Kim",
+      "Hyounghun Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.02503v1",
+    "url": "http://arxiv.org/abs/2410.02503v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09354v1",
+    "title": "Working Memory Networks: Augmenting Memory Networks with a Relational Reasoning Module",
+    "abstract": "During the last years, there has been a lot of interest in achieving some kind of complex reasoning using deep neural networks. To do that, models like Memory Networks (MemNNs) have combined external memory storages and attention mechanisms. These architectures, however, lack of more complex reasoning mechanisms that could allow, for instance, relational reasoning. Relation Networks (RNs), on the other hand, have shown outstanding results in relational reasoning tasks. Unfortunately, their computational cost grows quadratically with the number of memories, something prohibitive for larger problems. To solve these issues, we introduce the Working Memory Network, a MemNN architecture with a novel working memory storage and reasoning module. Our model retains the relational reasoning abilities of the RN while reducing its computational complexity from quadratic to linear. We tested our model on the text QA dataset bAbI and the visual QA dataset NLVR. In the jointly trained bAbI-10k, we set a new state-of-the-art, achieving a mean error of less than 0.5%. Moreover, a simple ensemble of two of our models solves all 20 tasks in the joint version of the benchmark.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Juan Pavez",
+      "Héctor Allende",
+      "Héctor Allende-Cid"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09354v1",
+    "url": "http://arxiv.org/abs/1805.09354v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1308.6782v1",
+    "title": "Graphene Nanotechnology for the Next Generation Nonvolatile Memory",
+    "abstract": "As conventional silicon technology is approaching its fundamental material and physical limits with continuous scaling, there is a growing push to look for new platform to design memory circuits for nanoelectronic applications. In this paper we explore new design concept of nonvolatile memory based on graphene nanotechnology. The investigation focuses on two forms of graphene based field effect transistor (FET) carbon nanotube FET (CNTFET) and graphene nanoribbon FET (GNRFET). The analysis reveals that GNRFET with a high trapping capable oxide layer is suitable for ultra high ensity nonvolatile memory.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Md. Nahid Hossain",
+      "Masud H Chowdhury"
+    ],
+    "doi": null,
+    "arxiv_id": "1308.6782v1",
+    "url": "http://arxiv.org/abs/1308.6782v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.02987v1",
+    "title": "Differentiable Neural Computers with Memory Demon",
+    "abstract": "A Differentiable Neural Computer (DNC) is a neural network with an external memory which allows for iterative content modification via read, write and delete operations. We show that information theoretic properties of the memory contents play an important role in the performance of such architectures. We introduce a novel concept of memory demon to DNC architectures which modifies the memory contents implicitly via additive input encoding. The goal of the memory demon is to maximize the expected sum of mutual information of the consecutive external memory contents.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ari Azarafrooz"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.02987v1",
+    "url": "http://arxiv.org/abs/2211.02987v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.13722v1",
+    "title": "OP-Bench: Benchmarking Over-Personalization for Memory-Augmented Personalized Conversational Agents",
+    "abstract": "Memory-augmented conversational agents enable personalized interactions using long-term user memory and have gained substantial traction. However, existing benchmarks primarily focus on whether agents can recall and apply user information, while overlooking whether such personalization is used appropriately. In fact, agents may overuse personal information, producing responses that feel forced, intrusive, or socially inappropriate to users. We refer to this issue as \\emph{over-personalization}. In this work, we formalize over-personalization into three types: Irrelevance, Repetition, and Sycophancy, and introduce \\textbf{OP-Bench} a benchmark of 1,700 verified instances constructed from long-horizon dialogue histories. Using \\textbf{OP-Bench}, we evaluate multiple large language models and memory-augmentation methods, and find that over-personalization is widespread when memory is introduced. Further analysis reveals that agents tend to retrieve and over-attend to user memories even when unnecessary. To address this issue, we propose \\textbf{Self-ReCheck}, a lightweight, model-agnostic memory filtering mechanism that mitigates over-personalization while preserving personalization performance. Our work takes an initial step toward more controllable and appropriate personalization in memory-augmented dialogue systems.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Yulin Hu",
+      "Zimo Long",
+      "Jiahe Guo",
+      "Xingyu Sui",
+      "Xing Fu",
+      "Weixiang Zhao",
+      "Yanyan Zhao",
+      "Bing Qin"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.13722v1",
+    "url": "http://arxiv.org/abs/2601.13722v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2111.02353v4",
+    "title": "Memory Association Networks",
+    "abstract": "We introduce memory association networks(MANs) that memorize and remember any data. This neural network has two memories. One consists of a queue-structured short-term memory to solve the class imbalance problem and long-term memory to store the distribution of objects, introducing the contents of storing and generating various datasets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Seokjun Kim",
+      "Jaeeun Jang",
+      "Yeonju Jang",
+      "Seongyune Choi",
+      "Hyeoncheol Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2111.02353v4",
+    "url": "http://arxiv.org/abs/2111.02353v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

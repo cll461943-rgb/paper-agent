@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:41996424",
+  "title": "Pathology-Aligned Contrastive Representation Learning for Gleason Grading.",
+  "abstract": "Gleason grading, the clinical gold standard for prostate cancer assessment, is based on subjective evaluation of glandular architecture, resulting in interobserver variability and limited scalability. This highlights the need for automated grading systems. However, their development is hindered by the scarcity of annotated pathology data. Self-supervised learning (SSL) presents a promising solution by utilizing unlabeled data. Pathology images differ significantly in their diagnostic content, often characterized by subtle glandular structures rather than broad visual patterns. Existing SSL methods, primarily designed for natural images, struggle to capture these pathology-specific cues, as they typically rely on random masking or global augmentations that overlook fine-grained morphological characteristics. To address this, we propose Pathology-Aligned Contrastive Representation Learning (PA-CRL), which adaptively aligns representations with diagnostically relevant glandular architecture. The core component is a diagnostic-aware masking strategy that selectively emphasizes pathology-relevant regions by constructing pathology-aligned contrastive pairs. In addition, a stability-based regularization mechanism, termed mask-driven entropic label smoothing (MDELS), leverages entropy differences between masked and unmasked views to regularize contrastive supervision, explicitly promoting representation stability under directed masking perturbations. This distinguishes MDELS from existing uncertaintyaware or soft-label contrastive learning approaches that do not model masked-unmasked representation consistency. Experiments on a clinical multiphoton microscopy dataset and two public H&E-stained datasets demonstrate that PA-CRL learns pathology-relevant representations and achieves 2.89%F1-score improvement in downstream Gleason Grade Group evaluation over state-of-the-art methods. Code is available at https://github.com/phenixsp/PA-CRL.",
+  "year": 2026,
+  "venue": "IEEE transactions on medical imaging",
+  "authors": [
+    "Maoye Huang",
+    "Jing Zhong",
+    "Jiawei Wu",
+    "Jia He",
+    "Zuoyong Li",
+    "Peng Shi",
+    "Xiaoqin Zhu"
+  ],
+  "doi": "10.1109/TMI.2026.3685011",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41996424/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41996424"
+  }
+}

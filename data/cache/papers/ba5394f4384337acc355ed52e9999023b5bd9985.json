@@ -1,0 +1,32 @@
+{
+  "paper_id": "http://arxiv.org/abs/2512.21615v1",
+  "title": "Embedding Samples Dispatching for Recommendation Model Training in Edge Environments",
+  "abstract": "Training deep learning recommendation models (DLRMs) on edge workers brings several benefits, particularly in terms of data privacy protection, low latency and personalization. However, due to the huge size of embedding tables, typical DLRM training frameworks adopt one or more parameter servers to maintain global embedding tables, while leveraging the edge workers cache part of them. This incurs significant transmission cost for embedding transmissions between workers and parameter servers, which can dominate the training cycle. In this paper, we investigate how to dispatch input embedding samples to appropriate edge workers to minimize the total embedding transmission cost when facing edge-specific challenges such as heterogeneous networks and limited resources. We develop ESD, a novel mechanism that optimizes the dispatch of input embedding samples to edge workers based on expected embedding transmission cost. We propose HybridDis as the dispatch decision method within ESD, which combines a resource-intensive optimal algorithm and a heuristic algorithm to balance decision quality and resource consumption. We implement a prototype of ESD and compare it with state-of-the-art mechanisms on real-world workloads. Extensive experimental results show that ESD reduces the embedding transmission cost by up to 36.76% and achieves up to 1.74 times speedup in end-to-end DLRM training.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Guopeng Li",
+    "Haisheng Tan",
+    "Chi Zhang",
+    "Hongqiu Ni",
+    "Zilong Wang",
+    "Xinyue Zhang",
+    "Yang Xu",
+    "Han Tian"
+  ],
+  "doi": null,
+  "arxiv_id": "2512.21615v1",
+  "url": "http://arxiv.org/abs/2512.21615v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

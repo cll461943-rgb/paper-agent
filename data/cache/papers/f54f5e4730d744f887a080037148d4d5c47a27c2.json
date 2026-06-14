@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42243446",
+  "title": "Byzantine robust federated learning for heterogeneous brain MRI using multisignal gradient fingerprinting and adaptive trust aggregation.",
+  "abstract": "Federated learning enables collaborative training across institutions without centralizing patient data, but remains vulnerable to malicious clients and severe non-IID data heterogeneity. We propose a trust-aware federated learning framework for brain MRI that combines multi-signal gradient fingerprinting with adaptive aggregation to achieve Byzantine robustness. Each client update is characterized by a six-dimensional fingerprint (variational-autoencoder reconstruction error, cosine similarity to a server reference, peer similarity, gradient norm, sign consistency, and Monte Carlo Shapley contribution). A dual-attention module and a reinforcement-learning controller map these signals into trust weights and integrate with FedBN-P (Federated Batch Normalization with Proximal regularization), an optimizer co-designed for stability under heterogeneous and adversarial conditions. We evaluate on MNIST, CIFAR-10, Alzheimer's MRI, and the OASIS brain-MRI cohort (approximately 87 test samples, used strictly as proof-of-concept) under both standard and strengthened threat models (up to 40% malicious clients). Attack-specific ablation confirms a defense-in-depth design: VAE fingerprinting is the primary noise-attack defense (3.60 pp accuracy drop upon removal), Shapley values safeguard accuracy under scaling (10.16 pp drop), and reinforcement learning improves detection consistency under dynamic attack schedules. Three-seed paired-test validation further shows detection F1 outperforms FLTrust by up to 44 pp on Non-IID Gaussian noise; a white-box adaptive attacker degrades the detector but not model accuracy, confirming the layered design. End-to-end wall-clock overhead is + 8.8% over FedAvg with identical communication volume. The framework achieves F1 above 0.98 for gradient-scaling attacks while preserving accuracy under magnitude-preserving attacks where explicit detection remains limited. Multi-site validation on larger federated cohorts (e.g., ADNI, UK Biobank, FeTS) is required before any clinical-deployment claim can be made.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Mohammad Karami",
+    "Hamed Kebriaei",
+    "Fatemeh Ghassemi",
+    "Hamid Azadegan"
+  ],
+  "doi": "10.1038/s41598-026-55855-5",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42243446/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42243446"
+  }
+}

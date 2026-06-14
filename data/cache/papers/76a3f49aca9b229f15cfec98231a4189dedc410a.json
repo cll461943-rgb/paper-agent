@@ -1,0 +1,67 @@
+{
+  "paper_id": "https://openalex.org/W2920538220",
+  "title": "Insertion Transformer: Flexible Sequence Generation via Insertion Operations",
+  "abstract": "We present the Insertion Transformer, an iterative, partially autoregressive model for sequence generation based on insertion operations. Unlike typical autoregressive models which rely on a fixed, often left-to-right ordering of the output, our approach accommodates arbitrary orderings by allowing for tokens to be inserted anywhere in the sequence during decoding. This flexibility confers a number of advantages: for instance, not only can our model be trained to follow specific orderings such as left-to-right generation or a binary tree traversal, but it can also be trained to maximize entropy over all valid insertions for robustness. In addition, our model seamlessly accommodates both fully autoregressive generation (one insertion at a time) and partially autoregressive generation (simultaneous insertions at multiple locations). We validate our approach by analyzing its performance on the WMT 2014 English-German machine translation task under various settings for training and decoding. We find that the Insertion Transformer outperforms many prior non-autoregressive approaches to translation at comparable or better levels of parallelism, and successfully recovers the performance of the original Transformer while requiring only logarithmically many iterations during decoding.",
+  "year": 2019,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Mitchell Stern",
+    "William Chan",
+    "Jamie Kiros",
+    "Jakob Uszkoreit"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.1902.03249",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/1902.03249",
+  "citation_count": 162,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Autoregressive model",
+      "Computer science",
+      "Decoding methods",
+      "Transformer",
+      "Entropy (arrow of time)",
+      "Algorithm",
+      "Machine translation",
+      "Artificial intelligence",
+      "Mathematics",
+      "Engineering",
+      "Voltage",
+      "Econometrics",
+      "Physics",
+      "Electrical engineering",
+      "Quantum mechanics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2988975212",
+      "https://openalex.org/W2971167892",
+      "https://openalex.org/W2964308564",
+      "https://openalex.org/W2964121744",
+      "https://openalex.org/W2963434219",
+      "https://openalex.org/W2963403868",
+      "https://openalex.org/W2963341956",
+      "https://openalex.org/W2962784628",
+      "https://openalex.org/W2130942839",
+      "https://openalex.org/W2101105183",
+      "https://openalex.org/W2985694911",
+      "https://openalex.org/W2912937082",
+      "https://openalex.org/W2948629866",
+      "https://openalex.org/W2963536265",
+      "https://openalex.org/W2892213699",
+      "https://openalex.org/W2933138175",
+      "https://openalex.org/W2964089333",
+      "https://openalex.org/W2990389671",
+      "https://openalex.org/W2970597249",
+      "https://openalex.org/W1821462560"
+    ]
+  }
+}

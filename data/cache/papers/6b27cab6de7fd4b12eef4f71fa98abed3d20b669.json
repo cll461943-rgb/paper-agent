@@ -1,0 +1,58 @@
+{
+  "paper_id": "https://openalex.org/W4403864152",
+  "title": "HotaQ: Hardware Oriented Token Adaptive Quantization for Large Language Models",
+  "abstract": "The Large Language Models (LLMs) have been popular and widely used in creative ways because of their powerful capabilities. However, the substantial model size and complexity prevent LLMs from being implemented on resourceconstrained computing devices efficiently. Recent works that utilize quantization to boost the on-device efficiency of LLMs show that 8-bit or lower weight quantization is feasible with minimal impact on task performance with full-precision activation. Nevertheless, weight-only quantization does not leverage the potential acceleration on general edge processors, which typically support 16x16 and 8x8 integer multipliers. Additionally, it cannot benefit from specialized devices like Field-Programmable Gate Arrays (FPGAs), which offer reconfigure computing to design custom multipliers of arbitrary bit width. In this paper, we propose HotaQ, a Hardware-oriented token adaptive Quantization framework for general LLMs, and implement end-to-end accelerators on multiple devices. Considering the hardware profiling and activation analysis, we first introduce a basic activation quantization strategy to balance the trade-off of task performance and real inference speed. Then we integrate the activation-aware token pruning workflow to reduce the outliers and the adverse impact on attentivity. For mobile devices, we notably design the SIMD-based 4-bit multiplier and the efficient TRIP matrix multiplication for mobile devices. For FPGAs, we specially utilize the DSP packing techniques for 4/8-bit systolic-array-based multipliers and introduce an analytical model for achieving the best performance with limited on-chip resources. We apply our framework on different scales of LLMs, including LLaMA, OPT, and BLOOM with 4/8-bit for the activation and 4-bit for the weight. Experiments show that HotaQ achieves quantization on both model weights and activations while maintaining task performance comparable to existing weight-only quantization methods or even FP16 models. In the 4/8-bit scenario, HotaQ achieves an on-device speedup of up to 2.5× and 5.2× compared to its FP16 counterparts across edge devices and FPGAs respectively, marking a pioneering advancement in this domain.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+  "authors": [
+    "Xuan Shen",
+    "Zhaoyang Han",
+    "B. F. Spencer",
+    "Zhenglun Kong",
+    "Peiyan Dong",
+    "Zhengang Li",
+    "Yanyue Xie",
+    "Chao Wu",
+    "Miriam Leeser",
+    "Pu Zhao",
+    "Xue Lin",
+    "Yanzhi Wang"
+  ],
+  "doi": "https://doi.org/10.1109/tcad.2024.3487781",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1109/tcad.2024.3487781",
+  "citation_count": 8,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Security token",
+      "Computer science",
+      "Quantization (signal processing)",
+      "Computer hardware",
+      "Programming language",
+      "Computer network",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W4388335561",
+      "https://openalex.org/W2970530566",
+      "https://openalex.org/W4288261899",
+      "https://openalex.org/W4307309205",
+      "https://openalex.org/W2967478618",
+      "https://openalex.org/W4385009901",
+      "https://openalex.org/W4385572700"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2305.06404v1",
+  "title": "LACoS-BLOOM: Low-rank Adaptation with Contrastive objective on 8 bits Siamese-BLOOM",
+  "abstract": "Text embeddings are useful features for several NLP applications, such as sentence similarity, text clustering, and semantic search. In this paper, we present a Low-rank Adaptation with a Contrastive objective on top of 8-bit Siamese-BLOOM, a multilingual large language model optimized to produce semantically meaningful word embeddings. The innovation is threefold. First, we cast BLOOM weights to 8-bit values. Second, we fine-tune BLOOM with a scalable adapter (LoRA) and 8-bit Adam optimizer for sentence similarity classification. Third, we apply a Siamese architecture on BLOOM model with a contrastive objective to ease the multi-lingual labeled data scarcity. The experiment results show the quality of learned embeddings from LACoS-BLOOM is proportional to the number of model parameters and the amount of unlabeled training data. With the parameter efficient fine-tuning design, we are able to run BLOOM 7.1 billion parameters end-to-end on a single GPU machine with 32GB memory. Compared to previous solution Sentence-BERT, we achieve significant improvement on both English and multi-lingual STS tasks.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Wen-Yu Hua",
+    "Brian Williams",
+    "Davood Shamsi"
+  ],
+  "doi": null,
+  "arxiv_id": "2305.06404v1",
+  "url": "http://arxiv.org/abs/2305.06404v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

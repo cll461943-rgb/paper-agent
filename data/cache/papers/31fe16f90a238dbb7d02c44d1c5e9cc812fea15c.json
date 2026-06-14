@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42268766",
+  "title": "Causal Decomposition of PPG Signals for Cuffless Blood Pressure Estimation.",
+  "abstract": "While photoplethysmogram (PPG) signals are physiologically linked to cardiac activity and widely used for cuffless blood pressure (BP) estimation, their correlation with BP remains limited in reliability due to inter-individual heterogeneity. This study aims to isolate the PPG components that have a strong causal relationship with BP, and leverage them to construct reliable cuffless BP estimation models. We propose a causal decomposition framework combining ensemble empirical mode decomposition (EEMD) with counterfactual inference to isolate physiologically causal components in PPG signals. First, PPG signals are adaptively decomposed into multi-scale intrinsic mode functions (IMFs) via EEMD. Then counterfactual PPG sequences are generated through sequentially excluding each IMF, and their causal relationships with BP are quantified via structure causal modeling to identify hemodynamically significant components. Subsequently, robust cuffless BP estimation models are constructed by selectively incorporating components demonstrating strong causal effects. To validate the framework, we benchmark our causality-based models against conventional approaches: pulse arrival time (PAT)-based physiological model, gradient-boosted regression tree (GBRT)-based feature model, and convolutional neural network (CNN)-based time-series model. mid-frequency PPG components (IMF4-6) showed strongest BP causality, with CNN model achieving superior estimation performance over PAT and GBRT when utilizing these components. Using IMF45 components, the CNN model achieved BP estimation mean absolute errors of 5.55/3.45 mmHg (systolic/diastolic BP), improving accuracy by 26.39%/17.86% over original PPG. Specific PPG frequency bands exhibit physiologically meaningful causal BP relationships. Our causality-driven approach enhances both accuracy and interpretability in cuffless BP estimation. This work establishes a theoretical framework for causal feature selection in BP estimation, and a novel paradigm for physiological signal analysis through causal decomposition.",
+  "year": 2026,
+  "venue": "IEEE transactions on bio-medical engineering",
+  "authors": [
+    "Xinyue Song",
+    "Deqi Chen",
+    "Andrew Lowe",
+    "Zhizhong Fu",
+    "Xiaoping Chen",
+    "Xiaorong Ding"
+  ],
+  "doi": "10.1109/TBME.2026.3702361",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42268766/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42268766"
+  }
+}

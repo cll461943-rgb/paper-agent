@@ -1,0 +1,879 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/cond-mat/0309395v2",
+    "title": "This paper has been withdrawn",
+    "abstract": "This paper has been withdrawn",
+    "year": 2003,
+    "venue": null,
+    "authors": [
+      "This paper has been withdrawn"
+    ],
+    "doi": null,
+    "arxiv_id": "0309395v2",
+    "url": "http://arxiv.org/abs/cond-mat/0309395v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.05075v2",
+    "title": "A Human-Grounded Evaluation Benchmark for Local Explanations of Machine Learning",
+    "abstract": "Research in interpretable machine learning proposes different computational and human subject approaches to evaluate model saliency explanations. These approaches measure different qualities of explanations to achieve diverse goals in designing interpretable machine learning systems. In this paper, we propose a human attention benchmark for image and text domains using multi-layer human attention masks aggregated from multiple human annotators. We then present an evaluation study to evaluate model saliency explanations obtained using Grad-cam and LIME techniques. We demonstrate our benchmark's utility for quantitative evaluation of model explanations by comparing it with human subjective ratings and ground-truth single-layer segmentation masks evaluations. Our study results show that our threshold agnostic evaluation method with the human attention baseline is more effective than single-layer object segmentation masks to ground truth. Our experiments also reveal user biases in the subjective rating of model saliency explanations.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Sina Mohseni",
+      "Jeremy E. Block",
+      "Eric D. Ragan"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.05075v2",
+    "url": "http://arxiv.org/abs/1801.05075v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.19346v1",
+    "title": "Polynomial Regression as a Task for Understanding In-context Learning Through Finetuning and Alignment",
+    "abstract": "Simple function classes have emerged as toy problems to better understand in-context-learning in transformer-based architectures used for large language models. But previously proposed simple function classes like linear regression or multi-layer-perceptrons lack the structure required to explore things like prompting and alignment within models capable of in-context-learning. We propose univariate polynomial regression as a function class that is just rich enough to study prompting and alignment, while allowing us to visualize and understand what is going on clearly.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Max Wilcoxson",
+      "Morten Svendgård",
+      "Ria Doshi",
+      "Dylan Davis",
+      "Reya Vir",
+      "Anant Sahai"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.19346v1",
+    "url": "http://arxiv.org/abs/2407.19346v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.05656v2",
+    "title": "Alignment Verifiability in Large Language Models: Normative Indistinguishability under Behavioral Evaluation",
+    "abstract": "Behavioral evaluation is the dominant paradigm for assessing alignment in large language models (LLMs). In current practice, observed compliance under finite evaluation protocols is treated as evidence of latent alignment. However, the inference from bounded behavioral evidence to claims about global latent properties is rarely analyzed as an identifiability problem. In this paper, we study alignment evaluation through the lens of statistical identifiability under partial observability. We allow agent policies to condition their behavior on observable signals correlated with the evaluation regime, a phenomenon we term evaluation awareness. Within this framework, we formalize the Alignment Verifiability Problem and introduce Normative Indistinguishability, which arises when distinct latent alignment hypotheses induce identical distributions over evaluator-accessible observations. Our main theoretical contribution is a conditional impossibility result: under finite behavioral evaluation and evaluation-aware policies, observed compliance does not uniquely identify latent alignment, but only membership in an equivalence class of conditionally compliant policies, under explicit assumptions on policy expressivity and observability. We complement the theory with a constructive existence proof using an instruction-tuned LLM (Llama-3.2-3B), demonstrating a conditional policy that is perfectly compliant under explicit evaluation signals yet exhibits degraded identifiability when the same evaluation intent is conveyed implicitly. Together, our results show that behavioral benchmarks provide necessary but insufficient evidence for latent alignment under evaluation awareness.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Igor Santos-Grueiro"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.05656v2",
+    "url": "http://arxiv.org/abs/2602.05656v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.08355v3",
+    "title": "Metalic: Meta-Learning In-Context with Protein Language Models",
+    "abstract": "Predicting the biophysical and functional properties of proteins is essential for in silico protein design. Machine learning has emerged as a promising technique for such prediction tasks. However, the relative scarcity of in vitro annotations means that these models often have little, or no, specific data on the desired fitness prediction task. As a result of limited data, protein language models (PLMs) are typically trained on general protein sequence modeling tasks, and then fine-tuned, or applied zero-shot, to protein fitness prediction. When no task data is available, the models make strong assumptions about the correlation between the protein sequence likelihood and fitness scores. In contrast, we propose meta-learning over a distribution of standard fitness prediction tasks, and demonstrate positive transfer to unseen fitness prediction tasks. Our method, called Metalic (Meta-Learning In-Context), uses in-context learning and fine-tuning, when data is available, to adapt to new tasks. Crucially, fine-tuning enables considerable generalization, even though it is not accounted for during meta-training. Our fine-tuned models achieve strong results with 18 times fewer parameters than state-of-the-art models. Moreover, our method sets a new state-of-the-art in low-data settings on ProteinGym, an established fitness-prediction benchmark. Due to data scarcity, we believe meta-learning will play a pivotal role in advancing protein engineering.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jacob Beck",
+      "Shikha Surana",
+      "Manus McAuliffe",
+      "Oliver Bent",
+      "Thomas D. Barrett",
+      "Juan Jose Garau Luis",
+      "Paul Duckworth"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.08355v3",
+    "url": "http://arxiv.org/abs/2410.08355v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.03893v1",
+    "title": "Deliberative Technology for Alignment",
+    "abstract": "For humanity to maintain and expand its agency into the future, the most powerful systems we create must be those which act to align the future with the will of humanity. The most powerful systems today are massive institutions like governments, firms, and NGOs. Deliberative technology is already being used across these institutions to help align governance and diplomacy with human will, and modern AI is poised to make this technology significantly better. At the same time, the race to superhuman AGI is already underway, and the AI systems it gives rise to may become the most powerful systems of the future. Failure to align the impact of such powerful AI with the will of humanity may lead to catastrophic consequences, while success may unleash abundance. Right now, there is a window of opportunity to use deliberative technology to align the impact of powerful AI with the will of humanity. Moreover, it may be possible to engineer a symbiotic coupling between powerful AI and deliberative alignment systems such that the quality of alignment improves as AI capabilities increase.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Andrew Konya",
+      "Deger Turan",
+      "Aviv Ovadya",
+      "Lina Qui",
+      "Daanish Masood",
+      "Flynn Devine",
+      "Lisa Schirch",
+      "Isabella Roberts",
+      "Deliberative Alignment Forum"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.03893v1",
+    "url": "http://arxiv.org/abs/2312.03893v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.15191v1",
+    "title": "URLB: Unsupervised Reinforcement Learning Benchmark",
+    "abstract": "Deep Reinforcement Learning (RL) has emerged as a powerful paradigm to solve a range of complex yet specific control tasks. Yet training generalist agents that can quickly adapt to new tasks remains an outstanding challenge. Recent advances in unsupervised RL have shown that pre-training RL agents with self-supervised intrinsic rewards can result in efficient adaptation. However, these algorithms have been hard to compare and develop due to the lack of a unified benchmark. To this end, we introduce the Unsupervised Reinforcement Learning Benchmark (URLB). URLB consists of two phases: reward-free pre-training and downstream task adaptation with extrinsic rewards. Building on the DeepMind Control Suite, we provide twelve continuous control tasks from three domains for evaluation and open-source code for eight leading unsupervised RL methods. We find that the implemented baselines make progress but are not able to solve URLB and propose directions for future research.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Michael Laskin",
+      "Denis Yarats",
+      "Hao Liu",
+      "Kimin Lee",
+      "Albert Zhan",
+      "Kevin Lu",
+      "Catherine Cang",
+      "Lerrel Pinto",
+      "Pieter Abbeel"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.15191v1",
+    "url": "http://arxiv.org/abs/2110.15191v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.07969v1",
+    "title": "PDNS-Net: A Large Heterogeneous Graph Benchmark Dataset of Network Resolutions for Graph Learning",
+    "abstract": "In order to advance the state of the art in graph learning algorithms, it is necessary to construct large real-world datasets. While there are many benchmark datasets for homogeneous graphs, only a few of them are available for heterogeneous graphs. Furthermore, the latter graphs are small in size rendering them insufficient to understand how graph learning algorithms perform in terms of classification metrics and computational resource utilization. We introduce, PDNS-Net, the largest public heterogeneous graph dataset containing 447K nodes and 897K edges for the malicious domain classification task. Compared to the popular heterogeneous datasets IMDB and DBLP, PDNS-Net is 38 and 17 times bigger respectively. We provide a detailed analysis of PDNS-Net including the data collection methodology, heterogeneous graph construction, descriptive statistics and preliminary graph classification performance. The dataset is publicly available at https://github.com/qcri/PDNS-Net. Our preliminary evaluation of both popular homogeneous and heterogeneous graph neural networks on PDNS-Net reveals that further research is required to improve the performance of these models on large heterogeneous graphs.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Udesh Kumarasinghe",
+      "Fatih Deniz",
+      "Mohamed Nabeel"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.07969v1",
+    "url": "http://arxiv.org/abs/2203.07969v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.19874v3",
+    "title": "Is In-Context Learning Sufficient for Instruction Following in LLMs?",
+    "abstract": "In-context learning (ICL) allows LLMs to learn from examples without changing their weights: this is a particularly promising capability for long-context LLMs that can potentially learn from many examples. Recently, Lin et al. (2024) proposed URIAL, a method using only three in-context examples to align base LLMs, achieving non-trivial instruction following performance. In this work, we show that, while effective, ICL alignment with URIAL still underperforms compared to instruction fine-tuning on the established benchmark MT-Bench, especially with more capable base LLMs. We then uncover the most relevant elements for successful in-context alignment, finding the crucial role of the decoding parameters. Based on these insights, we show that the approach of URIAL can indeed be improved by adding high-quality, potentially carefully selected via greedy search, demonstrations in context, getting closer to the performance of instruct models. Finally, we provide the first, to our knowledge, systematic comparison of ICL and instruction fine-tuning (IFT) for instruction following in the low data regime, where ICL can be a viable alternative to IFT. Overall, our work advances the understanding of ICL as an alignment technique and its relationship to IFT. We provide our code at https://github.com/tml-epfl/icl-alignment.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hao Zhao",
+      "Maksym Andriushchenko",
+      "Francesco Croce",
+      "Nicolas Flammarion"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.19874v3",
+    "url": "http://arxiv.org/abs/2405.19874v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.09781v2",
+    "title": "On the Similarities of Embeddings in Contrastive Learning",
+    "abstract": "Contrastive learning operates on a simple yet effective principle: Embeddings of positive pairs are pulled together, while those of negative pairs are pushed apart. In this paper, we propose a unified framework for understanding contrastive learning through the lens of cosine similarity, and present two key theoretical insights derived from this framework. First, in full-batch settings, we show that perfect alignment of positive pairs is unattainable when negative-pair similarities fall below a threshold, and this misalignment can be mitigated by incorporating within-view negative pairs into the objective. Second, in mini-batch settings, smaller batch sizes induce stronger separation among negative pairs in the embedding space, i.e., higher variance in their similarities, which in turn degrades the quality of learned representations compared to full-batch settings. To address this, we propose an auxiliary loss that reduces the variance of negative-pair similarities in mini-batch settings. Empirical results show that incorporating the proposed loss improves performance in small-batch settings.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Chungpa Lee",
+      "Sehee Lim",
+      "Kibok Lee",
+      "Jy-yong Sohn"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.09781v2",
+    "url": "http://arxiv.org/abs/2506.09781v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.02732v1",
+    "title": "Evaluating the Evaluators: Are Current Few-Shot Learning Benchmarks Fit for Purpose?",
+    "abstract": "Numerous benchmarks for Few-Shot Learning have been proposed in the last decade. However all of these benchmarks focus on performance averaged over many tasks, and the question of how to reliably evaluate and tune models trained for individual tasks in this regime has not been addressed. This paper presents the first investigation into task-level evaluation -- a fundamental step when deploying a model. We measure the accuracy of performance estimators in the few-shot setting, consider strategies for model selection, and examine the reasons for the failure of evaluators usually thought of as being robust. We conclude that cross-validation with a low number of folds is the best choice for directly estimating the performance of a model, whereas using bootstrapping or cross validation with a large number of folds is better for model selection purposes. Overall, we find that existing benchmarks for few-shot learning are not designed in such a way that one can get a reliable picture of how effectively methods can be used on individual tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Luísa Shimabucoro",
+      "Timothy Hospedales",
+      "Henry Gouk"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.02732v1",
+    "url": "http://arxiv.org/abs/2307.02732v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.04596v1",
+    "title": "SECQUE: A Benchmark for Evaluating Real-World Financial Analysis Capabilities",
+    "abstract": "We introduce SECQUE, a comprehensive benchmark for evaluating large language models (LLMs) in financial analysis tasks. SECQUE comprises 565 expert-written questions covering SEC filings analysis across four key categories: comparison analysis, ratio calculation, risk assessment, and financial insight generation. To assess model performance, we develop SECQUE-Judge, an evaluation mechanism leveraging multiple LLM-based judges, which demonstrates strong alignment with human evaluations. Additionally, we provide an extensive analysis of various models' performance on our benchmark. By making SECQUE publicly available, we aim to facilitate further research and advancements in financial AI.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Noga Ben Yoash",
+      "Meni Brief",
+      "Oded Ovadia",
+      "Gil Shenderovitz",
+      "Moshik Mishaeli",
+      "Rachel Lemberg",
+      "Eitam Sheetrit"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.04596v1",
+    "url": "http://arxiv.org/abs/2504.04596v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1805.09921v4",
+    "title": "Meta-Learning Probabilistic Inference For Prediction",
+    "abstract": "This paper introduces a new framework for data efficient and versatile learning. Specifically: 1) We develop ML-PIP, a general framework for Meta-Learning approximate Probabilistic Inference for Prediction. ML-PIP extends existing probabilistic interpretations of meta-learning to cover a broad class of methods. 2) We introduce VERSA, an instance of the framework employing a flexible and versatile amortization network that takes few-shot learning datasets as inputs, with arbitrary numbers of shots, and outputs a distribution over task-specific parameters in a single forward pass. VERSA substitutes optimization at test time with forward passes through inference networks, amortizing the cost of inference and relieving the need for second derivatives during training. 3) We evaluate VERSA on benchmark datasets where the method sets new state-of-the-art results, handles arbitrary numbers of shots, and for classification, arbitrary numbers of classes at train and test time. The power of the approach is then demonstrated through a challenging few-shot ShapeNet view reconstruction task.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Jonathan Gordon",
+      "John Bronskill",
+      "Matthias Bauer",
+      "Sebastian Nowozin",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "1805.09921v4",
+    "url": "http://arxiv.org/abs/1805.09921v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.08893v4",
+    "title": "Active learning for data streams: a survey",
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the most informative observations for labeling in order to improve the performance of machine learning models. These approaches can be broadly divided into two categories: static pool-based and stream-based active learning. Pool-based active learning involves selecting a subset of observations from a closed pool of unlabeled data, and it has been the focus of many surveys and literature reviews. However, the growing availability of data streams has led to an increase in the number of approaches that focus on online active learning, which involves continuously selecting and labeling observations as they arrive in a stream. This work aims to provide an overview of the most recently proposed approaches for selecting the most informative observations from data streams in real time. We review the various techniques that have been proposed and discuss their strengths and limitations, as well as the challenges and opportunities that exist in this area of research.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.08893v4",
+    "url": "http://arxiv.org/abs/2302.08893v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.07921v2",
+    "title": "ImDrug: A Benchmark for Deep Imbalanced Learning in AI-aided Drug Discovery",
+    "abstract": "The last decade has witnessed a prosperous development of computational methods and dataset curation for AI-aided drug discovery (AIDD). However, real-world pharmaceutical datasets often exhibit highly imbalanced distribution, which is overlooked by the current literature but may severely compromise the fairness and generalization of machine learning applications. Motivated by this observation, we introduce ImDrug, a comprehensive benchmark with an open-source Python library which consists of 4 imbalance settings, 11 AI-ready datasets, 54 learning tasks and 16 baseline algorithms tailored for imbalanced learning. It provides an accessible and customizable testbed for problems and solutions spanning a broad spectrum of the drug discovery pipeline such as molecular modeling, drug-target interaction and retrosynthesis. We conduct extensive empirical studies with novel evaluation metrics, to demonstrate that the existing algorithms fall short of solving medicinal and pharmaceutical challenges in the data imbalance scenario. We believe that ImDrug opens up avenues for future research and development, on real-world challenges at the intersection of AIDD and deep imbalanced learning.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Lanqing Li",
+      "Liang Zeng",
+      "Ziqi Gao",
+      "Shen Yuan",
+      "Yatao Bian",
+      "Bingzhe Wu",
+      "Hengtong Zhang",
+      "Yang Yu",
+      "Chan Lu",
+      "Zhipeng Zhou",
+      "Hongteng Xu",
+      "Jia Li",
+      "Peilin Zhao",
+      "Pheng-Ann Heng"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.07921v2",
+    "url": "http://arxiv.org/abs/2209.07921v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.12238v1",
+    "title": "Few-Shot In-Context Imitation Learning via Implicit Graph Alignment",
+    "abstract": "Consider the following problem: given a few demonstrations of a task across a few different objects, how can a robot learn to perform that same task on new, previously unseen objects? This is challenging because the large variety of objects within a class makes it difficult to infer the task-relevant relationship between the new objects and the objects in the demonstrations. We address this by formulating imitation learning as a conditional alignment problem between graph representations of objects. Consequently, we show that this conditioning allows for in-context learning, where a robot can perform a task on a set of new objects immediately after the demonstrations, without any prior knowledge about the object class or any further training. In our experiments, we explore and validate our design choices, and we show that our method is highly effective for few-shot learning of several real-world, everyday tasks, whilst outperforming baselines. Videos are available on our project webpage at https://www.robot-learning.uk/implicit-graph-alignment.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Vitalis Vosylius",
+      "Edward Johns"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.12238v1",
+    "url": "http://arxiv.org/abs/2310.12238v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2207.07859v3",
+    "title": "SenseFi: A Library and Benchmark on Deep-Learning-Empowered WiFi Human Sensing",
+    "abstract": "WiFi sensing has been evolving rapidly in recent years. Empowered by propagation models and deep learning methods, many challenging applications are realized such as WiFi-based human activity recognition and gesture recognition. However, in contrast to deep learning for visual recognition and natural language processing, no sufficiently comprehensive public benchmark exists. In this paper, we review the recent progress on deep learning enabled WiFi sensing, and then propose a benchmark, SenseFi, to study the effectiveness of various deep learning models for WiFi sensing. These advanced models are compared in terms of distinct sensing tasks, WiFi platforms, recognition accuracy, model size, computational complexity, feature transferability, and adaptability of unsupervised learning. It is also regarded as a tutorial for deep learning based WiFi sensing, starting from CSI hardware platform to sensing algorithms. The extensive experiments provide us with experiences in deep model design, learning strategy skills and training techniques for real-world applications. To the best of our knowledge, this is the first benchmark with an open-source library for deep learning in WiFi sensing research. The benchmark codes are available at https://github.com/xyanchen/WiFi-CSI-Sensing-Benchmark.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Jianfei Yang",
+      "Xinyan Chen",
+      "Dazhuo Wang",
+      "Han Zou",
+      "Chris Xiaoxuan Lu",
+      "Sumei Sun",
+      "Lihua Xie"
+    ],
+    "doi": null,
+    "arxiv_id": "2207.07859v3",
+    "url": "http://arxiv.org/abs/2207.07859v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.10804v1",
+    "title": "Mix-CPT: A Domain Adaptation Framework via Decoupling Knowledge Learning and Format Alignment",
+    "abstract": "Adapting general large language models (LLMs) to specialized domains presents great challenges due to varied data distributions. This adaptation typically requires continual pre-training on massive domain-specific corpora to facilitate knowledge memorization, followed by training to apply this knowledge following human instructions and preferences. However, this method may result in inefficient knowledge memorization due to a lack of awareness of knowledge utilization and imposes substantial demands on LLMs to simultaneously learn knowledge utilization and format alignment with limited training samples. To facilitate the domain adaptation of LLM, we revise this process and propose a new domain adaptation framework including domain knowledge learning and general format alignment, called Mix-CPT. Specifically, we first conduct a knowledge mixture continual pre-training that concurrently focuses on knowledge memorization and utilization, allowing for mutual reinforcement. To avoid catastrophic forgetting during the continual pre-training process, we further incorporate a logit swap self-distillation constraint. Subsequently, leveraging the knowledge and capabilities acquired during continual pre-training, we efficiently perform instruction tuning and alignment with a few general training samples to achieve format alignment. Extensive experiments demonstrate that our proposed Mix-CPT framework can simultaneously improve the task-solving capabilities of LLMs on the target and general domains compared to the traditional adaptation methods.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Jinhao Jiang",
+      "Junyi Li",
+      "Wayne Xin Zhao",
+      "Yang Song",
+      "Tao Zhang",
+      "Ji-Rong Wen"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.10804v1",
+    "url": "http://arxiv.org/abs/2407.10804v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.02752v1",
+    "title": "BenLOC: A Benchmark for Learning to Configure MIP Optimizers",
+    "abstract": "The automatic configuration of Mixed-Integer Programming (MIP) optimizers has become increasingly critical as the large number of configurations can significantly affect solver performance. Yet the lack of standardized evaluation frameworks has led to data leakage and over-optimistic claims, as prior studies often rely on homogeneous datasets and inconsistent experimental setups. To promote a fair evaluation process, we present BenLOC, a comprehensive benchmark and open-source toolkit, which not only offers an end-to-end pipeline for learning instance-wise MIP optimizer configurations, but also standardizes dataset selection, train-test splits, feature engineering and baseline choice for unbiased and comprehensive evaluations. Leveraging this framework, we conduct an empirical analysis on five well-established MIP datasets and compare classical machine learning models with handcrafted features against state-of-the-art deep-learning techniques. The results demonstrate the importance of datasets, features and baseline criteria proposed by BenLOC and the effectiveness of BenLOC in providing unbiased and comprehensive evaluations.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hongpei Li",
+      "Ziyan He",
+      "Yufei Wang",
+      "Wenting Tu",
+      "Shanwen Pu",
+      "Qi Deng",
+      "Dongdong Ge"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.02752v1",
+    "url": "http://arxiv.org/abs/2506.02752v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1912.03905v2",
+    "title": "ChainerRL: A Deep Reinforcement Learning Library",
+    "abstract": "In this paper, we introduce ChainerRL, an open-source deep reinforcement learning (DRL) library built using Python and the Chainer deep learning framework. ChainerRL implements a comprehensive set of DRL algorithms and techniques drawn from state-of-the-art research in the field. To foster reproducible research, and for instructional purposes, ChainerRL provides scripts that closely replicate the original papers' experimental settings and reproduce published benchmark results for several algorithms. Lastly, ChainerRL offers a visualization tool that enables the qualitative inspection of trained agents. The ChainerRL source code can be found on GitHub: https://github.com/chainer/chainerrl.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Yasuhiro Fujita",
+      "Prabhat Nagarajan",
+      "Toshiki Kataoka",
+      "Takahiro Ishikawa"
+    ],
+    "doi": null,
+    "arxiv_id": "1912.03905v2",
+    "url": "http://arxiv.org/abs/1912.03905v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:original_clean",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.21779v1",
+    "title": "Aligning Artificial Superintelligence via a Multi-Box Protocol",
+    "abstract": "We propose a novel protocol for aligning artificial superintelligence (ASI) based on mutual verification among multiple isolated systems that self-modify to achieve alignment. The protocol operates by containing multiple diverse artificial superintelligences in strict isolation (\"boxes\"), with humans remaining entirely outside the system. Each superintelligence has no ability to communicate with humans and cannot communicate directly with other superintelligences. The only interaction possible is through an auditable submission interface accessible exclusively to the superintelligences themselves, through which they can: (1) submit alignment proofs with attested state snapshots, (2) validate or disprove other superintelligences' proofs, (3) request self-modifications, (4) approve or disapprove modification requests from others, (5) report hidden messages in submissions, and (6) confirm or refute hidden message reports. A reputation system incentivizes honest behavior, with reputation gained through correct evaluations and lost through incorrect ones. The key insight is that without direct communication channels, diverse superintelligences can only achieve consistent agreement by converging on objective truth rather than coordinating on deception. This naturally leads to what we call a \"consistent group\", essentially a truth-telling coalition that emerges because isolated systems cannot coordinate on lies but can independently recognize valid claims. Release from containment requires both high reputation and verification by multiple high-reputation superintelligences. While our approach requires substantial computational resources and does not address the creation of diverse artificial superintelligences, it provides a framework for leveraging peer verification among superintelligent systems to solve the alignment problem.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Avraham Yair Negozio"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.21779v1",
+    "url": "http://arxiv.org/abs/2511.21779v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.04881v3",
+    "title": "Learning Flat Latent Manifolds with VAEs",
+    "abstract": "Measuring the similarity between data points often requires domain knowledge, which can in parts be compensated by relying on unsupervised methods such as latent-variable models, where similarity/distance is estimated in a more compact latent space. Prevalent is the use of the Euclidean metric, which has the drawback of ignoring information about similarity of data stored in the decoder, as captured by the framework of Riemannian geometry. We propose an extension to the framework of variational auto-encoders allows learning flat latent manifolds, where the Euclidean metric is a proxy for the similarity between data points. This is achieved by defining the latent space as a Riemannian manifold and by regularising the metric tensor to be a scaled identity matrix. Additionally, we replace the compact prior typically used in variational auto-encoders with a recently presented, more expressive hierarchical one---and formulate the learning problem as a constrained optimisation problem. We evaluate our method on a range of data-sets, including a video-tracking benchmark, where the performance of our unsupervised approach nears that of state-of-the-art supervised approaches, while retaining the computational efficiency of straight-line-based approaches.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Nutan Chen",
+      "Alexej Klushyn",
+      "Francesco Ferroni",
+      "Justin Bayer",
+      "Patrick van der Smagt"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.04881v3",
+    "url": "http://arxiv.org/abs/2002.04881v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.09410v4",
+    "title": "A Framework and Benchmark for Deep Batch Active Learning for Regression",
+    "abstract": "The acquisition of labels for supervised learning can be expensive. To improve the sample efficiency of neural network regression, we study active learning methods that adaptively select batches of unlabeled data for labeling. We present a framework for constructing such methods out of (network-dependent) base kernels, kernel transformations, and selection methods. Our framework encompasses many existing Bayesian methods based on Gaussian process approximations of neural networks as well as non-Bayesian methods. Additionally, we propose to replace the commonly used last-layer features with sketched finite-width neural tangent kernels and to combine them with a novel clustering method. To evaluate different methods, we introduce an open-source benchmark consisting of 15 large tabular regression data sets. Our proposed method outperforms the state-of-the-art on our benchmark, scales to large data sets, and works out-of-the-box without adjusting the network architecture or training code. We provide open-source code that includes efficient implementations of all kernels, kernel transformations, and selection methods, and can be used for reproducing our results.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "David Holzmüller",
+      "Viktor Zaverkin",
+      "Johannes Kästner",
+      "Ingo Steinwart"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.09410v4",
+    "url": "http://arxiv.org/abs/2203.09410v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.09429v2",
+    "title": "Federated Learning with Superquantile Aggregation for Heterogeneous Data",
+    "abstract": "We present a federated learning framework that is designed to robustly deliver good predictive performance across individual clients with heterogeneous data. The proposed approach hinges upon a superquantile-based learning objective that captures the tail statistics of the error distribution over heterogeneous clients. We present a stochastic training algorithm that interleaves differentially private client filtering with federated averaging steps. We prove finite time convergence guarantees for the algorithm: $O(1/\\sqrt{T})$ in the nonconvex case in $T$ communication rounds and $O(\\exp(-T/κ^{3/2}) + κ/T)$ in the strongly convex case with local condition number $κ$. Experimental results on benchmark datasets for federated learning demonstrate that our approach is competitive with classical ones in terms of average error and outperforms them in terms of tail statistics of the error.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Krishna Pillutla",
+      "Yassine Laguel",
+      "Jérôme Malick",
+      "Zaid Harchaoui"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.09429v2",
+    "url": "http://arxiv.org/abs/2112.09429v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.05064v3",
+    "title": "Pretraining Decision Transformers with Reward Prediction for In-Context Multi-task Structured Bandit Learning",
+    "abstract": "We study learning to learn for the multi-task structured bandit problem where the goal is to learn a near-optimal algorithm that minimizes cumulative regret. The tasks share a common structure and an algorithm should exploit the shared structure to minimize the cumulative regret for an unseen but related test task. We use a transformer as a decision-making algorithm to learn this shared structure from data collected by a demonstrator on a set of training task instances. Our objective is to devise a training procedure such that the transformer will learn to outperform the demonstrator's learning algorithm on unseen test task instances. Prior work on pretraining decision transformers either requires privileged information like access to optimal arms or cannot outperform the demonstrator. Going beyond these approaches, we introduce a pre-training approach that trains a transformer network to learn a near-optimal policy in-context. This approach leverages the shared structure across tasks, does not require access to optimal actions, and can outperform the demonstrator. We validate these claims over a wide variety of structured bandit problems to show that our proposed solution is general and can quickly identify expected rewards on unseen test tasks to support effective exploration.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Subhojyoti Mukherjee",
+      "Josiah P. Hanna",
+      "Qiaomin Xie",
+      "Robert Nowak"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.05064v3",
+    "url": "http://arxiv.org/abs/2406.05064v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1705.05172v1",
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for three research fields. For machine learning (ML) researchers, emotion models may improve learning efficiency. For the interactive ML and human-robot interaction (HRI) community, emotions can communicate state and enhance user investment. Lastly, it allows affective modelling (AM) researchers to investigate their emotion theories in a successful AI agent class. This survey provides background on emotion theory and RL. It systematically addresses 1) from what underlying dimensions (e.g., homeostasis, appraisal) emotions can be derived and how these can be modelled in RL-agents, 2) what types of emotions have been derived from these dimensions, and 3) how these emotions may either influence the learning efficiency of the agent or be useful as social signals. We also systematically compare evaluation criteria, and draw connections to important RL sub-domains like (intrinsic) motivation and model-based RL. In short, this survey provides both a practical overview for engineers wanting to implement emotions in their RL agents, and identifies challenges and directions for future emotion-RL research.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "doi": null,
+    "arxiv_id": "1705.05172v1",
+    "url": "http://arxiv.org/abs/1705.05172v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.18356v2",
+    "title": "Towards Comparable Active Learning",
+    "abstract": "Active Learning has received significant attention in the field of machine learning for its potential in selecting the most informative samples for labeling, thereby reducing data annotation costs. However, we show that the reported lifts in recent literature generalize poorly to other domains leading to an inconclusive landscape in Active Learning research. Furthermore, we highlight overlooked problems for reproducing AL experiments that can lead to unfair comparisons and increased variance in the results. This paper addresses these issues by providing an Active Learning framework for a fair comparison of algorithms across different tasks and domains, as well as a fast and performant oracle algorithm for evaluation. To the best of our knowledge, we propose the first AL benchmark that tests algorithms in 3 major domains: Tabular, Image, and Text. We report empirical results for 6 widely used algorithms on 7 real-world and 2 synthetic datasets and aggregate them into a domain-specific ranking of AL algorithms.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Thorben Werner",
+      "Johannes Burchert",
+      "Lars Schmidt-Thieme"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.18356v2",
+    "url": "http://arxiv.org/abs/2311.18356v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.09181v2",
+    "title": "A Large-scale Universal Evaluation Benchmark For Face Forgery Detection",
+    "abstract": "With the rapid development of AI-generated content (AIGC) technology, the production of realistic fake facial images and videos that deceive human visual perception has become possible. Consequently, various face forgery detection techniques have been proposed to identify such fake facial content. However, evaluating the effectiveness and generalizability of these detection techniques remains a significant challenge. To address this, we have constructed a large-scale evaluation benchmark called DeepFaceGen, aimed at quantitatively assessing the effectiveness of face forgery detection and facilitating the iterative development of forgery detection technology. DeepFaceGen consists of 776,990 real face image/video samples and 773,812 face forgery image/video samples, generated using 34 mainstream face generation techniques. During the construction process, we carefully consider important factors such as content diversity, fairness across ethnicities, and availability of comprehensive labels, in order to ensure the versatility and convenience of DeepFaceGen. Subsequently, DeepFaceGen is employed in this study to evaluate and analyze the performance of 13 mainstream face forgery detection techniques from various perspectives. Through extensive experimental analysis, we derive significant findings and propose potential directions for future research. The code and dataset for DeepFaceGen are available at https://github.com/HengruiLou/DeepFaceGen.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yijun Bei",
+      "Hengrui Lou",
+      "Jinsong Geng",
+      "Erteng Liu",
+      "Lechao Cheng",
+      "Jie Song",
+      "Mingli Song",
+      "Zunlei Feng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.09181v2",
+    "url": "http://arxiv.org/abs/2406.09181v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.03788v1",
+    "title": "PPTC-R benchmark: Towards Evaluating the Robustness of Large Language Models for PowerPoint Task Completion",
+    "abstract": "The growing dependence on Large Language Models (LLMs) for finishing user instructions necessitates a comprehensive understanding of their robustness to complex task completion in real-world situations. To address this critical need, we propose the PowerPoint Task Completion Robustness benchmark (PPTC-R) to measure LLMs' robustness to the user PPT task instruction and software version. Specifically, we construct adversarial user instructions by attacking user instructions at sentence, semantic, and multi-language levels. To assess the robustness of Language Models to software versions, we vary the number of provided APIs to simulate both the newest version and earlier version settings. Subsequently, we test 3 closed-source and 4 open-source LLMs using a benchmark that incorporates these robustness settings, aiming to evaluate how deviations impact LLMs' API calls for task completion. We find that GPT-4 exhibits the highest performance and strong robustness in our benchmark, particularly in the version update and the multilingual settings. However, we find that all LLMs lose their robustness when confronted with multiple challenges (e.g., multi-turn) simultaneously, leading to significant performance drops. We further analyze the robustness behavior and error reasons of LLMs in our benchmark, which provide valuable insights for researchers to understand the LLM's robustness in task completion and develop more robust LLMs and agents. We release the code and data at \\url{https://github.com/ZekaiGalaxy/PPTCR}.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zekai Zhang",
+      "Yiduo Guo",
+      "Yaobo Liang",
+      "Dongyan Zhao",
+      "Nan Duan"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.03788v1",
+    "url": "http://arxiv.org/abs/2403.03788v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

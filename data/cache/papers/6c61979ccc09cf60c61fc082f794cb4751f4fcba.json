@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2603.27707v1",
+  "title": "Low-Rank Adaptation Reduces Catastrophic Forgetting in Sequential Transformer Encoder Fine-Tuning: Controlled Empirical Evidence and Frozen-Backbone Representation Probes",
+  "abstract": "Sequential fine-tuning of pretrained language encoders often overwrites previously acquired capabilities, but the forgetting behavior of parameter-efficient updates remains under-characterized. We present a controlled empirical study of Low-Rank Adaptation (LoRA) in sequential transformer encoder fine-tuning with companion representation probes that test a frozen-backbone explanation of its robustness. In five full-validation BERT-base reruns on an RTE->MRPC->CoLA->SST-2 sequence, full fine-tuning yields 19.9%+/-4.8% average forgetting, whereas standard LoRA (r=8, query/value modules) yields 0.6%+/-1.4% (paired t-test, p=0.002, Cohen's d_s=3.12). Task-level analyses confirm this reduction is not merely an aggregate effect. Secondary experiments on RoBERTa-base show the same pattern, and the strongest EWC baseline remains at 15.5%+/-1.4% forgetting. A six-task extension reveals that low average forgetting can hide strong task-level heterogeneity. Fine-grained freezing ablations show a marked forgetting drop once frozen parameters exceed roughly 95%, with classifier-only and shallow-adapter baselines approaching LoRA. Companion task-similarity probes in GPT-2 and RoBERTa show the same directional story: frozen-backbone regimes preserve higher inter-task similarity than full fine-tuning, gradual unfreezing weakens stability, and full fine-tuning exhibits its clearest divergence at the final transformer layer. These results support a restrained mechanistic interpretation: LoRA helps largely because backbone freezing preserves a more stable shared feature scaffold. We position standard LoRA as both a strong empirical baseline for sequential encoder adaptation and a useful probe of how selective plasticity shapes interference in transformer continual learning.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Ashish Pandey"
+  ],
+  "doi": null,
+  "arxiv_id": "2603.27707v1",
+  "url": "http://arxiv.org/abs/2603.27707v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

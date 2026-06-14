@@ -19,9 +19,11 @@ def _sanitize_arxiv_search(query_text: str) -> str:
     raw = query_text.strip()
     if not raw:
         return ""
-    # 移除标点，保留带引号的短语或连字符词
-    cleaned = re.sub(r"[^\w\s\-\"']", " ", raw)
-    tokens = cleaned.split()
+    
+    # 提取 tokens，包括带双引号的短语、单字或带连字符的单词
+    tokens = re.findall(r'"[^"]+"|[A-Za-z0-9][A-Za-z0-9\-\+\.]*', raw)
+    if not tokens:
+        tokens = raw.split()
     
     stop_words = {
         "a", "about", "all", "also", "an", "and", "any", "are", "as", "at", 
@@ -39,9 +41,9 @@ def _sanitize_arxiv_search(query_text: str) -> str:
         if clean_tok and clean_tok not in stop_words:
             filtered.append(token)
             
-    # 限制最大检索词数，防止 ArXiv API 的 AND 条件过苛刻导致 0 召回
-    if len(filtered) > 5:
-        filtered = filtered[:5]
+    # 放宽限制到 10 个词以保护长关键词的完整性
+    if len(filtered) > 10:
+        filtered = filtered[:10]
     return " ".join(filtered)
 
 

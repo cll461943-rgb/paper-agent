@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/1910.09598v1",
+  "title": "Performance Evaluation of Advanced Features in CUDA Unified Memory",
+  "abstract": "CUDA Unified Memory improves the GPU programmability and also enables GPU memory oversubscription. Recently, two advanced memory features, memory advises and asynchronous prefetch, have been introduced. In this work, we evaluate the new features on two platforms that feature different CPUs, GPUs, and interconnects. We derive a benchmark suite for the experiments and stress the memory system to evaluate both in-memory and oversubscription performance. The results show that memory advises on the Intel-Volta/Pascal-PCIe platform bring negligible improvement for in-memory executions. However, when GPU memory is oversubscribed by about 50%, using memory advises results in up to 25% performance improvement compared to the basic CUDA Unified Memory. In contrast, the Power9-Volta-NVLink platform can substantially benefit from memory advises, achieving up to 34% performance gain for in-memory executions. However, when GPU memory is oversubscribed on this platform, using memory advises increases GPU page faults and results in considerable performance loss. The CUDA prefetch also shows different performance impact on the two platforms. It improves performance by up to 50% on the Intel-Volta/Pascal-PCI-E platform but brings little benefit to the Power9-Volta-NVLink platform.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Steven W. D. Chien",
+    "Ivy B. Peng",
+    "Stefano Markidis"
+  ],
+  "doi": null,
+  "arxiv_id": "1910.09598v1",
+  "url": "http://arxiv.org/abs/1910.09598v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

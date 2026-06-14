@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2502.15478v1",
+  "title": "CondiQuant: Condition Number Based Low-Bit Quantization for Image Super-Resolution",
+  "abstract": "Low-bit model quantization for image super-resolution (SR) is a longstanding task that is renowned for its surprising compression and acceleration ability. However, accuracy degradation is inevitable when compressing the full-precision (FP) model to ultra-low bit widths (2~4 bits). Experimentally, we observe that the degradation of quantization is mainly attributed to the quantization of activation instead of model weights. In numerical analysis, the condition number of weights could measure how much the output value can change for a small change in the input argument, inherently reflecting the quantization error. Therefore, we propose CondiQuant, a condition number based low-bit post-training quantization for image super-resolution. Specifically, we formulate the quantization error as the condition number of weight metrics. By decoupling the representation ability and the quantization sensitivity, we design an efficient proximal gradient descent algorithm to iteratively minimize the condition number and maintain the output still. With comprehensive experiments, we demonstrate that CondiQuant outperforms existing state-of-the-art post-training quantization methods in accuracy without computation overhead and gains the theoretically optimal compression ratio in model parameters. Our code and model are released at https://github.com/Kai-Liu001/CondiQuant.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Kai Liu",
+    "Dehui Wang",
+    "Zhiteng Li",
+    "Zheng Chen",
+    "Yong Guo",
+    "Wenbo Li",
+    "Linghe Kong",
+    "Yulun Zhang"
+  ],
+  "doi": null,
+  "arxiv_id": "2502.15478v1",
+  "url": "http://arxiv.org/abs/2502.15478v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "paper_id": "https://openalex.org/W4404781137",
+  "title": "RoLoRA: Fine-tuning Rotated Outlier-free LLMs for Effective Weight-Activation Quantization",
+  "abstract": "Low-Rank Adaptation (LoRA), as a representative Parameter-Efficient Fine-Tuning (PEFT) method, significantly enhances the training efficiency by updating only a small portion of the weights in Large Language Models (LLMs).Recently, weight-only quantization techniques have also been applied to LoRA methods to reduce the memory footprint of fine-tuning.However, applying weight-activation quantization to the LoRA pipeline is under-explored, and we observe substantial performance degradation primarily due to the presence of activation outliers.In this work, we propose RoLoRA, the first LoRA-based scheme for effective weight-activation quantization.RoLoRA utilizes rotation for outlier elimination and proposes rotation-aware fine-tuning to preserve the outlier-free characteristics in rotated LLMs.Experimental results show RoLoRA consistently improves low-bit LoRA convergence and post-training quantization robustness in weightactivation settings.We evaluate RoLoRA across LLaMA2-7B/13B, LLaMA3-8B models, achieving up to 29.5% absolute accuracy gain of 4-bit weight-activation quantized LLaMA2-13B on commonsense reasoning tasks compared to LoRA baseline.We further demonstrate its effectiveness on Large Multimodal Models (LLaVA-1.5-7B).Codes are available at https:",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Xijie Huang",
+    "Zechun Liu",
+    "Shih-Yang Liu",
+    "Kwang‐Ting Cheng"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.findings-emnlp.444",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.findings-emnlp.444",
+  "citation_count": 5,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Outlier",
+      "Computer science",
+      "Artificial intelligence",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W3006513224",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890"
+    ]
+  }
+}

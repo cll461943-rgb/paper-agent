@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2506.12044v2",
+  "title": "Why Do Some Inputs Break Low-Bit LLM Quantization?",
+  "abstract": "Low-bit weight-only quantization significantly reduces the memory footprint of large language models (LLMs), but disproportionately affects certain examples. We analyze diverse 3-4 bit methods on LLMs ranging from 7B-70B in size and find that the quantization errors of 50 pairs of methods are strongly correlated (avg. 0.82) on FineWeb examples. Moreover, the residual stream magnitudes of full-precision models are indicative of future quantization errors. We further establish a hypothesis that relates the residual stream magnitudes to error amplification and accumulation over layers. Using LLM localization techniques, early exiting, and activation patching, we show that examples with large errors rely on precise residual activations in the late layers, and that the outputs of MLP gates play a crucial role in maintaining the perplexity. Our work reveals why certain examples result in large quantization errors and which model components are most critical for performance preservation.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Ting-Yun Chang",
+    "Muru Zhang",
+    "Jesse Thomason",
+    "Robin Jia"
+  ],
+  "doi": null,
+  "arxiv_id": "2506.12044v2",
+  "url": "http://arxiv.org/abs/2506.12044v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2512.04746v2",
+  "title": "SignRoundV2: Toward Closing the Performance Gap in Extremely Low-Bit Post-Training Quantization for LLMs",
+  "abstract": "Extremely low-bit quantization is critical for efficiently deploying Large Language Models (LLMs), yet it often leads to severe performance degradation at 2 bits and even at 4 bits (e.g., MXFP4). We present SignRoundV2, a post-training quantization framework designed to maintain high performance even under aggressive compression. SignRoundV2 introduces (1) a simple yet efficient adaptive mixed-precision strategy that leverages gradient information and quantization-induced reconstruction errors to guide layer-wise bit allocation, and (2) a set of lightweight stabilization techniques, including loss filtering and a pre-tuning scale search, to improve tuning effectiveness in extremely low-bit regimes. Our approach takes a significant step toward closing the performance gap between quantized and full-precision models. Experimental results across diverse LLMs demonstrate that SignRoundV2 achieves near-lossless performance in mixed MXFP settings, narrowing the gap to $\\sim$1\\% at an average of 4.5 bits, while substantially improving accuracy in challenging 2-bit weight-only quantization. The source code is available at \\url{https://github.com/intel/auto-round}.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Wenhua Cheng",
+    "Weiwei Zhang",
+    "Heng Guo",
+    "Haihao Shen",
+    "Zaner Ma"
+  ],
+  "doi": null,
+  "arxiv_id": "2512.04746v2",
+  "url": "http://arxiv.org/abs/2512.04746v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

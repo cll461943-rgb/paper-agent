@@ -1,0 +1,63 @@
+{
+  "paper_id": "https://openalex.org/W4287867774",
+  "title": "Fine-Tuning Pretrained Language Models: Weight Initializations, Data\\n Orders, and Early Stopping",
+  "abstract": "Fine-tuning pretrained contextual word embedding models to supervised\\ndownstream tasks has become commonplace in natural language processing. This\\nprocess, however, is often brittle: even with the same hyperparameter values,\\ndistinct random seeds can lead to substantially different results. To better\\nunderstand this phenomenon, we experiment with four datasets from the GLUE\\nbenchmark, fine-tuning BERT hundreds of times on each while varying only the\\nrandom seeds. We find substantial performance increases compared to previously\\nreported results, and we quantify how the performance of the best-found model\\nvaries as a function of the number of fine-tuning trials. Further, we examine\\ntwo factors influenced by the choice of random seed: weight initialization and\\ntraining data order. We find that both contribute comparably to the variance of\\nout-of-sample performance, and that some weight initializations perform well\\nacross all tasks explored. On small datasets, we observe that many fine-tuning\\ntrials diverge part of the way through training, and we offer best practices\\nfor practitioners to stop training less promising runs early. We publicly\\nrelease all of our experimental data, including training and validation scores\\nfor 2,100 trials, to encourage further analysis of training dynamics during\\nfine-tuning.\\n",
+  "year": 2020,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Jesse Dodge",
+    "Gabriel Ilharco",
+    "Roy Schwartz",
+    "Ali Farhadi",
+    "Hannaneh Hajishirzi",
+    "Noah A. Smith"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2002.06305",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2002.06305",
+  "citation_count": 263,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Hyperparameter",
+      "Computer science",
+      "Initialization",
+      "Benchmark (surveying)",
+      "Variance (accounting)",
+      "Artificial intelligence",
+      "Embedding",
+      "Machine learning",
+      "Function (biology)",
+      "Process (computing)",
+      "Natural language processing",
+      "Geodesy",
+      "Operating system",
+      "Evolutionary biology",
+      "Programming language",
+      "Accounting",
+      "Business",
+      "Geography",
+      "Biology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3204184292",
+      "https://openalex.org/W2140186469",
+      "https://openalex.org/W3176564347",
+      "https://openalex.org/W4390421286",
+      "https://openalex.org/W4280563792",
+      "https://openalex.org/W1985458517",
+      "https://openalex.org/W2355833770",
+      "https://openalex.org/W4389724018",
+      "https://openalex.org/W4386821099",
+      "https://openalex.org/W2380964641"
+    ]
+  }
+}

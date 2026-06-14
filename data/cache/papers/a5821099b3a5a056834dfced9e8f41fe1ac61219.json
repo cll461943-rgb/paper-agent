@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2405.17021v2",
+  "title": "Truncated Modular Exponentiation Operators: A Strategy for Quantum Factoring",
+  "abstract": "Modular exponentiation (ME) operators are one of the fundamental components of Shor's algorithm, and the place where most of the quantum resources are deployed. I propose a method for constructing the ME operators that relies upon the simple observation that the work register starts in state $\\vert 1 \\rangle$. Therefore, we do not have to create an ME operator $U$ that accepts a general input, but rather, one that takes an input from the periodic sequence of states $\\vert f(x) \\rangle$ for $x \\in \\{0, 1, \\cdots, r-1\\}$, where $f(x)$ is the ME function with period $r$. The operator $U$ can be partitioned into $r$ levels, where the gates in level $x \\in \\{0, 1, \\cdots, r-1\\}$ increment the state $\\vert f(x) \\rangle$ to the state $\\vert f(x+1) \\rangle$. The gates below $x$ do not affect the state $\\vert f(x+1) \\rangle$. The obvious problem with this method is that it is self-defeating: If we knew the operator $U$, then we would know the period $r$ of the ME function, and there would be no need for Shor's algorithm. I show, however, that the ME operators are very forgiving, and truncated approximate forms in which levels have been omitted are able to extract factors just as well as the exact operators. I demonstrate this by factoring the numbers $N = 21, 33, 35, 143, 247$ by using less than half the requisite number of levels in the ME operators. This procedure works because the method of continued fractions only requires an approximate phase value. This is the basis for a factorization strategy in which we fill the circuits for the ME operators with more and more gates, and the correlations between the various composite operators $U^p$ (where $p$ is a power of two) compensate for the missing levels.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Robert L. Singleton"
+  ],
+  "doi": null,
+  "arxiv_id": "2405.17021v2",
+  "url": "http://arxiv.org/abs/2405.17021v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

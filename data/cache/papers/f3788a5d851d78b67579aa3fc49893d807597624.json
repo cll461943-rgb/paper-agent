@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:42215597",
+  "title": "High frame rate action classification and state tracking in competitive sports using SlowFast dual-stream mesh structure.",
+  "abstract": "Table tennis, as a highly dynamic competitive sport, involves rapid movements and frequent state transitions, posing a challenge to models that simultaneously capture semantic and dynamic information at high frame rates. Current motion recognition methods in high frame rate videos of competitive sports suffer from insufficient performance in complex motion classification and continuous state modeling due to the separation of semantic and dynamic features. This paper proposes a spatiotemporal fusion method based on a SlowFast (SlowFast Dual-Stream Network) dual-stream grid structure. Video frames are divided into regular grids along the spatial dimension with fixed temporal indexing. Semantic-level temporal features are extracted in the low-sampling-rate Slow branch, while fine-grained dynamic features are extracted in the high-sampling-rate Fast branch. A grid feature fusion module performs spatial alignment while preserving temporal indices and channel attention weighting, and a Gated Recurrent Unit (GRU) is used for state sequence modeling, achieving unified learning for motion classification and phase-state modeling, where phase-state modeling denotes the temporal evolution of action phases as an ordered latent sequence rather than spatial trajectory estimation or target-level localization across frames. Experimental results show that the proposed model outperforms representative baselines on high frame rate table tennis video benchmarks. When the dual-stream sampling ratio is 1:4, the action classification accuracy reaches 94.5% on the primary evaluation domain, exceeding TimeSformer by 0.4 percentage points and I3D by 1.5 percentage points under identical training conditions. The temporal consistency index reaches 0.93 and the state transition stability reaches 0.89, representing improvements of 0.06 over the strongest temporal baseline MS-TCN on both metrics. In multi-view cross-domain evaluation, Top-1 accuracy is maintained above 91.0% across all five camera viewpoints, while I3D and TSN degrade by up to 7.5 and 9.0 percentage points respectively under the same viewpoint shifts, confirming the robustness of the proposed spatiotemporal fusion structure under high frame rate conditions.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Mingdong Liang",
+    "Shuran Wang"
+  ],
+  "doi": "10.1038/s41598-026-55207-3",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42215597/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42215597"
+  }
+}

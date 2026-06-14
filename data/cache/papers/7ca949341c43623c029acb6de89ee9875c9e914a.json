@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2602.20945v3",
+  "title": "The Art of Efficient Reasoning: Data, Reward, and Optimization",
+  "abstract": "Large Language Models (LLMs) consistently benefit from scaled Chain-of-Thought (CoT) reasoning, but also suffer from heavy computational overhead. To address this issue, efficient reasoning aims to incentivize short yet accurate thinking trajectories, typically through reward shaping with Reinforcement Learning (RL). In this paper, we systematically investigate the mechanics of efficient reasoning for LLMs. For comprehensive evaluation, we advocate for more fine-grained metrics, including length distribution conditioned on correctness and performance across a wide spectrum of token budgets ranging from 2k to 32k. First, we reveal that the training process follows a two-stage paradigm: length adaptation and reasoning refinement. Through extensive experiments (about 0.2 million GPU hours) in a unified protocol, we deconstruct training prompts and rollouts, reward shaping, and optimization strategies. A central finding is to maintain a sufficient density of positive reward signals and avoid the short-is-correct trap. Moreover, the learned length bias generalizes across domains and difficulty levels. We distill these findings into valuable insights and practical guidelines, and validate them across the Qwen3 models ranging from 0.6B to 30B, demonstrating the robustness and generalization. Weights are available at https://wutaiqiang.github.io/project/Art",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Taiqiang Wu",
+    "Zenan Xu",
+    "Bo Zhou",
+    "Ngai Wong"
+  ],
+  "doi": null,
+  "arxiv_id": "2602.20945v3",
+  "url": "http://arxiv.org/abs/2602.20945v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

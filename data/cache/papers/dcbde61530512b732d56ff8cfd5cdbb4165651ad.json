@@ -1,0 +1,39 @@
+{
+  "paper_id": "http://arxiv.org/abs/2404.12759v1",
+  "title": "decoupleQ: Towards 2-bit Post-Training Uniform Quantization via decoupling Parameters into Integer and Floating Points",
+  "abstract": "Quantization emerges as one of the most promising compression technologies for deploying efficient large models for various real time application in recent years. Considering that the storage and IO of weights take up the vast majority of the overhead inside a large model, weight only quantization can lead to large gains. However, existing quantization schemes suffer from significant accuracy degradation at very low bits, or require some additional computational overhead when deployed, making it difficult to be applied to large-scale applications in industry. In this paper, we propose decoupleQ, achieving a substantial increase in model accuracy, especially at very low bits. decoupleQ abandons the traditional heuristic quantization paradigm and decouples the model parameters into integer and floating-point parts, thus transforming the quantization problem into a traditional mathematical optimization problem with constraints, which is then solved alternatively by off-the-shelf optimization methods. Quantization via decoupleQ is linear and uniform, making it hardware-friendlier than non-uniform counterpart, and enabling the idea to be migrated to high-bit quantization to enhance its robustness. Our method has achieved well on-line accuracy near fp16/bf16 on the 2-bit quantization of large speech models in ByteDance. The code is available at https://github.com/bytedance/decoupleQ",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Yi Guo",
+    "Fanliu Kong",
+    "Xiaoyang Li",
+    "Hui Li",
+    "Wei Chen",
+    "Xiaogang Tian",
+    "Jinping Cai",
+    "Yang Zhang",
+    "Shouda Liu"
+  ],
+  "doi": null,
+  "arxiv_id": "2404.12759v1",
+  "url": "http://arxiv.org/abs/2404.12759v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:title_like",
+    "route:query2doc",
+    "route:hyde",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

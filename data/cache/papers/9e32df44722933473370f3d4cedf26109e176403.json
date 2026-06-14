@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:40494422",
+  "title": "Tailoring task arithmetic to address bias in models trained on multi-institutional datasets.",
+  "abstract": "Multi-institutional datasets are widely used for machine learning from clinical data, to increase dataset size and improve generalization. However, deep learning models in particular may learn to recognize the source of a data element, leading to biased predictions. For example, deep learning models for image recognition trained on chest radiographs with COVID-19 positive and negative examples drawn from different data sources can respond to indicators of provenance (e.g., radiological annotations outside the lung area per institution-specific practices) rather than pathology, generalizing poorly beyond their training data. Bias of this sort, called confounding by provenance, is of concern in natural language processing (NLP) because provenance indicators (e.g., institution-specific section headers, or region-specific dialects) are pervasive in language data. Prior work on addressing such bias has focused on statistical methods, without providing a solution for deep learning models for NLP. Recent work in representation learning has shown that representing the weights of a trained deep network as task vectors allows for their arithmetic composition to govern model capabilities towards desired behaviors. In this work, we evaluate the extent to which reducing a model's ability to distinguish between contributing sites with such task arithmetic can mitigate confounding by provenance. To do so, we propose two model-agnostic methods, Task Arithmetic for Provenance Effect Reduction (TAPER) and Dominance-Aligned Polarized Provenance Effect Reduction (DAPPER), extending the task vectors approach to a novel problem domain. Evaluation on three datasets shows improved robustness to confounding by provenance for both RoBERTa and Llama-2 models with the task vector approach, with improved performance at the extremes of distribution shift. This work emphasizes the importance of adjusting for confounding by provenance, especially in extreme cases of the shift. In use of deep learning models, DAPPER and TAPER show efficiency in mitigating such bias. They provide a novel mitigation strategy for confounding by provenance, with broad applicability to address other sources of bias in composite clinical data sets. Source code is available within the DeconDTN toolkit: https://github.com/LinguisticAnomalies/DeconDTN-toolkit.",
+  "year": 2025,
+  "venue": "Journal of biomedical informatics",
+  "authors": [
+    "Xiruo Ding",
+    "Zhecheng Sheng",
+    "Brian Hur",
+    "Justin Tauscher",
+    "Dror Ben-Zeev",
+    "Meliha Yetişgen",
+    "Serguei Pakhomov",
+    "Trevor Cohen"
+  ],
+  "doi": "10.1016/j.jbi.2025.104858",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40494422/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40494422"
+  }
+}

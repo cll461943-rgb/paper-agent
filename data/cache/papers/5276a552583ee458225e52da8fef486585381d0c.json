@@ -1,0 +1,30 @@
+{
+  "paper_id": "http://arxiv.org/abs/2509.25666v2",
+  "title": "Nudging the Boundaries of LLM Reasoning",
+  "abstract": "Current online reinforcement learning (RL) algorithms like GRPO share a key limitation in LLM reasoning: they cannot learn from problems that are \"unsolvable\" to the model. In other words, they can only improve performance on problems where the model is capable of exploring the correct answer. Consequently, the model's \"upper limit\" remains unchanged after RL training, even though the likelihood of solving easier, solvable problems may increase. These hard samples cannot contribute to training, as no rollouts yield rewards and thus no gradients are produced. To unlock learning from these hard samples, we propose NuRL, a \"nudging\" method that aims to push the upper bound of LLM reasoning using self-generated hints, i.e., abstract cues that help reduce the problem difficulty for the model. Given a question and its gold answer, the model generates a CoT and then produces a hint containing the core knowledge needed to solve the problem. During training, we generate G rollouts from the base policy and use the pass rate to decide whether the hint should be injected. For hard samples with a 0% pass rate, we inject the hint and regenerate a new batch of trajectories. This yields two benefits: (1) the hint boosts pass rates (from 0% to non-zero), thereby introducing training signals for previously unsolvable samples, and (2) the hints are self-generated, avoiding distributional shift and do not rely on external models. NuRL achieves consistent improvements across 6 benchmarks and 3 models, while remaining complementary to test-time scaling. Notably, NuRL can raise the model's upper limit, whereas GRPO leaves pass@1024 unchanged from the base model. Furthermore, we present a systematic study of what makes an effective hint and when hints are most useful. Interestingly, the best hints are abstract and high-level, and are most beneficial when applied necessarily and after GRPO has converged.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Justin Chih-Yao Chen",
+    "Becky Xiangyu Peng",
+    "Prafulla Kumar Choubey",
+    "Kung-Hsiang Huang",
+    "Jiaxin Zhang",
+    "Mohit Bansal",
+    "Chien-Sheng Wu"
+  ],
+  "doi": null,
+  "arxiv_id": "2509.25666v2",
+  "url": "http://arxiv.org/abs/2509.25666v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

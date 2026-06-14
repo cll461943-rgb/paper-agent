@@ -1,0 +1,55 @@
+{
+  "paper_id": "https://openalex.org/W4379539370",
+  "title": "OWQ: Outlier-Aware Weight Quantization for Efficient Fine-Tuning and Inference of Large Language Models",
+  "abstract": "Large language models (LLMs) with hundreds of billions of parameters require powerful server-grade GPUs for inference, limiting their practical deployment. To address this challenge, we introduce the outlier-aware weight quantization (OWQ) method, which aims to minimize LLM's footprint through low-precision representation. OWQ prioritizes a small subset of structured weights sensitive to quantization, storing them in high-precision, while applying highly tuned quantization to the remaining dense weights. This sensitivity-aware mixed-precision scheme reduces the quantization error notably, and extensive experiments demonstrate that 3.1-bit models using OWQ perform comparably to 4-bit models optimized by OPTQ. Furthermore, OWQ incorporates a parameter-efficient fine-tuning for task-specific adaptation, called weak column tuning (WCT), enabling accurate task-specific LLM adaptation with minimal memory overhead in the optimized format. OWQ represents a notable advancement in the flexibility, efficiency, and practicality of LLM optimization literature. The source code is available at https://github.com/xvyaward/owq",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Chang-Hun Lee",
+    "Jungyu Jin",
+    "Taesu Kim",
+    "Hyungjun Kim",
+    "Eunhyeok Park"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2306.02272",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2306.02272",
+  "citation_count": 8,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Quantization (signal processing)",
+      "Outlier",
+      "Language model",
+      "Memory footprint",
+      "Computer engineering",
+      "Algorithm",
+      "Source code",
+      "Inference",
+      "Theoretical computer science",
+      "Artificial intelligence",
+      "Programming language"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3006513224",
+      "https://openalex.org/W2046456988",
+      "https://openalex.org/W2357409937",
+      "https://openalex.org/W2510582230",
+      "https://openalex.org/W2978674666",
+      "https://openalex.org/W2074430941",
+      "https://openalex.org/W2113096305",
+      "https://openalex.org/W2929170389",
+      "https://openalex.org/W4300097863",
+      "https://openalex.org/W2950268673"
+    ]
+  }
+}

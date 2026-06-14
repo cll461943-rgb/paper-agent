@@ -1,0 +1,31 @@
+{
+  "paper_id": "http://arxiv.org/abs/2604.02733v1",
+  "title": "DeltaLogic: Minimal Premise Edits Reveal Belief-Revision Failures in Logical Reasoning Models",
+  "abstract": "Reasoning benchmarks typically evaluate whether a model derives the correct answer from a fixed premise set, but they under-measure a closely related capability that matters in dynamic environments: belief revision under minimal evidence change. We introduce DeltaLogic, a benchmark transformation protocol that converts natural-language reasoning examples into short revision episodes. Each episode first asks for an initial conclusion under premises P, then applies a minimal edit δ(P), and finally asks whether the previous conclusion should remain stable or be revised. We instantiate DeltaLogic from FOLIO and ProofWriter and evaluate small causal language models with constrained label scoring. On a completed 30-episode Qwen evaluation subset, stronger initial reasoning still does not imply stronger revision behavior: Qwen3-1.7B reaches 0.667 initial accuracy but only 0.467 revision accuracy, with inertia rising to 0.600 on episodes where the gold label should change, while Qwen3-0.6B collapses into near universal abstention. There, Qwen3-4B preserves the same inertial failure pattern (0.650 initial, 0.450 revised, 0.600 inertia), whereas Phi-4-mini-instruct is substantially stronger (0.950 initial, 0.850 revised) but still exhibits non-trivial abstention and control instability. These results suggest that logical competence under fixed premises does not imply disciplined belief revision after local evidence edits. DeltaLogic therefore targets a distinct and practically important reasoning capability that complements existing logical inference and belief-updating benchmarks.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Amit Dhanda"
+  ],
+  "doi": null,
+  "arxiv_id": "2604.02733v1",
+  "url": "http://arxiv.org/abs/2604.02733v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:broad_synonym",
+    "route:original_clean",
+    "route:title_like",
+    "route:method_task",
+    "route:query2doc",
+    "route:hyde",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

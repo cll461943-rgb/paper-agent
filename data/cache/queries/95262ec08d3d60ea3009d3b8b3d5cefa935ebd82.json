@@ -1,0 +1,115 @@
+[
+  {
+    "paper_id": "https://openalex.org/W4392084473",
+    "title": "Everything You Always Wanted to Know About Storage Compressibility of Pre-Trained ML Models but Were Afraid to Ask",
+    "abstract": "As the number of pre-trained machine learning (ML) models is growing exponentially, data reduction tools are not catching up. Existing data reduction techniques are not specifically designed for pre-trained model (PTM) dataset files. This is largely due to a lack of understanding of the patterns and characteristics of these datasets, especially those relevant to data reduction and compressibility. This paper presents the first, exhaustive analysis to date of PTM datasets on storage compressibility. Our analysis spans different types of data reduction and compression techniques, from hash-based data deduplication, data similarity detection, to dictionary-coding compression. Our analysis explores these techniques at three data granularity levels, from model layers, model chunks, to model parameters. We draw new observations that indicate that modern data reduction tools are not effective when handling PTM datasets. There is a pressing need for new compression methods that take into account PTMs' data characteristics for effective storage reduction. Motivated by our findings, we design ELF, a simple yet effective, error-bounded, lossy floating-point compression method. ELF transforms floating-point parameters in such a way that the common exponent field of the transformed parameters can be completely eliminated to save storage space. We develop Elves, a compression framework that integrates ELF along with several other data reduction methods. Elves uses the most effective method to compress PTMs that exhibit different patterns. Evaluation shows that Elves achieves an overall compression ratio of $1.52\\times$, which is $1.31\\times$, $1.32\\times$ and $1.29\\times$ higher than a general-purpose compressor (zstd), an error-bounded lossy compressor (SZ3), and the uniform model quantization, respectively, with negligible model accuracy loss.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Zhaoyuan Su",
+      "Ammar Ahmed",
+      "Zirui Wang",
+      "Ali Anwar",
+      "Yue Cheng"
+    ],
+    "doi": "https://doi.org/10.48550/arxiv.2402.13429",
+    "arxiv_id": null,
+    "url": "http://arxiv.org/abs/2402.13429",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Ask price",
+        "Compressibility",
+        "Psychology",
+        "Psychoanalysis",
+        "Social psychology",
+        "Physics",
+        "Thermodynamics",
+        "Business",
+        "Finance"
+      ],
+      "cited_by_api_url": null,
+      "related_works": [
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W2168627904",
+        "https://openalex.org/W2515552481",
+        "https://openalex.org/W156769215",
+        "https://openalex.org/W1570348318",
+        "https://openalex.org/W2015444353",
+        "https://openalex.org/W3013494979",
+        "https://openalex.org/W4308101915",
+        "https://openalex.org/W2102726926",
+        "https://openalex.org/W1981237115"
+      ]
+    }
+  },
+  {
+    "paper_id": "https://openalex.org/W7130762496",
+    "title": "DARTH-PUM: A Hybrid Processing-Using-Memory Architecture",
+    "abstract": "Analog processing-using-memory (PUM; a.k.a. in-memory computing) makes use of electrical interactions inside memory arrays to perform bulk matrix-vector multiplication (MVM) operations. However, many popular matrix-based kernels need to execute non-MVM operations, which analog PUM cannot directly perform. To retain its energy efficiency, analog PUM architectures augment memory arrays with CMOS-based domain-specific fixed-function hardware to provide complete kernel functionality, but the difficulty of integrating such specialized CMOS logic with memory arrays has largely limited analog PUM to being an accelerator for machine learning inference, or for closely related kernels. An opportunity exists to harness analog PUM for general-purpose computation: recent works have shown that memory arrays can also perform Boolean PUM operations, albeit with very different supporting hardware and electrical signals than analog PUM. We propose DARTH-PUM, a general-purpose hybrid PUM architecture that tackles key hardware and software challenges to integrating analog PUM and digital PUM. We propose optimized peripheral circuitry, coordinating hardware to manage and interface between both types of PUM, an easy-to-use programming interface, and low-cost support for flexible data widths. These design elements allow us to build a practical PUM architecture that can execute kernels fully in memory, and can scale easily to cater to domains ranging from embedded applications to large-scale data-driven computing. We show how three popular applications (AES encryption, convolutional neural networks, large language models) can map to and benefit from DARTH-PUM, with speedups of 59.4x, 14.8x, and 40.8x over an analog+CPU baseline.",
+    "year": 2026,
+    "venue": "ArXiv.org",
+    "authors": [
+      "Ryan Wong",
+      "Ben Feinberg",
+      "Saugata Ghose"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://arxiv.org/abs/2602.16075",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Computer science",
+        "Kernel (algebra)",
+        "Computer architecture",
+        "Computer hardware",
+        "Embedded system",
+        "Memory architecture",
+        "Key (lock)",
+        "Hybrid computer",
+        "Architecture",
+        "CMOS",
+        "Software",
+        "Hardware architecture",
+        "Memory address",
+        "Analog computer",
+        "Interface (matter)",
+        "Computer engineering",
+        "Convolutional neural network",
+        "Analog signal",
+        "Integrated circuit",
+        "External Data Representation",
+        "Hardware acceleration",
+        "Digital signal processing",
+        "Analog image processing",
+        "Analogue electronics",
+        "Memory management",
+        "Logic gate",
+        "Conventional memory"
+      ],
+      "cited_by_api_url": null,
+      "related_works": []
+    }
+  }
+]

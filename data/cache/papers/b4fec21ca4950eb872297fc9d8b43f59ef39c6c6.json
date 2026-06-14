@@ -1,0 +1,44 @@
+{
+  "paper_id": "https://openalex.org/W4403444281",
+  "title": "Distributionally robust self-supervised learning for tabular data",
+  "abstract": "Machine learning (ML) models trained using Empirical Risk Minimization (ERM) often exhibit systematic errors on specific subpopulations of tabular data, known as error slices. Learning robust representation in presence of error slices is challenging, especially in self-supervised settings during the feature reconstruction phase, due to high cardinality features and the complexity of constructing error sets. Traditional robust representation learning methods are largely focused on improving worst group performance in supervised setting in computer vision, leaving a gap in approaches tailored for tabular data. We address this gap by developing a framework to learn robust representation in tabular data during self-supervised pre-training. Our approach utilizes an encoder-decoder model trained with Masked Language Modeling (MLM) loss to learn robust latent representations. This paper applies the Just Train Twice (JTT) and Deep Feature Reweighting (DFR) methods during the pre-training phase for tabular data. These methods fine-tune the ERM pre-trained model by up-weighting error-prone samples or creating balanced datasets for specific categorical features. This results in specialized models for each feature, which are then used in an ensemble approach to enhance downstream classification performance. This methodology improves robustness across slices, thus enhancing overall generalization performance. Extensive experiments across various datasets demonstrate the efficacy of our approach. The code is available: https://github.com/amazon-science/distributionally-robust-self-supervised-learning-for-tabular-data.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Shantanu Ghosh",
+    "Tiankang Xie",
+    "M. Kuznetsov"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2410.08511",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2410.08511",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Artificial intelligence",
+      "Machine learning"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2961085424",
+      "https://openalex.org/W4306674287",
+      "https://openalex.org/W3046775127",
+      "https://openalex.org/W3107602296",
+      "https://openalex.org/W4394896187",
+      "https://openalex.org/W3170094116",
+      "https://openalex.org/W4386462264",
+      "https://openalex.org/W4364306694",
+      "https://openalex.org/W4312192474",
+      "https://openalex.org/W4283697347"
+    ]
+  }
+}

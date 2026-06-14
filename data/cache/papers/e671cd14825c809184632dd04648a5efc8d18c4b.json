@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:42266325",
+  "title": "Evaluating Large Language Models for Automated Data Cleaning and Feature Engineering in Clinical Datasets.",
+  "abstract": "Electronic health records (EHRs) are increasingly used for clinical research and machine learning, yet they are plagued by missing values, outliers, inconsistent coding, and heterogeneous data types. Traditional rule-based cleaning pipelines demand extensive domain expertise and manual effort. Large language models (LLMs) exhibit strong code-generation and clinical reasoning abilities, but their utility for automating structured data preprocessing in clinical datasets remains underexplored. We evaluated three LLMs, GPT-4 (OpenAI, Inc., San Francisco, United States), Claude 3.5 Sonnet (Anthropic, San Francisco, United States), and Gemini 1.5 Pro (Google DeepMind, Mountain View, United States), on five data cleaning tasks and two feature engineering tasks across three publicly available clinical datasets: Medical Information Mart for Intensive Care (MIMIC-IV) (PhysioNet), the eICU Collaborative Research Database (PhysioNet), and National Health and Nutrition Examination Survey (NHANES) 2017-2020 (CDC). LLM-generated preprocessing scripts were benchmarked against a conventional rule-based pipeline. Downstream predictive performance was assessed using XGBoost and logistic regression for in-hospital mortality prediction, evaluated by area under the receiver operating characteristic curve (AUROC) and F1 score. Claude 3.5 Sonnet achieved the highest mean data cleaning F1 score (0.90), followed by GPT-4 (0.89) and Gemini 1.5 Pro (0.85), all exceeding the rule-based baseline (0.77). For mortality prediction on MIMIC-IV, data preprocessed by Claude 3.5 Sonnet yielded the best XGBoost AUROC (0.851; 95% CI: 0.839-0.863), compared with GPT-4 (0.842), Gemini 1.5 Pro (0.829), rule-based cleaning (0.803), and no cleaning (0.761). LLM-engineered features contributed incremental AUROC gains of 0.015-0.025 over manually constructed feature sets. LLMs can substantially automate clinical data cleaning and feature engineering, achieving performance comparable to or exceeding hand-crafted pipelines. However, domain expert oversight remains essential to validate clinical plausibility and prevent silent data corruption.",
+  "year": 2026,
+  "venue": "Cureus",
+  "authors": [
+    "Shimul A Babli",
+    "Pulkit Gairola",
+    "Chukwuemeka E Ogbu",
+    "Francesco Alessi Longa",
+    "Aditya Rautaray",
+    "Opeyemi S Alamu",
+    "Syed Faheem Haider Rizvi"
+  ],
+  "doi": "10.7759/cureus.108550",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42266325/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42266325"
+  }
+}

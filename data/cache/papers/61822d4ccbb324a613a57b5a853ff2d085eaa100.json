@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42277312",
+  "title": "Development and prospective evaluation of a real-time deep learning model for inpatient hypoglycemia prediction.",
+  "abstract": "Inpatient hypoglycemia is associated with increased morbidity, mortality, length of stay, and healthcare costs, yet current management remains reactive due to the lack of real-time prediction tools. We developed, validated, and prospectively evaluated a real-time long short-term memory (LSTM) model to predict hypoglycemia within 24 h using electronic health record (EHR) data from 143,124 adult inpatient admissions across three hospitals between 2014 and 2025. Eligible patients were ≥ 18 years old, hospitalized for ≥ 24 h, and received at least one antihyperglycemic medication. Time-series predictors included medications, laboratory values, diet orders, and percentage of meals consumed over a 5-day lookback window segmented into 4-hour intervals, alongside static demographic variables. The primary outcome was blood glucose (BG) < 70 mg/dL within 24 hours following each prediction timepoint. Model hyperparameters were optimized using Bayesian optimization, and performance was compared with logistic regression, dense neural network, and XGBoost baselines using F1 score, precision, recall, area under the precision-recall curve (AUPRC), and calibration metrics. The best-performing LSTM model achieved an F1 score of 0.30 (95% CI 0.296-0.305), precision of 0.23, recall of 0.44, and AUPRC of 0.23 at a decision threshold of 0.7, outperforming all baseline models. Performance remained stable during prospective daily validation using live EHR extracts. SHapley Additive exPlanations (SHAP) identified clinically meaningful temporal predictors, including recent insulin administration and prior hypoglycemia. Model performance remained consistent across most demographic subgroups. This real-time deployable LSTM model provides a clinically interpretable prediction of inpatient hypoglycemia and may support proactive glycemic stewardship workflows in hospitalized patients.",
+  "year": 2026,
+  "venue": "NPJ digital medicine",
+  "authors": [
+    "Amanda Momenzadeh",
+    "Caleb Cranney",
+    "Dennis H Chen",
+    "Elizabeth Vi Nguyen",
+    "Roma Gianchandani",
+    "Jesse G Meyer"
+  ],
+  "doi": "10.1038/s41746-026-02874-1",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42277312/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42277312"
+  }
+}

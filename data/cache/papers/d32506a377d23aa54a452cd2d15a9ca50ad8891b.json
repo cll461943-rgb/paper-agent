@@ -1,0 +1,57 @@
+{
+  "paper_id": "https://openalex.org/W4391670689",
+  "title": "BiLLM: Pushing the Limit of Post-Training Quantization for LLMs",
+  "abstract": "Pretrained large language models (LLMs) exhibit exceptional general language processing capabilities but come with significant demands on memory and computational resources. As a powerful compression technology, binarization can extremely reduce model weights to a mere 1 bit, lowering the expensive computation and memory requirements. However, existing quantization techniques fall short of maintaining LLM performance under ultra-low bit-widths. In response to this challenge, we present BiLLM, a groundbreaking 1-bit post-training quantization scheme tailored for pretrained LLMs. Based on the weight distribution of LLMs, BiLLM first identifies and structurally selects salient weights, and minimizes the compression loss through an effective binary residual approximation strategy. Moreover, considering the bell-shaped distribution of the non-salient weights, we propose an optimal splitting search to group and binarize them accurately. BiLLM achieving for the first time high-accuracy inference (e.g. 8.41 perplexity on LLaMA2-70B) with only 1.08-bit weights across various LLMs families and evaluation metrics, outperforms SOTA quantization methods of LLM by significant margins. Moreover, BiLLM enables the binarization process of the LLM with 7 billion weights within 0.5 hours on a single GPU, demonstrating satisfactory time efficiency. Our code is available at https://github.com/Aaronhuang-778/BiLLM.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Wei Huang",
+    "Yangdong Liu",
+    "Haotong Qin",
+    "Ying Li",
+    "Shiming Zhang",
+    "Xianglong Liu",
+    "Michele Magno",
+    "Xiaojuan Qi"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2402.04291",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2402.04291",
+  "citation_count": 25,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Training (meteorology)",
+      "Limit (mathematics)",
+      "Quantization (signal processing)",
+      "Business",
+      "Political science",
+      "Computer science",
+      "Physics",
+      "Mathematics",
+      "Meteorology",
+      "Computer vision",
+      "Mathematical analysis"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W230091440",
+      "https://openalex.org/W2233261550",
+      "https://openalex.org/W2810751659",
+      "https://openalex.org/W258997015",
+      "https://openalex.org/W2997094352",
+      "https://openalex.org/W3216976533",
+      "https://openalex.org/W100620283",
+      "https://openalex.org/W2495260952",
+      "https://openalex.org/W4366179611"
+    ]
+  }
+}

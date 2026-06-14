@@ -1,0 +1,56 @@
+{
+  "paper_id": "https://openalex.org/W2755003709",
+  "title": "Distributionally Robust Optimization and its Applications in Machine Learning",
+  "abstract": "The goal of Distributionally Robust Optimization (DRO) is to minimize the cost of running a stochastic system, under the assumption that an adversary can replace the underlying baseline stochastic model by another model within a family known as the distributional uncertainty region. This dissertation focuses on a class of DRO problems which are data-driven, which generally speaking means that the baseline stochastic model corresponds to the empirical distribution of a given sample. One of the main contributions of this dissertation is to show that the class of data-driven DRO problems that we study unify many successful machine learning algorithms, including square root Lasso, support vector machines, and generalized logistic regression, among others. A key distinctive feature of the class of DRO problems that we consider here is that our distributional uncertainty region is based on optimal transport costs. In contrast, most of the DRO formulations that exist to date take advantage of a likelihood based formulation (such as Kullback-Leibler divergence, among others). Optimal transport costs include as a special case the so-called Wasserstein distance, which is popular in various statistical applications. The use of optimal transport costs is advantageous relative to the use of divergence-based formulations because the region of distributional uncertainty contains distributions which explore samples outside of the support of the empirical measure, therefore explaining why many machine learning algorithms have the ability to improve generalization. Moreover, the DRO representations that we use to unify the previously mentioned machine learning algorithms, provide a clear interpretation of the so-called regularization parameter, which is known to play a crucial role in controlling generalization error. As we establish, the regularization parameter corresponds exactly to the size of the distributional uncertainty region. Another contribution of this dissertation is the development of statistical methodology to study data-driven DRO formulations based on optimal transport costs. Using this theory, for example, we provide a sharp characterization of the optimal selection of regularization parameters in machine learning settings such as square-root Lasso and regularized logistic regression. Our statistical methodology relies on the construction of a key object which we call the robust Wasserstein profile function (RWP function). The RWP function similar in spirit to the empirical likelihood profile function in the context of empirical likelihood (EL). But the asymptotic analysis of the RWP function is different because of a certain lack of smoothness which arises in a suitable Lagrangian formulation. Optimal transport costs have many advantages in terms of statistical modeling. For example, we show how to define a class of novel semi-supervised learning estimators which are natural companions of the standard supervised counterparts (such as square root Lasso, support vector machines, and logistic regression). We also show how to define the distributional uncertainty region in a purely data-driven way. Precisely, the optimal transport formulation allows us to inform the shape of the distributional uncertainty, not only its center (which given by the empirical distribution). This shape is informed by establishing connections to the metric learning literature. We develop a class of metric learning algorithms which are based on robust optimization. We use the robust-optimization-based metric learning algorithms to inform the distributional uncertainty region in our data-driven DRO problem. This means that we endow the adversary with additional which force him to spend effort on regions of importance to further improve generalization properties of machine learning algorithms. In summary, we explain how the use of optimal transport costs allow constructing what we call double-robust statistical procedures. We test all of the procedures proposed in this paper in various data sets, showing significant improvement in generalization ability over a wide range of state-of-the-art procedures. Finally, we also discuss a class of stochastic optimization algorithms of independent interest which are particularly useful to solve DRO problems, especially those which arise when the distributional uncertainty region is based on optimal transport costs.",
+  "year": 2017,
+  "venue": "Columbia Academic Commons (Columbia University)",
+  "authors": [
+    "Yang Kang"
+  ],
+  "doi": "https://doi.org/10.7916/d8wd4c1r",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.7916/D8WD4C1R",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Robust optimization",
+      "Artificial intelligence",
+      "Mathematical optimization",
+      "Machine learning",
+      "Mathematics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W3105349251",
+      "https://openalex.org/W2580279064",
+      "https://openalex.org/W2783258807",
+      "https://openalex.org/W2504184235",
+      "https://openalex.org/W2996200350",
+      "https://openalex.org/W2884405105",
+      "https://openalex.org/W3111978993",
+      "https://openalex.org/W3187411941",
+      "https://openalex.org/W3131569785",
+      "https://openalex.org/W3118724990",
+      "https://openalex.org/W2465561325",
+      "https://openalex.org/W638738022",
+      "https://openalex.org/W2579991055",
+      "https://openalex.org/W2764276267",
+      "https://openalex.org/W3136168831",
+      "https://openalex.org/W2463080496",
+      "https://openalex.org/W398973393",
+      "https://openalex.org/W3155294573",
+      "https://openalex.org/W1637948576",
+      "https://openalex.org/W3105038561"
+    ]
+  }
+}

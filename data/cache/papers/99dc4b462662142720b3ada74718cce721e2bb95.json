@@ -1,0 +1,48 @@
+{
+  "paper_id": "https://openalex.org/W4401042972",
+  "title": "Defending Against Weight-Poisoning Backdoor Attacks for Parameter-Efficient Fine-Tuning",
+  "abstract": "Recently, various parameter-efficient finetuning (PEFT) strategies for application to language models have been proposed and successfully implemented.However, this raises the question of whether PEFT, which only updates a limited set of model parameters, constitutes security vulnerabilities when confronted with weight-poisoning backdoor attacks.In this study, we show that PEFT is more susceptible to weight-poisoning backdoor attacks compared to the full-parameter fine-tuning method, with pre-defined triggers remaining exploitable and pre-defined targets maintaining high confidence, even after finetuning.Motivated by this insight, we developed a Poisoned Sample Identification Module (PSIM) leveraging PEFT, which identifies poisoned samples through confidence, providing robust defense against weight-poisoning backdoor attacks.Specifically, we leverage PEFT to train the PSIM with randomly reset sample labels.During the inference process, extreme confidence serves as an indicator for poisoned samples, while others are clean.We conduct experiments on text classification tasks, five finetuning strategies, and three weight-poisoning backdoor attack methods.Experiments show near 100% success rates for weight-poisoning backdoor attacks when utilizing PEFT.Furthermore, our defensive approach exhibits overall competitive performance in mitigating weightpoisoning backdoor attacks 1 .",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Shuai Zhao",
+    "Leilei Gan",
+    "Anh Tuan Luu",
+    "Jie Fu",
+    "Lingjuan Lyu",
+    "Meihuizi Jia",
+    "Jinming Wen"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.findings-naacl.217",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.findings-naacl.217",
+  "citation_count": 17,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Backdoor",
+      "Computer science",
+      "Computer security"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W4320031223",
+      "https://openalex.org/W4200629851",
+      "https://openalex.org/W4281902577",
+      "https://openalex.org/W4309417370",
+      "https://openalex.org/W4292107232",
+      "https://openalex.org/W3009072493",
+      "https://openalex.org/W4386080799",
+      "https://openalex.org/W3140988292"
+    ]
+  }
+}

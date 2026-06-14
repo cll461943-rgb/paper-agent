@@ -1,0 +1,35 @@
+{
+  "paper_id": "pubmed:42284574",
+  "title": "Knowledge-Augmented Large Language Model for Multimodal Electronic Health Record-Based Risk Prediction: Development and Validation Study.",
+  "abstract": "Accurate clinical outcome prediction using electronic health records (EHRs) is crucial for patient care and resource allocation. EHRs include both structured data and rich, unstructured clinical notes. However, prior machine learning methods struggle with the multimodality, long context of notes, and severe class imbalance in clinical tasks. This study aimed to introduce and evaluate KAMELEON (Knowledge-Augmented Multimodal EHR Learning for Outcome Prediction), a unified, 2-stage hybrid framework that integrates diverse EHR modalities and external biomedical knowledge to enhance clinical risk prediction. This study used the publicly available, deidentified Medical Information Mart for Intensive Care-III dataset, which includes structured and unstructured data for over 40,000 intensive care unit patients. The 2 tasks studied were 30-day readmission (403/10,031, 4% positive rate) and in-hospital mortality prediction (2423/17,903, 13% positive rate). Train-test splits were patient-disjoint (80:20). Performance was evaluated against general and medical large language models (LLMs) and structured baselines. Key metrics included the area under the receiver operating characteristic curve (AUROC), area under the precision-recall curve (AUPRC), and macro F The KAMELEON framework consistently outperformed all existing baselines. 30-day readmission: the KAMELEON-balanced random forests model achieved an AUROC of 0.85 and a sensitivity (recall) of 0.79. Ablation analysis shows the critical role of the LLM-generated reasoning, with its removal causing the AUROC to drop from 0.85 to 0.7 and sensitivity to fall by over 80%. In-hospital mortality: the KAMELEON-extreme gradient boosting model achieved an AUROC of 0.92 and an AUPRC of 0.650. Unstructured-only models showed limited ability to discern mortality, with AUROC values near chance (around 0.51-0.53). To our knowledge, KAMELEON represents one of the first systematic frameworks to enhance LLMs for health care prediction through graph-guided knowledge retrieval combined with structured machine learning. The framework demonstrates superior performance across both prediction tasks, highlighting the synergistic value of combining diverse data modalities and LLM reasoning for robust clinical risk estimation.",
+  "year": 2026,
+  "venue": "JMIR AI",
+  "authors": [
+    "Rituparna Datta",
+    "Jiaming Cui",
+    "Zihan Guan",
+    "Vishal Reddy",
+    "Joshua Eby",
+    "Gregory R Madden",
+    "Rupesh Silwal",
+    "Anil Vullikanti"
+  ],
+  "doi": "10.2196/88356",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42284574/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:entity_dataset",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42284574"
+  }
+}

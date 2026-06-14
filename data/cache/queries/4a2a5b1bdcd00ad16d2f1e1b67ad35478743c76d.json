@@ -1,0 +1,881 @@
+[
+  {
+    "paper_id": "pubmed:42281045",
+    "title": "Dynamic Occlusion-Predictive Neural Network for Robust Roadside Multi-Vehicle Tracking.",
+    "abstract": "Despite their extended detection ranges and superior precision compared with onboard sensors, roadside perception systems suffer from severe occlusion artifacts in complex traffic, causing significant tracking failures and ID switches. To address this, we propose a novel Dynamic Occlusion-Predictive Neural Network tailored to challenging roadside environments. First, we introduce a Transformer-based Dynamic Occlusion State Predictor to explicitly model the temporal evolution of occlusion. Unlike traditional tracking methods, this module continuously forecasts future occlusion ratios for each target by analyzing historical occlusion patterns. Critically, these predictions are integrated into the tracking framework as dynamic weighting factors in the loss function, enabling the model to adaptively penalize tracking errors based on the predicted occlusion severity and significantly enhancing robustness against dynamic occlusion scenarios. Second, leveraging the predicted occlusion states, we propose a GNN-based Spatial Reasoning Module to address trajectory fragmentation. This module constructs a heterogeneous graph integrating road occupancy information and neighboring vehicle poses to infer the existence and motion patterns of targets within occluded regions. By analyzing scene-level physical constraints, it generates motion predictions for invisible targets and links these inferred states to fragmented trajectories, ensuring temporally continuous tracking even during prolonged visual occlusions. Experiments on the DAIR-V2X and our self-collected roadside dataset show that our framework outperforms state-of-the-art methods in precision and robustness, achieving a 5.1% MOTA gain over the best baseline. This advantage peaks under high occlusion, where preserving ID continuity and minimizing failures validates its efficacy for real-world roadside multi-target tracking.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Shuai Wang",
+      "Yafei Wang",
+      "Bowen Wang",
+      "Chongfeng Wei",
+      "Hao Liu"
+    ],
+    "doi": "10.3390/s26113529",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42281045/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42281045"
+    }
+  },
+  {
+    "paper_id": "pubmed:42182201",
+    "title": "A Scalable Sign-Aware Multi-Omics Knowledge Graph Foundation Model for Mechanistic Drug Action and Clinical Response Predictions.",
+    "abstract": "Mechanistically predicting drug action requires distinguishing activating from inhibitory interactions across broad chemical space, yet most biomedical knowledge graphs and graph neural networks (GNNs) rely on unsigned associations that obscure regulatory logic and have a limited chemical coverage. Here we present SIGMA-KG (",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Mohammadsadeq Mottaqi",
+      "Shuo Zhang",
+      "Ian Adoremos",
+      "Pengyue Zhang",
+      "Lei Xie"
+    ],
+    "doi": "10.64898/2026.04.29.721775",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42182201/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42182201"
+    }
+  },
+  {
+    "paper_id": "pubmed:42179512",
+    "title": "Research on plant knowledge graph reasoning based on dual-channel attention and topological perception.",
+    "abstract": "Knowledge graphs (KGs) in the plant domain frequently contain \"long-range dependency\" paths (e.g., taxonomic hierarchies or ecological association chains of 4 or more hops), which pose significant challenges to existing KG reasoning models. Traditional Graph Neural Network (GNN) models struggle to effectively capture such long-range dependencies due to issues of long-distance information compression and over-smoothing. To address this, we propose the KRGAI-PLANT model, an inductive reasoning framework specifically designed for plant knowledge graphs. This model features a dual-channel architecture that integrates a global attention mechanism with local topology perception, enabling synergistic learning between global semantic interactions and local structural features among plant entities. We conduct experimental validation on subsets constructed from mainstream plant knowledge graphs, including DBpedia and PlantNet-KG. The results demonstrate that KRGAI-PLANT achieves significant improvements over baseline models such as GraIL and NBFNet in key evaluation metrics, including Hits@10 and AUC-PR, particularly exhibiting strong advantages in handling long-path reasoning tasks. This study provides an effective reasoning tool for knowledge discovery and association prediction in the plant domain. Furthermore, the proposed KRGAI-PLANT model offers a robust cognitive framework that can empower distributed and autonomous agricultural systems by converting complex, multi-source plant data into actionable knowledge for precise decision-making.",
+    "year": 2026,
+    "venue": "Frontiers in plant science",
+    "authors": [
+      "Shasha Wang",
+      "Yongye Su",
+      "Hui Gao"
+    ],
+    "doi": "10.3389/fpls.2026.1814740",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42179512/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42179512"
+    }
+  },
+  {
+    "paper_id": "pubmed:42149883",
+    "title": "An AI Workflow Combining Bidirectional Encoder Representations from Transformers (BERT) and Graph Neural Networks (GNNs) for Knowledge Retrieval in Digital Enterprises.",
+    "abstract": "Large volumes of unstructured organizational data can make it difficult for enterprise knowledge management (KM) systems to extract correct and contextually relevant information, which can lead to inefficient knowledge sharing and delayed decision-making. This study suggests a unified artificial intelligence-driven framework to overcome this limitation. It combines Graph Neural Networks (GNNs) for ontology alignment and semantic reasoning with refined Bidirectional Encoder Representations from Transformers (BERT) for domain-specific entity and relation extraction. Systematic data collection, preprocessing enterprise text corpora, fine-tuning BERT to identify entities and relationships, converting extracted triples into structured knowledge graphs, and GNN-based ontology alignment to guarantee semantic consistency across heterogeneous knowledge sources, comprise the methodological pipeline. To evaluate system efficacy in real-world enterprise scenarios, the framework also integrates task-oriented assessment measures, such as retrieval precision, ontology alignment correctness, and decision latency. When compared to baseline methods, experimental validation across two industry applications shows a 35% decrease in decision-making latency and a 21% gain in knowledge retrieval precision. Furthermore, user feedback indicates that the KM interface has boosted user satisfaction through its semantic search and contextual tagging features. The suggested architecture facilitates reproducible knowledge graph building from unstructured enterprise data by methodically fusing graph-based reasoning and alignment with deep learning-based information extraction. The findings demonstrate that both strategic and operational KM outcomes improved when organized knowledge representations are aligned with organizational procedures. All things considered, the suggested method increases retrieval accuracy, speeds up decision workflow reaction times, and offers a workable and scalable option for enterprise-level KM systems.",
+    "year": 2026,
+    "venue": "Journal of visualized experiments : JoVE",
+    "authors": [
+      "Yang Qianqi",
+      "Aini Binti Aman",
+      "Hafizah Omar Zaki",
+      "Roziana Baharin"
+    ],
+    "doi": "10.3791/70045",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42149883/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42149883"
+    }
+  },
+  {
+    "paper_id": "pubmed:42119431",
+    "title": "MediCARE: Medical Collaborative Agents REasoning over Interpretable Heterogeneous Graphs.",
+    "abstract": "In the era of Artificial Intelligence (AI), Large Language Models (LLMs) are increasingly being used as medical reasoning agents. However, the risk of LLM hallucinations, where the model generates incorrect or nonsensical responses, poses a significant challenge, especially in the medical domain. To address this, we propose the adoption of the Predict→Interpret→Explain (PIE) paradigm. This paradigm involves building a predictive model using high-quality and well-controlled training data, employing eXplainable AI (XAI) techniques to interpret the model, and using LLMs to process the predictions and their interpretations to provide an accurate, comprehensive report for medical specialists. We focus on the medication recommendation task, utilizing graph data structures to represent patient clinical data and Graph Neural Network (GNN) models to learn from these structures. We interpret the GNN model using GNNExplainer and Integrated Gradients methods. The outcomes are then examined by a pool of LLM-based collaborative agents, who generate, discuss, and revise comprehensive assessments to explain the predictions of the model. We test our framework, MediCARE, on the MIMIC-III database, demonstrating the impact of LLMs in providing accurate reports and improving prediction precision",
+    "year": 2026,
+    "venue": "Artificial intelligence in medicine",
+    "authors": [
+      "Antonino Ferraro",
+      "Antonio Galli",
+      "Valerio La Gatta",
+      "Marco Postiglione",
+      "Giuseppe Riccio",
+      "Antonio Romano",
+      "Gian Marco Orlando",
+      "Diego Russo",
+      "Vincenzo Moscato"
+    ],
+    "doi": "10.1016/j.artmed.2026.103444",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42119431/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42119431"
+    }
+  },
+  {
+    "paper_id": "pubmed:42103794",
+    "title": "A hybrid transformer-GNN framework for social governance and urban service allocation.",
+    "abstract": "The proposed study puts forward an artificial intelligence-based framework to predict the needs of the urban public services and aid resource allocation based on data in the current social governance systems. A hybrid deep learning model is designed by combining a Graph Neural Network (GNN) based on spatial-relational reasoning with a Transformer network to model time-dependent connections, textual complaint semantics and structural relations between service requests, agencies, and locations, and via the joint learning of time-dependent patterns, textual complaint semantics, and structural relationships among service requests, agencies, and locations. In order to deal with the high-dimensional and non-convex problem of hyperparameter tuning on hybrid architectures, an Improved Heap-Based Optimizer (IHBO) is used, using opposition-based learning and chaotic search strategies to improve convergence and global search. The suggested model is tested using the Official Website of the City of New York (NYC 311) Service Requests large-scale data of nearly 12 million records that have mixed temporal, geographic, and categorical variables. It is experimentally proven that the IHBO-optimized Transformer-GNN has an overwhelming performance in comparison to the state-of-the-art baselines with a classification accuracy of 0.938 and lower prediction error by resolution time with Root Mean Square Error equal to 2.18 days, and it is also robust to novel temporal variations and noisy labels. In addition to predictive performance, the suggested model can deliver policy implications to urban governance by making allocation of public service resources more adaptive, equitable, and efficient, which do attest to the utility of hybrid artificial intelligent models in citizen-focused government of any kind.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Zhen Yang",
+      "Min Lu",
+      "Shitong Huang"
+    ],
+    "doi": "10.1038/s41598-026-49982-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42103794/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42103794"
+    }
+  },
+  {
+    "paper_id": "pubmed:42103793",
+    "title": "Reducing social biases in text-based emotion prediction using semantic blinding and semantic propagation graph neural networks.",
+    "abstract": "This paper introduces the Semantic Propagation Graph Neural Network (SProp GNN), a machine learning emotion prediction (EP) architecture that relies exclusively on syntactic structures and word-level emotional cues to predict emotions in text. By semantically blinding the model to information about specific words, it is robust to social biases such as political or gender bias that have been plaguing previous machine learning-based EP systems. The SProp GNN shows performance superior to lexicon-based alternatives such as VADER (Valence Aware Dictionary and Sentiment Reasoner) and Emotlas on two different prediction tasks, and across two languages. Additionally, it approaches the accuracy of transformer-based models - with an average of 5.7% difference in accuracy scores on discrete English benchmarks, and from 0.075 to 0.145 correlation difference on English and Polish dimensional emotion prediction datasets - while significantly reducing bias in emotion prediction tasks. By offering improved explainability and reducing bias, the SProp GNN bridges the methodological gap between interpretable lexicon approaches and powerful, yet often opaque, deep learning models, offering a robust tool for fair and effective emotion prediction in understanding human behavior through text.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Hubert Plisiecki"
+    ],
+    "doi": "10.1038/s41598-026-46749-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42103793/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42103793"
+    }
+  },
+  {
+    "paper_id": "pubmed:42067533",
+    "title": "GNN-ML-FRL: a graph-enhanced meta-adaptive federated learning framework for scalable pest identification and ernvironmental modeling.",
+    "abstract": "Heterogeneous agro-ecological factors, insect breeding, and climate change are serious challenges to sustainable agricultural management. The study proposes a graph-enhanced meta-adaptive federated learning framework (GNN-ML-FRL) to address the challenges in precision agriculture. The proposed framework integrates Federated Learning (FL) for collaborative training of models in a decentralized manner across geographically distributed farms, Meta-Learning (ML) for rapid adaptation to changing environmental factors, and Graph Neural Networks (GNNs) for capturing spatial dependencies among agricultural entities. A comprehensive multivariate IoT environmental dataset with 52.56 million time-series observations gathered from 500 dispersed sensors over a 12-month period, the IP102 insect pest recognition benchmark (75,222 images across 102 species), and curated genomic datasets from MaizeGDB and the Rice Annotation Project Database for genotype-informed modeling are the three standardized datasets used to assess the framework. Experimental results show statistically significant improvements (p < 0.01) over CNN and graph-based baselines, achieving 89.3% Top-1 accuracy, 7.8% higher generalization performance, and 12.4% reduction in prediction loss across geographically unseen farms. SHAP-based explainability further indicate that environmental accuracy-related features contributed nearly 63% positive influence, while loss-related factors contributed 37% negative influence, validating model robustness. Geographic generality is confirmed by site-out validation using IoT data, and resilience is improved under varied crop conditions by genotype-informed graph modeling. The findings show that a scalable and statistically sound framework for data-driven pest identification and environmental modeling in precision agriculture may be achieved by combining spatial graph reasoning, meta-adaptive learning, and decentralized training.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Mahalakshmi",
+      "Suma T",
+      "Sandeep Kumar Mathivanan",
+      "Sangeetha R",
+      "Rose Bindu Joseph",
+      "Sangeetha S K B"
+    ],
+    "doi": "10.1038/s41598-026-49344-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42067533/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42067533"
+    }
+  },
+  {
+    "paper_id": "pubmed:42062367",
+    "title": "A transformer-graph neural network framework for cyber twin-driven personalized respiratory monitoring.",
+    "abstract": "Maintaining healthy breathing is important to health and preventing serious respiratory complications, many of which can result in death. Individuals living with ongoing chronic respiratory disease (asthma, chronic obstructive pulmonary disease, sleep apnea) need ongoing personal patient-centred continuous non-hospital-based monitoring for diagnosis and appropriate treatment. Many traditional existing patient-centred physical health monitoring systems are insufficient due to their limited flexibility, combining multiple sources of sensor data that monitor patients continuously and act in real time to document health states are yet to be invented. This paper proposes a respiratory monitoring system that utilizes a cyber twin (CT) model, and a graph neural network (GNN) function for relational reasoning of the individual based on multi-source data, with a transformer architecture for long-range behaviour modifications based on time series data. The cyber twin continuously updates the physiological state of each individual and predicts what will happen if treatment occurs. This work provides complete results for the comparison of the proposed transformer GNN versus LSTM-CNN being used as evaluation frameworks for established experimental effectiveness, achieving better comparisons for the performance of the model direct interfaces. The proposed approaches provided superior performance over traditional networks with absolute error reductions of 8-13% on respiratory rate (RR) estimates, and F1 score improvements of + 3.1-6.8 points between multimodal respiratory ensembles relative to each other. A graphical figure and table show all the experimental validity and comparisons.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "A Nivetha",
+      "K Jothimani",
+      "Suresh Muthusamy",
+      "A Divyadharshini",
+      "A Manikandan",
+      "S K Mithun Bahavath",
+      "Chandrakant Sonawane",
+      "Choon Kit Chan",
+      "Amol Vedpathak",
+      "Saurav Dixit"
+    ],
+    "doi": "10.1038/s41598-026-49994-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42062367/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42062367"
+    }
+  },
+  {
+    "paper_id": "pubmed:41998185",
+    "title": "MS-GATOR: multi-scale graph attention with topological reasoning for segmentation and classification of prostate cancer based on Gleason scores using histopathology images.",
+    "abstract": "Prostate cancer is one of the prevalent and potentially fatal malignancies, affecting men globally. Accurate segmentation and classification of prostate cancer in histopathology images remain challenging due to complex tissue architecture, staining variability, and high inter-observer differences in manual diagnosis. To address these challenges, this research proposes a Multi-Scale Graph Attention with Topological Reasoning (MS-GATOR) for segmentation and classification of prostate cancer based on Gleason Scores (GS). The MS-GATOR incorporates topological reasoning with hierarchical biological structures by constructing a graph-based representation among three spatial scales such as nuclei, glands, and tissues using Delaunay triangulation to capture both geometric and photometric relationships. Graph attention layers combined with cross-level attention enable efficient intra and inter-scale feature fusion. The MS-GATOR also improves interpretability by visualizing attention weights, while aligning with pathologists' evaluation. The MS-GATOR is validated on publicly available datasets such as PANDA, SICAPv2, and real-time clinical data. It achieved superior performance with dice scores of 99.58% and 98.67%, as well as classification accuracies of 99.95% and 98.86% on PANDA and SICAPv2, respectively. Additionally, morphological and statistical analyses demonstrate robustness across tumor grades and patient subgroups. Compared to traditional CNN and GNN approaches, MS-GATOR provides better accuracy, generalization, and clinical significance. These results highlight MS-GATOR's potential as a scalable, explainable, and effective solution for pathology, thereby supporting consistent and reasonable prostate cancer classification.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sujata Patil",
+      "Mahadeva Swamy",
+      "Kavitha Sooda",
+      "Rajanikanth Vadigepalli",
+      "Khalid Nazim Abdul Sattar",
+      "Md Rafeeq"
+    ],
+    "doi": "10.1038/s41598-026-48552-w",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41998185/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41998185"
+    }
+  },
+  {
+    "paper_id": "pubmed:41930216",
+    "title": "Graph convolution-based techniques for pragmatic Arabic figurative language classification.",
+    "abstract": "Figurative language, including euphemism and metonymy, presents significant challenges in natural language processing (NLP) due to its abstract and context-dependent nature, particularly in morphologically rich and low-resource languages like Arabic. This paper introduces a graph-based embedding framework for figurative language classification that captures both syntactic dependencies and semantic relationships using heterogeneous graphs. We propose a configurable pipeline that converts text into structured graphs incorporating lexical, morphological, and syntactic cues, enabling deeper semantic reasoning. These graphs are processed using various graph neural network (GNN) architectures-such as GAT, HANConv, and MixHopConv-designed to model complex linguistic interactions. The approach is evaluated on two Arabic-language tasks: euphemism and metonymy detection. Our results demonstrate that attention-based and multi-hop GNNs outperform both traditional baselines and state-of-the-art transformer models (e.g., AraBERT, XLM-RoBERTa), particularly in metonymy detection where topological cues are more pronounced. HANConv and GAT achieve the highest F1-scores across tasks, while models like GraphConv and SAGEConv offer stability across configurations. We also introduce a validated Arabic lexical ontology for enriching semantic graphs. Our findings highlight the potential of graph-structured embeddings for nuanced linguistic tasks and suggest future directions including cross-lingual transfer, ontology expansion, and application to additional figurative categories.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Zouheir Banou",
+      "Fatima-Zahra Alaoui",
+      "Sanaa El Filali",
+      "El Habib Benlahmar",
+      "Laila El Jiani",
+      "Hasnae Sakhi"
+    ],
+    "doi": "10.3389/frai.2026.1759136",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41930216/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41930216"
+    }
+  },
+  {
+    "paper_id": "pubmed:41858629",
+    "title": "AI-powered TargetMap: Enabling system-level target discovery through full-path reasoning on a unified knowledge graph.",
+    "abstract": "Modern drug discovery faces a critical challenge: high attrition rates often stem from an incomplete understanding of how individual targets operate within complex, system-wide biological networks. While computational tools such as graph neural network (GNN) excel at extracting local topological patterns, they often fall short in capturing the global semantic context and long-range dependencies within mechanistic pathways. To bridge this gap, we introduce TargetMap, an AI-driven knowledge graph platform powered by an LLM-based full-path graph reasoning algorithm. Our approach leverages the contextual reasoning capabilities of LLMs by representing entire biological pathways-as captured by structured knowledge graphs-as coherent narratives for holistic analysis. This enables the generation of testable hypotheses for distinct therapeutic targets based on a system-level understanding of disease pathology. Supported by a unified knowledge base and Graph RAG, TargetMap provides a paradigm for moving beyond local network analysis to mechanistic reasoning.",
+    "year": 2026,
+    "venue": "iScience",
+    "authors": [
+      "Xizhi Jin",
+      "Sijie Wang",
+      "Jiahe Chen",
+      "Shuhao Shen",
+      "Fangjie Yan",
+      "Jian Wu",
+      "Qiaojun He",
+      "Hongxia Xu",
+      "Ruijia Wu",
+      "Ji Cao",
+      "Bo Yang"
+    ],
+    "doi": "10.1016/j.isci.2026.115187",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41858629/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41858629"
+    }
+  },
+  {
+    "paper_id": "pubmed:41829442",
+    "title": "Explainable Dynamic Graph Learning and Multi-Scale Feature Fusion for Hydraulic System Health Monitoring.",
+    "abstract": "Hydraulic systems are pivotal components in safety-critical aerospace and industrial applications, making reliable health monitoring essential. However, traditional data-driven diagnosis methods typically rely on static graph structures that fail to capture evolving sensor correlations during different fault modes. Furthermore, existing grid-based models often struggle to extract multi-resolution features and maintain performance under data-limited conditions. To address these challenges, this paper proposes a novel Dynamic Multi-Scale Graph Neural Network (DMS-GNN) for hydraulic system fault diagnosis. The framework integrates a hierarchical multi-scale feature extraction module to capture diverse fault signatures across different frequency bands. Crucially, a self-attention-based dynamic graph learner is introduced to adaptively infer latent sensor topologies end-to-end, eliminating the reliance on predefined physical connections. Experimental validation on a dedicated electro-hydraulic test bench demonstrates that the proposed DMS-GNN achieves a superior diagnostic accuracy of 98.47%, outperforming state-of-the-art baselines such as GraphSAGE, Static GCN, and GAT. The result confirms the efficacy of combining multi-scale temporal learning with dynamic spatial reasoning for robust multi-sensor fusion diagnosis.",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Ziheng Gu",
+      "Xiansong He",
+      "Yibo Song",
+      "Gongning Li",
+      "Shufeng Zhang",
+      "Xiaowei Yang",
+      "Xiaoli Zhao",
+      "Jianyong Yao",
+      "Chuanjie Lu"
+    ],
+    "doi": "10.3390/s26051478",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41829442/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41829442"
+    }
+  },
+  {
+    "paper_id": "pubmed:41812361",
+    "title": "Bridging graph structure and knowledge-guided editing for interpretable temporal knowledge graph reasoning.",
+    "abstract": "Temporal knowledge graph reasoning (TKGR) aims to predict future events by inferring missing entities with dynamic knowledge structures. Existing LLM-based reasoning methods prioritize contextual over structural relations, struggling to extract relevant subgraphs from dynamic graphs. This limits structural information understanding, leading to unstructured, hallucination-prone inferences especially with temporal inconsistencies. To address this problem, we propose IGETR (Integration of Graph and Editing-enhanced Temporal Reasoning), a hybrid reasoning framework that combines the structured temporal modeling capabilities of Graph Neural Networks (GNNs) with the contextual understanding of LLMs. IGETR operates through a three-stage pipeline. The first stage aims to ground the reasoning process in the actual data by identifying structurally and temporally coherent candidate paths through a temporal GNN, ensuring that inference starts from reliable graph-based evidence. The second stage introduces LLM-guided path editing to address logical and semantic inconsistencies, leveraging external knowledge to refine and enhance the initial paths. The final stage focuses on integrating the refined reasoning paths to produce predictions that are both accurate and interpretable. Experiments on standard TKG benchmarks show that IGETR achieves state-of-the-art performance, outperforming strong baselines with relative improvements of up to 5.6% on Hits@1 and 8.1% on Hits@3 on the challenging ICEWS datasets. Additionally, we execute ablation studies and additional analyses confirm the effectiveness of each component.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Shiqi Fan",
+      "Quanming Yao",
+      "Hongyi Nie",
+      "Wentao Ma",
+      "Zhen Wang",
+      "Wen Hua"
+    ],
+    "doi": "10.1016/j.neunet.2026.108811",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41812361/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41812361"
+    }
+  },
+  {
+    "paper_id": "pubmed:41757034",
+    "title": "Bottom-up and generative computations uniquely explain neural responses across the social brain.",
+    "abstract": "Making social evaluations from visual input is a core human ability that engages brain regions involved in social perception, including portions of the superior temporal sulcus (STS), as well as higher-level mentalizing regions, such as the temporoparietal junction (TPJ). One common hypothesis proposes that these regions operate hierarchically: social perception regions like posterior STS (pSTS) implement bottom-up computations to generate fast, stimulus-derived representations of social interactions, while mentalizing regions like TPJ perform inverse-planning computations to infer the underlying goals and motivations driving agents' behavior. However, this computational-neural mapping has never been formally tested, in large part due to the lack of successful computational models of social processing. We developed computational models aligned with these two frameworks: a graph-neural-network (GNN) model that recognizes social interactions by relying on relational visual information, and a generative inverse-planning model that does so by inverting a model of agents' goals and the physical world. In this preregistered study, we collected fMRI responses while participants watched videos of agentive animated shapes depicting social interactions and compared neural responses to both computational models. Surprisingly, we found that both the GNN and inverse-planning model explained neural responses in pSTS and TPJ, even after controlling for variance explained by the other model. Exploratory analyses, however, revealed a shift from early perceptual processing towards later higher-order reasoning in both regions, suggesting a temporal rather than spatial hierarchy. Overall, this study provides the first evidence that both social perception and mentalizing regions carry out a combination of relational bottom-up and higher-level inferential computations, perhaps on distinct timescales. This work also provides the first comparison of an inverse-planning model to neural activity and demonstrates that theory-driven cognitive models can successfully predict fMRI responses to social scenes. The ability to recognize social interactions between others is central to humans' daily lives and engages brain regions supporting social perception and mental state inference. The neural computations underlying this ability, however, are poorly understood. Here we leveraged new models of bottom-up social perception and generative social inference to test the hypothesis that these complementary computations are carried out in separate brain regions. We compared both models to brain responses from subjects viewing procedurally generated videos of social interactions. Surprisingly, we found that both models explained neural activity in both perceptual and mentalizing regions, even when controlling for effects of the other model. These findings challenge the idea of a strict division of labor in the social brain and refine our understanding of the computations supporting human social inference.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Manasi Malik",
+      "Minjae Kim",
+      "Tianmin Shu",
+      "Shari Liu",
+      "Leyla Isik"
+    ],
+    "doi": "10.64898/2026.02.20.707082",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41757034/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41757034"
+    }
+  },
+  {
+    "paper_id": "pubmed:41616004",
+    "title": "Graph neural networks and belief rule base collaborative modeling for automated and interpretable fault diagnosis in proton exchange membrane fuel cells.",
+    "abstract": "Proton exchange membrane fuel cells (PEMFC) are critical for clean energy conversion, but their reliability is severely compromised by complex faults, creating a pressing need for accurate and interpretable diagnostic methods. While the Belief Rule Base (BRB) provides a transparent reasoning framework, its practical deployment faces two fundamental challenges: the \"combinatorial explosion\" of rules with increasing system complexity, and a heavy reliance on domain experts to provide precise quantitative parameters. To address these issues, this paper proposes a novel GNN-BRB framework that synergistically integrates Graph Neural Networks (GNN) with BRB. Our solution introduces two key innovations: an exponential ordered weighting operator to systematically convert qualitative expert rankings into quantitative confidence parameters, and a GNN-based mechanism that models the BRB rule base as a graph to automatically generate initial parameters through information propagation among semantically related rules. Experimental results on a real-world PEMFC fault diagnosis case demonstrate that the proposed method significantly reduces dependency on manual expert input while achieving superior diagnostic performance. Ablation studies further validate the contribution of each model component. This work establishes a new paradigm for developing automated, highly accurate, and interpretable fault diagnosis systems for complex engineering applications.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Yao Zhao",
+      "Ting Wang",
+      "Xin Wang"
+    ],
+    "doi": "10.1371/journal.pone.0341884",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41616004/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41616004"
+    }
+  },
+  {
+    "paper_id": "pubmed:41534605",
+    "title": "FG-DDI: Functional group-aware graph neural networks for drug-drug interaction prediction.",
+    "abstract": "We aim to improve Drug-Drug Interactions (DDIs) by explicitly injecting medicinal-chemistry knowledge of functional groups (FGs) into graph neural network (GNN) message passing, in both transductive and inductive settings. Our goal is to (i) encode FG priors in a trainable way that enhances representation quality without handcrafting features, and (ii) yield interpretable attributions that align learned weights with pharmacologically meaningful FG patterns. We introduce FG-DDI, a dual-view GNN that augments both intra- and inter-molecular reasoning. At the intra-molecular level, atom/bond messages are scaled by FG enrichment weights derived from detected FG motifs within each drug graph. At the inter-molecular level, a bipartite message-passing layer between a drug pair is modulated by FG-FG enrichment scores that reflect empirical co-occurrence in known DDIs. Enrichment is computed as odds ratios from corpus statistics and injected via learnable gates, ensuring differentiability and allowing data to override noisy priors. We couple this with standard supervision on interaction labels and report accuracy (ACC), AUROC, average precision (AP), and F1. Experiments use DrugBank (1706 drugs; 86 interaction types) and TwoSides (filtered triplets) under transductive and inductive splits (one unseen; both unseen). We perform ablations removing each FG term to isolate contributions and assess stability across splits. Comprehensive experiments on DrugBank and TwoSides datasets demonstrate that FG-DDI achieves superior performance compared to state-of-the-art methods. For DrugBank, the accuracy improves by 0.36% in transductive settings and by 0.46% and 1.42% in inductive settings, respectively for S1 and S2 partitioning. By systematically integrating chemical domain knowledge into deep learning architectures, this approach enables better generalization to unseen drug combinations while maintaining computational efficiency, making it particularly valuable for real-world pharmaceutical applications where new drugs continuously enter the market.",
+    "year": 2026,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Fangyu Zhou",
+      "Shahadat Uddin"
+    ],
+    "doi": "10.1016/j.jbi.2026.104981",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41534605/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41534605"
+    }
+  },
+  {
+    "paper_id": "pubmed:41533699",
+    "title": "A case-based explainable graph neural network framework for mechanistic drug repositioning.",
+    "abstract": "Drug repositioning offers a cost-effective alternative to traditional drug development by identifying new uses for existing drugs. Recent advances leverage Graph Neural Networks (GNNs) to model complex biological data, showing promise in predicting novel drug-disease associations; however, these frameworks often lack explainability, a critical factor for validating predictions and understanding drug mechanisms. Here, we introduce Drug-Based Reasoning Explainer (DBR-X), an explainable GNN model that integrates a link-prediction module with a path-identification module to generate interpretable and faithful explanations. When benchmarked against other GNN-based link-prediction frameworks, DBR-X achieves superior performance in identifying known drug-disease associations, demonstrating higher accuracy across all evaluation metrics. The quality of DBR-X biological explanations was evaluated through multiple complementary approaches, including comparison with manually curated drug mechanisms, assessment of explanation faithfulness using deletion and insertion studies, and measurement of stability under graph perturbations. Together, these results show that DBR-X advances the state of the art in drug repositioning while providing multi-hop mechanistic explanations that can facilitate the translation of computational predictions into clinical applications. Availability and implementation: DBR-X package is freely accessible from online repository https://github.com/SuLab/DBR-X.",
+    "year": 2026,
+    "venue": "Bioinformatics (Oxford, England)",
+    "authors": [
+      "Adriana Carolina Gonzalez-Cavazos",
+      "Roger Tu",
+      "Meghamala Sinha",
+      "Andrew I Su"
+    ],
+    "doi": "10.1093/bioinformatics/btag008",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41533699/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41533699"
+    }
+  },
+  {
+    "paper_id": "pubmed:41486172",
+    "title": "Enhancing chronic disease management: hybrid graph networks and explainable AI for intelligent diagnosis.",
+    "abstract": "Accurate and timely patient diagnosis in healthcare is both critical and challenging due to the vast complexity of medical data. This paper introduces a deep learning approach to patient interpretation and diagnosis, utilizing improved Graph Neural Network (GNN) methods within a collaborative recommendation framework. Traditional diagnostic systems often rely on rule-based or statistical methods, which may struggle to encompass the dynamic interplay of diverse patient features, medical history, and evolving medical knowledge. This paper presents three novel methods for patient interpretation and diagnosis by harnessing the power of GNNs within a collaborative recommendation framework. We developed the Graph-based Hybrid Recommendation System (GHRS), Graph Neural Network-based Collaborative Filtering - No Attention (GCFNA), and Graph Neural Network-based Collaborative Filtering - Yes Attention (GCFYA). A key novelty of our approach is applying GNNs to capture intricate relationships within patient data through adaptive, data-driven methods. This empowers a more accurate, interpretable, and collaborative approach to diagnosis, moving beyond traditional methodologies. Our system employs GNN-based Collaborative Filtering (CF) to model complex patient-patient and patient-symptom relationships within a comprehensive graph structure. This representation not only accommodates various types of medical data but also allows for the integration of external medical knowledge, effectively capturing nuanced disease manifestations and symptom patterns. Another significant innovation is the system’s emphasis on providing interpretable recommendations. It elucidates the rationale behind diagnostic suggestions, addressing a common challenge in healthcare where the reasoning behind recommendations is often obscured. Results on one real hospital dataset and two public datasets were evaluated and compared with other recommendation methods; our methods show better results in all evaluation factors. This interpretability is crucial for gaining the trust of medical professionals and ensuring the acceptance and adherence to recommended treatments. Furthermore, our focus on elderly patients, a demographic with unique healthcare challenges, and the inclusion of diverse factors such as family history, lifestyle, and past medical records, distinguishes our work. The complexity and variety of diseases in this context, as well as the presence of incomplete or missing patient information, make our approach particularly relevant.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Muhammad Aamir",
+      "Yang Ke Yu",
+      "Nomica Choudhry",
+      "Uzair Aslam Bhatti"
+    ],
+    "doi": "10.1038/s41598-025-34065-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41486172/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41486172"
+    }
+  },
+  {
+    "paper_id": "pubmed:41336152",
+    "title": "HypoChainer: A Collaborative System Combining LLMs and Knowledge Graphs for Hypothesis-Driven Scientific Discovery.",
+    "abstract": "Modern scientific discovery faces challenges in integrating the rapidly expanding and diverse knowledge required for exploring novel knowledge in biology. While traditional hypothesis-driven research has proven effective, it is constrained by human cognitive limitations, knowledge complexity, and the high costs of trial-and-error experimentation. Deep learning models, particularly graph neural networks (GNNs), have accelerated scientific progress. However, the vast predictions generated make manual selection for experimental validation impractical. Attempts to leverage large language models (LLMs) for filtering predictions and generating novel hypotheses have been impeded by issues such as hallucinations and the lack of structured knowledge grounding, which undermine their reliability. To address these challenges, we propose HypoChainer, a collaborative visualization framework that integrates human expertise, LLM-driven reasoning, and knowledge graphs (KGs) to enhance scientific discovery visually. HypoChainer operates through three key stages: (1) Contextual Exploration: Domain experts employ retrieval-augmented LLMs (RAGs) and visualizations to extract insights and research focuses from vast GNN predictions, supplemented by interactive explanations for in-depth understanding; (2) Hypothesis Construction: Experts iteratively explore the KG information relevant to the predictions and hypothesis-aligned entities, gaining knowledge and insights while refining the hypothesis through suggestions from LLMs; and (3) Validation Selection: Predictions are prioritized based on the refined hypothesis chains and KG-supported evidence, identifying high-priority candidates for validation. The hypothesis chains are further optimized through visual analytics of the retrieval results. We evaluated the effectiveness of HypoChainer in hypothesis construction and scientific discovery through a case study and expert interviews.",
+    "year": 2026,
+    "venue": "IEEE transactions on visualization and computer graphics",
+    "authors": [
+      "Haoran Jiang",
+      "Shaohan Shi",
+      "Yunjie Yao",
+      "Chang Jiang",
+      "Quan Li"
+    ],
+    "doi": "10.1109/TVCG.2025.3633887",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41336152/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41336152"
+    }
+  },
+  {
+    "paper_id": "pubmed:41289102",
+    "title": "Context-Aware Learning and Pattern Decomposition for Temporal Knowledge Graph Reasoning.",
+    "abstract": "Graph neural network (GNN)-based approaches have achieved remarkable success in temporal knowledge graph (TKG) reasoning. Despite these advances, two critical challenges remain: 1) inadequate modeling of local contextual dynamics, which limits the adaptability of entity and relation representations to specific queries and 2) inadequate mechanisms for handling emerging patterns, that is, novel interactions absent from historical data, which reduces predictive performance in dynamic environments. To address these limitations, we propose TCDR-PD, a temporal and contextual dynamic representation network with pattern decomposition. TCDR-PD introduces a temporal and contextual dynamic representation learning (TCDR) module to capture both global temporal trends and query-specific contextual dynamics, enabling more precise embeddings. Additionally, the pattern decomposition (PD) prediction module explicitly disentangles the prediction of recurring and emerging patterns, enabling tailored strategies to improve reasoning performance. Experiments on four benchmark datasets demonstrate that TCDR-PD outperforms state-of-the-art methods, effectively supporting stable reasoning over evolving TKGs.",
+    "year": 2026,
+    "venue": "IEEE transactions on neural networks and learning systems",
+    "authors": [
+      "Longquan Liao",
+      "Linjiang Zheng",
+      "Jiaxing Shang",
+      "Xu Li",
+      "Jiang Zhong",
+      "Kaiwen Wei",
+      "Yi Tang"
+    ],
+    "doi": "10.1109/TNNLS.2025.3631478",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41289102/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41289102"
+    }
+  },
+  {
+    "paper_id": "pubmed:41253865",
+    "title": "Research on the construction and application of retrieval enhanced generation (RAG) model based on knowledge graph.",
+    "abstract": "Generative pre-trained language models have demonstrated strong capabilities in natural language processing tasks, but they still suffer from \"fact hallucination\" and weak knowledge timeliness in open-domain question answering and text generation. To improve the accuracy and knowledge consistency of generated content, this paper proposes a Knowledge Graph-based Retrieval Enhanced Generation Model (KG-RAG), which integrates structured knowledge graphs into traditional RAG architectures to enhance the model's ability to understand semantic and inferential relationships. The model designs a dual-channel retrieval mechanism: on one hand, it uses Dense Passage Retrieval (DPR) for vectorized retrieval of unstructured texts; on the other hand, it employs graph neural networks (GNN) to structurally retrieve semantic paths within the knowledge graph, and through path attention mechanisms, it filters out the most relevant entity relationship chains to guide the knowledge injection module. Experimental results on the Natural Questions and PubMedQA datasets show that KG-RAG outperforms the original RAG model across multiple evaluation metrics. On the Natural Questions dataset, the ROUGE-L score of the KG-RAG model improves from 41.2 to 46.9, the BLEU score rises from 31.5 to 38.7, and the FactScore increases by 13.6%, significantly enhancing the knowledge consistency of the generated text. In the PubMedQA task, KG-RAG achieves an accuracy rate of 81% in medical question answering. 3%, an improvement of 6.8% points over RAG, demonstrates its advantage in knowledge reasoning within specialized fields. Furthermore, case studies show that KG-RAG can effectively integrate entity paths from knowledge graphs to generate more logical and factual answers in complex question-answering tasks. This method has broad application prospects in intelligent question-answering systems, multi-turn conversations, and educational Q&A scenarios. Future research will consider introducing dynamic knowledge update mechanisms and multimodal graph information to further enhance the capabilities and adaptability of KG-RAG in real-world tasks.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sili Wang",
+      "Heng Yang",
+      "Wei Liu"
+    ],
+    "doi": "10.1038/s41598-025-21222-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41253865/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41253865"
+    }
+  },
+  {
+    "paper_id": "pubmed:41224856",
+    "title": "Reasoning red teaming in healthcare not all paths to a desired outcome are desirable.",
+    "abstract": "Chang et al. showed that large language models can produce unsafe or biased outputs even when superficially accurate. We highlight that LLMs can hide harmful reasoning if only final responses are red-teamed. Monitoring intermediate inference steps, especially in ethically charged clinical scenarios, can reveal manipulative or unethical thought processes. We propose systematic testing of ethically sensitive prompts and thorough chain-of-thought analysis to ensure safe, trustworthy deployment in healthcare.",
+    "year": 2025,
+    "venue": "NPJ digital medicine",
+    "authors": [
+      "Vera Sorin",
+      "Panagiotis Korfiatis",
+      "Girish N Nadkarni",
+      "Eyal Klang"
+    ],
+    "doi": "10.1038/s41746-025-02104-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41224856/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41224856"
+    }
+  },
+  {
+    "paper_id": "pubmed:41131019",
+    "title": "A transformer guided multi modal learning framework for predictive and causal assessment of thermal runaway in high energy batteries.",
+    "abstract": "Machine Learning approaches from the present state either use unimodal data, unable to model elegant long spatial-temporal dependencies in warning systems or create early warning response datasets with limited quantitative interpretability sets. To address these shortcomings, this work introduces T-RUNSAFE, a multi-pronged, machine learning-based predictive prototype for thermal runaway assessment. The framework integrates five specialized modules: (1) ST-Former, a spatiotemporal transformer that encodes thermal gradients from thermal images and sensor logs using temporal self-attention over LSTMs, thus is superior to traditional LSTMs for capturing evolving thermal patterns; (2) FUSE-GEN, adversarial trained dual-encoder variational autoencoder, fusing acoustic emission (AE) signals and thermal embeddings into a shared latent space for early-stage internal degradation detection; (3) DEGRA-GNN, a graph attention network that capitalizes on battery electrode topology to model the spatial propagation of thermal faults; (4) CAUS-RUN, a counterfactual simulation engine employing structural causal models to attribute risk to specific spatial zones for interpretability; and (5) SENSOR-RL, a reinforcement learning module optimizing sensor sampling policies on real-time risk levels that cuts down on sensor power while still holding to detection accuracy. The experimental results show great early prediction accuracy (AUC-ROC > 0.96), high spatial degradation localization accuracy (93.5%), and a 37% decrease in power consumption of sensing. T-RUNSAFE predicts, interprets, and optimizes resource utilization for thermal runaway risk assessment. By integrating deep learning, physics-informed modeling, and causal reasoning, it enables real-time battery safety monitoring. Although challenges remain regarding sensor cost, computational overhead, and chemistry generalization, the study demonstrates the feasibility of advanced onboard battery management systems tailored for next-generation energy applications.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sameer Sheshrao Gajghate",
+      "Muhamad Mat Noor",
+      "Subhash Kumar",
+      "Premendra Janardan Bansod",
+      "Sagar Dnyaneshwar Shelare",
+      "Keval Chandrakant Nikam",
+      "Laxmikant Dattatray Jathar",
+      "Milon Selvam Dennison"
+    ],
+    "doi": "10.1038/s41598-025-20886-x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41131019/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41131019"
+    }
+  },
+  {
+    "paper_id": "pubmed:41086083",
+    "title": "Hier-EgoPack: Hierarchical Egocentric Video Understanding With Diverse Task Perspectives.",
+    "abstract": "Our comprehension of video streams depicting human activities is naturally multifaceted: in just a few moments, we can grasp what is happening, identify the relevance and interactions of objects in the scene, and forecast what will happen soon, everything all at once. To endow autonomous systems with such a holistic perception, learning how to correlate concepts, abstract knowledge across diverse tasks, and leverage tasks synergies when learning novel skills is essential. A significant step in this direction is EgoPack, a unified framework for understanding human activities across diverse tasks with minimal overhead. EgoPack promotes information sharing and collaboration among downstream tasks, essential for efficiently learning new skills. In this paper, we introduce Hier-EgoPack, which advances EgoPack by enabling reasoning also across diverse temporal granularities, which expands its applicability to a broader range of downstream tasks. To achieve this, we propose a novel hierarchical architecture for temporal reasoning equipped with a GNN layer specifically designed to tackle the challenges of multi-granularity reasoning effectively. We evaluate our approach on multiple Ego4D benchmarks involving both clip-level and frame-level reasoning, demonstrating how our hierarchical unified architecture effectively solves these diverse tasks simultaneously.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Simone Alberto Peirone",
+      "Francesca Pistilli",
+      "Antonio Alliegro",
+      "Tatiana Tommasi",
+      "Giuseppe Averta"
+    ],
+    "doi": "10.1109/TPAMI.2025.3621326",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41086083/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41086083"
+    }
+  },
+  {
+    "paper_id": "pubmed:40963553",
+    "title": "DeepMetab: a comprehensive and mechanistically informed graph learning framework for end-to-end drug metabolism prediction.",
+    "abstract": "Predicting drug metabolism remains a long-standing challenge in pharmacokinetics due to the mechanistic complexity of enzymatic transformations and the fragmented nature of current computational tools. Existing models are typically limited to isolated tasks - substrate recognition, metabolic site identification, or metabolite generation - lacking mechanistic fidelity, holistic integration, and chemical interpretability. Here, we introduce DeepMetab, the first comprehensive and mechanistically informed deep graph learning framework for end-to-end prediction of CYP450-mediated drug metabolism. DeepMetab uniquely integrates three essential prediction tasks - substrate profiling, site-of-metabolism (SOM) localization, and metabolite generation - within a unified multi-task architecture. It employs a dual-labeling strategy that simultaneously captures atom- and bond-level reactivity, and infuses multi-scale features including quantum-informed and topological descriptors into a graph neural network (GNN) backbone. A curated knowledge base of expert-derived reaction rules further ensures mechanistic consistency during metabolite synthesis. DeepMetab consistently outperformed existing models across nine major CYP isoforms in all three prediction tasks. Its strong generalizability was further validated on 18 recently FDA-approved drugs, achieving 100% TOP-2 accuracy for SOM prediction and accurately recovering several experimentally confirmed metabolites absent from the training set. Visualization of learned representations reveals expert-level discernment of electronic characteristics, steric architecture, and regiochemical determinants, underscoring the model's interpretability. Together, DeepMetab represents a next-generation AI system that bridges symbolic reaction rules and deep graph reasoning to deliver accurate, interpretable, and end-to-end metabolism predictions, offering tangible value for both preclinical research and regulatory applications.",
+    "year": 2025,
+    "venue": "Chemical science",
+    "authors": [
+      "Yiling Zhou",
+      "Dejun Jiang",
+      "Xiao Wei",
+      "Jiacai Yi",
+      "Yikun Wang",
+      "Youchao Deng",
+      "Dongsheng Cao"
+    ],
+    "doi": "10.1039/d5sc04631a",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40963553/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40963553"
+    }
+  },
+  {
+    "paper_id": "pubmed:40943585",
+    "title": "Multi-Modal Topology-Aware Graph Neural Network for Robust Chemical-Protein Interaction Prediction.",
+    "abstract": "Reliable prediction of chemical-protein interactions (CPIs) remains a key challenge in drug discovery, especially under sparse or noisy biological data. We present MM-TCoCPIn, a Multi-Modal Topology-aware Chemical-Protein Interaction Network that integrates three causally grounded modalities-network topology, biomedical semantics, and a 3D protein structure-into an interpretable graph learning framework. The model processes topological features via a CTC (Comprehensive Topological Characteristics)-based encoder, literature-derived semantics via SciBERT (Scientific Bidirectional Encoder Representations from Transformers), and structural geometry via a GVP-GNN (Geometric Vector Perceptron Graph Neural Network) applied to AlphaFold2 contact graphs. Evaluation on datasets from STITCH, STRING, and PubMed shows that MM-TCoCPIn achieves state-of-the-art performance (AUC = 0.93, F1 = 0.92), outperforming uni-modal baselines. Importantly, ablation and counterfactual analyses confirm that each modality contributes distinct biological insight: topology ensures robustness, semantics enhance recall, and structure sharpens precision. This framework offers a scalable and causally interpretable solution for CPI modeling, bridging the gap between predictive accuracy and mechanistic understanding.",
+    "year": 2025,
+    "venue": "International journal of molecular sciences",
+    "authors": [
+      "Jianshi Wang"
+    ],
+    "doi": "10.3390/ijms26178666",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40943585/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40943585"
+    }
+  },
+  {
+    "paper_id": "pubmed:40791311",
+    "title": "PACKETCLIP: multi-modal embedding of network traffic and language for cybersecurity reasoning.",
+    "abstract": "Traffic classification is vital for cybersecurity, yet encrypted traffic poses significant challenges. We introduce PACKETCLIP which is a multi-modal framework combining packet data with natural language semantics through contrastive pre-training and hierarchical Graph Neural Network (GNN) reasoning. PACKETCLIP integrates semantic reasoning with efficient classification, enabling robust detection of anomalies in encrypted network flows. By aligning textual descriptions with packet behaviors, PACKETCLIP offers enhanced interpretability, scalability, and practical applicability across diverse security scenarios. With a 95% mean AUC, an 11.6% improvement over baselines, and a 92% reduction in intrusion detection training parameters, it is ideally suited for real-time anomaly detection. By bridging advanced machine-learning techniques and practical cybersecurity needs, PACKETCLIP provides a foundation for scalable, efficient, and interpretable solutions to tackle encrypted traffic classification and network intrusion detection challenges in resource-constrained environments.",
+    "year": 2025,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Ryozo Masukawa",
+      "Sanggeon Yun",
+      "Sungheon Jeong",
+      "Wenjun Huang",
+      "Yang Ni",
+      "Ian Bryant",
+      "Nathaniel D Bastian",
+      "Mohsen Imani"
+    ],
+    "doi": "10.3389/frai.2025.1593944",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40791311/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40791311"
+    }
+  },
+  {
+    "paper_id": "pubmed:40680165",
+    "title": "BioGraphFusion: graph knowledge embedding for biological completion and reasoning.",
+    "abstract": "Biomedical knowledge graphs (KGs) are crucial for drug discovery and disease understanding, yet their completion and reasoning are challenging. Knowledge embedding (KE) methods capture global semantics but struggle with dynamic structural integration, while graph neural networks (GNNs) excel locally but often lack semantic understanding. Even ensemble approaches, including those leveraging language models, often fail to achieve a deep, adaptive, and synergistic co-evolution between semantic comprehension and structural learning. Addressing this critical gap in fostering continuous, reciprocal refinement between these two aspects in complex biomedical KGs is paramount. We introduce BioGraphFusion, a novel framework for deeply synergistic semantic and structural learning. BioGraphFusion establishes a global semantic foundation via tensor decomposition, guiding an LSTM-driven mechanism to dynamically refine relation embeddings during graph propagation. This fosters adaptive interplay between semantic understanding and structural learning, further enhanced by query-guided subgraph construction and a hybrid scoring mechanism. Experiments across three key biomedical tasks demonstrate BioGraphFusion's superior performance over state-of-the-art KE, GNN, and ensemble models. A case study on cutaneous malignant melanoma 1 highlights its ability to unveil biologically meaningful pathways. Source code and all data underlying this article are freely available in the GitHub repository at https://github.com/Y-TARL/BioGraphFusion.",
+    "year": 2025,
+    "venue": "Bioinformatics (Oxford, England)",
+    "authors": [
+      "Yitong Lin",
+      "Jiaying He",
+      "Jiahe Chen",
+      "Xinnan Zhu",
+      "Jianwei Zheng",
+      "Tao Bo"
+    ],
+    "doi": "10.1093/bioinformatics/btaf408",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40680165/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40680165"
+    }
+  },
+  {
+    "paper_id": "pubmed:40641005",
+    "title": "Anti-Symmetric Molecular Graph Learning Approach With Residual Adaptive Network Based Fuzzy Inference System for Lethal Dose Forecasting Problem.",
+    "abstract": "In recent times, graph neural networks (GNNs) have become essential tools in molecular graph learning, due to its ability to model intricate structural dependencies. Despite their success, recent research has shown that GNNs still face significant limitations, in capturing long-range dependencies and global structural information. One of the central issues is the over-squashing problem, where information from distant nodes is excessively compressed into fixed-size node representations. This leads to poor information propagation; as a result, ultimately degrading the model's performance-particularly in complex tasks such as lethal dose forecasting, where both local chemical substructures and global molecular topology play vital roles. To overcome these limitations, we propose a novel anti-symmetric fuzzy-enhanced graph learning (ASFGL) model. Generally, our model integrates two key components: an anti-symmetric transformation module and a residual adaptive neuro-fuzzy inference system (ANFIS). The anti-symmetric transformation is designed based on stable graph ordinary differential equations (ODE); thus, ensuring a non-dissipative and stable propagation of information across multiple graph layers. This mechanism effectively mitigates the over-squashing issue, therefore, allows our model to better capture long-range dependencies in a stable manner. Complementarily, the ANFIS module employs bell-shaped membership functions to support robust and interpretable learning; as a result, enabling adaptive rule-based reasoning that refines the molecular representations learned from the graph structure. By combining these modules, the ASFGL model bridges local message passing and global structural awareness, yielding expressive molecular embeddings well-designed for toxicity prediction problems. We evaluate our proposed ASFGL model on different benchmark molecular datasets, where it consistently outperforms state-of-the-art GNN-based architectures in terms of MAE/RMSE evaluation metrics, particularly in scenarios requiring deep representation learning over large interactions. These results highlight the efficacy of integrating anti-symmetric dynamics and fuzzy inference systems in advancing molecular property prediction and overcoming foundational challenges in GNN design.",
+    "year": 2025,
+    "venue": "Journal of computational chemistry",
+    "authors": [
+      "Linh Nguyen Thi My",
+      "Tham Vo"
+    ],
+    "doi": "10.1002/jcc.70176",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40641005/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40641005"
+    }
+  }
+]

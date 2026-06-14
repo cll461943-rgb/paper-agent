@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2204.12322v2",
+  "title": "RAPQ: Rescuing Accuracy for Power-of-Two Low-bit Post-training Quantization",
+  "abstract": "We introduce a Power-of-Two low-bit post-training quantization(PTQ) method for deep neural network that meets hardware requirements and does not call for long-time retraining. Power-of-Two quantization can convert the multiplication introduced by quantization and dequantization to bit-shift that is adopted by many efficient accelerators. However, the Power-of-Two scale factors have fewer candidate values, which leads to more rounding or clipping errors. We propose a novel Power-of-Two PTQ framework, dubbed RAPQ, which dynamically adjusts the Power-of-Two scales of the whole network instead of statically determining them layer by layer. It can theoretically trade off the rounding error and clipping error of the whole network. Meanwhile, the reconstruction method in RAPQ is based on the BN information of every unit. Extensive experiments on ImageNet prove the excellent performance of our proposed method. Without bells and whistles, RAPQ can reach accuracy of 65% and 48% on ResNet-18 and MobileNetV2 respectively with weight INT2 activation INT4. We are the first to propose the more constrained but hardware-friendly Power-of-Two quantization scheme for low-bit PTQ specially and prove that it can achieve nearly the same accuracy as SOTA PTQ method. The code was released.",
+  "year": 2022,
+  "venue": null,
+  "authors": [
+    "Hongyi Yao",
+    "Pu Li",
+    "Jian Cao",
+    "Xiangcheng Liu",
+    "Chenying Xie",
+    "Bingzhang Wang"
+  ],
+  "doi": null,
+  "arxiv_id": "2204.12322v2",
+  "url": "http://arxiv.org/abs/2204.12322v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

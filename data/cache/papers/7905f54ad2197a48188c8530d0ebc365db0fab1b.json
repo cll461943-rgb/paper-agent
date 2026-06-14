@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2004.04760v1",
+  "title": "Efficient Kernel Object Management for Tiered Memory Systems with KLOC",
+  "abstract": "Software-controlled heterogeneous memory systems have the potential to improve performance, efficiency, and cost tradeoffs in emerging systems. Delivering on this promise requires an efficient operating system (OS) mechanisms and policies for data management. Unfortunately, modern OSes do not support efficient tiering of data between heterogeneous memories. While this problem is known (and is being studied) for application-level data pages, the question of how best to tier OS kernel objects has largely been ignored. We show that careful kernel object management is vital to the performance of software-controlled tiered memory systems. We find that the state-of-the-art OS page management research leaves considerable performance on the table by overlooking how best to tier, migrate, and manage kernel objects like inodes, dentry caches, journal blocks, network socket buffers, etc., associated with the filesystem and networking stack. In response, we characterize hotness, reuse, and liveness properties of kernel objects to develop appropriate tiering/migration mechanisms and policies. We evaluate our proposal using a real-system emulation framework on large-scale workloads like RocksDB, Redis, Cassandra, and Spark and achieve 1.4X to 4X higher throughput compared to the prior art.",
+  "year": 2020,
+  "venue": null,
+  "authors": [
+    "Sudarsun Kannan",
+    "Yujie Ren",
+    "Abhishek Bhatacharjee"
+  ],
+  "doi": null,
+  "arxiv_id": "2004.04760v1",
+  "url": "http://arxiv.org/abs/2004.04760v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

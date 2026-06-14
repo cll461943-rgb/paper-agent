@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:41932902",
+  "title": "Human analogical guidance amplifies LLM performance through cross-domain knowledge activation.",
+  "abstract": "Understanding what enables large language models (LLMs) to generate complex technical solutions has immediate implications for deployment strategies. We investigate these requirements through historical counterfactual analysis using Fluid Catalytic Cracking (FCC, 1942), a transformative petroleum breakthrough, as testbed. Across 250 trials with Qwen-2.5-7B constrained to pre-1936 literature via retrieval-augmented generation (RAG), we systematically manipulate human analogical guidance and semantic representations (activation steering targeting specific transformer layers) to establish necessary conditions for guided reasoning. Three findings emerge: (1) Human analogical guidance amplifies performance 10-fold. A fixed semantic query provides identical RAG context across all conditions, so guidance cannot change what documents the model receives. Response content analysis reveals guidance instead redirects attention from in-domain petroleum concepts (heat management utilized in 90% baseline, 5% scaffolded) toward cross-domain principles already present in context (Stokes' Law utilized in 0% baseline, 90% scaffolded; particle suspension 0% vs 100%), demonstrating guidance activates latent knowledge the model possesses but fails to utilize autonomously. (2) Representation engineering via steering completely suppresses generation. Steering Layer 18, the mid-depth semantic processing layer in the 28-layer transformer architecture, eliminates FCC synthesis despite unchanged context, proving steering disrupts internal semantic processing required for analogical mapping rather than blocking knowledge access. (3) Guidance cannot compensate for ablated representations, four variants (explicit analogies, detailed chain-of-thought, generic CoT, minimal prompts) fail uniformly under steering (0/80, 0%), establishing guidance requires intact semantic substrates. In Representation Engineering application via steering, a sharp threshold between α = 2.0 (80% success) and α = 4.5 (0% success) indicates architectural brittleness where intervention strength exceeds representational resilience. Zero anachronistic terminology indicating temporal leakage detected validates temporal constraints via RAG (0/250 responses; terms generated as part of proposed solutions, such as \"fluidized,\" are excluded from this count as they represent the model's innovation rather than knowledge contamination). Findings clarify productive human-AI collaboration paradigms: structured guidance activating latent model capabilities via analogical bridges, rather than autonomous discovery. We introduce representation engineering with RAG-constrained historical analysis as generalizable methodology for probing architectural requirements of guided reasoning.",
+  "year": 2026,
+  "venue": "Nature communications",
+  "authors": [
+    "R Larraz",
+    "A Corma"
+  ],
+  "doi": "10.1038/s41467-026-70873-7",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41932902/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41932902"
+  }
+}

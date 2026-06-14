@@ -1,0 +1,77 @@
+{
+  "paper_id": "https://openalex.org/W3214679265",
+  "title": "RMM: Reinforced Memory Management for Class-Incremental Learning",
+  "abstract": "Class-Incremental Learning (CIL) [40] trains classifiers under a strict memory budget: in each incremental phase, learning is done for new data, most of which is abandoned to free space for the next phase. The preserved data are exemplars used for replaying. However, existing methods use a static and ad hoc strategy for memory allocation, which is often sub-optimal. In this work, we propose a dynamic memory management strategy that is optimized for the incremental phases and different object classes. We call our method reinforced memory management (RMM), leveraging reinforcement learning. RMM training is not naturally compatible with CIL as the past, and future data are strictly non-accessible during the incremental phases. We solve this by training the policy function of RMM on pseudo CIL tasks, e.g., the tasks built on the data of the 0-th phase, and then applying it to target tasks. RMM propagates two levels of actions: Level-1 determines how to split the memory between old and new classes, and Level-2 allocates memory for each specific class. In essence, it is an optimizable and general method for memory management that can be used in any replaying-based CIL method. For evaluation, we plug RMM into two top-performing baselines (LUCIR+AANets and POD+AANets [30]) and conduct experiments on three benchmarks (CIFAR-100, ImageNet-Subset, and ImageNet-Full). Our results show clear improvements, e.g., boosting POD+AANets by 3.6%, 4.4%, and 1.9% in the 25-Phase settings of the above benchmarks, respectively.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Yaoyao Liu",
+    "Bernt Schiele",
+    "Qianru Sun"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2301.05792",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2301.05792",
+  "citation_count": 36,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like"
+  ],
+  "references": [
+    "https://openalex.org/W1663973292",
+    "https://openalex.org/W1682403713",
+    "https://openalex.org/W2014208555",
+    "https://openalex.org/W2036963181",
+    "https://openalex.org/W2117539524",
+    "https://openalex.org/W2119717200",
+    "https://openalex.org/W2194775991",
+    "https://openalex.org/W2473930607",
+    "https://openalex.org/W2553303224",
+    "https://openalex.org/W2565989828",
+    "https://openalex.org/W2762872434",
+    "https://openalex.org/W2963390791",
+    "https://openalex.org/W2963559848",
+    "https://openalex.org/W2963628712",
+    "https://openalex.org/W2964088867",
+    "https://openalex.org/W2966628687",
+    "https://openalex.org/W2970689606",
+    "https://openalex.org/W2971091362",
+    "https://openalex.org/W2981864462",
+    "https://openalex.org/W3034836583",
+    "https://openalex.org/W3034856281",
+    "https://openalex.org/W3097784654",
+    "https://openalex.org/W3107810305",
+    "https://openalex.org/W3118608800",
+    "https://openalex.org/W3173493671",
+    "https://openalex.org/W3175516982",
+    "https://openalex.org/W3178686235",
+    "https://openalex.org/W3202568778"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Boosting (machine learning)",
+      "Class (philosophy)",
+      "Reinforcement learning",
+      "Machine learning",
+      "Artificial intelligence",
+      "Incremental learning"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2125652721",
+      "https://openalex.org/W1540371141",
+      "https://openalex.org/W4231274751",
+      "https://openalex.org/W1549363203",
+      "https://openalex.org/W2154063878",
+      "https://openalex.org/W2556012038",
+      "https://openalex.org/W1489772951",
+      "https://openalex.org/W3082059448",
+      "https://openalex.org/W4313640622",
+      "https://openalex.org/W2885226678"
+    ]
+  }
+}

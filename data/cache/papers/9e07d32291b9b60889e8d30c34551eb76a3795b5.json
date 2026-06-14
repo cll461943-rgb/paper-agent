@@ -1,0 +1,25 @@
+{
+  "paper_id": "http://arxiv.org/abs/2511.05898v2",
+  "title": "Q$^2$: Quantization-Aware Gradient Balancing and Attention Alignment for Low-Bit Quantization",
+  "abstract": "Quantization-aware training (QAT) has achieved remarkable success in low-bit ($\\leq$4-bit) quantization for classification networks. However, when applied to more complex visual tasks such as object detection and image segmentation, performance still suffers significant degradation. A key cause of this limitation has been largely overlooked in the literature. In this work, we revisit this phenomenon from a new perspective and identify a major failure factor: gradient imbalance at feature fusion stages, induced by accumulated quantization errors. This imbalance biases the optimization trajectory and impedes convergence under low-bit quantization. Based on this diagnosis, we propose Q$^2$, a two-pronged framework comprising: (1) Quantization-aware Gradient Balancing Fusion (Q-GBFusion), a closed-loop mechanism that dynamically rebalances gradient contributions during feature fusion; and (2) Quantization-aware Attention Distribution Alignment (Q-ADA), a parameter-free supervision strategy that reconstructs the supervision distribution using semantic relevance and quantization sensitivity, yielding more stable and reliable supervision to stabilize training and accelerate convergence. Extensive experiments show that our method, as a plug-and-play and general strategy, can be integrated into various state-of-the-art QAT pipelines, achieving an average +2.5\\% mAP gain on object detection and a +3.7\\% mDICE improvement on image segmentation. Notably, it is applied only during training and introduces no inference-time overhead, making it highly practical for real-world deployment.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Zhaoyang Wang",
+    "Dong Wang"
+  ],
+  "doi": null,
+  "arxiv_id": "2511.05898v2",
+  "url": "http://arxiv.org/abs/2511.05898v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

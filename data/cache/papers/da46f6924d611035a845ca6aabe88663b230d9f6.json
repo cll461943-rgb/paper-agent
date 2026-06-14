@@ -1,0 +1,53 @@
+{
+  "paper_id": "https://openalex.org/W7163601970",
+  "title": "Generative AI for Hardening Security: From Training Data Augmentation, Language Alignment, to Code Vulnerability Demonstration",
+  "abstract": "Machine learning-based cybersecurity systems face fundamental data limitations that constrain their effectiveness across diverse threat environments. Training data for security classifiers is inherently scarce, imbalanced, and subject to distributional shift, degrading generalization under evolving threat landscapes. Foundation model customization pipelines are vulnerable to data poisoning that induces harmful behavioral outputs. Vulnerability detection tools identify risks in software dependencies but provide no mechanism for determining whether reported vulnerabilities are concretely exploitable within a specific application context. This dissertation presents three contributions that leverage generative AI to address these challenges across training data augmentation, language alignment, and code vulnerability demonstration. First, we characterize the data challenges most commonly degrading ML-based security classifier performance through a measurement study of 35 papers published in top security venues. Building on this, we propose Nimai, a controlled synthetic data generation framework based on a Vector-Quantized Variational Autoencoder, designed to augment underrepresented regions of security feature spaces. Evaluated across seven security classification tasks, Nimai improves classifier performance in four of seven tasks, achieving up to 32 percent accuracy improvement under severe data constraints, and recovers up to 60.4 percent of performance degraded by concept drift. Second, we investigate the security of foundation model customization pipelines under toxicity injection attacks. We propose a healing data approach that employs a safety-aligned large language model to generate contextually relevant, prosocial replacements for identified toxic samples, actively instilling desirable behavioral alignment rather than discarding harmful content. Fine-tuning on the healed dataset achieves near-zero Response Toxicity Rates across three model architectures while preserving conversational quality, degrading gracefully under imperfect toxicity classifiers. Third, we address the challenge of bridging vulnerability detection and real-world exploitability assessment in software supply chains. We propose PoVSmith, an agent-based framework for automated proof-of-vulnerability test generation in Java applications. PoVSmith identifies application-level entry points to vulnerable library APIs through agent-based call path analysis, then iteratively generates, executes, and refines JUnit test cases guided by exemplar tests and execution feedback. Evaluated on 33 Java application-library pairs, PoVSmith reveals 158 unique application-level entry points to vulnerable library APIs and correctly identifies 152 of them with their call paths, achieving 96 percent precision. Using this call information, PoVSmith generates 152 PoV tests, of which 84, or 55 percent, demonstrate feasible ways of exploiting library vulnerabilities through application code. Collectively, these contributions demonstrate that generative AI can systematically strengthen cybersecurity pipelines by augmenting scarce training data to improve classifier generalization, curating conversational fine-tuning data to enforce safe model behavior, and producing executable evidence of real-world vulnerability exploitability, establishing generative AI as a unifying instrument for hardening security systems across data, model, and system layers.",
+  "year": 2026,
+  "venue": "VTechWorks (Virginia Tech)",
+  "authors": [
+    "Shravya Kanchi"
+  ],
+  "doi": null,
+  "arxiv_id": null,
+  "url": "https://hdl.handle.net/10919/143222",
+  "citation_count": 0,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Machine learning",
+      "Artificial intelligence",
+      "Personalization",
+      "Classifier (UML)",
+      "Vulnerability management",
+      "Leverage (statistics)",
+      "Computer security",
+      "Vulnerability (computing)",
+      "Training set",
+      "Vulnerability assessment",
+      "Software security assurance",
+      "Discriminative model",
+      "Software",
+      "Data security",
+      "Codebase",
+      "Generative model",
+      "Data access",
+      "Language model",
+      "Data modeling",
+      "Generative grammar",
+      "Data mining",
+      "Code (set theory)",
+      "Data integrity",
+      "Threat model"
+    ],
+    "cited_by_api_url": null,
+    "related_works": []
+  }
+}

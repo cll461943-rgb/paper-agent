@@ -1,0 +1,55 @@
+{
+  "paper_id": "https://openalex.org/W4407384832",
+  "title": "OntoTune: Ontology-Driven Self-training for Aligning Large Language Models",
+  "abstract": "Existing domain-specific Large Language Models (LLMs) are typically developed by fine-tuning general-purposed LLMs with large-scale domain-specific corpora. However, training on large-scale corpora often fails to effectively organize domain knowledge of LLMs, leading to fragmented understanding. Inspired by how humans connect concepts and organize knowledge through mind maps, we aim to emulate this approach by using ontology with hierarchical conceptual knowledge to reorganize LLM's domain knowledge. From this perspective, we propose an ontology-driven self-training framework called OntoTune, which aims to align LLMs with ontology through in-context learning, enabling the generation of responses guided by the ontology. We leverage in-context learning to identify whether the LLM has acquired the specific concept's ontology knowledge, and select the entries not yet mastered by LLM as the training set to further align the LLM with ontology. Compared to existing domain LLMs based on newly collected large-scale domain-specific corpora, our OntoTune, which relies on the existing, long-term developed ontology and LLM itself, significantly reduces data maintenance costs and offers improved generalization ability. We conduct our study in the medical domain to evaluate the effectiveness of OntoTune, utilizing a standardized medical ontology, SNOMED CT as our ontology source. Experimental results demonstrate that OntoTune achieves state-of-the-art performance in both in-ontology task hypernym discovery and out-of-ontology task medical domain QA. Moreover, compared to the latest direct ontology injection method TaxoLLaMA, our OntoTune better preserves original knowledge of LLM. The code and data are available at https://github.com/zjukg/OntoTune.",
+  "year": 2025,
+  "venue": "ArXiv.org",
+  "authors": [
+    "Zhiqiang Liu",
+    "Gan, Chengtao",
+    "Junjie Wang",
+    "Yichi Zhang",
+    "Zhongpu Bo",
+    "Mengshu Sun",
+    "Huajun Chen",
+    "Wen Zhang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2502.05478",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2502.05478",
+  "citation_count": 3,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Training (meteorology)",
+      "Ontology",
+      "Computer science",
+      "Natural language processing",
+      "Artificial intelligence",
+      "Geography",
+      "Epistemology",
+      "Philosophy",
+      "Meteorology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W230091440",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2233261550",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W3204019825"
+    ]
+  }
+}

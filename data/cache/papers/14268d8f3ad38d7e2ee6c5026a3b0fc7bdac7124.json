@@ -1,0 +1,55 @@
+{
+  "paper_id": "https://openalex.org/W4409347493",
+  "title": "OAC: Output-adaptive Calibration for Accurate Post-training Quantization",
+  "abstract": "Deployment of Large Language Models (LLMs) has major computational costs, due to their rapidly expanding size. Compression of LLMs reduces the memory footprint, latency, and energy required for their inference. Post-training Quantization (PTQ) techniques have been developed to compress LLMs while avoiding expensive re-training. Most PTQ approaches formulate the quantization error based on a layer-wise Euclidean loss, ignoring the model output. Then, each layer is calibrated using its layer-wise Hessian to update the weights towards minimizing the quantization error. The Hessian is also used for detecting the most salient weights to quantization. Such PTQ approaches are prone to accuracy drop in low-precision quantization. We propose Output-adaptive Calibration (OAC) to incorporate the model output in the calibration process. We formulate the quantization error based on the distortion of the output cross-entropy loss. OAC approximates the output-adaptive Hessian for each layer under reasonable assumptions to reduce the computational complexity. The output-adaptive Hessians are used to update the weight matrices and detect the salient weights towards maintaining the model output. Our proposed method outperforms the state-of-the-art baselines such as SpQR and BiLLM, especially, at extreme low-precision (2-bit and binary) quantization.",
+  "year": 2025,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+    "Ali Edalati",
+    "Alireza Ghaffari",
+    "Mahsa Ghazvini Nejad",
+    "Lu Hou",
+    "Boxing Chen",
+    "Masoud Asgharian",
+    "Vahid Partovi Nia"
+  ],
+  "doi": "https://doi.org/10.1609/aaai.v39i16.33807",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1609/aaai.v39i16.33807",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Calibration",
+      "Quantization (signal processing)",
+      "Training (meteorology)",
+      "Computer science",
+      "Mathematics",
+      "Artificial intelligence",
+      "Algorithm",
+      "Statistics",
+      "Geography",
+      "Meteorology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W1979597421",
+      "https://openalex.org/W2007980826",
+      "https://openalex.org/W2061531152",
+      "https://openalex.org/W3002753104",
+      "https://openalex.org/W2077600819",
+      "https://openalex.org/W2142036596",
+      "https://openalex.org/W2072657027",
+      "https://openalex.org/W2962838298",
+      "https://openalex.org/W2600246793"
+    ]
+  }
+}

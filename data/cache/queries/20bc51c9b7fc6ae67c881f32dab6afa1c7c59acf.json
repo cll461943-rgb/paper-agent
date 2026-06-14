@@ -1,0 +1,798 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2105.00760v2",
+    "title": "A Unified Theory of Robust and Distributionally Robust Optimization via the Primal-Worst-Equals-Dual-Best Principle",
+    "abstract": "Robust and distributionally robust optimization are modeling paradigms for decision-making under uncertainty where the uncertain parameters are only known to reside in an uncertainty set or are governed by any probability distribution from within an ambiguity set, respectively, and a decision is sought that minimizes a cost function under the most adverse outcome of the uncertainty. In this paper, we develop a rigorous and general theory of robust and distributionally robust nonlinear optimization using the language of convex analysis. Our framework is based on a generalized `primal-worst-equals-dual-best' principle that establishes strong duality between a semi-infinite primal worst and a non-convex dual best formulation, both of which admit finite convex reformulations. This principle offers an alternative formulation for robust optimization problems that obviates the need to mobilize the machinery of abstract semi-infinite duality theory to prove strong duality in distributionally robust optimization. We illustrate the modeling power of our approach through convex reformulations for distributionally robust optimization problems whose ambiguity sets are defined through general optimal transport distances, which generalize earlier results for Wasserstein ambiguity sets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jianzhe Zhen",
+      "Daniel Kuhn",
+      "Wolfram Wiesemann"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.00760v2",
+    "url": "http://arxiv.org/abs/2105.00760v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.05314v2",
+    "title": "A Distributionally Robust Optimization Approach for Unit Commitment in Microgrids",
+    "abstract": "This paper proposes a distributionally robust unit commitment approach for microgrids under net load and electricity market price uncertainty. The key thrust of the proposed approach is to leverage the Kullback-Leibler divergence to construct an ambiguity set of probability distributions and formulate an optimization problem that minimizes the expected costs brought about by the worst-case distribution in the ambiguity set. The proposed approach effectively exploits historical data and capitalizes on the k-means clustering algorithm, in conjunction with the soft dynamic time warping score, to form the nominal probability distribution and its associated support. A two-level decomposition method is developed to enable the efficient solution of the devised problem. We carry out representative studies and quantify the relative merits of the proposed approach vis-à-vis a stochastic optimization-based model under different divergence tolerance values.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ogun Yurdakul",
+      "Fikret Sivrikaya",
+      "Sahin Albayrak"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.05314v2",
+    "url": "http://arxiv.org/abs/2011.05314v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.19280v1",
+    "title": "Group Distributionally Robust Optimization-Driven Reinforcement Learning for LLM Reasoning",
+    "abstract": "Recent progress in Large Language Model (LLM) reasoning is increasingly driven by the refinement of post-training loss functions and alignment strategies. However, standard Reinforcement Learning (RL) paradigms like Group Relative Policy Optimization (GRPO) remain constrained by static uniformity: uniform prompt sampling and a fixed number of rollouts per prompt. For heterogeneous, heavy-tailed reasoning data, this creates structural inefficiencies that waste compute on already-solved patterns while under-training the long tail of hard problems. To address this, we propose Multi-Adversary Group Distributionally Robust Optimization (GDRO), an optimization-first framework that moves beyond uniform reasoning models by dynamically adapting the training distribution. We introduce an Online Difficulty Classifier that partitions prompts into dynamic pass@k difficulty groups. We then propose two independent GDRO games for post-training: (1) Prompt-GDRO, which employs an EMA-debiased multiplicative-weights bandit sampler to target the intensive difficulty margin and upweight persistently hard groups without frequency bias; and (2) Rollout-GDRO, which uses a shadow-price controller to reallocate rollouts across groups, maximizing gradient variance reduction on hard tasks under a fixed mean budget (compute-neutral). We provide no-regret guarantees for both controllers and additionally a variance-proxy analysis motivating a square-root optimal rollout allocation for Rollout-GDRO. We validate our framework on the DAPO 14.1k dataset using Qwen3-Base models. Prompt-GDRO and Rollout-GDRO achieve average relative gains of +10.6% and +10.1%, respectively, in pass@8 accuracy across 1.7B, 4B, and 8B scales compared to the GRPO baseline. Qualitative analysis shows an emergent curriculum: the adversaries shift resources to the evolving reasoning frontier, enhancing the reasoning model's performance.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Kishan Panaganti",
+      "Zhenwen Liang",
+      "Wenhao Yu",
+      "Haitao Mi",
+      "Dong Yu"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.19280v1",
+    "url": "http://arxiv.org/abs/2601.19280v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.13269v3",
+    "title": "Wasserstein Distributionally Robust Estimation in High Dimensions: Performance Analysis and Optimal Hyperparameter Tuning",
+    "abstract": "Distributionally robust optimization (DRO) has become a powerful framework for estimation under uncertainty, offering strong out-of-sample performance and principled regularization. In this paper, we propose a DRO-based method for linear regression and address a central question: how to optimally choose the robustness radius, which controls the trade-off between robustness and accuracy. Focusing on high-dimensional settings where the dimension and the number of samples are both large and comparable in size, we employ tools from high-dimensional asymptotic statistics to precisely characterize the estimation error of the resulting estimator. Remarkably, this error can be recovered by solving a simple convex-concave optimization problem involving only four scalar variables. This characterization enables efficient selection of the radius that minimizes the estimation error. In doing so, it achieves the same effect as cross-validation, but at a fraction of the computational cost. Numerical experiments confirm that our theoretical predictions closely match empirical performance and that the optimal radius selected through our method aligns with that chosen by cross-validation, highlighting both the accuracy and the practical benefits of our approach.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Liviu Aolaritei",
+      "Soroosh Shafiee",
+      "Florian Dörfler"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.13269v3",
+    "url": "http://arxiv.org/abs/2206.13269v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1306.3437v3",
+    "title": "A cutting surface algorithm for semi-infinite convex programming with an application to moment robust optimization",
+    "abstract": "We present and analyze a central cutting surface algorithm for general semi-infinite convex optimization problems, and use it to develop a novel algorithm for distributionally robust optimization problems in which the uncertainty set consists of probability distributions with given bounds on their moments. Moments of arbitrary order, as well as non-polynomial moments can be included in the formulation. We show that this gives rise to a hierarchy of optimization problems with decreasing levels of risk-aversion, with classic robust optimization at one end of the spectrum, and stochastic programming at the other. Although our primary motivation is to solve distributionally robust optimization problems with moment uncertainty, the cutting surface method for general semi-infinite convex programs is also of independent interest. The proposed method is applicable to problems with non-differentiable semi-infinite constraints indexed by an infinite-dimensional index set. Examples comparing the cutting surface algorithm to the central cutting plane algorithm of Kortanek and No demonstrate the potential of our algorithm even in the solution of traditional semi-infinite convex programming problems whose constraints are differentiable and are indexed by an index set of low dimension. After the rate of convergence analysis of the cutting surface algorithm, we extend the authors' moment matching scenario generation algorithm to a probabilistic algorithm that finds optimal probability distributions subject to moment constraints. The combination of this distribution optimization method and the central cutting surface algorithm yields a solution to a family of distributionally robust optimization problems that are considerably more general than the ones proposed to date.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Sanjay Mehrotra",
+      "David Papp"
+    ],
+    "doi": null,
+    "arxiv_id": "1306.3437v3",
+    "url": "http://arxiv.org/abs/1306.3437v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2012.07116v1",
+    "title": "Kullback-Leibler Divergence-Based Distributionally Robust Unit Commitment Under Net Load Uncertainty",
+    "abstract": "The deepening penetration of renewable resources into power systems entails great difficulties that have not been surmounted satisfactorily. An issue that merits special attention is the short-term planning of power systems under net load uncertainty. To this end, we work out a distributionally robust unit commitment methodology that expressly assesses the uncertainty associated with net load. The principal strength of the proposed methodology lies in its ability to represent the probabilistic nature of net load without having to set forth its probability distribution. This strength is brought about by the notion of ambiguity set, for the construction of which the Kullback-Leibler divergence is employed in this paper. We demonstrate the effectiveness of the proposed methodology on real-world data using representative studies. The sensitivity analyses performed provide quantitative answers to a broad array of what if questions on the influence of divergence tolerance and dataset size on optimal solutions.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ogun Yurdakul",
+      "Fikret Sivrikaya",
+      "Sahin Albayrak"
+    ],
+    "doi": null,
+    "arxiv_id": "2012.07116v1",
+    "url": "http://arxiv.org/abs/2012.07116v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.08826v2",
+    "title": "Regularization for Wasserstein Distributionally Robust Optimization",
+    "abstract": "Optimal transport has recently proved to be a useful tool in various machine learning applications needing comparisons of probability measures. Among these, applications of distributionally robust optimization naturally involve Wasserstein distances in their models of uncertainty, capturing data shifts or worst-case scenarios. Inspired by the success of the regularization of Wasserstein distances in optimal transport, we study in this paper the regularization of Wasserstein distributionally robust optimization. First, we derive a general strong duality result of regularized Wasserstein distributionally robust problems. Second, we refine this duality result in the case of entropic regularization and provide an approximation result when the regularization parameters vanish.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Waïss Azizian",
+      "Franck Iutzeler",
+      "Jérôme Malick"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.08826v2",
+    "url": "http://arxiv.org/abs/2205.08826v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1908.05659v1",
+    "title": "Distributionally Robust Optimization: A Review",
+    "abstract": "The concepts of risk-aversion, chance-constrained optimization, and robust optimization have developed significantly over the last decade. Statistical learning community has also witnessed a rapid theoretical and applied growth by relying on these concepts. A modeling framework, called distributionally robust optimization (DRO), has recently received significant attention in both the operations research and statistical learning communities. This paper surveys main concepts and contributions to DRO, and its relationships with robust optimization, risk-aversion, chance-constrained optimization, and function regularization.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Hamed Rahimian",
+      "Sanjay Mehrotra"
+    ],
+    "doi": null,
+    "arxiv_id": "1908.05659v1",
+    "url": "http://arxiv.org/abs/1908.05659v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.16346v1",
+    "title": "Data-driven Multistage Distributionally Robust Linear Optimization with Nested Distance",
+    "abstract": "We study multistage distributionally robust linear optimization, where the uncertainty set is defined as a ball of distribution centered at a scenario tree using the nested distance. The resulting minimax problem is notoriously difficult to solve due to its inherent non-convexity. In this paper, we demonstrate that, under mild conditions, the robust risk evaluation of a given policy can be expressed in an equivalent recursive form. Furthermore, assuming stagewise independence, we derive equivalent dynamic programming reformulations to find an optimal robust policy that is time-consistent and well-defined on unseen sample paths. Our reformulations reconcile two modeling frameworks: the multistage-static formulation (with nested distance) and the multistage-dynamic formulation (with one-period Wasserstein distance). Moreover, we identify tractable cases when the value functions can be computed efficiently using convex optimization techniques.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rui Gao",
+      "Rohit Arora",
+      "Yizhe Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.16346v1",
+    "url": "http://arxiv.org/abs/2407.16346v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.08433v3",
+    "title": "On Distributionally Robust Multistage Convex Optimization: Data-driven Models and Performance",
+    "abstract": "This paper presents a novel algorithmic study with extensive numerical experiments of distributionally robust multistage convex optimization (DR-MCO). Following the previous work on dual dynamic programming (DDP) algorithmic framework for DR-MCO, we focus on data-driven DR-MCO models with Wasserstein ambiguity sets that allow probability measures with infinite supports. These data-driven Wasserstein DR-MCO models have out-of-sample performance guarantees and adjustable in-sample conservatism. Then by exploiting additional concavity or convexity in the uncertain cost functions, we design exact single stage subproblem oracle (SSSO) implementations that ensure the convergence of DDP algorithms. We test the data-driven Wasserstein DR-MCO models against multistage robust convex optimization (MRCO), risk-neutral and risk-averse multistage stochastic convex optimization (MSCO) models on multi-commodity inventory problems and hydro-thermal power planning problems. The results show that our DR-MCO models could outperform MRCO and MSCO models when the data size is small.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Shixuan Zhang",
+      "Xu Andy Sun"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.08433v3",
+    "url": "http://arxiv.org/abs/2210.08433v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1301.0091v10",
+    "title": "On the Robust Optimal Stopping Problem",
+    "abstract": "We study a robust optimal stopping problem with respect to a set $\\cP$ of mutually singular probabilities. This can be interpreted as a zero-sum controller-stopper game in which the stopper is trying to maximize its pay-off while an adverse player wants to minimize this payoff by choosing an evaluation criteria from $\\cP$. We show that the \\emph{upper Snell envelope $\\ol{Z}$} of the reward process $Y$ is a supermartingale with respect to an appropriately defined nonlinear expectation $\\ul{\\sE}$, and $\\ol{Z}$ is further an $\\ul{\\sE}-$martingale up to the first time $\\t^*$ when $\\ol{Z}$ meets $Y$. Consequently, $\\t^*$ is the optimal stopping time for the robust optimal stopping problem and the corresponding zero-sum game has a value. Although the result seems similar to the one obtained in the classical optimal stopping theory, the mutual singularity of probabilities and the game aspect of the problem give rise to major technical hurdles, which we circumvent using some new methods.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Erhan Bayraktar",
+      "Song Yao"
+    ],
+    "doi": null,
+    "arxiv_id": "1301.0091v10",
+    "url": "http://arxiv.org/abs/1301.0091v10",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.06759v4",
+    "title": "On Distributionally Robust Multistage Convex Optimization: New Algorithms and Complexity Analysis",
+    "abstract": "This paper presents an algorithmic study and complexity analysis for solving distributionally robust multistage convex optimization (DR-MCO) problems. Our main contribution is a novel nonconsecutive dual dynamic programming (NDDP) algorithm which explores different stages in an adaptive fashion. In contrast with the usual consecutive dual dynamic programming (CDDP) algorithm, we show that NDDP reduces the subproblem complexity from quadratic to linear dependency on the number of stages. Two different DR-MCO examples are also presented to show the efficiency and effectiveness of the proposed NDDP algorithm.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Shixuan Zhang",
+      "Xu Andy Sun"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.06759v4",
+    "url": "http://arxiv.org/abs/2010.06759v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.04745v2",
+    "title": "Distributionally Robust Optimization for Sequential Decision Making",
+    "abstract": "The distributionally robust Markov Decision Process (MDP) approach asks for a distributionally robust policy that achieves the maximal expected total reward under the most adversarial distribution of uncertain parameters. In this paper, we study distributionally robust MDPs where ambiguity sets for the uncertain parameters are of a format that can easily incorporate in its description the uncertainty's generalized moment as well as statistical distance information. In this way, we generalize existing works on distributionally robust MDP with generalized-moment-based and statistical-distance-based ambiguity sets to incorporate information from the former class such as moments and dispersions to the latter class that critically depends on empirical observations of the uncertain parameters. We show that, under this format of ambiguity sets, the resulting distributionally robust MDP remains tractable under mild technical conditions. To be more specific, a distributionally robust policy can be constructed by solving a sequence of one-stage convex optimization subproblems.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Zhi Chen",
+      "Pengqian Yu",
+      "William B. Haskell"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.04745v2",
+    "url": "http://arxiv.org/abs/1801.04745v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.00362v4",
+    "title": "A Short and General Duality Proof for Wasserstein Distributionally Robust Optimization",
+    "abstract": "We present a general duality result for Wasserstein distributionally robust optimization that holds for any Kantorovich transport cost, measurable loss function, and nominal probability distribution. Assuming an interchangeability principle inherent in existing duality results, our proof only uses one-dimensional convex analysis. Furthermore, we demonstrate that the interchangeability principle holds if and only if certain measurable projection and weak measurable selection conditions are satisfied. To illustrate the broader applicability of our approach, we provide a rigorous treatment of duality results in distributionally robust Markov decision processes and distributionally robust multistage stochastic programming. Additionally, we extend our analysis to other problems such as infinity-Wasserstein distributionally robust optimization, risk-averse optimization, and globalized distributionally robust counterpart.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Luhao Zhang",
+      "Jincheng Yang",
+      "Rui Gao"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.00362v4",
+    "url": "http://arxiv.org/abs/2205.00362v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1808.06100v6",
+    "title": "On the solution existence and stability of polynomial optimization problems",
+    "abstract": "This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial. Under this regularity condition, the normalization argument in asymptotic analysis enables us to see the solution existence as well as the solution stability of these problems. We prove a Frank-Wolfe type theorem for regular optimization problems and an Eaves type theorem for non-regular pseudoconvex optimization problems. Moreover, we show results on the stability such as upper semicontinuity and local upper-Hölder stability of the solution map of polynomial optimization problems. At the end of the paper, we discuss the genericity of the regularity condition.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Vu Trung Hieu"
+    ],
+    "doi": null,
+    "arxiv_id": "1808.06100v6",
+    "url": "http://arxiv.org/abs/1808.06100v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.03971v1",
+    "title": "Decision-dependent Distributionally Robust Optimization",
+    "abstract": "This work presents a new Distributionally Robust Optimization approach, using $p$-Wasserstein metrics, to analyze a stochastic program in a general context. The ambiguity set in this approach depends on the decision variable and is represented as a ball where both the center and the radius depend on the decision variable. We show that, under Lipschitz's assumptions for the objective function, our approach can be reformulated as a finite-dimensional optimization problem, which is sometimes convex. In addition, we numerically compare our proposed approach with the standard formulation of distributionally robust optimization, which typically does not use ambiguity sets dependent on the decision variable, in the context of portfolio optimization.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Diego Fonseca",
+      "Mauricio Junca"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.03971v1",
+    "url": "http://arxiv.org/abs/2303.03971v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.17717v2",
+    "title": "A Distributionally Robust Framework for Nuisance in Causal Effect Estimation",
+    "abstract": "Causal inference requires evaluating models on balanced distributions between treatment and control groups, while training data often exhibits imbalance due to historical decision-making policies. Most conventional statistical methods address this distribution shift through inverse probability weighting (IPW), which requires estimating propensity scores as an intermediate step. These methods face two key challenges: inaccurate propensity estimation and instability from extreme weights. We decompose the generalization error to isolate these issues--propensity ambiguity and statistical instability--and address them through an adversarial loss function. Our approach combines distributionally robust optimization for handling propensity uncertainty with weight regularization based on weighted Rademacher complexity. Experiments on synthetic and real-world datasets demonstrate consistent improvements over existing methods.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Akira Tanimoto"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.17717v2",
+    "url": "http://arxiv.org/abs/2505.17717v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.15591v2",
+    "title": "Distributionally Robust Optimization with Polynomial Robust Constraints",
+    "abstract": "This paper studies distributionally robust optimization (DRO) with polynomial robust constraints. We give a Moment-SOS relaxation approach to solve the DRO. This reduces to solving linear conic optimization with semidefinite constraints. When the DRO problem is SOS-convex, we show that it is equivalent to the linear conic relaxation and it can be solved by the Moment-SOS algorithm. For nonconvex cases, we also give concrete conditions such that the DRO can be solved globally. Numerical experiments are given to show the efficiency of the method.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jiawang Nie",
+      "Suhan Zhong"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.15591v2",
+    "url": "http://arxiv.org/abs/2308.15591v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.00050v2",
+    "title": "Distributionally Robust Covariance Steering with Optimal Risk Allocation",
+    "abstract": "This article extends the optimal covariance steering (CS) problem for discrete time linear stochastic systems modeled using moment-based ambiguity sets. To hedge against the uncertainty in the state distributions while performing covariance steering, distributionally robust risk constraints are employed during the optimal allocation of the risk. Specifically, a distributionally robust iterative risk allocation (DR-IRA) formalism is used to solve the optimal risk allocation problem for the CS problem using a two-stage approach. The upper-stage of DR-IRA is a convex problem that optimizes the risk, while the lower-stage optimizes the controller with the new distributionally robust risk constraints. The proposed framework results in solutions that are robust against arbitrary distributions in the considered ambiguity set. Finally, we demonstrate our proposed approach using numerical simulations. Addressing the covariance steering problem through the lens of distributional robustness marks the novel contribution of this article.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Venkatraman Renganathan",
+      "Joshua Pilipovsky",
+      "Panagiotis Tsiotras"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.00050v2",
+    "url": "http://arxiv.org/abs/2210.00050v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2008.08256v1",
+    "title": "Globalized distributionally robust optimization problems under the moment-based framework",
+    "abstract": "This paper is devoted to reduce the conservatism of distributionally robust optimization with moments information. Since the optimal solution of distributionally robust optimization is required to be feasible for all uncertain distributions in a given ambiguity distribution set and so the conservatism of the optimal solution is inevitable. To address this issue, we introduce the globalized distributionally robust counterpart (GDRC) which allows constraint violations controlled by functional distance of the true distribution to the inner uncertainty distribution set. We obtain the deterministic equivalent forms for several GDRCs under the moment-based framework. To be specific, we show the deterministic equivalent system of inequalities for the GDRCs under second order moment information with a separable distance function and a jointly convex distance function, respectively. Moreover, the feasible set of the system is convex. We also develop the deterministic equivalent inequality for the GDRC under first order moment and support information. The computationally tractable examples are presented for these GDRCs. A numerical tests of a portfolio optimization problem is given to show the efficiency of our methods and the results demonstrate that the globalized distributionally robust solutions is non-conservative and flexible compared to the distributionally robust solutions.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ke-wei Ding",
+      "Nan-jing Huang",
+      "Lei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2008.08256v1",
+    "url": "http://arxiv.org/abs/2008.08256v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.01344v2",
+    "title": "Distributionally Robust Performative Optimization",
+    "abstract": "In performative stochastic optimization, decisions can influence the distribution of random parameters, rendering the data-generating process itself decision-dependent. In practice, decision-makers rarely have access to the true distribution map and must instead rely on imperfect surrogate models, which can lead to severely suboptimal solutions under misspecification. Data scarcity or costly collection further exacerbates these challenges in real-world settings. To address these challenges, we propose a distributionally robust framework for performative optimization that explicitly accounts for ambiguity in the decision-dependent distribution. Our framework introduces three modeling paradigms that capture a broad range of applications in machine learning and decision-making under uncertainty. This latter setting has not previously been explored in the performative optimization literature. To tackle the intractability of the resulting nonconvex objectives, we develop an iterative algorithm named repeated robust risk minimization, which alternates between solving a decision-independent distributionally robust optimization problem and updating the ambiguity set based on the previous decision. This decoupling ensures computational tractability at each iteration while enhancing robustness to model uncertainty. We provide reformulations compatible with off-the-shelf solvers and establish theoretical guarantees on convergence and suboptimality. Extensive numerical experiments in strategic classification, revenue management, and portfolio optimization demonstrate significant performance gains over state-of-the-art baselines, highlighting the practical value of our approach.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zhuangzhuang Jia",
+      "Yijie Wang",
+      "Roy Dong",
+      "Grani A. Hanasusanto"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.01344v2",
+    "url": "http://arxiv.org/abs/2407.01344v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2101.02498v2",
+    "title": "Mathematical Foundations of Distributionally Robust Multistage Optimization",
+    "abstract": "Distributionally robust optimization involves various probability measures in its problem formulation. They can be bundled to constitute a risk functional. For this equivalence, risk functionals constitute a fundamental building block in distributionally robust stochastic programming. Multistage programming requires conditional versions of risk functionals to re-assess future risk after partial realizations and after preceding decisions. This paper discusses a construction of the conditional counterpart of a risk functional by passing its genuine characteristics to its conditional counterparts. The conditional risk functionals turn out to be different from the nested analogues of the original (law invariant) risk measure. It is demonstrated that the initial measure and its nested decomposition can be used in a distributionally robust multistage setting.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Alois Pichler",
+      "Alexander Shapiro"
+    ],
+    "doi": null,
+    "arxiv_id": "2101.02498v2",
+    "url": "http://arxiv.org/abs/2101.02498v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.12136v2",
+    "title": "Wasserstein Distributionally Robust Optimization with Wasserstein Barycenters",
+    "abstract": "In many applications in statistics and machine learning, the availability of data samples from multiple possibly heterogeneous sources has become increasingly prevalent. On the other hand, in distributionally robust optimization, we seek data-driven decisions which perform well under the most adverse distribution from a nominal distribution constructed from data samples within a certain discrepancy of probability distributions. However, it remains unclear how to achieve such distributional robustness in model learning and estimation when data samples from multiple sources are available. In this work, we propose constructing the nominal distribution in optimal transport-based distributionally robust optimization problems through the notion of Wasserstein barycenter as an aggregation of data samples from multiple sources. Under specific choices of the loss function, the proposed formulation admits a tractable reformulation as a finite convex program, with powerful finite-sample and asymptotic guarantees. As an illustrative example, we demonstrate with the problem of distributionally robust sparse inverse covariance matrix estimation for zero-mean Gaussian random vectors that our proposed scheme outperforms other widely used estimators in both the low- and high-dimensional regimes.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Tim Tsz-Kit Lau",
+      "Han Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.12136v2",
+    "url": "http://arxiv.org/abs/2203.12136v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.07815v1",
+    "title": "Optimistic Distributionally Robust Policy Optimization",
+    "abstract": "Trust Region Policy Optimization (TRPO) and Proximal Policy Optimization (PPO), as the widely employed policy based reinforcement learning (RL) methods, are prone to converge to a sub-optimal solution as they limit the policy representation to a particular parametric distribution class. To address this issue, we develop an innovative Optimistic Distributionally Robust Policy Optimization (ODRPO) algorithm, which effectively utilizes Optimistic Distributionally Robust Optimization (DRO) approach to solve the trust region constrained optimization problem without parameterizing the policies. Our algorithm improves TRPO and PPO with a higher sample efficiency and a better performance of the final policy while attaining the learning stability. Moreover, it achieves a globally optimal policy update that is not promised in the prevailing policy based RL algorithms. Experiments across tabular domains and robotic locomotion tasks demonstrate the effectiveness of our approach.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Jun Song",
+      "Chaoyue Zhao"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.07815v1",
+    "url": "http://arxiv.org/abs/2006.07815v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.02994v1",
+    "title": "Globalized distributionally robust optimization based on samples",
+    "abstract": "It is known that the set of perturbed data is key in robust optimization (RO) modelling. Distributionally robust optimization (DRO) is a methodology used for optimization problems affected by random parameters with uncertain probability distribution. In terms of the information of the perturbed data, it is essential to estimate an appropriate support set of the probability distribution in formulating DRO models. In this paper, we introduce two globalized distributionally robust optimization (GDRO) models which choose a core set based on data and a sample space containing the core set to balance the degree of robustness and conservatism at the same time. The degree of conservatism can be controlled by the expected distance of random parameters from the core set. Under some assumptions, we further reformulate several GDRO models into tractable semi-definite programs. In addition, numerical experiments are provided showing the relationship between the optimal objective values of the GDRO models and the size of the sample space and the core set.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Yueyao Li",
+      "Wenxun Xing"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.02994v1",
+    "url": "http://arxiv.org/abs/2205.02994v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1704.03920v1",
+    "title": "Decomposition Algorithm for Distributionally Robust Optimization using Wasserstein Metric",
+    "abstract": "We study distributionally robust optimization (DRO) problems where the ambiguity set is defined using the Wasserstein metric. We show that this class of DRO problems can be reformulated as semi-infinite programs. We give an exchange method to solve the reformulated problem for the general nonlinear model, and a central cutting-surface method for the convex case, assuming that we have a separation oracle. We used a distributionally robust generalization of the logistic regression model to test our algorithm. Numerical experiments on the distributionally robust logistic regression models show that the number of oracle calls are typically 20 ? 50 to achieve 5-digit precision. The solution found by the model is generally better in its ability to predict with a smaller standard error.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Fengqiao Luo",
+      "Sanjay Mehrotra"
+    ],
+    "doi": null,
+    "arxiv_id": "1704.03920v1",
+    "url": "http://arxiv.org/abs/1704.03920v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.13932v1",
+    "title": "Distributionally Robust Bootstrap Optimization",
+    "abstract": "Control architectures and autonomy stacks for complex engineering systems are often divided into layers to decompose a complex problem and solution into distinct, manageable sub-problems. To simplify designs, uncertainties are often ignored across layers, an approach with deep roots in classical notions of separation and certainty equivalence. But to develop robust architectures, especially as interactions between data-driven learning layers and model-based decision-making layers grow more intricate, more sophisticated interfaces between layers are required. We propose a basic architecture that couples a statistical parameter estimation layer with a constrained optimization layer. We show how the layers can be tightly integrated by combining bootstrap resampling with distributionally robust optimization. The approach allows a finite-data out-of-sample safety guarantee and an exact reformulation as a tractable finite-dimensional convex optimization problem.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Tyler Summers",
+      "Maryam Kamgarpour"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.13932v1",
+    "url": "http://arxiv.org/abs/2112.13932v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2002.09038v3",
+    "title": "Distributionally Robust Bayesian Optimization",
+    "abstract": "Robustness to distributional shift is one of the key challenges of contemporary machine learning. Attaining such robustness is the goal of distributionally robust optimization, which seeks a solution to an optimization problem that is worst-case robust under a specified distributional shift of an uncontrolled covariate. In this paper, we study such a problem when the distributional shift is measured via the maximum mean discrepancy (MMD). For the setting of zeroth-order, noisy optimization, we present a novel distributionally robust Bayesian optimization algorithm (DRBO). Our algorithm provably obtains sub-linear robust regret in various settings that differ in how the uncertain covariate is observed. We demonstrate the robust performance of our method on both synthetic and real-world benchmarks.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Johannes Kirschner",
+      "Ilija Bogunovic",
+      "Stefanie Jegelka",
+      "Andreas Krause"
+    ],
+    "doi": null,
+    "arxiv_id": "2002.09038v3",
+    "url": "http://arxiv.org/abs/2002.09038v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.05648v2",
+    "title": "Distributionally robust stochastic optimal control",
+    "abstract": "The main goal of this paper is to discuss the construction of distributionally robust counterparts of stochastic optimal control problems. Randomized and non-randomized policies are considered. In particular, necessary and sufficient conditions for the existence of non-randomized policies are given.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Alexander Shapiro",
+      "Yan Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.05648v2",
+    "url": "http://arxiv.org/abs/2406.05648v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.00258v1",
+    "title": "Optimal design of frame structures with mixed categorical and continuous design variables using the Gumbel-Softmax method",
+    "abstract": "In optimizing real-world structures, due to fabrication or budgetary restraints, the design variables may be restricted to a set of standard engineering choices. Such variables, commonly called categorical variables, are discrete and unordered in essence, precluding the utilization of gradient-based optimizers for the problems containing them. In this paper, incorporating the Gumbel-Softmax (GSM) method, we propose a new gradient-based optimizer for handling such variables in the optimal design of large-scale frame structures. The GSM method provides a means to draw differentiable samples from categorical distributions, thereby enabling sensitivity analysis for the variables generated from such distributions. The sensitivity information can greatly reduce the computational cost of traversing high-dimensional and discrete design spaces in comparison to employing gradient-free optimization methods. In addition, since the developed optimizer is gradient-based, it can naturally handle the simultaneous optimization of categorical and continuous design variables. Through three numerical case studies, different aspects of the proposed optimizer are studied and its advantages over population-based optimizers, specifically a genetic algorithm, are demonstrated.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mehran Ebrahimi",
+      "Hyunmin Cheong",
+      "Pradeep Kumar Jayaraman",
+      "Farhad Javid"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.00258v1",
+    "url": "http://arxiv.org/abs/2501.00258v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

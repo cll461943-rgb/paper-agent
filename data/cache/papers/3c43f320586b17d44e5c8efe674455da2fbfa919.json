@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:42172695",
+  "title": "Physics-informed DynUNet for brain metastasis segmentation.",
+  "abstract": "In neuro-oncology, detecting, segmenting, and delineating the boundaries of small-volume brain metastatic foci remains a significant challenge. The lack of explicit biological information on metastasis growth and spread in standard deep learning architectures further limits low-volume metastatic lesions. This study investigates whether integrating physics-informed (PI) tumor growth models into segmentation architectures can overcome these size-dependent limitations. Using the BraTS-METS 2023 dataset, we integrated a physics-based growth model with DynUNet to construct PI-DynUNet and compared it with three U-Net variants under controlled conditions. All models were trained on the same data without data augmentation, using matched parameter counts, identical hyperparameters, and deterministic settings. We compared seven physics regularization weights (λ) with 5-fold cross-validation and evaluated performance in six lesion-size categories using Dice, IoU and HD95. To assess clinical context-specific performance, we calculated scenario-weighted Dice coefficients for RANO progression assessment, radiotherapy planning, and surgical decision-making. PI-DynUNet achieved effective metastasis segmentation across all BraTS regions. Relative to baseline DynUNet, it improved whole tumor (WT) Dice by 1.8 %, tumor core (TC) Dice by 2.5 %, and enhancing tumor (ET) Dice by 2.6 %. For the challenging non-enhancing tumor core (NETC), Dice increased by 5.3 %. Optimal regularization weights depended on tissue type and lesion size: λ = 1.0 favored extensive edema and whole-tumor regions, λ = 0.01 best served large contrast-enhancing tumors and necrotic cores. Scenario-weighted evaluation revealed context-dependent optimal models: PI-DynUNet (λ = 0.01) excelled in enhancing-weighted scenarios (RANO: +2.6 %; RT-GTV: +2.2 % vs. baseline), while λ = 1.0 demonstrated superior balanced accuracy (RT-CTV: +1.8 %; Surgical: +1.6 %). Physics-informed deep learning provides modest but measurable gains in brain metastasis segmentation, and these gains transfer across institutions: external validation on the Stanford BrainMetShare cohort (N = 105) showed that five of seven regularization weights significantly outperform the DynUNet baseline on tumor-core Dice (paired Wilcoxon p < 0.05), with the largest improvement of +10.1 % (p < 0.001) at λ = 0.001 and a ∼6× reduction in inter-fold variance at λ = 1.0. Optimal configuration varies by clinical application, informing context-specific deployment.",
+  "year": 2026,
+  "venue": "Computer methods and programs in biomedicine",
+  "authors": [
+    "Murat Güzel",
+    "Ömer Kaan Baykan"
+  ],
+  "doi": "10.1016/j.cmpb.2026.109457",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42172695/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42172695"
+  }
+}

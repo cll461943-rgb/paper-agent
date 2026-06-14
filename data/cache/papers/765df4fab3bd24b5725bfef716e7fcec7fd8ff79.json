@@ -1,0 +1,52 @@
+{
+  "paper_id": "https://openalex.org/W4387947154",
+  "title": "DoGE: Domain Reweighting with Generalization Estimation",
+  "abstract": "The coverage and composition of the pretraining data significantly impacts the generalization ability of Large Language Models (LLMs). Despite its importance, recent LLMs still rely on heuristics and trial and error to increase or reduce the influence of data-domains. We propose DOmain reweighting with Generalization Estimation (DoGE), which optimizes the probability of sampling from each domain (domain weights) in a principled way. Our approach is a two-stage process consisting of (i) training a proxy model to obtain domain weights using a bi-level optimization algorithm; (ii) training a larger base model by sampling training domains according to the learned domain weights. In our experiments, we extensively show how DoGE improves the generalization of the base model to any target data mixture. On the SlimPajama dataset, our base model gets better perplexity and few-shot reasoning accuracies across $6$ tasks compared to baseline methods. Moreover, aiming to generalize to out-of-domain target tasks, which is unseen in the pretraining corpus (OOD domain), DoGE can effectively identify inter-domain dependencies, and consistently achieves better test perplexity on the target domain.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Simin Fan",
+    "Matteo Pagliardini",
+    "Martin Jaggi"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2310.15393",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2310.15393",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Perplexity",
+      "Computer science",
+      "Artificial intelligence",
+      "Domain (mathematical analysis)",
+      "Generalization",
+      "Heuristics",
+      "Machine learning",
+      "Language model",
+      "Mathematics",
+      "Mathematical analysis",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2169518243",
+      "https://openalex.org/W2252095989",
+      "https://openalex.org/W4322096525",
+      "https://openalex.org/W2551914602",
+      "https://openalex.org/W4287323699",
+      "https://openalex.org/W4281893144",
+      "https://openalex.org/W2105076537",
+      "https://openalex.org/W2787311093",
+      "https://openalex.org/W2084531783",
+      "https://openalex.org/W2902731467"
+    ]
+  }
+}

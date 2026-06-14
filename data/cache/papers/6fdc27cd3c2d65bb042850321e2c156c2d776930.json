@@ -1,0 +1,79 @@
+{
+  "paper_id": "https://openalex.org/W4409248709",
+  "title": "BitMoD: Bit-serial Mixture-of-Datatype LLM Acceleration",
+  "abstract": "Large language models (LLMs) have demonstrated remarkable performance across various machine learning tasks. Yet the substantial memory footprint of LLMs significantly hinders their deployment. In this paper, we improve the accessibility of LLMs through BitMoD<sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup>, an algorithm-hardware co-design solution that enables efficient LLM acceleration at low weight precision. On the algorithm side, BitMoD introduces fine-grained data type adaptation that uses a different numerical data type to quantize a group of (e.g., 128) weights. Through the careful design of these new data types, BitMoD is able to quantize LLM weights to very low precision (e.g., 4 bits and 3 bits) while maintaining high accuracy. On the hardware side, BitMoD employs a bitserial processing element to easily support multiple numerical precisions and data types; our hardware design includes two key innovations: First, it employs a unified representation to process different weight data types, thus reducing the hardware cost. Second, it adopts a bit-serial dequantization unit to rescale the per-group partial sum with minimal hardware overhead. Our evaluation on six representative LLMs demonstrates that BitMoD significantly outperforms state-of-the-art LLM quantization and acceleration methods. For discriminative tasks, BitMoD can quantize LLM weights to 4 -bit with < 0.5% accuracy loss on average. For generative tasks, BitMoD is able to quantize LLM weights to 3-bit while achieving better perplexity than prior LLM quantization scheme. Combining the superior model performance with an efficient accelerator design, BitMoD achieves an average of $1.69 \\times$ and $1.48 \\times$ speedups compared to prior LLM accelerators ANT and OliVe, respectively.<sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup>Code is available at: https://github.com/yc2367/BitMoD-HPCA-25",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Yuzong Chen",
+    "Ahmed F. AbouElhamayed",
+    "Xilai Dai",
+    "Yang Wang",
+    "Marta Andronic",
+    "George A. Constantinides",
+    "Mohamed S. Abdelfattah"
+  ],
+  "doi": "https://doi.org/10.1109/hpca61900.2025.00084",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1109/hpca61900.2025.00084",
+  "citation_count": 16,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [
+    "https://openalex.org/W2026445983",
+    "https://openalex.org/W2251939518",
+    "https://openalex.org/W2541839172",
+    "https://openalex.org/W2725159389",
+    "https://openalex.org/W2883920103",
+    "https://openalex.org/W2904902077",
+    "https://openalex.org/W2946609015",
+    "https://openalex.org/W2949870694",
+    "https://openalex.org/W2979439447",
+    "https://openalex.org/W2998617917",
+    "https://openalex.org/W3006586535",
+    "https://openalex.org/W3100985894",
+    "https://openalex.org/W3187908937",
+    "https://openalex.org/W3205209748",
+    "https://openalex.org/W3213241618",
+    "https://openalex.org/W4247198796",
+    "https://openalex.org/W4281660701",
+    "https://openalex.org/W4308083739",
+    "https://openalex.org/W4366341968",
+    "https://openalex.org/W4377864779",
+    "https://openalex.org/W4389476299",
+    "https://openalex.org/W4393145114",
+    "https://openalex.org/W4393406875",
+    "https://openalex.org/W4393407021",
+    "https://openalex.org/W4402670692",
+    "https://openalex.org/W4404954664",
+    "https://openalex.org/W4406650295"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Acceleration",
+      "Computer science",
+      "Bit (key)",
+      "Computer network",
+      "Physics",
+      "Classical mechanics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W4327546585",
+      "https://openalex.org/W2411923897",
+      "https://openalex.org/W4394546135",
+      "https://openalex.org/W4285347720",
+      "https://openalex.org/W4200259850",
+      "https://openalex.org/W2333831899",
+      "https://openalex.org/W2484894494"
+    ]
+  }
+}

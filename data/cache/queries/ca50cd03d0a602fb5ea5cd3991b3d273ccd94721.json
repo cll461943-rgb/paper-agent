@@ -1,0 +1,877 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2005.01107v4",
+    "title": "Simplifying Paragraph-level Question Generation via Transformer Language Models",
+    "abstract": "Question generation (QG) is a natural language generation task where a model is trained to ask questions corresponding to some input text. Most recent approaches frame QG as a sequence-to-sequence problem and rely on additional features and mechanisms to increase performance; however, these often increase model complexity, and can rely on auxiliary data unavailable in practical use. A single Transformer-based unidirectional language model leveraging transfer learning can be used to produce high quality questions while disposing of additional task-specific complexity. Our QG model, finetuned from GPT-2 Small, outperforms several paragraph-level QG baselines on the SQuAD dataset by 0.95 METEOR points. Human evaluators rated questions as easy to answer, relevant to their context paragraph, and corresponding well to natural human speech. Also introduced is a new set of baseline scores on the RACE dataset, which has not previously been used for QG tasks. Further experimentation with varying model capacities and datasets with non-identification type questions is recommended in order to further verify the robustness of pretrained Transformer-based LMs as question generators.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Luis Enrico Lopez",
+      "Diane Kathryn Cruz",
+      "Jan Christian Blaise Cruz",
+      "Charibeth Cheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.01107v4",
+    "url": "http://arxiv.org/abs/2005.01107v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.20643v1",
+    "title": "TrajGPT-R: Generating Urban Mobility Trajectory with Reinforcement Learning-Enhanced Generative Pre-trained Transformer",
+    "abstract": "Mobility trajectories are essential for understanding urban dynamics and enhancing urban planning, yet access to such data is frequently hindered by privacy concerns. This research introduces a transformative framework for generating large-scale urban mobility trajectories, employing a novel application of a transformer-based model pre-trained and fine-tuned through a two-phase process. Initially, trajectory generation is conceptualized as an offline reinforcement learning (RL) problem, with a significant reduction in vocabulary space achieved during tokenization. The integration of Inverse Reinforcement Learning (IRL) allows for the capture of trajectory-wise reward signals, leveraging historical data to infer individual mobility preferences. Subsequently, the pre-trained model is fine-tuned using the constructed reward model, effectively addressing the challenges inherent in traditional RL-based autoregressive methods, such as long-term credit assignment and handling of sparse reward environments. Comprehensive evaluations on multiple datasets illustrate that our framework markedly surpasses existing models in terms of reliability and diversity. Our findings not only advance the field of urban mobility modeling but also provide a robust methodology for simulating urban data, with significant implications for traffic management and urban development planning. The implementation is publicly available at https://github.com/Wangjw6/TrajGPT_R.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jiawei Wang",
+      "Chuang Yang",
+      "Jiawei Yong",
+      "Xiaohang Xu",
+      "Hongjun Wang",
+      "Noboru Koshizuka",
+      "Shintaro Fukushima",
+      "Ryosuke Shibasaki",
+      "Renhe Jiang"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.20643v1",
+    "url": "http://arxiv.org/abs/2602.20643v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.00978v1",
+    "title": "PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture",
+    "abstract": "Transformer networks have achieved great progress for computer vision tasks. Transformer-in-Transformer (TNT) architecture utilizes inner transformer and outer transformer to extract both local and global representations. In this work, we present new TNT baselines by introducing two advanced designs: 1) pyramid architecture, and 2) convolutional stem. The new \"PyramidTNT\" significantly improves the original TNT by establishing hierarchical representations. PyramidTNT achieves better performances than the previous state-of-the-art vision transformers such as Swin Transformer. We hope this new baseline will be helpful to the further research and application of vision transformer. Code will be available at https://github.com/huawei-noah/CV-Backbones/tree/master/tnt_pytorch.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Kai Han",
+      "Jianyuan Guo",
+      "Yehui Tang",
+      "Yunhe Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.00978v1",
+    "url": "http://arxiv.org/abs/2201.00978v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1809.04281v3",
+    "title": "Music Transformer",
+    "abstract": "Music relies heavily on repetition to build structure and meaning. Self-reference occurs on multiple timescales, from motifs to phrases to reusing of entire sections of music, such as in pieces with ABA structure. The Transformer (Vaswani et al., 2017), a sequence model based on self-attention, has achieved compelling results in many generation tasks that require maintaining long-range coherence. This suggests that self-attention might also be well-suited to modeling music. In musical composition and performance, however, relative timing is critically important. Existing approaches for representing relative positional information in the Transformer modulate attention based on pairwise distance (Shaw et al., 2018). This is impractical for long sequences such as musical compositions since their memory complexity for intermediate relative information is quadratic in the sequence length. We propose an algorithm that reduces their intermediate memory requirement to linear in the sequence length. This enables us to demonstrate that a Transformer with our modified relative attention mechanism can generate minute-long compositions (thousands of steps, four times the length modeled in Oore et al., 2018) with compelling structure, generate continuations that coherently elaborate on a given motif, and in a seq2seq setup generate accompaniments conditioned on melodies. We evaluate the Transformer with our relative attention mechanism on two datasets, JSB Chorales and Piano-e-Competition, and obtain state-of-the-art results on the latter.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Cheng-Zhi Anna Huang",
+      "Ashish Vaswani",
+      "Jakob Uszkoreit",
+      "Noam Shazeer",
+      "Ian Simon",
+      "Curtis Hawthorne",
+      "Andrew M. Dai",
+      "Matthew D. Hoffman",
+      "Monica Dinculescu",
+      "Douglas Eck"
+    ],
+    "doi": null,
+    "arxiv_id": "1809.04281v3",
+    "url": "http://arxiv.org/abs/1809.04281v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.11502v1",
+    "title": "Learning to Cluster Faces via Transformer",
+    "abstract": "Face clustering is a useful tool for applications like automatic face annotation and retrieval. The main challenge is that it is difficult to cluster images from the same identity with different face poses, occlusions, and image quality. Traditional clustering methods usually ignore the relationship between individual images and their neighbors which may contain useful context information. In this paper, we repurpose the well-known Transformer and introduce a Face Transformer for supervised face clustering. In Face Transformer, we decompose the face clustering into two steps: relation encoding and linkage predicting. Specifically, given a face image, a \\textbf{relation encoder} module aggregates local context information from its neighbors and a \\textbf{linkage predictor} module judges whether a pair of images belong to the same cluster or not. In the local linkage graph view, Face Transformer can generate more robust node and edge representations compared to existing methods. Experiments on both MS-Celeb-1M and DeepFashion show that our method achieves state-of-the-art performance, e.g., 91.12\\% in pairwise F-score on MS-Celeb-1M.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jinxing Ye",
+      "Xioajiang Peng",
+      "Baigui Sun",
+      "Kai Wang",
+      "Xiuyu Sun",
+      "Hao Li",
+      "Hanqing Wu"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.11502v1",
+    "url": "http://arxiv.org/abs/2104.11502v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.00161v1",
+    "title": "FFPDG: Fast, Fair and Private Data Generation",
+    "abstract": "Generative modeling has been used frequently in synthetic data generation. Fairness and privacy are two big concerns for synthetic data. Although Recent GAN [\\cite{goodfellow2014generative}] based methods show good results in preserving privacy, the generated data may be more biased. At the same time, these methods require high computation resources. In this work, we design a fast, fair, flexible and private data generation method. We show the effectiveness of our method theoretically and empirically. We show that models trained on data generated by the proposed method can perform well (in inference stage) on real application scenarios.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Weijie Xu",
+      "Jinjin Zhao",
+      "Francis Iannacci",
+      "Bo Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.00161v1",
+    "url": "http://arxiv.org/abs/2307.00161v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12533v1",
+    "title": "Toward Co-creative Dungeon Generation via Transfer Learning",
+    "abstract": "Co-creative Procedural Content Generation via Machine Learning (PCGML) refers to systems where a PCGML agent and a human work together to produce output content. One of the limitations of co-creative PCGML is that it requires co-creative training data for a PCGML agent to learn to interact with humans. However, acquiring this data is a difficult and time-consuming process. In this work, we propose approximating human-AI interaction data and employing transfer learning to adapt learned co-creative knowledge from one game to a different game. We explore this approach for co-creative Zelda dungeon room generation.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Zisen Zhou",
+      "Matthew Guzdial"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12533v1",
+    "url": "http://arxiv.org/abs/2107.12533v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12524v1",
+    "title": "Ensemble Learning For Mega Man Level Generation",
+    "abstract": "Procedural content generation via machine learning (PCGML) is the process of procedurally generating game content using models trained on existing game content. PCGML methods can struggle to capture the true variance present in underlying data with a single model. In this paper, we investigated the use of ensembles of Markov chains for procedurally generating \\emph{Mega Man} levels. We conduct an initial investigation of our approach and evaluate it on measures of playability and stylistic similarity in comparison to a non-ensemble, existing Markov chain approach.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Bowei Li",
+      "Ruohan Chen",
+      "Yuqing Xue",
+      "Ricky Wang",
+      "Wenwen Li",
+      "Matthew Guzdial"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12524v1",
+    "url": "http://arxiv.org/abs/2107.12524v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12506v1",
+    "title": "TaikoNation: Patterning-focused Chart Generation for Rhythm Action Games",
+    "abstract": "Generating rhythm game charts from songs via machine learning has been a problem of increasing interest in recent years. However, all existing systems struggle to replicate human-like patterning: the placement of game objects in relation to each other to form congruent patterns based on events in the song. Patterning is a key identifier of high quality rhythm game content, seen as a necessary component in human rankings. We establish a new approach for chart generation that produces charts with more congruent, human-like patterning than seen in prior work.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Emily Halina",
+      "Matthew Guzdial"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12506v1",
+    "url": "http://arxiv.org/abs/2107.12506v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2404.05657v1",
+    "title": "MLP Can Be A Good Transformer Learner",
+    "abstract": "Self-attention mechanism is the key of the Transformer but often criticized for its computation demands. Previous token pruning works motivate their methods from the view of computation redundancy but still need to load the full network and require same memory costs. This paper introduces a novel strategy that simplifies vision transformers and reduces computational load through the selective removal of non-essential attention layers, guided by entropy considerations. We identify that regarding the attention layer in bottom blocks, their subsequent MLP layers, i.e. two feed-forward layers, can elicit the same entropy quantity. Meanwhile, the accompanied MLPs are under-exploited since they exhibit smaller feature entropy compared to those MLPs in the top blocks. Therefore, we propose to integrate the uninformative attention layers into their subsequent counterparts by degenerating them into identical mapping, yielding only MLP in certain transformer blocks. Experimental results on ImageNet-1k show that the proposed method can remove 40% attention layer of DeiT-B, improving throughput and memory bound without performance compromise. Code is available at https://github.com/sihaoevery/lambda_vit.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Sihao Lin",
+      "Pumeng Lyu",
+      "Dongrui Liu",
+      "Tao Tang",
+      "Xiaodan Liang",
+      "Andy Song",
+      "Xiaojun Chang"
+    ],
+    "doi": null,
+    "arxiv_id": "2404.05657v1",
+    "url": "http://arxiv.org/abs/2404.05657v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.12532v1",
+    "title": "Generating Lode Runner Levels by Learning Player Paths with LSTMs",
+    "abstract": "Machine learning has been a popular tool in many different fields, including procedural content generation. However, procedural content generation via machine learning (PCGML) approaches can struggle with controllability and coherence. In this paper, we attempt to address these problems by learning to generate human-like paths, and then generating levels based on these paths. We extract player path data from gameplay video, train an LSTM to generate new paths based on this data, and then generate game levels based on this path data. We demonstrate that our approach leads to more coherent levels for the game Lode Runner in comparison to an existing PCGML approach.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Kynan Sorochan",
+      "Jerry Chen",
+      "Yakun Yu",
+      "Matthew Guzdial"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.12532v1",
+    "url": "http://arxiv.org/abs/2107.12532v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2007.06108v2",
+    "title": "Tabletop Roleplaying Games as Procedural Content Generators",
+    "abstract": "Tabletop roleplaying games (TTRPGs) and procedural content generators can both be understood as systems of rules for producing content. In this paper, we argue that TTRPG design can usefully be viewed as procedural content generator design. We present several case studies linking key concepts from PCG research -- including possibility spaces, expressive range analysis, and generative pipelines -- to key concepts in TTRPG design. We then discuss the implications of these relationships and suggest directions for future work uniting research in TTRPGs and PCG.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Matthew Guzdial",
+      "Devi Acharya",
+      "Max Kreminski",
+      "Michael Cook",
+      "Mirjam Eladhari",
+      "Antonios Liapis",
+      "Anne Sullivan"
+    ],
+    "doi": null,
+    "arxiv_id": "2007.06108v2",
+    "url": "http://arxiv.org/abs/2007.06108v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.12016v1",
+    "title": "Selecting Artificially-Generated Sentences for Fine-Tuning Neural Machine Translation",
+    "abstract": "Neural Machine Translation (NMT) models tend to achieve best performance when larger sets of parallel sentences are provided for training. For this reason, augmenting the training set with artificially-generated sentence pairs can boost performance. Nonetheless, the performance can also be improved with a small number of sentences if they are in the same domain as the test set. Accordingly, we want to explore the use of artificially-generated sentences along with data-selection algorithms to improve German-to-English NMT models trained solely with authentic data. In this work, we show how artificially-generated sentences can be more beneficial than authentic pairs, and demonstrate their advantages when used in combination with data-selection algorithms.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Alberto Poncelas",
+      "Andy Way"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.12016v1",
+    "url": "http://arxiv.org/abs/1909.12016v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.12869v1",
+    "title": "JaCoText: A Pretrained Model for Java Code-Text Generation",
+    "abstract": "Pretrained transformer-based models have shown high performance in natural language generation task. However, a new wave of interest has surged: automatic programming language generation. This task consists of translating natural language instructions to a programming code. Despite the fact that well-known pretrained models on language generation have achieved good performance in learning programming languages, effort is still needed in automatic code generation. In this paper, we introduce JaCoText, a model based on Transformers neural network. It aims to generate java source code from natural language text. JaCoText leverages advantages of both natural language and code generation models. More specifically, we study some findings from the state of the art and use them to (1) initialize our model from powerful pretrained models, (2) explore additional pretraining on our java dataset, (3) carry out experiments combining the unimodal and bimodal data in the training, and (4) scale the input and output length during the fine-tuning of the model. Conducted experiments on CONCODE dataset show that JaCoText achieves new state-of-the-art results.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jessica López Espejel",
+      "Mahaman Sanoussi Yahaya Alassan",
+      "Walid Dahhane",
+      "El Hassane Ettifouri"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.12869v1",
+    "url": "http://arxiv.org/abs/2303.12869v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.00261v2",
+    "title": "Generative Iris Prior Embedded Transformer for Iris Restoration",
+    "abstract": "Iris restoration from complexly degraded iris images, aiming to improve iris recognition performance, is a challenging problem. Due to the complex degradation, directly training a convolutional neural network (CNN) without prior cannot yield satisfactory results. In this work, we propose a generative iris prior embedded Transformer model (Gformer), in which we build a hierarchical encoder-decoder network employing Transformer block and generative iris prior. First, we tame Transformer blocks to model long-range dependencies in target images. Second, we pretrain an iris generative adversarial network (GAN) to obtain the rich iris prior, and incorporate it into the iris restoration process with our iris feature modulator. Our experiments demonstrate that the proposed Gformer outperforms state-of-the-art methods. Besides, iris recognition performance has been significantly improved after applying Gformer.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yubo Huang",
+      "Jia Wang",
+      "Peipei Li",
+      "Liuyu Xiang",
+      "Peigang Li",
+      "Zhaofeng He"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.00261v2",
+    "url": "http://arxiv.org/abs/2407.00261v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01912v1",
+    "title": "A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation",
+    "abstract": "This work tackles the information loss bottleneck of vector-quantization (VQ) autoregressive image generation by introducing a novel model architecture called the 2-Dimensional Autoregression (DnD) Transformer. The DnD-Transformer predicts more codes for an image by introducing a new autoregression direction, \\textit{model depth}, along with the sequence length direction. Compared to traditional 1D autoregression and previous work utilizing similar 2D image decomposition such as RQ-Transformer, the DnD-Transformer is an end-to-end model that can generate higher quality images with the same backbone model size and sequence length, opening a new optimization perspective for autoregressive image generation. Furthermore, our experiments reveal that the DnD-Transformer's potential extends beyond generating natural images. It can even generate images with rich text and graphical elements in a self-supervised manner, demonstrating an understanding of these combined modalities. This has not been previously demonstrated for popular vision generative models such as diffusion models, showing a spark of vision-language intelligence when trained solely on images. Code, datasets and models are open at https://github.com/chenllliang/DnD-Transformer.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Liang Chen",
+      "Sinan Tan",
+      "Zefan Cai",
+      "Weichu Xie",
+      "Haozhe Zhao",
+      "Yichi Zhang",
+      "Junyang Lin",
+      "Jinze Bai",
+      "Tianyu Liu",
+      "Baobao Chang"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01912v1",
+    "url": "http://arxiv.org/abs/2410.01912v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.14538v2",
+    "title": "Transformer in Transformer as Backbone for Deep Reinforcement Learning",
+    "abstract": "Designing better deep networks and better reinforcement learning (RL) algorithms are both important for deep RL. This work focuses on the former. Previous methods build the network with several modules like CNN, LSTM and Attention. Recent methods combine the Transformer with these modules for better performance. However, it requires tedious optimization skills to train a network composed of mixed modules, making these methods inconvenient to be used in practice. In this paper, we propose to design \\emph{pure Transformer-based networks} for deep RL, aiming at providing off-the-shelf backbones for both the online and offline settings. Specifically, the Transformer in Transformer (TIT) backbone is proposed, which cascades two Transformers in a very natural way: the inner one is used to process a single observation, while the outer one is responsible for processing the observation history; combining both is expected to extract spatial-temporal representations for good decision-making. Experiments show that TIT can achieve satisfactory performance in different settings consistently.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Hangyu Mao",
+      "Rui Zhao",
+      "Hao Chen",
+      "Jianye Hao",
+      "Yiqun Chen",
+      "Dong Li",
+      "Junge Zhang",
+      "Zhen Xiao"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.14538v2",
+    "url": "http://arxiv.org/abs/2212.14538v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1803.01837v1",
+    "title": "ST-GAN: Spatial Transformer Generative Adversarial Networks for Image Compositing",
+    "abstract": "We address the problem of finding realistic geometric corrections to a foreground object such that it appears natural when composited into a background image. To achieve this, we propose a novel Generative Adversarial Network (GAN) architecture that utilizes Spatial Transformer Networks (STNs) as the generator, which we call Spatial Transformer GANs (ST-GANs). ST-GANs seek image realism by operating in the geometric warp parameter space. In particular, we exploit an iterative STN warping scheme and propose a sequential training strategy that achieves better results compared to naive training of a single generator. One of the key advantages of ST-GAN is its applicability to high-resolution images indirectly since the predicted warp parameters are transferable between reference frames. We demonstrate our approach in two applications: (1) visualizing how indoor furniture (e.g. from product images) might be perceived in a room, (2) hallucinating how accessories like glasses would look when matched with real portraits.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Chen-Hsuan Lin",
+      "Ersin Yumer",
+      "Oliver Wang",
+      "Eli Shechtman",
+      "Simon Lucey"
+    ],
+    "doi": null,
+    "arxiv_id": "1803.01837v1",
+    "url": "http://arxiv.org/abs/1803.01837v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.10552v2",
+    "title": "Vicinity Vision Transformer",
+    "abstract": "Vision transformers have shown great success on numerous computer vision tasks. However, its central component, softmax attention, prohibits vision transformers from scaling up to high-resolution images, due to both the computational complexity and memory footprint being quadratic. Although linear attention was introduced in natural language processing (NLP) tasks to mitigate a similar issue, directly applying existing linear attention to vision transformers may not lead to satisfactory results. We investigate this problem and find that computer vision tasks focus more on local information compared with NLP tasks. Based on this observation, we present a Vicinity Attention that introduces a locality bias to vision transformers with linear complexity. Specifically, for each image patch, we adjust its attention weight based on its 2D Manhattan distance measured by its neighbouring patches. In this case, the neighbouring patches will receive stronger attention than far-away patches. Moreover, since our Vicinity Attention requires the token length to be much larger than the feature dimension to show its efficiency advantages, we further propose a new Vicinity Vision Transformer (VVT) structure to reduce the feature dimension without degenerating the accuracy. We perform extensive experiments on the CIFAR100, ImageNet1K, and ADE20K datasets to validate the effectiveness of our method. Our method has a slower growth rate of GFlops than previous transformer-based and convolution-based networks when the input resolution increases. In particular, our approach achieves state-of-the-art image classification accuracy with 50% fewer parameters than previous methods.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Weixuan Sun",
+      "Zhen Qin",
+      "Hui Deng",
+      "Jianyuan Wang",
+      "Yi Zhang",
+      "Kaihao Zhang",
+      "Nick Barnes",
+      "Stan Birchfield",
+      "Lingpeng Kong",
+      "Yiran Zhong"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.10552v2",
+    "url": "http://arxiv.org/abs/2206.10552v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.00957v1",
+    "title": "Preference Transformer: Modeling Human Preferences using Transformers for RL",
+    "abstract": "Preference-based reinforcement learning (RL) provides a framework to train agents using human preferences between two behaviors. However, preference-based RL has been challenging to scale since it requires a large amount of human feedback to learn a reward function aligned with human intent. In this paper, we present Preference Transformer, a neural architecture that models human preferences using transformers. Unlike prior approaches assuming human judgment is based on the Markovian rewards which contribute to the decision equally, we introduce a new preference model based on the weighted sum of non-Markovian rewards. We then design the proposed preference model using a transformer architecture that stacks causal and bidirectional self-attention layers. We demonstrate that Preference Transformer can solve a variety of control tasks using real human preferences, while prior approaches fail to work. We also show that Preference Transformer can induce a well-specified reward and attend to critical events in the trajectory by automatically capturing the temporal dependencies in human decision-making. Code is available on the project website: https://sites.google.com/view/preference-transformer.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Changyeon Kim",
+      "Jongjin Park",
+      "Jinwoo Shin",
+      "Honglak Lee",
+      "Pieter Abbeel",
+      "Kimin Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.00957v1",
+    "url": "http://arxiv.org/abs/2303.00957v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.16170v2",
+    "title": "CARE Transformer: Mobile-Friendly Linear Visual Transformer via Decoupled Dual Interaction",
+    "abstract": "Recently, large efforts have been made to design efficient linear-complexity visual Transformers. However, current linear attention models are generally unsuitable to be deployed in resource-constrained mobile devices, due to suffering from either few efficiency gains or significant accuracy drops. In this paper, we propose a new de\\textbf{C}oupled du\\textbf{A}l-interactive linea\\textbf{R} att\\textbf{E}ntion (CARE) mechanism, revealing that features' decoupling and interaction can fully unleash the power of linear attention. We first propose an asymmetrical feature decoupling strategy that asymmetrically decouples the learning process for local inductive bias and long-range dependencies, thereby preserving sufficient local and global information while effectively enhancing the efficiency of models. Then, a dynamic memory unit is employed to maintain critical information along the network pipeline. Moreover, we design a dual interaction module to effectively facilitate interaction between local inductive bias and long-range information as well as among features at different layers. By adopting a decoupled learning way and fully exploiting complementarity across features, our method can achieve both high efficiency and accuracy. Extensive experiments on ImageNet-1K, COCO, and ADE20K datasets demonstrate the effectiveness of our approach, e.g., achieving $78.4/82.1\\%$ top-1 accuracy on ImagegNet-1K at the cost of only $0.7/1.9$ GMACs. Codes will be released on \\href{https://github.com/zhouyuan888888/CARE-Transformer}{https://github.com/zhouyuan888888/CARE-Transformer}.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yuan Zhou",
+      "Qingshan Xu",
+      "Jiequan Cui",
+      "Junbao Zhou",
+      "Jing Zhang",
+      "Richang Hong",
+      "Hanwang Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.16170v2",
+    "url": "http://arxiv.org/abs/2411.16170v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.02277v1",
+    "title": "Glance-and-Gaze Vision Transformer",
+    "abstract": "Recently, there emerges a series of vision Transformers, which show superior performance with a more compact model size than conventional convolutional neural networks, thanks to the strong ability of Transformers to model long-range dependencies. However, the advantages of vision Transformers also come with a price: Self-attention, the core part of Transformer, has a quadratic complexity to the input sequence length. This leads to a dramatic increase of computation and memory cost with the increase of sequence length, thus introducing difficulties when applying Transformers to the vision tasks that require dense predictions based on high-resolution feature maps. In this paper, we propose a new vision Transformer, named Glance-and-Gaze Transformer (GG-Transformer), to address the aforementioned issues. It is motivated by the Glance and Gaze behavior of human beings when recognizing objects in natural scenes, with the ability to efficiently model both long-range dependencies and local context. In GG-Transformer, the Glance and Gaze behavior is realized by two parallel branches: The Glance branch is achieved by performing self-attention on the adaptively-dilated partitions of the input, which leads to a linear complexity while still enjoying a global receptive field; The Gaze branch is implemented by a simple depth-wise convolutional layer, which compensates local image context to the features obtained by the Glance mechanism. We empirically demonstrate our method achieves consistently superior performance over previous state-of-the-art Transformers on various vision tasks and benchmarks. The codes and models will be made available at https://github.com/yucornetto/GG-Transformer.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Qihang Yu",
+      "Yingda Xia",
+      "Yutong Bai",
+      "Yongyi Lu",
+      "Alan Yuille",
+      "Wei Shen"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.02277v1",
+    "url": "http://arxiv.org/abs/2106.02277v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.11403v5",
+    "title": "Efficient Mixed Transformer for Single Image Super-Resolution",
+    "abstract": "Recently, Transformer-based methods have achieved impressive results in single image super-resolution (SISR). However, the lack of locality mechanism and high complexity limit their application in the field of super-resolution (SR). To solve these problems, we propose a new method, Efficient Mixed Transformer (EMT) in this study. Specifically, we propose the Mixed Transformer Block (MTB), consisting of multiple consecutive transformer layers, in some of which the Pixel Mixer (PM) is used to replace the Self-Attention (SA). PM can enhance the local knowledge aggregation with pixel shifting operations. At the same time, no additional complexity is introduced as PM has no parameters and floating-point operations. Moreover, we employ striped window for SA (SWSA) to gain an efficient global dependency modelling by utilizing image anisotropy. Experimental results show that EMT outperforms the existing methods on benchmark dataset and achieved state-of-the-art performance. The Code is available at https://github.com/Fried-Rice-Lab/FriedRiceLab.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ling Zheng",
+      "Jinchen Zhu",
+      "Jinpeng Shi",
+      "Shizhuang Weng"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.11403v5",
+    "url": "http://arxiv.org/abs/2305.11403v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.05964v2",
+    "title": "A Survey on Transformer Compression",
+    "abstract": "Transformer plays a vital role in the realms of natural language processing (NLP) and computer vision (CV), specially for constructing large language models (LLM) and large vision models (LVM). Model compression methods reduce the memory and computational cost of Transformer, which is a necessary step to implement large language/vision models on practical devices. Given the unique architecture of Transformer, featuring alternative attention and feedforward neural network (FFN) modules, specific compression techniques are usually required. The efficiency of these compression methods is also paramount, as retraining large models on the entire training dataset is usually impractical. This survey provides a comprehensive review of recent compression methods, with a specific focus on their application to Transformer-based models. The compression methods are primarily categorized into pruning, quantization, knowledge distillation, and efficient architecture design (Mamba, RetNet, RWKV, etc.). In each category, we discuss compression methods for both language and vision tasks, highlighting common underlying principles. Finally, we delve into the relation between various compression methods, and discuss further directions in this domain.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yehui Tang",
+      "Yunhe Wang",
+      "Jianyuan Guo",
+      "Zhijun Tu",
+      "Kai Han",
+      "Hailin Hu",
+      "Dacheng Tao"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.05964v2",
+    "url": "http://arxiv.org/abs/2402.05964v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.11918v2",
+    "title": "Transformers as Unsupervised Learning Algorithms: A study on Gaussian Mixtures",
+    "abstract": "The transformer architecture has demonstrated remarkable capabilities in modern artificial intelligence, among which the capability of implicitly learning an internal model during inference time is widely believed to play a key role in the under standing of pre-trained large language models. However, most recent works have been focusing on studying supervised learning topics such as in-context learning, leaving the field of unsupervised learning largely unexplored. This paper investigates the capabilities of transformers in solving Gaussian Mixture Models (GMMs), a fundamental unsupervised learning problem through the lens of statistical estimation. We propose a transformer-based learning framework called TGMM that simultaneously learns to solve multiple GMM tasks using a shared transformer backbone. The learned models are empirically demonstrated to effectively mitigate the limitations of classical methods such as Expectation-Maximization (EM) or spectral algorithms, at the same time exhibit reasonable robustness to distribution shifts. Theoretically, we prove that transformers can approximate both the EM algorithm and a core component of spectral methods (cubic tensor power iterations). These results bridge the gap between practical success and theoretical understanding, positioning transformers as versatile tools for unsupervised learning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zhiheng Chen",
+      "Ruofan Wu",
+      "Guanhua Fang"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.11918v2",
+    "url": "http://arxiv.org/abs/2505.11918v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.24717v1",
+    "title": "PDE-Transformer: Efficient and Versatile Transformers for Physics Simulations",
+    "abstract": "We introduce PDE-Transformer, an improved transformer-based architecture for surrogate modeling of physics simulations on regular grids. We combine recent architectural improvements of diffusion transformers with adjustments specific for large-scale simulations to yield a more scalable and versatile general-purpose transformer architecture, which can be used as the backbone for building large-scale foundation models in physical sciences. We demonstrate that our proposed architecture outperforms state-of-the-art transformer architectures for computer vision on a large dataset of 16 different types of PDEs. We propose to embed different physical channels individually as spatio-temporal tokens, which interact via channel-wise self-attention. This helps to maintain a consistent information density of tokens when learning multiple types of PDEs simultaneously. We demonstrate that our pre-trained models achieve improved performance on several challenging downstream tasks compared to training from scratch and also beat other foundation model architectures for physics simulations.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Benjamin Holzschuh",
+      "Qiang Liu",
+      "Georg Kohl",
+      "Nils Thuerey"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.24717v1",
+    "url": "http://arxiv.org/abs/2505.24717v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.16552v1",
+    "title": "Prompt-enhanced Hierarchical Transformer Elevating Cardiopulmonary Resuscitation Instruction via Temporal Action Segmentation",
+    "abstract": "The vast majority of people who suffer unexpected cardiac arrest are performed cardiopulmonary resuscitation (CPR) by passersby in a desperate attempt to restore life, but endeavors turn out to be fruitless on account of disqualification. Fortunately, many pieces of research manifest that disciplined training will help to elevate the success rate of resuscitation, which constantly desires a seamless combination of novel techniques to yield further advancement. To this end, we collect a custom CPR video dataset in which trainees make efforts to behave resuscitation on mannequins independently in adherence to approved guidelines, thereby devising an auxiliary toolbox to assist supervision and rectification of intermediate potential issues via modern deep learning methodologies. Our research empirically views this problem as a temporal action segmentation (TAS) task in computer vision, which aims to segment an untrimmed video at a frame-wise level. Here, we propose a Prompt-enhanced hierarchical Transformer (PhiTrans) that integrates three indispensable modules, including a textual prompt-based Video Features Extractor (VFE), a transformer-based Action Segmentation Executor (ASE), and a regression-based Prediction Refinement Calibrator (PRC). The backbone of the model preferentially derives from applications in three approved public datasets (GTEA, 50Salads, and Breakfast) collected for TAS tasks, which accounts for the excavation of the segmentation pipeline on the CPR dataset. In general, we unprecedentedly probe into a feasible pipeline that genuinely elevates the CPR instruction qualification via action segmentation in conjunction with cutting-edge deep learning techniques. Associated experiments advocate our implementation with multiple metrics surpassing 91.0%.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yang Liu",
+      "Xiaoyun Zhong",
+      "Shiyao Zhai",
+      "Zhicheng Du",
+      "Zhenyuan Gao",
+      "Qiming Huang",
+      "Canyang Zhang",
+      "Bin Jiang",
+      "Vijay Kumar Pandey",
+      "Sanyang Han",
+      "Runming Wang",
+      "Yuxing Han",
+      "Peiwu Qin"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.16552v1",
+    "url": "http://arxiv.org/abs/2308.16552v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.14858v2",
+    "title": "Pre-RMSNorm and Pre-CRMSNorm Transformers: Equivalent and Efficient Pre-LN Transformers",
+    "abstract": "Transformers have achieved great success in machine learning applications. Normalization techniques, such as Layer Normalization (LayerNorm, LN) and Root Mean Square Normalization (RMSNorm), play a critical role in accelerating and stabilizing the training of Transformers. While LayerNorm recenters and rescales input vectors, RMSNorm only rescales the vectors by their RMS value. Despite being more computationally efficient, RMSNorm may compromise the representation ability of Transformers. There is currently no consensus regarding the preferred normalization technique, as some models employ LayerNorm while others utilize RMSNorm, especially in recent large language models. It is challenging to convert Transformers with one normalization to the other type. While there is an ongoing disagreement between the two normalization types, we propose a solution to unify two mainstream Transformer architectures, Pre-LN and Pre-RMSNorm Transformers. By removing the inherent redundant mean information in the main branch of Pre-LN Transformers, we can reduce LayerNorm to RMSNorm, achieving higher efficiency. We further propose the Compressed RMSNorm (CRMSNorm) and Pre-CRMSNorm Transformer based on a lossless compression of the zero-mean vectors. We formally establish the equivalence of Pre-LN, Pre-RMSNorm, and Pre-CRMSNorm Transformer variants in both training and inference. It implies that Pre-LN Transformers can be substituted with Pre-(C)RMSNorm counterparts at almost no cost, offering the same arithmetic functionality along with free efficiency improvement. Experiments demonstrate that we can reduce the training and inference time of Pre-LN Transformers by 1% - 10%.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Zixuan Jiang",
+      "Jiaqi Gu",
+      "Hanqing Zhu",
+      "David Z. Pan"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.14858v2",
+    "url": "http://arxiv.org/abs/2305.14858v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.08187v1",
+    "title": "Visual Question Generation in Bengali",
+    "abstract": "The task of Visual Question Generation (VQG) is to generate human-like questions relevant to the given image. As VQG is an emerging research field, existing works tend to focus only on resource-rich language such as English due to the availability of datasets. In this paper, we propose the first Bengali Visual Question Generation task and develop a novel transformer-based encoder-decoder architecture that generates questions in Bengali when given an image. We propose multiple variants of models - (i) image-only: baseline model of generating questions from images without additional information, (ii) image-category and image-answer-category: guided VQG where we condition the model to generate questions based on the answer and the category of expected question. These models are trained and evaluated on the translated VQAv2.0 dataset. Our quantitative and qualitative results establish the first state of the art models for VQG task in Bengali and demonstrate that our models are capable of generating grammatically correct and relevant questions. Our quantitative results show that our image-cat model achieves a BLUE-1 score of 33.12 and BLEU-3 score of 7.56 which is the highest of the other two variants. We also perform a human evaluation to assess the quality of the generation tasks. Human evaluation suggests that image-cat model is capable of generating goal-driven and attribute-specific questions and also stays relevant to the corresponding image.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Mahmud Hasan",
+      "Labiba Islam",
+      "Jannatul Ferdous Ruma",
+      "Tasmiah Tahsin Mayeesha",
+      "Rashedur M. Rahman"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.08187v1",
+    "url": "http://arxiv.org/abs/2310.08187v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2503.21686v2",
+    "title": "Molecular Quantum Transformer",
+    "abstract": "The Transformer model, renowned for its powerful attention mechanism, has achieved state-of-the-art performance in various artificial intelligence tasks but faces challenges such as high computational cost and memory usage. Researchers are exploring quantum computing to enhance the Transformer's design, though it still shows limited success with classical data. With a growing focus on leveraging quantum machine learning for quantum data, particularly in quantum chemistry, we propose the Molecular Quantum Transformer (MQT) for modeling interactions in molecular quantum systems. By utilizing quantum circuits to implement the attention mechanism on the molecular configurations, MQT can efficiently calculate ground-state energies for all configurations. Numerical demonstrations show that in calculating ground-state energies for H2, LiH, BeH2, and H4, MQT outperforms the classical Transformer, highlighting the promise of quantum effects in Transformer structures. Furthermore, its pretraining capability on diverse molecular data facilitates the efficient learning of new molecules, extending its applicability to complex molecular systems with minimal additional effort. Our method offers an alternative to existing quantum algorithms for estimating ground-state energies, opening new avenues in quantum chemistry and materials science.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yuichi Kamata",
+      "Quoc Hoan Tran",
+      "Yasuhiro Endo",
+      "Hirotaka Oshima"
+    ],
+    "doi": null,
+    "arxiv_id": "2503.21686v2",
+    "url": "http://arxiv.org/abs/2503.21686v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

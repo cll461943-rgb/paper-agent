@@ -1,0 +1,63 @@
+[
+  {
+    "paper_id": "https://openalex.org/W7162218175",
+    "title": "Diversed Model Discovery via Structured Table Discovery",
+    "abstract": "Model cards describe model behavior through a mixture of textual descriptions and structured artifacts, including performance, configuration, and dataset tables. Existing model search systems rely predominantly on semantic similarity over text, which can produce homogeneous result sets and limit exploration of alternatives. We argue that model search is inherently comparative: users want models that are task-aligned yet differentiated in measurable ways. We hypothesize that this balance requires retrieval over condensed, high-quality evidence rather than verbose descriptions, and much of that evidence is concentrated in structured tables. We present StructuredSemanticSearch, a table-driven model search framework built on the ModelTables benchmark. Given a query, StructuredSemanticSearch combines a semantic baseline for task alignment with a structure-aware pipeline that discovers query-related model-card tables using table discovery operators such as unionability, joinability, and keyword search. Retrieved tables are mapped back to model cards under a controlled top-k budget, enabling fair comparison between text-based and table-based retrieval. Beyond retrieval, StructuredSemanticSearch adapts table integration to the model-table domain through orientation-aware integration, producing compact integrated views of tables from partially overlapping and sometimes transposed evidence tables. For evaluation, we introduce a nugget-based, auditable protocol that extracts compact evidence items from model cards, matches queries to condition- or intent-specific nuggets, and measures evidence coverage and diversity over retrieved model-card candidate sets. This protocol also provides a scalable path toward approximate, evidence-based labeling in dynamic model lakes. Experiments on 597 model-recommendation queries show improved nugget coverage for the structure-aware pipeline than semantic baseline",
+    "year": 2026,
+    "venue": "ArXiv.org",
+    "authors": [
+      "Zhengyuan Dong",
+      "Renée J. Miller"
+    ],
+    "doi": null,
+    "arxiv_id": null,
+    "url": "https://arxiv.org/abs/2605.22766",
+    "citation_count": 0,
+    "source": "openalex",
+    "retrieval_path": [
+      "provider:openalex",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "openalex",
+      "concepts": [
+        "Computer science",
+        "Pipeline (software)",
+        "Table (database)",
+        "Information retrieval",
+        "Scalability",
+        "Task (project management)",
+        "Data mining",
+        "Protocol (science)",
+        "Baseline (sea)",
+        "Domain (mathematical analysis)",
+        "Path (computing)",
+        "Scope (computer science)",
+        "Similarity (geometry)",
+        "Sequence (biology)",
+        "Frame (networking)",
+        "Entity linking",
+        "Semantic search",
+        "Homogeneous",
+        "Semantic data model",
+        "Artificial intelligence",
+        "Semantic heterogeneity",
+        "Semantic similarity",
+        "Semantics (computer science)",
+        "Scheme (mathematics)",
+        "Reduction (mathematics)",
+        "Data model (GIS)",
+        "Knowledge base",
+        "Block (permutation group theory)",
+        "Session (web analytics)",
+        "Natural language processing",
+        "Semantic mapping",
+        "Data modeling"
+      ],
+      "cited_by_api_url": null,
+      "related_works": []
+    }
+  }
+]

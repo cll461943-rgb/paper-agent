@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.03439v1",
+  "title": "Benchmarking Logistic Regression, SVM, Naive Bayes, and IndoBERT Fine-Tuning for Sentiment Analysis on Indonesian Product Reviews",
+  "abstract": "The exponential growth of e-commerce platforms in Indonesia has generated a massive volume of user-generated product reviews. Analyzing the sentiment of these reviews is critical for measuring customer satisfaction and identifying product issues at scale. This paper benchmarks traditional Machine Learning (ML) approaches against a Transformer-based Deep Learning model for a three-class sentiment analysis task (positive, neutral, negative) on the Tokopedia Product Reviews 2025 dataset. We implemented Term Frequency-Inverse Document Frequency (TF-IDF) feature extraction coupled with three algorithms: Logistic Regression, Linear Support Vector Machine (SVM), and Multinomial Naive Bayes as robust baselines. Subsequently, we fine-tuned the IndoBERT model (indobenchmark/indobert-base-p1) for contextual sequence classification. To computationally address the severe class imbalance inherent in e-commerce feedback, we applied balanced class weights for the baseline models and engineered a custom weighted cross-entropy loss function within the IndoBERT training loop, following the broader motivation of imbalanced-learning research. Our comprehensive evaluation using Accuracy, Macro F1-score, and Weighted F1-score revealed that the traditional Linear SVC model significantly outperformed the IndoBERT model in our experimental setup, achieving an Accuracy of 97.60% and a Macro F1-score of 0.5510, compared to IndoBERT's 88.70% and 0.5088. Detailed analysis indicates that this performance gap was primarily driven by discrepancies in the data sampling regimes, where baselines utilized the full corpus while the Transformer was constrained to a sampled subset. Finally, we demonstrate the practical viability of our pipeline by deploying the final sentiment classification model as an interactive Gradio web application.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Nabila Zakiyah Zahra",
+    "Salwa Farhanatussaidah",
+    "Nasywa Nur Afifah",
+    "Luluk Muthoharoh",
+    "Ardika Satria",
+    "Martin C. T. Manullang"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.03439v1",
+  "url": "http://arxiv.org/abs/2605.03439v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

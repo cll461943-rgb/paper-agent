@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:42202198",
+  "title": "Ego-R1: Agentic Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning.",
+  "abstract": "Egocentric videos are inherently long-form, as they provide a continuous, first-person perspective of daily life, capturing complex social interactions and routines that naturally span days or weeks. Understanding and reasoning over egocentric videos that span hours or even days poses significant challenges due to their length, multimodal nature, and complex temporal dependencies over long time horizons. To this end, we introduce Ego-R1, a novel framework for reasoning over ultra-long (i.e., days and weeks) egocentric videos. Ego-R1 leverages a structured Chain-of-Tool-Thought (CoTT) process, orchestrated by an Ego-R1 Agent trained via reinforcement learning (RL). Inspired by human problem-solving strategies, CoTT decomposes complex reasoning into modular steps, empowering the agent to act as a high-level controller that dynamically invokes specialized tools-such as hierarchical memory retrievers and multimodal perceptors-to iteratively and collaboratively answer sub-questions. This approach enables effective temporal abstraction, long-horizon dependency tracking, and step-by-step multimodal reasoning. The framework is built upon a flexible toolkit designed for efficient temporal retrieval and granular visual analysis: Hierarchical RAG (H-RAG), a text-based module that performs efficient top-down temporal localization by aggregating video logs from day-level summaries down to 10-minute intervals; Video-LLM, a short-horizon perception module that analyzes local temporal windows to interpret dynamic interactions; and VLM, a fine-grained vision-language model used to extract high-resolution details, such as text or object attributes, from specific frames. We design a two-stage training paradigm involving supervised fine-tuning (SFT) of a pretrained language model using CoTT data, to enable dynamic tool proposal for long-range reasoning; followed by RL, to enhance the performance of plan smartly with tools. To facilitate training, we construct Ego-R1 Data, which consists of Ego-CoTT-25 K for SFT and Ego-QA-4.4 K for RL. Furthermore, we evaluate Ego-R1 on a newly curated week-long video QA benchmark, Ego-R1 Bench, which contains hybrid-source, human-verified QA pairs. Extensive experiments show that our 3B-parameter Ego-R1 Agent achieves the strongest performance among open-weight and tool-agent baselines, while offering interpretable tool-grounded reasoning trajectories. On Ego-R1 Bench, Ego-R1 achieves 46.0% accuracy, substantially outperforming Gemini-1.5-Pro (38.3%) and LLaVA-Video (29.0%); we further report Gemini-3.1-Pro as a stronger closed-source reference at 53.7%. Moreover, the framework exhibits strong generalization to standard exocentric video benchmarks; by leveraging the long-video nature of egocentric data to train the orchestrator's planning capabilities rather than overfitting the perceptors to a specific view, our modular design remains robust across domains. Ego-R1 Agent achieves 64.9% accuracy on Video-MME (long), surpassing leading open-weight models. These results validate that dynamic, tool-augmented reasoning effectively bridges the gap between limited context windows and the demands of understanding both week-long first-person experiences and general long-form video content.",
+  "year": 2026,
+  "venue": "IEEE transactions on pattern analysis and machine intelligence",
+  "authors": [
+    "Shulin Tian",
+    "Ruiqi Wang",
+    "Hongming Guo",
+    "Penghao Wu",
+    "Yuhao Dong",
+    "Xiuying Wang",
+    "Jingkang Yang",
+    "Hao Zhang",
+    "Hongyuan Zhu",
+    "Ziwei Liu"
+  ],
+  "doi": "10.1109/TPAMI.2026.3697367",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42202198/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42202198"
+  }
+}

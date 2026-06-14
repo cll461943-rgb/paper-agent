@@ -1,0 +1,76 @@
+{
+  "paper_id": "https://openalex.org/W3033182847",
+  "title": "GMAT: Global Memory Augmentation for Transformers",
+  "abstract": "Transformer-based models have become ubiquitous in natural language processing thanks to their large capacity, innate parallelism and high performance. The contextualizing component of a Transformer block is the $\\textit{pairwise dot-product}$ attention that has a large $Ω(L^2)$ memory requirement for length $L$ sequences, limiting its ability to process long documents. This has been the subject of substantial interest recently, where multiple approximations were proposed to reduce the quadratic memory requirement using sparse attention matrices. In this work, we propose to augment sparse Transformer blocks with a dense attention-based $\\textit{global memory}$ of length $M$ ($\\ll L$) which provides an aggregate global view of the entire input sequence to each position. Our augmentation has a manageable $O(M\\cdot(L+M))$ memory overhead, and can be seamlessly integrated with prior sparse solutions. Moreover, global memory can also be used for sequence compression, by representing a long input sequence with the memory representations only. We empirically show that our method leads to substantial improvement on a range of tasks, including (a) synthetic tasks that require global reasoning, (b) masked language modeling, and (c) reading comprehension.",
+  "year": 2020,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Ankit Gupta",
+    "Jonathan Berant"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2006.03274",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2006.03274",
+  "citation_count": 21,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [
+    "https://openalex.org/W2250539671",
+    "https://openalex.org/W2889326796",
+    "https://openalex.org/W2889787757",
+    "https://openalex.org/W2896197082",
+    "https://openalex.org/W2940744433",
+    "https://openalex.org/W2946359678",
+    "https://openalex.org/W2950739196",
+    "https://openalex.org/W2953163841",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2963341956",
+    "https://openalex.org/W2963403868",
+    "https://openalex.org/W2963748441",
+    "https://openalex.org/W2963963993",
+    "https://openalex.org/W2965373594",
+    "https://openalex.org/W2970389371",
+    "https://openalex.org/W2970476646",
+    "https://openalex.org/W2970597249",
+    "https://openalex.org/W2980282514",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W2984864519",
+    "https://openalex.org/W2994673210",
+    "https://openalex.org/W2995359496",
+    "https://openalex.org/W2995575179",
+    "https://openalex.org/W2996428491",
+    "https://openalex.org/W2997517014",
+    "https://openalex.org/W3015468748",
+    "https://openalex.org/W3015883388",
+    "https://openalex.org/W3035428952",
+    "https://openalex.org/W3102659883",
+    "https://openalex.org/W3106298483"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Transformer",
+      "Computer science",
+      "Electrical engineering",
+      "Engineering",
+      "Voltage"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W2382290278",
+      "https://openalex.org/W2478288626",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2350741829"
+    ]
+  }
+}

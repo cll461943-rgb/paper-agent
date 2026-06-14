@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42166478",
+  "title": "STGAD: Self-temporal generative adversarial framework with transformer attention for unsupervised multivariate time-series anomaly detection and localization.",
+  "abstract": "Unsupervised anomaly detection in multivariate time series is important for maintaining the reliability of complex cyber-physical systems. However, existing methods often face practical challenges in adversarial stability, temporal dependency modeling, and anomaly-score calibration across datasets. We present STGAD, a dual-score generative-adversarial framework for anomaly detection and localization in multivariate time series. STGAD employs a WGAN-GP critic with a Transformer encoder to perform self-temporal modeling of within-window dependencies and cross-variable interactions, and uses a stochastic generator trained under adversarial supervision with sample-level proximity regularization to model normal temporal patterns. During inference, multiple generated candidates are sampled for each input window, and the minimum residual is used as a sample-matching anomaly cue. This residual-based score is fused with the critic-based score after normalization, and final anomaly decisions are produced by distribution-adaptive thresholding. Experiments on five benchmark datasets spanning server monitoring, aerospace telemetry, industrial control, and ECG signals (SMD, SMAP, MSL, SWaT, and MIT-BIH) show that STGAD achieves strong and consistent performance against representative baselines. Ablation and robustness analyses further demonstrate the effectiveness of critic-side temporal modeling, stable adversarial learning, and dual-score fusion in the proposed framework.",
+  "year": 2026,
+  "venue": "PloS one",
+  "authors": [
+    "Xiao Liao",
+    "Wei Deng",
+    "Hongyue Ma",
+    "Yihan Mu"
+  ],
+  "doi": "10.1371/journal.pone.0349223",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42166478/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42166478"
+  }
+}

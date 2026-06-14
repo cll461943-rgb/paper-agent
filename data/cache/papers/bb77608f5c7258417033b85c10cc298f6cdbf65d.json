@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/2502.05376v2",
+  "title": "LO-BCQ: Block Clustered Quantization for 4-bit (W4A4) LLM Inference",
+  "abstract": "Post-training quantization (PTQ) is a promising approach to reducing the storage and computational requirements of large language models (LLMs) without additional training cost. Recent PTQ studies have primarily focused on quantizing only weights to sub-8-bits while maintaining activations at 8-bits or higher. Accurate sub-8-bit quantization for both weights and activations without relying on quantization-aware training remains a significant challenge. We propose a novel quantization method called block clustered quantization (BCQ) wherein each operand tensor is decomposed into blocks (a block is a group of contiguous scalars), blocks are clustered based on their statistics, and a dedicated optimal quantization codebook is designed for each cluster. As a specific embodiment of this approach, we propose a PTQ algorithm called Locally-Optimal BCQ (LO-BCQ) that iterates between the steps of block clustering and codebook design to greedily minimize the quantization mean squared error. When weight and activation scalars are encoded to W4A4 format (with 0.5-bits of overhead for storing scaling factors and codebook selectors), we advance the current state-of-the-art by demonstrating <1% loss in inference accuracy across several LLMs and downstream tasks.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Reena Elangovan",
+    "Charbel Sakr",
+    "Anand Raghunathan",
+    "Brucek Khailany"
+  ],
+  "doi": null,
+  "arxiv_id": "2502.05376v2",
+  "url": "http://arxiv.org/abs/2502.05376v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

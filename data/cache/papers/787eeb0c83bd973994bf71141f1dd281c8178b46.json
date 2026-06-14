@@ -1,0 +1,63 @@
+{
+  "paper_id": "https://openalex.org/W4310509152",
+  "title": "What learning algorithm is in-context learning? Investigations with linear models",
+  "abstract": "Neural sequence models, especially transformers, exhibit a remarkable capacity for in-context learning. They can construct new predictors from sequences of labeled examples $(x, f(x))$ presented in the input without further parameter updates. We investigate the hypothesis that transformer-based in-context learners implement standard learning algorithms implicitly, by encoding smaller models in their activations, and updating these implicit models as new examples appear in the context. Using linear regression as a prototypical problem, we offer three sources of evidence for this hypothesis. First, we prove by construction that transformers can implement learning algorithms for linear models based on gradient descent and closed-form ridge regression. Second, we show that trained in-context learners closely match the predictors computed by gradient descent, ridge regression, and exact least-squares regression, transitioning between different predictors as transformer depth and dataset noise vary, and converging to Bayesian estimators for large widths and depths. Third, we present preliminary evidence that in-context learners share algorithmic features with these predictors: learners' late layers non-linearly encode weight vectors and moment matrices. These results suggest that in-context learning is understandable in algorithmic terms, and that (at least in the linear case) learners may rediscover standard estimation algorithms. Code and reference implementations are released at https://github.com/ekinakyurek/google-research/blob/master/incontext.",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Ekin Akyürek",
+    "Dale Schuurmans",
+    "Jacob Andreas",
+    "Tengyu Ma",
+    "Denny Zhou"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2211.15661",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2211.15661",
+  "citation_count": 85,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Estimator",
+      "Artificial intelligence",
+      "Machine learning",
+      "Transformer",
+      "Gradient descent",
+      "Linear regression",
+      "Algorithm",
+      "Regression",
+      "Context (archaeology)",
+      "Supervised learning",
+      "Stochastic gradient descent",
+      "Artificial neural network",
+      "Mathematics",
+      "Statistics",
+      "Paleontology",
+      "Voltage",
+      "Physics",
+      "Quantum mechanics",
+      "Biology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4206903459",
+      "https://openalex.org/W2754816816",
+      "https://openalex.org/W4366280654",
+      "https://openalex.org/W3160167280",
+      "https://openalex.org/W4231621013",
+      "https://openalex.org/W4362706668",
+      "https://openalex.org/W3008318776",
+      "https://openalex.org/W2041416246",
+      "https://openalex.org/W3020853991",
+      "https://openalex.org/W3035836947"
+    ]
+  }
+}

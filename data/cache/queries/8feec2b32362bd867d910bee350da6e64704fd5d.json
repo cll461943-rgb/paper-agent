@@ -1,0 +1,850 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2407.19346v1",
+    "title": "Polynomial Regression as a Task for Understanding In-context Learning Through Finetuning and Alignment",
+    "abstract": "Simple function classes have emerged as toy problems to better understand in-context-learning in transformer-based architectures used for large language models. But previously proposed simple function classes like linear regression or multi-layer-perceptrons lack the structure required to explore things like prompting and alignment within models capable of in-context-learning. We propose univariate polynomial regression as a function class that is just rich enough to study prompting and alignment, while allowing us to visualize and understand what is going on clearly.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Max Wilcoxson",
+      "Morten Svendgård",
+      "Ria Doshi",
+      "Dylan Davis",
+      "Reya Vir",
+      "Anant Sahai"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.19346v1",
+    "url": "http://arxiv.org/abs/2407.19346v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.12785v1",
+    "title": "In-Context Learning of Energy Functions",
+    "abstract": "In-context learning is a powerful capability of certain machine learning models that arguably underpins the success of today's frontier AI models. However, in-context learning is critically limited to settings where the in-context distribution of interest $p_θ^{ICL}( x|\\mathcal{D})$ can be straightforwardly expressed and/or parameterized by the model; for instance, language modeling relies on expressing the next-token distribution as a categorical distribution parameterized by the network's output logits. In this work, we present a more general form of in-context learning without such a limitation that we call \\textit{in-context learning of energy functions}. The idea is to instead learn the unconstrained and arbitrary in-context energy function $E_θ^{ICL}(x|\\mathcal{D})$ corresponding to the in-context distribution $p_θ^{ICL}(x|\\mathcal{D})$. To do this, we use classic ideas from energy-based modeling. We provide preliminary evidence that our method empirically works on synthetic data. Interestingly, our work contributes (to the best of our knowledge) the first example of in-context learning where the input space and output space differ from one another, suggesting that in-context learning is a more-general capability than previously realized.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Mikail Khona",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.12785v1",
+    "url": "http://arxiv.org/abs/2406.12785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:original_clean",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.23501v1",
+    "title": "The Impact of Role Design in In-Context Learning for Large Language Models",
+    "abstract": "In-context learning (ICL) enables Large Language Models (LLMs) to generate predictions based on prompts without additional fine-tuning. While prompt engineering has been widely studied, the impact of role design within prompts remains underexplored. This study examines the influence of role configurations in zero-shot and few-shot learning scenarios using GPT-3.5 and GPT-4o from OpenAI and Llama2-7b and Llama2-13b from Meta. We evaluate the models' performance across datasets, focusing on tasks like sentiment analysis, text classification, question answering, and math reasoning. Our findings suggest the potential of role-based prompt structuring to enhance LLM performance.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Hamidreza Rouzegar",
+      "Masoud Makrehchi"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.23501v1",
+    "url": "http://arxiv.org/abs/2509.23501v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.11575v2",
+    "title": "In-Context Learning for Seismic Data Processing",
+    "abstract": "Seismic processing transforms raw data into subsurface images essential for geophysical applications. Traditional methods face challenges, such as noisy data, and manual parameter tuning, among others. Recently deep learning approaches have proposed alternative solutions to some of these problems. However, important challenges of existing deep learning approaches are spatially inconsistent results across neighboring seismic gathers and lack of user-control. We address these limitations by introducing ContextSeisNet, an in-context learning model, to seismic demultiple processing. Our approach conditions predictions on a support set of spatially related example pairs: neighboring common-depth point gathers from the same seismic line and their corresponding labels. This allows the model to learn task-specific processing behavior at inference time by observing how similar gathers should be processed, without any retraining. This method provides both flexibility through user-defined examples and improved lateral consistency across seismic lines. On synthetic data, ContextSeisNet outperforms a U-Net baseline quantitatively and demonstrates enhanced spatial coherence between neighboring gathers. On field data, our model achieves superior lateral consistency compared to both traditional Radon demultiple and the U-Net baseline. Relative to the U-Net, ContextSeisNet also delivers improved near-offset performance and more complete multiple removal. Notably, ContextSeisNet achieves comparable field data performance despite being trained on 90% less data, demonstrating substantial data efficiency. These results establish ContextSeisNet as a practical approach for spatially consistent seismic demultiple with potential applicability to other seismic processing tasks.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Fabian Fuchs",
+      "Mario Ruben Fernandez",
+      "Norman Ettrich",
+      "Janis Keuper"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.11575v2",
+    "url": "http://arxiv.org/abs/2512.11575v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2606.11961v1",
+    "title": "Categorical Prior Lock-in: Why In-Context Learning Fails for Structured Data",
+    "abstract": "Large language models (LLMs) are increasingly used as conditional generators for structured data, relying on in-context learning (ICL) to adapt to new distributions without parameter updates. We investigate the limits of ICL for structured generation under distribution mismatch, using high-cardinality tabular data as a controlled test case, and identify a structural failure mode we term \\textit{categorical prior lock-in}: the inability of ICL to update the model's prior over token distributions inherited from pre-training. Across two 7B-parameter open-weight models, ICL improves numerical fidelity with additional examples but exhibits a sharp ceiling on categorical distributions, failing to reproduce rare classes entirely. Parameter-efficient fine-tuning (LoRA) overcomes these limitations but introduces measurable memorization risk and, in some cases, destabilizes structured output generation, highlighting a fundamental trade-off between adaptability and privacy.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Antonio Pelusi",
+      "Stefano Braghin",
+      "Alberto Trombetta"
+    ],
+    "doi": null,
+    "arxiv_id": "2606.11961v1",
+    "url": "http://arxiv.org/abs/2606.11961v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2408.00214v2",
+    "title": "Large Language Model (LLM)-enabled In-context Learning for Wireless Network Optimization: A Case Study of Power Control",
+    "abstract": "Large language model (LLM) has recently been considered a promising technique for many fields. This work explores LLM-based wireless network optimization via in-context learning. To showcase the potential of LLM technologies, we consider the base station (BS) power control as a case study, a fundamental but crucial technique that is widely investigated in wireless networks. Different from existing machine learning (ML) methods, our proposed in-context learning algorithm relies on LLM's inference capabilities. It avoids the complexity of tedious model training and hyper-parameter fine-tuning, which is a well-known bottleneck of many ML algorithms. Specifically, the proposed algorithm first describes the target task via formatted natural language, and then designs the in-context learning framework and demonstration examples. After that, it considers two cases, namely discrete-state and continuous-state problems, and proposes state-based and ranking-based methods to select appropriate examples for these two cases, respectively. Finally, the simulations demonstrate that the proposed algorithm can achieve comparable performance as conventional deep reinforcement learning (DRL) techniques without dedicated model training or fine-tuning. Such an efficient and low-complexity approach has great potential for future wireless network optimization.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Hao Zhou",
+      "Chengming Hu",
+      "Dun Yuan",
+      "Ye Yuan",
+      "Di Wu",
+      "Xue Liu",
+      "Charlie Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2408.00214v2",
+    "url": "http://arxiv.org/abs/2408.00214v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.12276v3",
+    "title": "Emergence and Effectiveness of Task Vectors in In-Context Learning: An Encoder Decoder Perspective",
+    "abstract": "Autoregressive transformers exhibit adaptive learning through in-context learning (ICL), which begs the question of how. Prior works have shown that transformers represent the ICL tasks as vectors in their representations. In this paper, we leverage the encoding-decoding framework to study how transformers form task vectors during pretraining and how their task encoding quality predicts ICL task performance. On synthetic ICL tasks, we analyze the training dynamics of a small transformer and report the coupled emergence of task encoding and decoding. As the model learns to encode different latent tasks (e.g., \"Finding the first noun in a sentence.\") into distinct, separable representations, it concurrently builds conditional decoding algorithms and improves its ICL performance. We validate this phenomenon across pretrained models of varying scales (Gemma-2 2B/9B/27B, Llama-3.1 8B/70B) and over the course of pretraining in OLMo-7B. Further, we demonstrate that the quality of task encoding inferred from representations predicts ICL performance, and that, surprisingly, finetuning the earlier layers can improve the task encoding and performance more than finetuning the latter layers. Our empirical insights shed light into better understanding the success and failure modes of large language models via their representations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Seungwook Han",
+      "Jinyeop Song",
+      "Jeff Gore",
+      "Pulkit Agrawal"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.12276v3",
+    "url": "http://arxiv.org/abs/2412.12276v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.21742v1",
+    "title": "Epistemic Context Learning: Building Trust the Right Way in LLM-Based Multi-Agent Systems",
+    "abstract": "Individual agents in multi-agent (MA) systems often lack robustness, tending to blindly conform to misleading peers. We show this weakness stems from both sycophancy and inadequate ability to evaluate peer reliability. To address this, we first formalize the learning problem of history-aware reference, introducing the historical interactions of peers as additional input, so that agents can estimate peer reliability and learn from trustworthy peers when uncertain. This shifts the task from evaluating peer reasoning quality to estimating peer reliability based on interaction history. We then develop Epistemic Context Learning (ECL): a reasoning framework that conditions predictions on explicitly-built peer profiles from history. We further optimize ECL by reinforcement learning using auxiliary rewards. Our experiments reveal that our ECL enables small models like Qwen 3-4B to outperform a history-agnostic baseline 8x its size (Qwen 3-30B) by accurately identifying reliable peers. ECL also boosts frontier models to near-perfect (100%) performance. We show that ECL generalizes well to various MA configurations and we find that trust is modeled well by LLMs, revealing a strong correlation in trust modeling accuracy and final answer quality.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ruiwen Zhou",
+      "Maojia Song",
+      "Xiaobao Wu",
+      "Sitao Cheng",
+      "Xunjian Yin",
+      "Yuxi Xie",
+      "Zhuoqun Hao",
+      "Wenyue Hua",
+      "Liangming Pan",
+      "Soujanya Poria",
+      "Min-Yen Kan"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.21742v1",
+    "url": "http://arxiv.org/abs/2601.21742v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.02327v3",
+    "title": "Variational Uncertainty Decomposition for In-Context Learning",
+    "abstract": "As large language models (LLMs) gain popularity in conducting prediction tasks in-context, understanding the sources of uncertainty in in-context learning becomes essential to ensuring reliability. The recent hypothesis of in-context learning performing predictive Bayesian inference opens the avenue for Bayesian uncertainty estimation, particularly for decomposing uncertainty into epistemic uncertainty due to lack of in-context data and aleatoric uncertainty inherent in the in-context prediction task. However, the decomposition idea remains under-explored due to the intractability of the latent parameter posterior from the underlying Bayesian model. In this work, we introduce a variational uncertainty decomposition framework for in-context learning without explicitly sampling from the latent parameter posterior, by optimising auxiliary queries as probes to obtain an upper bound to the aleatoric uncertainty of an LLM's in-context learning procedure, which also induces a lower bound to the epistemic uncertainty. Through experiments on synthetic and real-world tasks, we show quantitatively and qualitatively that the decomposed uncertainties obtained from our method exhibit desirable properties of epistemic and aleatoric uncertainty.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "I. Shavindra Jayasekera",
+      "Jacob Si",
+      "Filippo Valdettaro",
+      "Wenlong Chen",
+      "A. Aldo Faisal",
+      "Yingzhen Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.02327v3",
+    "url": "http://arxiv.org/abs/2509.02327v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.16704v1",
+    "title": "A Closer Look at In-Context Learning under Distribution Shifts",
+    "abstract": "In-context learning, a capability that enables a model to learn from input examples on the fly without necessitating weight updates, is a defining characteristic of large language models. In this work, we follow the setting proposed in (Garg et al., 2022) to better understand the generality and limitations of in-context learning from the lens of the simple yet fundamental task of linear regression. The key question we aim to address is: Are transformers more adept than some natural and simpler architectures at performing in-context learning under varying distribution shifts? To compare transformers, we propose to use a simple architecture based on set-based Multi-Layer Perceptrons (MLPs). We find that both transformers and set-based MLPs exhibit in-context learning under in-distribution evaluations, but transformers more closely emulate the performance of ordinary least squares (OLS). Transformers also display better resilience to mild distribution shifts, where set-based MLPs falter. However, under severe distribution shifts, both models' in-context learning abilities diminish.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Kartik Ahuja",
+      "David Lopez-Paz"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.16704v1",
+    "url": "http://arxiv.org/abs/2305.16704v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.13493v1",
+    "title": "In-Context In-Context Learning with Transformer Neural Processes",
+    "abstract": "Neural processes (NPs) are a powerful family of meta-learning models that seek to approximate the posterior predictive map of the ground-truth stochastic process from which each dataset in a meta-dataset is sampled. There are many cases in which practitioners, besides having access to the dataset of interest, may also have access to other datasets that share similarities with it. In this case, integrating these datasets into the NP can improve predictions. We equip NPs with this functionality and describe this paradigm as in-context in-context learning. Standard NP architectures, such as the convolutional conditional NP (ConvCNP) or the family of transformer neural processes (TNPs), are not capable of in-context in-context learning, as they are only able to condition on a single dataset. We address this shortcoming by developing the in-context in-context learning pseudo-token TNP (ICICL-TNP). The ICICL-TNP builds on the family of PT-TNPs, which utilise pseudo-token-based transformer architectures to sidestep the quadratic computational complexity associated with regular transformer architectures. Importantly, the ICICL-TNP is capable of conditioning on both sets of datapoints and sets of datasets, enabling it to perform in-context in-context learning. We demonstrate the importance of in-context in-context learning and the effectiveness of the ICICL-TNP in a number of experiments.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Matthew Ashman",
+      "Cristiana Diaconu",
+      "Adrian Weller",
+      "Richard E. Turner"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.13493v1",
+    "url": "http://arxiv.org/abs/2406.13493v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.21387v2",
+    "title": "Early Stopping Tabular In-Context Learning",
+    "abstract": "Tabular foundation models have shown strong performance across various tabular learning tasks via in-context learning, offering robust generalization without any downstream finetuning. However, their inference-time costs remain high, particularly for larger datasets. To address this, we propose early-stopping the in-context learning process. We achieve this by dynamically evaluating whether to stop in-context learning after each Transformer encoder layer. Once stopped, we decode the embedding using a pre-trained layer-wise decoder. Experiments across 34 small classification tasks size show that early stopping in-context learning accelerates inference by up to x1.3 with negligible degradation in predictive performance. To assess scalability, we further evaluate our method on five larger classification tasks, achieving speedups of up to x2.2. Our results demonstrate the potential of early exiting as an effective and practical strategy for improving the efficiency of tabular in-context learning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jaris Küken",
+      "Lennart Purucker",
+      "Frank Hutter"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.21387v2",
+    "url": "http://arxiv.org/abs/2506.21387v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12600v1",
+    "title": "PRODIGY: Enabling In-context Learning Over Graphs",
+    "abstract": "In-context learning is the ability of a pretrained model to adapt to novel and diverse downstream tasks by conditioning on prompt examples, without optimizing any parameters. While large language models have demonstrated this ability, how in-context learning could be performed over graphs is unexplored. In this paper, we develop \\textbf{Pr}etraining \\textbf{O}ver \\textbf{D}iverse \\textbf{I}n-Context \\textbf{G}raph S\\textbf{y}stems (PRODIGY), the first pretraining framework that enables in-context learning over graphs. The key idea of our framework is to formulate in-context learning over graphs with a novel \\emph{prompt graph} representation, which connects prompt examples and queries. We then propose a graph neural network architecture over the prompt graph and a corresponding family of in-context pretraining objectives. With PRODIGY, the pretrained model can directly perform novel downstream classification tasks on unseen graphs via in-context learning. We provide empirical evidence of the effectiveness of our framework by showcasing its strong in-context learning performance on tasks involving citation networks and knowledge graphs. Our approach outperforms the in-context learning accuracy of contrastive pretraining baselines with hard-coded adaptation by 18\\% on average across all setups. Moreover, it also outperforms standard finetuning with limited data by 33\\% on average with in-context learning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Qian Huang",
+      "Hongyu Ren",
+      "Peng Chen",
+      "Gregor Kržmanc",
+      "Daniel Zeng",
+      "Percy Liang",
+      "Jure Leskovec"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12600v1",
+    "url": "http://arxiv.org/abs/2305.12600v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.08122v2",
+    "title": "In-Context Learning Enhanced Credibility Transformer",
+    "abstract": "The starting point of our network architecture is the Credibility Transformer which extends the classical Transformer architecture by a credibility mechanism to improve model learning and predictive performance. This Credibility Transformer learns credibilitized CLS tokens that serve as learned representations of the original input features. In this paper we present a new paradigm that augments this architecture by an in-context learning mechanism, i.e., we increase the information set by a context batch consisting of similar instances. This allows the model to enhance the CLS token representations of the instances by additional in-context information and fine-tuning. We empirically verify that this in-context learning enhances predictive accuracy by adapting to similar risk patterns. Moreover, this in-context learning also allows the model to generalize to new instances which, e.g., have feature levels in the categorical covariates that have not been present when the model was trained -- for a relevant example, think of a new vehicle model which has just been developed by a car manufacturer.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kishan Padayachy",
+      "Ronald Richman",
+      "Salvatore Scognamiglio",
+      "Mario V. Wüthrich"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.08122v2",
+    "url": "http://arxiv.org/abs/2509.08122v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.16819v1",
+    "title": "Automatic Domain Adaptation by Transformers in In-Context Learning",
+    "abstract": "Selecting or designing an appropriate domain adaptation algorithm for a given problem remains challenging. This paper presents a Transformer model that can provably approximate and opt for domain adaptation methods for a given dataset in the in-context learning framework, where a foundation model performs new tasks without updating its parameters at test time. Specifically, we prove that Transformers can approximate instance-based and feature-based unsupervised domain adaptation algorithms and automatically select an algorithm suited for a given dataset. Numerical results indicate that in-context learning demonstrates an adaptive domain adaptation surpassing existing methods.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ryuichiro Hataya",
+      "Kota Matsui",
+      "Masaaki Imaizumi"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.16819v1",
+    "url": "http://arxiv.org/abs/2405.16819v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.17838v2",
+    "title": "Continuum Transformers Perform In-Context Learning by Operator Gradient Descent",
+    "abstract": "Transformers robustly exhibit the ability to perform in-context learning, whereby their predictive accuracy on a task can increase not by parameter updates but merely with the placement of training samples in their context windows. Recent works have shown that transformers achieve this by implementing gradient descent in their forward passes. Such results, however, are restricted to standard transformer architectures, which handle finite-dimensional inputs. In the space of PDE surrogate modeling, a generalization of transformers to handle infinite-dimensional function inputs, known as \"continuum transformers,\" has been proposed and similarly observed to exhibit in-context learning. Despite impressive empirical performance, such in-context learning has yet to be theoretically characterized. We herein demonstrate that continuum transformers perform in-context operator learning by performing gradient descent in an operator RKHS. We demonstrate this using novel proof strategies that leverage a generalized representer theorem for Hilbert spaces and gradient flows over the space of functionals of a Hilbert space. We additionally show the operator learned in context is the Bayes Optimal Predictor in the infinite depth limit of the transformer. We then provide empirical validations of this optimality result and demonstrate that the parameters under which such gradient descent is performed are recovered through the continuum transformer training.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Abhiti Mishra",
+      "Yash Patel",
+      "Ambuj Tewari"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.17838v2",
+    "url": "http://arxiv.org/abs/2505.17838v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.03969v1",
+    "title": "In-context learning agents are asymmetric belief updaters",
+    "abstract": "We study the in-context learning dynamics of large language models (LLMs) using three instrumental learning tasks adapted from cognitive psychology. We find that LLMs update their beliefs in an asymmetric manner and learn more from better-than-expected outcomes than from worse-than-expected ones. Furthermore, we show that this effect reverses when learning about counterfactual feedback and disappears when no agency is implied. We corroborate these findings by investigating idealized in-context learning agents derived through meta-reinforcement learning, where we observe similar patterns. Taken together, our results contribute to our understanding of how in-context learning works by highlighting that the framing of a problem significantly influences how learning occurs, a phenomenon also observed in human cognition.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Johannes A. Schubert",
+      "Akshay K. Jagadish",
+      "Marcel Binz",
+      "Eric Schulz"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.03969v1",
+    "url": "http://arxiv.org/abs/2402.03969v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2111.02080v6",
+    "title": "An Explanation of In-context Learning as Implicit Bayesian Inference",
+    "abstract": "Large language models (LMs) such as GPT-3 have the surprising ability to do in-context learning, where the model learns to do a downstream task simply by conditioning on a prompt consisting of input-output examples. The LM learns from these examples without being explicitly pretrained to learn. Thus, it is unclear what enables in-context learning. In this paper, we study how in-context learning can emerge when pretraining documents have long-range coherence. Here, the LM must infer a latent document-level concept to generate coherent next tokens during pretraining. At test time, in-context learning occurs when the LM also infers a shared latent concept between examples in a prompt. We prove when this occurs despite a distribution mismatch between prompts and pretraining data in a setting where the pretraining distribution is a mixture of HMMs. In contrast to messy large-scale datasets used to train LMs capable of in-context learning, we generate a small-scale synthetic dataset (GINC) where Transformers and LSTMs both exhibit in-context learning. Beyond the theory, experiments on GINC exhibit large-scale real-world phenomena including improved in-context performance with model scaling (despite the same pretraining loss), sensitivity to example order, and instances where zero-shot is better than few-shot in-context learning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sang Michael Xie",
+      "Aditi Raghunathan",
+      "Percy Liang",
+      "Tengyu Ma"
+    ],
+    "doi": null,
+    "arxiv_id": "2111.02080v6",
+    "url": "http://arxiv.org/abs/2111.02080v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.06054v3",
+    "title": "Breaking through the learning plateaus of in-context learning in Transformer",
+    "abstract": "In-context learning, i.e., learning from context examples, is an impressive ability of Transformer. Training Transformers to possess this in-context learning skill is computationally intensive due to the occurrence of learning plateaus, which are periods within the training process where there is minimal or no enhancement in the model's in-context learning capability. To study the mechanism behind the learning plateaus, we conceptually seperate a component within the model's internal representation that is exclusively affected by the model's weights. We call this the \"weights component\", and the remainder is identified as the \"context component\". By conducting meticulous and controlled experiments on synthetic tasks, we note that the persistence of learning plateaus correlates with compromised functionality of the weights component. Recognizing the impaired performance of the weights component as a fundamental behavior drives learning plateaus, we have developed three strategies to expedite the learning of Transformers. The effectiveness of these strategies is further confirmed in natural language processing tasks. In conclusion, our research demonstrates the feasibility of cultivating a powerful in-context learning ability within AI systems in an eco-friendly manner.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jingwen Fu",
+      "Tao Yang",
+      "Yuwang Wang",
+      "Yan Lu",
+      "Nanning Zheng"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.06054v3",
+    "url": "http://arxiv.org/abs/2309.06054v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.09263v3",
+    "title": "Auto-ICL: In-Context Learning without Human Supervision",
+    "abstract": "With in-context learning ability, the performance of large language models can be significantly boosted when provided with appropriate context. However, existing in-context learning methods mainly rely on human-provided contexts, such as labeled examples and explicit instructions. Writing context by humans is labor-intensive on various tasks and limits the model to tasks manageable by humans. To overcome these limitations, we propose Automatic In-Context Learning framework that enables the model to autonomously generate examples and instructions for problem-solving. With experiments across various models and datasets, results show that model-generated contexts outperform human-annotated contexts, including Few-Shot and Few-Shot-CoT methods, and surpass existing self-generated context methods like Zero-CoT and Auto-CoT.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jinghan Yang",
+      "Shuming Ma",
+      "Furu Wei"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.09263v3",
+    "url": "http://arxiv.org/abs/2311.09263v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.05218v3",
+    "title": "Density estimation with LLMs: a geometric investigation of in-context learning trajectories",
+    "abstract": "Large language models (LLMs) demonstrate remarkable emergent abilities to perform in-context learning across various tasks, including time series forecasting. This work investigates LLMs' ability to estimate probability density functions (PDFs) from data observed in-context; such density estimation (DE) is a fundamental task underlying many probabilistic modeling problems. We leverage the Intensive Principal Component Analysis (InPCA) to visualize and analyze the in-context learning dynamics of LLaMA-2 models. Our main finding is that these LLMs all follow similar learning trajectories in a low-dimensional InPCA space, which are distinct from those of traditional density estimation methods like histograms and Gaussian kernel density estimation (KDE). We interpret the LLaMA in-context DE process as a KDE with an adaptive kernel width and shape. This custom kernel model captures a significant portion of LLaMA's behavior despite having only two parameters. We further speculate on why LLaMA's kernel width and shape differs from classical algorithms, providing insights into the mechanism of in-context probabilistic reasoning in LLMs. Our codebase, along with a 3D visualization of an LLM's in-context learning trajectory, is publicly available at https://github.com/AntonioLiu97/LLMICL_inPCA",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Toni J. B. Liu",
+      "Nicolas Boullé",
+      "Raphaël Sarfati",
+      "Christopher J. Earls"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.05218v3",
+    "url": "http://arxiv.org/abs/2410.05218v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.03782v3",
+    "title": "The broader spectrum of in-context learning",
+    "abstract": "The ability of language models to learn a task from a few examples in context has generated substantial interest. Here, we provide a perspective that situates this type of supervised few-shot learning within a much broader spectrum of meta-learned in-context learning. Indeed, we suggest that any distribution of sequences in which context non-trivially decreases loss on subsequent predictions can be interpreted as eliciting a kind of in-context learning. We suggest that this perspective helps to unify the broad set of in-context abilities that language models exhibit -- such as adapting to tasks from instructions or role play, or extrapolating time series. This perspective also sheds light on potential roots of in-context learning in lower-level processing of linguistic dependencies (e.g. coreference or parallel structures). Finally, taking this perspective highlights the importance of generalization, which we suggest can be studied along several dimensions: not only the ability to learn something novel, but also flexibility in learning from different presentations, and in applying what is learned. We discuss broader connections to past literature in meta-learning and goal-conditioned agents, and other perspectives on learning and adaptation. We close by suggesting that research on in-context learning should consider this broader spectrum of in-context capabilities and types of generalization.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Andrew Kyle Lampinen",
+      "Stephanie C. Y. Chan",
+      "Aaditya K. Singh",
+      "Murray Shanahan"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.03782v3",
+    "url": "http://arxiv.org/abs/2412.03782v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.07067v2",
+    "title": "Transformers as Algorithms: Generalization and Stability in In-context Learning",
+    "abstract": "In-context learning (ICL) is a type of prompting where a transformer model operates on a sequence of (input, output) examples and performs inference on-the-fly. In this work, we formalize in-context learning as an algorithm learning problem where a transformer model implicitly constructs a hypothesis function at inference-time. We first explore the statistical aspects of this abstraction through the lens of multitask learning: We obtain generalization bounds for ICL when the input prompt is (1) a sequence of i.i.d. (input, label) pairs or (2) a trajectory arising from a dynamical system. The crux of our analysis is relating the excess risk to the stability of the algorithm implemented by the transformer. We characterize when transformer/attention architecture provably obeys the stability condition and also provide empirical verification. For generalization on unseen tasks, we identify an inductive bias phenomenon in which the transfer learning risk is governed by the task complexity and the number of MTL tasks in a highly predictable manner. Finally, we provide numerical evaluations that (1) demonstrate transformers can indeed implement near-optimal algorithms on classical regression problems with i.i.d. and dynamic data, (2) provide insights on stability, and (3) verify our theoretical predictions.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yingcong Li",
+      "M. Emrullah Ildiz",
+      "Dimitris Papailiopoulos",
+      "Samet Oymak"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.07067v2",
+    "url": "http://arxiv.org/abs/2301.07067v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.14086v4",
+    "title": "In-context learning and Occam's razor",
+    "abstract": "A central goal of machine learning is generalization. While the No Free Lunch Theorem states that we cannot obtain theoretical guarantees for generalization without further assumptions, in practice we observe that simple models which explain the training data generalize best: a principle called Occam's razor. Despite the need for simple models, most current approaches in machine learning only minimize the training error, and at best indirectly promote simplicity through regularization or architecture design. Here, we draw a connection between Occam's razor and in-context learning: an emergent ability of certain sequence models like Transformers to learn at inference time from past observations in a sequence. In particular, we show that the next-token prediction loss used to train in-context learners is directly equivalent to a data compression technique called prequential coding, and that minimizing this loss amounts to jointly minimizing both the training error and the complexity of the model that was implicitly learned from context. Our theory and the empirical experiments we use to support it not only provide a normative account of in-context learning, but also elucidate the shortcomings of current in-context learning methods, suggesting ways in which they can be improved. We make our code available at https://github.com/3rdCore/PrequentialCode.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Eric Elmoznino",
+      "Tom Marty",
+      "Tejas Kasetty",
+      "Leo Gagnon",
+      "Sarthak Mittal",
+      "Mahan Fathi",
+      "Dhanya Sridhar",
+      "Guillaume Lajoie"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.14086v4",
+    "url": "http://arxiv.org/abs/2410.14086v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.18202v2",
+    "title": "IM-Context: In-Context Learning for Imbalanced Regression Tasks",
+    "abstract": "Regression models often fail to generalize effectively in regions characterized by highly imbalanced label distributions. Previous methods for deep imbalanced regression rely on gradient-based weight updates, which tend to overfit in underrepresented regions. This paper proposes a paradigm shift towards in-context learning as an effective alternative to conventional in-weight learning methods, particularly for addressing imbalanced regression. In-context learning refers to the ability of a model to condition itself, given a prompt sequence composed of in-context samples (input-label pairs) alongside a new query input to generate predictions, without requiring any parameter updates. In this paper, we study the impact of the prompt sequence on the model performance from both theoretical and empirical perspectives. We emphasize the importance of localized context in reducing bias within regions of high imbalance. Empirical evaluations across a variety of real-world datasets demonstrate that in-context learning substantially outperforms existing in-weight learning methods in scenarios with high levels of imbalance.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ismail Nejjar",
+      "Faez Ahmed",
+      "Olga Fink"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.18202v2",
+    "url": "http://arxiv.org/abs/2405.18202v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2310.03331v1",
+    "title": "Fine-tune Language Models to Approximate Unbiased In-context Learning",
+    "abstract": "In-context learning (ICL) is an astonishing emergent ability of large language models (LLMs). By presenting a prompt that includes multiple input-output pairs as examples and introducing a new query input, models can generate the corresponding output. However, the performance of models heavily relies on the quality of the input prompt when implementing in-context learning. Biased or imbalanced input prompts can significantly degrade the performance of language models. To address this issue, we introduce a reweighted algorithm called RICL (Reweighted In-context Learning). This algorithm fine-tunes language models using an unbiased validation set to determine the optimal weight for each input-output example to approximate unbiased in-context learning. Furthermore, we also introduce a low-cost reweighted algorithm, a linear optimal weight approximation algorithm called LARICL (Linear Approximation of Reweighted In-context Learning). This algorithm requires minimal training cost while providing effective results. We prove the convergence of our algorithm and validate its performance through experiments conducted on a numerical dataset. The experimental findings reveal a substantial improvement in comparison to benchmarks including the performance of casual prompt-based in-context learning and the performance of a classic fine-tuning method.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Timothy Chu",
+      "Zhao Song",
+      "Chiwun Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2310.03331v1",
+    "url": "http://arxiv.org/abs/2310.03331v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12907v1",
+    "title": "Meta-in-context learning in large language models",
+    "abstract": "Large language models have shown tremendous performance in a variety of tasks. In-context learning -- the ability to improve at a task after being provided with a number of demonstrations -- is seen as one of the main contributors to their success. In the present paper, we demonstrate that the in-context learning abilities of large language models can be recursively improved via in-context learning itself. We coin this phenomenon meta-in-context learning. Looking at two idealized domains, a one-dimensional regression task and a two-armed bandit task, we show that meta-in-context learning adaptively reshapes a large language model's priors over expected tasks. Furthermore, we find that meta-in-context learning modifies the in-context learning strategies of such models. Finally, we extend our approach to a benchmark of real-world regression problems where we observe competitive performance to traditional learning algorithms. Taken together, our work improves our understanding of in-context learning and paves the way toward adapting large language models to the environment they are applied purely through meta-in-context learning rather than traditional finetuning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Julian Coda-Forno",
+      "Marcel Binz",
+      "Zeynep Akata",
+      "Matthew Botvinick",
+      "Jane X. Wang",
+      "Eric Schulz"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12907v1",
+    "url": "http://arxiv.org/abs/2305.12907v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.14660v2",
+    "title": "Implicit In-context Learning",
+    "abstract": "In-context Learning (ICL) empowers large language models (LLMs) to swiftly adapt to unseen tasks at inference-time by prefixing a few demonstration examples before queries. Despite its versatility, ICL incurs substantial computational and memory overheads compared to zero-shot learning and is sensitive to the selection and order of demonstration examples. In this work, we introduce Implicit In-context Learning (I2CL), an innovative paradigm that reduces the inference cost of ICL to that of zero-shot learning with minimal information loss. I2CL operates by first generating a condensed vector representation, namely a context vector, extracted from the demonstration examples. It then conducts an inference-time intervention through injecting a linear combination of the context vector and query activations back into the model's residual streams. Empirical evaluation on nine real-world tasks across three model architectures demonstrates that I2CL achieves few-shot level performance at zero-shot inference cost, and it exhibits robustness against variations in demonstration examples. Furthermore, I2CL facilitates a novel representation of task-ids, enhancing task similarity detection and fostering effective transfer learning. We also perform a comprehensive analysis and ablation study on I2CL, offering deeper insights into its internal mechanisms. Code is available at https://github.com/LzVv123456/I2CL.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zhuowei Li",
+      "Zihao Xu",
+      "Ligong Han",
+      "Yunhe Gao",
+      "Song Wen",
+      "Di Liu",
+      "Hao Wang",
+      "Dimitris N. Metaxas"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.14660v2",
+    "url": "http://arxiv.org/abs/2405.14660v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.07971v1",
+    "title": "A Theory of Emergent In-Context Learning as Implicit Structure Induction",
+    "abstract": "Scaling large language models (LLMs) leads to an emergent capacity to learn in-context from example demonstrations. Despite progress, theoretical understanding of this phenomenon remains limited. We argue that in-context learning relies on recombination of compositional operations found in natural language data. We derive an information-theoretic bound showing how in-context learning abilities arise from generic next-token prediction when the pretraining distribution has sufficient amounts of compositional structure, under linguistically motivated assumptions. A second bound provides a theoretical justification for the empirical success of prompting LLMs to output intermediate steps towards an answer. To validate theoretical predictions, we introduce a controlled setup for inducing in-context learning; unlike previous approaches, it accounts for the compositional nature of language. Trained transformers can perform in-context learning for a range of tasks, in a manner consistent with the theoretical results. Mirroring real-world LLMs in a miniature setup, in-context learning emerges when scaling parameters and data, and models perform better when prompted to output intermediate steps. Probing shows that in-context learning is supported by a representation of the input's compositional structure. Taken together, these results provide a step towards theoretical understanding of emergent behavior in large language models.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Michael Hahn",
+      "Navin Goyal"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.07971v1",
+    "url": "http://arxiv.org/abs/2303.07971v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.25858v2",
+    "title": "Investigation into In-Context Learning Capabilities of Transformers",
+    "abstract": "Transformers have demonstrated a strong ability for in-context learning (ICL), enabling models to solve previously unseen tasks using only example input output pairs provided at inference time. While prior theoretical work has established conditions under which transformers can perform linear classification in-context, the empirical scaling behavior governing when this mechanism succeeds remains insufficiently characterized. In this paper, we conduct a systematic empirical study of in-context learning for Gaussian-mixture binary classification tasks. Building on the theoretical framework of Frei and Vardi (2024), we analyze how in-context test accuracy depends on three fundamental factors: the input dimension, the number of in-context examples, and the number of pre-training tasks. Using a controlled synthetic setup and a linear in-context classifier formulation, we isolate the geometric conditions under which models successfully infer task structure from context alone. We additionally investigate the emergence of benign overfitting, where models memorize noisy in-context labels while still achieving strong generalization performance on clean test data. Through extensive sweeps across dimensionality, sequence length, task diversity, and signal-to-noise regimes, we identify the parameter regions in which this phenomenon arises and characterize how it depends on data geometry and training exposure. Our results provide a comprehensive empirical map of scaling behavior in in-context classification, highlighting the critical role of dimensionality, signal strength, and contextual information in determining when in-context learning succeeds and when it fails.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Rushil Chandrupatla",
+      "Leo Bangayan",
+      "Sebastian Leng"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.25858v2",
+    "url": "http://arxiv.org/abs/2604.25858v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

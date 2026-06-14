@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2210.12770v4",
+  "title": "Exploring the Value of Pre-trained Language Models for Clinical Named Entity Recognition",
+  "abstract": "The practice of fine-tuning Pre-trained Language Models (PLMs) from general or domain-specific data to a specific task with limited resources, has gained popularity within the field of natural language processing (NLP). In this work, we re-visit this assumption and carry out an investigation in clinical NLP, specifically Named Entity Recognition on drugs and their related attributes. We compare Transformer models that are trained from scratch to fine-tuned BERT-based LLMs namely BERT, BioBERT, and ClinicalBERT. Furthermore, we examine the impact of an additional CRF layer on such models to encourage contextual learning. We use n2c2-2018 shared task data for model development and evaluations. The experimental outcomes show that 1) CRF layers improved all language models; 2) referring to BIO-strict span level evaluation using macro-average F1 score, although the fine-tuned LLMs achieved 0.83+ scores, the TransformerCRF model trained from scratch achieved 0.78+, demonstrating comparable performances with much lower cost - e.g. with 39.80\\% less training parameters; 3) referring to BIO-strict span-level evaluation using weighted-average F1 score, ClinicalBERT-CRF, BERT-CRF, and TransformerCRF exhibited lower score differences, with 97.59\\%/97.44\\%/96.84\\% respectively. 4) applying efficient training by down-sampling for better data distribution further reduced the training cost and need for data, while maintaining similar scores - i.e. around 0.02 points lower compared to using the full dataset. Our models will be hosted at \\url{https://github.com/HECTA-UoM/TransformerCRF}",
+  "year": 2022,
+  "venue": null,
+  "authors": [
+    "Samuel Belkadi",
+    "Lifeng Han",
+    "Yuping Wu",
+    "Goran Nenadic"
+  ],
+  "doi": null,
+  "arxiv_id": "2210.12770v4",
+  "url": "http://arxiv.org/abs/2210.12770v4",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

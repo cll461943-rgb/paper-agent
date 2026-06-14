@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2504.09775v6",
+  "title": "MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference",
+  "abstract": "Modern LLM serving now spans multi-stage pipelines including RAG retrieval and KV cache reuse, each with distinct compute, memory, and latency demands. Inference engines expose a large configuration space with no systematic navigation methodology, and exhaustively benchmarking configurations can exceed 40K in cloud costs. Simultaneously, the hardware landscape is rapidly diversifying across AMD GPUs, TPUs, and custom ASICs, while cross-vendor prefill-decode (PD) disaggregated configurations lack unified software stacks for end-to-end evaluation today. To address this gap, we present MIST, a Heterogeneous Multi-stage LLM inference Execution Simulator. MIST models diverse request stages; including RAG, KV retrieval, reasoning, prefill, and decode across complex hardware hierarchies. MIST supports heterogeneous clients executing multiple models concurrently unlike prior frameworks while incorporating advanced batching strategies and multi-level memory hierarchies. By integrating real hardware traces with analytical modeling, MIST captures critical trade-offs such as memory bandwidth contention, inter-cluster communication latency, and batching efficiency in hybrid CPU-accelerator deployments. Through case studies, we explore the impact of reasoning stages on end-to-end latency, optimal batching strategies for hybrid pipelines, and the architectural implications of remote KV cache retrieval. MIST empowers system designers to navigate the evolving landscape of LLM inference, providing actionable insights into optimizing hardware-software co-design for next-generation AI workloads.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Abhimanyu Rajeshkumar Bambhaniya",
+    "Hanjiang Wu",
+    "Suvinay Subramanian",
+    "Sudarshan Srinivasan",
+    "Souvik Kundu",
+    "Amir Yazdanbakhsh",
+    "Midhilesh Elavazhagan",
+    "Madhu Kumar",
+    "Minlan Yu",
+    "Arijit Raychowdhury",
+    "Tushar Krishna"
+  ],
+  "doi": null,
+  "arxiv_id": "2504.09775v6",
+  "url": "http://arxiv.org/abs/2504.09775v6",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

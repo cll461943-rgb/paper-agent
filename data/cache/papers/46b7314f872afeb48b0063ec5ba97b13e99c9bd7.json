@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:42225901",
+  "title": "Improving seismic fault detection through fault-balanced patch extraction and deep learning networks (UNet, Efficient-UNet, and VGG19-UNet).",
+  "abstract": "Accurate seismic fault detection is essential for reliable structural interpretation, reservoir characterization, and drilling risk mitigation. Conventional attribute-based methods often suffer from noise sensitivity, fragmented fault continuity, and strong dependence on interpreter experience, particularly in structurally complex settings. This study evaluates the performance of three convolutional neural network-based segmentation models, Standard UNet, Efficient-UNet, and VGG19-UNet, for automatic fault detection using 2D seismic patches extracted from a real 3D seismic volume. To address the severe class imbalance inherent in fault interpretation, a fault-aware dataset preparation strategy was implemented. Training samples were extracted from fault-rich regions using a minimum fault-pixel threshold, combined with controlled fault-mask dilation and data augmentation. All models were trained using a unified Dice + Binary Cross-Entropy loss function and evaluated on 128 × 128 patches using both overlap-based metrics (Dice and IoU) and distance-tolerant measures to assess spatial robustness. The results show that the Standard UNet achieves the highest overall performance, with a mean Dice of 0.91 and IoU of 0.85, demonstrating strong balance between precision and recall. The VGG19-UNet provides competitive performance (Dice = 0.88, IoU = 0.81) with relatively consistent fault continuity, while the Efficient-UNet exhibits lower accuracy (Dice = 0.73, IoU = 0.61), particularly in detecting thin or low-contrast faults. Distance-tolerant evaluation further confirms the robustness of the Standard UNet, with F1 scores exceeding 0.98 at small spatial tolerances. These results highlight the importance of both dataset design and architectural choice in deep learning-based seismic fault detection. The proposed framework demonstrates strong performance on the studied dataset, while its broader applicability to other geological settings remains an important direction for future work.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Keyvan Najafzadeh",
+    "Mohammad Emami Niri",
+    "Abbas Bahroudi"
+  ],
+  "doi": "10.1038/s41598-026-56041-3",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42225901/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42225901"
+  }
+}

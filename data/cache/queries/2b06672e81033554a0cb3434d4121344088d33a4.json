@@ -1,0 +1,949 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2104.09630v2",
+    "title": "Quaternion Generative Adversarial Networks",
+    "abstract": "Latest Generative Adversarial Networks (GANs) are gathering outstanding results through a large-scale training, thus employing models composed of millions of parameters requiring extensive computational capabilities. Building such huge models undermines their replicability and increases the training instability. Moreover, multi-channel data, such as images or audio, are usually processed by realvalued convolutional networks that flatten and concatenate the input, often losing intra-channel spatial relations. To address these issues related to complexity and information loss, we propose a family of quaternion-valued generative adversarial networks (QGANs). QGANs exploit the properties of quaternion algebra, e.g., the Hamilton product, that allows to process channels as a single entity and capture internal latent relations, while reducing by a factor of 4 the overall number of parameters. We show how to design QGANs and to extend the proposed approach even to advanced models.We compare the proposed QGANs with real-valued counterparts on several image generation benchmarks. Results show that QGANs are able to obtain better FID scores than real-valued GANs and to generate visually pleasing images. Furthermore, QGANs save up to 75% of the training parameters. We believe these results may pave the way to novel, more accessible, GANs capable of improving performance and saving computational resources.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Eleonora Grassucci",
+      "Edoardo Cicero",
+      "Danilo Comminiello"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.09630v2",
+    "url": "http://arxiv.org/abs/2104.09630v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13160v2",
+    "title": "Data-Driven DRO and Economic Decision Theory: An Analytical Synthesis With Bayesian Nonparametric Advancements",
+    "abstract": "We develop an analytical synthesis that bridges data-driven Distributionally Robust Optimization (DRO) and Economic Decision Theory under Ambiguity (DTA). By reinterpreting standard regularization and DRO techniques as data-driven counterparts of ambiguity-averse decision models, we provide a unified framework that clarifies their intrinsic connections. Building on this synthesis, we propose a novel DRO approach that leverages a popular DTA model of smooth ambiguity-averse preferences together with tools from Bayesian nonparametric statistics. Our baseline framework employs Dirichlet Process (DP) posteriors, which naturally extend to heterogeneous data sources via Hierarchical Dirichlet Processes (HDPs), and can be further refined to induce outlier robustness through a procedure that selectively filters poorly-fitting observations during training. Theoretical performance guarantees and convergence results, together with extensive simulations and real-data experiments, illustrate the method's favorable performance in terms of prediction accuracy and stability.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nicola Bariletto",
+      "Khai Nguyen",
+      "Nhat Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13160v2",
+    "url": "http://arxiv.org/abs/2405.13160v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.11785v1",
+    "title": "A Hierarchical Assessment of Adversarial Severity",
+    "abstract": "Adversarial Robustness is a growing field that evidences the brittleness of neural networks. Although the literature on adversarial robustness is vast, a dimension is missing in these studies: assessing how severe the mistakes are. We call this notion \"Adversarial Severity\" since it quantifies the downstream impact of adversarial corruptions by computing the semantic error between the misclassification and the proper label. We propose to study the effects of adversarial noise by measuring the Robustness and Severity into a large-scale dataset: iNaturalist-H. Our contributions are: (i) we introduce novel Hierarchical Attacks that harness the rich structured space of labels to create adversarial examples. (ii) These attacks allow us to benchmark the Adversarial Robustness and Severity of classification models. (iii) We enhance the traditional adversarial training with a simple yet effective Hierarchical Curriculum Training to learn these nodes gradually within the hierarchical tree. We perform extensive experiments showing that hierarchical defenses allow deep models to boost the adversarial Robustness by 1.85% and reduce the severity of all attacks by 0.17, on average.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Guillaume Jeanneret",
+      "Juan C Perez",
+      "Pablo Arbelaez"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.11785v1",
+    "url": "http://arxiv.org/abs/2108.11785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1910.08108v2",
+    "title": "Enforcing Linearity in DNN succours Robustness and Adversarial Image Generation",
+    "abstract": "Recent studies on the adversarial vulnerability of neural networks have shown that models trained with the objective of minimizing an upper bound on the worst-case loss over all possible adversarial perturbations improve robustness against adversarial attacks. Beside exploiting adversarial training framework, we show that by enforcing a Deep Neural Network (DNN) to be linear in transformed input and feature space improves robustness significantly. We also demonstrate that by augmenting the objective function with Local Lipschitz regularizer boost robustness of the model further. Our method outperforms most sophisticated adversarial training methods and achieves state of the art adversarial accuracy on MNIST, CIFAR10 and SVHN dataset. In this paper, we also propose a novel adversarial image generation method by leveraging Inverse Representation Learning and Linearity aspect of an adversarially trained deep neural network classifier.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Anindya Sarkar",
+      "Nikhil Kumar Gupta",
+      "Raghu Iyengar"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.08108v2",
+    "url": "http://arxiv.org/abs/1910.08108v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.06953v1",
+    "title": "Associative Adversarial Networks",
+    "abstract": "We propose a higher-level associative memory for learning adversarial networks. Generative adversarial network (GAN) framework has a discriminator and a generator network. The generator (G) maps white noise (z) to data samples while the discriminator (D) maps data samples to a single scalar. To do so, G learns how to map from high-level representation space to data space, and D learns to do the opposite. We argue that higher-level representation spaces need not necessarily follow a uniform probability distribution. In this work, we use Restricted Boltzmann Machines (RBMs) as a higher-level associative memory and learn the probability distribution for the high-level features generated by D. The associative memory samples its underlying probability distribution and G learns how to map these samples to data space. The proposed associative adversarial networks (AANs) are generative models in the higher-levels of the learning, and use adversarial non-stochastic models D and G for learning the mapping between data and higher-level representation spaces. Experiments show the potential of the proposed networks.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Tarik Arici",
+      "Asli Celikyilmaz"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.06953v1",
+    "url": "http://arxiv.org/abs/1611.06953v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.08072v2",
+    "title": "Adversarial Attacks and Defenses in Images, Graphs and Text: A Review",
+    "abstract": "Deep neural networks (DNN) have achieved unprecedented success in numerous machine learning tasks in various domains. However, the existence of adversarial examples has raised concerns about applying deep learning to safety-critical applications. As a result, we have witnessed increasing interests in studying attack and defense mechanisms for DNN models on different data types, such as images, graphs and text. Thus, it is necessary to provide a systematic and comprehensive overview of the main threats of attacks and the success of corresponding countermeasures. In this survey, we review the state of the art algorithms for generating adversarial examples and the countermeasures against adversarial examples, for the three popular data types, i.e., images, graphs and text.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Han Xu",
+      "Yao Ma",
+      "Haochen Liu",
+      "Debayan Deb",
+      "Hui Liu",
+      "Jiliang Tang",
+      "Anil K. Jain"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.08072v2",
+    "url": "http://arxiv.org/abs/1909.08072v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.14629v2",
+    "title": "Superclass Adversarial Attack",
+    "abstract": "Adversarial attacks have only focused on changing the predictions of the classifier, but their danger greatly depends on how the class is mistaken. For example, when an automatic driving system mistakes a Persian cat for a Siamese cat, it is hardly a problem. However, if it mistakes a cat for a 120km/h minimum speed sign, serious problems can arise. As a stepping stone to more threatening adversarial attacks, we consider the superclass adversarial attack, which causes misclassification of not only fine classes, but also superclasses. We conducted the first comprehensive analysis of superclass adversarial attacks (an existing and 19 new methods) in terms of accuracy, speed, and stability, and identified several strategies to achieve better performance. Although this study is aimed at superclass misclassification, the findings can be applied to other problem settings involving multiple classes, such as top-k and multi-label classification attacks.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Soichiro Kumano",
+      "Hiroshi Kera",
+      "Toshihiko Yamasaki"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.14629v2",
+    "url": "http://arxiv.org/abs/2205.14629v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1808.01976v2",
+    "title": "Adversarial Vision Challenge",
+    "abstract": "The NIPS 2018 Adversarial Vision Challenge is a competition to facilitate measurable progress towards robust machine vision models and more generally applicable adversarial attacks. This document is an updated version of our competition proposal that was accepted in the competition track of 32nd Conference on Neural Information Processing Systems (NIPS 2018).",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Wieland Brendel",
+      "Jonas Rauber",
+      "Alexey Kurakin",
+      "Nicolas Papernot",
+      "Behar Veliqi",
+      "Marcel Salathé",
+      "Sharada P. Mohanty",
+      "Matthias Bethge"
+    ],
+    "doi": null,
+    "arxiv_id": "1808.01976v2",
+    "url": "http://arxiv.org/abs/1808.01976v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.11626v1",
+    "title": "ShapeAdv: Generating Shape-Aware Adversarial 3D Point Clouds",
+    "abstract": "We introduce ShapeAdv, a novel framework to study shape-aware adversarial perturbations that reflect the underlying shape variations (e.g., geometric deformations and structural differences) in the 3D point cloud space. We develop shape-aware adversarial 3D point cloud attacks by leveraging the learned latent space of a point cloud auto-encoder where the adversarial noise is applied in the latent space. Specifically, we propose three different variants including an exemplar-based one by guiding the shape deformation with auxiliary data, such that the generated point cloud resembles the shape morphing between objects in the same category. Different from prior works, the resulting adversarial 3D point clouds reflect the shape variations in the 3D point cloud space while still being close to the original one. In addition, experimental evaluations on the ModelNet40 benchmark demonstrate that our adversaries are more difficult to defend with existing point cloud defense methods and exhibit a higher attack transferability across classifiers. Our shape-aware adversarial attacks are orthogonal to existing point cloud based attacks and shed light on the vulnerability of 3D deep neural networks.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Kibok Lee",
+      "Zhuoyuan Chen",
+      "Xinchen Yan",
+      "Raquel Urtasun",
+      "Ersin Yumer"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.11626v1",
+    "url": "http://arxiv.org/abs/2005.11626v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1712.07107v3",
+    "title": "Adversarial Examples: Attacks and Defenses for Deep Learning",
+    "abstract": "With rapid progress and significant successes in a wide spectrum of applications, deep learning is being applied in many safety-critical environments. However, deep neural networks have been recently found vulnerable to well-designed input samples, called adversarial examples. Adversarial examples are imperceptible to human but can easily fool deep neural networks in the testing/deploying stage. The vulnerability to adversarial examples becomes one of the major risks for applying deep neural networks in safety-critical environments. Therefore, attacks and defenses on adversarial examples draw great attention. In this paper, we review recent findings on adversarial examples for deep neural networks, summarize the methods for generating adversarial examples, and propose a taxonomy of these methods. Under the taxonomy, applications for adversarial examples are investigated. We further elaborate on countermeasures for adversarial examples and explore the challenges and the potential solutions.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Xiaoyong Yuan",
+      "Pan He",
+      "Qile Zhu",
+      "Xiaolin Li"
+    ],
+    "doi": null,
+    "arxiv_id": "1712.07107v3",
+    "url": "http://arxiv.org/abs/1712.07107v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1712.02494v1",
+    "title": "Adversarial Examples that Fool Detectors",
+    "abstract": "An adversarial example is an example that has been adjusted to produce a wrong label when presented to a system at test time. To date, adversarial example constructions have been demonstrated for classifiers, but not for detectors. If adversarial examples that could fool a detector exist, they could be used to (for example) maliciously create security hazards on roads populated with smart vehicles. In this paper, we demonstrate a construction that successfully fools two standard detectors, Faster RCNN and YOLO. The existence of such examples is surprising, as attacking a classifier is very different from attacking a detector, and that the structure of detectors - which must search for their own bounding box, and which cannot estimate that box very accurately - makes it quite likely that adversarial patterns are strongly disrupted. We show that our construction produces adversarial examples that generalize well across sequences digitally, even though large perturbations are needed. We also show that our construction yields physical objects that are adversarial.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Jiajun Lu",
+      "Hussein Sibai",
+      "Evan Fabry"
+    ],
+    "doi": null,
+    "arxiv_id": "1712.02494v1",
+    "url": "http://arxiv.org/abs/1712.02494v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:original_clean",
+      "route:hyde",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.01400v3",
+    "title": "Smoothness Analysis of Adversarial Training",
+    "abstract": "Deep neural networks are vulnerable to adversarial attacks. Recent studies about adversarial robustness focus on the loss landscape in the parameter space since it is related to optimization and generalization performance. These studies conclude that the difficulty of adversarial training is caused by the non-smoothness of the loss function: i.e., its gradient is not Lipschitz continuous. However, this analysis ignores the dependence of adversarial attacks on model parameters. Since adversarial attacks are optimized for models, they should depend on the parameters. Considering this dependence, we analyze the smoothness of the loss function of adversarial training using the optimal attacks for the model parameter in more detail. We reveal that the constraint of adversarial attacks is one cause of the non-smoothness and that the smoothness depends on the types of the constraints. Specifically, the $L_\\infty$ constraint can cause non-smoothness more than the $L_2$ constraint. Moreover, our analysis implies that if we flatten the loss function with respect to input data, the Lipschitz constant of the gradient of adversarial loss tends to increase. To address the non-smoothness, we show that EntropySGD smoothens the non-smooth loss and improves the performance of adversarial training.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sekitoshi Kanai",
+      "Masanori Yamada",
+      "Hiroshi Takahashi",
+      "Yuki Yamanaka",
+      "Yasutoshi Ida"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.01400v3",
+    "url": "http://arxiv.org/abs/2103.01400v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.05952v2",
+    "title": "Overcoming Adversarial Attacks for Human-in-the-Loop Applications",
+    "abstract": "Including human analysis has the potential to positively affect the robustness of Deep Neural Networks and is relatively unexplored in the Adversarial Machine Learning literature. Neural network visual explanation maps have been shown to be prone to adversarial attacks. Further research is needed in order to select robust visualizations of explanations for the image analyst to evaluate a given model. These factors greatly impact Human-In-The-Loop (HITL) evaluation tools due to their reliance on adversarial images, including explanation maps and measurements of robustness. We believe models of human visual attention may improve interpretability and robustness of human-machine imagery analysis systems. Our challenge remains, how can HITL evaluation be robust in this adversarial landscape?",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ryan McCoppin",
+      "Marla Kennedy",
+      "Platon Lukyanenko",
+      "Sean Kennedy"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.05952v2",
+    "url": "http://arxiv.org/abs/2306.05952v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1803.03613v1",
+    "title": "Detecting Adversarial Examples - A Lesson from Multimedia Forensics",
+    "abstract": "Adversarial classification is the task of performing robust classification in the presence of a strategic attacker. Originating from information hiding and multimedia forensics, adversarial classification recently received a lot of attention in a broader security context. In the domain of machine learning-based image classification, adversarial classification can be interpreted as detecting so-called adversarial examples, which are slightly altered versions of benign images. They are specifically crafted to be misclassified with a very high probability by the classifier under attack. Neural networks, which dominate among modern image classifiers, have been shown to be especially vulnerable to these adversarial examples. However, detecting subtle changes in digital images has always been the goal of multimedia forensics and steganalysis. In this paper, we highlight the parallels between these two fields and secure machine learning. Furthermore, we adapt a linear filter, similar to early steganalysis methods, to detect adversarial examples that are generated with the projected gradient descent (PGD) method, the state-of-the-art algorithm for this task. We test our method on the MNIST database and show for several parameter combinations of PGD that our method can reliably detect adversarial examples. Additionally, the combination of adversarial re-training and our detection method effectively reduces the attack surface of attacks against neural networks. Thus, we conclude that adversarial examples for image classification possibly do not withstand detection methods from steganalysis, and future work should explore the effectiveness of known techniques from multimedia forensics in other adversarial settings.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Pascal Schöttle",
+      "Alexander Schlögl",
+      "Cecilia Pasquini",
+      "Rainer Böhme"
+    ],
+    "doi": null,
+    "arxiv_id": "1803.03613v1",
+    "url": "http://arxiv.org/abs/1803.03613v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.01473v3",
+    "title": "Adversarial Examples in the Physical World: A Survey",
+    "abstract": "Deep neural networks (DNNs) have demonstrated high vulnerability to adversarial examples, raising broad security concerns about their applications. Besides the attacks in the digital world, the practical implications of adversarial examples in the physical world present significant challenges and safety concerns. However, current research on physical adversarial examples (PAEs) lacks a comprehensive understanding of their unique characteristics, leading to limited significance and understanding. In this paper, we address this gap by thoroughly examining the characteristics of PAEs within a practical workflow encompassing training, manufacturing, and re-sampling processes. By analyzing the links between physical adversarial attacks, we identify manufacturing and re-sampling as the primary sources of distinct attributes and particularities in PAEs. Leveraging this knowledge, we develop a comprehensive analysis and classification framework for PAEs based on their specific characteristics, covering over 100 studies on physical-world adversarial examples. Furthermore, we investigate defense strategies against PAEs and identify open challenges and opportunities for future research. We aim to provide a fresh, thorough, and systematic understanding of PAEs, thereby promoting the development of robust adversarial learning and its application in open-world scenarios to provide the community with a continuously updated list of physical world adversarial sample resources, including papers, code, \\etc, within the proposed framework",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jiakai Wang",
+      "Xianglong Liu",
+      "Jin Hu",
+      "Donghua Wang",
+      "Siyang Wu",
+      "Tingsong Jiang",
+      "Yuanfang Guo",
+      "Aishan Liu",
+      "Jiantao Zhou"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.01473v3",
+    "url": "http://arxiv.org/abs/2311.01473v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1710.03337v2",
+    "title": "Standard detectors aren't (currently) fooled by physical adversarial stop signs",
+    "abstract": "An adversarial example is an example that has been adjusted to produce the wrong label when presented to a system at test time. If adversarial examples existed that could fool a detector, they could be used to (for example) wreak havoc on roads populated with smart vehicles. Recently, we described our difficulties creating physical adversarial stop signs that fool a detector. More recently, Evtimov et al. produced a physical adversarial stop sign that fools a proxy model of a detector. In this paper, we show that these physical adversarial stop signs do not fool two standard detectors (YOLO and Faster RCNN) in standard configuration. Evtimov et al.'s construction relies on a crop of the image to the stop sign; this crop is then resized and presented to a classifier. We argue that the cropping and resizing procedure largely eliminates the effects of rescaling and of view angle. Whether an adversarial attack is robust under rescaling and change of view direction remains moot. We argue that attacking a classifier is very different from attacking a detector, and that the structure of detectors - which must search for their own bounding box, and which cannot estimate that box very accurately - likely makes it difficult to make adversarial patterns. Finally, an adversarial pattern on a physical object that could fool a detector would have to be adversarial in the face of a wide family of parametric distortions (scale; view angle; box shift inside the detector; illumination; and so on). Such a pattern would be of great theoretical and practical interest. There is currently no evidence that such patterns exist.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Jiajun Lu",
+      "Hussein Sibai",
+      "Evan Fabry",
+      "David Forsyth"
+    ],
+    "doi": null,
+    "arxiv_id": "1710.03337v2",
+    "url": "http://arxiv.org/abs/1710.03337v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1702.06763v8",
+    "title": "DeepCloak: Masking Deep Neural Network Models for Robustness Against Adversarial Samples",
+    "abstract": "Recent studies have shown that deep neural networks (DNN) are vulnerable to adversarial samples: maliciously-perturbed samples crafted to yield incorrect model outputs. Such attacks can severely undermine DNN systems, particularly in security-sensitive settings. It was observed that an adversary could easily generate adversarial samples by making a small perturbation on irrelevant feature dimensions that are unnecessary for the current classification task. To overcome this problem, we introduce a defensive mechanism called DeepCloak. By identifying and removing unnecessary features in a DNN model, DeepCloak limits the capacity an attacker can use generating adversarial samples and therefore increase the robustness against such inputs. Comparing with other defensive approaches, DeepCloak is easy to implement and computationally efficient. Experimental results show that DeepCloak can increase the performance of state-of-the-art DNN models against adversarial samples.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Ji Gao",
+      "Beilun Wang",
+      "Zeming Lin",
+      "Weilin Xu",
+      "Yanjun Qi"
+    ],
+    "doi": null,
+    "arxiv_id": "1702.06763v8",
+    "url": "http://arxiv.org/abs/1702.06763v8",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1910.00068v3",
+    "title": "Role of Spatial Context in Adversarial Robustness for Object Detection",
+    "abstract": "The benefits of utilizing spatial context in fast object detection algorithms have been studied extensively. Detectors increase inference speed by doing a single forward pass per image which means they implicitly use contextual reasoning for their predictions. However, one can show that an adversary can design adversarial patches which do not overlap with any objects of interest in the scene and exploit contextual reasoning to fool standard detectors. In this paper, we examine this problem and design category specific adversarial patches which make a widely used object detector like YOLO blind to an attacker chosen object category. We also show that limiting the use of spatial context during object detector training improves robustness to such adversaries. We believe the existence of context based adversarial attacks is concerning since the adversarial patch can affect predictions without being in vicinity of any objects of interest. Hence, defending against such attacks becomes challenging and we urge the research community to give attention to this vulnerability.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Aniruddha Saha",
+      "Akshayvarun Subramanya",
+      "Koninika Patil",
+      "Hamed Pirsiavash"
+    ],
+    "doi": null,
+    "arxiv_id": "1910.00068v3",
+    "url": "http://arxiv.org/abs/1910.00068v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:original_clean",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.14230v2",
+    "title": "Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction",
+    "abstract": "Predicting the trajectories of surrounding objects is a critical task for self-driving vehicles and many other autonomous systems. Recent works demonstrate that adversarial attacks on trajectory prediction, where small crafted perturbations are introduced to history trajectories, may significantly mislead the prediction of future trajectories and induce unsafe planning. However, few works have addressed enhancing the robustness of this important safety-critical task.In this paper, we present a novel adversarial training method for trajectory prediction. Compared with typical adversarial training on image tasks, our work is challenged by more random input with rich context and a lack of class labels. To address these challenges, we propose a method based on a semi-supervised adversarial autoencoder, which models disentangled semantic features with domain knowledge and provides additional latent labels for the adversarial training. Extensive experiments with different types of attacks demonstrate that our Semisupervised Semantics-guided Adversarial Training (SSAT) method can effectively mitigate the impact of adversarial attacks by up to 73% and outperform other popular defense methods. In addition, experiments show that our method can significantly improve the system's robust generalization to unseen patterns of attacks. We believe that such semantics-guided architecture and advancement on robust generalization is an important step for developing robust prediction models and enabling safe decision-making.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ruochen Jiao",
+      "Xiangguo Liu",
+      "Takami Sato",
+      "Qi Alfred Chen",
+      "Qi Zhu"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.14230v2",
+    "url": "http://arxiv.org/abs/2205.14230v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2211.11030v4",
+    "title": "Adversarial Cheap Talk",
+    "abstract": "Adversarial attacks in reinforcement learning (RL) often assume highly-privileged access to the victim's parameters, environment, or data. Instead, this paper proposes a novel adversarial setting called a Cheap Talk MDP in which an Adversary can merely append deterministic messages to the Victim's observation, resulting in a minimal range of influence. The Adversary cannot occlude ground truth, influence underlying environment dynamics or reward signals, introduce non-stationarity, add stochasticity, see the Victim's actions, or access their parameters. Additionally, we present a simple meta-learning algorithm called Adversarial Cheap Talk (ACT) to train Adversaries in this setting. We demonstrate that an Adversary trained with ACT still significantly influences the Victim's training and testing performance, despite the highly constrained setting. Affecting train-time performance reveals a new attack vector and provides insight into the success and failure modes of existing RL algorithms. More specifically, we show that an ACT Adversary is capable of harming performance by interfering with the learner's function approximation, or instead helping the Victim's performance by outputting useful features. Finally, we show that an ACT Adversary can manipulate messages during train-time to directly and arbitrarily control the Victim at test-time. Project video and code are available at https://sites.google.com/view/adversarial-cheap-talk",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Chris Lu",
+      "Timon Willi",
+      "Alistair Letcher",
+      "Jakob Foerster"
+    ],
+    "doi": null,
+    "arxiv_id": "2211.11030v4",
+    "url": "http://arxiv.org/abs/2211.11030v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1612.00155v1",
+    "title": "Adversarial Images for Variational Autoencoders",
+    "abstract": "We investigate adversarial attacks for autoencoders. We propose a procedure that distorts the input image to mislead the autoencoder in reconstructing a completely different target image. We attack the internal latent representations, attempting to make the adversarial input produce an internal representation as similar as possible as the target's. We find that autoencoders are much more robust to the attack than classifiers: while some examples have tolerably small input distortion, and reasonable similarity to the target image, there is a quasi-linear trade-off between those aims. We report results on MNIST and SVHN datasets, and also test regular deterministic autoencoders, reaching similar conclusions in all cases. Finally, we show that the usual adversarial attack for classifiers, while being much easier, also presents a direct proportion between distortion on the input, and misdirection on the output. That proportionality however is hidden by the normalization of the output, which maps a linear layer into non-linear probabilities.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Pedro Tabacof",
+      "Julia Tavares",
+      "Eduardo Valle"
+    ],
+    "doi": null,
+    "arxiv_id": "1612.00155v1",
+    "url": "http://arxiv.org/abs/1612.00155v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2111.15518v2",
+    "title": "Detecting Adversaries, yet Faltering to Noise? Leveraging Conditional Variational AutoEncoders for Adversary Detection in the Presence of Noisy Images",
+    "abstract": "With the rapid advancement and increased use of deep learning models in image identification, security becomes a major concern to their deployment in safety-critical systems. Since the accuracy and robustness of deep learning models are primarily attributed from the purity of the training samples, therefore the deep learning architectures are often susceptible to adversarial attacks. Adversarial attacks are often obtained by making subtle perturbations to normal images, which are mostly imperceptible to humans, but can seriously confuse the state-of-the-art machine learning models. What is so special in the slightest intelligent perturbations or noise additions over normal images that it leads to catastrophic classifications by the deep neural networks? Using statistical hypothesis testing, we find that Conditional Variational AutoEncoders (CVAE) are surprisingly good at detecting imperceptible image perturbations. In this paper, we show how CVAEs can be effectively used to detect adversarial attacks on image classification networks. We demonstrate our results over MNIST, CIFAR-10 dataset and show how our method gives comparable performance to the state-of-the-art methods in detecting adversaries while not getting confused with noisy images, where most of the existing methods falter.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Dvij Kalaria",
+      "Aritra Hazra",
+      "Partha Pratim Chakrabarti"
+    ],
+    "doi": null,
+    "arxiv_id": "2111.15518v2",
+    "url": "http://arxiv.org/abs/2111.15518v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2101.11453v2",
+    "title": "Meta Adversarial Training against Universal Patches",
+    "abstract": "Recently demonstrated physical-world adversarial attacks have exposed vulnerabilities in perception systems that pose severe risks for safety-critical applications such as autonomous driving. These attacks place adversarial artifacts in the physical world that indirectly cause the addition of a universal patch to inputs of a model that can fool it in a variety of contexts. Adversarial training is the most effective defense against image-dependent adversarial attacks. However, tailoring adversarial training to universal patches is computationally expensive since the optimal universal patch depends on the model weights which change during training. We propose meta adversarial training (MAT), a novel combination of adversarial training with meta-learning, which overcomes this challenge by meta-learning universal patches along with model training. MAT requires little extra computation while continuously adapting a large set of patches to the current model. MAT considerably increases robustness against universal patch attacks on image classification and traffic-light detection.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jan Hendrik Metzen",
+      "Nicole Finnie",
+      "Robin Hutmacher"
+    ],
+    "doi": null,
+    "arxiv_id": "2101.11453v2",
+    "url": "http://arxiv.org/abs/2101.11453v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.00866v2",
+    "title": "Attack-SAM: Towards Attacking Segment Anything Model With Adversarial Examples",
+    "abstract": "Segment Anything Model (SAM) has attracted significant attention recently, due to its impressive performance on various downstream tasks in a zero-short manner. Computer vision (CV) area might follow the natural language processing (NLP) area to embark on a path from task-specific vision models toward foundation models. However, deep vision models are widely recognized as vulnerable to adversarial examples, which fool the model to make wrong predictions with imperceptible perturbation. Such vulnerability to adversarial attacks causes serious concerns when applying deep models to security-sensitive applications. Therefore, it is critical to know whether the vision foundation model SAM can also be fooled by adversarial attacks. To the best of our knowledge, our work is the first of its kind to conduct a comprehensive investigation on how to attack SAM with adversarial examples. With the basic attack goal set to mask removal, we investigate the adversarial robustness of SAM in the full white-box setting and transfer-based black-box settings. Beyond the basic goal of mask removal, we further investigate and find that it is possible to generate any desired mask by the adversarial attack.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Chenshuang Zhang",
+      "Chaoning Zhang",
+      "Taegoo Kang",
+      "Donghun Kim",
+      "Sung-Ho Bae",
+      "In So Kweon"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.00866v2",
+    "url": "http://arxiv.org/abs/2305.00866v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2007.04137v3",
+    "title": "SLAP: Improving Physical Adversarial Examples with Short-Lived Adversarial Perturbations",
+    "abstract": "Research into adversarial examples (AE) has developed rapidly, yet static adversarial patches are still the main technique for conducting attacks in the real world, despite being obvious, semi-permanent and unmodifiable once deployed. In this paper, we propose Short-Lived Adversarial Perturbations (SLAP), a novel technique that allows adversaries to realize physically robust real-world AE by using a light projector. Attackers can project a specifically crafted adversarial perturbation onto a real-world object, transforming it into an AE. This allows the adversary greater control over the attack compared to adversarial patches: (i) projections can be dynamically turned on and off or modified at will, (ii) projections do not suffer from the locality constraint imposed by patches, making them harder to detect. We study the feasibility of SLAP in the self-driving scenario, targeting both object detector and traffic sign recognition tasks, focusing on the detection of stop signs. We conduct experiments in a variety of ambient light conditions, including outdoors, showing how in non-bright settings the proposed method generates AE that are extremely robust, causing misclassifications on state-of-the-art networks with up to 99% success rate for a variety of angles and distances. We also demostrate that SLAP-generated AE do not present detectable behaviours seen in adversarial patches and therefore bypass SentiNet, a physical AE detection method. We evaluate other defences including an adaptive defender using adversarial learning which is able to thwart the attack effectiveness up to 80% even in favourable attacker conditions.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Giulio Lovisotto",
+      "Henry Turner",
+      "Ivo Sluganovic",
+      "Martin Strohmeier",
+      "Ivan Martinovic"
+    ],
+    "doi": null,
+    "arxiv_id": "2007.04137v3",
+    "url": "http://arxiv.org/abs/2007.04137v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.00697v1",
+    "title": "CNN-based Steganalysis and Parametric Adversarial Embedding: a Game-Theoretic Framework",
+    "abstract": "CNN-based steganalysis has recently achieved very good performance in detecting content-adaptive steganography. At the same time, recent works have shown that, by adopting an approach similar to that used to build adversarial examples, a steganographer can adopt an adversarial embedding strategy to effectively counter a target CNN steganalyzer. In turn, the good performance of the steganalyzer can be restored by retraining the CNN with adversarial stego images. A problem with this model is that, arguably, at training time the steganalizer is not aware of the exact parameters used by the steganograher for adversarial embedding and, vice versa, the steganographer does not know how the images that will be used to train the steganalyzer are generated. In order to exit this apparent deadlock, we introduce a game theoretic framework wherein the problem of setting the parameters of the steganalyzer and the steganographer is solved in a strategic way. More specifically, a non-zero sum game is first formulated to model the problem, and then instantiated by considering a specific adversarial embedding scheme setting its operating parameters in a game-theoretic fashion. Our analysis shows that the equilibrium solution of the non zero-sum game can be conveniently found by solving an associated zero-sum game, thus reducing greatly the complexity of the problem. Then we run several experiments to derive the optimum strategies for the steganographer and the staganalyst in a game-theoretic sense, and to evaluate the performance of the game at the equilibrium, characterizing the loss with respect to the conventional non-adversarial case. Eventually, by leveraging on the analysis of the equilibrium point of the game, we introduce a new strategy to improve the reliability of the steganalysis, which shows the benefits of addressing the security issue in a game-theoretic perspective.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Xiaoyu Shi",
+      "Benedetta Tondi",
+      "Bin Li",
+      "Mauro Barni"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.00697v1",
+    "url": "http://arxiv.org/abs/1906.00697v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.10272v2",
+    "title": "Evaluating and Understanding the Robustness of Adversarial Logit Pairing",
+    "abstract": "We evaluate the robustness of Adversarial Logit Pairing, a recently proposed defense against adversarial examples. We find that a network trained with Adversarial Logit Pairing achieves 0.6% accuracy in the threat model in which the defense is considered. We provide a brief overview of the defense and the threat models/claims considered, as well as a discussion of the methodology and results of our attack, which may offer insights into the reasons underlying the vulnerability of ALP to adversarial attack.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Logan Engstrom",
+      "Andrew Ilyas",
+      "Anish Athalye"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.10272v2",
+    "url": "http://arxiv.org/abs/1807.10272v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:hyde",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.09903v2",
+    "title": "Unrestricted Adversarial Attacks on ImageNet Competition",
+    "abstract": "Many works have investigated the adversarial attacks or defenses under the settings where a bounded and imperceptible perturbation can be added to the input. However in the real-world, the attacker does not need to comply with this restriction. In fact, more threats to the deep model come from unrestricted adversarial examples, that is, the attacker makes large and visible modifications on the image, which causes the model classifying mistakenly, but does not affect the normal observation in human perspective. Unrestricted adversarial attack is a popular and practical direction but has not been studied thoroughly. We organize this competition with the purpose of exploring more effective unrestricted adversarial attack algorithm, so as to accelerate the academical research on the model robustness under stronger unbounded attacks. The competition is held on the TianChi platform (\\url{https://tianchi.aliyun.com/competition/entrance/531853/introduction}) as one of the series of AI Security Challengers Program.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Yuefeng Chen",
+      "Xiaofeng Mao",
+      "Yuan He",
+      "Hui Xue",
+      "Chao Li",
+      "Yinpeng Dong",
+      "Qi-An Fu",
+      "Xiao Yang",
+      "Wenzhao Xiang",
+      "Tianyu Pang",
+      "Hang Su",
+      "Jun Zhu",
+      "Fangcheng Liu",
+      "Chao Zhang",
+      "Hongyang Zhang",
+      "Yichi Zhang",
+      "Shilong Liu",
+      "Chang Liu",
+      "Wenzhao Xiang",
+      "Yajie Wang",
+      "Huipeng Zhou",
+      "Haoran Lyu",
+      "Yidan Xu",
+      "Zixuan Xu",
+      "Taoyu Zhu",
+      "Wenjun Li",
+      "Xianfeng Gao",
+      "Guoqiu Wang",
+      "Huanqian Yan",
+      "Ying Guo",
+      "Chaoning Zhang",
+      "Zheng Fang",
+      "Yang Wang",
+      "Bingyang Fu",
+      "Yunfei Zheng",
+      "Yekui Wang",
+      "Haorong Luo",
+      "Zhen Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.09903v2",
+    "url": "http://arxiv.org/abs/2110.09903v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1812.03411v2",
+    "title": "Feature Denoising for Improving Adversarial Robustness",
+    "abstract": "Adversarial attacks to image classification systems present challenges to convolutional networks and opportunities for understanding them. This study suggests that adversarial perturbations on images lead to noise in the features constructed by these networks. Motivated by this observation, we develop new network architectures that increase adversarial robustness by performing feature denoising. Specifically, our networks contain blocks that denoise the features using non-local means or other filters; the entire networks are trained end-to-end. When combined with adversarial training, our feature denoising networks substantially improve the state-of-the-art in adversarial robustness in both white-box and black-box attack settings. On ImageNet, under 10-iteration PGD white-box attacks where prior art has 27.9% accuracy, our method achieves 55.7%; even under extreme 2000-iteration PGD white-box attacks, our method secures 42.6% accuracy. Our method was ranked first in Competition on Adversarial Attacks and Defenses (CAAD) 2018 --- it achieved 50.6% classification accuracy on a secret, ImageNet-like test dataset against 48 unknown attackers, surpassing the runner-up approach by ~10%. Code is available at https://github.com/facebookresearch/ImageNet-Adversarial-Training.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Cihang Xie",
+      "Yuxin Wu",
+      "Laurens van der Maaten",
+      "Alan Yuille",
+      "Kaiming He"
+    ],
+    "doi": null,
+    "arxiv_id": "1812.03411v2",
+    "url": "http://arxiv.org/abs/1812.03411v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1712.07113v2",
+    "title": "Query-Efficient Black-box Adversarial Examples (superceded)",
+    "abstract": "Note that this paper is superceded by \"Black-Box Adversarial Attacks with Limited Queries and Information.\" Current neural network-based image classifiers are susceptible to adversarial examples, even in the black-box setting, where the attacker is limited to query access without access to gradients. Previous methods --- substitute networks and coordinate-based finite-difference methods --- are either unreliable or query-inefficient, making these methods impractical for certain problems. We introduce a new method for reliably generating adversarial examples under more restricted, practical black-box threat models. First, we apply natural evolution strategies to perform black-box attacks using two to three orders of magnitude fewer queries than previous methods. Second, we introduce a new algorithm to perform targeted adversarial attacks in the partial-information setting, where the attacker only has access to a limited number of target classes. Using these techniques, we successfully perform the first targeted adversarial attack against a commercially deployed machine learning system, the Google Cloud Vision API, in the partial information setting.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Andrew Ilyas",
+      "Logan Engstrom",
+      "Anish Athalye",
+      "Jessy Lin"
+    ],
+    "doi": null,
+    "arxiv_id": "1712.07113v2",
+    "url": "http://arxiv.org/abs/1712.07113v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

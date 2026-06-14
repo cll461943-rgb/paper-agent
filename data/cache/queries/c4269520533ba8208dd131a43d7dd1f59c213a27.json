@@ -1,0 +1,850 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13160v2",
+    "title": "Data-Driven DRO and Economic Decision Theory: An Analytical Synthesis With Bayesian Nonparametric Advancements",
+    "abstract": "We develop an analytical synthesis that bridges data-driven Distributionally Robust Optimization (DRO) and Economic Decision Theory under Ambiguity (DTA). By reinterpreting standard regularization and DRO techniques as data-driven counterparts of ambiguity-averse decision models, we provide a unified framework that clarifies their intrinsic connections. Building on this synthesis, we propose a novel DRO approach that leverages a popular DTA model of smooth ambiguity-averse preferences together with tools from Bayesian nonparametric statistics. Our baseline framework employs Dirichlet Process (DP) posteriors, which naturally extend to heterogeneous data sources via Hierarchical Dirichlet Processes (HDPs), and can be further refined to induce outlier robustness through a procedure that selectively filters poorly-fitting observations during training. Theoretical performance guarantees and convergence results, together with extensive simulations and real-data experiments, illustrate the method's favorable performance in terms of prediction accuracy and stability.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nicola Bariletto",
+      "Khai Nguyen",
+      "Nhat Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13160v2",
+    "url": "http://arxiv.org/abs/2405.13160v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.00760v2",
+    "title": "A Unified Theory of Robust and Distributionally Robust Optimization via the Primal-Worst-Equals-Dual-Best Principle",
+    "abstract": "Robust and distributionally robust optimization are modeling paradigms for decision-making under uncertainty where the uncertain parameters are only known to reside in an uncertainty set or are governed by any probability distribution from within an ambiguity set, respectively, and a decision is sought that minimizes a cost function under the most adverse outcome of the uncertainty. In this paper, we develop a rigorous and general theory of robust and distributionally robust nonlinear optimization using the language of convex analysis. Our framework is based on a generalized `primal-worst-equals-dual-best' principle that establishes strong duality between a semi-infinite primal worst and a non-convex dual best formulation, both of which admit finite convex reformulations. This principle offers an alternative formulation for robust optimization problems that obviates the need to mobilize the machinery of abstract semi-infinite duality theory to prove strong duality in distributionally robust optimization. We illustrate the modeling power of our approach through convex reformulations for distributionally robust optimization problems whose ambiguity sets are defined through general optimal transport distances, which generalize earlier results for Wasserstein ambiguity sets.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jianzhe Zhen",
+      "Daniel Kuhn",
+      "Wolfram Wiesemann"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.00760v2",
+    "url": "http://arxiv.org/abs/2105.00760v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2011.05314v2",
+    "title": "A Distributionally Robust Optimization Approach for Unit Commitment in Microgrids",
+    "abstract": "This paper proposes a distributionally robust unit commitment approach for microgrids under net load and electricity market price uncertainty. The key thrust of the proposed approach is to leverage the Kullback-Leibler divergence to construct an ambiguity set of probability distributions and formulate an optimization problem that minimizes the expected costs brought about by the worst-case distribution in the ambiguity set. The proposed approach effectively exploits historical data and capitalizes on the k-means clustering algorithm, in conjunction with the soft dynamic time warping score, to form the nominal probability distribution and its associated support. A two-level decomposition method is developed to enable the efficient solution of the devised problem. We carry out representative studies and quantify the relative merits of the proposed approach vis-à-vis a stochastic optimization-based model under different divergence tolerance values.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Ogun Yurdakul",
+      "Fikret Sivrikaya",
+      "Sahin Albayrak"
+    ],
+    "doi": null,
+    "arxiv_id": "2011.05314v2",
+    "url": "http://arxiv.org/abs/2011.05314v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1306.3437v3",
+    "title": "A cutting surface algorithm for semi-infinite convex programming with an application to moment robust optimization",
+    "abstract": "We present and analyze a central cutting surface algorithm for general semi-infinite convex optimization problems, and use it to develop a novel algorithm for distributionally robust optimization problems in which the uncertainty set consists of probability distributions with given bounds on their moments. Moments of arbitrary order, as well as non-polynomial moments can be included in the formulation. We show that this gives rise to a hierarchy of optimization problems with decreasing levels of risk-aversion, with classic robust optimization at one end of the spectrum, and stochastic programming at the other. Although our primary motivation is to solve distributionally robust optimization problems with moment uncertainty, the cutting surface method for general semi-infinite convex programs is also of independent interest. The proposed method is applicable to problems with non-differentiable semi-infinite constraints indexed by an infinite-dimensional index set. Examples comparing the cutting surface algorithm to the central cutting plane algorithm of Kortanek and No demonstrate the potential of our algorithm even in the solution of traditional semi-infinite convex programming problems whose constraints are differentiable and are indexed by an index set of low dimension. After the rate of convergence analysis of the cutting surface algorithm, we extend the authors' moment matching scenario generation algorithm to a probabilistic algorithm that finds optimal probability distributions subject to moment constraints. The combination of this distribution optimization method and the central cutting surface algorithm yields a solution to a family of distributionally robust optimization problems that are considerably more general than the ones proposed to date.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Sanjay Mehrotra",
+      "David Papp"
+    ],
+    "doi": null,
+    "arxiv_id": "1306.3437v3",
+    "url": "http://arxiv.org/abs/1306.3437v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1301.0091v10",
+    "title": "On the Robust Optimal Stopping Problem",
+    "abstract": "We study a robust optimal stopping problem with respect to a set $\\cP$ of mutually singular probabilities. This can be interpreted as a zero-sum controller-stopper game in which the stopper is trying to maximize its pay-off while an adverse player wants to minimize this payoff by choosing an evaluation criteria from $\\cP$. We show that the \\emph{upper Snell envelope $\\ol{Z}$} of the reward process $Y$ is a supermartingale with respect to an appropriately defined nonlinear expectation $\\ul{\\sE}$, and $\\ol{Z}$ is further an $\\ul{\\sE}-$martingale up to the first time $\\t^*$ when $\\ol{Z}$ meets $Y$. Consequently, $\\t^*$ is the optimal stopping time for the robust optimal stopping problem and the corresponding zero-sum game has a value. Although the result seems similar to the one obtained in the classical optimal stopping theory, the mutual singularity of probabilities and the game aspect of the problem give rise to major technical hurdles, which we circumvent using some new methods.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Erhan Bayraktar",
+      "Song Yao"
+    ],
+    "doi": null,
+    "arxiv_id": "1301.0091v10",
+    "url": "http://arxiv.org/abs/1301.0091v10",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1808.06100v6",
+    "title": "On the solution existence and stability of polynomial optimization problems",
+    "abstract": "This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial. Under this regularity condition, the normalization argument in asymptotic analysis enables us to see the solution existence as well as the solution stability of these problems. We prove a Frank-Wolfe type theorem for regular optimization problems and an Eaves type theorem for non-regular pseudoconvex optimization problems. Moreover, we show results on the stability such as upper semicontinuity and local upper-Hölder stability of the solution map of polynomial optimization problems. At the end of the paper, we discuss the genericity of the regularity condition.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Vu Trung Hieu"
+    ],
+    "doi": null,
+    "arxiv_id": "1808.06100v6",
+    "url": "http://arxiv.org/abs/1808.06100v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:method_task",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.23565v1",
+    "title": "DRO: A Python Library for Distributionally Robust Optimization in Machine Learning",
+    "abstract": "We introduce dro, an open-source Python library for distributionally robust optimization (DRO) for regression and classification problems. The library implements 14 DRO formulations and 9 backbone models, enabling 79 distinct DRO methods. Furthermore, dro is compatible with both scikit-learn and PyTorch. Through vectorization and optimization approximation techniques, dro reduces runtime by 10x to over 1000x compared to baseline implementations on large-scale datasets. Comprehensive documentation is available at https://python-dro.org.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiashuo Liu",
+      "Tianyu Wang",
+      "Henry Lam",
+      "Hongseok Namkoong",
+      "Jose Blanchet"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.23565v1",
+    "url": "http://arxiv.org/abs/2505.23565v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.00258v1",
+    "title": "Optimal design of frame structures with mixed categorical and continuous design variables using the Gumbel-Softmax method",
+    "abstract": "In optimizing real-world structures, due to fabrication or budgetary restraints, the design variables may be restricted to a set of standard engineering choices. Such variables, commonly called categorical variables, are discrete and unordered in essence, precluding the utilization of gradient-based optimizers for the problems containing them. In this paper, incorporating the Gumbel-Softmax (GSM) method, we propose a new gradient-based optimizer for handling such variables in the optimal design of large-scale frame structures. The GSM method provides a means to draw differentiable samples from categorical distributions, thereby enabling sensitivity analysis for the variables generated from such distributions. The sensitivity information can greatly reduce the computational cost of traversing high-dimensional and discrete design spaces in comparison to employing gradient-free optimization methods. In addition, since the developed optimizer is gradient-based, it can naturally handle the simultaneous optimization of categorical and continuous design variables. Through three numerical case studies, different aspects of the proposed optimizer are studied and its advantages over population-based optimizers, specifically a genetic algorithm, are demonstrated.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Mehran Ebrahimi",
+      "Hyunmin Cheong",
+      "Pradeep Kumar Jayaraman",
+      "Farhad Javid"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.00258v1",
+    "url": "http://arxiv.org/abs/2501.00258v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.02491v3",
+    "title": "An efficient and easy-to-extend Matlab code of the Moving Morphable Component (MMC) method for three-dimensional topology optimization",
+    "abstract": "Explicit topology optimization methods have received ever-increasing interest in recent years. In particular, a 188-line Matlab code of the two-dimensional (2D) Moving Morphable Component (MMC)-based topology optimization method was released by Zhang et al. (Struct Multidiscip Optim 53(6):1243-1260, 2016). The present work aims to propose an efficient and easy-to-extend 256-line Matlab code of the MMC method for three-dimensional (3D) topology optimization implementing some new numerical techniques. To be specific, by virtue of the function aggregation technique, accurate sensitivity analysis, which is also easy-to-extend to other problems, is achieved. Besides, based on an efficient identification algorithm for load transmission path, the degrees of freedoms (DOFs) not belonging to the load transmission path are removed in finite element analysis (FEA), which significantly accelerates the optimization process. As a result, compared to the corresponding 188-line 2D code, the performance of the optimization results, the computational efficiency of FEA, and the convergence rate and the robustness of optimization process are greatly improved. For the sake of completeness, a refined 218-line Matlab code implementing the 2D-MMC method is also provided.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Zongliang Du",
+      "Tianchen Cui",
+      "Chang Liu",
+      "Weisheng Zhang",
+      "Yilin Guo",
+      "Xu Guo"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.02491v3",
+    "url": "http://arxiv.org/abs/2201.02491v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.08710v1",
+    "title": "Two-Scale Optimization of Graded Lattice Structures respecting Buckling on Micro- and Macroscale",
+    "abstract": "Interest in components with detailed structures increased with the progress in advanced manufacturing techniques in recent years. Parts with graded lattice elements can provide interesting mechanical, thermal, and acoustic properties compared to parts where only coarse features are included. One of these improvements is better global buckling resistance of the component. However, thin features are prone to local buckling. Normally, analyses with high computational effort are conducted on high-resolution finite element meshes to optimize parts with good global and local stability. Until recently, works focused only on either global or local buckling behavior. We use two-scale optimization based on asymptotic homogenization of elastic properties and local buckling behavior to reduce the effort of full-scale analyses. For this, we present an approach for concurrent local and global buckling optimization of parameterized graded lattice structures. It is based on a worst-case model for the homogenized buckling load factor, which acts as a safeguard against pure local buckling. Cross-modes residing on both scales are not detected. We support our theory with numerical examples and validations on dehomogenized designs, which show the capabilities of our method, and discuss the advantages and limitations of the worst-case model.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Daniel Hübner",
+      "Fabian Wein",
+      "Michael Stingl"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.08710v1",
+    "url": "http://arxiv.org/abs/2303.08710v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1810.05633v2",
+    "title": "Stochastic (Approximate) Proximal Point Methods: Convergence, Optimality, and Adaptivity",
+    "abstract": "We develop model-based methods for solving stochastic convex optimization problems, introducing the approximate-proximal point, or aProx, family, which includes stochastic subgradient, proximal point, and bundle methods. When the modeling approaches we propose are appropriately accurate, the methods enjoy stronger convergence and robustness guarantees than classical approaches, even though the model-based methods typically add little to no computational overhead over stochastic subgradient methods. For example, we show that improved models converge with probability 1 and enjoy optimal asymptotic normality results under weak assumptions; these methods are also adaptive to a natural class of what we term easy optimization problems, achieving linear convergence under appropriate strong growth conditions on the objective. Our substantial experimental investigation shows the advantages of more accurate modeling over standard subgradient methods across many smooth and non-smooth optimization problems.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Hilal Asi",
+      "John C. Duchi"
+    ],
+    "doi": null,
+    "arxiv_id": "1810.05633v2",
+    "url": "http://arxiv.org/abs/1810.05633v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1704.06673v1",
+    "title": "Revisiting wireless network jamming by SIR-based considerations and Multiband Robust Optimization",
+    "abstract": "We revisit the mathematical models for wireless network jamming introduced by Commander et al.: we first point out the strong connections with classical wireless network design and then we propose a new model based on the explicit use of signal-to-interference quantities. Moreover, to address the intrinsic uncertain nature of the jamming problem and tackle the peculiar right-hand-side (RHS) uncertainty of the problem, we propose an original robust cutting-plane algorithm drawing inspiration from Multiband Robust Optimization. Finally, we assess the performance of the proposed cutting plane algorithm by experiments on realistic network instances.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Fabio D'Andreagiovanni"
+    ],
+    "doi": null,
+    "arxiv_id": "1704.06673v1",
+    "url": "http://arxiv.org/abs/1704.06673v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1908.05659v1",
+    "title": "Distributionally Robust Optimization: A Review",
+    "abstract": "The concepts of risk-aversion, chance-constrained optimization, and robust optimization have developed significantly over the last decade. Statistical learning community has also witnessed a rapid theoretical and applied growth by relying on these concepts. A modeling framework, called distributionally robust optimization (DRO), has recently received significant attention in both the operations research and statistical learning communities. This paper surveys main concepts and contributions to DRO, and its relationships with robust optimization, risk-aversion, chance-constrained optimization, and function regularization.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Hamed Rahimian",
+      "Sanjay Mehrotra"
+    ],
+    "doi": null,
+    "arxiv_id": "1908.05659v1",
+    "url": "http://arxiv.org/abs/1908.05659v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.13646v3",
+    "title": "Conic-Optimization Based Algorithms for Nonnegative Matrix Factorization",
+    "abstract": "Nonnegative matrix factorization is the following problem: given a nonnegative input matrix $V$ and a factorization rank $K$, compute two nonnegative matrices, $W$ with $K$ columns and $H$ with $K$ rows, such that $WH$ approximates $V$ as well as possible. In this paper, we propose two new approaches for computing high-quality NMF solutions using conic optimization. These approaches rely on the same two steps. First, we reformulate NMF as minimizing a concave function over a product of convex cones--one approach is based on the exponential cone, and the other on the second-order cone. Then, we solve these reformulations iteratively: at each step, we minimize exactly, over the feasible set, a majorization of the objective functions obtained via linearization at the current iterate. Hence these subproblems are convex conic programs and can be solved efficiently using dedicated algorithms. We prove that our approaches reach a stationary point with an accuracy decreasing as $\\mathcal{O}(\\frac{1}{i})$, where $i$ denotes the iteration number. To the best of our knowledge, our analysis is the first to provide a convergence rate to stationary points for NMF. Furthermore, in the particular cases of rank-one factorizations (that is, $K=1$), we show that one of our formulations can be expressed as a convex optimization problem implying that optimal rank-one approximations can be computed efficiently. Finally, we show on several numerical examples that our approaches are able to frequently compute exact NMFs (that is, with $V = WH$), and compete favorably with the state of the art.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Valentin Leplat",
+      "Yurii Nesterov",
+      "Nicolas Gillis",
+      "François Glineur"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.13646v3",
+    "url": "http://arxiv.org/abs/2105.13646v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2111.15645v5",
+    "title": "Survey Descent: A Multipoint Generalization of Gradient Descent for Nonsmooth Optimization",
+    "abstract": "For strongly convex objectives that are smooth, the classical theory of gradient descent ensures linear convergence relative to the number of gradient evaluations. An analogous nonsmooth theory is challenging. Even when the objective is smooth at every iterate, the corresponding local models are unstable and the number of cutting planes invoked by traditional remedies is difficult to bound, leading to convergences guarantees that are sublinear relative to the cumulative number of gradient evaluations. We instead propose a multipoint generalization of the gradient descent iteration for local optimization. While designed with general objectives in mind, we are motivated by a ``max-of-smooth'' model that captures the subdifferential dimension at optimality. We prove linear convergence when the objective is itself max-of-smooth, and experiments suggest a more general phenomenon.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "X. Y. Han",
+      "Adrian S. Lewis"
+    ],
+    "doi": null,
+    "arxiv_id": "2111.15645v5",
+    "url": "http://arxiv.org/abs/2111.15645v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.11788v1",
+    "title": "Convergence Results for Optimal Control Problems Governed by Elliptic Quasivariational Inequalities",
+    "abstract": "We consider an optimal control problem $\\cQ$ governed by an elliptic quasivariational inequality with unilateral constraints. The existence of optimal pairs of the problem is a well known result, see \\cite{SS}, for instance. We associate to $\\cQ$ a new optimal control problem $\\wQ$, obtained by perturbing the state inequality (including the set of constraints and the nonlinear operator) and the cost functional, as well. Then, we provide sufficient conditions which guarantee the convergence of solutions of Problem $\\wQ$ to a solution of Problem $\\cQ$. The proofs are based on convergence results for elliptic quasivariational inequalities, obtained by using arguments of compactness, lower semicontinuity, monotonicity, penalty and various estimates. Finally, we illustrate the use of the abstract convergence results in the study of optimal control associated with two boundary value problems. The first one describes the equilibrium of an elastic body in frictional contact with an obstacle, the so-called foundation. The process is static and the contact is modeled with normal compliance and unilateral constraint, associated to a version of Coulomb's law of dry friction. The second one describes a stationary heat transfer problem with unilateral constraints. For the two problems we prove existence, uniqueness and convergence results together with the corresponding physical interpretation.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Mircea Sofonea",
+      "Domingo A. Tarzia"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.11788v1",
+    "url": "http://arxiv.org/abs/2005.11788v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1607.01655v3",
+    "title": "L1 penalization of volumetric dose objectives in optimal control of PDEs",
+    "abstract": "This work is concerned with a class of optimal control problems governed by a partial differential equation that are motivated by an application in radiotherapy treatment planning, where the primary design objective is to minimize the volume where a functional of the state violates a prescribed level, but prescribing these levels in the form of pointwise state constraints can lead to infeasible problems. We therefore propose an alternative approach based on $L^1$ penalization of the violation. We establish well-posedness of the corresponding optimal control problem, derive first-order optimality conditions, and present a semismooth Newton method for the efficient numerical solution of these problems. The performance of this method for a model problem is illustrated and contrasted with the alternative approach based on (regularized) state constraints.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Richard C. Barnard",
+      "Christian Clason"
+    ],
+    "doi": null,
+    "arxiv_id": "1607.01655v3",
+    "url": "http://arxiv.org/abs/1607.01655v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1507.06243v7",
+    "title": "A Smooth Primal-Dual Optimization Framework for Nonsmooth Composite Convex Minimization",
+    "abstract": "We propose a new first-order primal-dual optimization framework for a convex optimization template with broad applications. Our optimization algorithms feature optimal convergence guarantees under a variety of common structure assumptions on the problem template. Our analysis relies on a novel combination of three classic ideas applied to the primal-dual gap function: smoothing, acceleration, and homotopy. The algorithms due to the new approach achieve the best known convergence rate results, in particular when the template consists of only non-smooth functions. We also outline a restart strategy for the acceleration to significantly enhance the practical performance. We demonstrate relations with the augmented Lagrangian method and show how to exploit the strongly convex objectives with rigorous convergence rate guarantees. We provide numerical evidence with two examples and illustrate that the new methods can outperform the state-of-the-art, including Chambolle-Pock, and the alternating direction method-of-multipliers algorithms.",
+    "year": 2015,
+    "venue": null,
+    "authors": [
+      "Quoc Tran-Dinh",
+      "Olivier Fercoq",
+      "Volkan Cevher"
+    ],
+    "doi": null,
+    "arxiv_id": "1507.06243v7",
+    "url": "http://arxiv.org/abs/1507.06243v7",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.08826v2",
+    "title": "Regularization for Wasserstein Distributionally Robust Optimization",
+    "abstract": "Optimal transport has recently proved to be a useful tool in various machine learning applications needing comparisons of probability measures. Among these, applications of distributionally robust optimization naturally involve Wasserstein distances in their models of uncertainty, capturing data shifts or worst-case scenarios. Inspired by the success of the regularization of Wasserstein distances in optimal transport, we study in this paper the regularization of Wasserstein distributionally robust optimization. First, we derive a general strong duality result of regularized Wasserstein distributionally robust problems. Second, we refine this duality result in the case of entropic regularization and provide an approximation result when the regularization parameters vanish.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Waïss Azizian",
+      "Franck Iutzeler",
+      "Jérôme Malick"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.08826v2",
+    "url": "http://arxiv.org/abs/2205.08826v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1109.1320v2",
+    "title": "Examples of inconsistency in optimization by expected improvement",
+    "abstract": "We consider the 1D Expected Improvement optimization based on Gaussian processes having spectral densities converging to zero faster than exponentially. We give examples of problems where the optimization trajectory is not dense in the design space. In particular, we prove that for Gaussian kernels there exist smooth objective functions for which the optimization does not converge on the optimum.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Dmitry Yarotsky"
+    ],
+    "doi": null,
+    "arxiv_id": "1109.1320v2",
+    "url": "http://arxiv.org/abs/1109.1320v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.06966v1",
+    "title": "Tractable reformulations of DRO problems over structured optimal transport ambiguity sets",
+    "abstract": "Structuring ambiguity sets in Wasserstein-based distributionally robust optimization (DRO) can improve their statistical properties when the uncertainty consists of multiple independent components. The aim of this paper is to solve stochastic optimization problems with unknown uncertainty when we only have access to a finite set of samples from it. Exploiting strong duality of DRO problems over structured ambiguity sets, we derive tractable reformulations for certain classes of DRO and uncertainty quantification problems. We also derive tractable reformulations for distributionally robust chance-constrained problems. As the complexity of the reformulations may grow exponentially with the number of independent uncertainty components, we employ clustering strategies to obtain informative estimators, which yield problems of manageable complexity. We demonstrate the effectiveness of the theoretical results in a numerical simulation example.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Lotfi M. Chaouach",
+      "Tom Oomen",
+      "Dimitris Boskos"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.06966v1",
+    "url": "http://arxiv.org/abs/2504.06966v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.05573v1",
+    "title": "Outlier-Robust Wasserstein DRO",
+    "abstract": "Distributionally robust optimization (DRO) is an effective approach for data-driven decision-making in the presence of uncertainty. Geometric uncertainty due to sampling or localized perturbations of data points is captured by Wasserstein DRO (WDRO), which seeks to learn a model that performs uniformly well over a Wasserstein ball centered around the observed data distribution. However, WDRO fails to account for non-geometric perturbations such as adversarial outliers, which can greatly distort the Wasserstein distance measurement and impede the learned model. We address this gap by proposing a novel outlier-robust WDRO framework for decision-making under both geometric (Wasserstein) perturbations and non-geometric (total variation (TV)) contamination that allows an $\\varepsilon$-fraction of data to be arbitrarily corrupted. We design an uncertainty set using a certain robust Wasserstein ball that accounts for both perturbation types and derive minimax optimal excess risk bounds for this procedure that explicitly capture the Wasserstein and TV risks. We prove a strong duality result that enables tractable convex reformulations and efficient computation of our outlier-robust WDRO problem. When the loss function depends only on low-dimensional features of the data, we eliminate certain dimension dependencies from the risk bounds that are unavoidable in the general setting. Finally, we present experiments validating our theory on standard regression and classification tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sloan Nietert",
+      "Ziv Goldfeld",
+      "Soroosh Shafiee"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.05573v1",
+    "url": "http://arxiv.org/abs/2311.05573v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.01777v3",
+    "title": "CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition",
+    "abstract": "Modern deep learning models often achieve high overall performance, but consistently fail on specific subgroups. Group distributionally robust optimization (group DRO) addresses this problem by minimizing the worst-group loss, but it fails when group losses misrepresent performance differences between groups. This is common in domains like speech, where the widely used connectionist temporal classification (CTC) loss not only scales with input length but also varies with linguistic and acoustic properties, leading to spurious differences between group losses. We present CTC-DRO, which addresses the shortcomings of the group DRO objective by smoothing the group weight update to prevent overemphasis on consistently high-loss groups, while using input length-matched batching to mitigate CTC's scaling issues. We evaluate CTC-DRO on the task of multilingual automatic speech recognition (ASR) across five language sets from the diverse ML-SUPERB 2.0 benchmark. CTC-DRO consistently outperforms group DRO and CTC-based baseline models, reducing the worst-language error by up to 47.1% and the average error by up to 32.9%. CTC-DRO can be applied to ASR with minimal computational costs, and, while motivated by multilingual ASR, offers the potential for reducing group disparities in other domains with similar challenges.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Martijn Bartelds",
+      "Ananjan Nandi",
+      "Moussa Koulako Bala Doumbouya",
+      "Dan Jurafsky",
+      "Tatsunori Hashimoto",
+      "Karen Livescu"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.01777v3",
+    "url": "http://arxiv.org/abs/2502.01777v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2106.03107v4",
+    "title": "Approximation Algorithms for Min-max-min Robust Optimization and K-Adaptability under Objective Uncertainty",
+    "abstract": "In this work we investigate the min-max-min robust optimization problem and the k-adaptability robust optimization problem for binary problems with uncertain costs. The idea of the first approach is to calculate a set of k feasible solutions which are worst-case optimal if in each possible scenario the best of the k solutions is implemented. It is known that the min-max-min robust problem can be solved efficiently if k is at least the dimension of the problem, while it is theoretically and computationally hard if k is small. However, nothing is known about the intermediate case, i.e. k lies between one and the dimension of the problem. We approach this open question and present an approximation algorithm which achieves good problem-specific approximation guarantees for the cases where k is close to or where k is a fraction of the dimension. The derived bounds can be used to show that the min-max-min robust problem is solvable in oracle-polynomial time under certain conditions even if k is smaller than the dimension. We extend the previous results to the robust k-adaptability problem. As a consequence we can provide bounds on the number of necessary second-stage policies to approximate the exact two-stage robust problem. We derive an approximation algorithm for the k-adaptability problem which has similar guarantees as for the min-max-min problem. Finally, we test both algorithms on knapsack and shortest path problems and related two-stage variants. The experiments show that both algorithms calculate solutions with relatively small optimality gap in seconds.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jannis Kurtz"
+    ],
+    "doi": null,
+    "arxiv_id": "2106.03107v4",
+    "url": "http://arxiv.org/abs/2106.03107v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1203.6577v1",
+    "title": "Accelerated Particle Swarm Optimization and Support Vector Machine for Business Optimization and Applications",
+    "abstract": "Business optimization is becoming increasingly important because all business activities aim to maximize the profit and performance of products and services, under limited resources and appropriate constraints. Recent developments in support vector machine and metaheuristics show many advantages of these techniques. In particular, particle swarm optimization is now widely used in solving tough optimization problems. In this paper, we use a combination of a recently developed Accelerated PSO and a nonlinear support vector machine to form a framework for solving business optimization problems. We first apply the proposed APSO-SVM to production optimization, and then use it for income prediction and project scheduling. We also carry out some parametric studies and discuss the advantages of the proposed metaheuristic SVM.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Xin-She Yang",
+      "Suash Deb",
+      "Simon Fong"
+    ],
+    "doi": null,
+    "arxiv_id": "1203.6577v1",
+    "url": "http://arxiv.org/abs/1203.6577v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.07064v6",
+    "title": "Piecewise SOS-Convex Moment Optimization and Applications via Exact Semi-Definite Programs",
+    "abstract": "This paper presents exact Semi-Definite Program (SDP) reformulations for infinite-dimensional moment optimization problems involving a new class of piecewise Sum-of-Squares (SOS)-convex functions and projected spectrahedral support sets. These reformulations show that solving a single SDP finds the optimal value and an optimal probability measure of the original moment problem. This is done by establishing an SOS representation for the non-negativity of a piecewise SOS-convex function over a projected spectrahedron. Finally, as an application and a proof-of-concept illustration, the paper presents numerical results for the Newsvendor and revenue maximization problems with higher-order moments by solving their equivalent SDP reformulations. These reformulations promise a flexible and efficient approach to solving these models. The main novelty of the present work in relation to the recent research lies in finding the solution to moment problems, for the first time, with piecewise SOS-convex functions from their numerically tractable exact SDP reformulations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Queenie Yingkun Huang",
+      "Vaithilingam Jeyakumar",
+      "Guoyin Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.07064v6",
+    "url": "http://arxiv.org/abs/2402.07064v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.09574v1",
+    "title": "Optimal control for a nonlinear stochastic PDE model of cancer growth",
+    "abstract": "We study an optimal control problem for a stochastic model of tumour growth with drug application. This model consists of three stochastic hyperbolic equations describing the evolution of tumour cells. It also includes two stochastic parabolic equations describing the diffusions of nutrient and drug concentrations. Since all systems are subject to many uncertainties, we have added stochastic terms to the deterministic model to consider the random perturbations. Then, we have added control variables to the model according to the medical concepts to control the concentrations of drug and nutrient. In the optimal control problem, we have defined the stochastic and deterministic cost functions and we have proved that the problems have unique optimal controls. For deriving the necessary conditions for optimal control variables, the stochastic adjoint equations are derived. We have proved the stochastic model of tumour growth and the stochastic adjoint equations have unique solutions. For proving the theoretical results, we have used a change of variable which changes the stochastic model and adjoint equations (a.s.) to deterministic equations. Then we have employed the techniques used for deterministic ones to prove the existence and uniqueness of optimal control.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sakine Esmaili",
+      "M. R. Eslahchi",
+      "Delfim F. M. Torres"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.09574v1",
+    "url": "http://arxiv.org/abs/2307.09574v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.13269v3",
+    "title": "Wasserstein Distributionally Robust Estimation in High Dimensions: Performance Analysis and Optimal Hyperparameter Tuning",
+    "abstract": "Distributionally robust optimization (DRO) has become a powerful framework for estimation under uncertainty, offering strong out-of-sample performance and principled regularization. In this paper, we propose a DRO-based method for linear regression and address a central question: how to optimally choose the robustness radius, which controls the trade-off between robustness and accuracy. Focusing on high-dimensional settings where the dimension and the number of samples are both large and comparable in size, we employ tools from high-dimensional asymptotic statistics to precisely characterize the estimation error of the resulting estimator. Remarkably, this error can be recovered by solving a simple convex-concave optimization problem involving only four scalar variables. This characterization enables efficient selection of the radius that minimizes the estimation error. In doing so, it achieves the same effect as cross-validation, but at a fraction of the computational cost. Numerical experiments confirm that our theoretical predictions closely match empirical performance and that the optimal radius selected through our method aligns with that chosen by cross-validation, highlighting both the accuracy and the practical benefits of our approach.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Liviu Aolaritei",
+      "Soroosh Shafiee",
+      "Florian Dörfler"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.13269v3",
+    "url": "http://arxiv.org/abs/2206.13269v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.00176v5",
+    "title": "When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee",
+    "abstract": "In this paper, we propose systematic and efficient gradient-based methods for both one-way and two-way partial AUC (pAUC) maximization that are applicable to deep learning. We propose new formulations of pAUC surrogate objectives by using the distributionally robust optimization (DRO) to define the loss for each individual positive data. We consider two formulations of DRO, one of which is based on conditional-value-at-risk (CVaR) that yields a non-smooth but exact estimator for pAUC, and another one is based on a KL divergence regularized DRO that yields an inexact but smooth (soft) estimator for pAUC. For both one-way and two-way pAUC maximization, we propose two algorithms and prove their convergence for optimizing their two formulations, respectively. Experiments demonstrate the effectiveness of the proposed algorithms for pAUC maximization for deep learning on various datasets.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Dixian Zhu",
+      "Gang Li",
+      "Bokun Wang",
+      "Xiaodong Wu",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.00176v5",
+    "url": "http://arxiv.org/abs/2203.00176v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:title_like",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2312.10086v1",
+    "title": "A Necessary Optimality Condition for Extended Weighted Generalized Fractional Optimal Control Problems",
+    "abstract": "Using the recent weighted generalized fractional order operators of Hattaf, a general fractional optimal control problem without constraints on the values of the control functions is formulated and a corresponding (weak) version of Pontryagin's maximum principle is proved. As corollaries, necessary optimality conditions for Caputo-Fabrizio, Atangana-Baleanu and weighted Atangana-Baleanu fractional dynamic optimization problems are trivially obtained. As an application, the weighted generalized fractional problem of the calculus of variations is investigated and a new more general fractional Euler-Lagrange equation is given.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Houssine Zine",
+      "El Mehdi Lotfi",
+      "Delfim F. M. Torres",
+      "Noura Yousfi"
+    ],
+    "doi": null,
+    "arxiv_id": "2312.10086v1",
+    "url": "http://arxiv.org/abs/2312.10086v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

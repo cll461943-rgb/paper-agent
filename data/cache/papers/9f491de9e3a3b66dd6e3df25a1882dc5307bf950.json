@@ -1,0 +1,63 @@
+{
+  "paper_id": "https://openalex.org/W4380714727",
+  "title": "SqueezeLLM: Dense-and-Sparse Quantization",
+  "abstract": "Generative Large Language Models (LLMs) have demonstrated remarkable results for a wide range of tasks. However, deploying these models for inference has been a significant challenge due to their unprecedented resource requirements. This has forced existing deployment frameworks to use multi-GPU inference pipelines, which are often complex and costly, or to use smaller and less performant models. In this work, we demonstrate that the main bottleneck for generative inference with LLMs is memory bandwidth, rather than compute, specifically for single batch inference. While quantization has emerged as a promising solution by representing weights with reduced precision, previous efforts have often resulted in notable performance degradation. To address this, we introduce SqueezeLLM, a post-training quantization framework that not only enables lossless compression to ultra-low precisions of up to 3-bit, but also achieves higher quantization performance under the same memory constraint. Our framework incorporates two novel ideas: (i) sensitivity-based non-uniform quantization, which searches for the optimal bit precision assignment based on second-order information; and (ii) the Dense-and-Sparse decomposition that stores outliers and sensitive weight values in an efficient sparse format. When applied to the LLaMA models, our 3-bit quantization significantly reduces the perplexity gap from the FP16 baseline by up to 2.1x as compared to the state-of-the-art methods with the same memory requirement. Furthermore, when deployed on an A6000 GPU, our quantized models achieve up to 2.3x speedup compared to the baseline. Our code is available at https://github.com/SqueezeAILab/SqueezeLLM.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Sehoon Kim",
+    "Coleman Hooper",
+    "Amir Gholami",
+    "Zhen Dong",
+    "Xiuyu Li",
+    "Sheng Shen",
+    "Michael W. Mahoney",
+    "Kurt Keutzer"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2306.07629",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2306.07629",
+  "citation_count": 23,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:method_task",
+    "route:hyde",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Inference",
+      "Quantization (signal processing)",
+      "Speedup",
+      "Bottleneck",
+      "Language model",
+      "Generative model",
+      "Perplexity",
+      "Computer engineering",
+      "Algorithm",
+      "Theoretical computer science",
+      "Parallel computing",
+      "Artificial intelligence",
+      "Generative grammar",
+      "Embedded system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2891987081",
+      "https://openalex.org/W2169518243",
+      "https://openalex.org/W2252095989",
+      "https://openalex.org/W4322096525",
+      "https://openalex.org/W2551914602",
+      "https://openalex.org/W4287323699",
+      "https://openalex.org/W4281893144",
+      "https://openalex.org/W2105076537",
+      "https://openalex.org/W2787311093",
+      "https://openalex.org/W2084531783"
+    ]
+  }
+}

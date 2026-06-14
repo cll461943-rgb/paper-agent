@@ -1,0 +1,29 @@
+{
+  "paper_id": "http://arxiv.org/abs/2304.00571v3",
+  "title": "DropMAE: Learning Representations via Masked Autoencoders with Spatial-Attention Dropout for Temporal Matching Tasks",
+  "abstract": "This paper studies masked autoencoder (MAE) video pre-training for various temporal matching-based downstream tasks, i.e., object-level tracking tasks including video object tracking (VOT) and video object segmentation (VOS), self-supervised visual correspondence learning, dense tracking tasks including optical flow estimation and long-term point tracking, and 3D point cloud tracking. Specifically, our work explores to provide a general representation to boost the temporal matching ability in various downstream tracking tasks. To achieve this, we firstly find that a simple extension of MAE, which randomly masks out frame patches in videos and reconstruct the frame pixels, heavily relies on spatial cues while ignoring temporal relations for frame reconstruction, thus leading to sub-optimal temporal matching representations. To alleviate this, we propose DropMAE, which adaptively performs spatial-attention dropout in the frame reconstruction to facilitate temporal correspondence learning in videos. We obtain several important findings with DropMAE: 1) DropMAE is a strong and efficient temporal matching learner, which achieves better fine-tuning results on matching-based tasks than the ImageNet-based MAE with 2x faster pre-training speed. 2) DropMAE is effective for different tracking tasks, i.e., object-level matching tasks including VOT and VOS, dense tracking tasks including optical flow estimation and tracking any point (TAP), and even 3D tracking in the different modality of point cloud data. Since none exists, we build ViT-based trackers for different downstream tracking tasks, and our pre-trained DropMAE model can be directly loaded in these ViT-based trackers for fine-tuning without further modifications. Experiments on 6 downstream tracking tasks demonstrate the effectiveness of DropMAE as a general pre-trained representation for diverse tracking tasks.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Qiangqiang Wu",
+    "Tianyu Yang",
+    "Ziquan Liu",
+    "Wei Lin",
+    "Baoyuan Wu",
+    "Antoni B. Chan"
+  ],
+  "doi": null,
+  "arxiv_id": "2304.00571v3",
+  "url": "http://arxiv.org/abs/2304.00571v3",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

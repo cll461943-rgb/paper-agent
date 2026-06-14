@@ -1,0 +1,33 @@
+{
+  "paper_id": "http://arxiv.org/abs/2606.01556v1",
+  "title": "TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization",
+  "abstract": "4-bit quantization reduces the memory footprint and latency of large language model inference, but its aggressive precision reduction can severely degrade accuracy. Prior methods address this by decomposing each weight matrix into two components (e.g., via singular value decomposition) and quantizing them separately, assigning the bulk of values to a low-precision residual component while handling outliers with a high-precision low-rank component. However, such decompositions are designed to minimize the real-valued energy of the residual, rather than the post-quantization error of the residual and low-rank components. We propose TwinQuant, a 4-bit quantization framework that learns quantization-friendly decomposed subspaces and jointly reshapes both the low-rank and residual components. TwinQuant learns component-specific transformations via a joint optimization over the Stiefel and general linear manifolds, flattening their distributions and reducing dynamic-range imbalance. To enable efficient end-to-end execution, we further design a fused dual-component kernel that pipelines the two-stage low-rank computation on-chip and merges both components with a single epilogue, avoiding intermediate global-memory traffic. Across LLaMA3 and Qwen3 models, TwinQuant preserves near-FP16 accuracy and delivers up to $1.8\\times$ end-to-end speedup over an FP16 baseline.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Haodong Wang",
+    "Junjie Liu",
+    "Zicong Hong",
+    "Qianli Liu",
+    "Jian Lin",
+    "Song Guo",
+    "Xu Chen"
+  ],
+  "doi": null,
+  "arxiv_id": "2606.01556v1",
+  "url": "http://arxiv.org/abs/2606.01556v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:original_clean",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,920 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2603.16309v3",
+    "title": "Omnilingual MT: Machine Translation for 1,600 Languages",
+    "abstract": "High-quality machine translation (MT) can scale to hundreds of languages, setting a high bar for multilingual systems. However, compared to the world's 7,000 languages, current systems still offer only limited coverage: about 200 languages on the target side, and maybe a few hundreds more on the source side, supported due to cross-lingual transfer. And even these numbers have been hard to evaluate due to the lack of reliable benchmarks and metrics. We present Omnilingual Machine Translation (OMT), the first MT system supporting more than 1,600 languages. This scale is enabled by a comprehensive data strategy that integrates large public multilingual corpora with newly created datasets, including manually curated MeDLEY bitext. We explore two ways of specializing a Large Language model (LLM) for machine translation: as a decoder-only model (OMT-LLaMA) or as a module in an encoder-decoder architecture (OMT-NLLB). Notably, all our 1B to 8B parameter models match or exceed the MT performance of a 70B LLM baseline, revealing a clear specialization advantage and enabling strong translation quality in low-compute settings. Moreover, our evaluation of English-to-1,600 translations further shows that while baseline models can interpret undersupported languages, they frequently fail to generate them with meaningful fidelity; OMT-LLaMA models substantially expand the set of languages for which coherent generation is feasible. Additionally, OMT models improve in cross-lingual transfer, being close to solving the \"understanding\" part of the puzzle in MT for the 1,600 evaluated. Our leaderboard and main human-created evaluation datasets (BOUQuET and Met-BOUQuET) are dynamically evolving towards Omnilinguality and freely available.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Omnilingual MT Team",
+      "Belen Alastruey",
+      "Niyati Bafna",
+      "Andrea Caciolai",
+      "Kevin Heffernan",
+      "Artyom Kozhevnikov",
+      "Christophe Ropers",
+      "Eduardo Sánchez",
+      "Charles-Eric Saint-James",
+      "Ioannis Tsiamas",
+      "Xiang \"Tony\" Cao",
+      "Chierh Cheng",
+      "Joe Chuang",
+      "Paul-Ambroise Duquenne",
+      "Mark Duppenthaler",
+      "Nate Ekberg",
+      "Cynthia Gao",
+      "Pere Lluís Huguet Cabot",
+      "João Maria Janeiro",
+      "Jean Maillard",
+      "Gabriel Mejia Gonzalez",
+      "Holger Schwenk",
+      "Edan Toledo",
+      "Arina Turkatenko",
+      "Albert Ventayol-Boada",
+      "Rashel Moritz",
+      "Alexandre Mourachko",
+      "Surya Parimi",
+      "Mary Williamson",
+      "Shireen Yates",
+      "David Dale",
+      "Marta R. Costa-jussà"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.16309v3",
+    "url": "http://arxiv.org/abs/2603.16309v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1709.00678v1",
+    "title": "Disentangling ASR and MT Errors in Speech Translation",
+    "abstract": "The main aim of this paper is to investigate automatic quality assessment for spoken language translation (SLT). More precisely, we investigate SLT errors that can be due to transcription (ASR) or to translation (MT) modules. This paper investigates automatic detection of SLT errors using a single classifier based on joint ASR and MT features. We evaluate both 2-class (good/bad) and 3-class (good/badASR/badMT ) labeling tasks. The 3-class problem necessitates to disentangle ASR and MT errors in the speech translation output and we propose two label extraction methods for this non trivial step. This enables - as a by-product - qualitative analysis on the SLT errors and their origin (are they due to transcription or to translation step?) on our large in-house corpus for French-to-English speech translation.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Ngoc-Tien Le",
+      "Benjamin Lecouteux",
+      "Laurent Besacier"
+    ],
+    "doi": null,
+    "arxiv_id": "1709.00678v1",
+    "url": "http://arxiv.org/abs/1709.00678v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1609.06049v1",
+    "title": "Automatic Quality Assessment for Speech Translation Using Joint ASR and MT Features",
+    "abstract": "This paper addresses automatic quality assessment of spoken language translation (SLT). This relatively new task is defined and formalized as a sequence labeling problem where each word in the SLT hypothesis is tagged as good or bad according to a large feature set. We propose several word confidence estimators (WCE) based on our automatic evaluation of transcription (ASR) quality, translation (MT) quality, or both (combined ASR+MT). This research work is possible because we built a specific corpus which contains 6.7k utterances for which a quintuplet containing: ASR output, verbatim transcript, text translation, speech translation and post-edition of translation is built. The conclusion of our multiple experiments using joint ASR and MT features for WCE is that MT features remain the most influent while ASR feature can bring interesting complementary information. Our robust quality estimators for SLT can be used for re-scoring speech translation graphs or for providing feedback to the user in interactive speech translation or computer-assisted speech-to-text scenarios.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Ngoc-Tien Le",
+      "Benjamin Lecouteux",
+      "Laurent Besacier"
+    ],
+    "doi": null,
+    "arxiv_id": "1609.06049v1",
+    "url": "http://arxiv.org/abs/1609.06049v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.19850v1",
+    "title": "To MT or not to MT: An eye-tracking study on the reception by Dutch readers of different translation and creativity levels",
+    "abstract": "This article presents the results of a pilot study involving the reception of a fictional short story translated from English into Dutch under four conditions: machine translation (MT), post-editing (PE), human translation (HT) and original source text (ST). The aim is to understand how creativity and errors in different translation modalities affect readers, specifically regarding cognitive load. Eight participants filled in a questionnaire, read a story using an eye-tracker, and conducted a retrospective think-aloud (RTA) interview. The results show that units of creative potential (UCP) increase cognitive load and that this effect is highest for HT and lowest for MT; no effect of error was observed. Triangulating the data with RTAs leads us to hypothesize that the higher cognitive load in UCPs is linked to increases in reader enjoyment and immersion. The effect of translation creativity on cognitive load in different translation modalities at word-level is novel and opens up new avenues for further research. All the code and data are available at https://github.com/INCREC/Pilot_to_MT_or_not_to_MT",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Kyo Gerrits",
+      "Ana Guerberof-Arenas"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.19850v1",
+    "url": "http://arxiv.org/abs/2504.19850v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.10160v1",
+    "title": "MT-R1-Zero: Advancing LLM-based Machine Translation via R1-Zero-like Reinforcement Learning",
+    "abstract": "Large-scale reinforcement learning (RL) methods have proven highly effective in enhancing the reasoning abilities of large language models (LLMs), particularly for tasks with verifiable solutions such as mathematics and coding. However, applying this idea to machine translation (MT), where outputs are flexibly formatted and difficult to automatically evaluate with explicit rules, remains underexplored. In this work, we introduce MT-R1-Zero, the first open-source adaptation of the R1-Zero RL framework for MT without supervised fine-tuning or cold-start. We propose a rule-metric mixed reward mechanism to guide LLMs towards improved translation quality via emergent reasoning. On the WMT 24 English-Chinese benchmark, our MT-R1-Zero-3B-Mix achieves competitive performance, surpassing TowerInstruct-7B-v0.2 by an average of 1.26 points. Meanwhile, our MT-R1-Zero-7B-Mix attains a high average score of 62.25 across all metrics, placing it on par with advanced proprietary models such as GPT-4o and Claude-3.5-Sonnet, while the MT-R1-Zero-7B-Sem variant achieves state-of-the-art scores on semantic metrics. Moreover, our work exhibits strong generalization capabilities on out-of-distribution MT tasks, robustly supporting multilingual and low-resource settings. Extensive analysis of model behavior across different initializations and reward metrics offers pioneering insight into the critical role of reward design, LLM adaptability, training dynamics, and emergent reasoning patterns within the R1-Zero paradigm for MT. Our code is available at https://github.com/fzp0424/MT-R1-Zero.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Zhaopeng Feng",
+      "Shaosheng Cao",
+      "Jiahan Ren",
+      "Jiayuan Su",
+      "Ruizhe Chen",
+      "Yan Zhang",
+      "Zhe Xu",
+      "Yao Hu",
+      "Jian Wu",
+      "Zuozhu Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.10160v1",
+    "url": "http://arxiv.org/abs/2504.10160v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.17099v1",
+    "title": "MT-Ranker: Reference-free machine translation evaluation by inter-system ranking",
+    "abstract": "Traditionally, Machine Translation (MT) Evaluation has been treated as a regression problem -- producing an absolute translation-quality score. This approach has two limitations: i) the scores lack interpretability, and human annotators struggle with giving consistent scores; ii) most scoring methods are based on (reference, translation) pairs, limiting their applicability in real-world scenarios where references are absent. In practice, we often care about whether a new MT system is better or worse than some competitors. In addition, reference-free MT evaluation is increasingly practical and necessary. Unfortunately, these two practical considerations have yet to be jointly explored. In this work, we formulate the reference-free MT evaluation into a pairwise ranking problem. Given the source sentence and a pair of translations, our system predicts which translation is better. In addition to proposing this new formulation, we further show that this new paradigm can demonstrate superior correlation with human judgments by merely using indirect supervision from natural language inference and weak supervision from our synthetic data. In the context of reference-free evaluation, MT-Ranker, trained without any human annotations, achieves state-of-the-art results on the WMT Shared Metrics Task benchmarks DARR20, MQM20, and MQM21. On a more challenging benchmark, ACES, which contains fine-grained evaluation criteria such as addition, omission, and mistranslation errors, MT-Ranker marks state-of-the-art against reference-free as well as reference-based baselines.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ibraheem Muhammad Moosa",
+      "Rui Zhang",
+      "Wenpeng Yin"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.17099v1",
+    "url": "http://arxiv.org/abs/2401.17099v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1902.08061v1",
+    "title": "Development of a classifiers/quantifiers dictionary towards French-Japanese MT",
+    "abstract": "Although classifiers/quantifiers (CQs) expressions appear frequently in everyday communications or written documents, they are described neither in classical bilingual paper dictionaries , nor in machine-readable dictionaries. The paper describes a CQs dictionary, edited from the corpus we have annotated, and its usage in the framework of French-Japanese machine translation (MT). CQs treatment in MT often causes problems of lexical ambiguity, polylexical phrase recognition difficulties in analysis and doubtful output in transfer-generation, in particular for distant languages pairs like French and Japanese. Our basic treatment of CQs is to annotate the corpus by UNL-UWs (Universal Networking Language-Universal words) 1 , and then to produce a bilingual or multilingual dictionary of CQs, based on synonymy through identity of UWs.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Mutsuko Tomokiyo",
+      "Mathieu Mangeot",
+      "Christian Boitet"
+    ],
+    "doi": null,
+    "arxiv_id": "1902.08061v1",
+    "url": "http://arxiv.org/abs/1902.08061v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.17722v2",
+    "title": "MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues",
+    "abstract": "The recent development of Multimodal Large Language Models (MLLMs) has significantly advanced AI's ability to understand visual modalities. However, existing evaluation benchmarks remain limited to single-turn question answering, overlooking the complexity of multi-turn dialogues in real-world scenarios. To bridge this gap, we introduce MT-Video-Bench, a holistic video understanding benchmark for evaluating MLLMs in multi-turn dialogues. Specifically, our MT-Video-Bench mainly assesses 6 core competencies that focus on perceptivity and interactivity, encompassing 1,000 meticulously curated multi-turn dialogues from diverse domains. These capabilities are rigorously aligned with real-world applications, such as interactive sports analysis and multi-turn video-based intelligent tutoring. With MT-Video-Bench, we extensively evaluate various state-of-the-art open-source and closed-source MLLMs, revealing their significant performance discrepancies and limitations in handling multi-turn video dialogues. The benchmark will be publicly available to foster future research.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yaning Pan",
+      "Qianqian Xie",
+      "Guohui Zhang",
+      "Zekun Wang",
+      "Yongqian Wen",
+      "Yuanxing Zhang",
+      "Haoxuan Hu",
+      "Zhiyu Pan",
+      "Yibing Huang",
+      "Zhidong Gan",
+      "Yonghong Lin",
+      "An Ping",
+      "Shihao Li",
+      "Yanghai Wang",
+      "Tianhao Peng",
+      "Jiaheng Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.17722v2",
+    "url": "http://arxiv.org/abs/2510.17722v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.16745v1",
+    "title": "MT-Eval: A Multi-Turn Capabilities Evaluation Benchmark for Large Language Models",
+    "abstract": "Large language models (LLMs) are increasingly relied upon for complex multi-turn conversations across diverse real-world applications. However, existing benchmarks predominantly focus on single-turn evaluations, overlooking the models' capabilities in multi-turn interactions. To address this gap, we introduce MT-Eval, a comprehensive benchmark designed to evaluate multi-turn conversational abilities. By analyzing human-LLM conversations, we categorize interaction patterns into four types: recollection, expansion, refinement, and follow-up. We construct multi-turn queries for each category either by augmenting existing datasets or by creating new examples with GPT-4 to avoid data leakage. To study the factors impacting multi-turn abilities, we create single-turn versions of the 1170 multi-turn queries and compare performance. Our evaluation of 11 well-known LLMs shows that while closed-source models generally surpass open-source ones, certain open-source models exceed GPT-3.5-Turbo in specific tasks. We observe significant performance degradation in multi-turn settings compared to single-turn settings in most models, which is not correlated with the models' fundamental capabilities. Moreover, we identify the distance to relevant content and susceptibility to error propagation as the key factors influencing multi-turn performance. MT-Eval is released publicly to encourage future research towards more robust conversational models.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Wai-Chung Kwan",
+      "Xingshan Zeng",
+      "Yuxin Jiang",
+      "Yufei Wang",
+      "Liangyou Li",
+      "Lifeng Shang",
+      "Xin Jiang",
+      "Qun Liu",
+      "Kam-Fai Wong"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.16745v1",
+    "url": "http://arxiv.org/abs/2401.16745v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.22038v1",
+    "title": "Can Peter Pan Survive MT? A Stylometric Study of LLMs, NMTs, and HTs in Children's Literature Translation",
+    "abstract": "This study focuses on evaluating the performance of machine translations (MTs) compared to human translations (HTs) in English-to-Chinese children's literature translation (CLT) from a stylometric perspective. The research constructs a Peter Pan corpus, comprising 21 translations: 7 human translations (HTs), 7 large language model translations (LLMs), and 7 neural machine translation outputs (NMTs). The analysis employs a generic feature set (including lexical, syntactic, readability, and n-gram features) and a creative text translation (CTT-specific) feature set, which captures repetition, rhythm, translatability, and miscellaneous levels, yielding 447 linguistic features in total. Using classification and clustering techniques in machine learning, we conduct a stylometric analysis of these translations. Results reveal that in generic features, HTs and MTs exhibit significant differences in conjunction word distributions and the ratio of 1-word-gram-YiYang, while NMTs and LLMs show significant variation in descriptive words usage and adverb ratios. Regarding CTT-specific features, LLMs outperform NMTs in distribution, aligning more closely with HTs in stylistic characteristics, demonstrating the potential of LLMs in CLT.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Delu Kong",
+      "Lieve Macken"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.22038v1",
+    "url": "http://arxiv.org/abs/2506.22038v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.14762v3",
+    "title": "MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues",
+    "abstract": "The advent of Large Language Models (LLMs) has drastically enhanced dialogue systems. However, comprehensively evaluating the dialogue abilities of LLMs remains a challenge. Previous benchmarks have primarily focused on single-turn dialogues or provided coarse-grained and incomplete assessments of multi-turn dialogues, overlooking the complexity and fine-grained nuances of real-life dialogues. To address this issue, we introduce MT-Bench-101, specifically designed to evaluate the fine-grained abilities of LLMs in multi-turn dialogues. By conducting a detailed analysis of real multi-turn dialogue data, we construct a three-tier hierarchical ability taxonomy comprising 4208 turns across 1388 multi-turn dialogues in 13 distinct tasks. We then evaluate 21 popular LLMs based on MT-Bench-101, conducting comprehensive analyses from both ability and task perspectives and observing differing trends in LLMs performance across dialogue turns within various tasks. Further analysis indicates that neither utilizing common alignment techniques nor chat-specific designs has led to obvious enhancements in the multi-turn abilities of LLMs. Extensive case studies suggest that our designed tasks accurately assess the corresponding multi-turn abilities. The data and code are available at \\url{https://github.com/mtbench101/mt-bench-101}.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ge Bai",
+      "Jie Liu",
+      "Xingyuan Bu",
+      "Yancheng He",
+      "Jiaheng Liu",
+      "Zhanhui Zhou",
+      "Zhuoran Lin",
+      "Wenbo Su",
+      "Tiezheng Ge",
+      "Bo Zheng",
+      "Wanli Ouyang"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.14762v3",
+    "url": "http://arxiv.org/abs/2402.14762v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2209.09444v4",
+    "title": "Vega-MT: The JD Explore Academy Translation System for WMT22",
+    "abstract": "We describe the JD Explore Academy's submission of the WMT 2022 shared general translation task. We participated in all high-resource tracks and one medium-resource track, including Chinese-English, German-English, Czech-English, Russian-English, and Japanese-English. We push the limit of our previous work -- bidirectional training for translation by scaling up two main factors, i.e. language pairs and model sizes, namely the \\textbf{Vega-MT} system. As for language pairs, we scale the \"bidirectional\" up to the \"multidirectional\" settings, covering all participating languages, to exploit the common knowledge across languages, and transfer them to the downstream bilingual tasks. As for model sizes, we scale the Transformer-Big up to the extremely large model that owns nearly 4.7 Billion parameters, to fully enhance the model capacity for our Vega-MT. Also, we adopt the data augmentation strategies, e.g. cycle translation for monolingual data, and bidirectional self-training for bilingual and monolingual data, to comprehensively exploit the bilingual and monolingual data. To adapt our Vega-MT to the general domain test set, generalization tuning is designed. Based on the official automatic scores of constrained systems, in terms of the sacreBLEU shown in Figure-1, we got the 1st place on {Zh-En (33.5), En-Zh (49.7), De-En (33.7), En-De (37.8), Cs-En (54.9), En-Cs (41.4) and En-Ru (32.7)}, 2nd place on {Ru-En (45.1) and Ja-En (25.6)}, and 3rd place on {En-Ja(41.5)}, respectively; W.R.T the COMET, we got the 1st place on {Zh-En (45.1), En-Zh (61.7), De-En (58.0), En-De (63.2), Cs-En (74.7), Ru-En (64.9), En-Ru (69.6) and En-Ja (65.1)}, 2nd place on {En-Cs (95.3) and Ja-En (40.6)}, respectively.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Changtong Zan",
+      "Keqin Peng",
+      "Liang Ding",
+      "Baopu Qiu",
+      "Boan Liu",
+      "Shwai He",
+      "Qingyu Lu",
+      "Zheng Zhang",
+      "Chuang Liu",
+      "Weifeng Liu",
+      "Yibing Zhan",
+      "Dacheng Tao"
+    ],
+    "doi": null,
+    "arxiv_id": "2209.09444v4",
+    "url": "http://arxiv.org/abs/2209.09444v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.12454v1",
+    "title": "MT-UDA: Towards Unsupervised Cross-modality Medical Image Segmentation with Limited Source Labels",
+    "abstract": "The success of deep convolutional neural networks (DCNNs) benefits from high volumes of annotated data. However, annotating medical images is laborious, expensive, and requires human expertise, which induces the label scarcity problem. Especially when encountering the domain shift, the problem becomes more serious. Although deep unsupervised domain adaptation (UDA) can leverage well-established source domain annotations and abundant target domain data to facilitate cross-modality image segmentation and also mitigate the label paucity problem on the target domain, the conventional UDA methods suffer from severe performance degradation when source domain annotations are scarce. In this paper, we explore a challenging UDA setting - limited source domain annotations. We aim to investigate how to efficiently leverage unlabeled data from the source and target domains with limited source annotations for cross-modality image segmentation. To achieve this, we propose a new label-efficient UDA framework, termed MT-UDA, in which the student model trained with limited source labels learns from unlabeled data of both domains by two teacher models respectively in a semi-supervised manner. More specifically, the student model not only distills the intra-domain semantic knowledge by encouraging prediction consistency but also exploits the inter-domain anatomical information by enforcing structural consistency. Consequently, the student model can effectively integrate the underlying knowledge beneath available data resources to mitigate the impact of source label scarcity and yield improved cross-modality segmentation performance. We evaluate our method on MM-WHS 2017 dataset and demonstrate that our approach outperforms the state-of-the-art methods by a large margin under the source-label scarcity scenario.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ziyuan Zhao",
+      "Kaixin Xu",
+      "Shumeng Li",
+      "Zeng Zeng",
+      "Cuntai Guan"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.12454v1",
+    "url": "http://arxiv.org/abs/2203.12454v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.05376v2",
+    "title": "Kreyòl-MT: Building MT for Latin American, Caribbean and Colonial African Creole Languages",
+    "abstract": "A majority of language technologies are tailored for a small number of high-resource languages, while relatively many low-resource languages are neglected. One such group, Creole languages, have long been marginalized in academic study, though their speakers could benefit from machine translation (MT). These languages are predominantly used in much of Latin America, Africa and the Caribbean. We present the largest cumulative dataset to date for Creole language MT, including 14.5M unique Creole sentences with parallel translations -- 11.6M of which we release publicly, and the largest bitexts gathered to date for 41 languages -- the first ever for 21. In addition, we provide MT models supporting all 41 Creole languages in 172 translation directions. Given our diverse dataset, we produce a model for Creole language MT exposed to more genre diversity than ever before, which outperforms a genre-specific Creole MT model on its own benchmark for 26 of 34 translation directions.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nathaniel R. Robinson",
+      "Raj Dabre",
+      "Ammon Shurtz",
+      "Rasul Dent",
+      "Onenamiyi Onesi",
+      "Claire Bizon Monroc",
+      "Loïc Grobol",
+      "Hasan Muhammad",
+      "Ashi Garg",
+      "Naome A. Etori",
+      "Vijay Murari Tiyyala",
+      "Olanrewaju Samuel",
+      "Matthew Dean Stutzman",
+      "Bismarck Bamfo Odoom",
+      "Sanjeev Khudanpur",
+      "Stephen D. Richardson",
+      "Kenton Murray"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.05376v2",
+    "url": "http://arxiv.org/abs/2405.05376v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cmp-lg/9409001v1",
+    "title": "Integrating Knowledge Bases and Statistics in MT",
+    "abstract": "We summarize recent machine translation (MT) research at the Information Sciences Institute of USC, and we describe its application to the development of a Japanese-English newspaper MT system. Our work aims at scaling up grammar-based, knowledge-based MT techniques. This scale-up involves the use of statistical methods, both in acquiring effective knowledge resources and in making reasonable linguistic choices in the face of knowledge gaps.",
+    "year": 1994,
+    "venue": null,
+    "authors": [
+      "Kevin Knight",
+      "Ishwar Chander",
+      "Matthew Haines",
+      "Vasileios Hatzivassiloglou",
+      "Eduard Hovy",
+      "Masayo Iida",
+      "Steve K. Luk",
+      "Akitoshi Okumura",
+      "Richard Whitney",
+      "Kenji Yamada"
+    ],
+    "doi": null,
+    "arxiv_id": "9409001v1",
+    "url": "http://arxiv.org/abs/cmp-lg/9409001v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.07457v2",
+    "title": "Perturbation-based QE: An Explainable, Unsupervised Word-level Quality Estimation Method for Blackbox Machine Translation",
+    "abstract": "Quality Estimation (QE) is the task of predicting the quality of Machine Translation (MT) system output, without using any gold-standard translation references. State-of-the-art QE models are supervised: they require human-labeled quality of some MT system output on some datasets for training, making them domain-dependent and MT-system-dependent. There has been research on unsupervised QE, which requires glass-box access to the MT systems, or parallel MT data to generate synthetic errors for training QE models. In this paper, we present Perturbation-based QE - a word-level Quality Estimation approach that works simply by analyzing MT system output on perturbed input source sentences. Our approach is unsupervised, explainable, and can evaluate any type of blackbox MT systems, including the currently prominent large language models (LLMs) with opaque internal processes. For language directions with no labeled QE data, our approach has similar or better performance than the zero-shot supervised approach on the WMT21 shared task. Our approach is better at detecting gender bias and word-sense-disambiguation errors in translation than supervised QE, indicating its robustness to out-of-domain usage. The performance gap is larger when detecting errors on a nontraditional translation-prompting LLM, indicating that our approach is more generalizable to different MT systems. We give examples demonstrating our approach's explainability power, where it shows which input source words have influence on a certain MT output word.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Tu Anh Dinh",
+      "Jan Niehues"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.07457v2",
+    "url": "http://arxiv.org/abs/2305.07457v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2309.07423v1",
+    "title": "ChatGPT MT: Competitive for High- (but not Low-) Resource Languages",
+    "abstract": "Large language models (LLMs) implicitly learn to perform a range of language tasks, including machine translation (MT). Previous studies explore aspects of LLMs' MT capabilities. However, there exist a wide variety of languages for which recent LLM MT performance has never before been evaluated. Without published experimental evidence on the matter, it is difficult for speakers of the world's diverse languages to know how and whether they can use LLMs for their languages. We present the first experimental evidence for an expansive set of 204 languages, along with MT cost analysis, using the FLORES-200 benchmark. Trends reveal that GPT models approach or exceed traditional MT model performance for some high-resource languages (HRLs) but consistently lag for low-resource languages (LRLs), under-performing traditional MT for 84.1% of languages we covered. Our analysis reveals that a language's resource level is the most important feature in determining ChatGPT's relative ability to translate it, and suggests that ChatGPT is especially disadvantaged for LRLs and African languages.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Nathaniel R. Robinson",
+      "Perez Ogayo",
+      "David R. Mortensen",
+      "Graham Neubig"
+    ],
+    "doi": null,
+    "arxiv_id": "2309.07423v1",
+    "url": "http://arxiv.org/abs/2309.07423v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/hep-ex/0303003v1",
+    "title": "An MT-Style Optical Package for Optical Data Transmission",
+    "abstract": "An optical package for mounting VCSEL and PIN diodes for transmitting and receiving optical signals has been developed. The diodes couple to the fibers in a commercial MT connector. The package is quite compact with its physical size significantly smaller than that of the MT connector. This design simplifies the testing and assembly of the optical components because the MT connector with the long fibers attached can be remounted with ease while preserving good light coupling efficiency.",
+    "year": 2003,
+    "venue": null,
+    "authors": [
+      "K. K. Gan"
+    ],
+    "doi": null,
+    "arxiv_id": "0303003v1",
+    "url": "http://arxiv.org/abs/hep-ex/0303003v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.17592v2",
+    "title": "Investigating Length Issues in Document-level Machine Translation",
+    "abstract": "Transformer architectures are increasingly effective at processing and generating very long chunks of texts, opening new perspectives for document-level machine translation (MT). In this work, we challenge the ability of MT systems to handle texts comprising up to several thousands of tokens. We design and implement a new approach designed to precisely measure the effect of length increments on MT outputs. Our experiments with two representative architectures unambiguously show that (a)~translation performance decreases with the length of the input text; (b)~the position of sentences within the document matters, and translation quality is higher for sentences occurring earlier in a document. We further show that manipulating the distribution of document lengths and of positional embeddings only marginally mitigates such problems. Our results suggest that even though document-level MT is computationally feasible, it does not yet match the performance of sentence-based MT.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ziqian Peng",
+      "Rachel Bawden",
+      "François Yvon"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.17592v2",
+    "url": "http://arxiv.org/abs/2412.17592v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1906.11751v1",
+    "title": "The Impact of Preprocessing on Arabic-English Statistical and Neural Machine Translation",
+    "abstract": "Neural networks have become the state-of-the-art approach for machine translation (MT) in many languages. While linguistically-motivated tokenization techniques were shown to have significant effects on the performance of statistical MT, it remains unclear if those techniques are well suited for neural MT. In this paper, we systematically compare neural and statistical MT models for Arabic-English translation on data preprecossed by various prominent tokenization schemes. Furthermore, we consider a range of data and vocabulary sizes and compare their effect on both approaches. Our empirical results show that the best choice of tokenization scheme is largely based on the type of model and the size of data. We also show that we can gain significant improvements using a system selection that combines the output from neural and statistical MT.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Mai Oudah",
+      "Amjad Almahairi",
+      "Nizar Habash"
+    ],
+    "doi": null,
+    "arxiv_id": "1906.11751v1",
+    "url": "http://arxiv.org/abs/1906.11751v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.14878v1",
+    "title": "Correction of FLASH-based MT saturation in human brain for residual bias of B1-inhomogeneity at 3T",
+    "abstract": "Background: Magnetization transfer (MT) saturation reflects the additional saturation of the MRI signal imposed by an MT pulse and is largely driven by the saturation of the bound pool. This reduction of the bound polarization by the MT pulse is less efficient than predicted by the differential B1-square law of absorption. Thus, B1 inhomogeneities lead to a residual bias in the MT saturation maps. We derive a heuristic correction to reduce this bias for a widely used multi-parameter mapping protocol at 3T. Methods: The amplitude of the MT pulse was varied via the nominal flip angle to mimic variations in B1. The MT saturation's dependence on the actual flip angle features a linear correction term, which was determined separately for gray and white matter. Results: The deviation of MT saturation from differential B1-square law is well described by a linear decrease with the actual flip angle of the MT pulse. This decrease showed no significant differences between gray and white matter. Thus, the post hoc correction does not need to take different tissue types into account. Bias-corrected MT saturation maps appeared more symmetric and highlighted highly myelinated tracts. Discussion: Our correction involves a calibration that is specific for the MT pulse. While it can also be used to rescale nominal flip angles, different MT pulses and/or protocols will require individual calibration. Conclusion: The suggested B1 correction of the MT maps can be applied post hoc using an independently acquired flip angle map.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Gunther Helms",
+      "Nikolaus Weiskopf",
+      "Antoine Lutti"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.14878v1",
+    "url": "http://arxiv.org/abs/2104.14878v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1311.5836v1",
+    "title": "Automatic Ranking of MT Outputs using Approximations",
+    "abstract": "Since long, research on machine translation has been ongoing. Still, we do not get good translations from MT engines so developed. Manual ranking of these outputs tends to be very time consuming and expensive. Identifying which one is better or worse than the others is a very taxing task. In this paper, we show an approach which can provide automatic ranks to MT outputs (translations) taken from different MT Engines and which is based on N-gram approximations. We provide a solution where no human intervention is required for ranking systems. Further we also show the evaluations of our results which show equivalent results as that of human ranking.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Pooja Gupta",
+      "Nisheeth Joshi",
+      "Iti Mathur"
+    ],
+    "doi": null,
+    "arxiv_id": "1311.5836v1",
+    "url": "http://arxiv.org/abs/1311.5836v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2112.08682v3",
+    "title": "Isometric MT: Neural Machine Translation for Automatic Dubbing",
+    "abstract": "Automatic dubbing (AD) is among the machine translation (MT) use cases where translations should match a given length to allow for synchronicity between source and target speech. For neural MT, generating translations of length close to the source length (e.g. within +-10% in character count), while preserving quality is a challenging task. Controlling MT output length comes at a cost to translation quality, which is usually mitigated with a two step approach of generating N-best hypotheses and then re-ranking based on length and quality. This work introduces a self-learning approach that allows a transformer model to directly learn to generate outputs that closely match the source length, in short Isometric MT. In particular, our approach does not require to generate multiple hypotheses nor any auxiliary ranking function. We report results on four language pairs (English - French, Italian, German, Spanish) with a publicly available benchmark. Automatic and manual evaluations show that our method for Isometric MT outperforms more complex approaches proposed in the literature.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Surafel M. Lakew",
+      "Yogesh Virkar",
+      "Prashant Mathur",
+      "Marcello Federico"
+    ],
+    "doi": null,
+    "arxiv_id": "2112.08682v3",
+    "url": "http://arxiv.org/abs/2112.08682v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.04497v1",
+    "title": "Chinese Character Decomposition for Neural MT with Multi-Word Expressions",
+    "abstract": "Chinese character decomposition has been used as a feature to enhance Machine Translation (MT) models, combining radicals into character and word level models. Recent work has investigated ideograph or stroke level embedding. However, questions remain about different decomposition levels of Chinese character representations, radical and strokes, best suited for MT. To investigate the impact of Chinese decomposition embedding in detail, i.e., radical, stroke, and intermediate levels, and how well these decompositions represent the meaning of the original character sequences, we carry out analysis with both automated and human evaluation of MT. Furthermore, we investigate if the combination of decomposed Multiword Expressions (MWEs) can enhance the model learning. MWE integration into MT has seen more than a decade of exploration. However, decomposed MWEs has not previously been explored.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Lifeng Han",
+      "Gareth J. F. Jones",
+      "Alan F. Smeaton",
+      "Paolo Bolzoni"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.04497v1",
+    "url": "http://arxiv.org/abs/2104.04497v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.04022v1",
+    "title": "CoCoA-MT: A Dataset and Benchmark for Contrastive Controlled MT with Application to Formality",
+    "abstract": "The machine translation (MT) task is typically formulated as that of returning a single translation for an input segment. However, in many cases, multiple different translations are valid and the appropriate translation may depend on the intended target audience, characteristics of the speaker, or even the relationship between speakers. Specific problems arise when dealing with honorifics, particularly translating from English into languages with formality markers. For example, the sentence \"Are you sure?\" can be translated in German as \"Sind Sie sich sicher?\" (formal register) or \"Bist du dir sicher?\" (informal). Using wrong or inconsistent tone may be perceived as inappropriate or jarring for users of certain cultures and demographics. This work addresses the problem of learning to control target language attributes, in this case formality, from a small amount of labeled contrastive data. We introduce an annotated dataset (CoCoA-MT) and an associated evaluation metric for training and evaluating formality-controlled MT models for six diverse target languages. We show that we can train formality-controlled models by fine-tuning on labeled contrastive data, achieving high accuracy (82% in-domain and 73% out-of-domain) while maintaining overall quality.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Maria Nădejde",
+      "Anna Currey",
+      "Benjamin Hsu",
+      "Xing Niu",
+      "Marcello Federico",
+      "Georgiana Dinu"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.04022v1",
+    "url": "http://arxiv.org/abs/2205.04022v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.10082v1",
+    "title": "Is MT Ready for the Next Crisis or Pandemic?",
+    "abstract": "Communication in times of crisis is essential. However, there is often a mismatch between the language of governments, aid providers, doctors, and those to whom they are providing aid. Commercial MT systems are reasonable tools to turn to in these scenarios. But how effective are these tools for translating to and from low resource languages, particularly in the crisis or medical domain? In this study, we evaluate four commercial MT systems using the TICO-19 dataset, which is composed of pandemic-related sentences from a large set of high priority languages spoken by communities most likely to be affected adversely in the next pandemic. We then assess the current degree of ``readiness'' for another pandemic (or epidemic) based on the usability of the output translations.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Vipasha Bansal",
+      "Elizabeth Brown",
+      "Chelsea Kendrick",
+      "Benjamin Pong",
+      "William D. Lewis"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.10082v1",
+    "url": "http://arxiv.org/abs/2601.10082v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2409.10989v2",
+    "title": "GOSt-MT: A Knowledge Graph for Occupation-related Gender Biases in Machine Translation",
+    "abstract": "Gender bias in machine translation (MT) systems poses significant challenges that often result in the reinforcement of harmful stereotypes. Especially in the labour domain where frequently occupations are inaccurately associated with specific genders, such biases perpetuate traditional gender stereotypes with a significant impact on society. Addressing these issues is crucial for ensuring equitable and accurate MT systems. This paper introduces a novel approach to studying occupation-related gender bias through the creation of the GOSt-MT (Gender and Occupation Statistics for Machine Translation) Knowledge Graph. GOSt-MT integrates comprehensive gender statistics from real-world labour data and textual corpora used in MT training. This Knowledge Graph allows for a detailed analysis of gender bias across English, French, and Greek, facilitating the identification of persistent stereotypes and areas requiring intervention. By providing a structured framework for understanding how occupations are gendered in both labour markets and MT systems, GOSt-MT contributes to efforts aimed at making MT systems more equitable and reducing gender biases in automated translations.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Orfeas Menis Mastromichalakis",
+      "Giorgos Filandrianos",
+      "Eva Tsouparopoulou",
+      "Dimitris Parsanoglou",
+      "Maria Symeonaki",
+      "Giorgos Stamou"
+    ],
+    "doi": null,
+    "arxiv_id": "2409.10989v2",
+    "url": "http://arxiv.org/abs/2409.10989v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.00041v1",
+    "title": "Domain-specific MT for Low-resource Languages: The case of Bambara-French",
+    "abstract": "Translating to and from low-resource languages is a challenge for machine translation (MT) systems due to a lack of parallel data. In this paper we address the issue of domain-specific MT for Bambara, an under-resourced Mande language spoken in Mali. We present the first domain-specific parallel dataset for MT of Bambara into and from French. We discuss challenges in working with small quantities of domain-specific data for a low-resource language and we present the results of machine learning experiments on this data.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Allahsera Auguste Tapo",
+      "Michael Leventhal",
+      "Sarah Luger",
+      "Christopher M. Homan",
+      "Marcos Zampieri"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.00041v1",
+    "url": "http://arxiv.org/abs/2104.00041v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.11127v2",
+    "title": "MT-SNN: Enhance Spiking Neural Network with Multiple Thresholds",
+    "abstract": "Spiking neural networks (SNNs) present a promising energy efficient alternative to traditional Artificial Neural Networks (ANNs) due to their multiplication-free operations enabled by binarized intermediate activations. However, this binarization leads to precision loss, hindering the SNN performance. In this paper, we introduce Multiple Threshold (MT) approaches to significantly enhance SNN accuracy by mitigating precision loss. We propose two distinct modes for MT implementation, depending on the membrane update rule: parallel mode and cascade mode. MT-SNN models can be efficiently trained on standard hardwares like GPUs and TPUs, while retaining the multiplication-free advantage crucial for deployment on neuromorphic devices. Our extensive experiments on CIFAR10, CIFAR100, ImageNet, and DVS-CIFAR10 datasets demonstrate that both MT modes substantially improve the performance of single-threshold SNNs, achieving higher accuracy with fewer time steps and comparable energy consumption. Moreover, MT-SNNs outperform state-of-the-art (SOTA) results. Notably, with MT, a Parametric-Leaky-Integrate-Fire (PLIF) based ResNet-34 architecture reaches 72.17\\% accuracy on ImageNet with a single time step, surpassing the previous SOTA by 2.75\\% despite using 4 steps.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Xiaoting Wang",
+      "Yanxiang Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.11127v2",
+    "url": "http://arxiv.org/abs/2303.11127v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.19884v1",
+    "title": "Preliminary WMT24 Ranking of General MT Systems and LLMs",
+    "abstract": "This is the preliminary ranking of WMT24 General MT systems based on automatic metrics. The official ranking will be a human evaluation, which is superior to the automatic ranking and supersedes it. The purpose of this report is not to interpret any findings but only provide preliminary results to the participants of the General MT task that may be useful during the writing of the system submission.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Tom Kocmi",
+      "Eleftherios Avramidis",
+      "Rachel Bawden",
+      "Ondrej Bojar",
+      "Anton Dvorkovich",
+      "Christian Federmann",
+      "Mark Fishel",
+      "Markus Freitag",
+      "Thamme Gowda",
+      "Roman Grundkiewicz",
+      "Barry Haddow",
+      "Marzena Karpinska",
+      "Philipp Koehn",
+      "Benjamin Marie",
+      "Kenton Murray",
+      "Masaaki Nagata",
+      "Martin Popel",
+      "Maja Popovic",
+      "Mariya Shmatova",
+      "Steinþór Steingrímsson",
+      "Vilém Zouhar"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.19884v1",
+    "url": "http://arxiv.org/abs/2407.19884v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "paper_id": "https://openalex.org/W4404782783",
+  "title": "Symbolic Working Memory Enhances Language Models for Complex Rule Application",
+  "abstract": "Large Language Models (LLMs) have shown remarkable reasoning performance but struggle with multi-step deductive reasoning involving a series of rule application steps, especially when rules are presented non-sequentially.Our preliminary analysis shows that while LLMs excel in single-step rule application, their performance drops significantly in multi-step scenarios due to the challenge in rule grounding.It requires anchoring the applicable rule and supporting facts at each step, amidst multiple input rules, facts, and inferred facts.To address this, we propose augmenting LLMs with external working memory and introduce a neurosymbolic framework for rule application.The memory stores facts and rules in both natural language and symbolic forms, enabling precise tracking.Utilizing this memory, our framework iteratively performs symbolic rule grounding and LLM-based rule implementation.The former matches predicates and variables of symbolic rules and facts to ground applicable rules at each step.Experiments indicate our framework's effectiveness in rule application and its robustness across various steps and settings 1 .1 Code and data are available at https://github.com/ SiyuanWangw/RuleApplication.[Sequential Input] Facts: Nicole's grandfather, Harold, accompanied her to the basketball match.(F1) Beverly went car shopping with her husband Louis and her daughter Nicole.(F2) Harold bought a new dress for his daughter Marie.(F3) Rules: If B is A's daughter, and C is B's grandfather, then C is the father of A. (R1) If B is the father of A, and C is the daughter of B, then C is the sister of A. (R2) [Non-Sequential Input] Facts: Harold bought a new dress for his daughter Marie.(F3) Nicole's grandfather, Harold, accompanied her to the basketball match.(F1) Beverly went car shopping with her husband Louis and her daughter Nicole.(F2) Rules: If B is A's father, and C is B's daughter, then C is the sister of A. (R2) If B is A's daughter, and C is B's grandfather, then C is the father",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Siyuan Wang",
+    "Zhongyu Wei",
+    "Yejin Choi",
+    "Xiang Ren"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.974",
+  "arxiv_id": null,
+  "url": "http://dx.doi.org/10.18653/v1/2024.emnlp-main.974",
+  "citation_count": 7,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Programming language",
+      "Natural language processing",
+      "Artificial intelligence"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2899084033",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W4391913857",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W3204019825"
+    ]
+  }
+}

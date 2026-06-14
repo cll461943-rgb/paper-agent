@@ -1,0 +1,418 @@
+[
+  {
+    "paper_id": "pubmed:41847599",
+    "title": "Assessing image quality in photoacoustic imaging: A metric-based and deep learning-based evaluation.",
+    "abstract": "Photoacoustic (PA) imaging offers high-resolution functional imaging ",
+    "year": 2026,
+    "venue": "Photoacoustics",
+    "authors": [
+      "Melle Van Der Brugge",
+      "Kalloor Joseph Francis",
+      "Navchetan Awasthi"
+    ],
+    "doi": "10.1016/j.pacs.2026.100800",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41847599/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41847599"
+    }
+  },
+  {
+    "paper_id": "pubmed:40966270",
+    "title": "Dual-model approach for concurrent forecasting of electricity prices and loads in smart grids: Comparison of sparse encoder NAR and GA-optimized LSTM.",
+    "abstract": "Accurate forecasting of electricity prices and loads is challenging in smart grids due to the strong interdependence between load and price. To address this, we propose two deep recurrent neural network models that forecast both load and price concurrently. The first model, Sparse Encoder Nonlinear Autoregressive Network (SENARX), introduces a sparse encoder for enhanced feature extraction and nonlinear autoregression with exogenous inputs. The second, GA-LSTM, integrates Long Short-Term Memory with genetic algorithm-based optimization to improve forecasting accuracy and robustness. Both models were evaluated using ISO New England data and outperformed benchmark models. The NARX model achieves MAPE values of 0.03 for load and 0.08 for price forecasting, while LSTM shows MAPE values of 1.53 and 1.91, respectively. The models demonstrate promising potential for real-time forecasting in smart grids. This paper presents a comparative study of SENARX and GA-LSTM against traditional methods such as ARIMA, SVM, and Bayesian Networks using market data from EPEX (Europe), IEX (India), and JEPX (Japan). SENARX achieved a MAPE of 3.82% (EPEX) and 4.13% (IEX), while GA-LSTM reached RMSE of 27.02 MW (EPEX) and 29.33 MW (JEPX). Compared to ARIMA (MAPE: 6.57%-7.21%, RMSE: up to 48.74 MW), the proposed models improved accuracy by over 40%. SENARX also trained faster (2385s vs 3100s for ARIMA). GA-LSTM showed faster convergence and lower error rates, and SENARX was robust against data noise. These characteristics make the models suitable for short-term load forecasting in dynamic and uncertain markets. Future work will test their performance under extreme events like peak demand and climate anomalies.",
+    "year": 2025,
+    "venue": "PloS one",
+    "authors": [
+      "Nasir Nauman",
+      "Sheeraz Akram",
+      "Muhammad Rashid",
+      "Arfan Jaffar",
+      "Sohail Masood Bhatti",
+      "Benish Fida"
+    ],
+    "doi": "10.1371/journal.pone.0330024",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40966270/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40966270"
+    }
+  },
+  {
+    "paper_id": "pubmed:40788941",
+    "title": "EIM: An effective solution for improving multi-modal large language models.",
+    "abstract": "Enabling large language models (LLMs) to have multi-modal capabilities, such as vision-language learning, has become a current research hotspot and the next milestone in LLM development with the advent of models like GPT4. The basic structure of current multi-modal LLMs usually includes three parts: the image encoder for extracting visual features, the semantic space transformation network ST for aligning the multi-modal semantic spaces, and LLM for generating text. Current works on multi-modal LLMs primarily focus on enhancing performance by utilizing larger image encoders and LLMs, and designing more complex fine-tuning methods and STs, which results in an escalation of model parameters. In this paper, we propose EIM, a novel effective solution for improving the performance of multi-modal large language models from the perspective of training process which reduces the need to introduce new parameters and modify the model structure, and is ignored and less explored in current research. EIM includes corresponding improvement measures in the image encoder, ST, and LLM. To validate EIM, we first apply it to ClipCap and conduct experiments on the COCO Caption dataset. Secondly, we extend EIM to the multi-modal LLMs, such as LLaMA-Adapter and LaVIN, and evaluate them on the ScienceQA dataset. Finally, we also conduct multi-modal chatbot experiments with the EIM enhanced LaVIN and evaluate it on the MME benchmark. The COCO Caption dataset experimental results of [Formula: see text], which is a model that applies EIM on the [Formula: see text], show the 1.75% performance improvement when compared to those of [Formula: see text], which has 3.13 times the number of parameters of [Formula: see text]. The experimental results on the ScienceQA dataset and MME benchmark show that EIM can achieve competitive performance with 7B model parameters when compared to the 13B multi-modal LLMs, which confirms the effective performance improvement of EIM for multi-modal LLMs.",
+    "year": 2025,
+    "venue": "PloS one",
+    "authors": [
+      "Yuting Bai",
+      "Tonghua Su",
+      "Zixing Bai"
+    ],
+    "doi": "10.1371/journal.pone.0329590",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40788941/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40788941"
+    }
+  },
+  {
+    "paper_id": "pubmed:40250215",
+    "title": "Uncertainty-aware segmentation quality prediction via deep learning Bayesian Modeling: Comprehensive evaluation and interpretation on skin cancer and liver segmentation.",
+    "abstract": "Image segmentation is a critical step in computational biomedical image analysis, typically evaluated using metrics like the Dice coefficient during training and validation. However, in clinical settings without manual annotations, assessing segmentation quality becomes challenging, and models lacking reliability indicators face adoption barriers. To address this gap, we propose a novel framework for predicting segmentation quality without requiring ground truth annotations during test time. Our approach introduces two complementary frameworks: one leveraging predicted segmentation and uncertainty maps, and another integrating the original input image, uncertainty maps, and predicted segmentation maps. We present Bayesian adaptations of two benchmark segmentation models-SwinUNet and Feature Pyramid Network with ResNet50-using Monte Carlo Dropout, Ensemble, and Test Time Augmentation to quantify uncertainty. We evaluate four uncertainty estimates-confidence map, entropy, mutual information, and expected pairwise Kullback-Leibler divergence-on 2D skin lesion and 3D liver segmentation datasets, analyzing their correlation with segmentation quality metrics. Our framework achieves an R",
+    "year": 2025,
+    "venue": "Computerized medical imaging and graphics : the official journal of the Computerized Medical Imaging Society",
+    "authors": [
+      "Sikha O K",
+      "Meritxell Riera-Marín",
+      "Adrian Galdran",
+      "Javier García López",
+      "Júlia Rodríguez-Comas",
+      "Gemma Piella",
+      "Miguel A González Ballester"
+    ],
+    "doi": "10.1016/j.compmedimag.2025.102547",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40250215/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40250215"
+    }
+  },
+  {
+    "paper_id": "pubmed:39914074",
+    "title": "CICADA (UCX): A novel approach for automated breast cancer classification through aggressiveness delineation.",
+    "abstract": "Breast cancer remains one of the leading causes of mortality worldwide, with current classification and segmentation techniques often falling short in accurately distinguishing between benign and malignant cases. The study both emphasize the novel approach, CICADA (UCX), specifically designed for breast segmentation with a focus on delineating aggressiveness. While the title highlights segmentation, the abstract expands on this by detailing the model's effectiveness in enhancing diagnostic precision in classifying aggressive tumor characteristics. Breast cancer segmentation pertains to the delineation of malignant tissue borders in medical imaging. The objective is to precisely delineate the malignant area from healthy tissues, facilitating reliable evaluation of tumor attributes like location, size, and form. Historically, manual segmentation by radiologists has been the benchmark; however, it is labor-intensive and susceptible to fluctuation among different observers and within the same observer. With the advancement of medical imaging technologies, there is an increasing demand for automated or semi-automatic systems capable of performing segmentation with efficiency and precision. These strategies seek to minimize human error, enhance reproducibility, and expedite diagnosis, so enabling prompt treatment. A significant problem in breast cancer segmentation is the variability in tumor morphology among various patients and imaging techniques. Neoplasms exhibit considerable variability in dimensions, morphology, and density, complicating the formulation of a universal approach. Moreover, elements like breast tissue density, which might hinder tumor appearance in mammograms, further complicate segmentation. A further barrier is the necessity for extensive, meticulously annotated datasets to train and test machine learning models, as medical picture annotation is labor-intensive and demands specialized expertise. Notwithstanding these obstacles, automated breast cancer segmentation has demonstrated significant potential in clinical applications. It assists radiologists in swiftly and precisely identifying questionable areas, resulting in earlier diagnosis and enhanced patient outcomes. Automated devices can aid in treatment planning by delivering accurate measures of tumor size and location, which are essential for establishing suitable surgical or radiation methods. This study addresses these limitations by introducing CICADA (UCX), which aims to enhance diagnostic precision and operational efficiency in clinical applications. The present study focuses on the creation and assessment of a sophisticated medical picture segmentation model, called Cheetah Inspired Convex Adaptive Discriminator Algorithm with Unet Convenet Xt CICADA (UCX), by contrasting it with the most advanced techniques currently in use. With a mean IOU of 96.34 %, a Dice Coefficient/F1-Score of 99.6461 %, and an AUC of 99.88 %, the suggested model performs quite well. The study incorporates various feature selection techniques like Particle Swarm Optimisation, Dragon Fly, Grey Wolf and our proposed novel technique named as CICADA (UCX). Through a thorough comparison analysis using many approaches, the paper highlights the advantages of CICADA (UCX) for medical picture segmentation. The study advances the area by offering fresh perspectives on segmentation accuracy, with a focus on obtaining a high Dice Coefficient/F1-Score. The results highlight how CICADA (UCX) has the ability to greatly improve medical image analysis and enable more precise and effective diagnosis. The CICADA (UCX) model, a revolutionary approach to medical picture segmentation, is presented in this study, which is a significant improvement over other existing technique. The model outperforms state-of-the-art methods in a thorough comparison investigation, showing higher performance across important assessment measures including mean IOU, Dice Coefficient/F1-Score, and AUC. Notably, the model scores a remarkable 99.6461 % Dice Coefficient/F1-Score, demonstrating accurate medical structural delineation. An important aspect of medical imaging applications is segmentation accuracy, which is greatly improved by this study. The results point to possible improvements in operational efficiency and diagnostic accuracy, which would be beneficial to patients as well as medical personnel. This discovery has significance for improving medical picture segmentation techniques and promoting technological developments in medical imaging and computer-aided diagnosis.",
+    "year": 2025,
+    "venue": "Computational biology and chemistry",
+    "authors": [
+      "Davinder Paul Singh",
+      "Tathagat Banerjee",
+      "Pawandeep Kour",
+      "Debabrata Swain",
+      "Yogendra Narayan"
+    ],
+    "doi": "10.1016/j.compbiolchem.2025.108368",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39914074/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39914074"
+    }
+  },
+  {
+    "paper_id": "pubmed:38870233",
+    "title": "Deep learning based ECG segmentation for delineation of diverse arrhythmias.",
+    "abstract": "Accurate delineation of key waveforms in an ECG is a critical step in extracting relevant features to support the diagnosis and treatment of heart conditions. Although deep learning based methods using segmentation models to locate P, QRS, and T waves have shown promising results, their ability to handle arrhythmias has not been studied in any detail. In this paper we investigate the effect of arrhythmias on delineation quality and develop strategies to improve performance in such cases. We introduce a U-Net-like segmentation model for ECG delineation with a particular focus on diverse arrhythmias. This is followed by a post-processing algorithm which removes noise and automatically determines the boundaries of P, QRS, and T waves. Our model has been trained on a diverse dataset and evaluated against the LUDB and QTDB datasets to show strong performance, with F1-scores exceeding 99% for QRS and T waves, and over 97% for P waves in the LUDB dataset. Furthermore, we assess various models across a wide array of arrhythmias and observe that models with a strong performance on standard benchmarks may still perform poorly on arrhythmias that are underrepresented in these benchmarks, such as tachycardias. We propose solutions to address this discrepancy.",
+    "year": 2024,
+    "venue": "PloS one",
+    "authors": [
+      "Chankyu Joung",
+      "Mijin Kim",
+      "Taejin Paik",
+      "Seong-Ho Kong",
+      "Seung-Young Oh",
+      "Won Kyeong Jeon",
+      "Jae-Hu Jeon",
+      "Joong-Sik Hong",
+      "Wan-Joong Kim",
+      "Woong Kook",
+      "Myung-Jin Cha",
+      "Otto van Koert"
+    ],
+    "doi": "10.1371/journal.pone.0303178",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38870233/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38870233"
+    }
+  },
+  {
+    "paper_id": "pubmed:38438876",
+    "title": "Self-supervised pre-training for joint optic disc and cup segmentation via attention-aware network.",
+    "abstract": "Image segmentation is a fundamental task in deep learning, which is able to analyse the essence of the images for further development. However, for the supervised learning segmentation method, collecting pixel-level labels is very time-consuming and labour-intensive. In the medical image processing area for optic disc and cup segmentation, we consider there are two challenging problems that remain unsolved. One is how to design an efficient network to capture the global field of the medical image and execute fast in real applications. The other is how to train the deep segmentation network using a few training data due to some medical privacy issues. In this paper, to conquer such issues, we first design a novel attention-aware segmentation model equipped with the multi-scale attention module in the pyramid structure-like encoder-decoder network, which can efficiently learn the global semantics and the long-range dependencies of the input images. Furthermore, we also inject the prior knowledge that the optic cup lies inside the optic disc by a novel loss function. Then, we propose a self-supervised contrastive learning method for optic disc and cup segmentation. The unsupervised feature representation is learned by matching an encoded query to a dictionary of encoded keys using a contrastive technique. Finetuning the pre-trained model using the proposed loss function can help achieve good performance for the task. To validate the effectiveness of the proposed method, extensive systemic evaluations on different public challenging optic disc and cup benchmarks, including DRISHTI-GS and REFUGE datasets demonstrate the superiority of the proposed method, which can achieve new state-of-the-art performance approaching 0.9801 and 0.9087 F1 score respectively while gaining 0.9657 ",
+    "year": 2024,
+    "venue": "BMC ophthalmology",
+    "authors": [
+      "Zhiwang Zhou",
+      "Yuanchang Zheng",
+      "Xiaoyu Zhou",
+      "Jie Yu",
+      "Shangjie Rong"
+    ],
+    "doi": "10.1186/s12886-024-03376-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38438876/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38438876"
+    }
+  },
+  {
+    "paper_id": "pubmed:36619288",
+    "title": "Pilot testing and optimization of a larval fathead minnow high throughput transcriptomics assay.",
+    "abstract": "Concentrations at which global gene expression profiles in cells or animals exposed to a test substance start to differ significantly from those of controls have been proposed as an alternative point of departure for use in screening level hazard assessment. The present study describes pilot testing of a high throughput compatible transcriptomics assay with larval fathead minnows. One day post hatch fathead minnows were exposed to eleven different concentrations of three metals, three selective serotonin reuptake inhibitors, and four neonicotinoid-like compounds for 24 h and concentration response modeling was applied to whole body gene expression data. Transcriptomics-based points of departure (tPODs) were consistently lower than effect concentrations reported in apical endpoint studies in fish. However, larval fathead minnow-based tPODs were not always lower than concentrations reported to elicit apical toxicity in other aquatic organisms like crustaceans or insects. Random ",
+    "year": 2023,
+    "venue": "Current research in toxicology",
+    "authors": [
+      "Daniel L Villeneuve",
+      "Michelle Le",
+      "Monique Hazemi",
+      "Adam Biales",
+      "David C Bencic",
+      "Kendra Bush",
+      "Robert Flick",
+      "John Martinson",
+      "Mackenzie Morshead",
+      "Kelvin Santana Rodriguez",
+      "Kelsey Vitense",
+      "Kevin Flynn"
+    ],
+    "doi": "10.1016/j.crtox.2022.100099",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36619288/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36619288"
+    }
+  },
+  {
+    "paper_id": "pubmed:36442443",
+    "title": "Towards semantic-driven boolean query formalization for biomedical systematic literature reviews.",
+    "abstract": "Study identification refers to formalizing an effective search over biomedical databases for retrieving all eligible evidence for a systematic review. Manual construction of queries, where a user submit a search query for which a biomedical search system such as PubMed would identify the most relevant documents, has been recognized as a very costly step in conducting systematic reviews. The objective of this paper is to present an automatic query generation approach to reduce the time and labor cost of manual biomedical study identification. The evaluation benchmark is the widely adopted CLEF 2018 Technology Assisted Reviews (TAR) collection, with 72 systematic reviews on Diagnosis Test Accuracy. We use and fine-tune pre-trained language models for generating high-level key-phrases and their dense embeddings. We constructed and published a dataset consists of almost one million PubMed articles' abstracts and their keywords for fine-tuning pre-trained language models. We also use concepts that are represented in the Unified Medical Language System, UMLS, for query expansion and embedding generation. We exploit and test different clustering methods, namely Agglomerative clustering, Affinity Propagation, and K-Means, over the generated embeddings to form query clauses. Our proposed methods outperform existing state-of-the-art automatic query generation models across Precision (0.0821 compared with 0.005), Recall (0.9676 compared with 0.878), and F-measures (0.2898 compared with 0.0356 in F3 measure). In addition, some of the proposed methods can even outperform the performance of the manually crafted queries in some specific measures. The proposed model in this paper can be utilized to form an effective initial search query that can be further refined and updated by human reviewers for achieving the desired performance. For future work, we would like to explore the application of the presented query formalization methods in existing study identification methodologies and techniques, especially those that iteratively train machine learning models based on the domain experts' feedback on the relevancy of the retrieved studies.",
+    "year": 2023,
+    "venue": "International journal of medical informatics",
+    "authors": [
+      "Mohammadreza Pourreza",
+      "Faezeh Ensan"
+    ],
+    "doi": "10.1016/j.ijmedinf.2022.104928",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36442443/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36442443"
+    }
+  },
+  {
+    "paper_id": "pubmed:33502972",
+    "title": "Event-Stream Representation for Human Gaits Identification Using Deep Neural Networks.",
+    "abstract": "Dynamic vision sensors (event cameras) have recently been introduced to solve a number of different vision tasks such as object recognition, activities recognition, tracking, etc. Compared with the traditional RGB sensors, the event cameras have many unique advantages such as ultra low resources consumption, high temporal resolution and much larger dynamic range. However, these cameras only produce noisy and asynchronous events of intensity changes, i.e., event-streams rather than frames, where conventional computer vision algorithms can't be directly applied. In our opinion the key challenge for improving the performance of event cameras in vision tasks is finding the appropriate representations of the event-streams so that cutting-edge learning approaches can be applied to fully uncover the spatio-temporal information contained in the event-streams. In this paper, we focus on the event-based human gait identification task and investigate the possible representations of the event-streams when deep neural networks are applied as the classifier. We propose new event-based gait recognition approaches basing on two different representations of the event-stream, i.e., graph and image-like representations, and use graph-based convolutional network (GCN) and convolutional neural networks (CNN) respectively to recognize gait from the event-streams. The two approaches are termed as EV-Gait-3DGraph and EV-Gait-IMG. To evaluate the performance of the proposed approaches, we collect two event-based gait datasets, one from real-world experiments and the other by converting the publicly available RGB gait recognition benchmark CASIA-B. Extensive experiments show that EV-Gait-3DGraph achieves significantly higher recognition accuracy than other competing methods when sufficient training samples are available. However, EV-Gait-IMG converges more quickly than graph-based approaches while training and shows good accuracy with only few number of training samples (less than ten). So image-like presentation is preferable when the amount of training data is limited.",
+    "year": 2022,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Yanxiang Wang",
+      "Xian Zhang",
+      "Yiran Shen",
+      "Bowen Du",
+      "Guangrong Zhao",
+      "Lizhen Cui",
+      "Hongkai Wen"
+    ],
+    "doi": "10.1109/TPAMI.2021.3054886",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33502972/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "33502972"
+    }
+  },
+  {
+    "paper_id": "pubmed:31199252",
+    "title": "Object Detection from Scratch with Deep Supervision.",
+    "abstract": "In this paper, we propose Deeply Supervised Object Detectors (DSOD), an object detection framework that can be trained from scratch. Recent advances in object detection heavily depend on the off-the-shelf models pre-trained on large-scale classification datasets like ImageNet and OpenImage. However, one problem is that adopting pre-trained models from classification to detection task may incur learning bias due to the different objective function and diverse distributions of object categories. Techniques like fine-tuning on detection task could alleviate this issue to some extent but are still not fundamental. Furthermore, transferring these pre-trained models across discrepant domains will be more difficult (e.g., from RGB to depth images). Thus, a better solution to handle these critical problems is to train object detectors from scratch, which motivates our proposed method. Previous efforts on this direction mainly failed by reasons of the limited training data and naive backbone network structures for object detection. In DSOD, we contribute a set of design principles for learning object detectors from scratch. One of the key principles is the deep supervision, enabled by layer-wise dense connections in both backbone networks and prediction layers, plays a critical role in learning good detectors from scratch. After involving several other principles, we build our DSOD based on the single-shot detection framework (SSD). We evaluate our method on PASCAL VOC 2007, 2012 and COCO datasets. DSOD achieves consistently better results than the state-of-the-art methods with much more compact models. Specifically, DSOD outperforms baseline method SSD on all three benchmarks, while requiring only 1/2 parameters. We also observe that DSOD can achieve comparable/slightly better results than Mask RCNN [1] + FPN [2] (under similar input size) with only 1/3 parameters, using no extra data or pre-trained models.",
+    "year": 2020,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Zhiqiang Shen",
+      "Zhuang Liu",
+      "Jianguo Li",
+      "Yu-Gang Jiang",
+      "Yurong Chen",
+      "Xiangyang Xue"
+    ],
+    "doi": "10.1109/TPAMI.2019.2922181",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31199252/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "31199252"
+    }
+  },
+  {
+    "paper_id": "pubmed:29993867",
+    "title": "Action-Attending Graphic Neural Network.",
+    "abstract": "The motion analysis of human skeletons is crucial for human action recognition, which is one of the most active topics in computer vision. In this paper, we propose a fully end-to-end action-attending graphic neural network (A2GNN) for skeleton-based action recognition, in which each irregular skeleton is structured as an undirected attribute graph. To extract high-level semantic representation from skeletons, we perform the local spectral graph filtering on the constructed attribute graphs like the standard image convolution operation. Considering not all joints are informative for action analysis, we design an actionattending layer to detect those salient action units (AUs) by adaptively weighting skeletal joints. Herein the filtering responses are parameterized into a weighting function irrelevant to the order of input nodes. To further encode continuous motion variations, the deep features learnt from skeletal graphs are gathered along consecutive temporal slices and then fed into a recurrent gated network. Finally, the spectral graph filtering, action-attending and recurrent temporal encoding are integrated together to jointly train for the sake of robust action recognition as well as the intelligibility of human actions. To evaluate our A2GNN, we conduct extensive experiments on four benchmark skeletonbased action datasets, including the large-scale challenging NTU RGB+D dataset. The experimental results demonstrate that our network achieves the state-of-the-art performances.",
+    "year": 2018,
+    "venue": "IEEE transactions on image processing : a publication of the IEEE Signal Processing Society",
+    "authors": [
+      "Chaolong Li",
+      "Zhen Cui",
+      "Wenming Zheng",
+      "Chunyan Xu",
+      "Rongrong Ji",
+      "Jian Yang"
+    ],
+    "doi": "10.1109/TIP.2018.2815744",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29993867/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "29993867"
+    }
+  },
+  {
+    "paper_id": "pubmed:28113531",
+    "title": "Cross-View Retrieval via Probability-Based Semantics-Preserving Hashing.",
+    "abstract": "For efficiently retrieving nearest neighbors from large-scale multiview data, recently hashing methods are widely investigated, which can substantially improve query speeds. In this paper, we propose an effective probability-based semantics-preserving hashing (SePH) method to tackle the problem of cross-view retrieval. Considering the semantic consistency between views, SePH generates one unified hash code for all observed views of any instance. For training, SePH first transforms the given semantic affinities of training data into a probability distribution, and aims to approximate it with another one in Hamming space, via minimizing their Kullback-Leibler divergence. Specifically, the latter probability distribution is derived from all pair-wise Hamming distances between to-be-learnt hash codes of the training data. Then with learnt hash codes, any kind of predictive models like linear ridge regression, logistic regression, or kernel logistic regression, can be learnt as hash functions in each view for projecting the corresponding view-specific features into hash codes. As for out-of-sample extension, given any unseen instance, the learnt hash functions in its observed views can predict view-specific hash codes. Then by deriving or estimating the corresponding output probabilities with respect to the predicted view-specific hash codes, a novel probabilistic approach is further proposed to utilize them for determining a unified hash code. To evaluate the proposed SePH, we conduct extensive experiments on diverse benchmark datasets, and the experimental results demonstrate that SePH is reasonable and effective.",
+    "year": 2017,
+    "venue": "IEEE transactions on cybernetics",
+    "authors": [
+      "Zijia Lin",
+      "Guiguang Ding",
+      "Jungong Han",
+      "Jianmin Wang"
+    ],
+    "doi": "10.1109/TCYB.2016.2608906",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28113531/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "28113531"
+    }
+  },
+  {
+    "paper_id": "pubmed:22144518",
+    "title": "Learning Hybrid Image Templates (HIT) by Information Projection.",
+    "abstract": "This paper presents a novel framework for learning a generative image representation-the hybrid image template (HIT) from a small number (i.e., 3 \\sim 20) of image examples. Each learned template is composed of, typically, 50 \\sim 500 image patches whose geometric attributes (location, scale, orientation) may adapt in a local neighborhood for deformation, and whose appearances are characterized, respectively, by four types of descriptors: local sketch (edge or bar), texture gradients with orientations, flatness regions, and colors. These heterogeneous patches are automatically ranked and selected from a large pool according to their information gains using an information projection framework. Intuitively, a patch has a higher information gain if 1) its feature statistics are consistent within the training examples and are distinctive from the statistics of negative examples (i.e., generic images or examples from other categories); and 2) its feature statistics have less intraclass variations. The learning process pursues the most informative (for either generative or discriminative purpose) patches one at a time and stops when the information gain is within statistical fluctuation. The template is associated with a well-normalized probability model that integrates the heterogeneous feature statistics. This automated feature selection procedure allows our algorithm to scale up to a wide range of image categories, from those with regular shapes to those with stochastic texture. The learned representation captures the intrinsic characteristics of the object or scene categories. We evaluate the hybrid image templates on several public benchmarks, and demonstrate classification performances on par with state-of-the-art methods like HoG+SVM, and when small training sample sizes are used, the proposed system shows a clear advantage.",
+    "year": 2012,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Zhangzhang Si",
+      "Song-Chun Zhu"
+    ],
+    "doi": "10.1109/TPAMI.2011.227",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22144518/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "22144518"
+    }
+  }
+]

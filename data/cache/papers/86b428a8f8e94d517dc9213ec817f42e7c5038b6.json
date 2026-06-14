@@ -1,0 +1,36 @@
+{
+  "paper_id": "pubmed:42258573",
+  "title": "Supervised Fine-Tuning of Large Language Models With Chain-of-Thought Reasoning for Pediatric Heart Disease Detection in Unstructured Echocardiogram Reports: Algorithm Development and Validation.",
+  "abstract": "Pediatric heart disease (PHD), including congenital heart defects, is often incompletely captured in electronic health records, particularly when clinical significance must be inferred from unstructured echocardiogram reports. Automated methods capable of extracting clinically meaningful PHD from narrative reports could improve clinical decision support and research applications. The aim of the study is to evaluate the feasibility of using supervised fine-tuning of large language models (LLMs), with and without chain-of-thought (CoT) reasoning, to characterize patients with clinically significant or historical PHD from unstructured echocardiogram reports. We developed a PHD detection algorithm using fine-tuned open-source LLMs, including LLaMA (Meta) and Qwen (Alibaba), to analyze 9749 echocardiogram reports. A subset of 712 reports was adjudicated by 2 pediatric cardiac anesthesiologists, classifying 506 (71.1%) as clinically significant PHD and 206 (28.9%) as not significant. While DeepSeek R1 has shown improved performance with CoT reasoning, its application in medical contexts is underexplored. We incorporated R1-generated CoT into model prompts and fine-tuned backbone LLMs. The fine-tuned Qwen-7B-10k-overthink-CoT achieved the highest accuracy (92.4%), outperforming Qwen-7B-without-CoT (90%), LLaMA-3B-without-CoT (87.9%), Qwen-3B-without-CoT (85.6%), Qwen-3B-10k-overthink-CoT (68.5%), and LLaMA-3B-10k-overthink-CoT (46.2%). In a second dataset, an external validation was performed (n=113; 64 positive, 49 negative), Qwen-7B-10k-overthink-CoT sustained a strong, balanced performance (82.7%), followed by Qwen-7B-without-CoT (88.4%), LLaMA-3B-without-CoT (86.8%), Qwen-3B-without-CoT (84.5%), Qwen-3B-10k-overthink-CoT (58.9%), and LLaMA-3B-10k-overthink-CoT (46.2%). The fine-tuned Qwen-7B model with overthinking CoT (10,000 tokens) achieved the highest internal accuracy (92.4%), with balanced sensitivity and specificity. Across repeated runs, CoT-enhanced models demonstrated improved classification consistency compared to non-CoT models (Qwen-7B-without-CoT: 90%, LLaMA-3B-without-CoT: 87.9%, Qwen-3B-without-CoT: 85.6%). In external validation (n=113), non-CoT variants achieved higher accuracy (up to 88.4%), whereas the Qwen-7B CoT model demonstrated more balanced class performance (accuracy=82.7%). Supervised fine-tuning of LLMs with CoT offers an effective approach for automated PHD detection within unstructured data in the electronic medical record. While CoT-enhanced models demonstrated improved internal performance and more balanced classification, they did not consistently achieve higher accuracy in external validation, highlighting trade-offs between accuracy and class balance. These findings highlight the promise of LLM-based approaches for clinical text phenotyping while underscoring the need for larger, multicenter validation and careful calibration for real-world deployment. Continued validation and integration into the electronic medical record are essential for real-world, artificial intelligence-driven clinical decision support.",
+  "year": 2026,
+  "venue": "JMIR formative research",
+  "authors": [
+    "Haoming Shi",
+    "Justin B Long",
+    "Michael C Fiedorek",
+    "Hannah D Kilday",
+    "Henry P Foote",
+    "Christoph P Hornik",
+    "Aditya Nagori",
+    "Yifan Xiang",
+    "Rishikesan Kamaleswaran"
+  ],
+  "doi": "10.2196/90968",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42258573/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:core_topic",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42258573"
+  }
+}

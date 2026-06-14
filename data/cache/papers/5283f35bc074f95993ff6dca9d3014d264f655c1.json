@@ -1,0 +1,72 @@
+{
+  "paper_id": "https://openalex.org/W3093570284",
+  "title": "PROP: Pre-training with Representative Words Prediction for Ad-hoc Retrieval",
+  "abstract": "Recently pre-trained language representation models such as BERT have shown great success when fine-tuned on downstream tasks including information retrieval (IR). However, pre-training objectives tailored for ad-hoc retrieval have not been well explored. In this paper, we propose Pre-training with Representative wOrds Prediction (PROP) for ad-hoc retrieval. PROP is inspired by the classical statistical language model for IR, specifically the query likelihood model, which assumes that the query is generated as the piece of text representative of the \"ideal\" document. Based on this idea, we construct the representative words prediction (ROP) task for pre-training. Given an input document, we sample a pair of word sets according to the document language model, where the set with higher likelihood is deemed as more representative of the document. We then pre-train the Transformer model to predict the pairwise preference between the two word sets, jointly with the Masked Language Model (MLM) objective. By further fine-tuning on a variety of representative downstream ad-hoc retrieval tasks, PROP achieves significant improvements over baselines without pre-training or with other pre-training methods. We also show that PROP can achieve exciting performance under both the zero- and low-resource IR settings.",
+  "year": 2021,
+  "venue": null,
+  "authors": [
+    "Xinyu Ma",
+    "Jiafeng Guo",
+    "Ruqing Zhang",
+    "Yixing Fan",
+    "Xiang Ji",
+    "Xueqi Cheng"
+  ],
+  "doi": "https://doi.org/10.1145/3437963.3441777",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1145/3437963.3441777",
+  "citation_count": 43,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hyde"
+  ],
+  "references": [
+    "https://openalex.org/W1982314207",
+    "https://openalex.org/W2022871093",
+    "https://openalex.org/W2144578941",
+    "https://openalex.org/W2159665776",
+    "https://openalex.org/W2159981039",
+    "https://openalex.org/W2534136119",
+    "https://openalex.org/W2536015822",
+    "https://openalex.org/W2610935556",
+    "https://openalex.org/W2648699835",
+    "https://openalex.org/W2766284073",
+    "https://openalex.org/W2940927814",
+    "https://openalex.org/W2945127593",
+    "https://openalex.org/W2951434086",
+    "https://openalex.org/W2955732934",
+    "https://openalex.org/W2962739339",
+    "https://openalex.org/W2963026768",
+    "https://openalex.org/W2964012472",
+    "https://openalex.org/W4206765718",
+    "https://openalex.org/W4251326898",
+    "https://openalex.org/W6601141708"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Language model",
+      "Artificial intelligence",
+      "Natural language processing",
+      "Pairwise comparison",
+      "Word (group theory)",
+      "Question answering",
+      "Transformer",
+      "Set (abstract data type)",
+      "Task (project management)",
+      "Construct (python library)",
+      "Variety (cybernetics)",
+      "Representation (politics)",
+      "Statistical model",
+      "Natural language",
+      "Document retrieval",
+      "Information retrieval",
+      "Query expansion"
+    ],
+    "cited_by_api_url": null,
+    "related_works": []
+  }
+}

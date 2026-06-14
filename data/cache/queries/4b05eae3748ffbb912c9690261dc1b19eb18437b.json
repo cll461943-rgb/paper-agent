@@ -1,0 +1,358 @@
+[
+  {
+    "paper_id": "pubmed:41652418",
+    "title": "Calibration of AI large language models with human subject matter experts for grading of clinical short-answer responses in dental education.",
+    "abstract": "The automated grading of clinical short-answer questions using large language models (LLMs) could alleviate faculty workload and improve the immediacy of feedback in dental education. However, evidence on the capacity of LLMs for rubric-based grading in dentistry remains limited. Therefore, this study aimed to compare the grading reliability and error patterns of two LLMs, ChatGPT-4 and the open-weight DeepSeek-3, against expert human evaluators. In a retrospective cross-sectional study with comparative validation design, we analyzed 2,358 short-answer responses from 262 undergraduate dental students (across nine clinical questions). All responses were analyzed, then human-graded by three calibrated subject-matter experts (SME) (intraclass correlation coefficient [ICC] = 0.84) to provide a reference. Each LLM was provided a 12-point analytic rubric to guide the grading, but was not provided any prior examples of the grading task (i.e., a zero-shot prompt). We assessed agreement using ICC, Pearson correlation, Cohen’s kappa, and mixed-effects models, and examined error tiers (≤ 1, 2–3, > 3 points) across Bloom’s levels and response styles. In this dataset, DeepSeek-3 obtained an ICC of 0.87 compared with ChatGPT-4 which obtained an ICC of 0.64. DeepSeek-3 matched exactly with human scores in 43.3% of cases and was within ± 1 point in 62.4%, compared with 35.5% and 44.1% for ChatGPT-4. High-error rates (> 3 points) were 7.5% for DeepSeek-3 vs. 26.9% for ChatGPT-4 (χ²,  DeepSeek-3 showed fewer large-magnitude errors and better agreement with human graders compared to ChatGPT-4, suggesting its potential value for large-scale AI-assisted assessment for dental education. Since both models can over-score on incorrect results, human-in-the-loop oversight is necessary for high-stakes applications. Further work should evaluate performance across more courses, institutions, and languages, as well as examine the effects of model calibration, bias reduction, and external validation before considering the broader integration of LLMs into dental education. The online version contains supplementary material available at 10.1186/s12903-026-07665-4.",
+    "year": 2026,
+    "venue": "BMC oral health",
+    "authors": [
+      "Fatma E A Hassanein",
+      "Radwa R Hussein",
+      "Yousra Ahmed",
+      "Jylan El-Guindy",
+      "Doha E Ahmed",
+      "Asmaa Abou-Bakr"
+    ],
+    "doi": "10.1186/s12903-026-07665-4",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41652418/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41652418"
+    }
+  },
+  {
+    "paper_id": "pubmed:41214063",
+    "title": "Identification and cause analysis on unplanned reoperations by text classification approach.",
+    "abstract": "Unplanned reoperations (URs) not only increase the hospitalization period and healthcare cost, but also raise the death risk of patients. The analysis of URs is thus significant for their quality control and reduction. However, the massive text data generated in hospitals makes the identification of URs a tedious task with potential bias. Current research on UR is limited to data analysis and lack automated classification using deep learning and natural language processing. Here we propose the UR-Net framework. It implements the UR identification and cause analysis by processing the long texts of ward round documentation and applying few-shot learning on multi-class cause classification. Our framework consists of the URNet-XL with a batch fusion method based on XLNet model, and the URNet-GT for cause classification based on the pre-trained model combined with feature extraction modules of multi-head attention and a bi-directional Gated Recurrent Unit. High weighted F1 scores of 96.34% and 93.37% are obtained for the respective processes in comparison with the baseline methods. The Area Under receiver operating characteristic Curve (AUC) of 97.86% indicates an excellent UR classification on the unbalanced dataset. Our approach provides a new route of UR identification and analysis with the potential of reducing its occurrence.",
+    "year": 2025,
+    "venue": "Scientific reports",
+    "authors": [
+      "Zhancheng Liang",
+      "Wenyang Huang",
+      "Hongyu Xu",
+      "Zhenkun He",
+      "ChunQiu Yuan",
+      "Yan Liang",
+      "Qiuquan Guo",
+      "Tianzhao Liu",
+      "Peipei Jia"
+    ],
+    "doi": "10.1038/s41598-025-22791-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41214063/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41214063"
+    }
+  },
+  {
+    "paper_id": "pubmed:40494422",
+    "title": "Tailoring task arithmetic to address bias in models trained on multi-institutional datasets.",
+    "abstract": "Multi-institutional datasets are widely used for machine learning from clinical data, to increase dataset size and improve generalization. However, deep learning models in particular may learn to recognize the source of a data element, leading to biased predictions. For example, deep learning models for image recognition trained on chest radiographs with COVID-19 positive and negative examples drawn from different data sources can respond to indicators of provenance (e.g., radiological annotations outside the lung area per institution-specific practices) rather than pathology, generalizing poorly beyond their training data. Bias of this sort, called confounding by provenance, is of concern in natural language processing (NLP) because provenance indicators (e.g., institution-specific section headers, or region-specific dialects) are pervasive in language data. Prior work on addressing such bias has focused on statistical methods, without providing a solution for deep learning models for NLP. Recent work in representation learning has shown that representing the weights of a trained deep network as task vectors allows for their arithmetic composition to govern model capabilities towards desired behaviors. In this work, we evaluate the extent to which reducing a model's ability to distinguish between contributing sites with such task arithmetic can mitigate confounding by provenance. To do so, we propose two model-agnostic methods, Task Arithmetic for Provenance Effect Reduction (TAPER) and Dominance-Aligned Polarized Provenance Effect Reduction (DAPPER), extending the task vectors approach to a novel problem domain. Evaluation on three datasets shows improved robustness to confounding by provenance for both RoBERTa and Llama-2 models with the task vector approach, with improved performance at the extremes of distribution shift. This work emphasizes the importance of adjusting for confounding by provenance, especially in extreme cases of the shift. In use of deep learning models, DAPPER and TAPER show efficiency in mitigating such bias. They provide a novel mitigation strategy for confounding by provenance, with broad applicability to address other sources of bias in composite clinical data sets. Source code is available within the DeconDTN toolkit: https://github.com/LinguisticAnomalies/DeconDTN-toolkit.",
+    "year": 2025,
+    "venue": "Journal of biomedical informatics",
+    "authors": [
+      "Xiruo Ding",
+      "Zhecheng Sheng",
+      "Brian Hur",
+      "Justin Tauscher",
+      "Dror Ben-Zeev",
+      "Meliha Yetişgen",
+      "Serguei Pakhomov",
+      "Trevor Cohen"
+    ],
+    "doi": "10.1016/j.jbi.2025.104858",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40494422/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40494422"
+    }
+  },
+  {
+    "paper_id": "pubmed:33220625",
+    "title": "The effect of cinnamon supplementation on lipid profiles in patients with type 2 diabetes: A systematic review and meta-analysis of clinical trials.",
+    "abstract": "The present systematic review and meta-analysis was performed to evaluate the effect of cinnamon supplementation on blood lipid profiles in patients with type 2 diabetes. A systematic search (with no language restrictions) was performed in PubMed, Embase, Scopus, Web of Science, and Cochrane Library to identify relevant clinical trials up to 8th March 2020. Weighted mean differences (WMDs) and 95 % confidence intervals (CI) were pooled based on the random-effects model. Heterogeneity, publication bias, and sensitivity analyses were performed based on standard methods. Sixteen studies, involving 1025 participants, were included in the meta-analysis. This study found a significant decrease in triglycerides (TG) (WMD: -26.27 mg/dl, 95 % CI: [-38.93, -13.61], P < 0.001), total cholesterol (TC) (WMD: -13.93 mg/dl, 95 % CI: [-25.64, -2.22], P = 0.020), and low-density lipoprotein cholesterol (LDL-C) levels (WMD: -6.13 mg/dl, 95 % CI: [-10.72, -1.53], P = 0.009), while no change was observed on high-density lipoprotein cholesterol (HDL) concentration (WMD: 0.64 mg/dl, 95 % CI: [-0.18, 1.46], P = 0.128), in patients with type 2 diabetes. The reduction in TG, TC, and LDL-C was greater in; Eastern compared to Western countries, and studies with a duration of < 2 compared to ≥ 2 months. The increase in HDL was greater in; participants with a BMI ≥ 30 compared to <30, Western compared to Eastern countries, and intervention durations of ≥ 2 compared to < 2 months. Cinnamon supplementation significantly decreased serum TG, TC, and LDL-C concentrations, but did not change HDL-C levels, in patients with type 2 diabetes.",
+    "year": 2020,
+    "venue": "Complementary therapies in medicine",
+    "authors": [
+      "Navid Jamali",
+      "Asma Kazemi",
+      "Javad Saffari-Chaleshtori",
+      "Mohammad Samare-Najaf",
+      "Vida Mohammadi",
+      "Cain C T Clark"
+    ],
+    "doi": "10.1016/j.ctim.2020.102571",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33220625/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "33220625"
+    }
+  },
+  {
+    "paper_id": "pubmed:32586315",
+    "title": "Treating periodontitis-a systematic review and meta-analysis comparing ultrasonic and manual subgingival scaling at different probing pocket depths.",
+    "abstract": "Mechanical plaque removal has been commonly accepted to be the basis for periodontal treatment. This study aims to compare the effectiveness of ultrasonic and manual subgingival scaling at different initial probing pocket depths (PPD) in periodontal treatment. English-language databases (PubMed, Cochrane Central Register of Controlled Trials, EMBASE, Medline, and ClinicalTrials.gov, by January, 2019) were searched. Weighted mean differences in primary outcomes, PPD and clinical attachment loss (CAL) reduction, were estimated by random effects model. Secondary outcomes, bleeding on probing (BOP), gingival recession (GR), and post-scaling residual dental calculus, were analyzed by comparing the results of each study. The quality of RCTs was appraised with the Cochrane Collaboration risk of bias tool. The GRADE approach was used to assess quality of evidence. Ten randomized controlled trials were included out of 1434 identified. Initial PPD and follow-up periods formed subgroups. For 3-months follow-up: (1) too few shallow initial pocket studies available to draw a conclusion; (2) the heterogeneity of medium depth studies was so high that could not be merged to draw a conclusion; (3) deep pocket studies showed no statistical differences in PPD and CAL reduction between ultrasonic and manual groups. For 6-months follow-up: (1) too few shallow initial PPD studies to draw a conclusion; (2) at medium pocket depth, PPD reduction showed manual subgingival scaling better than ultrasound. No statistical differences were observed in CAL reduction between the two approaches; (3) for deep initial PPD studies, both PPD and CAL reduction showed manual subgingival scaling better. GR results indicated no statistical differences at medium and deep initial pocket studies between the two methods. BOP results showed more reduction at deep pocket depths with manual subgingival scaling. No conclusion could be drawn about residual dental calculus. When initial PPD was 4-6 mm, PPD reduction proved manual subgingival scaling was superior, but CAL results showed no statistical differences between the two means. When initial PPD was ≥6 mm, PPD and CAL reductions suggested that manual subgingival scaling was superior.",
+    "year": 2020,
+    "venue": "BMC oral health",
+    "authors": [
+      "Xin Zhang",
+      "Zixuan Hu",
+      "Xuesong Zhu",
+      "Wenjie Li",
+      "Jun Chen"
+    ],
+    "doi": "10.1186/s12903-020-01117-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32586315/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32586315"
+    }
+  },
+  {
+    "paper_id": "pubmed:32221482",
+    "title": "Exploring the cost-effectiveness of child dental caries prevention programmes. Are we comparing apples and oranges?",
+    "abstract": "Data sources The following seven databases were searched: PubMed, EMBASE, DARE, NHSEED, HTA, Cost-Effectiveness Analysis Registry and Paediatric Economic Database Evaluation (PEDE).Study selection The review included trial and model-based economic evaluation studies and the participants included children aged from 0 to 12 years old who were healthy except for having dental caries. Studies of mixed populations of parents and children were included where the data for children were presented separately.The interventions included were:• Community-based oral-health education/training programs related to healthy oral habits.• Screening of children's teeth.• Supervised toothbrushing technique through the provision of toothbrushes, an appropriate amount of fluoride toothpaste, and topical fluoride.• Advice on dietary control, such as limitation of sugar or carbohydrates consumption, and enhanced fortified nutrition with an appropriate amount of calcium intake.• The comparators were situations where the populations were the same as the test group, but were receiving no intervention, or a dissimilar one .The interventions were oral-health promotion programs (OHPPs) implemented by oral-health professionals in the contexts of home visits, telephone calls, healthcare centres and primary schools.The outcome measures were reductions in the Decayed, Missing, Filled Teeth (DMFT) index for permanent teeth or (dmft) index for deciduous teeth among children and OHPP cost, incremental cost (difference between mean costs of intervention and mean costs of the comparator), and cost-effectiveness analysis (CEA).Data extraction and synthesis The title, abstract and full text of each study were screened. During the first phase screening of titles and abstracts, irrelevant records were removed. The exclusion criteria were: participant with health-related diseases or aged older than 12 years; interventions other than OHPP (such as implant dentistry or other invasive-dentistry programs); other economic-evaluation outcomes such as cost-benefit, cost-utility or cost-minimisation; authors' opinion (unoriginal records); reviews; and study language other than English. The second-phase screening assessed full texts of the articles using the same eligibility criteria. The risk of bias was assessed using the Drummond 10-item Checklist. Meta-analysis: The costs were converted to 2015 USA dollars. Data analysis was performed through dichotomous outcomes such as the number of children in the intervention and in the control group, the DMFT index in children, and the OHPP cost. Odds ratios (ORs), effect sizes with 95% confidence interval (CIs) and study weights were estimated from random effects analysis. Forest plots were constructed for each outcome, and chi-square tests used to assess homogeneity, where a p-value of less than 0.1 indicated statistically significant heterogeneity. An I2 test was used to quantify inconsistencies between studies as the percentage of variation across studies. Data synthesis was carried out using narrative demonstration, with a summary of the characteristics of each included study. For quantitative synthesis, a summary of the combined estimation related to the OHPP effect was measured. Three types of subgroup analysis were performed: by the age of the children (age under or equal to 6 years, and age 6-12 years), by publication year (studies published in the last five years, and earlier published studies) and by the country of the study. Egger's regression test and a funnel plot were used to assess and demonstrate publication bias. Publication bias was considered present if the p-value of the Egger test was more than 0.05.Results 19 full texts were included into qualitative synthesis and eight articles used in quantitative synthesis. Qualitative synthesis results: With regards to the country of origin, 32% of the studies were conducted in the United Kingdom (n = 6), 26% in Australia (n = 5), 16% in the United States (n = 3). There was also one study from each of the following countries Finland, Ireland, Japan, Nigeria and Singapore. Fifty-two percent (n = 10) were model-based economic evaluation studies and 47% (n = 9) were trial-based economic evaluations. The population of 14 studies were younger than six years of age, while in four studies the children were over the age of six years. In one paper the age of the children was not clearly stated. Just under a half of the papers (47%) were published in the last five years.The majority of the studies had a low risk of bias (n = 12, 63%) and seven (37%) had a moderate risk of bias. Various outcome measures were used in the included studies: DMFT, average number of dental visits, number of prevented caries teeth, average number of cavity-free months, probability of less cost, caries prevalence, number of specific OHPP visits, quality-adjusted life year, cost-effectiveness ratio, and percentages of not having debris.Quantitative synthesis results: The overall pooled impact of OHPPs showed that children with tooth decay had 81% lower odds of participating in OHPP (95% CI 61-90%, I2: 98.5%, p = 0) with considerable heterogeneity among studies. OHPPs were successful in reducing financial costs in 97 out of 100 OHPPs (95% CI 89-99%, I2: 99%, p = 0) with considerable heterogeneity among studies. The studies with participants under the age of six years old weighted 71% with an OR of 0.14 (95% CI, 0.05-0.39, I2: 99%). These children had the highest benefit of OHPPs to lower DMFT/S. The studies reporting children aged six years and over weighted 29% with an OR of 0.29 (95% CI, 0.08-1.01, I2: 99%), and these children had no benefit from OHPPs in lowering DMFT/S. Studies with under-six-year-old participants had an OR of 0.07 (95% CI, 0.02-0.32) revealing no cost-effectiveness effect to reduce OHPP incremental cost, whereas studies reporting children aged six years and older had an OR of 0.0 (95% CI, 0.00-48,704.6). The authors concluded that OHPPs involving the later (older) children were cost-effective in reducing the OHPPs' incremental cost.Conclusions A comprehensive analysis of the OHPPs confirmed that DMFT could be reduced, hence, lowering the financial burden of dental-care treatment. More effort is needed to manage the allocation of scarce resources, taking into account the economic impact of dental caries on healthcare systems. More studies on caries-prevention programmes among young children in high-, middle- and low-income countries are needed, in order to assess the clinical and financial effectiveness.",
+    "year": 2020,
+    "venue": "Evidence-based dentistry",
+    "authors": [
+      "Yulia Anopa",
+      "David I Conway"
+    ],
+    "doi": "10.1038/s41432-020-0085-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32221482/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32221482"
+    }
+  },
+  {
+    "paper_id": "pubmed:37131395",
+    "title": "Small class sizes for improving student achievement in primary and secondary schools: a systematic review.",
+    "abstract": "This Campbell systematic review examines the impact of class size on academic achievement. The review summarises findings from 148 reports from 41 countries. Ten studies were included in the meta-analysis. Included studies concerned children in grades kindergarten to 12 (or the equivalent in European countries) in general education. The primary focus was on measures of academic achievement. All study designs that used a well-defined control group were eligible for inclusion. A total of 127 studies, consisting of 148 papers, met the inclusion criteria. These 127 studies analysed 55 different populations from 41 different countries. A large number of studies (45) analysed data from the Student Teacher Achievement Ratio (STAR) experiment which was for class size reduction in grade K-3 in the US in the eighties. However only ten studies, including four of the STAR programme, could be included in the meta-analysis. Overall, the evidence suggests at best a small effect on reading achievement. There is a negative, but statistically insignificant, effect on mathematics. For the non-STAR studies the primary study effect sizes for reading were close to zero but the weighted average was positive and statistically significant. There was some inconsistency in the direction of the primary study effect sizes for mathematics and the weighted average effect was negative and statistically non-significant. The STAR results are more positive, but do not change the overall finding. All reported results from the studies analysing STAR data indicated a positive effect of smaller class sizes for both reading and maths, but the average effects are small.",
+    "year": 2018,
+    "venue": "Campbell systematic reviews",
+    "authors": [
+      "Trine Filges",
+      "Christoffer Scavenius Sonne-Schmidt",
+      "Bjørn Christian Viinholt Nielsen"
+    ],
+    "doi": "10.4073/csr.2018.10",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37131395/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37131395"
+    }
+  },
+  {
+    "paper_id": "pubmed:37131392",
+    "title": "Reducing unemployment benefit duration to increase job finding rates: a systematic review.",
+    "abstract": "This Campbell systematic review examines the impact of reducing the maximum duration of unemployment benefits on job-finding rates. Seven studies were included in the review, all of which are from European countries. Included studies had to examine the effect of a reduction in the maximum duration of entitlement of any kind of unemployment benefits on employment using a well-defined control group. Whilst 41 studies were identified, after allowing for study quality and data issues, only seven studies were included in the review. The included studies covered Austria (2 studies), France, Germany (3 studies) and Slovenia. Maximum entitlement ranged between 26 and 209 weeks. The studies analyzed reductions between 9 and 179 weeks, with an average of 43 weeks. The studies analyze data from 1,154,090 unemployment spells. Reducing the duration of unemployment benefits increases the exit rate from unemployment. Data from seven studies show that the exit rate from unemployment for those with reduced duration of benefit entitlement on average is 10 per cent. This corresponds to a 52% chance that those with reduced duration will find a job before an unemployed person with the existing, longer duration (no effect corresponds to a 50% chance). There is not enough evidence to determine effects on the exit rate from re-employment or on the wage rate in the job found. There are insufficient high-quality studies to allow an examination of variation of effects.",
+    "year": 2018,
+    "venue": "Campbell systematic reviews",
+    "authors": [
+      "Trine Filges",
+      "Anders Bruun Jonassen",
+      "Anne-Marie Klint Jørgensen"
+    ],
+    "doi": "10.4073/csr.2018.2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37131392/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37131392"
+    }
+  },
+  {
+    "paper_id": "pubmed:28407454",
+    "title": "Diagnostic criteria for temporomandibular disorders (DC/TMD): interexaminer reliability of the Finnish version of Axis I clinical diagnoses.",
+    "abstract": "Recently, updated diagnostic criteria for temporomandibular disorders (DC/TMD) were published to assess TMD in a standardised way in clinical and research settings. The DC/TMD protocol has been translated into Finnish using specific cultural equivalency procedures. To assess the interexaminer reliability using the Finnish translations of the DC/TMD-FIN Axis I clinical diagnostic assessment instruments. Reliability assessment data were collected during a 1-day DC/TMD Examiner Training Course at the University of Turku, Finland, in collaboration with the International DC/TMD Training and Calibration Center in Malmö University. Clinical TMD examinations according to the Finnish pre-final version of the DC/TMD Axis I assessment protocol were performed by four experienced TMD specialists on altogether 16 models. Kappa coefficient, overall percentage agreement (%A) as well as positive (PA) and negative (NA) agreements were used to define the reliability. Myofascial pain with referral, headache attributed to TMD and disc displacement (DD) without reduction without limited opening showed excellent kappa values (range 0·87-1·00). Fair-to-good reliability was observed for diagnoses of myalgia (k = 0·67), arthralgia (k = 0·71) and DD with reduction (k = 0·64). The PA was high for all pain-related diagnoses and DD without reduction without limited opening (medians ≥83%), and acceptable for DD with reduction (median 67%). The NA was high (medians ≥87%) for all DC/TMD diagnoses, except for myalgia which showed acceptable NA (median 75%). The %A was high for all assessed diagnoses (medians >85%). The findings of this study showed DC/TMD-FIN Axis I to demonstrate sufficiently high reliability for pain-related TMD diagnoses.",
+    "year": 2017,
+    "venue": "Journal of oral rehabilitation",
+    "authors": [
+      "J Leskinen",
+      "T Suvinen",
+      "T Teerijoki-Oksa",
+      "P Kemppainen",
+      "R Näpänkangas",
+      "P Alstergren",
+      "Y Le Bell",
+      "H Forssell",
+      "R Myllykangas",
+      "M Tolvanen",
+      "M Doepel",
+      "K Sipilä"
+    ],
+    "doi": "10.1111/joor.12516",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28407454/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "28407454"
+    }
+  },
+  {
+    "paper_id": "pubmed:27129601",
+    "title": "Future research in weight bias: What next?",
+    "abstract": "The 2015 Canadian Weight Bias Summit disseminated the newest research advances and brought together 40 experts, stakeholders, and policy makers in various disciplines in health, education, and public policy to identify future research directions in weight bias. In this paper we aim to share the results of the Summit as well as encourage international and interdisciplinary research collaborations in weight bias reduction. Consensus emerged on six research areas that warrant further investigation in weight bias: costs, causes, measurement, qualitative research and lived experience, interventions, and learning from other models of discrimination. These discussions highlighted three key lessons that were informed by the Summit, namely: language matters, the voices of people living with obesity should be incorporated, and interdisciplinary stakeholders should be included.",
+    "year": 2016,
+    "venue": "Obesity (Silver Spring, Md.)",
+    "authors": [
+      "Angela S Alberga",
+      "Shelly Russell-Mayhew",
+      "Kristin M von Ranson",
+      "Lindsay McLaren",
+      "Ximena Ramos Salas",
+      "Arya M Sharma"
+    ],
+    "doi": "10.1002/oby.21480",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27129601/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "27129601"
+    }
+  },
+  {
+    "paper_id": "pubmed:24993013",
+    "title": "Unbalanced baseline in school-based interventions to prevent obesity: adjustment can lead to bias - a systematic review.",
+    "abstract": "Cluster designs favor unbalanced baseline measures. The aim of the present study was to determine the frequency of unbalanced baseline BMI on school-based randomized controlled trials (RCT) aimed at obesity reduction and to evaluate the analysis strategies. We hypothesized that the adjustment of unbalanced baseline measures may explain the great discrepancy among studies. The source of data was the Medline database content from January 1995 until May 2012. Our search strategy combined key words related to school-based interventions with such related to weight and was not limited by language. The participants' ages were restricted to 6-18 years. We identified 146 school-based studies on obesity prevention (or overweight or excessive weight change). Of the 146 studies, 36 were retained for the analysis after excluding reviews, feasibility studies, other outcomes, and repeated publications. 13 (35%) of the reviewed studies had statistically significant (p < 0.05) unbalanced measures of BMI at baseline. 11 studies with BMI balanced at baseline adjusted for the baseline BMI, whereas no baseline adjustment was applied to the 5 unbalanced studies. Adjustment for the baseline BMI is frequently done in cluster randomized studies, and there is no standardization for this procedure. Thus, procedures that disentangle the effects of group, time and changes in time, such as mixed effects models, should be used as standard methods in school-based studies on the prevention of weight gain.",
+    "year": 2014,
+    "venue": "Obesity facts",
+    "authors": [
+      "Rosely Sichieri",
+      "Diana Barbosa Cunha"
+    ],
+    "doi": "10.1159/000363438",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24993013/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "24993013"
+    }
+  },
+  {
+    "paper_id": "pubmed:24570033",
+    "title": "Topiramate add-on for drug-resistant partial epilepsy.",
+    "abstract": "The majority of people with epilepsy have a good prognosis and their seizures are controlled by a single antiepileptic drug. However, up to 20% of patients from population-based studies and up to 30% from clinical series (not population-based) develop drug-resistant epilepsy, especially those with partial onset seizures. In this review we summarise the current evidence regarding topiramate, an antiepileptic drug first marketed in 1996, when used as an add-on treatment for drug-resistant partial epilepsy. This is an updated version of the original Cochrane review published in Issue 3, 1999. To evaluate the efficacy and safety of topiramate when used as an add-on treatment for people with drug-resistant partial epilepsy. We searched the Cochrane Epilepsy Group Specialised Register (June 2013); the Cochrane Central Register of Controlled Trials (CENTRAL) (The Cochrane Library 2013, Issue 5); MEDLINE (1946 to 2013); SCOPUS (1823 to 2013); ClinicalTrials.gov and ICTRP. We imposed no language restrictions. We also contacted the manufacturers of topiramate and researchers in the field to identify any ongoing or unpublished studies. Randomised, placebo-controlled or active drug controlled add-on trials of topiramate, recruiting people with drug-resistant partial epilepsy. Two review authors independently selected trials for inclusion and extracted the relevant data. We assessed the following outcomes: (a) 50% or greater reduction in seizure frequency; (b) seizure freedom; (c) treatment withdrawal (any reason); (d) side effects. Primary analyses were intention-to-treat and summary risk ratios (RR) with 95% confidence intervals (95% CI) are presented. We evaluated dose response in regression models. We carried out a 'Risk of bias' assessment for each included study using the Cochrane 'Risk of bias' tool and assessed the overall quality of evidence using the GRADE approach, which we presented in a 'Summary of findings' table. Eleven trials were included, representing 1401 randomised participants. Baseline phases ranged from 4 to 12 weeks and double-blind phases from 11 to 19 weeks. The RR for a 50% or greater reduction in seizure frequency compared to placebo was 2.97 (95% CI 2.38 to 3.72). Dose regression analysis shows increasing effect with increasing dose, but found no advantage for doses over 300 or 400 mg per day. The RR for seizure freedom (95% CI) compared to placebo was 3.41 (95% CI 1.37 to 8.51). The RR for treatment withdrawal compared to placebo was 2.44 (95% CI 1.64 to 3.62). The RRs for the following side effects indicate that they are significantly associated with topiramate: ataxia 2.29 (99% CI 1.10 to 4.77); concentration difficulties 7.81 (2.08 to 29.29); dizziness 1.54 (99% CI 1.07 to 2.22); fatigue 2.19 (99% CI 1.42 to 3.40); paraesthesia 3.91 (1.51 to 10.12); somnolence 2.29 (99% CI 1.49 to 3.51); 'thinking abnormally' 5.70 (99% CI 2.26 to 14.38) and weight loss 3.47 (1.55 to 7.79). Evidence of publication bias was found (P-value from the Egger test was P=0.003). We rated all studies included in the review as having either low or unclear risk of bias. Overall, we assessed the evidence as moderate quality due to the evidence of publication bias. Topiramate has efficacy as an add-on treatment for drug-resistant partial epilepsy in that it is three times more effective compared to a placebo in reducing seizures. However, the trials reviewed were of relatively short duration and provide no evidence for the long-term efficacy of topiramate. In the short term topiramate as an add-on has been shown to be associated with several adverse events. The results of this review cannot be extrapolated to monotherapy or treatment of other epilepsy types and future research should consider examining the effect of dose.",
+    "year": 2014,
+    "venue": "The Cochrane database of systematic reviews",
+    "authors": [
+      "Jennifer Pulman",
+      "Nathalie Jette",
+      "Jonathan Dykeman",
+      "Karla Hemming",
+      "Jane L Hutton",
+      "Anthony G Marson"
+    ],
+    "doi": "10.1002/14651858.CD001417.pub3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24570033/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "24570033"
+    }
+  }
+]

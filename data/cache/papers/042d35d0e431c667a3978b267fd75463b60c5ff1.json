@@ -1,0 +1,36 @@
+{
+  "paper_id": "http://arxiv.org/abs/2508.11715v1",
+  "title": "Benchmark Dataset Generation and Evaluation for Excel Formula Repair with LLMs",
+  "abstract": "Excel is a pervasive yet often complex tool, particularly for novice users, where runtime errors arising from logical mistakes or misinterpretations of functions pose a significant challenge. While large language models (LLMs) offer promising assistance by explaining formula errors, the automated correction of these semantic runtime errors remains an open problem. A primary challenge to advancing models for such scenarios is the severe lack of high-quality, comprehensive datasets for training and rigorous evaluation. This paper addresses this gap by introducing a novel approach for constructing a benchmark dataset specifically designed for Excel formula repair. We propose a data generation pipeline, which leverages a small set of curated seed samples from online forums to synthetically expand the dataset. Our pipeline integrates few-shot prompting with LLMs and employs a robust \\textit{LLM-as-a-Judge} validation framework, combined with execution-based checks to ensure the correctness and semantic fidelity of the generated data. This process produced a benchmark dataset of 618 high-quality samples, covering common runtime errors. Furthermore, we propose a context-aware baseline technique for Excel formula repair that utilizes LLMs to leverage both the faulty formula, and relevant spreadsheet context. We evaluate the performance of various LLMs (GPT-4o, GPT-4.1, Phi-3, Mistral) on our newly generated benchmark using execution-based metrics. Our analysis demonstrates the dataset's quality through manual annotation and provides insights into error and function distributions. The proposed generation methodology is highly scalable and can be readily adapted to create evaluation benchmarks for similar code repair tasks in other low-resource programming languages.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Ananya Singha",
+    "Harshita Sahijwani",
+    "Walt Williams",
+    "Emmanuel Aboah Boateng",
+    "Nick Hausman",
+    "Miguel Di Luca",
+    "Keegan Choudhury",
+    "Chaya Binet",
+    "Vu Le",
+    "Tianwei Chen",
+    "Oryan Rokeah Chen",
+    "Sulaiman Vesal",
+    "Sadid Hasan"
+  ],
+  "doi": null,
+  "arxiv_id": "2508.11715v1",
+  "url": "http://arxiv.org/abs/2508.11715v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

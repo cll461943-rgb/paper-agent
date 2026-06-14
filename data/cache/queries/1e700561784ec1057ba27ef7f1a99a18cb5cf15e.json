@@ -1,0 +1,986 @@
+[
+  {
+    "paper_id": "pubmed:42259903",
+    "title": "From raw audio to structure: an agent-based pipeline that boosts medical LLM performance.",
+    "abstract": "Large language models (LLMs) are increasingly applied in clinical communication, yet their reliability depends on high-quality conversational corpora. Real-world doctor-patient recordings are frequently degraded by noise, transcription errors, speaker overlap, and fragmented dialogue structure, limiting their usability for downstream model training. Here, we present an agent-based transcription framework that autonomously converts raw unstructured conversation transcriptions (RUCT) into structured conversation transcriptions (SCT) suitable for LLM fine-tuning. The system integrates three coordinated modules-Planner, Memory, and Executor-to orchestrate noise removal, content correction, speaker identification, and dialogue segmentation within a self-correcting workflow. Applied to 7197 minutes of Chinese clinical recordings across eight departments, with an additional 240 minutes of English-language dialogues used as a limited portability check, the agent achieved high reconstruction accuracy (94.7% denoising, 96.9% content correction, 88.6% speaker identification, 92.7% segmentation) and operated 3.6× faster than manual processing. In controlled comparisons against a cascaded deep-learning pipeline, a sequential non-agent execution, and an end-to-end large-context model, the agent achieved consistently higher performance across all four processing tasks. Architectural ablation further revealed marked degradation when Planner or Memory modules were removed (e.g., up to 47.6% reduction in speaker identification), supporting the contribution of coordinated task decomposition and cross-step state retention. To assess downstream impact, we fine-tuned an independent open-weight model (Qwen3-32B) on agent-generated SCT versus RUCT derived from an identical training set. Agent-generated SCT fine-tuning significantly improved overall quality scores (3.1 to 3.7; P < 0.001; Fleiss' κ = 0.82) in blinded expert evaluation across six clinically grounded dimensions, and also yielded higher scores on an external medical dialogue benchmark (HealthBench) than both RUCT fine-tuning and the non-fine-tuned baseline. These findings indicate that agent-structured clinical corpora enhance LLM fine-tuning performance and provide a scalable framework for reliable medical conversational AI development.",
+    "year": 2026,
+    "venue": "NPJ digital medicine",
+    "authors": [
+      "Hao Qin",
+      "Wenjun Tang",
+      "Zigeng Huang",
+      "Guihan Liang",
+      "Xinti Sun",
+      "Mengyan Zhang",
+      "Wenqian Wu",
+      "Erping Long",
+      "Peixing Wan"
+    ],
+    "doi": "10.1038/s41746-026-02867-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42259903/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42259903"
+    }
+  },
+  {
+    "paper_id": "pubmed:42258364",
+    "title": "Unique Digital Images as Incentives in Clinical Trials: A Digital Shift Toward Meaningful Participation.",
+    "abstract": "Incentivization in clinical trial participation can be challenging, with many studies failing to meet recruitment or retention goals despite traditional compensation strategies. Digital health evolves, and with it, new approaches can emerge to engage participants meaningfully. We propose unique digital images as a novel, symbolic incentive for clinical trials. Digital images combine qualities such as personalization, ownership, and digital visibility, which may drive engagement more effectively than monetary rewards alone. In our illustrative study, participants complete artificial intelligence-personalized digital therapeutics training using CURATE.DTx, generating individualized learning trajectories. These are transformed into digital artworks and minted as nonfungible tokens given as a reward upon trial completion. This concept integrates gamification, personalization, and blockchain technology to support both intrinsic and extrinsic motivation. We explore the implications for decentralized health care, long-term behavior change, and participant recognition in the context of preventive medicine and longevity science. Our aim is to encourage research into the use of digital incentives to transform the trial participant experience and promote sustained engagement in health interventions.",
+    "year": 2026,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Xavier Tadeo",
+      "Gyula Seres",
+      "Peter Wang",
+      "Yoann Sapanel",
+      "Alexandria Remus",
+      "Jasmine L Eyal",
+      "Jason Kai-Wei Lee",
+      "Simon Chesterman",
+      "Julian Savulescu",
+      "John Eu-Li Wong",
+      "Christopher L Asplund",
+      "R Brian Stone",
+      "Benjamin C K Tee",
+      "Reza Shokri",
+      "Marlena Raczkowska",
+      "Li Ming Chong",
+      "Siong Peng Kwek",
+      "Agata Blasiak",
+      "Dean Ho"
+    ],
+    "doi": "10.2196/88022",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42258364/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42258364"
+    }
+  },
+  {
+    "paper_id": "pubmed:42251112",
+    "title": "Trustworthy and ethical intrusion detection for healthcare internet of medical things using reinforcement learning and governance rules.",
+    "abstract": "Healthcare Internet of Medical Things (IoMT) environments require intrusion detection systems that are accurate, safe, proportionate, and auditable. Conventional intrusion detection metrics such as accuracy and F1-score quantify classification performance but do not indicate whether automated response actions are clinically safe or operationally acceptable. This study proposes a governance-aware intrusion response framework for healthcare IoMT systems. The framework integrates a Random Forest flow-based detector, a Deep Q-Network triage agent, and an ethical rule engine informed by the NIST AI Risk Management Framework. The detector provides probabilistic and uncertainty-aware evidence, the triage agent selects one of four response actions, and the rule engine constrains unsafe actions through explicit governance rules, fallback decisions, and audit logs. The framework was evaluated using CIC-IoMT 2024 for in-domain assessment, a stratified CSE-CIC-IDS2018 sample for domain-shift stress testing, simulated Clinical Load Index sensitivity analysis, independent decision-quality metrics, and temporal streaming replay. In-domain DQN triage achieved a weighted F1-score of 0.978. Governance reduced benign blocking from 25.3% to 17.3%, showing that rule oversight reduced one form of potentially disruptive automated response. Corrected cross-domain evaluation showed substantial performance degradation, with CAS retention scores of 0.282 for the Random Forest baseline and 0.341 for the DQN triage model. In temporal streaming replay, performance declined after the transition to shifted traffic; however, the governed DQN produced lower mean decision harm cost than the unconstrained DQN under shifted replay windows, reducing harm cost from 0.502 to 0.434. These findings suggest that ethical rule oversight can improve selected decision-safety outcomes under controlled, uncertain, and shifted conditions. However, the results represent offline simulation evidence and should not be interpreted as validation for live hospital deployment.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Ibrahim Adabara",
+      "Bashir Olaniyi Sadiq",
+      "Aliyu Nuhu Shuaibu",
+      "Yale Ibrahim Danjuma",
+      "Venkateswarlu Maninti",
+      "Mutebi Joe"
+    ],
+    "doi": "10.1038/s41598-026-55707-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42251112/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42251112"
+    }
+  },
+  {
+    "paper_id": "pubmed:42222842",
+    "title": "Artificial intelligence and data analytics in human talent management.",
+    "abstract": "Digital transformation has reshaped human talent management, with Artificial Intelligence (AI) and Data Analytics emerging as key tools for optimizing recruitment, retention, performance evaluation, and employee development. Despite growing interest, the literature remains fragmented across technical, managerial, and ethical perspectives. This study provides an integrated bibliometric and qualitative analysis of research on AI and Data Analytics in human talent management from 2015 to 2025, aiming to map evolution, thematic trends, methodological developments, and research gaps. A mixed-methods approach combined bibliometric analysis with qualitative synthesis. A structured search in Scopus and Web of Science retrieved 137 records using Boolean operators combining AI/machine learning terms with People/HR Analytics and talent management concepts. After removing duplicates and irrelevant studies based on predefined inclusion criteria (peer-reviewed articles and reviews in English or Spanish), a final dataset of 82 documents was analyzed. Bibliometric techniques in R (v4.4.2) and VOSviewer (v1.6.20) examined scientific productivity, citation patterns, collaboration networks, and keyword co-occurrence. Additionally, the 30 most cited articles underwent qualitative synthesis to extract key conceptual and methodological contributions. Scientific production showed exponential growth, particularly after 2020, with peaks in 2024 (21 articles) and 2025 (27 articles). Research concentrated in India, Germany, the United States, and the United Kingdom, with limited contributions from Latin America and Africa. Four thematic clusters emerged: (1) People Analytics and process optimization, (2) predictive models and machine learning, (3) data governance and ethical considerations, and (4) convergence of AI, Big Data, and advanced analytics. Highly cited studies highlighted advances in predictive modeling for turnover and recruitment, while also emphasizing ethical risks such as algorithmic bias and the need for explainable AI (XAI). The field is evolving toward the integration of predictive capabilities with organizational decision-making and ethical frameworks, shifting human talent management from reactive to proactive, data-driven practices. However, gaps persist in empirical validation of models, standardization of ethical guidelines, interdisciplinary collaboration, and geographic diversity. This study contributes a unified socio-technical perspective that links technological innovation with organizational processes and governance. The findings offer a foundation for future research on context-specific, ethically grounded AI applications in emerging markets and support organizations in leveraging analytics for more adaptive and responsible talent management.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Diana Alexandra Sarmiento Orna",
+      "Mariuxi Fernanda Apolo-Silva",
+      "Alvaro Paul Solís-Naranjo",
+      "Ely Israel Borja-Salinas",
+      "Eduardo Javier Espinoza-Solis",
+      "Dennis Alfredo Peralta-Gamboa"
+    ],
+    "doi": "10.3389/frai.2026.1793296",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42222842/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42222842"
+    }
+  },
+  {
+    "paper_id": "pubmed:42185820",
+    "title": "Artificial Intelligence-based predictive models for adverse blood donor reactions: a systematic review of immediate and delayed events and clinical data approaches.",
+    "abstract": "A significant challenge in blood donation is the occurrence of adverse donor reactions (ADRs) and their subsequent negative impact on the blood supply and public health. A promising strategy to mitigate these events is the deployment of non-invasive, cost-effective artificial intelligence (AI) models for donor screening and monitoring. This study aims to systematically review the AI models utilized in the identification and prediction of ADRs. This study used a systematic review approach in line with the PRISMA 2020 guidelines. A search was performed across various databases, including Web of Science, PubMed, Embase, Google Scholar, and Scopus. The results were combined narratively and presented using descriptive statistics. The quality of eligible studies was assessed using the Newcastle-Ottawa Scale (NOS) tool. Among the 13 studies, nine were classified as immediate reactions and four as delayed reactions. The commonly used models included regression models, classical statistical models, and machine learning algorithms such as Random Forests, Gradient Boosting Machines (GBMs), XGBoost, and Artificial Neural Networks (ANNs). The main standard evaluation metrics for the models included Odds Ratio, Precision-Recall Area Under the Curve (PR-AUC), F1 Score, Precision, and Recall. Adverse reactions among blood donors negatively impact donor retention and, by extension, the stability of the blood supply for patient care. In this context, AI models may offer a promising tool for supporting the prediction and monitoring of ADRs. However, the available studies are not sufficient to support the widespread adoption of these models in clinical or operational decision-making. Heterogeneity in study design, outcomes, and evaluation metrics together with limitations such as limited implementation, risk of bias, unclear reference standards, and a lack of external validation has constrained the interpretability and generalizability of the findings. Therefore, future research with more rigorous study designs, standardized reporting, harmonized evaluations, and external validation is essential to establish the effectiveness and reliability of these models.",
+    "year": 2026,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Mahdie ShojaeiBaghini",
+      "Mohammad Mehdi Ghaemi",
+      "Alihasan Ahmadipour"
+    ],
+    "doi": "10.1186/s12911-026-03584-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42185820/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42185820"
+    }
+  },
+  {
+    "paper_id": "pubmed:42122378",
+    "title": "Spiking Neural Networks with Continual Learning for Steering Angle Regression: A Sustainable AI Perspective.",
+    "abstract": "This work explores the application of Spiking Neural Networks (SNNs) and Continual Learning (CL) methodologies to the problem of steering angle regression, using autonomous driving simulation as the experimental context, with a focus on energy efficiency and alignment with sustainable computing objectives. The primary goal was to design and implement CL techniques in SNNs to assess the model's ability to maintain accuracy in explored environments while reducing CO",
+    "year": 2026,
+    "venue": "Sensors (Basel, Switzerland)",
+    "authors": [
+      "Fernando S Martínez",
+      "Sergio Costa",
+      "Raúl Parada"
+    ],
+    "doi": "10.3390/s26092656",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42122378/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42122378"
+    }
+  },
+  {
+    "paper_id": "pubmed:41937742",
+    "title": "Building Purpose-Driven Radiology Departments: Distributive and Servant Leadership in Action.",
+    "abstract": "Radiology is increasingly defined by interdependence: imaging value is created through tightly coupled relationships among radiologists, technologists, nurses, physicists, administrators, and referring clinicians, under escalating expectations for access, safety, quality, and timeliness. In this context, leadership is a department-wide capability that must be deliberately designed, taught, and sustained. Drawing on distributive leadership and servant leadership literatures, we propose a radiology-specific synthesis, that decentralizes problem-solving while maintaining accountability, and positions leaders as multipliers who build others' competence, agency, and voice. We review why \"heroic\" leadership models predictably fail in complex adaptive clinical environments; summarize the empirical foundations of distributive and servant leadership; and translate these concepts into operational practices for radiology departments. This includes decision-rights design, meeting architecture, psychological safety, inclusive leadership, mentorship and sponsorship systems, and leadership development pathways for trainees and early-career faculty. We then examine 2 contemporary leadership stress tests: workforce sustainability (burnout, boreout, moral distress, hybrid work) and digital transformation (AI governance), arguing that both are best understood as organizational design challenges rather than individual resilience deficits or technology procurement exercises. Finally, we outline pragmatic metrics and evaluation approaches that align leadership behaviours with departmental outcomes (quality, access, safety culture, retention, and patient-centred value). A distributive servant leadership model offers a coherent, evidence-informed approach to building radiology departments that are adaptable, humane, and performance-oriented.",
+    "year": 2026,
+    "venue": "Canadian Association of Radiologists journal = Journal l'Association canadienne des radiologistes",
+    "authors": [
+      "Rakhshan Kamran",
+      "Michael N Patlas",
+      "Matthew Cecere",
+      "Andrea S Doria"
+    ],
+    "doi": "10.1177/08465371261437071",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41937742/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41937742"
+    }
+  },
+  {
+    "paper_id": "pubmed:41935468",
+    "title": "Does AI-supported clinical reasoning training enhance learning transfer in nursing students? A systematic review and narrative synthesis.",
+    "abstract": "To systematically review evidence on whether AI-supported clinical reasoning training promotes learning transfer among prelicensure nursing students. Clinical reasoning is essential for safe nursing practice, yet gains in tests or familiar simulations may not transfer to novel or authentic clinical contexts. AI may support transfer through scalable deliberate practice, case variability and immediate feedback, but evidence remains fragmented. A systematic review with narrative synthesis. Eight databases were searched from inception to November 6, 2025. Eligible studies compared AI-supported clinical reasoning interventions with non-AI interventions or routine instruction. The outcomes focused on transfer-related metrics. We assessed risk of bias using RoB 2 for randomized trials and ROBINS-I for nonrandomized studies, followed by a narrative synthesis. Five studies were included. AI-supported interventions generally improved knowledge and supported near transfer to structurally similar assessment contexts. Evidence regarding transfer to early clinical practice tasks was limited, with one RCT providing preliminary evidence of benefits in real-patient assessments and additional hypothesis-generating signals from a high-risk NRSI; however, evidence was insufficient regarding far transfer and long-term retention. Affective outcomes were mixed. When AI-supported clinical reasoning training is well aligned with clinical reasoning frameworks and assessment requirements, it can effectively support near transfer. However, existing evidence provides limited support for its effectiveness in promoting far transfer or developing the interpersonal dimension of clinical reasoning. It is recommended that such training be strategically integrated into blended learning curricula, combined with guided reflection and social learning activities, to maximize educational outcomes.",
+    "year": 2026,
+    "venue": "Nurse education in practice",
+    "authors": [
+      "Shiying Shen",
+      "Wenhao Qi",
+      "Jianwen Zeng",
+      "Sixie Li",
+      "Xin Liu",
+      "Yaping Feng",
+      "Shihua Cao"
+    ],
+    "doi": "10.1016/j.nepr.2026.104799",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41935468/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41935468"
+    }
+  },
+  {
+    "paper_id": "pubmed:41928218",
+    "title": "The influence of the nursing work environment on organizational commitment among nurses in healthcare settings: a cross-sectional study.",
+    "abstract": "Nurses play a central role in healthcare delivery, and the conditions in which they work have important implications for organizational performance and patient care. The nursing work environment is a key determinant of nurses’ attitudes and behaviors, including organizational commitment, which is essential for workforce stability and quality of care. Therefore, this study examined the influence of the nursing work environment on organizational commitment among nurses working in healthcare facilities across Saudi Arabia. A cross-sectional quantitative study was conducted across healthcare facilities in the five regions of Saudi Arabia. A convenience sample of 149 registered nurses completed an online questionnaire between April and August 2025 using the Practice Environment Scale of the Nursing Work Index (PES-NWI) and the Three-Component Model (TCM) of Organizational Commitment questionnaire, both of which are validated instruments with established reliability and validity. Data were analyzed using descriptive statistics, correlation analysis, and multiple linear regression to examine the relationships between the nursing work environment and affective, continuance, and normative organizational commitment. Participants reported a moderately favorable nursing work environment and moderate levels of organizational commitment, including affective, continuance, and normative commitment. The nursing work environment was significantly and positively associated with affective commitment ( The findings indicate that the nursing work environment plays an important role in shaping nurses’ emotional attachment and sense of obligation to their organizations. However, it was not significantly associated with continuance commitment. Improving workplace conditions may therefore strengthen key dimensions of organizational commitment and support nurse retention and organizational stability within healthcare settings, which is particularly important in the Saudi healthcare context where workforce sustainability and quality of care remain national priorities. Future longitudinal and intervention-based studies are needed to further examine causal relationships and evaluate strategies aimed at strengthening the nursing work environment and organizational commitment.",
+    "year": 2026,
+    "venue": "BMC nursing",
+    "authors": [
+      "Hamad Shajiri",
+      "Ahmed Nahari"
+    ],
+    "doi": "10.1186/s12912-026-04562-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41928218/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41928218"
+    }
+  },
+  {
+    "paper_id": "pubmed:41915408",
+    "title": "The impact of antigen presentation on BBB disruption and neuroinflammation.",
+    "abstract": "Blood brain barrier (BBB) disruption is a potentially deadly complication of numerous neurological diseases as diverse as cerebral malaria, dengue hemorrhagic fever, tauopathies, multiple sclerosis, schizophrenia, Parkinson's disease, narcolepsy, and COVID-19. Neuroinflammation and immune cell infiltration are both drivers and a consequence of BBB disruption. In this review, we will provide an overview of how brain infiltrating T cell responses engage cellular components of the neurovascular unit (NVU) which regulates the BBB in preclinical models. This will provide context on how the immune system can contribute to vascular leakage and neuropathology in neurological diseases. We will discuss how discrete MHC class I and class II molecules on NVU cell types govern T cell entry, retention, and barrier disruption in neuroinflammatory diseases. Finally, we will summarize our current understanding of how discrete HLA genes associate with specific neurological diseases characterized by neuroinflammation and BBB disruption.",
+    "year": 2026,
+    "venue": "Physiology (Bethesda, Md.)",
+    "authors": [
+      "Mark A Maynes",
+      "Aaron J Johnson"
+    ],
+    "doi": "10.1152/physiol.00041.2025",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41915408/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41915408"
+    }
+  },
+  {
+    "paper_id": "pubmed:41880526",
+    "title": "Chemical synthesis and evaluation of the antibacterial activity of the amino chalcone in efflux pump-carrying strains.",
+    "abstract": "Given the ability of microorganisms to develop drug resistance at a faster pace than the development of new drugs, it becomes urgent to seek alternatives capable of restoring the efficacy of antibiotics, especially against pathogens such as Staphylococcus aureus, known for its versatility in expressing resistance mechanisms. Synthetic chalcones have been extensively investigated as efflux pump inhibitors due to their structural flexibility and ease of chemical modification. Can cite studies that show chalcones derived from Croton anisodontus for their ability to inhibit the NorA and MepA efflux pumps in S. aureus strains (1199B and K2068) and studies chalcones act as inhibitors of the NorA efflux pump in whole cells and everted membrane vesicles of S. aureus. Among these mechanisms, the NorA and MepA efflux pumps stand out, as they are responsible for expelling antibiotics from the bacterial cell interior. In this context, the present study investigated the potential of the chalcone (E)-1-(3-aminophenyl)-3-(4-chlorophenyl)prop-2-en-1-one as a possible inhibitor of these efflux systems. Initial screening was conducted through in silico studies, followed by in vitro assays, determination of minimum inhibitory concentration (MIC), and fluorescence tests using ethidium bromide EtBr and SYTOX Green. Molecular docking results revealed that this chalcone interacts with amino acid residues described in the literature as essential for efflux pump activity (Glu222 and Phe303 in NorA; Tyr35 and Met172 in MepA). The binding distances and energies obtained were consistent with potential inhibitory activity, suggesting that chalcone may interfere with the functionality of these proteins. In vitro assays showed a significant reduction in the MIC of antibiotics such as norfloxacin and ciprofloxacin in resistant strains, indicating a potentiating effect. Furthermore, fluorescence tests demonstrated increased retention of ethidium bromide by up to 736.3% for NorA and 234.8% for MepA, supporting the inhibition of efflux pumps. Increased bacterial membrane permeability was also observed, evidenced by an increase in SYTOX Green fluorescence by 70-855%. Although the results demonstrate the potential of chalcone as a therapeutic adjuvant, the ADMET analyses revealed toxicological alerts that require further investigation. These findings suggest that rational structural modifications may be necessary to ensure its safety and efficacy in combating resistant bacterial infections.",
+    "year": 2026,
+    "venue": "FEMS microbiology letters",
+    "authors": [
+      "Isydório Alves Donato",
+      "Cristina Rodrigues Dos Santos Barbosa",
+      "Antonio Henrique Bezerra",
+      "Suieny Rodrigues Bezerra",
+      "Ray Silva Almeida",
+      "Cícera Datiane de Morais Oliveira Tintino",
+      "Isaac Moura Araújo",
+      "Ana Luiza Fernandes Romão",
+      "André Nilton Silva Dias",
+      "Francisco Rogenio da Silva Mendes",
+      "Jayza Maria Lima Dias",
+      "Paulo Nogueira Bandeira",
+      "Roberto Lima de Albuquerque",
+      "Hélcio Silva Dos Santos",
+      "Henrique Douglas Melo Coutinho",
+      "Saulo Relison Tintino",
+      "Francisco Assis Bezerra da Cunha"
+    ],
+    "doi": "10.1093/femsle/fnag033",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41880526/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41880526"
+    }
+  },
+  {
+    "paper_id": "pubmed:41843425",
+    "title": "Leveraging artificial intelligence to accelerate competency development in diagnostic reasoning of medical students.",
+    "abstract": "Diagnostic errors remain a critical patient safety concern, yet teaching diagnostic reasoning is challenging due to its complex, context-specific nature. Traditional teaching methods emphasize analytical reasoning but often neglect non-analytical, pattern recognition processes that are grounded in script theory. Script theory highlights illness scripts-structured mental representations of diseases-as foundational to diagnostic expertise. Advances in artificial intelligence (AI) offer opportunities to support illness script formulation through personalized, scalable feedback. This study evaluated whether chatbot-enabled instruction and feedback improve medical students' illness script quality compared with conventional instruction techniques. We conducted a parallel-group randomized controlled trial with 83 medical students at Prince of Songkla University, Hat Yai, Thailand. Participants were randomized to conventional instruction or chatbot-enabled instruction using Microsoft Copilot. Both groups received didactic instruction, followed by illness script formulation tasks at three timepoints: pre-test (T1), immediate post-test (T2), and post-intervention with new cases (T3). Illness scripts were assessed using the validated Illness Script Assessment Tool (ISAT), which evaluates structure, content, richness, and maturity. Data was analyzed using cumulative link mixed-effects models. Baseline illness script quality was comparable between groups. Chatbot-enabled instruction produced significantly greater improvements in script structure (OR 3.7), content (OR 3.3), and maturity (OR 2.9) at immediate post, with gains sustained at transfer testing for structure. Richness scores showed delayed improvement (OR 2.9). Composite ISAT scores confirmed durable improvements (OR 3.2 at T2; OR 2.7 at T3). Chatbot-enabled instruction accelerated and enhanced illness script development compared with conventional methods, operationalizing deliberate practice principles and making non-analytical reasoning teachable. By integrating structured pedagogy with scalable AI feedback, this approach reduces educator burden while fostering diagnostic expertise. Future multi-site studies should examine long-term retention, clinical transfer, and AI feedback fidelity to ensure reliability and equity.",
+    "year": 2026,
+    "venue": "Medical teacher",
+    "authors": [
+      "Moushumi Sur",
+      "Supaporn Dissaneevate",
+      "Araya Yuenyongviwat",
+      "Kanokpan Ruangnapa",
+      "Winston Liaw",
+      "Peter Boedeker",
+      "Shelley Kumar",
+      "Brian Rissmiller",
+      "Satid Thammasitboon"
+    ],
+    "doi": "10.1080/0142159X.2026.2641769",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41843425/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41843425"
+    }
+  },
+  {
+    "paper_id": "pubmed:41837178",
+    "title": "Human DEAH-box helicase 8 regulates HSF1-mediated stress response and cancer-associated pre-mRNA splicing in tumour cells.",
+    "abstract": "Transcription factor heat shock factor 1 (HSF1) orchestrates the cellular stress response, promoting malignant transformation, unchecked proliferation, and stress-resilient survival of tumour cells. We set out to discover potentially druggable regulators of HSF1 activation and identified DEAH-box RNA helicase 8 (DHX8). We investigated the role of DHX8 in regulating HSF1 within the broader context of DHX8 function in cancer cells. DHX8 silencing induces intron retention in ",
+    "year": 2026,
+    "venue": "NAR cancer",
+    "authors": [
+      "Jennifer R Tall",
+      "Robert Te Poele",
+      "Alexandra Vasile",
+      "Pradeep Ramagiri",
+      "James Campbell",
+      "Caitlin R Davies",
+      "Marissa V Powers",
+      "Toby Roe",
+      "Deivendran Sankaran",
+      "Hannah Wang",
+      "Konstantinos Mitsopoulos",
+      "Bissan Al-Lazikani",
+      "Rob L M van Montfort",
+      "Emmanuel de Billy",
+      "Paul Workman",
+      "Paul A Clarke"
+    ],
+    "doi": "10.1093/narcan/zcag008",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41837178/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41837178"
+    }
+  },
+  {
+    "paper_id": "pubmed:41805321",
+    "title": "Enhanced Transcytosis and Retention (ETR) of Drug Delivery Nanocarrier in Solid Tumors.",
+    "abstract": "Transcytosis, traditionally regarded as biological, constitutes an intrinsic and powerful pathway for macromolecule transport across endothelial and epithelial barriers. The emerging concept of Enhanced Transcytosis and Retention (ETR) is distinct from passive extravasation or tissue leakiness. It recasts nanocarrier delivery as an orchestrated chain of interfacial equilibria in which encoded surface chemistry directs receptor recognition, active barrier crossing, and subsequent accumulation within target tissues. Here, we delineate the chemical framework underpinning ETR-mediated delivery, emphasizing that the chemical identity of a nanocarrier, i.e., its surface functional groups, coordination motifs, hydration shell, reactive ligands, surface free energy, and biocorona, dictates a hierarchical sequence of interactions. To enable ETR access, we propose a triadic interaction model among the nanocarrier, an endogenous or engineered protein-based material, and a specific cellular receptor. This architecture represents a fundamental shift from conventional two-entity protein-adsorption frameworks, converting inherently stochastic protein deposition into a chemically programmable, design-driven active transport process. At the inner interface (between nanocarrier and protein material), surface functional groups, roughness, and topology determine the composition, orientation, and reactivity of a given biomolecule, such as endogenous or engineered proteins. At the outer interface (protein-cell receptor), these nanocarrier-protein complexes engage cell receptors through amino acid sequence-specific molecular recognition, topological complementarity, hydrogen-bond cooperativity, and electrostatic complementarity that collectively trigger ETR active access. Such an ETR framework, first exemplified in solid tumors (e.g., pancreatic cancer and triple negative breast cancer), now extends to diverse pathological contexts including the blood-brain barrier and dystrophic muscle. By viewing ETR drug delivery through a chemical lens, this manuscript integrates structure-reactivity principles with biological transport, providing a molecularly actionable framework for otherwise inaccessible tissues. Noteworthy, artificial intelligence (AI) guided protein engineering, using strategies such as point mutagenesis and noncanonical amino-acid substitution, will enable the creation of highly optimized and artificial ligands that assemble ETR-activating units with molecular-level precision.",
+    "year": 2026,
+    "venue": "Accounts of chemical research",
+    "authors": [
+      "Mengmeng Qin",
+      "Zhenyu Zhang",
+      "Yuliang Zhao",
+      "Huan Meng"
+    ],
+    "doi": "10.1021/acs.accounts.6c00062",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41805321/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41805321"
+    }
+  },
+  {
+    "paper_id": "pubmed:41790074",
+    "title": "A Gut-Restricted Liver X Receptor Agonist Ameliorates Liver Injury in Experimental Short Bowel Syndrome.",
+    "abstract": "Short bowel syndrome (SBS) arises from the surgical removal of extensive portions of the small intestine and is associated with high morbidity, including intestinal failure-associated liver disease (IFALD). Earlier studies revealed that orally administered systemic liver X receptor (LXR) agonist suppresses IFALD in mice and implicated intestinally derived high-density lipoprotein (HDL) in liver protection. Here we aimed to move away from the use of systemic LXR agonists because they have failed in clinical trials due to hepatic steatosis and hyperlipidemia, to determine if a gut-restricted LXR agonist could provide hepatoprotection in SBS. We synthesized and characterized WUSTL0717, an amide analog of GW3965, as a putative gut-restricted LXR agonist, and evaluated its potential to improve the outcomes in a preclinical mouse model of SBS. WUSTL0717 exhibited exceptional intestinal retention in pharmacokinetic analyses and activated LXR target genes in the small intestine but not the liver. Whereas small bowel resection lowered many lipid metabolites in portal venous plasma, WUSTL0717 treatment increased portal venous Apolipoprotein A1 (ApoA1), the core protein of HDL, and spared portal venous phospholipids known to be enriched on HDL. Accordingly, intestinal ApoA1 deficiency exacerbated IFALD, and in wild-type mice, portal venous ApoA1 and phospholipids inversely correlated with hepatic collagen accumulation. In addition, WUSTL0717 improved nutrient absorption and promoted body weight restoration in SBS. These data underscore the potential of gut-restricted LXR agonists to preserve metabolic health in the context of SBS. By acting locally in the intestine, WUSTL0717 positively mitigates profibrotic liver injury while avoiding systemic availability.",
+    "year": 2026,
+    "venue": "Gastroenterology",
+    "authors": [
+      "Ayoung Kim",
+      "Daniel M Alligood",
+      "Lingaiah Maram",
+      "Hannah M Phelps",
+      "Michael Cameron",
+      "Jacob T DeRousse",
+      "Jichang Han",
+      "Taylor J Dunning",
+      "Rachel L Mintz",
+      "Alex Park",
+      "Daniel D Lee",
+      "Deanna L Davis",
+      "Christopher G Huckstep",
+      "Rachael L Field",
+      "Lamees Hegazy",
+      "Bernd H Zinselmeyer",
+      "Jonathan R Brestoff",
+      "Colin A Martin",
+      "Brad W Warner",
+      "Bahaa Elgendy",
+      "Gwendalyn J Randolph"
+    ],
+    "doi": "10.1053/j.gastro.2025.12.015",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41790074/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41790074"
+    }
+  },
+  {
+    "paper_id": "pubmed:41754517",
+    "title": "Suboptimal Linkage to Care of Delta-Infected Patients in an Area with Increasing Migration-Driven Prevalence of Hepatitis D in Recent Years.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Viruses",
+    "authors": [
+      "Ângela Carvalho-Gomes",
+      "Ariadna Bono",
+      "Lola Gómez",
+      "Susana Sabater",
+      "Juan Carlos Rodríguez",
+      "Antonio Palau",
+      "Ana Forés",
+      "María Rodríguez",
+      "Sonia Pascual",
+      "Maria Àngels Cebrià I Iranzo",
+      "Martín Prieto",
+      "Marina Berenguer"
+    ],
+    "doi": "10.3390/v18020174",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41754517/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41754517"
+    }
+  },
+  {
+    "paper_id": "pubmed:41735150",
+    "title": "Simulated shared and supported decision making for amyloid immunotherapy in Alzheimer's disease: A bicentric study.",
+    "abstract": "Lecanemab, the first anti-amyloid therapy approved by the European Medicines Agency, has demonstrated a statistically and clinically significant but moderate slowing of decline in early Alzheimer's disease (AD). In contrast, its long-term impact on the disease course is not formally established. Any benefit, therefore, needs to be carefully weighed against its adverse effects and practical constraints, which must be discussed with patients and caregivers within a shared decision-making process (SMD). However, applying SDM in this context is challenging due to treatment complexity, cognitive impairment and the involvement of care partners. Supported decision-making, which aims to assist individuals with decisional limitations in participating in important choices, has been promoted as a relevant approach. In this bicentric study conducted in France, we evaluated a simulated supported decision-making process in 25 patients with early AD who were eligible for lecanemab and faced the decision to choose anti-amyloid immunotherapy. We created a written decision aid using a consensus-based method to provide clear, accurate, and scientifically validated information to patients and care partners. After a one-week reflection period, both patients and care partners demonstrated a good overall understanding of the information provided, though care partners showed higher levels of comprehension and retention. The treatment was considered acceptable by most patients and their care partners. While patients ultimately remain the decision-makers, these findings highlight the central role of care partners in strengthening supported decision-making, notably through frameworks such as the French \"trusted person\" model.",
+    "year": 2026,
+    "venue": "Revue neurologique",
+    "authors": [
+      "E Burry",
+      "F Plumacker",
+      "N Villain",
+      "S Amaral",
+      "P Damier",
+      "J Delrieu",
+      "M-A Mackowiak",
+      "R Michalon",
+      "S Mohr",
+      "V Planche",
+      "A Rollin-Sillaire",
+      "T Tannou",
+      "D Wallon",
+      "S Desmoulin Canselier",
+      "T Lebouvier",
+      "G François"
+    ],
+    "doi": "10.1016/j.neurol.2026.01.267",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41735150/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41735150"
+    }
+  },
+  {
+    "paper_id": "pubmed:41716882",
+    "title": "Implementation of AI in oncology: a systematic review of educational and clinical integration in global contexts.",
+    "abstract": "The global burden of cancer, coupled with inequalities in access to healthcare, has intensified interest in artificial intelligence (AI) as a transformative force in oncology. This study systematically analyzes how AI is being integrated into oncology education and clinical practice globally, highlighting its role in training the next generation of healthcare professionals. A systematic review was conducted following the PRISMA and PICO guidelines, using data from PubMed, Scopus, and IEEE Xplore. Studies from 2019 to 2024 were selected based on empirical evaluations of AI-based educational interventions in oncology. Educational outcomes were extracted as performance (e.g., accuracy, test scores, comprehension/quality ratings), engagement/acceptability (e.g., usability or satisfaction ratings, completion), and skills development (e.g., task-based procedural metrics), as reported by each study. A total of 16 studies met the inclusion criteria after a rigorous selection and eligibility verification process. The findings reveal that AI tools, especially chatbots based on large language models (e.g., ChatGPT), are increasingly being used in the education of both patients and professionals. Positive outcomes include improved knowledge retention, diagnostic reasoning, and engagement. AI is transforming cancer education through personalized and accessible learning experiences. Strategic integration, rigorous validation, and equitable access are essential for sustainable impact across diverse global settings.",
+    "year": 2026,
+    "venue": "Frontiers in digital health",
+    "authors": [
+      "Talia Tene",
+      "Diego Fabián Vique López",
+      "Paulina Elizabeth Valverde Aguirre",
+      "Kathy Violeta Serrano Avalos"
+    ],
+    "doi": "10.3389/fdgth.2026.1764390",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41716882/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41716882"
+    }
+  },
+  {
+    "paper_id": "pubmed:41636902",
+    "title": "Magnesium-organophosphate bone adhesives repurposed as endodontic cements for dental applications.",
+    "abstract": "This study investigated novel mineral-organic cements based on magnesium and organophosphates, originally developed as resorbable bone adhesives. The aim was to evaluate this new class of materials in a dental context, focusing on their suitability as temporary restorative materials in endodontic treatments. Two thermally treated trimagnesium phosphate hydrates (Mg₃(PO₄)₂ ∙ xH₂O and Mg₃(PO₄)₂ ∙ 22H₂O (cattiite)) were each combined with two organophosphates (phosphoserine (OPLS) and sodium phytate (Na-IP6)), resulting in four adhesive formulations. These were compared with a commonly used material for temporary restorations (Cavit™) and a reference adhesive (TTCP + OPLS) regarding mechanical strength, sealing ability (methylene blue penetration) on bovine teeth, and structural integrity. Shear bond strength to dental hard tissues was significantly higher for the new cements compared to Cavit™, particularly for the OPLS + TMP ∙ xH₂O formulation (4.35 ± 0.71 MPa vs. 0.29 ± 0.16 MPa; initially on dentin). pH and temperature during setting remained within clinical limits. TMP ∙ xH₂O + OPLS also showed the favorable sealing behavior, while Cavit™ performed similarly. Porosimetry, SEM and micro-CT supported the favorable profile of this formulation. The combination of 400 °C sintered TMP ∙ xH₂O and OPLS proved most suitable in terms of handling, stability, and sealing. This system are promising candidates for temporary restorations, particularly in non-retentive cavities. The tested cements may serve as novel resorbable, adhesive alternatives for temporary restorations. Future applications could include pulp capping or perforation repair.",
+    "year": 2026,
+    "venue": "Clinical oral investigations",
+    "authors": [
+      "Tobias Renner",
+      "Laura Marx",
+      "Niclas Fleckenstein",
+      "Valentin C Steinacker",
+      "Paul F Otto",
+      "Alexander C Kübler",
+      "Uwe Gbureck"
+    ],
+    "doi": "10.1007/s00784-026-06743-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41636902/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41636902"
+    }
+  },
+  {
+    "paper_id": "pubmed:41628278",
+    "title": "Recurrent mutations in the stress regulator Cap1 reveal a trade-off between azole resistance and oxidative stress response in Candida albicans.",
+    "abstract": "Drug resistance is a critical challenge in treating life-threatening fungal infections. Here, we uncover a mechanism of acquired azole resistance in Candida albicans through mutations in CAP1, encoding a conserved fungal transcription factor that mediates the oxidative stress response. We analyzed 300 clinical isolates and identified 25 distinct CAP1 missense or nonsense mutations, with many occurring within the DNA-binding domain. We identified two nearly identical CAP1 heterozygous nonsense mutations, one in an isolate obtained from a bloodstream infection and one in a population of cells undergoing adaptation to fluconazole in vitro. Both CAP1 nonsense mutations resulted in loss of the C-terminal nuclear export signal, leading to nuclear retention of Cap1 and subsequent activation of genes associated with the oxidative stress response and drug transport. The CAP1 C-terminal truncations conferred significant fitness advantages in the presence of fluconazole, both in vitro and in a murine model of candidiasis. Strikingly, we discovered a therapeutic vulnerability: azole concentrations above the minimal inhibitory concentration were fungicidal to mutants with the CAP1 C-terminal truncation. The fungicidal effect was attributed to both elevated azole-induced reactive oxygen species and a compromised oxidative stress response in Cap1-truncated cells. Our results provide novel characterization of de novo CAP1 point mutations emerging in both laboratory and clinical contexts, elucidate the mechanisms underlying Cap1-regulated stress responses, and reveal a potential therapeutic target for overcoming drug resistance in C. albicans infections.",
+    "year": 2026,
+    "venue": "PLoS biology",
+    "authors": [
+      "Xin Zhou",
+      "Audrey Hilk",
+      "Norma V Solis",
+      "Nancy Scott",
+      "Christopher Zajac",
+      "Scott G Filler",
+      "Anna Selmecki"
+    ],
+    "doi": "10.1371/journal.pbio.3003631",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41628278/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41628278"
+    }
+  },
+  {
+    "paper_id": "pubmed:41616023",
+    "title": "The autonomy paradox in AI-generated content adoption: Creative-specific alternative to TAM model in China's micro-short drama industry.",
+    "abstract": "In China's booming micro-short drama industry, Artificial Intelligence Generated Content (AIGC) presents creators with an 'autonomy paradox': improving efficiency while sparking fears of lost control, amplified by collectivist culture that heightens tensions between AI-driven productivity and loss of autonomy. Based on a mixed-methods study of 607 micro-short drama creators, this research proposes and tests the Creative Industries Technology Acceptance Model (CITAM), which builds upon TAM foundations while adapting constructs for creative contexts to reveal key dynamics in adoption intentions. Building upon TAM theoretical foundations while introducing innovation compatibility (IC) and creative autonomy retention (CAR), CITAM is grounded in Diffusion of Innovations and Self-Determination Theory to address both rational and psychological adoption factors in creative contexts. Using a mixed methods approach with SEM in 607 surveys and 10 in-depth interviews, the results reveal that CAR positively influences AIGC adoption through IC as a mediator, while CAR negatively moderates the positive influence of IC on adoption intentions, highlighting a modest but significant psychological tension. Qualitative insights on 'Creativity Amplification' complement this, showing that creators perceive AIGC as an idea enhancer, not a replacement for the essential 'human spark.' CITAM provides a customized extension of TAM for creative industries, offering practical guidance. The findings can help developers design tools that preserve the agency of the creator and inform policy makers about balancing AIGC innovation with creator rights. These discoveries offer an initial framework for the adoption of ethical AI in the global creative economy, calling for cross-cultural validation to improve generalizability in AI-driven creative ecosystems.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Chao Tang"
+    ],
+    "doi": "10.1371/journal.pone.0336166",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41616023/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41616023"
+    }
+  },
+  {
+    "paper_id": "pubmed:41575708",
+    "title": "PrEP as a \"Hidden Message\": The Impact of Partner Dynamics on Oral PrEP Adherence Among Cisgender Women in Serodiscordant Relationships.",
+    "abstract": "Heterosexual sex accounts for 87% of new HIV diagnoses among cisgender women. We sought to explore the intersection of partner dynamics and oral preexposure prophylaxis (PrEP) adherence among cisgender women in heterosexual serodiscordant relationships. From June 2017-August 2018, we conducted semi-structured in-depth interviews using a social ecological model framework. Twenty cisgender women in serodiscordant relationships, who participated in a PrEP demonstration project to evaluate adherence and retention in San Diego and Los Angeles, participated in in-depth interviews. Interviews were audio-recorded and transcribed, and transcripts were analyzed using thematic analysis. Among the 20 participants, the median age was 37.5 years (IQR 32, 48), with n = 6 (30%) identifying as Black and n = 5 (25%) as Hispanic. Sixty-five percent of women had protective drug levels based on real-time tenofovir-diphosphate drug level assays at the study visit prior to their interviews. Some partners played a significant role in PrEP adherence, often showing support by vocalizing encouragement and appreciation, offering reminders to take PrEP, and sometimes administering PrEP. Other partners were unsupportive and discouraged PrEP use, which may have hindered adherence. HIV and PrEP stigma were identified as potential barriers for women to take PrEP and disclose their PrEP use to others. Within the context of this PrEP demonstration project, partner dynamics impacted PrEP adherence for HIV-negative cisgender women in serodiscordant relationships. We urge further investigation of relationship dynamics and PrEP adherence and persistence specifically among US-based cisgender women.",
+    "year": 2026,
+    "venue": "AIDS and behavior",
+    "authors": [
+      "Thupten D Phuntsog",
+      "Jamila K Stockman",
+      "K Rivet Amico",
+      "Ryan Kofron",
+      "Sheldon Morris",
+      "Raphael J Landovitz",
+      "Steffanie Strathdee",
+      "David J Moore",
+      "Jill Blumenthal"
+    ],
+    "doi": "10.1007/s10461-025-05008-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41575708/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41575708"
+    }
+  },
+  {
+    "paper_id": "pubmed:41558385",
+    "title": "Transformer-based feature extraction approach for hematopoietic cancer subtype classification.",
+    "abstract": "Accurate classification of hematopoietic cancer subtypes remains challenging due to the multipotent nature of hematopoietic cells and the absence of definitive genetic markers. To address this, we propose a Transformer-based Autoencoder that captures compact and biologically informative embeddings from gene expression data. Specifically, our method employs multi-head self-attention in the encoder to learn complex nonlinear interactions among genes, with a reconstruction decoder that enforces biological feature retention. We benchmarked our approach against four widely-used feature extraction methods-Principal Component Analysis, Non-negative Matrix Factorization, Autoencoder, and Variational Autoencoder-using transcriptomic data from five hematopoietic cancer subtypes in The Cancer Genome Atlas, totaling 2452 samples. Data were split 60:20:20 into training, validation, and test sets with stratification, and feature-extractor hyperparameters were chosen on the validation set. Each method produced 100-dimensional feature vectors, subsequently evaluated using eight multi-class classifiers: Light Gradient Boosting Machine, Extreme Gradient Boosting, Logistic Regression, Random Forest, Decision Tree, Support Vector Machine, and Neural Networks. On the independent test set, the Transformer-based Autoencoder embeddings combined with Light Gradient Boosting Machine achieved F1-score: 0.969, accuracy: 0.986, precision: 0.975, recall: 0.964, specificity: 0.996, G-mean: 0.980, and balanced accuracy: 0.954. For context, we additionally included a supervised tabular Transformer (FT-Transformer) as a reference; while strong, it is not directly comparable to our unsupervised feature extractor. To enhance interpretability and clinical relevance, we applied Shapley Additive exPlanations to identify the twenty most influential genes contributing to subtype discrimination. This analysis revealed key biomarkers related to endoplasmic reticulum function, antigen processing, and ribonucleic acid regulation. These findings demonstrate that transformer-based unsupervised feature extraction substantially improves predictive accuracy and yields valuable biological insights for complex hematologic malignancies. Overall, the study supports attention-driven representation learning for tabular biomedical data and motivates future work in generative/self-supervised representations for gene expression.",
+    "year": 2026,
+    "venue": "Computers in biology and medicine",
+    "authors": [
+      "Kwang Ho Park",
+      "Younghee Lee",
+      "Wei Ding",
+      "Kwang Sun Ryu",
+      "Keun Ho Ryu"
+    ],
+    "doi": "10.1016/j.compbiomed.2026.111466",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41558385/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41558385"
+    }
+  },
+  {
+    "paper_id": "pubmed:41551404",
+    "title": "Transgender Individuals' Perspectives on Teledermatology-Based Acne Research.",
+    "abstract": "This study aimed to identify barriers and facilitators influencing transgender individuals' participation in teledermatology-based acne research and their perceptions of artificial intelligence use in acne research. This was a qualitative study conducted between 2021 and 2023. Transgender and gender diverse individuals who received gender-affirming hormone therapy and had acne were recruited from a public safety-net hospital and from academic endocrinology and dermatology clinics. Semi-structured interviews exploring factors influencing teledermatology-based acne research participation were analyzed using thematic analysis. Among 32 participants, 17 (53%) identified as transgender men, 11 (34%) as transgender women, and 4 (13%) as non-binary or other gender identities. Mild or lower acne severity was reported by 21 (66%) participants, while 11 (34%) reported moderate-to-severe acne. Access to equipment and comfort in photographing sensitive areas determined capability of participation in hypothetical teledermatology research. Accessibility, flexibility, and reduced transportation cost of remote research, and in-clinic recruitment from established clinicians presented opportunities for participation. Motivating factors included trust in research team members, privacy concerns, and improving acne treatment for transgender individuals. Perspectives on artificial intelligence were mixed and included concerns regarding security and potential for bias. Teledermatology offers opportunity to improve recruitment and retention of transgender individuals in acne research. Incorporating perspectives of transgender individuals can inform the design of future teledermatology research on acne in the context of gender-affirming hormone therapy.",
+    "year": 2025,
+    "venue": "Archives of dermatological research",
+    "authors": [
+      "Sarah Gold",
+      "Francisco Delgado",
+      "Meron Siira",
+      "Crescent Alcid",
+      "Sigal Willner",
+      "Dominik Kucirek",
+      "Ashli Owen-Smith",
+      "Veronica Rotemberg",
+      "Don Operario",
+      "Cam Escoffery",
+      "Vin Tangpricha",
+      "Suephy C Chen",
+      "Michael Goodman",
+      "Howa Yeung"
+    ],
+    "doi": "10.1007/s00403-025-04402-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41551404/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41551404"
+    }
+  },
+  {
+    "paper_id": "pubmed:41484538",
+    "title": "\"I Could Practice Flirting Without Pressure\": A Proof-of-Concept Study of an AI Chatbot-Assisted Intervention for Men Facing Distressing Involuntary Singlehood.",
+    "abstract": "Amid rising global rates of loneliness and romantic distress, many individuals seek connection with romantic chatbots-AI-driven companions designed to simulate intimate interactions. Although chatbot-assisted interventions have shown promise in mental health care, their therapeutic potential for addressing romantic distress remains largely underexplored. Men experiencing involuntary singlehood often report elevated psychological, relational, and sexual distress, yet many avoid conventional therapy, underscoring the need for innovative, accessible interventions. This mixed-methods proof-of-concept study evaluated the feasibility, acceptability, adequacy, and preliminary effects of a one-session therapist-guided chatbot intervention targeting involuntary singlehood-related distress. Thirty-two Canadian men reporting involuntary singlehood completed a three-level intervention program based on a romantic chatbot simulating dating app interactions: (1) initiating contact, (2) practicing self-disclosure, and (3) navigating romantic rejection. Outcomes were assessed using validated measures of relational, psychological, and sexual distress at baseline (T1), one-month (T2), and three-month (T3) post-intervention follow-ups, while acceptability and adequacy were assessed during and immediately following the intervention through standardized instruments and open-ended questions. Data were analyzed using descriptive statistics, repeated-measures ANOVAs, and qualitative content analysis. Significant reductions were observed in relational, psychological, and sexual distress (moderate-to-large effect sizes). Most participants rated the intervention format as appropriate and found the chatbot interactions realistic, reflective of real-life romantic challenges, and beneficial for developing romantic skills. These findings suggest that this chatbot-assisted intervention may hold promise in accompanying individuals navigating involuntary singlehood. Future randomized controlled trials need to confirm its clinical effects, optimize its technical architecture and therapeutic delivery (e.g., through modules tailored to individual needs), and assess skill transfer to real-life contexts.",
+    "year": 2026,
+    "venue": "Archives of sexual behavior",
+    "authors": [
+      "David Lafortune",
+      "Valérie A Lapointe",
+      "Cloé Canivet",
+      "Jonathan Bonneau",
+      "Ghayda Hassan",
+      "Marie-Aude Boislard",
+      "Franklin Calazana",
+      "Christian Labrie",
+      "Simon Dubé"
+    ],
+    "doi": "10.1007/s10508-025-03356-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41484538/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41484538"
+    }
+  },
+  {
+    "paper_id": "pubmed:41402905",
+    "title": "Digital limited interaction efficacy trial of LifeSkills Mobile to reduce HIV incidence in young transgender women: study protocol.",
+    "abstract": "Young transgender women are disproportionately impacted by HIV in comparison to other risk groups in the United States. Despite research documenting this vulnerability, few interventions have been developed and tested to reduce their risk and none to evaluate effects on HIV incidence. The LifeSkills Mobile app addresses the specific structural, developmental, and interpersonal challenges to HIV prevention among young transgender women ages 16-29 and is adapted from LifeSkills, a group-based intervention with evidence of efficacy to reduce sexual risk for HIV. The LifeSkills Mobile app was developed to increase the reach of LifeSkills, an evidence-based intervention, broadly via mobile access. This study is a digital, limited interaction national randomized controlled trial. Participants are randomized (1:1) to the LifeSkills Mobile intervention or an HIV prevention standard of care condition. The study aims to enroll up to 5000 participants with follow-up visits at 6-month intervals up to 48 months, depending on the date of enrollment. The primary endpoint is incident HIV infection (confirmed via lab test or medical records). A log-rank test will be used to evaluate the null hypothesis of no difference in survival (cumulative HIV incidence) between the two study arms. Secondary endpoints are Behavioral risk is defined as total condomless sex acts in the context of insufficient PrEP protection and PrEP care linkage, initiation, and retention/constancy over time. This study will test the efficacy of the LifeSkills Mobile intervention on HIV incidence among young transgender women, ages 16-29 across the US. TRIAL REGISTRATION {2A, 2B}: ClinicalTrials.gov NCT05018611. Registered on August 24, 2021.",
+    "year": 2025,
+    "venue": "Trials",
+    "authors": [
+      "Lisa M Kuhns",
+      "Robert Garofalo",
+      "Marvin Belzer",
+      "Julie McAvoy-Banerjea",
+      "Jesse Holzman",
+      "Eun Kwak",
+      "Amy K Johnson",
+      "Katie Biello",
+      "Rebecca Schnall",
+      "Marco A Hidalgo",
+      "Sari L Reisner",
+      "Matthew J Mimiaga"
+    ],
+    "doi": "10.1186/s13063-025-09353-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41402905/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41402905"
+    }
+  },
+  {
+    "paper_id": "pubmed:41385283",
+    "title": "Token-splitting improves GPT-4.1 performance on plastic surgery exams: implications for AI-Assisted medical education.",
+    "abstract": "Large language models (LLMs), such as ChatGPT, have demonstrated impressive performance on general medical examinations; however, their effectiveness significantly declines in specialized board examinations due to limited domain-specific training data and computational constraints inherent to their self-attention mechanisms. This study investigates a novel token-splitting strategy informed by Cognitive Load Theory (CLT), aimed at overcoming these limitations by optimizing cognitive processing and enhancing knowledge retention in specialized educational contexts. We implemented a token-splitting approach by segmenting Taiwan plastic surgery board examination materials and associated textbook content into cognitively manageable segments ranging from 4,000 to 20,000 tokens. These segmented inputs were provided to GPT-4.1 via its standard ChatGPT web interface. Model performance was rigorously evaluated, comparing accuracy and efficiency across various token lengths and question complexities classified according to Bloom's taxonomy.The GPT-4.1 model utilizing the token-splitting strategy significantly outperformed the baseline (unmodified) model, achieving notably higher accuracy. The optimal segmentation length was determined to be 6,000 tokens, effectively balancing cognitive coherence with information retention and model attention. Errors observed at this optimal length primarily resulted from content absent from textual materials or requiring multimodal interpretation (e.g., image-based reasoning). Provided relevant textual content was adequately segmented, GPT-4.1 consistently demonstrated high accuracy (From 75.88% to 92.93%). The findings highlight that a token-splitting approach, grounded in Cognitive Load Theory, significantly enhances LLM performance on specialized medical board examinations. This accessible, user-friendly strategy provides educators and clinicians with a practical means to improve AI-assisted education outcomes without requiring complex technical skills or infrastructure. Future research and development integrating multimodal capabilities and adaptive segmentation strategies promise to further optimize educational applications and clinical decision-making support.",
+    "year": 2025,
+    "venue": "Medical education online",
+    "authors": [
+      "Yung-Hsu Lei",
+      "Chien-Chung Chen",
+      "Ching-Ju Shen"
+    ],
+    "doi": "10.1080/10872981.2025.2602788",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41385283/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41385283"
+    }
+  },
+  {
+    "paper_id": "pubmed:41359388",
+    "title": "Mechanistic insights into the monotherapy and combination potential of FEN1 inhibition in cancer therapy.",
+    "abstract": "Flap endonuclease 1 (FEN1) is a structure-specific nuclease with critical functions in DNA replication and repair. FEN1 has been proposed as an anti-cancer drug target because of its synthetic lethal interaction with homologous recombination deficiency (HRD). However, the exploration of FEN1 in this context has been hampered by the lack of suitable small molecule tools. Here, we describe MSC778, a highly potent, specific and selective small molecule inhibitor of FEN1 nuclease activity. MSC778 directly engages FEN1 in cells, enhances its retention on chromatin, and selectively kills BRCA-deficient cells. Mechanistically, MSC778 suppresses DNA replication causing S-phase accumulation, DNA damage, and ultimately, cell death. Cancer cell panel screening identified Ewing sarcoma (EWS) cells as sensitive to MSC778, which is driven by the expression of SLFN11. In addition to HRD, CRISPR screening revealed a spectrum of synthetic lethal interactions between MSC778 and DNA damage response (DDR) factors, such as PARP1, USP1, PARG, and ATR. Furthermore, we demonstrate that combined inhibition of these factors with MSC778 induces synergistic killing of cancer cells. Together these data highlight FEN1 inhibition as an attractive precision oncology strategy either as monotherapy or as a combination therapy with a broad range of current and next generation DDR-targeting agents.",
+    "year": 2025,
+    "venue": "Nucleic acids research",
+    "authors": [
+      "Eeson Rajendra",
+      "Claudio A Lademann",
+      "Bethany Mason",
+      "Balca R Mardin",
+      "Lucy Armstrong",
+      "Silvia Peripolli",
+      "Julian Kreis",
+      "Timothea Konstantinou",
+      "Ulrich Pehl",
+      "Joerg Bomke",
+      "Stefanie Scharrelmann",
+      "David Perera",
+      "Birgitta Leuthner",
+      "Maria Filipa Pinto",
+      "Owen A Davis",
+      "Alessandro Galbiati",
+      "Ana Toste Rêgo",
+      "Claire L McWhirter",
+      "Elias Elinati",
+      "Ada Sala-Hojman",
+      "Julien Lefranc",
+      "Sam E Mann",
+      "Robert A Heald",
+      "Frank T Zenke",
+      "Graeme C M Smith",
+      "Helen M R Robinson",
+      "Lars T Burgdorf"
+    ],
+    "doi": "10.1093/nar/gkaf1279",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41359388/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41359388"
+    }
+  },
+  {
+    "paper_id": "pubmed:41334427",
+    "title": "Perspective on Using Artificial Intelligence in Alcohol Research and Treatment: Opportunities and Ethical Considerations.",
+    "abstract": "There is an urgent need for novel and innovative advancements in alcohol research and treatment. Artificial intelligence (AI) is one such advancement that demonstrates promise, though not without important ethical concerns. This Perspective article examines current applications, ethical considerations, and future implications of integrating AI in alcohol research and treatment. A nonsystematic narrative review of peer-reviewed, English-language studies of contemporary applications of AI (specifically, large language models and machine learning) in alcohol research and treatment was conducted in December 2024 through January 2025, using searches of the PubMed, Google Scholar, Web of Science, and PsycInfo databases. Search terms included the following: \"alcohol,\" \"alcohol use,\" \"alcohol use disorder,\" \"drinking,\" \"treatment,\" \"screening,\" \"artificial intelligence,\" \"chatbot,\" \"large language models,\" \"research subject recruitment,\" \"research subject enrollment,\" \"electronic health records,\" \"support vector machine,\" \"neural network,\" \"black-box,\" \"random forest,\" and \"machine learning.\" The article highlights studies that discussed the role of AI in bolstering recruitment and retention for human subjects research and in the application of advanced data analytic techniques for alcohol research. Further, the article examines studies that described current and prospective uses of AI in alcohol use disorder treatment, including assessment and identification of individuals who may benefit from treatment, and as an adjunct to evidence-based treatments for alcohol use disorder. Potential ethical concerns are highlighted alongside potential considerations for the safe and ethical use of AI across these domains. Based on the identified primary and secondary sources, this review highlights the promises of AI in advancing both alcohol research and treatment, and how its successful implementation is supported by careful and ongoing attention to potential risks. The reviewed studies provide evidence that robust data security protocols, comprehensive informed consent, and ongoing monitoring for potential biases and harms can allow for these tools to advance scientific understanding while improving access to effective and equitable care. However, the current literature and the potential solutions suggested in this Perspective have limitations due to the pace of AI advancements that continue to accelerate at an unprecedent rate. Future research can advance the field by explicitly testing and evaluating the utility of these tools in real-world contexts, their risks for bias and privacy violations, and their ethical integration into alcohol research and treatment.",
+    "year": 2025,
+    "venue": "Alcohol research : current reviews",
+    "authors": [
+      "David I K Moniz-Lewis",
+      "Megan Kirouac",
+      "Matison W McCool",
+      "Frank J Schwebel",
+      "Katie Witkiewitz"
+    ],
+    "doi": "10.35946/arcr.v45.1.12",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41334427/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41334427"
+    }
+  },
+  {
+    "paper_id": "pubmed:41328918",
+    "title": "Relevance of Prognosis Tools in Periodontitis: A Systematic Review.",
+    "abstract": "Tooth-level prognostic systems can be used for treatment planning and help to identify teeth at risk of being lost over time. However, several sets of criteria were proposed to estimate tooth prognosis in the context of periodontitis patients. To identify the prognosis tools available and to evaluate their relevance in predicting periodontal-related tooth loss (TLP). An electronic search was conducted for published data in MEDLINE, EMBASE, COCHRANE up to January 2025. Reference lists of retrieved studies for full-text screening and reviews were hand-searched for potentially eligible studies. In total, 1,471 records were identified from databases, and an additional 7 unique records were identified through citation searching of selected studies from the database search. After screening, 33 studies were selected for full-text review, of which 22 were included in the final selection, with 6 classical models, 11 regression-based models, 2 AI-driven prognostic models and 3 external validations. Most prognostic models confirm high precision and accuracy, fluctuating in most cases around a value of area under the curve (AUC) = 0.8. Patient (smoking, diabetes) and tooth-related factors (furcation involvement, increased probing depth, mobility) influence the prognosis of tooth retention in the long term. The identification of prognostic factors is of crucial importance to better predict the long-term survival of teeth and to adapt the treatment plan. All prognostic systems at the dental level showed excellent predictive capacity for the risk of tooth loss linked to periodontitis. An AI-based machine-learning algorithm will be a helpful tool for determining tooth prognosis.",
+    "year": 2025,
+    "venue": "Oral health & preventive dentistry",
+    "authors": [
+      "Amélie Sarbacher",
+      "Pierre-Yves Gegout",
+      "Olivier Huck"
+    ],
+    "doi": "10.3290/j.ohpd.c_2387",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41328918/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41328918"
+    }
+  }
+]

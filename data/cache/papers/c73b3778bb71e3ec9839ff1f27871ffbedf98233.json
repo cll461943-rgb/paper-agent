@@ -1,0 +1,34 @@
+{
+  "paper_id": "http://arxiv.org/abs/2602.07546v1",
+  "title": "Improving Variable-Length Generation in Diffusion Language Models via Length Regularization",
+  "abstract": "Diffusion Large Language Models (DLLMs) are inherently ill-suited for variable-length generation, as their inference is defined on a fixed-length canvas and implicitly assumes a known target length. When the length is unknown, as in realistic completion and infilling, naively comparing confidence across mask lengths becomes systematically biased, leading to under-generation or redundant continuations. In this paper, we show that this failure arises from an intrinsic lengthinduced bias in generation confidence estimates, leaving existing DLLMs without a robust way to determine generation length and making variablelength inference unreliable. To address this issue, we propose LR-DLLM, a length-regularized inference framework for DLLMs that treats generation length as an explicit variable and achieves reliable length determination at inference time. It decouples semantic compatibility from lengthinduced uncertainty through an explicit length regularization that corrects biased confidence estimates. Based on this, LR-DLLM enables dynamic expansion or contraction of the generation span without modifying the underlying DLLM or its training procedure. Experiments show that LRDLLM achieves 51.3% Pass@1 on HumanEvalInfilling under fully unknown lengths (+13.4% vs. DreamOn) and 51.5% average Pass@1 on four-language McEval (+14.3% vs. DreamOn).",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Zicong Cheng",
+    "Ruixuan Jia",
+    "Jia Li",
+    "Guo-Wei Yang",
+    "Meng-Hao Guo",
+    "Shi-Min Hu"
+  ],
+  "doi": null,
+  "arxiv_id": "2602.07546v1",
+  "url": "http://arxiv.org/abs/2602.07546v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:method_task",
+    "route:title_like",
+    "route:original_clean",
+    "route:query2doc",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "paper_id": "https://openalex.org/W4402671706",
+  "title": "DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution",
+  "abstract": "Fine-tuning large-scale pre-trained models is inherently a resource-intensive task.While it can enhance the capabilities of the model, it also incurs substantial computational costs, posing challenges to the practical application of downstream tasks.Existing parameter-efficient fine-tuning (PEFT) methods such as Low-Rank Adaptation (LoRA) rely on a bypass framework that ignores the differential parameter budget requirements across weight matrices, which may lead to suboptimal fine-tuning outcomes.To address this issue, we introduce the Dynamic Low-Rank Adaptation (DoRA) method.DoRA decomposes high-rank LoRA layers into structured single-rank components, allowing for dynamic pruning of parameter budget based on their importance to specific tasks during training, which makes the most of the limited parameter budget.Experimental results demonstrate that DoRA can achieve competitive performance compared with LoRA and full model fine-tuning, and outperform various strong baselines with the same storage parameter budget.",
+  "year": 2024,
+  "venue": null,
+  "authors": [
+    "Yulong Mao",
+    "Kaiyu Huang",
+    "Changhao Guan",
+    "Ganglin Bao",
+    "Fengran Mo",
+    "Jinan Xu"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2024.acl-long.626",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.18653/v1/2024.acl-long.626",
+  "citation_count": 15,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Rank (graph theory)",
+      "Computer science",
+      "Distribution (mathematics)",
+      "Mathematical optimization",
+      "Mathematics",
+      "Combinatorics",
+      "Mathematical analysis"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2390279801",
+      "https://openalex.org/W2358668433",
+      "https://openalex.org/W4396701345",
+      "https://openalex.org/W2376932109",
+      "https://openalex.org/W2001405890",
+      "https://openalex.org/W4396696052",
+      "https://openalex.org/W2382290278",
+      "https://openalex.org/W4395014643"
+    ]
+  }
+}

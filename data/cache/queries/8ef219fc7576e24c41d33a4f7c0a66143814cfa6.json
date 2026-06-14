@@ -1,0 +1,569 @@
+[
+  {
+    "paper_id": "pubmed:42166787",
+    "title": "Japanese-Language AI Agent System for Human Papillomavirus Vaccine Infoveillance and Public Communication: Development and Feasibility Evaluation.",
+    "abstract": "Human papillomavirus (HPV) vaccine hesitancy remains a significant public health challenge in Japan, where proactive vaccination recommendations were suspended between 2013 and 2021. The resulting information gap between medical institutions and vaccine-hesitant populations is exacerbated by misinformation on social media platforms. Traditional public health communication strategies cannot address individual queries while simultaneously monitoring population-level discourse. This study aimed to develop and conduct a feasibility evaluation of a dual-purpose artificial intelligence agent system that delivers verified HPV vaccine information to the public through a conversational interface while generating infoveillance reports for medical institutions based on user interactions and social media discourse. We implemented a system with 3 components: a vector database integrating 139,803 documents, including academic papers, Japanese government sources, news media, and social media posts; a retrieval-augmented generation chatbot using a ReAct agent architecture with iterative multitool orchestration across 5 specialized knowledge sources; and an automated report generation system with modules for news analysis, research synthesis, social media sentiment analysis, including stance classification and topic modeling, and user interaction pattern identification. System performance was assessed using both automated and manual evaluation protocols on a scale from 0 to 5. The entire system functioned as expected. For single-turn evaluation, the chatbot achieved mean scores of 4.83 (SD 0.67; 95% CI 4.71-4.93) for relevance, 4.89 (SD 0.53; 95% CI 4.79-4.97) for routing, 4.50 (SD 1.29; 95% CI 4.27-4.70) for reference quality, 4.90 (SD 0.62; 95% CI 4.78-4.99) for correctness, and 4.88 (SD 0.54; 95% CI 4.78-4.96) for professional identity, with an overall mean of 4.80. Multiturn evaluation yielded higher mean scores: 4.94 for context memory (SD 0.25; 95% CI 4.84-5.00) and an overall mean of 4.98, with topic centering and identity achieving 5.00. The report generation system achieved high scores across all sections: 4.83 for completeness (SD 0.37; 95% CI 4.73-4.94), 4.88 for correctness (SD 0.33; 95% CI 4.77-4.96), and 4.12 for helpfulness (SD 0.48; 95% CI 3.98-4.27). Reference validity achieved perfect scores (5.00) across all periods, with citation correctness averaging 4.21 (SD 0.58; 95% CI 3.96-4.46). This feasibility study demonstrated that an integrated artificial intelligence agent system can support both public HPV vaccine communication and social media infoveillance in a Japanese-language context. Prospective deployment with real users is needed to assess actual public health impact.",
+    "year": 2026,
+    "venue": "JMIR infodemiology",
+    "authors": [
+      "Junyu Liu",
+      "Siwen Yang",
+      "Dexiu Ma",
+      "Qian Niu",
+      "Zequn Zhang",
+      "Momoko Nagai-Tanima",
+      "Tomoki Aoyama"
+    ],
+    "doi": "10.2196/90295",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42166787/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42166787"
+    }
+  },
+  {
+    "paper_id": "pubmed:41988400",
+    "title": "From simulated empathy to structural attunement: Realtime Editable Memory Topology and the evolution of emotionally grounded AI.",
+    "abstract": "Large language models (LLMs) and retrieval-augmented generation (RAG) systems have achieved remarkable linguistic fluency, and many now implement persistent cross-session memory at the application layer. However, these mechanisms typically rely on external storage and reinjection of stored content rather than structural reorganization of memory relationships. As a result, they remain limited in their ability to integrate affective salience into a dynamically evolving internal memory topology capable of supporting coherent long-term behavior. To address this gap, we introduce Realtime Editable Memory Topology (REMT), an architectural framework for imbuing conversational agents with persistent autobiographical memory organized as an evolving graph of emotionally valenced nodes. REMT formalizes synthetic neuroplasticity through explicit update rules governing edge reinforcement, decay, and pruning, and introduces a bounded Mood Index that modulates retrieval bias and response generation as a function of accumulated affective experience. In this Perspective, we argue that memory-grounded architectures integrating insights from cognitive science, affective computing, and memory-augmented neural systems are necessary for building adaptive conversational agents with stable long-term interactional tendencies. We conclude by outlining a roadmap for empirical validation using an internally developed evaluation framework, with results to be reported in a future Original Research article.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "John Albanese"
+    ],
+    "doi": "10.3389/frai.2026.1749517",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41988400/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41988400"
+    }
+  },
+  {
+    "paper_id": "pubmed:41959814",
+    "title": "Combining Token Classification With Large Language Model Revision for Age-Friendly 4M Entity Recognition From Nursing Home Text Messages: Development and Evaluation Study.",
+    "abstract": "Secure text messages (TMs) exchanged among interdisciplinary care teams in nursing homes (NHs) contain clinical information that aligns with the Age-Friendly Health Systems 4Ms: What  This study aimed to develop and evaluate a multi-stage 4M Entity Recognition (4M-ER) pipeline that combines a fine-tuned token classifier with large language model (LLM) revision, using only locally deployed open-source models, to improve 4M information extraction from clinical TMs. We used an expert-annotated dataset of 1,169 TMs representing conversations between interdisciplinary care teams across 16 Midwest NHs. The pipeline first identifies candidate text spans using a fine-tuned Bio-ClinicalBERT token classifier. A semantic similarity retriever then selects in-context exemplars to guide an LLM revision in which the LLM (Gemma, Phi, Qwen, or Mistral) performs boundary correction, label evaluation, and selective acceptance or rejection of candidate spans. Baselines for comparison included single-stage zero-shot LLMs, single-stage fine-tuned Bio-ClinicalBERT, and a fine-tuned LLM (Gemma) from a prior study. Ablation studies assessed the contribution of each pipeline stage and the effect of message filtering. Robustness was evaluated across 5 repeated runs. The 4M-ER pipeline outperformed the previously fine-tuned Gemma LLM across all 4M domains, achieving F  The 4M-ER pipeline enables accurate and scalable extraction of 4M entities from clinical TMs by combining fine-tuned Bio-ClinicalBERT with LLM revision using only locally deployed open-source models. The structured 4M data produced by the pipeline can support 4M taxonomy and ontology construction, as demonstrated in the prior work, and provides a foundation for downstream applications including real-time clinical surveillance, compliance with emerging age-friendly quality measures, and predictive modeling in long-term care settings.",
+    "year": 2026,
+    "venue": "medRxiv : the preprint server for health sciences",
+    "authors": [
+      "Philip Amewudah",
+      "Mihail Popescu",
+      "Matthew S Farmer",
+      "Kimberly R Powell"
+    ],
+    "doi": "10.64898/2026.03.31.26349861",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41959814/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41959814"
+    }
+  },
+  {
+    "paper_id": "pubmed:41847083",
+    "title": "Providers of relief in distress: RAG-based LLMs as situation and intent-aware assistants.",
+    "abstract": "In high-stress humanitarian and mental health contexts, timely access to accurate, empathetic, and actionable information remains critically limited, especially for at-risk and underserved populations. This work introduces LLooMi, an open-source, retrieval-augmented generation (RAG) conversational agent designed to deliver trustworthy, emotionally attuned, and context-aware support across domains such as mental health crises, housing insecurity, medical emergencies, immigration, and food access. Leveraging large language models (LLMs) with structured prompting, LLooMi reformulates user queries into actionable intents, often implicit, emotionally charged, or vague. It then retrieves and grounds responses in a curated, domain-specific knowledge base, without storing personal user data, aligning with privacy-preserving and ethical AI design principles. LLooMi adopts an intent-aware architecture that adapts its tone, content, and level of detail based on the user's inferred psychological state and informational goals. This step enables delivering fast, directive responses in acute distress scenarios or longer, validation-oriented support when emotional reassurance is needed, emulating key facets of therapeutic communication. By integrating NLP-driven semantic retrieval, structured dialogue memory, and emotionally adaptive generation, LLooMi offers a novel approach to scalable, human-centered digital mental health interventions. Evaluation shows an average answer correctness (AC) of 92.4% and answer relevancy (AR) of 84.9%, with high scores in readability, perceived trust, and ease of use. These results suggest LLooMi's potential as a complementary NLP-based tool for mental health support in digital psychiatry and crisis care.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Ahmad M Nazar",
+      "Brianna Norman",
+      "Halle Northway",
+      "Abrahim Toutoungi",
+      "Emma Zatkalik",
+      "Gabriel Carlson",
+      "Ellery Sabado",
+      "Hamza Shawa",
+      "Mohamed Y Selim"
+    ],
+    "doi": "10.3389/frai.2026.1712596",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41847083/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41847083"
+    }
+  },
+  {
+    "paper_id": "pubmed:41847080",
+    "title": "Synthetic relationships with Social Pedagogical Agents in education: a scoping literature review.",
+    "abstract": "As AI in education increasingly takes the form of Social Pedagogical Agents (SPAs), learners begin to relate to these systems in human-like ways. Concepts such as social presence, affective support, trust, and rapport are widely studied but scattered across domains, labels, and measures. This scoping review maps how \"synthetic relationships\" between students and SPAs are described in empirical educational research and how SPA design and interaction features relate to students' learning experiences and, when reported, outcomes. Following PRISMA guidelines for scoping reviews, database searches (Scopus, Web of Science, ACM Digital Library, IEEE Xplore, ERIC, PsycINFO) were conducted in August 2025 for peer-reviewed English-language studies (2010-2025) in educational settings involving SPAs with social or relational capabilities and indicators of relationship quality. We excluded studies on physical robots, noneducational contexts, purely functional outcomes, or nonempirical/grey literature. After screening 216 unique records, 29 studies were retained and thematically analyzed to identify recurring design levers, relational constructs, and links to learning. Studies showed substantial terminological and methodological diversity, with short, single-session experiments predominating. Eight recurring design levers shaping relationship quality emerged: (1) voice and appearance, (2) congruence and alignment, (3) empathy expression, (4) social safety and disclosure, (5) transparent personalization, (6) refutational explanations, (7) memory and consistency, and (8) interaction duration. Across studies, SPAs enhanced four key aspects of relationship quality: (a) social presence, (b) affective support, (c) trust, and (d) rapport. Learning gains were strongest when these indicators aligned with sound pedagogy. Synthetic relationships with SPAs function as enabling conditions that enhance the learning climate-motivation, effort, and honesty-rather than directly improving test scores. We group the eight design levers into four categories: expressive (how the agent signals), relational (how it connects), transparency (what it communicates and why), and structural (how interaction unfolds). These, paired with the four relational indicators, form a practical framework for optimizing student-SPA relationships. Future work should prioritize multi-session and longitudinal designs, standardize relational measures, and address ethical concerns around purpose, transparency, influence limits, and shared oversight. When coupled with sound pedagogy, SPAs show strong potential to augment teaching and enrich learning.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Sebas Nouwen",
+      "Janienke Sturm",
+      "Uwe Matzat",
+      "Wijnand IJsselsteijn"
+    ],
+    "doi": "10.3389/frai.2026.1625438",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41847080/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41847080"
+    }
+  },
+  {
+    "paper_id": "pubmed:40775937",
+    "title": "Advancing Patient-AI Conversations with Recursive Learning Memory Using Relational Frame Theory.",
+    "abstract": "The future of Artificial General Intelligence (AGI) in bedside care relies on integrating human psychological principles to foster advanced cognitive abilities such as reasoning, problem-solving, and spatial awareness. Key features like recursive learning memory and human-like context awareness allow AI systems to continuously learn and recall patient information in a relational manner. To achieve this, we propose an AI framework based on Relational Frame Theory (RFT), which organizes patient data to reflect human relational patterns. This approach enables iterative and context-sensitive information retrieval through a dynamic knowledge graph. Our evaluations demonstrate that this method enhances patient interactions, offering deeper, more personalized engagement that surpasses traditional Retrieval Augmented Generation in its ability to emulate nuanced, human-like understanding.",
+    "year": 2025,
+    "venue": "Studies in health technology and informatics",
+    "authors": [
+      "Rishu Goyal",
+      "Yifei Dong",
+      "Kun Yu",
+      "Fang Chen"
+    ],
+    "doi": "10.3233/SHTI250919",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40775937/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40775937"
+    }
+  },
+  {
+    "paper_id": "pubmed:40031689",
+    "title": "A Dual-Modal Fusion Framework for Detection of Mild Cognitive Impairment Based on Autobiographical Memory.",
+    "abstract": "This paper introduces a dual-modal early cognitive impairment detection system based on autobiographical memory (AM) tests, and our approach is to automatically extract pre-defined acoustic features and self-designed embeddings to enhance linguistic representation of the spontaneous speech data. By integrating dual-modal data, we effectively enrich the features that aid in model learning, especially addressing the subtle symptoms exhibited by individuals with mild cognitive impairment (MCI), an intermediate stage between healthy individuals and those with Alzheimer's disease (AD). To account for spontaneous speech's unstructured and implicit nature, two additional embeddings, namely, speaker embedding and conversation embedding, are introduced to augment the information available for model learning, thus enriching the feature set for improving the model accuracy. The proposed dual-modal approach is tested on a self-collected Chinese spontaneous speech dataset due to the limited unstructured speech open-access dataset for MCI detection. The system's effectiveness is evaluated through a series of experiments, including ablation studies, to determine the impact of each module on overall performance. The proposed system achieved an average accuracy of 78% in detecting MCI, demonstrating its comparative effectiveness. Enhancements in our system are achieved by integrating a directional encoder tailored to capture temporal information across sequential visits. This addition leads to a 3% increase in detection accuracy within a subset of participants who have undergone multiple AM test sessions. Implementing such a longitudinal approach in analyzing unstructured speech data for MCI detection taps into a relatively underexplored area of research, offering new insights.",
+    "year": 2025,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Ho-Ling Chang",
+      "Thiri Wai",
+      "Yu-Shan Liao",
+      "Sheng-Ya Lin",
+      "Yu-Ling Chang",
+      "Li-Chen Fu"
+    ],
+    "doi": "10.1109/JBHI.2025.3540207",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40031689/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40031689"
+    }
+  },
+  {
+    "paper_id": "pubmed:39523408",
+    "title": "A fine-tuning enhanced RAG system with quantized influence measure as AI judge.",
+    "abstract": "This study presents an innovative enhancement to retrieval-augmented generation (RAG) systems by seamlessly integrating fine-tuned large language models (LLMs) with vector databases. This integration capitalizes on the combined strengths of structured data retrieval and the nuanced comprehension provided by advanced LLMs. Central to our approach are the LoRA and QLoRA methodologies, which stand at the forefront of model refinement through parameter-efficient fine-tuning and memory optimization. A novel feature of our research is the incorporation of user feedback directly into the training process, ensuring the model's continuous adaptation to user expectations and thus, improving its performance and applicability. Additionally, we introduce a Quantized Influence Measure (QIM) as an innovative \"AI Judge\" mechanism to enhance the precision of result selection, further refining the system's accuracy. Accompanied by an executive diagram and a detailed algorithm for fine-tuning QLoRA, our work provides a comprehensive framework for implementing these advancements within chatbot technologies. This research contributes significant insights into LLM optimization for specific uses and heralds new directions for further development in retrieval-augmented models. Through extensive experimentation and analysis, our findings lay a robust foundation for future advancements in chatbot technology and retrieval systems, marking a significant step forward in the creation of more sophisticated, precise, and user-centric conversational AI systems. We make the dataset , the data processing package huggify-data , the model , and the app publicly available for the community.",
+    "year": 2024,
+    "venue": "Scientific reports",
+    "authors": [
+      "Keshav Rangan",
+      "Yiqiao Yin"
+    ],
+    "doi": "10.1038/s41598-024-79110-x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39523408/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39523408"
+    }
+  },
+  {
+    "paper_id": "pubmed:37998082",
+    "title": "Empowering Deaf-Hearing Communication: Exploring Synergies between Predictive and Generative AI-Based Strategies towards (",
+    "abstract": "Communication between Deaf and hearing individuals remains a persistent challenge requiring attention to foster inclusivity. Despite notable efforts in the development of digital solutions for sign language recognition (SLR), several issues persist, such as cross-platform interoperability and strategies for tokenizing signs to enable continuous conversations and coherent sentence construction. To address such issues, this paper proposes a non-invasive Portuguese Sign Language (",
+    "year": 2023,
+    "venue": "Journal of imaging",
+    "authors": [
+      "Telmo Adão",
+      "João Oliveira",
+      "Somayeh Shahrabadi",
+      "Hugo Jesus",
+      "Marco Fernandes",
+      "Ângelo Costa",
+      "Vânia Ferreira",
+      "Martinho Fradeira Gonçalves",
+      "Miguel A Guevara Lopéz",
+      "Emanuel Peres",
+      "Luís Gonzaga Magalhães"
+    ],
+    "doi": "10.3390/jimaging9110235",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37998082/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37998082"
+    }
+  },
+  {
+    "paper_id": "pubmed:37539327",
+    "title": "Social skills training using multiple humanoid robots for individuals with autism spectrum conditions.",
+    "abstract": "Social skills training (SST) is used to help individuals with autism spectrum conditions (ASC) better understand the perspectives of others and social interactions, develop empathy skills, and learn how to engage with others socially. However, many individuals with ASC cannot easily sustain high motivation and concentration during such an intervention when it is administered by humans. We developed a social skills training program using multiple humanoid robots (STUH), including an android robot, that aimed to enable individuals with ASC to become familiar with the perspectives of others and improve their sociability and empathy skills. The objective of the present study was to investigate the effectiveness of STUH for these individuals. In STUH, we prepared 50 social exercises that consisted of conversations and behavioral interactions between an android robot and a simple humanoid robot. We prepared another humanoid robot that featured a cartoon-like and mechanical design, which played the role of host. In the first half-session of STUH, participants worked on the exercise from the perspective of an outsider. In the second half-session of STUH, they simulated experience by using robots as their avatars. The intervention associated with STUH was conducted for five days in total. We conducted an analysis of variance (ANOVA) featuring the intervention time point as the independent variable to examine changes in each score on the sociability index items. In total, 14 individuals with ASC participated in the study. The results of multiple comparison tests using the Bonferroni method indicated that all sociability index items improved between preintervention and follow-up. Our program enabled the participants to become familiar with the perspectives of others and improve their sociability. Given the promising results of this study, future studies featuring long-term follow-up should be conducted to draw definitive conclusions about the efficacy of our training system.",
+    "year": 2023,
+    "venue": "Frontiers in psychiatry",
+    "authors": [
+      "Keiji Takata",
+      "Yuichiro Yoshikawa",
+      "Taro Muramatsu",
+      "Yoshio Matsumoto",
+      "Hiroshi Ishiguro",
+      "Masaru Mimura",
+      "Hirokazu Kumazaki"
+    ],
+    "doi": "10.3389/fpsyt.2023.1168837",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37539327/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37539327"
+    }
+  },
+  {
+    "paper_id": "pubmed:35293365",
+    "title": "Development of RehaBot-A Conversational Agent for Promoting Rewarding Activities in Users With Traumatic Brain Injury.",
+    "abstract": "In this article, we describe the development and preliminary testing of RehaBot-a chatbot that users communicate with via text messaging designed to augment behavioral activation (BA) treatment of reducing depression and increasing participation in individuals with moderate to severe traumatic brain injury (TBI). Outpatient brain injury rehabilitation facility. Outpatient brain injury clinicians and individuals with moderate to severe TBI. Focus groups, software demonstration trials, and single-case experiments with an A-B-A design. System Usability Scale (SUS) and self-reported completed target activities. Focus group feedback guided the development of a flexible system to be used in conjunction with face-to-face therapy, designed to provide reminders, encouragement, and supportive feedback. Two of 3 participants completed all 6 RehaBot tasks independently. One completed 4 tasks independently and a fifth with assistance. Average SUS score in demonstration trials was 76.77 (SD = 21.19). In 4 single-case experiments, participants completed their highest proportion of planned activities in the RehaBot phase and the lowest proportion of planned activities in the reversal phase. They all interacted with RehaBot daily, exchanging an average of 225 messages over the 1-week period, and average SUS score was 95 (SD = 4.74). Their open-ended feedback revealed that participants found RehaBot enjoyable and easy to use. They felt it was a helpful memory aid and promoted better adherence to planned activities by providing accountability and positive reinforcement. This article presents a chatbot development process heavily involving consumer input, which may serve as a model for future development efforts. Our findings provide preliminary evidence suggesting that RehaBot is usable and may promote better adherence to planned target activities. However, future research is needed to establish usability and efficacy of RehaBot and to explore applications of chatbots to other domains of TBI rehabilitation.",
+    "year": 2022,
+    "venue": "The Journal of head trauma rehabilitation",
+    "authors": [
+      "Amanda R Rabinowitz",
+      "George Collier",
+      "Monica Vaccaro",
+      "Roberto Wingfield"
+    ],
+    "doi": "10.1097/HTR.0000000000000770",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35293365/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "35293365"
+    }
+  },
+  {
+    "paper_id": "pubmed:33848972",
+    "title": "Innovative Virtual Role Play Simulations for Managing Substance Use Conversations: Pilot Study Results and Relevance During and After COVID-19.",
+    "abstract": "Substance use places a substantial burden on our communities, both economically and socially. In light of COVID-19, it is predicted that as many as 75,000 more people will die from alcohol and other substance use and suicide as a result of isolation, new mental health concerns, and various other stressors related to the pandemic. Public awareness campaigns that aim to destigmatize substance use and help individuals have meaningful conversations with friends, coworkers, or family members to address substance use concerns are a timely and cost-effective means of augmenting existing behavioral health efforts related to substance use. These types of interventions can supplement the work being done by existing public health initiatives. This pilot study examines the impact of the One Degree: Shift the Influence role play simulation, designed to teach family, friends, and coworkers to effectively manage problem-solving conversations with individuals that they are concerned about regarding substance use. Participants recruited for this mixed methods study completed a presurvey, the simulation, and a postsurvey, and were sent a 6-week follow-up survey. The simulation involves practicing a role play conversation with a virtual human coded with emotions, a memory, and a personality. A virtual coach provides feedback in using evidence-based communication strategies such as motivational interviewing. A matched sample analysis of variance revealed significant increases at follow-up in composite attitudinal constructs of preparedness (P<.001) and self-efficacy (P=.01), including starting a conversation with someone regarding substance use, avoiding upsetting someone while bringing up concerns, focusing on observable facts, and problem solving. Qualitative data provided further evidence of the simulation's positive impact on the ability to have meaningful conversations about substance use. This study provides preliminary evidence that conversation-based simulations like One Degree: Shift the Influence that use role play practice can teach individuals to use evidence-based communication strategies and can cost-effectively reach geographically dispersed populations to support public health initiatives for primary prevention.",
+    "year": 2021,
+    "venue": "JMIR formative research",
+    "authors": [
+      "Glenn Albright",
+      "Nikita Khalid",
+      "Kristen Shockley",
+      "Kelsey Robinson",
+      "Kevin Hughes",
+      "Bethany Pace-Danley"
+    ],
+    "doi": "10.2196/27164",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33848972/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "33848972"
+    }
+  },
+  {
+    "paper_id": "pubmed:32866108",
+    "title": "Social Reminiscence in Older Adults' Everyday Conversations: Automated Detection Using Natural Language Processing and Machine Learning.",
+    "abstract": "Reminiscence is the act of thinking or talking about personal experiences that occurred in the past. It is a central task of old age that is essential for healthy aging, and it serves multiple functions, such as decision-making and introspection, transmitting life lessons, and bonding with others. The study of social reminiscence behavior in everyday life can be used to generate data and detect reminiscence from general conversations. The aims of this original paper are to (1) preprocess coded transcripts of conversations in German of older adults with natural language processing (NLP), and (2) implement and evaluate learning strategies using different NLP features and machine learning algorithms to detect reminiscence in a corpus of transcripts. The methods in this study comprise (1) collecting and coding of transcripts of older adults' conversations in German, (2) preprocessing transcripts to generate NLP features (bag-of-words models, part-of-speech tags, pretrained German word embeddings), and (3) training machine learning models to detect reminiscence using random forests, support vector machines, and adaptive and extreme gradient boosting algorithms. The data set comprises 2214 transcripts, including 109 transcripts with reminiscence. Due to class imbalance in the data, we introduced three learning strategies: (1) class-weighted learning, (2) a meta-classifier consisting of a voting ensemble, and (3) data augmentation with the Synthetic Minority Oversampling Technique (SMOTE) algorithm. For each learning strategy, we performed cross-validation on a random sample of the training data set of transcripts. We computed the area under the curve (AUC), the average precision (AP), precision, recall, as well as F1 score and specificity measures on the test data, for all combinations of NLP features, algorithms, and learning strategies. Class-weighted support vector machines on bag-of-words features outperformed all other classifiers (AUC=0.91, AP=0.56, precision=0.5, recall=0.45, F1=0.48, specificity=0.98), followed by support vector machines on SMOTE-augmented data and word embeddings features (AUC=0.89, AP=0.54, precision=0.35, recall=0.59, F1=0.44, specificity=0.94). For the meta-classifier strategy, adaptive and extreme gradient boosting algorithms trained on word embeddings and bag-of-words outperformed all other classifiers and NLP features; however, the performance of the meta-classifier learning strategy was lower compared to other strategies, with highly imbalanced precision-recall trade-offs. This study provides evidence of the applicability of NLP and machine learning pipelines for the automated detection of reminiscence in older adults' everyday conversations in German. The methods and findings of this study could be relevant for designing unobtrusive computer systems for the real-time detection of social reminiscence in the everyday life of older adults and classifying their functions. With further improvements, these systems could be deployed in health interventions aimed at improving older adults' well-being by promoting self-reflection and suggesting coping strategies to be used in the case of dysfunctional reminiscence cases, which can undermine physical and mental health.",
+    "year": 2020,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Andrea Ferrario",
+      "Burcu Demiray",
+      "Kristina Yordanova",
+      "Minxia Luo",
+      "Mike Martin"
+    ],
+    "doi": "10.2196/19133",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32866108/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32866108"
+    }
+  },
+  {
+    "paper_id": "pubmed:32129088",
+    "title": "Educational Impact Drives Feasibility of Implementing Daily Assessment in the Workplace.",
+    "abstract": null,
+    "year": 2020,
+    "venue": "Teaching and learning in medicine",
+    "authors": [
+      "Nawaaz A Nathoo",
+      "Ravi Sidhu",
+      "Andrea Gingerich"
+    ],
+    "doi": "10.1080/10401334.2020.1729162",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32129088/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32129088"
+    }
+  },
+  {
+    "paper_id": "pubmed:32127193",
+    "title": "Pause for effect: A 10-s interviewer wait time gives children time to respond to open-ended prompts.",
+    "abstract": "When researchers and helping professionals interview children about a target event, how long should they tolerate silence before delivering another prompt? In other words, at what point are children so unlikely to begin talking again that continued silence would likely be unproductive? To test the reasonableness of a 10-s wait time guideline during open-ended prompting, we analyzed the wait times of research assistants (N = 7) who interviewed with a 10-s guideline, timed how quickly children responded to prompts, and also timed pauses within children's event narratives. In our sample (105 conversations with children aged 4-8 years), interviewers complied fully with the 10-s rule in the majority of interviews, children often paused for longer than 5 s before beginning to talk about the event or continuing a narrative, and more than 96% of children's pauses that were followed by event information fell within the 10-s window. These findings show that the 10-s wait time was a practical guideline that gave children time to respond without peppering interviews with uncomfortably long pauses. We conclude that adding wait time guidelines to protocols for interviewing children, and augmenting guidelines with wait time training for research assistants and helping professionals, could improve the quality of information obtained from children and advance our understanding of age differences in event memory.",
+    "year": 2020,
+    "venue": "Journal of experimental child psychology",
+    "authors": [
+      "Brooke E Rezmer",
+      "Lisa A Trager",
+      "Mary Catlin",
+      "Debra Ann Poole"
+    ],
+    "doi": "10.1016/j.jecp.2020.104824",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32127193/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32127193"
+    }
+  },
+  {
+    "paper_id": "pubmed:27838546",
+    "title": "Prospective content in the friendship conversations of young adults.",
+    "abstract": "Prospection is cognitive processes that involve constructing, encoding, and remembering the future. Less is known about the how these processes are evident in the prospective content of conversations. This study sought to identify and describe evidence of the prospective content in the conversations of friends as they transition to adulthood. The present secondary content analysis of the videotaped conversations of 15 young adult friendship dyads (n = 30, 16 females, 14 males, mean age = 21.3 years) in Canada examined these conversations based the following characteristics of prospection: simulation, reasoning about counterfactuals, constructing multiple possible futures, and episodic memory of the past. Four categories of prospective content were evident in these conversations, these processes were used sparingly in all but one conversation, and relatively few of them were collaborative in that dyad partners did not appear to serve to augment, clarify, or disconfirm prospective content.",
+    "year": 2017,
+    "venue": "Journal of adolescence",
+    "authors": [
+      "Richard A Young",
+      "Sheila K Marshall",
+      "John Murray"
+    ],
+    "doi": "10.1016/j.adolescence.2016.11.001",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27838546/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "27838546"
+    }
+  },
+  {
+    "paper_id": "pubmed:23708708",
+    "title": "The effect of familiarity of conversation partners on conversation turns contributed by augmented and typical speakers.",
+    "abstract": "The purpose of this current research was to determine the effect of familiarity of conversation partners on contributed conversation turns to dyadic conversation between individuals who use AAC and typically speaking conversation partners. Three groups (G1-G3) participated in this study. Each group contained seven participants, including an individual who used a speech-generating device (SGD) and familiar and unfamiliar conversation partners. Each 20-min dyadic conversation was video-recorded for analysis of contributed conversation turns. The findings of the current study showed that the asymmetries of contributed conversation turns exist in both familiar and unfamiliar dyadic conversation between AAC users and typically speaking conversation partners. In addition, the asymmetry in the familiar dyadic conversation did not differ from that in the unfamiliar dyadic conversation.",
+    "year": 2013,
+    "venue": "Research in developmental disabilities",
+    "authors": [
+      "Meng-Ju Tsai"
+    ],
+    "doi": "10.1016/j.ridd.2013.04.014",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23708708/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23708708"
+    }
+  },
+  {
+    "paper_id": "pubmed:23258389",
+    "title": "Characterising physician listening behaviour during hospitalist handoffs using the HEAR checklist.",
+    "abstract": "The increasing fragmentation of healthcare has resulted in more patient handoffs. Many professional groups, including the Accreditation Council on Graduate Medical Education and the Society of Hospital Medicine, have made recommendations for safe and effective handoffs. Despite the two-way nature of handoff communication, the focus of these efforts has largely been on the person giving information. To observe and characterise the listening behaviours of handoff receivers during hospitalist handoffs. Prospective observational study of shift change and service change handoffs on a non-teaching hospitalist service at a single academic tertiary care institution. The 'HEAR Checklist', a novel tool created based on review of effective listening behaviours, was used by third party observers to characterise active and passive listening behaviours and interruptions during handoffs. In 48 handoffs (25 shift change, 23 service change), active listening behaviours (eg, read-back (17%), note-taking (23%) and reading own copy of the written signout (27%)) occurred less frequently than passive listening behaviours (eg, affirmatory statements (56%) nodding (50%) and eye contact (58%)) (p<0.01). Read-back occurred only eight times (17%). In 11 handoffs (23%) receivers took notes. Almost all (98%) handoffs were interrupted at least once, most often by side conversations, pagers going off, or clinicians arriving. Handoffs with more patients, such as service change, were associated with more interruptions (r=0.46, p<0.01). Using the 'HEAR Checklist', we can characterise hospitalist handoff listening behaviours. While passive listening behaviours are common, active listening behaviours that promote memory retention are rare. Handoffs are often interrupted, most commonly by side conversations. Future handoff improvement efforts should focus on augmenting listening and minimising interruptions.",
+    "year": 2013,
+    "venue": "BMJ quality & safety",
+    "authors": [
+      "Elizabeth A Greenstein",
+      "Vineet M Arora",
+      "Paul G Staisiunas",
+      "Stacy S Banerjee",
+      "Jeanne M Farnan"
+    ],
+    "doi": "10.1136/bmjqs-2012-001138",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23258389/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23258389"
+    }
+  },
+  {
+    "paper_id": "pubmed:23256854",
+    "title": "AAC to support conversation in persons with moderate Alzheimer's disease.",
+    "abstract": "Even though we know that external memory aids support communication in Alzheimer's disease, the components of the communication aids for individuals with Alzheimer's disease have not been studied systematically. The goal of these two pilot experiments was to examine differences in conversational performance of adults with Alzheimer's disease related to the presence and absence of an aid, the type of symbol embedded in the aid, and the presence or absence of voice output. In Experiment 1, 30 adults with moderate-to-severe Alzheimer's disease participated in 10-min conversations with and without personalized AAC boards. There was no effect of AAC, regardless of symbol type, and a deleterious effect of voice output. In Experiment 2, modified spaced-retrieval training preceded conversations, standardized prompts were presented, and semantically-based dependent variables were examined. For the 11 participants in the second experiment, there was a significant effect of AAC, showing that the presence of AAC was associated with greater use of targeted words during personal conversations. We discuss new information about the contribution of AAC for persons with Alzheimer's disease, and demonstrate how the applied research process evolves over the course of a long-term commitment to a scientific investigation.",
+    "year": 2012,
+    "venue": "Augmentative and alternative communication (Baltimore, Md. : 1985)",
+    "authors": [
+      "Melanie Fried-Oken",
+      "Charity Rowland",
+      "Darlene Daniels",
+      "Mayling Dixon",
+      "Bret Fuller",
+      "Carolyn Mills",
+      "Glory Noethe",
+      "Jeon Small",
+      "Kevin Still",
+      "Barry Oken"
+    ],
+    "doi": "10.3109/07434618.2012.732610",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23256854/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23256854"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:34139656",
+  "title": "Unsupervised multi-sense language models for natural language processing tasks.",
+  "abstract": "Existing language models (LMs) represent each word with only a single representation, which is unsuitable for processing words with multiple meanings. This issue has often been compounded by the lack of availability of large-scale data annotated with word meanings. In this paper, we propose a sense-aware framework that can process multi-sense word information without relying on annotated data. In contrast to the existing multi-sense representation models, which handle information in a restricted context, our framework provides context representations encoded without ignoring word order information or long-term dependency. The proposed framework consists of a context representation stage to encode the variable-size context, a sense-labeling stage that involves unsupervised clustering to infer a probable sense for a word in each context, and a multi-sense LM (MSLM) learning stage to learn the multi-sense representations. Particularly for the evaluation of MSLMs with different vocabulary sizes, we propose a new metric, i.e., unigram-normalized perplexity (PPLu), which is also understood as the negated mutual information between a word and its context information. Additionally, there is a theoretical verification of PPLu on the change of vocabulary size. Also, we adopt a method of estimating the number of senses, which does not require further hyperparameter search for an LM performance. For the LMs in our framework, both unidirectional and bidirectional architectures based on long short-term memory (LSTM) and Transformers are adopted. We conduct comprehensive experiments on three language modeling datasets to perform quantitative and qualitative comparisons of various LMs. Our MSLM outperforms single-sense LMs (SSLMs) with the same network architecture and parameters. It also shows better performance on several downstream natural language processing tasks in the General Language Understanding Evaluation (GLUE) and SuperGLUE benchmarks.",
+  "year": 2021,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Jihyeon Roh",
+    "Sungjin Park",
+    "Bo-Kyeong Kim",
+    "Sang-Hoon Oh",
+    "Soo-Young Lee"
+  ],
+  "doi": "10.1016/j.neunet.2021.05.023",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/34139656/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "34139656"
+  }
+}

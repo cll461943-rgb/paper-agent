@@ -1,0 +1,56 @@
+{
+  "paper_id": "https://openalex.org/W4362598949",
+  "title": "RPTQ: Reorder-based Post-training Quantization for Large Language Models",
+  "abstract": "Large-scale language models (LLMs) have demonstrated impressive performance, but their deployment presents challenges due to their significant memory usage. This issue can be alleviated through quantization. In this paper, we identify that the challenge in quantizing activations in LLMs arises from varying ranges across channels, rather than solely the presence of outliers. To address this challenge, we introduce a quantization method called RPTQ, which utilizes a reorder-based approach. By rearranging the channels and quantizing them in clusters, RPTQ effectively mitigates the impact of range differences between channels. To minimize the overhead of the reorder operation, we fuse it into the layer norm operation and weights in linear layers. In our experiments, RPTQ achieved a significant breakthrough by utilizing 3-bit activation in LLMs for the first time, resulting in a substantial reduction in memory usage. For instance, quantizing OPT-175b can lead to a memory consumption reduction of up to 80%.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Zhihang Yuan",
+    "Lin Niu",
+    "Jiawei Liu",
+    "Wenyu Liu",
+    "Xinggang Wang",
+    "Yuzhang Shang",
+    "Guangyu Sun",
+    "Qiang Wu",
+    "Jiaxiang Wu",
+    "Bingzhe Wu"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2304.01089",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2304.01089",
+  "citation_count": 20,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Quantization (signal processing)",
+      "Computer science",
+      "Outlier",
+      "Software deployment",
+      "Overhead (engineering)",
+      "Algorithm",
+      "Artificial intelligence",
+      "Operating system"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2770234245",
+      "https://openalex.org/W96612179",
+      "https://openalex.org/W4229499248",
+      "https://openalex.org/W2566006169",
+      "https://openalex.org/W2987774938",
+      "https://openalex.org/W4256492088",
+      "https://openalex.org/W632915154",
+      "https://openalex.org/W2055733372"
+    ]
+  }
+}

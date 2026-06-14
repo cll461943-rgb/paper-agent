@@ -1,0 +1,25 @@
+{
+  "paper_id": "pubmed:42211289",
+  "title": "RareCure: An Open-Source Artificial Intelligence Pipeline for Context-Adaptive Treatment Discovery in Rare Solid Tumors.",
+  "abstract": "Background Rare cancers account for approximately 25-30% of cancer diagnoses in the United States, yet precision-oncology infrastructure has been built primarily for common tumor types. Soft tissue sarcomas exemplify this national gap: over 50 histological subtypes affect approximately 13,000 Americans each year, fewer than 5% of subtypes have dedicated clinical trials, and five-year metastatic survival has remained below 20% for decades. The National Cancer Institute has identified acceleration of precision approaches for understudied cancers as a federal strategic priority. This work introduces RareCure, an open-source artificial intelligence pipeline that automatically generates evidence-ranked therapeutic option dossiers for rare solid tumors, released under the Massachusetts Institute of Technology (MIT) license for unrestricted adoption by United States academic medical centers, community oncology practices, and resource-limited research settings. Methods RareCure integrates six computational modules previously available only as disconnected tools: somatic variant processing with tiered annotation; neoantigen prediction with dual human leukocyte antigen (HLA) resolution (architectural; batch-scale validation pending); drug-gene matching across four curated databases with harmonized scoring; clinical trial screening with ontology-aware query expansion to surface basket trials invisible to rare-subtype searches; retrieval-augmented evidence generation; and a context-adaptive orchestration agent using large language model (LLM) reasoning constrained by deterministic weight clamping, functionally verified through boundary condition testing. The pipeline was validated retrospectively on 260 soft tissue sarcoma patients from The Cancer Genome Atlas Sarcoma cohort (TCGA-SARC). A dual deployment architecture supports cloud-hosted LLMs for de-identified research data and locally hosted open-source models for institutional settings under the Health Insurance Portability and Accountability Act (HIPAA). Results The pipeline executed end-to-end on all 260 patients. At least one Tier 1 or Tier 2 drug match (US FDA-approved or genomically matched) was identified in 30.0% of patients (78/260; 95% confidence interval (CI): 24.5-36.0%), consistent with the 20-40% range reported in independent sarcoma genomic profiling studies, with partial overlap noted between the TCGA cohort and the OncoKB knowledge base used for tier annotation. Biomarker-driven matching was achieved in 78.8% of patients (205/260; 95% CI: 73.4-83.6%). Interpretation cost was $303.74 ($1.17 per patient), excluding upstream sequencing. Deterministic weight clamping triggered in 0.0% of standard runs; a boundary condition test confirmed correct interception of extreme weight distributions. Conclusions RareCure demonstrates that end-to-end treatment discovery for rare solid tumors can be automated within a single open-source pipeline, producing actionability rates concordant with published benchmarks at interpretation costs compatible with broad research applicability. The deterministic clamping design pattern, adaptive LLM reasoning within auditable bounds, has applicability beyond oncology to clinical artificial intelligence requiring regulatory traceability. Module-level ablation and external cohort validation are designated next steps. Source code is freely available under the MIT license without licensing barriers.",
+  "year": 2026,
+  "venue": "Cureus",
+  "authors": [
+    "Danielmartin Arogyasami"
+  ],
+  "doi": "10.7759/cureus.109744",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42211289/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42211289"
+  }
+}

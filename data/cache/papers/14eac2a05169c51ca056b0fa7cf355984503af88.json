@@ -1,0 +1,25 @@
+{
+  "paper_id": "http://arxiv.org/abs/2506.15025v1",
+  "title": "Optimal Embedding Learning Rate in LLMs: The Effect of Vocabulary Size",
+  "abstract": "Pretraining large language models is a costly process. To make this process more efficient, several methods have been proposed to optimize model architecture/parametrization and hardware use. On the parametrization side, $μP$ (Maximal Update Parametrization) parametrizes model weights and learning rate (LR) in a way that makes hyperparameters (HPs) transferable with width (embedding dimension): HPs can be tuned for a small model and used for larger models without additional tuning. While $μ$P showed impressive results in practice, recent empirical studies have reported conflicting observations when applied to LLMs. One limitation of the theory behind $μ$P is the fact that input dimension (vocabulary size in LLMs) is considered fixed when taking the width to infinity. This is unrealistic since vocabulary size is generally much larger than width in practice. In this work, we provide a theoretical analysis of the effect of vocabulary size on training dynamics, and subsequently show that as vocabulary size increases, the training dynamics \\emph{interpolate between the $μ$P regime and another regime that we call Large Vocab (LV) Regime}, where optimal scaling rules are different from those predicted by $μ$P. Our analysis reveals that in the LV regime, the optimal embedding LR to hidden LR ratio should roughly scale as $Θ(\\sqrt{width})$, surprisingly close to the empirical findings previously reported in the literature, and different from the $Θ(width)$ ratio predicted by $μ$P. We conduct several experiments to validate our theory, and pretrain a 1B model from scratch to show the benefit of our suggested scaling rule for the embedding LR.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Soufiane Hayou",
+    "Liyuan Liu"
+  ],
+  "doi": null,
+  "arxiv_id": "2506.15025v1",
+  "url": "http://arxiv.org/abs/2506.15025v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:42081529",
+  "title": "FairCareNLP: An AI-driven patient review analyzer for healthcare.",
+  "abstract": "To develop and evaluate an automatic patient review analyzer that applies advanced Natural Language Processing (NLP) and machine learning methods to improve the efficiency, fairness, and accuracy of healthcare feedback analysis. We designed a multi-component pipeline incorporating sentiment analysis, key theme extraction, clinical Named Entity Recognition (NER), and fairness modules. Bias mitigation was addressed through the integration of three complementary approaches: adversarial debiasing, Hard Debiasing, and Iterative Null-space Projection (INLP). Multiple BERT-based models (DistilBERT, BioBERT, RoBERTa-base, BERT-base-uncased) were trained and evaluated under varying hyperparameters and fairness/adversarial loss configurations. Model performance was assessed using accuracy, F1, recall, precision, AUC, Equalized Odds (EOD), and Word Embedding Association Test (WEAT) metrics. Adversarial loss ([Formula: see text]) consistently decreased model performance across accuracy, F1, precision, and recall. In contrast, Hard Debiasing and INLP improved WEAT scores while preserving or enhancing other metrics, with INLP yielding the best overall performance. Specifically, INLP with fairness loss improved EOD by 14%, gender WEAT scores by 15%, and achieved slight gains for ethnicity and socioeconomic WEAT scores. The best model achieved accuracy of 0.856, F1 score of 0.812, recall of 0.798, and precision of 0.829. The key theme analysis module identified 82% of expert-labeled themes, though 21% of patient comments lacked expert labels for valence or related attributes. Our results demonstrate the trade-offs between fairness and performance in bias mitigation strategies. While adversarial debiasing reduced predictive accuracy, INLP and Hard Debiasing improved fairness without significant degradation in task performance. Gender bias was easier to mitigate than multi-class sensitive attributes such as ethnicity and income. This difference indicates a need for fairness techniques designed for multi-class sensitive attributes. This work presents an NLP pipeline for patient feedback analysis with multiple debiasing strategies. This pipeline improves the fairness and accuracy of insights from unstructured patient reviews and supports inclusive patient-centered care.",
+  "year": 2026,
+  "venue": "PloS one",
+  "authors": [
+    "Sayyed Mohammad Pourya Momtaz Esfahani",
+    "Davey Seeman",
+    "Christoffer Dharma",
+    "Mohammad Noaeen",
+    "Shion Guha",
+    "Zahra Shakeri"
+  ],
+  "doi": "10.1371/journal.pone.0337676",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42081529/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym",
+    "route:hybrid",
+    "route:entity_dataset",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42081529"
+  }
+}

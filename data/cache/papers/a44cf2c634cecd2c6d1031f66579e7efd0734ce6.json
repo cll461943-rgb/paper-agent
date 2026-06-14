@@ -1,0 +1,70 @@
+{
+  "paper_id": "https://openalex.org/W3035422656",
+  "title": "Robustness to Spurious Correlations via Human Annotations",
+  "abstract": "The reliability of machine learning systems critically assumes that the associations between features and labels remain similar between training and test distributions. However, unmeasured variables, such as confounders, break this assumption---useful correlations between features and labels at training time can become useless or even harmful at test time. For example, high obesity is generally predictive for heart disease, but this relation may not hold for smokers who generally have lower rates of obesity and higher rates of heart disease. We present a framework for making models robust to spurious correlations by leveraging humans' common sense knowledge of causality. Specifically, we use human annotation to augment each training example with a potential unmeasured variable (i.e. an underweight patient with heart disease may be a smoker), reducing the problem to a covariate shift problem. We then introduce a new distributionally robust optimization objective over unmeasured variables (UV-DRO) to control the worst-case loss over possible test-time shifts. Empirically, we show improvements of 5-10% on a digit recognition task confounded by rotation, and 1.5-5% on the task of analyzing NYPD Police Stops confounded by location.",
+  "year": 2020,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Megha Srivastava",
+    "Tatsunori Hashimoto",
+    "Percy Liang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2007.06661",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2007.06661",
+  "citation_count": 26,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:core_topic",
+    "route:entity_dataset",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Spurious relationship",
+      "Computer science",
+      "Covariate",
+      "Robustness (evolution)",
+      "Causality (physics)",
+      "Machine learning",
+      "Artificial intelligence",
+      "Confounding",
+      "Correlation",
+      "Statistics",
+      "Mathematics",
+      "Biochemistry",
+      "Physics",
+      "Gene",
+      "Geometry",
+      "Quantum mechanics",
+      "Chemistry"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2994934025",
+      "https://openalex.org/W2963341956",
+      "https://openalex.org/W2162651021",
+      "https://openalex.org/W3177397812",
+      "https://openalex.org/W3035507081",
+      "https://openalex.org/W2964153729",
+      "https://openalex.org/W2790376986",
+      "https://openalex.org/W3128232076",
+      "https://openalex.org/W3104169042",
+      "https://openalex.org/W2970859221",
+      "https://openalex.org/W2950866572",
+      "https://openalex.org/W2963969878",
+      "https://openalex.org/W2963060032",
+      "https://openalex.org/W2962833164",
+      "https://openalex.org/W2953494151",
+      "https://openalex.org/W2883386984",
+      "https://openalex.org/W2802105481",
+      "https://openalex.org/W2796868841",
+      "https://openalex.org/W2774616426",
+      "https://openalex.org/W2153332911"
+    ]
+  }
+}

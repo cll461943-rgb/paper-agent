@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:41394549",
+  "title": "Utilizing natural language processing to identify cancer-relevant publications at a National Cancer Institute-designated cancer center.",
+  "abstract": "The objective of this study was to develop and test natural language processing (NLP) methods for screening and, ultimately, predicting the cancer relevance of peer-reviewed publications. Two datasets were used: (1) manually curated publications labeled for cancer relevance, co-authored by members of The University of Kansas Cancer Center (KUCC) and (2) a derived dataset containing cancer-related abstracts from American Association for Cancer Research journals and noncancer-related abstracts from other medical journals. Two text encoding methods were explored: term frequency-inverse document frequency (TF-IDF) vectorization and various BERT embeddings. These representations served as inputs to 3 supervised machine learning classifiers: Support Vector Classification (SVC), Gradient Boosting Classification, and Multilayer Perceptron (MLP) neural networks. Model performance was evaluated by comparing predictions to the \"true\" cancer-relevant labels in a withheld test set. All machine learning models performed best when trained and tested within the derived dataset. Across the datasets, SVC and MLP both exhibited strong performance, with F1 scores as high as 0.976 and 0.997, respectively. BioBERT embeddings resulted in slightly higher metrics when compared to TF-IDF vectorization across most models. Models trained on the derived data performed very well internally; however, weaker performance was noted when these models were tested on the KUCC dataset. This finding highlights the subjective nature of cancer-relevant determinations. In contrast, KUCC trained models had high predictive performance when tested on the derived-specific classifications, showing that models trained on the KUCC dataset may be suitable for wider cancer-relevant prediction. Overall, our results suggest that NLP can effectively automate the classification of cancer-relevant publications, enhancing research productivity tracking; however, great care should be taken in selecting the appropriate data, text representation approach, and machine learning approach.",
+  "year": 2025,
+  "venue": "JAMIA open",
+  "authors": [
+    "Whitney Shae",
+    "Md Saiful Islam Saif",
+    "John Fife",
+    "Dinesh Pal Mudaranthakam",
+    "Dong Pei",
+    "Lisa Harlan-Williams",
+    "Jeffrey A Thompson",
+    "Devin C Koestler"
+  ],
+  "doi": "10.1093/jamiaopen/ooaf156",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41394549/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "41394549"
+  }
+}

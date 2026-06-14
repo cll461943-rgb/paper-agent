@@ -1,0 +1,920 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13160v2",
+    "title": "Data-Driven DRO and Economic Decision Theory: An Analytical Synthesis With Bayesian Nonparametric Advancements",
+    "abstract": "We develop an analytical synthesis that bridges data-driven Distributionally Robust Optimization (DRO) and Economic Decision Theory under Ambiguity (DTA). By reinterpreting standard regularization and DRO techniques as data-driven counterparts of ambiguity-averse decision models, we provide a unified framework that clarifies their intrinsic connections. Building on this synthesis, we propose a novel DRO approach that leverages a popular DTA model of smooth ambiguity-averse preferences together with tools from Bayesian nonparametric statistics. Our baseline framework employs Dirichlet Process (DP) posteriors, which naturally extend to heterogeneous data sources via Hierarchical Dirichlet Processes (HDPs), and can be further refined to induce outlier robustness through a procedure that selectively filters poorly-fitting observations during training. Theoretical performance guarantees and convergence results, together with extensive simulations and real-data experiments, illustrate the method's favorable performance in terms of prediction accuracy and stability.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nicola Bariletto",
+      "Khai Nguyen",
+      "Nhat Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13160v2",
+    "url": "http://arxiv.org/abs/2405.13160v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.02931v2",
+    "title": "Bitrate-Constrained DRO: Beyond Worst Case Robustness To Unknown Group Shifts",
+    "abstract": "Training machine learning models robust to distribution shifts is critical for real-world applications. Some robust training algorithms (e.g., Group DRO) specialize to group shifts and require group information on all training points. Other methods (e.g., CVaR DRO) that do not need group annotations can be overly conservative, since they naively upweight high loss points which may form a contrived set that does not correspond to any meaningful group in the real world (e.g., when the high loss points are randomly mislabeled training points). In this work, we address limitations in prior approaches by assuming a more nuanced form of group shift: conditioned on the label, we assume that the true group function (indicator over group) is simple. For example, we may expect that group shifts occur along low bitrate features (e.g., image background, lighting). Thus, we aim to learn a model that maintains high accuracy on simple group functions realized by these low bitrate features, that need not spend valuable model capacity achieving high accuracy on contrived groups of examples. Based on this, we consider the two-player game formulation of DRO where the adversary's capacity is bitrate-constrained. Our resulting practical algorithm, Bitrate-Constrained DRO (BR-DRO), does not require group information on training samples yet matches the performance of Group DRO on datasets that have training group annotations and that of CVaR DRO on long-tailed distributions. Our theoretical analysis reveals that in some settings BR-DRO objective can provably yield statistically efficient and less conservative solutions than unconstrained CVaR DRO.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Amrith Setlur",
+      "Don Dennis",
+      "Benjamin Eysenbach",
+      "Aditi Raghunathan",
+      "Chelsea Finn",
+      "Virginia Smith",
+      "Sergey Levine"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.02931v2",
+    "url": "http://arxiv.org/abs/2302.02931v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1606.06286v2",
+    "title": "QBism, Quantum Nonlocality, and the Objective Paradox",
+    "abstract": "The Quantum-Bayesian interpretation of quantum theory claims to eliminate the question of quantum nonlocality. This claim is not justified, because the question of non-locality does not arise due to any interpretation of quantum theory, but due to objective experimental facts. We define the notion \"objective paradox\" and explain, comparing QBism and the Copenhagen interpretation, how avoidance of any paradox results into poor explanatory power of an interpretation, if there actually exists an objective paradox.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Gerold Gründler"
+    ],
+    "doi": null,
+    "arxiv_id": "1606.06286v2",
+    "url": "http://arxiv.org/abs/1606.06286v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.23565v1",
+    "title": "DRO: A Python Library for Distributionally Robust Optimization in Machine Learning",
+    "abstract": "We introduce dro, an open-source Python library for distributionally robust optimization (DRO) for regression and classification problems. The library implements 14 DRO formulations and 9 backbone models, enabling 79 distinct DRO methods. Furthermore, dro is compatible with both scikit-learn and PyTorch. Through vectorization and optimization approximation techniques, dro reduces runtime by 10x to over 1000x compared to baseline implementations on large-scale datasets. Comprehensive documentation is available at https://python-dro.org.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiashuo Liu",
+      "Tianyu Wang",
+      "Henry Lam",
+      "Hongseok Namkoong",
+      "Jose Blanchet"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.23565v1",
+    "url": "http://arxiv.org/abs/2505.23565v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.05054v1",
+    "title": "Geometry-Calibrated DRO: Combating Over-Pessimism with Free Energy Implications",
+    "abstract": "Machine learning algorithms minimizing average risk are susceptible to distributional shifts. Distributionally Robust Optimization (DRO) addresses this issue by optimizing the worst-case risk within an uncertainty set. However, DRO suffers from over-pessimism, leading to low-confidence predictions, poor parameter estimations as well as poor generalization. In this work, we conduct a theoretical analysis of a probable root cause of over-pessimism: excessive focus on noisy samples. To alleviate the impact of noise, we incorporate data geometry into calibration terms in DRO, resulting in our novel Geometry-Calibrated DRO (GCDRO) for regression. We establish the connection between our risk objective and the Helmholtz free energy in statistical physics, and this free-energy-based risk can extend to standard DRO methods. Leveraging gradient flow in Wasserstein space, we develop an approximate minimax optimization algorithm with a bounded error ratio and elucidate how our approach mitigates noisy sample effects. Comprehensive experiments confirm GCDRO's superiority over conventional DRO methods.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Jiashuo Liu",
+      "Jiayun Wu",
+      "Tianyu Wang",
+      "Hao Zou",
+      "Bo Li",
+      "Peng Cui"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.05054v1",
+    "url": "http://arxiv.org/abs/2311.05054v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2401.01673v2",
+    "title": "Coded Beam Training",
+    "abstract": "In extremely large-scale multiple input multiple output (XL-MIMO) systems for future sixth-generation (6G) communications, codebook-based beam training stands out as a promising technology to acquire channel state information (CSI). Despite their effectiveness, when the pilot overhead is limited, existing beam training methods suffer from significant achievable rate degradation for remote users with low signal-to-noise ratio (SNR). To tackle this challenge, leveraging the error-correcting capability of channel codes, we introduce channel coding theory into hierarchical beam training to extend the coverage area. Specifically, we establish the duality between hierarchical beam training and channel coding, and the proposed coded beam training scheme serves as a general framework. Then, we present two specific implementations exemplified by coded beam training methods based on Hamming codes and convolutional codes, during which the beam encoding and decoding processes are refined respectively to better accommodate the beam training problem. Simulation results have demonstrated that the proposed coded beam training method can enable reliable beam training performance for remote users with low SNR while keeping training overhead low.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Tianyue Zheng",
+      "Jieao Zhu",
+      "Qiumo Yu",
+      "Yongli Yan",
+      "Linglong Dai"
+    ],
+    "doi": null,
+    "arxiv_id": "2401.01673v2",
+    "url": "http://arxiv.org/abs/2401.01673v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2210.05740v2",
+    "title": "Stochastic Constrained DRO with a Complexity Independent of Sample Size",
+    "abstract": "Distributionally Robust Optimization (DRO), as a popular method to train robust models against distribution shift between training and test sets, has received tremendous attention in recent years. In this paper, we propose and analyze stochastic algorithms that apply to both non-convex and convex losses for solving Kullback Leibler divergence constrained DRO problem. Compared with existing methods solving this problem, our stochastic algorithms not only enjoy competitive if not better complexity independent of sample size but also just require a constant batch size at every iteration, which is more practical for broad applications. We establish a nearly optimal complexity bound for finding an $ε$ stationary solution for non-convex losses and an optimal complexity for finding an $ε$ optimal solution for convex losses. Empirical studies demonstrate the effectiveness of the proposed algorithms for solving non-convex and convex constrained DRO problems.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Qi Qi",
+      "Jiameng Lyu",
+      "Kung sik Chan",
+      "Er Wei Bai",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2210.05740v2",
+    "url": "http://arxiv.org/abs/2210.05740v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2109.05470v1",
+    "title": "DRo: A data-scarce mechanism to revolutionize the performance of Deep Learning based Security Systems",
+    "abstract": "Supervised Deep Learning requires plenty of labeled data to converge, and hence perform optimally for task-specific learning. Therefore, we propose a novel mechanism named DRo (for Deep Routing) for data-scarce domains like security. The DRo approach builds upon some of the recent developments in Deep-Clustering. In particular, it exploits the self-augmented training mechanism using synthetically generated local perturbations. DRo not only allays the challenges with sparse-labeled data but also offers many unique advantages. We also developed a system named DRoID that uses the DRo mechanism for enhancing the performance of an existing Malware Detection System that uses (low information features like the) Android implicit Intent(s) as the only features. We conduct experiments on DRoID using a popular and standardized Android malware dataset and found that the DRo mechanism could successfully reduce the false-alarms generated by the downstream classifier by 67.9%, and also simultaneously boosts its accuracy by 11.3%. This is significant not only because the gains achieved are unparalleled but also because the features used were never considered rich enough to train a classifier on; and hence no decent performance could ever be reported by any malware classification system till-date using these features in isolation. Owing to the results achieved, the DRo mechanism claims a dominant position amongst all known systems that aims to enhance the classification performance of deep learning models with sparse-labeled data.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Mohit Sewak",
+      "Sanjay K. Sahay",
+      "Hemant Rathore"
+    ],
+    "doi": null,
+    "arxiv_id": "2109.05470v1",
+    "url": "http://arxiv.org/abs/2109.05470v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.01777v3",
+    "title": "CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition",
+    "abstract": "Modern deep learning models often achieve high overall performance, but consistently fail on specific subgroups. Group distributionally robust optimization (group DRO) addresses this problem by minimizing the worst-group loss, but it fails when group losses misrepresent performance differences between groups. This is common in domains like speech, where the widely used connectionist temporal classification (CTC) loss not only scales with input length but also varies with linguistic and acoustic properties, leading to spurious differences between group losses. We present CTC-DRO, which addresses the shortcomings of the group DRO objective by smoothing the group weight update to prevent overemphasis on consistently high-loss groups, while using input length-matched batching to mitigate CTC's scaling issues. We evaluate CTC-DRO on the task of multilingual automatic speech recognition (ASR) across five language sets from the diverse ML-SUPERB 2.0 benchmark. CTC-DRO consistently outperforms group DRO and CTC-based baseline models, reducing the worst-language error by up to 47.1% and the average error by up to 32.9%. CTC-DRO can be applied to ASR with minimal computational costs, and, while motivated by multilingual ASR, offers the potential for reducing group disparities in other domains with similar challenges.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Martijn Bartelds",
+      "Ananjan Nandi",
+      "Moussa Koulako Bala Doumbouya",
+      "Dan Jurafsky",
+      "Tatsunori Hashimoto",
+      "Karen Livescu"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.01777v3",
+    "url": "http://arxiv.org/abs/2502.01777v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1407.1241v3",
+    "title": "Characterizations of objective sets and objective functions",
+    "abstract": "In this short note we give characterizations for objective sets and objective functions as defined in D. Y. Gao and C. Wu's paper arxiv:1104.2970v2.",
+    "year": 2014,
+    "venue": null,
+    "authors": [
+      "C. Zalinescu"
+    ],
+    "doi": null,
+    "arxiv_id": "1407.1241v3",
+    "url": "http://arxiv.org/abs/1407.1241v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.18767v1",
+    "title": "Harmonizing SAA and DRO",
+    "abstract": "Decision-makers often encounter uncertainty, and the distribution of uncertain parameters plays a crucial role in making reliable decisions. However, complete information is rarely available. The sample average approximation (SAA) approach utilizes historical data to address this, but struggles with insufficient data. Conversely, moment-based distributionally robust optimization (DRO) effectively employs partial distributional information but can yield conservative solutions even with ample data. To bridge these approaches, we propose a novel method called harmonizing optimization (HO), which integrates SAA and DRO by adaptively adjusting the weights of data and information based on sample size N. This allows HO to amplify data effects in large samples while emphasizing information in smaller ones. More importantly, HO performs well across varying data sizes without needing to classify them as large or small. We provide practical methods for determining these weights and demonstrate that HO offers finite-sample performance guarantees, proving asymptotic optimality when the weight of information follows a 1/\\sqrt{N}-rate. In addition, HO can be applied to enhance scenario reduction, improving approximation quality and reducing completion time by retaining critical information from reduced scenarios. Numerical results show significant advantages of HO in solution quality compared to Wasserstein-based DRO, and highlight its effectiveness in scenario reduction.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ziliang Jin",
+      "Jianqiang Cheng",
+      "Daniel Zhuoyu Long",
+      "Kai Pan"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.18767v1",
+    "url": "http://arxiv.org/abs/2508.18767v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.08062v2",
+    "title": "FairDICE: Fairness-Driven Offline Multi-Objective Reinforcement Learning",
+    "abstract": "Multi-objective reinforcement learning (MORL) aims to optimize policies in the presence of conflicting objectives, where linear scalarization is commonly used to reduce vector-valued returns into scalar signals. While effective for certain preferences, this approach cannot capture fairness-oriented goals such as Nash social welfare or max-min fairness, which require nonlinear and non-additive trade-offs. Although several online algorithms have been proposed for specific fairness objectives, a unified approach for optimizing nonlinear welfare criteria in the offline setting-where learning must proceed from a fixed dataset-remains unexplored. In this work, we present FairDICE, the first offline MORL framework that directly optimizes nonlinear welfare objective. FairDICE leverages distribution correction estimation to jointly account for welfare maximization and distributional regularization, enabling stable and sample-efficient learning without requiring explicit preference weights or exhaustive weight search. Across multiple offline benchmarks, FairDICE demonstrates strong fairness-aware performance compared to existing baselines.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Woosung Kim",
+      "Jinho Lee",
+      "Jongmin Lee",
+      "Byung-Jun Lee"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.08062v2",
+    "url": "http://arxiv.org/abs/2506.08062v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.05787v2",
+    "title": "An accelerate Prediction Strategy for Dynamic Multi-Objective Optimization",
+    "abstract": "This paper addresses the challenge of dynamic multi-objective optimization problems (DMOPs) by introducing novel approaches for accelerating prediction strategies within the evolutionary algorithm framework. Since the objectives of DMOPs evolve over time, both the Pareto optimal set (PS) and the Pareto optimal front (PF) are dynamic. To effectively track the changes in the PS and PF in both decision and objective spaces, we propose an adaptive prediction strategy that incorporates second-order derivatives to predict and adjust the algorithms search behavior. This strategy enhances the algorithm's ability to anticipate changes in the environment, allowing for more efficient population re-initialization. We evaluate the performance of the proposed method against four state-of-the-art algorithms using standard DMOPs benchmark problems. Experimental results demonstrate that the proposed approach significantly outperforms the other algorithms across most test problems.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Ru Lei",
+      "Lin Li",
+      "Rustam Stolkin",
+      "Bin Feng"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.05787v2",
+    "url": "http://arxiv.org/abs/2410.05787v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.11652v2",
+    "title": "Fast Beam Training for IRS-Assisted Multiuser Communications",
+    "abstract": "In this letter, we consider an intelligent reflecting surface (IRS)-assisted multiuser communication system, where an IRS is deployed to provide virtual line-of-sight (LoS) links between an access point (AP) and multiple users. We consider the practical codebook-based IRS passive beamforming and study efficient design for IRS reflect beam training, which is challenging due to the large number of IRS reflecting elements. In contrast to the conventional single-beam training, we propose a new multi-beam training method by dividing the IRS reflecting elements into multiple sub-arrays and designing their simultaneous multi-beam steering over time. By simply comparing the received signal power over time, each user can detect its optimal IRS beam direction with a high probability, even without searching over all possible beam directions as the single-beam training. Simulation results show that our proposed multi-beam training significantly reduces the training time of conventional single-beam training and yet achieves comparable IRS passive beamforming performance for data transmission.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Changsheng You",
+      "Beixiong Zheng",
+      "Rui Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.11652v2",
+    "url": "http://arxiv.org/abs/2005.11652v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.03585v1",
+    "title": "Decision Making under Model Misspecification: DRO with Robust Bayesian Ambiguity Sets",
+    "abstract": "Distributionally Robust Optimisation (DRO) protects risk-averse decision-makers by considering the worst-case risk within an ambiguity set of distributions based on the empirical distribution or a model. To further guard against finite, noisy data, model-based approaches admit Bayesian formulations that propagate uncertainty from the posterior to the decision-making problem. However, when the model is misspecified, the decision maker must stretch the ambiguity set to contain the data-generating process (DGP), leading to overly conservative decisions. We address this challenge by introducing DRO with Robust, to model misspecification, Bayesian Ambiguity Sets (DRO-RoBAS). These are Maximum Mean Discrepancy ambiguity sets centred at a robust posterior predictive distribution that incorporates beliefs about the DGP. We show that the resulting optimisation problem obtains a dual formulation in the Reproducing Kernel Hilbert Space and we give probabilistic guarantees on the tolerance level of the ambiguity set. Our method outperforms other Bayesian and empirical DRO approaches in out-of-sample performance on the Newsvendor and Portfolio problems with various cases of model misspecification.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Charita Dellaporta",
+      "Patrick O'Hara",
+      "Theodoros Damoulas"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.03585v1",
+    "url": "http://arxiv.org/abs/2505.03585v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.06966v1",
+    "title": "Tractable reformulations of DRO problems over structured optimal transport ambiguity sets",
+    "abstract": "Structuring ambiguity sets in Wasserstein-based distributionally robust optimization (DRO) can improve their statistical properties when the uncertainty consists of multiple independent components. The aim of this paper is to solve stochastic optimization problems with unknown uncertainty when we only have access to a finite set of samples from it. Exploiting strong duality of DRO problems over structured ambiguity sets, we derive tractable reformulations for certain classes of DRO and uncertainty quantification problems. We also derive tractable reformulations for distributionally robust chance-constrained problems. As the complexity of the reformulations may grow exponentially with the number of independent uncertainty components, we employ clustering strategies to obtain informative estimators, which yield problems of manageable complexity. We demonstrate the effectiveness of the theoretical results in a numerical simulation example.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Lotfi M. Chaouach",
+      "Tom Oomen",
+      "Dimitris Boskos"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.06966v1",
+    "url": "http://arxiv.org/abs/2504.06966v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2311.05573v1",
+    "title": "Outlier-Robust Wasserstein DRO",
+    "abstract": "Distributionally robust optimization (DRO) is an effective approach for data-driven decision-making in the presence of uncertainty. Geometric uncertainty due to sampling or localized perturbations of data points is captured by Wasserstein DRO (WDRO), which seeks to learn a model that performs uniformly well over a Wasserstein ball centered around the observed data distribution. However, WDRO fails to account for non-geometric perturbations such as adversarial outliers, which can greatly distort the Wasserstein distance measurement and impede the learned model. We address this gap by proposing a novel outlier-robust WDRO framework for decision-making under both geometric (Wasserstein) perturbations and non-geometric (total variation (TV)) contamination that allows an $\\varepsilon$-fraction of data to be arbitrarily corrupted. We design an uncertainty set using a certain robust Wasserstein ball that accounts for both perturbation types and derive minimax optimal excess risk bounds for this procedure that explicitly capture the Wasserstein and TV risks. We prove a strong duality result that enables tractable convex reformulations and efficient computation of our outlier-robust WDRO problem. When the loss function depends only on low-dimensional features of the data, we eliminate certain dimension dependencies from the risk bounds that are unavoidable in the general setting. Finally, we present experiments validating our theory on standard regression and classification tasks.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Sloan Nietert",
+      "Ziv Goldfeld",
+      "Soroosh Shafiee"
+    ],
+    "doi": null,
+    "arxiv_id": "2311.05573v1",
+    "url": "http://arxiv.org/abs/2311.05573v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.00552v4",
+    "title": "Graph Neural Network Training Systems: A Performance Comparison of Full-Graph and Mini-Batch",
+    "abstract": "Graph Neural Networks (GNNs) have gained significant attention in recent years due to their ability to learn representations of graph-structured data. Two common methods for training GNNs are mini-batch training and full-graph training. Since these two methods require different training pipelines and systems optimizations, two separate classes of GNN training systems emerged, each tailored for one method. Works that introduce systems belonging to a particular category predominantly compare them with other systems within the same category, offering limited or no comparison with systems from the other category. Some prior work also justifies its focus on one specific training method by arguing that it achieves higher accuracy than the alternative. The literature, however, has incomplete and contradictory evidence in this regard. In this paper, we provide a comprehensive empirical comparison of representative full-graph and mini-batch GNN training systems. We find that the mini-batch training systems consistently converge faster than the full-graph training ones across multiple datasets, GNN models, and system configurations. We also find that mini-batch training techniques converge to similar to or often higher accuracy values than full-graph training ones, showing that mini-batch sampling is not necessarily detrimental to accuracy. Our work highlights the importance of comparing systems across different classes, using time-to-accuracy rather than epoch time for performance comparison, and selecting appropriate hyperparameters for each training method separately.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Saurabh Bajaj",
+      "Hojae Son",
+      "Juelin Liu",
+      "Hui Guan",
+      "Marco Serafini"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.00552v4",
+    "url": "http://arxiv.org/abs/2406.00552v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.00176v5",
+    "title": "When AUC meets DRO: Optimizing Partial AUC for Deep Learning with Non-Convex Convergence Guarantee",
+    "abstract": "In this paper, we propose systematic and efficient gradient-based methods for both one-way and two-way partial AUC (pAUC) maximization that are applicable to deep learning. We propose new formulations of pAUC surrogate objectives by using the distributionally robust optimization (DRO) to define the loss for each individual positive data. We consider two formulations of DRO, one of which is based on conditional-value-at-risk (CVaR) that yields a non-smooth but exact estimator for pAUC, and another one is based on a KL divergence regularized DRO that yields an inexact but smooth (soft) estimator for pAUC. For both one-way and two-way pAUC maximization, we propose two algorithms and prove their convergence for optimizing their two formulations, respectively. Experiments demonstrate the effectiveness of the proposed algorithms for pAUC maximization for deep learning on various datasets.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Dixian Zhu",
+      "Gang Li",
+      "Bokun Wang",
+      "Xiaodong Wu",
+      "Tianbao Yang"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.00176v5",
+    "url": "http://arxiv.org/abs/2203.00176v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2206.01542v2",
+    "title": "Detecting the Severity of Major Depressive Disorder from Speech: A Novel HARD-Training Methodology",
+    "abstract": "Major Depressive Disorder (MDD) is a common worldwide mental health issue with high associated socioeconomic costs. The prediction and automatic detection of MDD can, therefore, make a huge impact on society. Speech, as a non-invasive, easy to collect signal, is a promising marker to aid the diagnosis and assessment of MDD. In this regard, speech samples were collected as part of the Remote Assessment of Disease and Relapse in Major Depressive Disorder (RADAR-MDD) research programme. RADAR-MDD was an observational cohort study in which speech and other digital biomarkers were collected from a cohort of individuals with a history of MDD in Spain, United Kingdom and the Netherlands. In this paper, the RADAR-MDD speech corpus was taken as an experimental framework to test the efficacy of a Sequence-to-Sequence model with a local attention mechanism in a two-class depression severity classification paradigm. Additionally, a novel training method, HARD-Training, is proposed. It is a methodology based on the selection of more ambiguous samples for the model training, and inspired by the curriculum learning paradigm. HARD-Training was found to consistently improve - with an average increment of 8.6% - the performance of our classifiers for both of two speech elicitation tasks used and each collection site of the RADAR-MDD speech corpus. With this novel methodology, our Sequence-to-Sequence model was able to effectively detect MDD severity regardless of language. Finally, recognising the need for greater awareness of potential algorithmic bias, we conduct an additional analysis of our results separately for each gender.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Edward L. Campbell",
+      "Judith Dineley",
+      "Pauline Conde",
+      "Faith Matcham",
+      "Femke Lamers",
+      "Sara Siddi",
+      "Laura Docio-Fernandez",
+      "Carmen Garcia-Mateo",
+      "Nicholas Cummins",
+      "the RADAR-CNS Consortium"
+    ],
+    "doi": null,
+    "arxiv_id": "2206.01542v2",
+    "url": "http://arxiv.org/abs/2206.01542v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2506.06928v1",
+    "title": "How Important are Videos for Training Video LLMs?",
+    "abstract": "Research into Video Large Language Models (LLMs) has progressed rapidly, with numerous models and benchmarks emerging in just a few years. Typically, these models are initialized with a pretrained text-only LLM and finetuned on both image- and video-caption datasets. In this paper, we present findings indicating that Video LLMs are more capable of temporal reasoning after image-only training than one would assume, and that improvements from video-specific training are surprisingly small. Specifically, we show that image-trained versions of two LLMs trained with the recent LongVU algorithm perform significantly above chance level on TVBench, a temporal reasoning benchmark. Additionally, we introduce a simple finetuning scheme involving sequences of annotated images and questions targeting temporal capabilities. This baseline results in temporal reasoning performance close to, and occasionally higher than, what is achieved by video-trained LLMs. This suggests suboptimal utilization of rich temporal features found in real video by current models. Our analysis motivates further research into the mechanisms that allow image-trained LLMs to perform temporal reasoning, as well as into the bottlenecks that render current video training schemes inefficient.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "George Lydakis",
+      "Alexander Hermans",
+      "Ali Athar",
+      "Daan de Geus",
+      "Bastian Leibe"
+    ],
+    "doi": null,
+    "arxiv_id": "2506.06928v1",
+    "url": "http://arxiv.org/abs/2506.06928v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.09061v4",
+    "title": "VLP: A Survey on Vision-Language Pre-training",
+    "abstract": "In the past few years, the emergence of pre-training models has brought uni-modal fields such as computer vision (CV) and natural language processing (NLP) to a new era. Substantial works have shown they are beneficial for downstream uni-modal tasks and avoid training a new model from scratch. So can such pre-trained models be applied to multi-modal tasks? Researchers have explored this problem and made significant progress. This paper surveys recent advances and new frontiers in vision-language pre-training (VLP), including image-text and video-text pre-training. To give readers a better overall grasp of VLP, we first review its recent advances from five aspects: feature extraction, model architecture, pre-training objectives, pre-training datasets, and downstream tasks. Then, we summarize the specific VLP models in detail. Finally, we discuss the new frontiers in VLP. To the best of our knowledge, this is the first survey focused on VLP. We hope that this survey can shed light on future research in the VLP field.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Feilong Chen",
+      "Duzhen Zhang",
+      "Minglun Han",
+      "Xiuyi Chen",
+      "Jing Shi",
+      "Shuang Xu",
+      "Bo Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.09061v4",
+    "url": "http://arxiv.org/abs/2202.09061v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:hybrid",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2411.01653v1",
+    "title": "Diagnosing Medical Datasets with Training Dynamics",
+    "abstract": "This study explores the potential of using training dynamics as an automated alternative to human annotation for evaluating the quality of training data. The framework used is Data Maps, which classifies data points into categories such as easy-to-learn, hard-to-learn, and ambiguous (Swayamdipta et al., 2020). Swayamdipta et al. (2020) highlight that difficult-to-learn examples often contain errors, and ambiguous cases significantly impact model training. To confirm the reliability of these findings, we replicated the experiments using a challenging dataset, with a focus on medical question answering. In addition to text comprehension, this field requires the acquisition of detailed medical knowledge, which further complicates the task. A comprehensive evaluation was conducted to assess the feasibility and transferability of the Data Maps framework to the medical domain. The evaluation indicates that the framework is unsuitable for addressing datasets' unique challenges in answering medical questions.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Laura Wenderoth"
+    ],
+    "doi": null,
+    "arxiv_id": "2411.01653v1",
+    "url": "http://arxiv.org/abs/2411.01653v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2303.10856v1",
+    "title": "Revisiting Realistic Test-Time Training: Sequential Inference and Adaptation by Anchored Clustering Regularized Self-Training",
+    "abstract": "Deploying models on target domain data subject to distribution shift requires adaptation. Test-time training (TTT) emerges as a solution to this adaptation under a realistic scenario where access to full source domain data is not available, and instant inference on the target domain is required. Despite many efforts into TTT, there is a confusion over the experimental settings, thus leading to unfair comparisons. In this work, we first revisit TTT assumptions and categorize TTT protocols by two key factors. Among the multiple protocols, we adopt a realistic sequential test-time training (sTTT) protocol, under which we develop a test-time anchored clustering (TTAC) approach to enable stronger test-time feature learning. TTAC discovers clusters in both source and target domains and matches the target clusters to the source ones to improve adaptation. When source domain information is strictly absent (i.e. source-free) we further develop an efficient method to infer source domain distributions for anchored clustering. Finally, self-training~(ST) has demonstrated great success in learning from unlabeled data and we empirically figure out that applying ST alone to TTT is prone to confirmation bias. Therefore, a more effective TTT approach is introduced by regularizing self-training with anchored clustering, and the improved model is referred to as TTAC++. We demonstrate that, under all TTT protocols, TTAC++ consistently outperforms the state-of-the-art methods on five TTT datasets, including corrupted target domain, selected hard samples, synthetic-to-real adaptation and adversarially attacked target domain. We hope this work will provide a fair benchmarking of TTT methods, and future research should be compared within respective protocols.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yongyi Su",
+      "Xun Xu",
+      "Tianrui Li",
+      "Kui Jia"
+    ],
+    "doi": null,
+    "arxiv_id": "2303.10856v1",
+    "url": "http://arxiv.org/abs/2303.10856v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2602.10109v1",
+    "title": "ST4VLA: Spatially Guided Training for Vision-Language-Action Models",
+    "abstract": "Large vision-language models (VLMs) excel at multimodal understanding but fall short when extended to embodied tasks, where instructions must be transformed into low-level motor actions. We introduce ST4VLA, a dual-system Vision-Language-Action framework that leverages Spatial Guided Training to align action learning with spatial priors in VLMs. ST4VLA includes two stages: (i) spatial grounding pre-training, which equips the VLM with transferable priors via scalable point, box, and trajectory prediction from both web-scale and robot-specific data, and (ii) spatially guided action post-training, which encourages the model to produce richer spatial priors to guide action generation via spatial prompting. This design preserves spatial grounding during policy learning and promotes consistent optimization across spatial and action objectives. Empirically, ST4VLA achieves substantial improvements over vanilla VLA, with performance increasing from 66.1 -> 84.6 on Google Robot and from 54.7 -> 73.2 on WidowX Robot, establishing new state-of-the-art results on SimplerEnv. It also demonstrates stronger generalization to unseen objects and paraphrased instructions, as well as robustness to long-horizon perturbations in real-world settings. These results highlight scalable spatially guided training as a promising direction for robust, generalizable robot learning. Source code, data and models are released at https://internrobotics.github.io/internvla-m1.github.io/",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jinhui Ye",
+      "Fangjing Wang",
+      "Ning Gao",
+      "Junqiu Yu",
+      "Yangkun Zhu",
+      "Bin Wang",
+      "Jinyu Zhang",
+      "Weiyang Jin",
+      "Yanwei Fu",
+      "Feng Zheng",
+      "Yilun Chen",
+      "Jiangmiao Pang"
+    ],
+    "doi": null,
+    "arxiv_id": "2602.10109v1",
+    "url": "http://arxiv.org/abs/2602.10109v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2502.20586v3",
+    "title": "Training LLMs with MXFP4",
+    "abstract": "Low precision (LP) datatypes such as MXFP4 can accelerate matrix multiplications (GEMMs) and reduce training costs. However, directly using MXFP4 instead of BF16 during training significantly degrades model quality. In this work, we present the first near-lossless training recipe that uses MXFP4 GEMMs, which are $2\\times$ faster than FP8 on supported hardware. Our key insight is to compute unbiased gradient estimates with stochastic rounding (SR), resulting in more accurate model updates. However, directly applying SR to MXFP4 can result in high variance from block-level outliers, harming convergence. To overcome this, we use the random Hadamard tranform to theoretically bound the variance of SR. We train GPT models up to 6.7B parameters and find that our method induces minimal degradation over mixed-precision BF16 training. Our recipe computes $>1/2$ the training FLOPs in MXFP4, enabling an estimated speedup of $>1.3\\times$ over FP8 and $>1.7\\times$ over BF16 during backpropagation.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Albert Tseng",
+      "Tao Yu",
+      "Youngsuk Park"
+    ],
+    "doi": null,
+    "arxiv_id": "2502.20586v3",
+    "url": "http://arxiv.org/abs/2502.20586v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.05069v2",
+    "title": "Accelerating the Training of Video Super-Resolution Models",
+    "abstract": "Despite that convolution neural networks (CNN) have recently demonstrated high-quality reconstruction for video super-resolution (VSR), efficiently training competitive VSR models remains a challenging problem. It usually takes an order of magnitude more time than training their counterpart image models, leading to long research cycles. Existing VSR methods typically train models with fixed spatial and temporal sizes from beginning to end. The fixed sizes are usually set to large values for good performance, resulting to slow training. However, is such a rigid training strategy necessary for VSR? In this work, we show that it is possible to gradually train video models from small to large spatial/temporal sizes, i.e., in an easy-to-hard manner. In particular, the whole training is divided into several stages and the earlier stage has smaller training spatial shape. Inside each stage, the temporal size also varies from short to long while the spatial size remains unchanged. Training is accelerated by such a multigrid training strategy, as most of computation is performed on smaller spatial and shorter temporal shapes. For further acceleration with GPU parallelization, we also investigate the large minibatch training without the loss in accuracy. Extensive experiments demonstrate that our method is capable of largely speeding up training (up to $6.2\\times$ speedup in wall-clock training time) without performance drop for various VSR models. The code is available at https://github.com/TencentARC/Efficient-VSR-Training.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Lijian Lin",
+      "Xintao Wang",
+      "Zhongang Qi",
+      "Ying Shan"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.05069v2",
+    "url": "http://arxiv.org/abs/2205.05069v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.14230v2",
+    "title": "Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction",
+    "abstract": "Predicting the trajectories of surrounding objects is a critical task for self-driving vehicles and many other autonomous systems. Recent works demonstrate that adversarial attacks on trajectory prediction, where small crafted perturbations are introduced to history trajectories, may significantly mislead the prediction of future trajectories and induce unsafe planning. However, few works have addressed enhancing the robustness of this important safety-critical task.In this paper, we present a novel adversarial training method for trajectory prediction. Compared with typical adversarial training on image tasks, our work is challenged by more random input with rich context and a lack of class labels. To address these challenges, we propose a method based on a semi-supervised adversarial autoencoder, which models disentangled semantic features with domain knowledge and provides additional latent labels for the adversarial training. Extensive experiments with different types of attacks demonstrate that our Semisupervised Semantics-guided Adversarial Training (SSAT) method can effectively mitigate the impact of adversarial attacks by up to 73% and outperform other popular defense methods. In addition, experiments show that our method can significantly improve the system's robust generalization to unseen patterns of attacks. We believe that such semantics-guided architecture and advancement on robust generalization is an important step for developing robust prediction models and enabling safe decision-making.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ruochen Jiao",
+      "Xiangguo Liu",
+      "Takami Sato",
+      "Qi Alfred Chen",
+      "Qi Zhu"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.14230v2",
+    "url": "http://arxiv.org/abs/2205.14230v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1903.01182v2",
+    "title": "Complement Objective Training",
+    "abstract": "Learning with a primary objective, such as softmax cross entropy for classification and sequence generation, has been the norm for training deep neural networks for years. Although being a widely-adopted approach, using cross entropy as the primary objective exploits mostly the information from the ground-truth class for maximizing data likelihood, and largely ignores information from the complement (incorrect) classes. We argue that, in addition to the primary objective, training also using a complement objective that leverages information from the complement classes can be effective in improving model performance. This motivates us to study a new training paradigm that maximizes the likelihood of the groundtruth class while neutralizing the probabilities of the complement classes. We conduct extensive experiments on multiple tasks ranging from computer vision to natural language understanding. The experimental results confirm that, compared to the conventional training with just one primary objective, training also with the complement objective further improves the performance of the state-of-the-art models across all tasks. In addition to the accuracy improvement, we also show that models trained with both primary and complement objectives are more robust to single-step adversarial attacks.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Hao-Yun Chen",
+      "Pei-Hsin Wang",
+      "Chun-Hao Liu",
+      "Shih-Chieh Chang",
+      "Jia-Yu Pan",
+      "Yu-Ting Chen",
+      "Wei Wei",
+      "Da-Cheng Juan"
+    ],
+    "doi": null,
+    "arxiv_id": "1903.01182v2",
+    "url": "http://arxiv.org/abs/1903.01182v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2512.23675v2",
+    "title": "End-to-End Test-Time Training for Long Context",
+    "abstract": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on the given context, compressing the context it reads into its weights. In addition, we improve the model's initialization for learning at test time via meta-learning at training time. Overall, our method, a form of Test-Time Training (TTT), is End-to-End (E2E) both at test time (via next-token prediction) and training time (via meta-learning), in contrast to previous forms. We conduct extensive experiments with a focus on scaling properties. In particular, for 3B models trained with 164B tokens, our method (TTT-E2E) scales with context length in the same way as Transformer with full attention, while others, such as Mamba 2 and Gated DeltaNet, do not. However, similar to RNNs, TTT-E2E has constant inference latency regardless of context length, making it 2.7 times faster than full attention for 128K context. Our code is publicly available.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Arnuv Tandon",
+      "Karan Dalal",
+      "Xinhao Li",
+      "Daniel Koceja",
+      "Marcel Rød",
+      "Sam Buchanan",
+      "Xiaolong Wang",
+      "Jure Leskovec",
+      "Sanmi Koyejo",
+      "Tatsunori Hashimoto",
+      "Carlos Guestrin",
+      "Jed McCaleb",
+      "Yejin Choi",
+      "Yu Sun"
+    ],
+    "doi": null,
+    "arxiv_id": "2512.23675v2",
+    "url": "http://arxiv.org/abs/2512.23675v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

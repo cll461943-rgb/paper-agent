@@ -1,0 +1,25 @@
+{
+  "paper_id": "http://arxiv.org/abs/1905.13064v4",
+  "title": "The Bloom Clock",
+  "abstract": "The bloom clock is a space-efficient, probabilistic data structure designed to determine the partial order of events in highly distributed systems. The bloom clock, like the vector clock, can autonomously detect causality violations by comparing its logical timestamps. Unlike the vector clock, the space complexity of the bloom clock does not depend on the number of nodes in a system. Instead it depends on a set of chosen parameters that determine its confidence interval, i.e. false positive rate. To reduce the space complexity from which the vector clock suffers, the bloom clock uses a 'moving window' in which the partial order of events can be inferred with high confidence. If two clocks are not comparable, the bloom clock can always deduce it, i.e. false negatives are not possible. If two clocks are comparable, the bloom clock can calculate the confidence of that statement, i.e. it can compute the false positive rate between comparable pairs of clocks. By choosing an acceptable threshold for the false positive rate, the bloom clock can properly compare the order of its timestamps, with that of other nodes in a highly accurate and space efficient way.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Lum Ramabaja"
+  ],
+  "doi": null,
+  "arxiv_id": "1905.13064v4",
+  "url": "http://arxiv.org/abs/1905.13064v4",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

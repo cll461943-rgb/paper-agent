@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:38728811",
+  "title": "Oversampling effect in pretraining for bidirectional encoder representations from transformers (BERT) to localize medical BERT and enhance biomedical BERT.",
+  "abstract": "Pretraining large-scale neural language models on raw texts has made a significant contribution to improving transfer learning in natural language processing. With the introduction of transformer-based language models, such as bidirectional encoder representations from transformers (BERT), the performance of information extraction from free text has improved significantly in both the general and medical domains. However, it is difficult to train specific BERT models to perform well in domains for which few databases of a high quality and large size are publicly available. We hypothesized that this problem could be addressed by oversampling a domain-specific corpus and using it for pretraining with a larger corpus in a balanced manner. In the present study, we verified our hypothesis by developing pretraining models using our method and evaluating their performance. Our proposed method was based on the simultaneous pretraining of models with knowledge from distinct domains after oversampling. We conducted three experiments in which we generated (1) English biomedical BERT from a small biomedical corpus, (2) Japanese medical BERT from a small medical corpus, and (3) enhanced biomedical BERT pretrained with complete PubMed abstracts in a balanced manner. We then compared their performance with those of conventional models. Our English BERT pretrained using both general and small medical domain corpora performed sufficiently well for practical use on the biomedical language understanding evaluation (BLUE) benchmark. Moreover, our proposed method was more effective than the conventional methods for each biomedical corpus of the same corpus size in the general domain. Our Japanese medical BERT outperformed the other BERT models built using a conventional method for almost all the medical tasks. The model demonstrated the same trend as that of the first experiment in English. Further, our enhanced biomedical BERT model, which was not pretrained on clinical notes, achieved superior clinical and biomedical scores on the BLUE benchmark with an increase of 0.3 points in the clinical score and 0.5 points in the biomedical score. These scores were above those of the models trained without our proposed method. Well-balanced pretraining using oversampling instances derived from a corpus appropriate for the target task allowed us to construct a high-performance BERT model.",
+  "year": 2024,
+  "venue": "Artificial intelligence in medicine",
+  "authors": [
+    "Shoya Wada",
+    "Toshihiro Takeda",
+    "Katsuki Okada",
+    "Shirou Manabe",
+    "Shozo Konishi",
+    "Jun Kamohara",
+    "Yasushi Matsumura"
+  ],
+  "doi": "10.1016/j.artmed.2024.102889",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/38728811/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "38728811"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "paper_id": "pubmed:39423493",
+  "title": "Graph explicit pooling for graph-level representation learning.",
+  "abstract": "Graph pooling has been increasingly recognized as crucial for Graph Neural Networks (GNNs) to facilitate hierarchical graph representation learning. Existing graph pooling methods commonly consist of two stages: selecting top-ranked nodes and discarding the remaining to construct coarsened graph representations. However, this paper highlights two key issues with these methods: (1) The process of selecting nodes to discard frequently employs additional Graph Convolutional Networks or Multilayer Perceptrons, lacking a thorough evaluation of each node's impact on the final graph representation and subsequent prediction tasks. (2) Current graph pooling methods tend to directly discard the noise segment (dropped) of the graph without accounting for the latent information contained within these elements. To address the first issue, we introduce a novel Graph explicit Pooling (GrePool) method, which selects nodes by explicitly leveraging the relationships between the nodes and final representation vectors crucial for classification. The second issue is addressed using an extended version of GrePool (i.e., GrePool+), which applies a uniform loss on the discarded nodes. This addition is designed to augment the training process and improve classification accuracy. Furthermore, we conduct comprehensive experiments across 12 widely used datasets to validate our proposed method's effectiveness, including the Open Graph Benchmark datasets. Our experimental results uniformly demonstrate that GrePool outperforms 14 baseline methods for most datasets. Likewise, implementing GrePool+ enhances GrePool's performance without incurring additional computational costs. The code is available at https://github.com/LiuChuang0059/GrePool.",
+  "year": 2025,
+  "venue": "Neural networks : the official journal of the International Neural Network Society",
+  "authors": [
+    "Chuang Liu",
+    "Wenhang Yu",
+    "Kuang Gao",
+    "Xueqi Ma",
+    "Yibing Zhan",
+    "Jia Wu",
+    "Wenbin Hu",
+    "Bo Du"
+  ],
+  "doi": "10.1016/j.neunet.2024.106790",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/39423493/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "39423493"
+  }
+}

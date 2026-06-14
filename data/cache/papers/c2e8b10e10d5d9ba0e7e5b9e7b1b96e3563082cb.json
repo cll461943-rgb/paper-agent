@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:42184115",
+  "title": "KSDiffusion: conditional diffusion for kinase-specific phosphorylation site prediction under data-limited and imbalanced regimes.",
+  "abstract": "Protein phosphorylation governs cellular signaling, making accurate identification of kinase-specific sites essential for understanding regulatory and disease mechanisms. Although computational approaches have shown promise in inferring kinase specificity, most existing methods primarily rely on local sequence patterns and remain limited in their ability to capture broader contextual information. More critically, experimentally validated kinase-substrate data are inherently scarce and highly imbalanced across kinase groups, substantially restricting the generalization performance of purely discriminative models, especially for underrepresented kinases. To address these challenges, we propose KSDiffusion, a unified framework for kinase-specific phosphorylation site prediction explicitly designed for data-limited and imbalanced regimes. KSDiffusion integrates a protein language model with task-aware conditional diffusion-based generative modeling. Specifically, an ESM-2-based encoder is employed to extract context-aware peptide representations enriched with evolutionary and structural information, while supervised contrastive learning further enhances kinase-specific discriminability in the embedding space. To alleviate data scarcity for rare kinase groups, we introduce a conditional diffusion model, termed KS-DiT, which generates biologically plausible and kinase-consistent synthetic representations that directly support downstream prediction. Comprehensive experiments across kinase groups spanning low-, medium-, and large-data regimes demonstrate that KSDiffusion consistently outperforms representative baseline methods. In particular, substantial improvements are achieved for data-scarce kinase groups, with AUC gains of up to $\\sim $15%, while maintaining competitive performance when sufficient training data are available. These results underscore the regime-dependent effectiveness of conditional diffusion-based augmentation and highlight the value of integrating protein language models with task-aware generative modeling for robust kinase-specific phosphorylation site prediction under realistic data constraints.",
+  "year": 2026,
+  "venue": "Briefings in bioinformatics",
+  "authors": [
+    "Shi Qiu",
+    "Chunguo Wu",
+    "Yuxiang Ma",
+    "Songye Gao",
+    "Limin Wang",
+    "Yanchun Liang",
+    "Xiaohu Shi"
+  ],
+  "doi": "10.1093/bib/bbag257",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42184115/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:core_topic",
+    "route:title_like",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42184115"
+  }
+}

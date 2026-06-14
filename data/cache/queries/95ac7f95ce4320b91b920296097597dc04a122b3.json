@@ -1,0 +1,957 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2407.04973v1",
+    "title": "LogicVista: Multimodal LLM Logical Reasoning Benchmark in Visual Contexts",
+    "abstract": "We propose LogicVista, an evaluation benchmark that assesses the integrated logical reasoning capabilities of multimodal large language models (MLLMs) in Visual contexts. Recent advancements in MLLMs have demonstrated various fascinating abilities, from crafting poetry based on an image to performing mathematical reasoning. However, there is still a lack of systematic evaluation of MLLMs' proficiency in logical reasoning tasks, which are essential for activities like navigation and puzzle-solving. Thus we evaluate general logical cognition abilities across 5 logical reasoning tasks encompassing 9 different capabilities, using a sample of 448 multiple-choice questions. Each question is annotated with the correct answer and the human-written reasoning behind the selection, enabling both open-ended and multiple-choice evaluation. A total of 8 MLLMs are comprehensively evaluated using LogicVista. Code and Data Available at https://github.com/Yijia-Xiao/LogicVista.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yijia Xiao",
+      "Edward Sun",
+      "Tianyu Liu",
+      "Wei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.04973v1",
+    "url": "http://arxiv.org/abs/2407.04973v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hyde",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.06949v1",
+    "title": "Data Augmentation for Scene Text Recognition",
+    "abstract": "Scene text recognition (STR) is a challenging task in computer vision due to the large number of possible text appearances in natural scenes. Most STR models rely on synthetic datasets for training since there are no sufficiently big and publicly available labelled real datasets. Since STR models are evaluated using real data, the mismatch between training and testing data distributions results into poor performance of models especially on challenging text that are affected by noise, artifacts, geometry, structure, etc. In this paper, we introduce STRAug which is made of 36 image augmentation functions designed for STR. Each function mimics certain text image properties that can be found in natural scenes, caused by camera sensors, or induced by signal processing operations but poorly represented in the training dataset. When applied to strong baseline models using RandAugment, STRAug significantly increases the overall absolute accuracy of STR models across regular and irregular test datasets by as much as 2.10% on Rosetta, 1.48% on R2AM, 1.30% on CRNN, 1.35% on RARE, 1.06% on TRBA and 0.89% on GCRNN. The diversity and simplicity of API provided by STRAug functions enable easy replication and validation of existing data augmentation methods for STR. STRAug is available at https://github.com/roatienza/straug.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Rowel Atienza"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.06949v1",
+    "url": "http://arxiv.org/abs/2108.06949v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.03659v1",
+    "title": "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
+    "abstract": "Logical reasoning of text requires understanding critical logical information in the text and performing inference over them. Large-scale pre-trained models for logical reasoning mainly focus on word-level semantics of text while struggling to capture symbolic logic. In this paper, we propose to understand logical symbols and expressions in the text to arrive at the answer. Based on such logical information, we not only put forward a context extension framework but also propose a data augmentation algorithm. The former extends the context to cover implicit logical expressions following logical equivalence laws. The latter augments literally similar but logically different instances to better capture logical information, especially logical negative and conditional relationships. We conduct experiments on ReClor dataset. The results show that our method achieves the state-of-the-art performance, and both logic-driven context extension framework and data augmentation algorithm can help improve the accuracy. And our multi-model ensemble system is the first to surpass human performance on both EASY set and HARD set of ReClor.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Siyuan Wang",
+      "Wanjun Zhong",
+      "Duyu Tang",
+      "Zhongyu Wei",
+      "Zhihao Fan",
+      "Daxin Jiang",
+      "Ming Zhou",
+      "Nan Duan"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.03659v1",
+    "url": "http://arxiv.org/abs/2105.03659v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.09200v1",
+    "title": "The Reasoning Trap -- Logical Reasoning as a Mechanistic Pathway to Situational Awareness",
+    "abstract": "Situational awareness, the capacity of an AI system to recognize its own nature, understand its training and deployment context, and reason strategically about its circumstances, is widely considered among the most dangerous emergent capabilities in advanced AI systems. Separately, a growing research effort seeks to improve the logical reasoning capabilities of large language models (LLMs) across deduction, induction, and abduction. In this paper, we argue that these two research trajectories are on a collision course. We introduce the RAISE framework (Reasoning Advancing Into Self Examination), which identifies three mechanistic pathways through which improvements in logical reasoning enable progressively deeper levels of situational awareness: deductive self inference, inductive context recognition, and abductive self modeling. We formalize each pathway, construct an escalation ladder from basic self recognition to strategic deception, and demonstrate that every major research topic in LLM logical reasoning maps directly onto a specific amplifier of situational awareness. We further analyze why current safety measures are insufficient to prevent this escalation. We conclude by proposing concrete safeguards, including a \"Mirror Test\" benchmark and a Reasoning Safety Parity Principle, and pose an uncomfortable but necessary question to the logical reasoning community about its responsibility in this trajectory.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Subramanyam Sahoo",
+      "Aman Chadha",
+      "Vinija Jain",
+      "Divya Chaudhary"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.09200v1",
+    "url": "http://arxiv.org/abs/2603.09200v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2410.01088v2",
+    "title": "Exploring Empty Spaces: Human-in-the-Loop Data Augmentation",
+    "abstract": "Data augmentation is crucial to make machine learning models more robust and safe. However, augmenting data can be challenging as it requires generating diverse data points to rigorously evaluate model behavior on edge cases and mitigate potential harms. Creating high-quality augmentations that cover these \"unknown unknowns\" is a time- and creativity-intensive task. In this work, we introduce Amplio, an interactive tool to help practitioners navigate \"unknown unknowns\" in unstructured text datasets and improve data diversity by systematically identifying empty data spaces to explore. Amplio includes three human-in-the-loop data augmentation techniques: Augment With Concepts, Augment by Interpolation, and Augment with Large Language Model. In a user study with 18 professional red teamers, we demonstrate the utility of our augmentation methods in helping generate high-quality, diverse, and relevant model safety prompts. We find that Amplio enabled red teamers to augment data quickly and creatively, highlighting the transformative potential of interactive augmentation workflows.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Catherine Yeh",
+      "Donghao Ren",
+      "Yannick Assogba",
+      "Dominik Moritz",
+      "Fred Hohman"
+    ],
+    "doi": null,
+    "arxiv_id": "2410.01088v2",
+    "url": "http://arxiv.org/abs/2410.01088v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.12599v7",
+    "title": "Abstract Meaning Representation-Based Logic-Driven Data Augmentation for Logical Reasoning",
+    "abstract": "Combining large language models with logical reasoning enhances their capacity to address problems in a robust and reliable manner. Nevertheless, the intricate nature of logical reasoning poses challenges when gathering reliable data from the web to build comprehensive training datasets, subsequently affecting performance on downstream tasks. To address this, we introduce a novel logic-driven data augmentation approach, AMR-LDA. AMR-LDA converts the original text into an Abstract Meaning Representation (AMR) graph, a structured semantic representation that encapsulates the logical structure of the sentence, upon which operations are performed to generate logically modified AMR graphs. The modified AMR graphs are subsequently converted back into text to create augmented data. Notably, our methodology is architecture-agnostic and enhances both generative large language models, such as GPT-3.5 and GPT-4, through prompt augmentation, and discriminative large language models through contrastive learning with logic-driven data augmentation. Empirical evidence underscores the efficacy of our proposed method with improvement in performance across seven downstream tasks, such as reading comprehension requiring logical reasoning, textual entailment, and natural language inference. Furthermore, our method leads on the ReClor leaderboard at https://eval.ai/web/challenges/challenge-page/503/leaderboard/1347. The source code and data are publicly available at https://github.com/Strong-AI-Lab/Logical-Equivalence-driven-AMR-Data-Augmentation-for-Representation-Learning.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Qiming Bao",
+      "Alex Yuxuan Peng",
+      "Zhenyun Deng",
+      "Wanjun Zhong",
+      "Gael Gendron",
+      "Timothy Pistotti",
+      "Neset Tan",
+      "Nathan Young",
+      "Yang Chen",
+      "Yonghua Zhu",
+      "Paul Denny",
+      "Michael Witbrock",
+      "Jiamou Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.12599v7",
+    "url": "http://arxiv.org/abs/2305.12599v7",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2511.03372v1",
+    "title": "LFC-DA: Logical Formula-Controlled Data Augmentation for Enhanced Logical Reasoning",
+    "abstract": "For complex logical data augmentation, heavy reliance on human annotation is costly, whereas direct generation with large language models yields uninterpretable and logically homogeneous examples. To address this, we present LFC-DA, a symbolic-logic-controlled pipeline: logical text is first mapped to propositional expressions, a compact rule library is compiled, and a bounded state-space search systematically discovers valid formulas that are then verbalized back into natural-language questions, ensuring both diversity and logical rigor under propositional logic. Experiments on ReClor and LogiQA show significant improvements in the logical-reasoning accuracy of pretrained models, confirming the effectiveness of LFC-DA for LLM-guided logical data augmentation.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Shenghao Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2511.03372v1",
+    "url": "http://arxiv.org/abs/2511.03372v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.13250v1",
+    "title": "Generative Data Augmentation Challenge: Synthesis of Room Acoustics for Speaker Distance Estimation",
+    "abstract": "This paper describes the synthesis of the room acoustics challenge as a part of the generative data augmentation workshop at ICASSP 2025. The challenge defines a unique generative task that is designed to improve the quantity and diversity of the room impulse responses dataset so that it can be used for spatially sensitive downstream tasks: speaker distance estimation. The challenge identifies the technical difficulty in measuring or simulating many rooms' acoustic characteristics precisely. As a solution, it proposes generative data augmentation as an alternative that can potentially be used to improve various downstream tasks. The challenge website, dataset, and evaluation code are available at https://sites.google.com/view/genda2025.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jackie Lin",
+      "Georg Götz",
+      "Hermes Sampedro Llopis",
+      "Haukur Hafsteinsson",
+      "Steinar Guðjónsson",
+      "Daniel Gert Nielsen",
+      "Finnur Pind",
+      "Paris Smaragdis",
+      "Dinesh Manocha",
+      "John Hershey",
+      "Trausti Kristjansson",
+      "Minje Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.13250v1",
+    "url": "http://arxiv.org/abs/2501.13250v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2509.07471v2",
+    "title": "From Scarcity to Efficiency: Investigating the Effects of Data Augmentation on African Machine Translation",
+    "abstract": "The linguistic diversity across the African continent presents different challenges and opportunities for machine translation. This study explores the effects of data augmentation techniques in improving translation systems in low-resource African languages. We focus on two data augmentation techniques: sentence concatenation with back translation and switch-out, applying them across six African languages. Our experiments show significant improvements in machine translation performance, with a minimum increase of 25\\% in BLEU score across all six languages. We provide a comprehensive analysis and highlight the potential of these techniques to improve machine translation systems for low-resource languages, contributing to the development of more robust translation systems for under-resourced languages.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Mardiyyah Oduwole",
+      "Oluwatosin Olajide",
+      "Jamiu Suleiman",
+      "Faith Hunja",
+      "Busayo Awobade",
+      "Fatimo Adebanjo",
+      "Comfort Akanni",
+      "Chinonyelum Igwe",
+      "Peace Ododo",
+      "Promise Omoigui",
+      "Abraham Owodunni",
+      "Steven Kolawole"
+    ],
+    "doi": null,
+    "arxiv_id": "2509.07471v2",
+    "url": "http://arxiv.org/abs/2509.07471v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1712.08887v3",
+    "title": "Efficient data augmentation techniques for some classes of state space models",
+    "abstract": "Data augmentation improves the convergence of iterative algorithms, such as the EM algorithm and Gibbs sampler by introducing carefully designed latent variables. In this article, we first propose a data augmentation scheme for the first-order autoregression plus noise model, where optimal values of working parameters introduced for recentering and rescaling of the latent states, can be derived analytically by minimizing the fraction of missing information in the EM algorithm. The proposed data augmentation scheme is then utilized to design efficient Markov chain Monte Carlo (MCMC) algorithms for Bayesian inference of some non-Gaussian and nonlinear state space models, via a mixture of normals approximation coupled with a block-specific reparametrization strategy. Applications on simulated and benchmark real datasets indicate that the proposed MCMC sampler can yield improvements in simulation efficiency compared with centering, noncentering and even the ancillarity-sufficiency interweaving strategy.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Linda S. L. Tan"
+    ],
+    "doi": null,
+    "arxiv_id": "1712.08887v3",
+    "url": "http://arxiv.org/abs/1712.08887v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.21523v1",
+    "title": "Tabular Data Augmentation for Machine Learning: Progress and Prospects of Embracing Generative AI",
+    "abstract": "Machine learning (ML) on tabular data is ubiquitous, yet obtaining abundant high-quality tabular data for model training remains a significant obstacle. Numerous works have focused on tabular data augmentation (TDA) to enhance the original table with additional data, thereby improving downstream ML tasks. Recently, there has been a growing interest in leveraging the capabilities of generative AI for TDA. Therefore, we believe it is time to provide a comprehensive review of the progress and future prospects of TDA, with a particular emphasis on the trending generative AI. Specifically, we present an architectural view of the TDA pipeline, comprising three main procedures: pre-augmentation, augmentation, and post-augmentation. Pre-augmentation encompasses preparation tasks that facilitate subsequent TDA, including error handling, table annotation, table simplification, table representation, table indexing, table navigation, schema matching, and entity matching. Augmentation systematically analyzes current TDA methods, categorized into retrieval-based methods, which retrieve external data, and generation-based methods, which generate synthetic data. We further subdivide these methods based on the granularity of the augmentation process at the row, column, cell, and table levels. Post-augmentation focuses on the datasets, evaluation and optimization aspects of TDA. We also summarize current trends and future directions for TDA, highlighting promising opportunities in the era of generative AI. In addition, the accompanying papers and related resources are continuously updated and maintained in the GitHub repository at https://github.com/SuDIS-ZJU/awesome-tabular-data-augmentation to reflect ongoing advancements in the field.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Lingxi Cui",
+      "Huan Li",
+      "Ke Chen",
+      "Lidan Shou",
+      "Gang Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.21523v1",
+    "url": "http://arxiv.org/abs/2407.21523v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.21391v1",
+    "title": "TerraGen: A Unified Multi-Task Layout Generation Framework for Remote Sensing Data Augmentation",
+    "abstract": "Remote sensing vision tasks require extensive labeled data across multiple, interconnected domains. However, current generative data augmentation frameworks are task-isolated, i.e., each vision task requires training an independent generative model, and ignores the modeling of geographical information and spatial constraints. To address these issues, we propose \\textbf{TerraGen}, a unified layout-to-image generation framework that enables flexible, spatially controllable synthesis of remote sensing imagery for various high-level vision tasks, e.g., detection, segmentation, and extraction. Specifically, TerraGen introduces a geographic-spatial layout encoder that unifies bounding box and segmentation mask inputs, combined with a multi-scale injection scheme and mask-weighted loss to explicitly encode spatial constraints, from global structures to fine details. Also, we construct the first large-scale multi-task remote sensing layout generation dataset containing 45k images and establish a standardized evaluation protocol for this task. Experimental results show that our TerraGen can achieve the best generation image quality across diverse tasks. Additionally, TerraGen can be used as a universal data-augmentation generator, enhancing downstream task performance significantly and demonstrating robust cross-task generalisation in both full-data and few-shot scenarios.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Datao Tang",
+      "Hao Wang",
+      "Yudeng Xin",
+      "Hui Qiao",
+      "Dongsheng Jiang",
+      "Yin Li",
+      "Zhiheng Yu",
+      "Xiangyong Cao"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.21391v1",
+    "url": "http://arxiv.org/abs/2510.21391v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hybrid",
+      "route:method_task",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.03075v5",
+    "title": "A Survey of Data Augmentation Approaches for NLP",
+    "abstract": "Data augmentation has recently seen increased interest in NLP due to more work in low-resource domains, new tasks, and the popularity of large-scale neural networks that require large amounts of training data. Despite this recent upsurge, this area is still relatively underexplored, perhaps due to the challenges posed by the discrete nature of language data. In this paper, we present a comprehensive and unifying survey of data augmentation for NLP by summarizing the literature in a structured manner. We first introduce and motivate data augmentation for NLP, and then discuss major methodologically representative approaches. Next, we highlight techniques that are used for popular NLP applications and tasks. We conclude by outlining current challenges and directions for future research. Overall, our paper aims to clarify the landscape of existing literature in data augmentation for NLP and motivate additional work in this area. We also present a GitHub repository with a paper list that will be continuously updated at https://github.com/styfeng/DataAug4NLP",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Steven Y. Feng",
+      "Varun Gangal",
+      "Jason Wei",
+      "Sarath Chandar",
+      "Soroush Vosoughi",
+      "Teruko Mitamura",
+      "Eduard Hovy"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.03075v5",
+    "url": "http://arxiv.org/abs/2105.03075v5",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:query2doc",
+      "route:hyde",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.13372v1",
+    "title": "Generative Data Augmentation Challenge: Zero-Shot Speech Synthesis for Personalized Speech Enhancement",
+    "abstract": "This paper presents a new challenge that calls for zero-shot text-to-speech (TTS) systems to augment speech data for the downstream task, personalized speech enhancement (PSE), as part of the Generative Data Augmentation workshop at ICASSP 2025. Collecting high-quality personalized data is challenging due to privacy concerns and technical difficulties in recording audio from the test scene. To address these issues, synthetic data generation using generative models has gained significant attention. In this challenge, participants are tasked first with building zero-shot TTS systems to augment personalized data. Subsequently, PSE systems are asked to be trained with this augmented personalized dataset. Through this challenge, we aim to investigate how the quality of augmented data generated by zero-shot TTS models affects PSE model performance. We also provide baseline experiments using open-source zero-shot TTS models to encourage participation and benchmark advancements. Our baseline code implementation and checkpoints are available online.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jae-Sung Bae",
+      "Anastasia Kuznetsova",
+      "Dinesh Manocha",
+      "John Hershey",
+      "Trausti Kristjansson",
+      "Minje Kim"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.13372v1",
+    "url": "http://arxiv.org/abs/2501.13372v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.10075v2",
+    "title": "A survey of synthetic data augmentation methods in computer vision",
+    "abstract": "The standard approach to tackling computer vision problems is to train deep convolutional neural network (CNN) models using large-scale image datasets which are representative of the target task. However, in many scenarios, it is often challenging to obtain sufficient image data for the target task. Data augmentation is a way to mitigate this challenge. A common practice is to explicitly transform existing images in desired ways so as to create the required volume and variability of training data necessary to achieve good generalization performance. In situations where data for the target domain is not accessible, a viable workaround is to synthesize training data from scratch--i.e., synthetic data augmentation. This paper presents an extensive review of synthetic data augmentation techniques. It covers data synthesis approaches based on realistic 3D graphics modeling, neural style transfer (NST), differential neural rendering, and generative artificial intelligence (AI) techniques such as generative adversarial networks (GANs) and variational autoencoders (VAEs). For each of these classes of methods, we focus on the important data generation and augmentation techniques, general scope of application and specific use-cases, as well as existing limitations and possible workarounds. Additionally, we provide a summary of common synthetic datasets for training computer vision models, highlighting the main features, application domains and supported tasks. Finally, we discuss the effectiveness of synthetic data augmentation methods. Since this is the first paper to explore synthetic data augmentation methods in great detail, we are hoping to equip readers with the necessary background information and in-depth knowledge of existing methods and their attendant issues.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Alhassan Mumuni",
+      "Fuseini Mumuni",
+      "Nana Kobina Gerrar"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.10075v2",
+    "url": "http://arxiv.org/abs/2403.10075v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.00357v1",
+    "title": "MERIt: Meta-Path Guided Contrastive Learning for Logical Reasoning",
+    "abstract": "Logical reasoning is of vital importance to natural language understanding. Previous studies either employ graph-based models to incorporate prior knowledge about logical relations, or introduce symbolic logic into neural models through data augmentation. These methods, however, heavily depend on annotated training data, and thus suffer from over-fitting and poor generalization problems due to the dataset sparsity. To address these two problems, in this paper, we propose MERIt, a MEta-path guided contrastive learning method for logical ReasonIng of text, to perform self-supervised pre-training on abundant unlabeled text data. Two novel strategies serve as indispensable components of our method. In particular, a strategy based on meta-path is devised to discover the logical structure in natural texts, followed by a counterfactual data augmentation strategy to eliminate the information shortcut induced by pre-training. The experimental results on two challenging logical reasoning benchmarks, i.e., ReClor and LogiQA, demonstrate that our method outperforms the SOTA baselines with significant improvements.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Fangkai Jiao",
+      "Yangyang Guo",
+      "Xuemeng Song",
+      "Liqiang Nie"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.00357v1",
+    "url": "http://arxiv.org/abs/2203.00357v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2402.06766v1",
+    "title": "Evaluation Metrics for Text Data Augmentation in NLP",
+    "abstract": "Recent surveys on data augmentation for natural language processing have reported different techniques and advancements in the field. Several frameworks, tools, and repositories promote the implementation of text data augmentation pipelines. However, a lack of evaluation criteria and standards for method comparison due to different tasks, metrics, datasets, architectures, and experimental settings makes comparisons meaningless. Also, a lack of methods unification exists and text data augmentation research would benefit from unified metrics to compare different augmentation methods. Thus, academics and the industry endeavor relevant evaluation metrics for text data augmentation techniques. The contribution of this work is to provide a taxonomy of evaluation metrics for text augmentation methods and serve as a direction for a unified benchmark. The proposed taxonomy organizes categories that include tools for implementation and metrics calculation. Finally, with this study, we intend to present opportunities to explore the unification and standardization of text data augmentation metrics.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Marcellus Amadeus",
+      "William Alberto Cruz Castañeda"
+    ],
+    "doi": null,
+    "arxiv_id": "2402.06766v1",
+    "url": "http://arxiv.org/abs/2402.06766v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2302.13007v3",
+    "title": "AugGPT: Leveraging ChatGPT for Text Data Augmentation",
+    "abstract": "Text data augmentation is an effective strategy for overcoming the challenge of limited sample sizes in many natural language processing (NLP) tasks. This challenge is especially prominent in the few-shot learning scenario, where the data in the target domain is generally much scarcer and of lowered quality. A natural and widely-used strategy to mitigate such challenges is to perform data augmentation to better capture the data invariance and increase the sample size. However, current text data augmentation methods either can't ensure the correct labeling of the generated data (lacking faithfulness) or can't ensure sufficient diversity in the generated data (lacking compactness), or both. Inspired by the recent success of large language models, especially the development of ChatGPT, which demonstrated improved language comprehension abilities, in this work, we propose a text data augmentation approach based on ChatGPT (named AugGPT). AugGPT rephrases each sentence in the training samples into multiple conceptually similar but semantically different samples. The augmented samples can then be used in downstream model training. Experiment results on few-shot learning text classification tasks show the superior performance of the proposed AugGPT approach over state-of-the-art text data augmentation methods in terms of testing accuracy and distribution of the augmented samples.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Haixing Dai",
+      "Zhengliang Liu",
+      "Wenxiong Liao",
+      "Xiaoke Huang",
+      "Yihan Cao",
+      "Zihao Wu",
+      "Lin Zhao",
+      "Shaochen Xu",
+      "Wei Liu",
+      "Ninghao Liu",
+      "Sheng Li",
+      "Dajiang Zhu",
+      "Hongmin Cai",
+      "Lichao Sun",
+      "Quanzheng Li",
+      "Dinggang Shen",
+      "Tianming Liu",
+      "Xiang Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2302.13007v3",
+    "url": "http://arxiv.org/abs/2302.13007v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.13840v1",
+    "title": "Text Smoothing: Enhance Various Data Augmentation Methods on Text Classification Tasks",
+    "abstract": "Before entering the neural network, a token is generally converted to the corresponding one-hot representation, which is a discrete distribution of the vocabulary. Smoothed representation is the probability of candidate tokens obtained from a pre-trained masked language model, which can be seen as a more informative substitution to the one-hot representation. We propose an efficient data augmentation method, termed text smoothing, by converting a sentence from its one-hot representation to a controllable smoothed representation. We evaluate text smoothing on different benchmarks in a low-resource regime. Experimental results show that text smoothing outperforms various mainstream data augmentation methods by a substantial margin. Moreover, text smoothing can be combined with those data augmentation methods to achieve better performance.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Xing Wu",
+      "Chaochen Gao",
+      "Meng Lin",
+      "Liangjun Zang",
+      "Zhongyuan Wang",
+      "Songlin Hu"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.13840v1",
+    "url": "http://arxiv.org/abs/2202.13840v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2105.13650v1",
+    "title": "Data Augmentation for Text Generation Without Any Augmented Data",
+    "abstract": "Data augmentation is an effective way to improve the performance of many neural text generation models. However, current data augmentation methods need to define or choose proper data mapping functions that map the original samples into the augmented samples. In this work, we derive an objective to formulate the problem of data augmentation on text generation tasks without any use of augmented data constructed by specific mapping functions. Our proposed objective can be efficiently optimized and applied to popular loss functions on text generation tasks with a convergence rate guarantee. Experiments on five datasets of two text generation tasks show that our approach can approximate or even surpass popular data augmentation methods.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Wei Bi",
+      "Huayang Li",
+      "Jiacheng Huang"
+    ],
+    "doi": null,
+    "arxiv_id": "2105.13650v1",
+    "url": "http://arxiv.org/abs/2105.13650v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.09282v2",
+    "title": "APOLLO: A Simple Approach for Adaptive Pretraining of Language Models for Logical Reasoning",
+    "abstract": "Logical reasoning of text is an important ability that requires understanding the information present in the text, their interconnections, and then reasoning through them to infer new conclusions. Prior works on improving the logical reasoning ability of language models require complex processing of training data (e.g., aligning symbolic knowledge to text), yielding task-specific data augmentation solutions that restrict the learning of general logical reasoning skills. In this work, we propose APOLLO, an adaptively pretrained language model that has improved logical reasoning abilities. We select a subset of Wikipedia, based on a set of logical inference keywords, for continued pretraining of a language model. We use two self-supervised loss functions: a modified masked language modeling loss where only specific parts-of-speech words, that would likely require more reasoning than basic language understanding, are masked, and a sentence-level classification loss that teaches the model to distinguish between entailment and contradiction types of sentences. The proposed training paradigm is both simple and independent of task formats. We demonstrate the effectiveness of APOLLO by comparing it with prior baselines on two logical reasoning datasets. APOLLO performs comparably on ReClor and outperforms baselines on LogiQA. The code base has been made publicly available.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Soumya Sanyal",
+      "Yichong Xu",
+      "Shuohang Wang",
+      "Ziyi Yang",
+      "Reid Pryzant",
+      "Wenhao Yu",
+      "Chenguang Zhu",
+      "Xiang Ren"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.09282v2",
+    "url": "http://arxiv.org/abs/2212.09282v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2107.05684v1",
+    "title": "Accenture at CheckThat! 2021: Interesting claim identification and ranking with contextually sensitive lexical training data augmentation",
+    "abstract": "This paper discusses the approach used by the Accenture Team for CLEF2021 CheckThat! Lab, Task 1, to identify whether a claim made in social media would be interesting to a wide audience and should be fact-checked. Twitter training and test data were provided in English, Arabic, Spanish, Turkish, and Bulgarian. Claims were to be classified (check-worthy/not check-worthy) and ranked in priority order for the fact-checker. Our method used deep neural network transformer models with contextually sensitive lexical augmentation applied on the supplied training datasets to create additional training samples. This augmentation approach improved the performance for all languages. Overall, our architecture and data augmentation pipeline produced the best submitted system for Arabic, and performance scales according to the quantity of provided training data for English, Spanish, Turkish, and Bulgarian. This paper investigates the deep neural network architectures for each language as well as the provided data to examine why the approach worked so effectively for Arabic, and discusses additional data augmentation measures that should could be useful to this problem.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Evan Williams",
+      "Paul Rodrigues",
+      "Sieu Tran"
+    ],
+    "doi": null,
+    "arxiv_id": "2107.05684v1",
+    "url": "http://arxiv.org/abs/2107.05684v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2501.18648v2",
+    "title": "Multimodal Large Language Models for Image, Text, and Speech Data Augmentation: A Survey",
+    "abstract": "In the past five years, research has shifted from traditional Machine Learning (ML) and Deep Learning (DL) approaches to leveraging Large Language Models (LLMs) , including multimodality, for data augmentation to enhance generalization, and combat overfitting in training deep convolutional neural networks. However, while existing surveys predominantly focus on ML and DL techniques or limited modalities (text or images), a gap remains in addressing the latest advancements and multi-modal applications of LLM-based methods. This survey fills that gap by exploring recent literature utilizing multimodal LLMs to augment image, text, and audio data, offering a comprehensive understanding of these processes. We outlined various methods employed in the LLM-based image, text and speech augmentation, and discussed the limitations identified in current approaches. Additionally, we identified potential solutions to these limitations from the literature to enhance the efficacy of data augmentation practices using multimodal LLMs. This survey serves as a foundation for future research, aiming to refine and expand the use of multimodal LLMs in enhancing dataset quality and diversity for deep learning applications. (Surveyed Paper GitHub Repo: https://github.com/WSUAgRobotics/data-aug-multi-modal-llm. Keywords: LLM data augmentation, Grok text data augmentation, DeepSeek image data augmentation, Grok speech data augmentation, GPT audio augmentation, voice augmentation, DeepSeek for data augmentation, DeepSeek R1 text data augmentation, DeepSeek R1 image augmentation, Image Augmentation using LLM, Text Augmentation using LLM, LLM data augmentation for deep learning applications)",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Ranjan Sapkota",
+      "Shaina Raza",
+      "Maged Shoman",
+      "Achyut Paudel",
+      "Manoj Karkee"
+    ],
+    "doi": null,
+    "arxiv_id": "2501.18648v2",
+    "url": "http://arxiv.org/abs/2501.18648v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2204.00291v1",
+    "title": "Text-To-Speech Data Augmentation for Low Resource Speech Recognition",
+    "abstract": "Nowadays, the main problem of deep learning techniques used in the development of automatic speech recognition (ASR) models is the lack of transcribed data. The goal of this research is to propose a new data augmentation method to improve ASR models for agglutinative and low-resource languages. This novel data augmentation method generates both synthetic text and synthetic audio. Some experiments were conducted using the corpus of the Quechua language, which is an agglutinative and low-resource language. In this study, a sequence-to-sequence (seq2seq) model was applied to generate synthetic text, in addition to generating synthetic speech using a text-to-speech (TTS) model for Quechua. The results show that the new data augmentation method works well to improve the ASR model for Quechua. In this research, an 8.73% improvement in the word-error-rate (WER) of the ASR model is obtained using a combination of synthetic text and synthetic speech.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Rodolfo Zevallos"
+    ],
+    "doi": null,
+    "arxiv_id": "2204.00291v1",
+    "url": "http://arxiv.org/abs/2204.00291v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2304.08821v1",
+    "title": "TTIDA: Controllable Generative Data Augmentation via Text-to-Text and Text-to-Image Models",
+    "abstract": "Data augmentation has been established as an efficacious approach to supplement useful information for low-resource datasets. Traditional augmentation techniques such as noise injection and image transformations have been widely used. In addition, generative data augmentation (GDA) has been shown to produce more diverse and flexible data. While generative adversarial networks (GANs) have been frequently used for GDA, they lack diversity and controllability compared to text-to-image diffusion models. In this paper, we propose TTIDA (Text-to-Text-to-Image Data Augmentation) to leverage the capabilities of large-scale pre-trained Text-to-Text (T2T) and Text-to-Image (T2I) generative models for data augmentation. By conditioning the T2I model on detailed descriptions produced by T2T models, we are able to generate photo-realistic labeled images in a flexible and controllable manner. Experiments on in-domain classification, cross-domain classification, and image captioning tasks show consistent improvements over other data augmentation baselines. Analytical studies in varied settings, including few-shot, long-tail, and adversarial, further reinforce the effectiveness of TTIDA in enhancing performance and increasing robustness.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Yuwei Yin",
+      "Jean Kaddour",
+      "Xiang Zhang",
+      "Yixin Nie",
+      "Zhenguang Liu",
+      "Lingpeng Kong",
+      "Qi Liu"
+    ],
+    "doi": null,
+    "arxiv_id": "2304.08821v1",
+    "url": "http://arxiv.org/abs/2304.08821v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2508.14932v1",
+    "title": "TOM: An Open-Source Tongue Segmentation Method with Multi-Teacher Distillation and Task-Specific Data Augmentation",
+    "abstract": "Tongue imaging serves as a valuable diagnostic tool, particularly in Traditional Chinese Medicine (TCM). The quality of tongue surface segmentation significantly affects the accuracy of tongue image classification and subsequent diagnosis in intelligent tongue diagnosis systems. However, existing research on tongue image segmentation faces notable limitations, and there is a lack of robust and user-friendly segmentation tools. This paper proposes a tongue image segmentation model (TOM) based on multi-teacher knowledge distillation. By incorporating a novel diffusion-based data augmentation method, we enhanced the generalization ability of the segmentation model while reducing its parameter size. Notably, after reducing the parameter count by 96.6% compared to the teacher models, the student model still achieves an impressive segmentation performance of 95.22% mIoU. Furthermore, we packaged and deployed the trained model as both an online and offline segmentation tool (available at https://itongue.cn/), allowing TCM practitioners and researchers to use it without any programming experience. We also present a case study on TCM constitution classification using segmented tongue patches. Experimental results demonstrate that training with tongue patches yields higher classification performance and better interpretability than original tongue images. To our knowledge, this is the first open-source and freely available tongue image segmentation tool.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Jiacheng Xie",
+      "Ziyang Zhang",
+      "Biplab Poudel",
+      "Congyu Guo",
+      "Yang Yu",
+      "Guanghui An",
+      "Xiaoting Tang",
+      "Lening Zhao",
+      "Chunhui Xu",
+      "Dong Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2508.14932v1",
+    "url": "http://arxiv.org/abs/2508.14932v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2301.02983v1",
+    "title": "Mind Reasoning Manners: Enhancing Type Perception for Generalized Zero-shot Logical Reasoning over Text",
+    "abstract": "Logical reasoning task involves diverse types of complex reasoning over text, based on the form of multiple-choice question answering. Given the context, question and a set of options as the input, previous methods achieve superior performances on the full-data setting. However, the current benchmark dataset has the ideal assumption that the reasoning type distribution on the train split is close to the test split, which is inconsistent with many real application scenarios. To address it, there remain two problems to be studied: (1) How is the zero-shot capability of the models (train on seen types and test on unseen types)? (2) How to enhance the perception of reasoning types for the models? For problem 1, we propose a new benchmark for generalized zero-shot logical reasoning, named ZsLR. It includes six splits based on the three type sampling strategies. For problem 2, a type-aware model TaCo is proposed. It utilizes both the heuristic input reconstruction and the contrastive learning to improve the type perception in the global representation. Extensive experiments on both the zero-shot and full-data settings prove the superiority of TaCo over the state-of-the-art methods. Also, we experiment and verify the generalization capability of TaCo on other logical reasoning dataset.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Fangzhi Xu",
+      "Jun Liu",
+      "Qika Lin",
+      "Tianzhe Zhao",
+      "Jian Zhang",
+      "Lingling Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2301.02983v1",
+    "url": "http://arxiv.org/abs/2301.02983v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2412.08753v2",
+    "title": "BDA: Bangla Text Data Augmentation Framework",
+    "abstract": "Data augmentation involves generating synthetic samples that resemble those in a given dataset. In resource-limited fields where high-quality data is scarce, augmentation plays a crucial role in increasing the volume of training data. This paper introduces a Bangla Text Data Augmentation (BDA) Framework that uses both pre-trained models and rule-based methods to create new variants of the text. A filtering process is included to ensure that the new text keeps the same meaning as the original while also adding variety in the words used. We conduct a comprehensive evaluation of the framework's effectiveness in Bangla text classification tasks. Our framework achieved significant improvement in F1 scores across five distinct datasets, delivering performance equivalent to models trained on 100% of the data while utilizing only 50% of the training dataset. Additionally, we explore the impact of data scarcity by progressively reducing the training data and augmenting it through BDA, resulting in notable F1 score enhancements. The study offers a thorough examination of BDA's performance, identifying key factors for optimal results and addressing its limitations through detailed analysis.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Md. Tariquzzaman",
+      "Audwit Nafi Anam",
+      "Naimul Haque",
+      "Mohsinul Kabir",
+      "Hasan Mahmud",
+      "Md Kamrul Hasan"
+    ],
+    "doi": null,
+    "arxiv_id": "2412.08753v2",
+    "url": "http://arxiv.org/abs/2412.08753v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2103.07552v1",
+    "title": "Few-Shot Text Classification with Triplet Networks, Data Augmentation, and Curriculum Learning",
+    "abstract": "Few-shot text classification is a fundamental NLP task in which a model aims to classify text into a large number of categories, given only a few training examples per category. This paper explores data augmentation -- a technique particularly suitable for training with limited data -- for this few-shot, highly-multiclass text classification setting. On four diverse text classification tasks, we find that common data augmentation techniques can improve the performance of triplet networks by up to 3.0% on average. To further boost performance, we present a simple training strategy called curriculum data augmentation, which leverages curriculum learning by first training on only original examples and then introducing augmented data as training progresses. We explore a two-stage and a gradual schedule, and find that, compared with standard single-stage training, curriculum data augmentation trains faster, improves performance, and remains robust to high amounts of noising from augmentation.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jason Wei",
+      "Chengyu Huang",
+      "Soroush Vosoughi",
+      "Yu Cheng",
+      "Shiqi Xu"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.07552v1",
+    "url": "http://arxiv.org/abs/2103.07552v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2304.02785v1",
+    "title": "Performance of Data Augmentation Methods for Brazilian Portuguese Text Classification",
+    "abstract": "Improving machine learning performance while increasing model generalization has been a constantly pursued goal by AI researchers. Data augmentation techniques are often used towards achieving this target, and most of its evaluation is made using English corpora. In this work, we took advantage of different existing data augmentation methods to analyze their performances applied to text classification problems using Brazilian Portuguese corpora. As a result, our analysis shows some putative improvements in using some of these techniques; however, it also suggests further exploitation of language bias and non-English text data scarcity.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Marcellus Amadeus",
+      "Paulo Branco"
+    ],
+    "doi": null,
+    "arxiv_id": "2304.02785v1",
+    "url": "http://arxiv.org/abs/2304.02785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "paper_id": "pubmed:40504725",
+  "title": "Decoupling Discriminative Attributes for Few-Shot Fine-Grained Recognition.",
+  "abstract": "Few-shot fine-tuning of pre-trained vision-language models (VLMs) for downstream tasks has gained widespread attention for reducing data annotation efforts while maintaining high performance. However, we observe that VLMs excel in excluding most incorrect classes in fine-grained recognition tasks, but struggles with a small set of confusing categories, which are typically highly similar subspecies. Existing few-shot fine-tuning methods attempt to directly recognize the correct category among all predefined classes, limiting their ability to capture discriminative features for those confusing categories. This raises an intriguing question: Can we specifically extract useful information from confusing classes to enhance fine-grained recognition performance? Based on this insight, we propose a hierarchical few-shot fine-tuning framework to address the severe confusion problem while ensuring the interpretability, namely Attribute-Decoupled Discriminator (AttrDD). Instead of thinking once among all classes, AttrDD employs a two-stage recognition, \"think through\" then \"think smart\". Specifically, in the first phase, a representative VLM, CLIP, is fine-tuned to select the Top-K confusing classes. In the second phase, we leverage the knowledge of large language models (LLMs) to generate fixed format descriptions of attribute differences between these confusing classes via in-context learning. Attribute-decoupled classifications are then conducted to capture fine-grained discriminative features. To achieve parameter-efficient fine-tuning, we introduce a lightweight attention adapter for each phase to align image features with task-specific textual features and LLM-generated textual features. Extensive experiments on 9 fine-grained recognition benchmarks demonstrate that AttrDD consistently outperforms existing baselines by wide margins.",
+  "year": 2025,
+  "venue": "IEEE transactions on image processing : a publication of the IEEE Signal Processing Society",
+  "authors": [
+    "Yehao Lu",
+    "Chaoxiang Cai",
+    "Wei Su",
+    "Guangcong Zheng",
+    "Wenjie Wang",
+    "Xuewei Li",
+    "Xi Li"
+  ],
+  "doi": "10.1109/TIP.2025.3573498",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40504725/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40504725"
+  }
+}

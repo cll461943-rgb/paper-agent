@@ -1,0 +1,883 @@
+[
+  {
+    "paper_id": "pubmed:42259903",
+    "title": "From raw audio to structure: an agent-based pipeline that boosts medical LLM performance.",
+    "abstract": "Large language models (LLMs) are increasingly applied in clinical communication, yet their reliability depends on high-quality conversational corpora. Real-world doctor-patient recordings are frequently degraded by noise, transcription errors, speaker overlap, and fragmented dialogue structure, limiting their usability for downstream model training. Here, we present an agent-based transcription framework that autonomously converts raw unstructured conversation transcriptions (RUCT) into structured conversation transcriptions (SCT) suitable for LLM fine-tuning. The system integrates three coordinated modules-Planner, Memory, and Executor-to orchestrate noise removal, content correction, speaker identification, and dialogue segmentation within a self-correcting workflow. Applied to 7197 minutes of Chinese clinical recordings across eight departments, with an additional 240 minutes of English-language dialogues used as a limited portability check, the agent achieved high reconstruction accuracy (94.7% denoising, 96.9% content correction, 88.6% speaker identification, 92.7% segmentation) and operated 3.6× faster than manual processing. In controlled comparisons against a cascaded deep-learning pipeline, a sequential non-agent execution, and an end-to-end large-context model, the agent achieved consistently higher performance across all four processing tasks. Architectural ablation further revealed marked degradation when Planner or Memory modules were removed (e.g., up to 47.6% reduction in speaker identification), supporting the contribution of coordinated task decomposition and cross-step state retention. To assess downstream impact, we fine-tuned an independent open-weight model (Qwen3-32B) on agent-generated SCT versus RUCT derived from an identical training set. Agent-generated SCT fine-tuning significantly improved overall quality scores (3.1 to 3.7; P < 0.001; Fleiss' κ = 0.82) in blinded expert evaluation across six clinically grounded dimensions, and also yielded higher scores on an external medical dialogue benchmark (HealthBench) than both RUCT fine-tuning and the non-fine-tuned baseline. These findings indicate that agent-structured clinical corpora enhance LLM fine-tuning performance and provide a scalable framework for reliable medical conversational AI development.",
+    "year": 2026,
+    "venue": "NPJ digital medicine",
+    "authors": [
+      "Hao Qin",
+      "Wenjun Tang",
+      "Zigeng Huang",
+      "Guihan Liang",
+      "Xinti Sun",
+      "Mengyan Zhang",
+      "Wenqian Wu",
+      "Erping Long",
+      "Peixing Wan"
+    ],
+    "doi": "10.1038/s41746-026-02867-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42259903/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:entity_dataset",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42259903"
+    }
+  },
+  {
+    "paper_id": "pubmed:41687100",
+    "title": "Real-World Use of a Mental Health AI Companion: Multiple Methods Study.",
+    "abstract": "The rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in misinformation and failing to escalate care in crises. In contrast, Ebb, Headspace's conversational AI tool (CAI tool), was purpose-built by clinical psychologists and research experts using motivational interviewing techniques for subclinical guidance, incorporating clinically backed safety mechanisms. This study aimed to (1) understand Headspace members' sentiment toward AI and expectations for a mental health CAI tool, (2) evaluate real-world use of Headspace's CAI tool, and (3) understand how members perceive a CAI tool fitting into their mental health journey. This was a multiple method study using three data sources including Headspace members: (1) cross-sectional survey (n=482) assessing demographics, AI use, and the Artificial Intelligence Attitude Scale-4 (AIAS-4); (2) real-world engagement descriptive analysis (n=393,969) assessing session and message counts, retention, and conversation themes; and (3) diary study (n=15) exploring the CAI tool's role within members' mental health journey. App engagement was compared between CAI tool 1.0 and CAI tool 2.0, where CAI tool 2.0 featured enhanced LLM conversational prompts, comprehensive memory, woven content recommendations, and more robust safety detection. While the majority of survey respondents used and would continue to use general AI tools, overall attitudes toward AI remained neutral (AIAS-4 mean 5.7, SD 2.2, range 1-10). Survey results suggest that members viewed the CAI tool as a guide to navigate to mental health resources and Headspace content and provide in-the-moment support. Members emphasized the need for data safety and ethics transparency, clinical guidelines structure, and for the CAI tool to be a resource in addition to human-delivered mental health care, not a replacement. Real-world CAI tool use showed strong engagement across 393,969 Headspace members. The product evolution to CAI tool 2.0 led to increased retention (77,894/153,249, 50.8% completed 2 sessions within 7 days vs 68,701/240,720, 28.5% for CAI tool 1.0) and higher positive conversation ratings (37,819/40,449, 93.5% vs 94,308/104,323, 90.4%). Retained CAI tool 2.0 users showed greater retention (6.1 sessions per user) compared to all CAI tool 2.0 users (2.9 sessions per user) and CAI tool 1.0 (2.4 sessions per user). Diary study results suggest that members imagined using the CAI tool when feeling stress or anxiety and during morning routines, commutes, or while winding down at night. Results emphasize the necessity of research-backed, purpose-built mental health AI products with minimum viable safeguards, including (1) transparent labeling of intended use, benefits, and limitations; (2) safety by design principles to monitor for overuse, detect risk, and flag needs for escalation; and (3) child and adolescent safeguards.",
+    "year": 2026,
+    "venue": "JMIR formative research",
+    "authors": [
+      "Christine Callahan",
+      "Leah Tanner",
+      "Chelsea Coe",
+      "Michelle Davis",
+      "Jenna Glover",
+      "Ellis Bernstein",
+      "Katherine Scranton",
+      "Kenli Urruty",
+      "Matthew Chester",
+      "Sarah Kunkle"
+    ],
+    "doi": "10.2196/86904",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41687100/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41687100"
+    }
+  },
+  {
+    "paper_id": "pubmed:41673364",
+    "title": "Bilinguals have better recall for code-switched information.",
+    "abstract": "Bilinguals frequently code-switch during conversations-a behavior often viewed as creating processing challenges for listeners. However, code-switching may also enhance comprehension and memory by directing attention to key information. This study tested whether bilinguals recall information better in code-switched contexts compared with single-language contexts and explored whether code-switching experience amplifies this benefit. In a preregistered study, Spanish-English bilinguals listened to short vignettes containing both single-language and code-switched segments. Participants recalled details more accurately when they had been presented within a code-switched sentence, suggesting that switches act as cues that boost attention and memory encoding. Moreover, bilinguals with greater everyday code-switching experience showed the strongest recall benefits, supporting the idea that listeners learn to associate switches with communicative importance. These findings challenge the long-standing view that code-switching primarily imposes cognitive costs in comprehension. Instead, they reveal how bilinguals leverage the communicative value of code-switches to enhance memory for linguistic content. By demonstrating that code-switches can promote learning and retention, this study highlights the potential for code-switching to serve as a communicative tool, particularly in contexts where understanding and recalling information is critical.",
+    "year": 2026,
+    "venue": "Psychonomic bulletin & review",
+    "authors": [
+      "Lauren K Salig",
+      "Jorge R Valdés Kroff",
+      "Jared M Novick",
+      "L Robert Slevc"
+    ],
+    "doi": "10.3758/s13423-025-02823-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41673364/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41673364"
+    }
+  },
+  {
+    "paper_id": "pubmed:39727199",
+    "title": "An Evidence-Based IT Program With Chatbot to Support Caregiving and Clinical Care for People With Dementia: The CareHeroes Development and Usability Pilot.",
+    "abstract": "There are numerous communication barriers between family caregivers and providers of people living with dementia, which can pose challenges to caregiving and clinical decision-making. To address these barriers, a new web and mobile-enabled app, called CareHeroes, was developed, which promotes the collection and secured sharing of clinical information between caregivers and providers. It also provides caregiver support and education. The primary study objective was to examine whether dementia caregivers would use CareHeroes as an adjunct to care and gather psychosocial data from those who used the app. This paper presents the implementation process used to integrate CareHeroes into clinical care at 2 memory clinics and preliminary outcome evaluation. Family caregivers receiving services at clinics were asked to use the app for a 12-month period to collect, track, and share clinical information with the care recipient's provider. They also used it to assess their own mental health symptoms. Psychosocial outcomes were assessed through telephone interviews and user data were collected by the app. A total of 21 caregivers enrolled in the pilot study across the 2 memory clinics. Usage data indicated that caregivers used many of the features in the CareHeroes app, though the chatbot was the most frequently used feature. Outcome data indicated that caregivers' depression was lower at 3-month follow-up (t11=2.03, P=.03). Recruitment and retention of the pilot study were impacted by COVID-19 restrictions, and therefore more testing is needed with a larger sample to determine the potential impact of CareHeroes on caregivers' mental health. Despite this limitation, the pilot study demonstrated that integrating a new supportive app for caregivers as an adjunct to clinical dementia care is feasible. Implications for future technology intervention development, implementation planning, and testing for caregivers of people living with dementia are discussed.",
+    "year": 2024,
+    "venue": "JMIR aging",
+    "authors": [
+      "Nicole Ruggiano",
+      "Ellen Leslie Brown",
+      "Peter J Clarke",
+      "Vagelis Hristidis",
+      "Lisa Roberts",
+      "Carmen Victoria Framil Suarez",
+      "Sai Chaithra Allala",
+      "Shannon Hurley",
+      "Chrystine Kopcsik",
+      "Jane Daquin",
+      "Hamilton Chevez",
+      "Raymond Chang-Lau",
+      "Marc Agronin",
+      "David S Geldmacher"
+    ],
+    "doi": "10.2196/57308",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39727199/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39727199"
+    }
+  },
+  {
+    "paper_id": "pubmed:37881464",
+    "title": "Protocol of a feasibility randomised controlled trial of Empowered Conversations: training family carers to enhance their relationships and communication with people living with dementia.",
+    "abstract": "Communication difficulties can cause frustration, low mood, and stress for people living with dementia and their carer. Carers should be offered training on adapting their communication skills. However, it is not common for skills-based education to examine emotional aspects of care and the effect of dementia on relationships. The Empowered Conversations (EC) training course was developed in response to a gap in service provision and has been adapted to a virtual format (Zoom). It addresses the specific psychological, relationship, and communication needs of informal and family dementia carers. The primary aim of the study is to investigate the feasibility of conducting a multi-centre randomised controlled evaluation trial of EC. Secondary aims include exploring the acceptability of delivering the intervention online and examining the optimum way of establishing cost-effectiveness. The feasibility trial uses a pragmatic data-collector blind parallel two-group RCT design with two arms (EC intervention plus treatment as usual, and treatment as usual waitlist control). There will be a 2:1 allocation in favour of the EC-training intervention arm. 75 participants will complete baseline outcome measures exploring their role as a carer, including their physical and mental health, attitudes to caring, quality of life, and use of health and social care services. These will be repeated after six-months. Participants allocated to the treatment group who complete the course will be invited to participate in a qualitative interview discussing their experience of EC. The study will investigate recruitment pathways (including facilitators and barriers to recruitment), estimate retention levels and response rates to questionnaires, obtain additional evidence regarding proof of concept, and consider the most appropriate primary outcome measures and methods for evaluating cost-effectiveness. The results of the feasibility study will be used to inform the development of a multicentre randomised controlled trial in the United Kingdom. ISRCTN15261686 (02/03/2022).",
+    "year": 2023,
+    "venue": "NIHR open research",
+    "authors": [
+      "Cassie Eastham",
+      "Warren Mansell",
+      "Chris Sutton",
+      "Yeliz Prior",
+      "John Keady",
+      "Gemma Shields",
+      "Cathy Riley",
+      "Gail Bowker",
+      "Yvonne Sylvestre",
+      "Lydia Morris"
+    ],
+    "doi": "10.3310/nihropenres.13441.1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37881464/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "37881464"
+    }
+  },
+  {
+    "paper_id": "pubmed:36188983",
+    "title": "Cognitive Training to Enhance Aphasia Therapy (Co-TrEAT): A Feasibility Study.",
+    "abstract": "Persons with aphasia (PWA) often have deficits in cognitive domains such as working memory (WM), which are negatively correlated with recovery, and studies have targeted WM deficits in aphasia therapy. To our knowledge, however, no study has examined the efficacy of multi-modal training which includes both WM training and targeted language therapy. This pilot project examined the feasibility and preliminary efficacy of combining WM training and naming therapy to treat post-stroke PWA. Chronic PWA were randomly assigned to either the a) Phonological Components Analysis (PCA) and WM intervention (WMI) condition (i.e., a computerized adaptive dual n-back task), or b) PCA and active control condition (WMC). Participants received face-to-face PCA therapy 3 times/week for 5 weeks, and simultaneously engaged in WM training or the active control condition five times/week, independently at home. Six PWA were enrolled, 3 in each condition. Feasibility metrics were excellent for protocol compliance, retention rate and lack of adverse events. Recruitment was less successful, with insufficient participants for group analyses. Participants in the WMI (but not the WMC) condition demonstrated a clinically significant (i.e., > 5 points) improvement on the Western Aphasia Battery- Aphasia Quotient (WAB-R AQ) and Boston Naming Test after therapy. Given the small sample size, the performance of two individuals, matched on age, education, naming accuracy pre-treatment, WAB-R AQ and WM abilities was compared. Participant WMI-3 demonstrated a notable increase in WM training performance over the course of therapy; WMC-2 was the matched control. After therapy, WMI-3's naming accuracy for the treated words improved from 30 to 90% (compared to 30-50% for WMC-2) with a 7-point WAB-R AQ increase (compared to 3 for WMC-2). Improvements were also found for WMI-3 but not for WMC-2 on ratings of communicative effectiveness, confidence and some conversation parameters in discourse. This feasibility study demonstrated excellent results for most aspects of Co-TrEAT. Recruitment rate, hampered by limited resources, must be addressed in future trials; remotely delivered aphasia therapy may be a possible solution. Although no firm conclusions can be drawn, the case studies suggest that WM training has the potential to improve language and communication outcomes when combined with aphasia therapy.",
+    "year": 2022,
+    "venue": "Frontiers in rehabilitation sciences",
+    "authors": [
+      "Tijana Simic",
+      "Laura Laird",
+      "Nadia Brisson",
+      "Kathy Moretti",
+      "Jean-Luc Théorêt",
+      "Sandra E Black",
+      "Gail A Eskes",
+      "Carol Leonard",
+      "Elizabeth Rochon"
+    ],
+    "doi": "10.3389/fresc.2022.815780",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36188983/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "36188983"
+    }
+  },
+  {
+    "paper_id": "pubmed:34146363",
+    "title": "Neural correlates of visual stimulus encoding and verbal working memory differ between cochlear implant users and normal-hearing controls.",
+    "abstract": "A common concern for individuals with severe-to-profound hearing loss fitted with cochlear implants (CIs) is difficulty following conversations in noisy environments. Recent work has suggested that these difficulties are related to individual differences in brain function, including verbal working memory and the degree of cross-modal reorganization of auditory areas for visual processing. However, the neural basis for these relationships is not fully understood. Here, we investigated neural correlates of visual verbal working memory and sensory plasticity in 14 CI users and age-matched normal-hearing (NH) controls. While we recorded the high-density electroencephalogram (EEG), participants completed a modified Sternberg visual working memory task where sets of letters and numbers were presented visually and then recalled at a later time. Results suggested that CI users had comparable behavioural working memory performance compared with NH. However, CI users had more pronounced neural activity during visual stimulus encoding, including stronger visual-evoked activity in auditory and visual cortices, larger modulations of neural oscillations and increased frontotemporal connectivity. In contrast, during memory retention of the characters, CI users had descriptively weaker neural oscillations and significantly lower frontotemporal connectivity. We interpret the differences in neural correlates of visual stimulus processing in CI users through the lens of cross-modal and intramodal plasticity.",
+    "year": 2021,
+    "venue": "The European journal of neuroscience",
+    "authors": [
+      "Priyanka Prince",
+      "Brandon T Paul",
+      "Joseph Chen",
+      "Trung Le",
+      "Vincent Lin",
+      "Andrew Dimitrijevic"
+    ],
+    "doi": "10.1111/ejn.15365",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34146363/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "34146363"
+    }
+  },
+  {
+    "paper_id": "pubmed:33492008",
+    "title": "How Do We Allocate Our Resources When Listening and Memorizing Speech in Noise? A Pupillometry Study.",
+    "abstract": "Actively following a conversation can be demanding and limited cognitive resources must be allocated to the processing of speech, retaining and encoding the perceived content, and preparing an answer. The aim of the present study was to disentangle the allocation of effort into the effort required for listening (listening effort) and the effort required for retention (memory effort) by means of pupil dilation. Twenty-five normal-hearing German speaking participants underwent a sentence final word identification and recall test, while pupillometry was conducted. The participants' task was to listen to a sentence in four-talker babble background noise and to repeat the final word afterward. At the end of a list of sentences, they were asked to recall as many of the final words as possible. Pupil dilation was recorded during different list lengths (three sentences versus six sentences) and varying memory load (recall versus no recall). Additionally, the effect of a noise reduction algorithm on performance, listening effort, and memory effort was evaluated. We analyzed pupil dilation both before each sentence (sentence baseline) as well as the dilation in response to each sentence relative to the sentence baseline (sentence dilation). The pupillometry data indicated a steeper increase of sentence baseline under recall compared to no recall, suggesting higher memory effort due to memory processing. This increase in sentence baseline was most prominent toward the end of the longer lists, that is, during the second half of six sentences. Without a recall task, sentence baseline declined over the course of the list. Noise reduction appeared to have a significant influence on effort allocation for listening, which was reflected in generally decreased sentence dilation. Our results showed that recording pupil dilation in a speech identification and recall task provides valuable insights beyond behavioral performance. It is a suitable tool to disentangle the allocation of effort to listening versus memorizing speech.",
+    "year": 2021,
+    "venue": "Ear and hearing",
+    "authors": [
+      "Hanna Bönitz",
+      "Thomas Lunner",
+      "Mareike Finke",
+      "Lorenz Fiedler",
+      "Björn Lyxell",
+      "Søren Kamaric Riis",
+      "Elaine Ng",
+      "Alejandro Lopez Valdes",
+      "Andreas Büchner",
+      "Dorothea Wendt"
+    ],
+    "doi": "10.1097/AUD.0000000000001002",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33492008/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "33492008"
+    }
+  },
+  {
+    "paper_id": "pubmed:32817900",
+    "title": "Using simulation to help healthcare professionals relaying patient information during telephone conversations.",
+    "abstract": "The purpose of this paper is to describe a development project in which simulation was used to improve the telephone-based conversations between nurses in an emergency department (ED) and physicians from different specialties taking care of acutely ill patients. A needs analysis consisting of observations and interviews was conducted and a one-day simulation-based interprofessional team training course was developed. Observations of phone conversations pre-course, three and six months after the course were conducted in the clinical setting with 20 participants in each point of time. A 14-item evaluation tool was used to record how many information pieces were communicated. Five courses were conducted for 66 nurses/nurse assistants and 17 physicians. 9 out of the 14 items were reported significantly more after the course. Item that were not reported in the pre-measurement, increased to around 20% reporting three months after the course but then fell to close to 0% again after six months. The patterns of retention and decrease of the effect could be an indicator for norms, values and beliefs held by professions about what constitutes their task.",
+    "year": 2020,
+    "venue": "Heliyon",
+    "authors": [
+      "Lene F Petersen",
+      "Marlene D Madsen",
+      "Doris Østergaard",
+      "Peter Dieckmann"
+    ],
+    "doi": "10.1016/j.heliyon.2020.e04687",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32817900/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "32817900"
+    }
+  },
+  {
+    "paper_id": "pubmed:30719687",
+    "title": "Autobiographical recall of personally familiar names and temporal information in e-mails: An automatic analytic approach using e-mail communications.",
+    "abstract": "An important question that arises from autobiographical memory research is whether the variables that influence memory in the laboratory also drive memory for autobiographical episodes in real life. We explored this question within the context of e-mail communications and investigated the variables that influence recall for personally familiar names and temporal information in e-mails. We designed a Web-based program that analyzed each participant's year-old sent e-mail archive and applied textual analysis algorithms to identify a set of sentences likely to be memorable. These sentences were then used as the stimuli in a cued recall task. Participants saw two sentences from their sent e-mail as a cue and attempted to recall the name of the e-mail recipient. Participants also rated the vividness of recall for the e-mail conversation and estimated the month in which they had written the e-mail. Linear mixed-effect analyses revealed that recipient name recall accuracy decreased with longer retention intervals and increased with greater frequency of contact with the recipient. Also, with longer retention intervals, participants dated e-mails as being more recent than their actual month. This telescoping error was moderately larger for e-mails with greater sentiment. These findings suggest that memory for personally familiar names and temporal information in e-mails closely follows the patterns for autobiographical memory and proper-name recall found in laboratory settings. This study introduces an innovative, Web-based experimental method for studying the cognitive processes related to autobiographical memories using ecologically valid, naturalistic communications.",
+    "year": 2019,
+    "venue": "Behavior research methods",
+    "authors": [
+      "Abhilasha A Kumar",
+      "Sudheendra Hangal",
+      "Allyson C Rosen"
+    ],
+    "doi": "10.3758/s13428-018-1182-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30719687/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "30719687"
+    }
+  },
+  {
+    "paper_id": "pubmed:29459336",
+    "title": "Building a collective memory: the case for collective forgetting.",
+    "abstract": "The shared reality of a community rests in part on the collective memories held by members of that community. Surprisingly, psychologists have only recently begun to study collective memories, an area of interest in the social sciences for several decades. The present paper adopts the perspective that remembering is often an act of communication. One consequence of communicative acts of remembering is that speaker and listeners can come to share the same memories, thereby providing a foundation on which to build a collective memory. Another consequence is that the selectivity of communicative acts of remembering can induce collective selective forgetting, clearly one component of any collective memory. The phenomenon of retrieval-induced forgetting is discussed in the context of dyadic conversational exchanges of unrelated individuals and conversational exchanges between ingroup and outgroup members. In addition, the paper reviews work demonstrating that what occurs at the dyadic level can shape global outcomes of complex social networks, including convergence of memories across a network. The bottom-up approach described in this paper can help us understand how individual memories can come to be shared across a community.",
+    "year": 2018,
+    "venue": "Current opinion in psychology",
+    "authors": [
+      "William Hirst",
+      "Alin Coman"
+    ],
+    "doi": "10.1016/j.copsyc.2018.02.002",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29459336/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "29459336"
+    }
+  },
+  {
+    "paper_id": "pubmed:29329640",
+    "title": "Capturing real-life forgetting in transient epileptic amnesia via an incidental memory test.",
+    "abstract": "Transient epileptic amnesia (TEA) is an epileptic syndrome characterized by recurrent, brief episodes of amnesia. Patients with TEA often complain of interictal (between attacks) retention deficits, characterised by an 'evaporation' of memories for recent events over days to weeks. Clinical tests of anterograde memory often fail to corroborate these complaints as TEA patients commonly perform within the normal range after the standard 10-30-min delay period. Modified laboratory tests that include a 1-3 week delay period frequently reveal clear evidence of 'accelerated long-term forgetting' (ALF). However, they are not used routinely and lack ecological validity. In the present study we examined whether 'real-life' ALF can be captured via a controlled incidental memory test in TEA patients. To this end, the experimenter told 27 TEA patients and 32 controls a well-rehearsed amusing story, apparently as a way of making light conversation before starting a set of research experiments. Without prior warning, the experimenter subsequently probed the participants' memory of this story via tests of free recall and forced choice recognition after 30 min or 1 week. After 30 min retention was comparable in TEA patients and controls. After 1 week TEA patients retained significantly less story material than controls, and significant ALF was revealed in the TEA patients in the recognition test. Our data show that ALF in a 'real-life' situation can occur even when standard memory tests indicate normal memory function. Moreover, our data suggest that incidental memory tests can capture real-life ALF, and that forced-choice recognition tests might be more sensitive than free recall tests for the detection of real-life ALF.",
+    "year": 2019,
+    "venue": "Cortex; a journal devoted to the study of the nervous system and behavior",
+    "authors": [
+      "Serge Hoefeijzers",
+      "Adam Zeman",
+      "Sergio Della Sala",
+      "Michaela Dewar"
+    ],
+    "doi": "10.1016/j.cortex.2017.11.023",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29329640/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "29329640"
+    }
+  },
+  {
+    "paper_id": "pubmed:28024176",
+    "title": "Talking after school: Parents' conversational styles and children's memory for a science lesson.",
+    "abstract": "A scientist taught 40 4- to 6-year-old children an interactive science lesson at school. The same day, children talked about the lesson at home with a parent who was naive to the details of what had transpired at school. Six days later, a researcher interviewed children about objects, activities, and concepts that were part of the lesson. Aspects of parents' conversational style (e.g., open-ended memory questions, descriptive language) predicted how much information children provided in talking with them, which in turn predicted children's memory performance 6days later. The findings suggest that elaborative parent-child conversations at home could boost children's retention of academic information acquired at school even when parents have no specific knowledge of what children have experienced there.",
+    "year": 2017,
+    "venue": "Journal of experimental child psychology",
+    "authors": [
+      "Michelle D Leichtman",
+      "Kaitlin A Camilleri",
+      "David B Pillemer",
+      "Carmela C Amato-Wierda",
+      "Jennifer E Hogan",
+      "Melissa D Dongo"
+    ],
+    "doi": "10.1016/j.jecp.2016.11.002",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28024176/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "28024176"
+    }
+  },
+  {
+    "paper_id": "pubmed:27870411",
+    "title": "Sex, age, and sex hormones affect recall of words in a directed forgetting paradigm.",
+    "abstract": "During the course of serious discussion, an unexpected interruption may induce forgetting of the original topic of a conversation. Sex, age, and sex hormone levels may affect frequency and extension of forgetting. In a list-method directed forgetting paradigm, subjects have to learn two word lists. After learning list 1, subjects receive either a forget or a remember list 1 cue. When the participants had learned list 2 and completed a distraction task, they were asked to write down as many recalled items as possible, starting either with list 1 or list 2 items. In the present study, 96 naturally cycling women, 60 oral contraceptive users, 56 postmenopausal women, and 41 young men were assigned to one of these different experimental conditions. Forget-cued young subjects recall fewer list 1 items (list 1 forgetting) but more list 2 items (list 2 enhancement) compared with remember-cued subjects. However, forget-cued postmenopausal women showed reduced list 1 forgetting but enhanced list 2 retention. Remember-cued naturally cycling women recalled more list 1 items than oral contraceptive users, young men, and postmenopausal women. In forget-cued follicular women, salivary progesterone correlated positively with recalled list 2 items. Salivary 17β-estradiol did not correlate with recalled list 1 or list 2 items in either remember- or forget-cued young women. However, salivary 17β-estradiol correlated with item recall in remember-cued postmenopausal women. Our findings suggest that sex hormones do not globally modulate verbal memory or forgetting, but selectively affect cue-specific processing. © 2016 Wiley Periodicals, Inc.",
+    "year": 2017,
+    "venue": "Journal of neuroscience research",
+    "authors": [
+      "Hubert H Kerschbaum",
+      "Ildiko Hofbauer",
+      "Anna Gföllner",
+      "Birgit Ebner",
+      "Nikolaus Bresgen",
+      "Karl-Heinz T Bäuml"
+    ],
+    "doi": "10.1002/jnr.23973",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27870411/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "27870411"
+    }
+  },
+  {
+    "paper_id": "pubmed:26240179",
+    "title": "Accessing Real-Life Episodic Information from Minutes versus Hours Earlier Modulates Hippocampal and High-Order Cortical Dynamics.",
+    "abstract": "It is well known that formation of new episodic memories depends on hippocampus, but in real-life settings (e.g., conversation), hippocampal amnesics can utilize information from several minutes earlier. What neural systems outside hippocampus might support this minutes-long retention? In this study, subjects viewed an audiovisual movie continuously for 25 min; another group viewed the movie in 2 parts separated by a 1-day delay. Understanding Part 2 depended on retrieving information from Part 1, and thus hippocampus was required in the day-delay condition. But is hippocampus equally recruited to access the same information from minutes earlier? We show that accessing memories from a few minutes prior elicited less interaction between hippocampus and default mode network (DMN) cortical regions than accessing day-old memories of identical events, suggesting that recent information was available with less reliance on hippocampal retrieval. Moreover, the 2 groups evinced reliable but distinct DMN activity timecourses, reflecting differences in information carried in these regions when Part 1 was recent versus distant. The timecourses converged after 4 min, suggesting a time frame over which the continuous-viewing group may have relied less on hippocampal retrieval. We propose that cortical default mode regions can intrinsically retain real-life episodic information for several minutes.",
+    "year": 2016,
+    "venue": "Cerebral cortex (New York, N.Y. : 1991)",
+    "authors": [
+      "J Chen",
+      "C J Honey",
+      "E Simony",
+      "M J Arcaro",
+      "K A Norman",
+      "U Hasson"
+    ],
+    "doi": "10.1093/cercor/bhv155",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26240179/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "26240179"
+    }
+  },
+  {
+    "paper_id": "pubmed:25751741",
+    "title": "A ten-year follow-up of a study of memory for the attack of September 11, 2001: Flashbulb memories and memories for flashbulb events.",
+    "abstract": "Within a week of the attack of September 11, 2001, a consortium of researchers from across the United States distributed a survey asking about the circumstances in which respondents learned of the attack (their flashbulb memories) and the facts about the attack itself (their event memories). Follow-up surveys were distributed 11, 25, and 119 months after the attack. The study, therefore, examines retention of flashbulb memories and event memories at a substantially longer retention interval than any previous study using a test-retest methodology, allowing for the study of such memories over the long term. There was rapid forgetting of both flashbulb and event memories within the first year, but the forgetting curves leveled off after that, not significantly changing even after a 10-year delay. Despite the initial rapid forgetting, confidence remained high throughout the 10-year period. Five putative factors affecting flashbulb memory consistency and event memory accuracy were examined: (a) attention to media, (b) the amount of discussion, (c) residency, (d) personal loss and/or inconvenience, and (e) emotional intensity. After 10 years, none of these factors predicted flashbulb memory consistency; media attention and ensuing conversation predicted event memory accuracy. Inconsistent flashbulb memories were more likely to be repeated rather than corrected over the 10-year period; inaccurate event memories, however, were more likely to be corrected. The findings suggest that even traumatic memories and those implicated in a community's collective identity may be inconsistent over time and these inconsistencies can persist without the corrective force of external influences.",
+    "year": 2015,
+    "venue": "Journal of experimental psychology. General",
+    "authors": [
+      "William Hirst",
+      "Elizabeth A Phelps",
+      "Robert Meksin",
+      "Chandan J Vaidya",
+      "Marcia K Johnson",
+      "Karen J Mitchell",
+      "Randy L Buckner",
+      "Andrew E Budson",
+      "John D E Gabrieli",
+      "Cindy Lustig",
+      "Mara Mather",
+      "Kevin N Ochsner",
+      "Daniel Schacter",
+      "Jon S Simons",
+      "Keith B Lyle",
+      "Alexandru F Cuc",
+      "Andreas Olsson"
+    ],
+    "doi": "10.1037/xge0000055",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25751741/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "25751741"
+    }
+  },
+  {
+    "paper_id": "pubmed:24206157",
+    "title": "Quizzes and conversations: exploring the role of retrieval in medical education.",
+    "abstract": null,
+    "year": 2013,
+    "venue": "Medical education",
+    "authors": [
+      "Douglas P Larsen",
+      "Tim Dornan"
+    ],
+    "doi": "10.1111/medu.12274",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24206157/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "24206157"
+    }
+  },
+  {
+    "paper_id": "pubmed:23651097",
+    "title": "On being a memory expert witness: Three cases.",
+    "abstract": "I describe three legal cases in which I acted as a memory expert witness. The cases contain remarkable accounts of memories. Such memories are by no means unusual in legal cases, are often over retention intervals measured in decades, and contain details the specificity of which is highly unusual. For example, recalling from childhood verbatim conversations, clothes worn by self and others, the weather, actions that at the time could not have been understood, details that could not have been known, precise durations and calendar dates, and much more. I show how our scientific understanding of memory can help courts reach more informed decisions about such fantastical \"memories\" and how these memories constitute data that as researchers we should seek to understand.",
+    "year": 2013,
+    "venue": "Memory (Hove, England)",
+    "authors": [
+      "Martin A Conway"
+    ],
+    "doi": "10.1080/09658211.2013.794241",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23651097/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23651097"
+    }
+  },
+  {
+    "paper_id": "pubmed:23640783",
+    "title": "How effective is the cognitive interview when used with adults with intellectual disabilities specifically with conversation recall?",
+    "abstract": "The cognitive interview (CI) has been shown to increase correct memory recall of a diverse range of participant types, without an increase in the number of incorrect or confabulated details. However, it has rarely been examined for use with adults with intellectual disability. This study compared the memory recall of twenty-one adults with a mild intellectual disability (ID) (IQ 70-50) and twenty-one adults from the general population (GP). Participants viewed a film of a staged distraction theft and were interviewed using either the CI or the structured interview (SI). The CI, when compared to the SI, enhanced the correct recall of person, action and conversation (gist) detail for both participant types, without increasing the number of incorrect or confabulated details reported. The ID group reported significantly less correct information than the GP regardless of the interview used. The findings suggest that the CI can enable adults with intellectual disability to provide a fuller picture about an experienced event. Implications of this research are discussed.",
+    "year": 2013,
+    "venue": "Journal of applied research in intellectual disabilities : JARID",
+    "authors": [
+      "Jason Clarke",
+      "Katherine Prescott",
+      "Rebecca Milne"
+    ],
+    "doi": "10.1111/jar.12049",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23640783/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23640783"
+    }
+  },
+  {
+    "paper_id": "pubmed:23258389",
+    "title": "Characterising physician listening behaviour during hospitalist handoffs using the HEAR checklist.",
+    "abstract": "The increasing fragmentation of healthcare has resulted in more patient handoffs. Many professional groups, including the Accreditation Council on Graduate Medical Education and the Society of Hospital Medicine, have made recommendations for safe and effective handoffs. Despite the two-way nature of handoff communication, the focus of these efforts has largely been on the person giving information. To observe and characterise the listening behaviours of handoff receivers during hospitalist handoffs. Prospective observational study of shift change and service change handoffs on a non-teaching hospitalist service at a single academic tertiary care institution. The 'HEAR Checklist', a novel tool created based on review of effective listening behaviours, was used by third party observers to characterise active and passive listening behaviours and interruptions during handoffs. In 48 handoffs (25 shift change, 23 service change), active listening behaviours (eg, read-back (17%), note-taking (23%) and reading own copy of the written signout (27%)) occurred less frequently than passive listening behaviours (eg, affirmatory statements (56%) nodding (50%) and eye contact (58%)) (p<0.01). Read-back occurred only eight times (17%). In 11 handoffs (23%) receivers took notes. Almost all (98%) handoffs were interrupted at least once, most often by side conversations, pagers going off, or clinicians arriving. Handoffs with more patients, such as service change, were associated with more interruptions (r=0.46, p<0.01). Using the 'HEAR Checklist', we can characterise hospitalist handoff listening behaviours. While passive listening behaviours are common, active listening behaviours that promote memory retention are rare. Handoffs are often interrupted, most commonly by side conversations. Future handoff improvement efforts should focus on augmenting listening and minimising interruptions.",
+    "year": 2013,
+    "venue": "BMJ quality & safety",
+    "authors": [
+      "Elizabeth A Greenstein",
+      "Vineet M Arora",
+      "Paul G Staisiunas",
+      "Stacy S Banerjee",
+      "Jeanne M Farnan"
+    ],
+    "doi": "10.1136/bmjqs-2012-001138",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23258389/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "23258389"
+    }
+  },
+  {
+    "paper_id": "pubmed:21910558",
+    "title": "Cognition through a social network: the propagation of induced forgetting and practice effects.",
+    "abstract": "Although a burgeoning literature has shown that practice effects and socially shared retrieval-induced forgetting can reshape the memories of speakers and listeners involved in a conversation, it has generally failed to examine whether such effects can propagate through a sequence of conversational interactions. This lacuna is unfortunate, since sequences of social interactions are more common than single, isolated ones. The present research explores how people exposed to attitudinally biased selective practice propagate the practice and forgetting effects into subsequent conversations with attitudinally similar and dissimilar others and, through these conversations, affect subsequent acts of remembering. The research establishes that the propagation of retrieval-induced forgetting and practice effects is transitive. It also determines when attitude influences propagation. These findings are discussed in the context of the formation of collective memories.",
+    "year": 2012,
+    "venue": "Journal of experimental psychology. General",
+    "authors": [
+      "Alin Coman",
+      "William Hirst"
+    ],
+    "doi": "10.1037/a0025247",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21910558/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "21910558"
+    }
+  },
+  {
+    "paper_id": "pubmed:21223267",
+    "title": "Old, new, borrowed, blue? The emergence and retention of personal meaning in autobiographical storytelling.",
+    "abstract": "Research on narrative identity has traditionally focused on how narrative characteristics are related to personality and well-being in adults. The present pair of studies with college students (Study 1, n= 62; Study 2, n= 68 couples) examined the dynamic conversational processes that might be part of constructing that identity. We examined the characteristics of personal meanings, operationalized as self-event connections, and the retention of those connections about important past events discussed between new romantic partners. Across the 2 studies, self-event connections that were positive and about stable aspects of the self were more likely to occur. Connections that were retained over 1 month were those that were shared by both teller and listener in an independent postconversation assessment. Discussion focuses on the processes that might contribute to the construction of narrative identity and the importance of positivity, stability, and shared connections in developing and maintaining narrative identity.",
+    "year": 2011,
+    "venue": "Journal of personality",
+    "authors": [
+      "Kate C McLean",
+      "Monisha Pasupathi"
+    ],
+    "doi": "10.1111/j.1467-6494.2010.00676.x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21223267/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "21223267"
+    }
+  },
+  {
+    "paper_id": "pubmed:21145067",
+    "title": "Rapid fast-mapping abilities in 2-year-olds.",
+    "abstract": "Learning a new word consists of two primary tasks that have often been conflated into a single process: referent selection, in which a child must determine the correct referent of a novel label, and referent retention, which is the ability to store this newly formed label-object mapping in memory for later use. In addition, children must be capable of performing these tasks rapidly and repeatedly as they are frequently exposed to novel words during the course of natural conversation. Here we used a preferential pointing task to investigate 2-year-olds' (N=72) ability to infer the referent of a novel noun from a single ambiguous exposure and their ability to retain this mapping over time. Children were asked to identify the referent of a novel label on six critical trials distributed throughout the course of a 10-min study involving many familiar and novel objects. On these critical trials, images of a known object and a novel object (e.g., a ball and a nameless artifact constructed in the laboratory) appeared on two computer screens and a voice asked children to \"point at the _____ [e.g., glark].\" Following label onset, children were allowed only 3s during which to infer the correct referent, point at it, and potentially store this new word-object mapping. In a final posttest trial, all previously labeled novel objects appeared and children were asked to point to one of them (e.g., \"Can you find the glark?\"). To succeed, children needed to have initially mapped the novel labels correctly and retained these mappings over the course of the study. Despite the difficult demands of the current task, children successfully identified the target object on the retention trial. We conclude that 2-year-olds are able to fast map novel nouns during a brief single exposure under ambiguous labeling conditions.",
+    "year": 2011,
+    "venue": "Journal of experimental child psychology",
+    "authors": [
+      "Chad Spiegel",
+      "Justin Halberda"
+    ],
+    "doi": "10.1016/j.jecp.2010.10.013",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21145067/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "21145067"
+    }
+  },
+  {
+    "paper_id": "pubmed:20391180",
+    "title": "Silence and the shaping of memory: how distracted listeners affect speakers' subsequent recall of a computer game experience.",
+    "abstract": "The present study focused on how distracted listening affects subsequent memory for narrated events. Undergraduate students experienced a computer game in the lab and talked about it with either a responsive or distracted friend. One month later, those who initially spoke with distracted listeners showed lower retention of information about the computer game, and their subsequent memories were also less consistent with their initial conversational recall. Differences in subsequent memory across initial listener condition appeared likely to be mediated by differences in the initial conversations elicited by responsive and unresponsive listeners. Results are discussed in terms of their implications for the social shaping of memory and identity.",
+    "year": 2010,
+    "venue": "Memory (Hove, England)",
+    "authors": [
+      "Monisha Pasupathi",
+      "Tim Hoyt"
+    ],
+    "doi": "10.1080/09658210902992917",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20391180/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "20391180"
+    }
+  },
+  {
+    "paper_id": "pubmed:19476592",
+    "title": "Forgetting the unforgettable through conversation: socially shared retrieval-induced forgetting of September 11 memories.",
+    "abstract": "A speaker's selective recounting of memories shared with a listener will induce both the speaker and the listener to forget unmentioned, related material more than unmentioned, unrelated material. We extended this finding of within-individual and socially shared retrieval-induced forgetting to well-rehearsed, emotionally intense memories that are similar for the speaker and listener, but differ in specifics. A questionnaire probed participants' memory of the September 11 terrorist attacks. Questions and responses were grouped into category-exemplar structures. Then, participants selectively rehearsed their answers (using a structured interview in Experiment 1 and a joint recounting between pairs in Experiment 2). In subsequent recognition tests, response times yielded evidence of within-individual retrieval-induced forgetting and socially shared retrieval-induced forgetting. This result indicates that conversations can alter memories of speakers and listeners in similar ways, even when the memories differ. We discuss socially shared retrieval-induced forgetting as a mechanism for the formation of collective memories.",
+    "year": 2009,
+    "venue": "Psychological science",
+    "authors": [
+      "Alin Coman",
+      "David Manier",
+      "William Hirst"
+    ],
+    "doi": "10.1111/j.1467-9280.2009.02343.x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19476592/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "19476592"
+    }
+  },
+  {
+    "paper_id": "pubmed:18821268",
+    "title": "Retrieval opportunities while multitasking improve name recall.",
+    "abstract": "In two experiments we tested whether providing retrieval opportunities while people were multitasking would improve memory for names. College students (n=195) in Experiment 1 did addition problems and intermittently were \"introduced\" to 12 face-name pairs to learn. For half the names students were given three within-list retrieval opportunities. Name recall (cued with the faces) was tested either immediately or after 24 hours. Retrieval opportunities improved name recall with both immediate and delayed tests. Experiment 2 more closely resembled the multitasking required in a real-life social situation. College students (n=98) viewed a videotape and were asked to learn the names of 12 dormitory residents who were introduced during an ongoing conversation. Retrieval opportunities were provided for 8 of the 12 residents by having them appear three additional times in the video without repeating their names. Retrieval opportunities improved name recall, but the effect was much smaller than in Experiment 1. The present research demonstrates that distributed retrieval can be effective when people are multitasking including when the multitasking involves a conversation.",
+    "year": 2008,
+    "venue": "Memory (Hove, England)",
+    "authors": [
+      "Elizabeth Helder",
+      "John J Shaughnessy"
+    ],
+    "doi": "10.1080/09658210802360611",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18821268/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "18821268"
+    }
+  },
+  {
+    "paper_id": "pubmed:18771477",
+    "title": "The effects of social influence on children's memory reports: the omission and commission error asymmetry.",
+    "abstract": "Children in two age groups (7 vs. 12 yrs, N= 174) individually interacted with a stranger and were later interviewed about this event. Right before the interview, each child encountered the stranger once again and he engaged in a conversation where he either suggested that a (central or peripheral) detail originally present in the event had actually not been there or that an originally non-present (central or peripheral) detail had in fact been there. It was hypothesized that the two types of misinformation would result in omission and commission errors respectively. The results showed that the social influence resulted in an asymmetric effect (i.e., more commission than omission errors). Importantly, we also found that the children made more errors with respect to the peripheral detail (a suitcase), compared to the central detail (a passenger). Younger children did not make more errors (neither omission nor commission errors) than older children.",
+    "year": 2008,
+    "venue": "Scandinavian journal of psychology",
+    "authors": [
+      "Emma Roos Af Hjelmsäter",
+      "Pär Anders Granhag",
+      "Leif A Strömwall",
+      "Amina Memon"
+    ],
+    "doi": "10.1111/j.1467-9450.2008.00679.x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18771477/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "18771477"
+    }
+  },
+  {
+    "paper_id": "pubmed:18769986",
+    "title": "Narrative form and content in remembering.",
+    "abstract": "Narrative is the primary medium through which experience is represented, remembered and shared with others. It has the tendency to unify experience in an abstract linear form. The degree to which this is done is designated narrative form. Mori uses a multidimensional single case analysis to explore how the form of a narrative differs between an experience of real contact with the environment and an experience communicated by another or a 'real' experience repeated several times in conversation. I commend Mori's experimental setup as modeling everyday life activities and for arriving at a theory that applies to all cases. However, I argue (using data from my own experiment on narrative and remembering) that the idiographic approach can be fruitfully supplemented with (1) an analysis of the sample as a whole and (2) narrative content in addition to form.",
+    "year": 2008,
+    "venue": "Integrative psychological & behavioral science",
+    "authors": [
+      "Brady Wagoner"
+    ],
+    "doi": "10.1007/s12124-008-9077-4",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18769986/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "18769986"
+    }
+  },
+  {
+    "paper_id": "pubmed:18033622",
+    "title": "Long-term memory for the emotional gist and the emotional essence of an experience.",
+    "abstract": "We investigated accuracy in recalling past emotional behaviours and emotionality. Male couples discussed the history of their relationship, and coders rated the extent to which each partner engaged in behaviours such as complimenting or criticising. These ratings were combined into dimensions representing the deeper, emotional essence of that partner's discussion (expressions of We-ness, Fondness, Negativity, and Disappointment). Four years later, participants accurately recalled some of their own and some of their partner's emotional gist-level behaviours, but their answers indicated that they also remembered the emotional essence of the conversation. We conclude that individuals can retain the emotional essence of an experience for a long time, and that they may use this memory to infer, in part, gist-level details of the experience.",
+    "year": 2007,
+    "venue": "Memory (Hove, England)",
+    "authors": [
+      "Martin A Safer",
+      "Carolyn W Breslin",
+      "Richard P Boesch",
+      "Renata Cerqueira"
+    ],
+    "doi": "10.1080/09658210701738412",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18033622/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "18033622"
+    }
+  },
+  {
+    "paper_id": "pubmed:17381786",
+    "title": "Infants' use of shared linguistic information to clarify ambiguous requests.",
+    "abstract": "Do infants use past linguistic information to interpret an ambiguous request for an object? When infants in this research were shown 2 objects, and asked for 1 with an indefinite request (e.g., \"Can you get it for me?\"), both 15- and 18-month-olds used the speaker's previous reference to an absent object to interpret the request. The 18-month-olds did so even when the request was made after a 2.5-min delay. When the request was made by a person who did not participate in the conversation, the infants did not use the previous verbal information. These results demonstrate infants' ability to use language as a source of information in ambiguous contexts and indicate an early appreciation of the shared nature of conversation.",
+    "year": 2007,
+    "venue": "Child development",
+    "authors": [
+      "Patricia A Ganea",
+      "Megan M Saylor"
+    ],
+    "doi": "10.1111/j.1467-8624.2007.01011.x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17381786/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "17381786"
+    }
+  }
+]

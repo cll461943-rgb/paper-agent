@@ -1,0 +1,483 @@
+[
+  {
+    "paper_id": "pubmed:42140126",
+    "title": "Crash root-cause identification via trace-rewarded causation chain reasoning large language model.",
+    "abstract": "Road traffic crash is one of the top leading causes of death worldwide. To support the deployment of modern safety improvements such as Highly Automated Driving (HAD), collision analysis requires to reveal crash formation and find the root-causes. This study explores Large Language Model (LLM)-based techniques to reconstruct the crash causation chain, and reveal the root-causes underlying crash occurrence. By designing trace-reward functions, a domain reasoning model base upon DeepSeek-R1-Distill-Qwen-1.5B is constructed to identify the root-causes. Specifically, the trace-rewards are constructed from accuracy in recognizing crash types and entities, accuracy in extracting crash-related behaviors, and alignment degree of behavior and root-cause. Monte Carlo Tree Search (MCTS) is then employed to broaden the exploration of potential root-causes and build inference paths. Finally, Group Relative Policy Optimization (GRPO) is applied to identify the optimal inference traces through training the model. Empirical analyses are conducted using Multi-Modal Accident Video Understanding (MM-AU) dataset. The results show that the proposed method raises the Micro Accuracy of root-cause identification from 0.427 to 0.870 and improves the Macro Recall from 0.389 to 0.852. This demonstrates that the proposed method effectively enhances the benchmark model's ability to understand the process of crash formation. Based on the identified root-causes, further analyses and discussions are conducted, providing effective support for traffic safety management and the development of preventive strategies.",
+    "year": 2026,
+    "venue": "Accident; analysis and prevention",
+    "authors": [
+      "Ning Xie",
+      "Jun Huang",
+      "Xiaoyue Zhou",
+      "Rongjie Yu"
+    ],
+    "doi": "10.1016/j.aap.2026.108586",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42140126/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42140126"
+    }
+  },
+  {
+    "paper_id": "pubmed:42068634",
+    "title": "Optimizing speculative decoding via dynamic multi-path and dual-stream networks.",
+    "abstract": "The Transformer architecture widely adopted in the large language models (LLMs) suffers from limited inference efficiency due to the inherently sequential nature of autoregressive token generation. To address this issue, speculative decoding (SD) has been proposed to accelerate LLM inference by employing small speculative models (SSMs) to generate candidate tokens that are subsequently verified by the target LLM. However, the SD methods is often constrained by the key challenges: the low acceptance rate of tokens predicted by SSMs. To overcome the limitation, this paper proposes a Dual-Stream Network Architecture (DSNA), the architecture introduces two parallel processing streams that simultaneously model word sequences and feature sequences. The outputs of these two streams are progressively fused in subsequent stages to enhance the quality of candidate predictions. Furthermore, a dynamic multi-path decoding (DMPD) mechanism is introduced to leverage the enriched representations produced by the dual-stream architecture. This mechanism allows multiple candidate token paths to be evaluated simultaneously, enabling the model to accept multiple tokens within a single forward propagation step during the inference process. Extensive experiments show that our proposed the method consistently outperforms the state-of-the-art SD approaches, achieving significant improvements in both inference throughput and generation accuracy across multiple benchmarks.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Yong Yang",
+      "Ting Ting Yang",
+      "Shao Shuai Gao",
+      "Jia Hong Ning",
+      "Ling Zheng Kong"
+    ],
+    "doi": "10.1016/j.neunet.2026.109014",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42068634/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42068634"
+    }
+  },
+  {
+    "paper_id": "pubmed:42063861",
+    "title": "A rapid evidence review of evaluation techniques for large language models in legal use cases: trends, gaps, and recommendations for future research.",
+    "abstract": "The legal profession faces mounting pressures, including case backlogs and limited access to legal services. Large language models (LLMs), such as OpenAI's GPT series, have been touted as potential solutions, promising to streamline tasks such as legal drafting, summarisation, analysis, and advice. Proponents argue these models can enhance efficiency, accuracy, and access to justice. However, significant risks remain. LLMs are prone to bias, factual hallucinations, and opaque reasoning processes, which can have severe consequences in high-stakes legal contexts. For responsible use in law, legal use cases must be accurately operationalised into LLM tasks that are sensitive to legal settings, as do the evaluation metrics used to evaluate LLMs performing those tasks. This paper presents a rapid literature review of LLM research in legal contexts since ChatGPT-4's release in March 2023. We examine how legal tasks are operationalised for LLMs and what evaluation metrics are used, with a focus on how these align-or fail to align-with real-world legal practice. We argue that existing studies often overlook the institutional, organisational, and professional contexts in which these tools would be deployed. This oversight limits the practical relevance of current evaluations and proposes directions for more contextually grounded research and responsible deployment strategies. The online version contains supplementary material available at 10.1007/s00146-025-02741-9.",
+    "year": 2026,
+    "venue": "AI & society",
+    "authors": [
+      "Joshua Kelsall",
+      "Xingwei Tan",
+      "Aislinn Bergin",
+      "Jiahong Chen",
+      "Maria Waheed",
+      "Tom Sorell",
+      "Rob Procter",
+      "Maria Liakata",
+      "Jenny Chim",
+      "Serene Chi"
+    ],
+    "doi": "10.1007/s00146-025-02741-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42063861/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42063861"
+    }
+  },
+  {
+    "paper_id": "pubmed:41820673",
+    "title": "A clinical environment simulator for dynamic AI evaluation.",
+    "abstract": "Clinical evaluation of large language models (LLMs) currently relies on static datasets and isolated scenarios that fail to capture the cascading effects of healthcare decisions. We propose the Clinical Environment Simulator (CES), a framework that evaluates clinical LLMs within digital hospital environments where every decision dynamically alters future states. The CES would use a parallel simulation architecture: a 'hospital engine' that tracks bed availability, staff workloads and equipment status in real time, and a 'patient engine' that simulates disease progression and treatment responses based on LLM interventions. Unlike current benchmarks, the CES framework requires clinical LLMs to execute decisions through realistic electronic health record interfaces, while managing trade-offs between individual patient optimization and system-wide efficiency. The CES enables three critical evaluations absent from current benchmarks: temporal reasoning under evolving constraints, where delayed diagnostics can lead to patient deterioration; resource-aware decision-making, where aggressive workups for one patient may exhaust capacity needed by others; and operational resilience, through adversarial testing with simultaneous emergencies and system failures. By scoring LLM performance on both clinical outcomes and operational metrics, the CES represents a shift toward evaluating clinical LLMs as a dynamic and integrated component of healthcare delivery systems.",
+    "year": 2026,
+    "venue": "Nature medicine",
+    "authors": [
+      "Luyang Luo",
+      "Sung Eun Kim",
+      "Xiaoman Zhang",
+      "Julius M Kernbach",
+      "Roshan Kenia",
+      "Julian N Acosta",
+      "Larry A Nathanson",
+      "Adrian D Haimovich",
+      "Adam Rodman",
+      "Ethan Goh",
+      "Jonathan H Chen",
+      "Nigam H Shah",
+      "David A Kim",
+      "James Zou",
+      "Faisal Mahmood",
+      "Jakob Nikolas Kather",
+      "Matthew Lungren",
+      "Vivek Natarajan",
+      "Eric J Topol",
+      "Pranav Rajpurkar"
+    ],
+    "doi": "10.1038/s41591-026-04252-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41820673/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41820673"
+    }
+  },
+  {
+    "paper_id": "pubmed:41763096",
+    "title": "KE-VUM: Knowledge-enhanced video understanding model for fine-grained movie description.",
+    "abstract": "Fine-grained movie description is challenging due to limited annotations and persistent cross-modal semantic gaps, especially for clips with complex and long-range narrative structures. Existing video description models rarely exploit structured knowledge from movie scripts, resulting in shallow, subtitle-like semantics and frequent character confusion. We propose KE-VUM, a knowledge-enhanced video understanding model that performs collaborative reasoning between a video-based multimodal backbone and a script knowledge base. The backbone first produces a draft description, which is refined by a script-guided two-stage optimization strategy: entity and relationship correction using a script-derived knowledge graph, followed by narrative reconstruction aligned with script-level plot progressions to improve temporal and causal coherence. To support evaluation, we construct the MovieClip benchmark of narrative-rich movie clips and develop VD-Eval, an LLM-based framework that jointly measures Semantic Accuracy Score (SAS) and Narrative Coherence Score (NCS). Experiments on MovieClip show that KE-VUM consistently outperforms strong baselines in both descriptive accuracy and narrative coherence, achieving a 6.7% absolute improvement in BERTScore F1 and maintaining robust performance in delayed-narrative scenarios.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Xiaojing Gu",
+      "Gen Xu",
+      "Xiaolu Zhang",
+      "Yijie Wang",
+      "Jiangjian Xiao"
+    ],
+    "doi": "10.1016/j.neunet.2026.108773",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41763096/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41763096"
+    }
+  },
+  {
+    "paper_id": "pubmed:41722332",
+    "title": "Explainable and evidence-linked recommendations for spine surgery via a retrieval-augmented LLM agent.",
+    "abstract": "Clinical decision-making in spinal and spinal cord diseases requires a comprehensive assessment of imaging findings, neurological status, bone integrity, and patient-centered goals. Recently, the emergence of Large Language Models (LLMs) has provided new tools for intelligent decision support; however, their reliability and clinical interpretability remain to be systematically evaluated. We propose a novel retrieval augmented generation (RAG)-based framework specifically tailored for spinal disease decision support and systematically evaluated four advanced LLM agents (Gemini 2.5 Flash, DeepSeek, GPT-4o, GPT-4o-mini). The framework integrates domain-specific prompting, structured response formatting, and evidence citation tracking.We used 200 real-world spinal cases, each involving diagnostic, therapeutic, and follow-up tasks. Five spine surgeons independently evaluated model outputs using an 11-dimension rubric; each dimension rated on a 5-point Likert scale to evaluate both clinical and technical performance. Inter-group differences were analyzed using the Kruskal-Wallis and Dunn's tests (P < 0.05), with radar plots used for multidimensional visualization. The proposed expert-evaluated framework enables a comprehensive, real-case-based comparison of four LLM agents. Gemini 2.5 Flash achieved the highest overall score (49.25 ± 2.88), significantly outperforming DeepSeek (47.49 ± 3.34, P < 0.001), GPT-4o (45.59 ± 3.89, P < 0.001), and GPT-4o-mini (41.23 ± 5.96, P < 0.001). It demonstrated leading performance particularly in humanistic care, follow-up suggestion, and test recommendation. DeepSeek showed superior capability in differential completeness (mean = 4.76), significantly outperforming the other three models (P < 0.001). Although GPT-4o-mini demonstrated stable system performance (mean = 4.61), it underperformed in core clinical reasoning dimensions. These findings reveal substantial inter-model variability in spine-specific clinical reasoning, an aspect often overlooked in prior non-benchmark LLM evaluations. Among the four evaluated LLM agents, Gemini 2.5 Flash and DeepSeek demonstrated superior clinical accuracy, comprehensiveness, and usability in spine-related decision support. These findings support the potential of domain-adapted RAG agents to enhance evidence-based spinal care by providing accurate and comprehensive decision support. Future research should focus on multimodal integration data (e.g., imaging and clinical notes) and conducting prospective validation in real-world clinical environments.",
+    "year": 2026,
+    "venue": "European journal of radiology",
+    "authors": [
+      "Yiren Li",
+      "Mingyu Lv",
+      "Liang Cheng",
+      "Yongxu Xie",
+      "Qian Gu",
+      "Haozheng He",
+      "Zhuguang Chen",
+      "Duopei Fang",
+      "Xiang Zhou"
+    ],
+    "doi": "10.1016/j.ejrad.2026.112734",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41722332/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41722332"
+    }
+  },
+  {
+    "paper_id": "pubmed:41673205",
+    "title": "Use large language model to enhance reasoning of another large language model through reward updated GRPO.",
+    "abstract": "Recent advancements in deep learning have significantly transformed natural language processing (NLP), enabling sophisticated reasoning and text generation. However, fine-tuning Large Language Models (LLMs) for domain-specific tasks remains a challenge due to the need for curated datasets. This paper introduces a novel package that allows developers to generate reasoning data from any data source, enhancing LLM adaptability across various domains. Additionally, we propose an updated objective function for Group Relative Policy Optimization (GRPO) with a novel reward component to improve training efficiency and model performance. Instead of competing with a few universal benchmarks, we propose a framework to set custom reward functions and design experimental processes to converge on the custom reward function. To support further research, we publicly release our dataset and trained model, facilitating broader adoption and evaluation. Our contributions include (1) a publicly available package for reasoning data generation using LLMs, (2) an enhanced GRPO objective function with a novel reward mechanism, and (3) open access to the dataset and model to promote continued advancements in LLM training. By addressing key challenges in fine-tuning and optimization, our work provides valuable resources for the NLP community and contributes to improving reasoning capabilities in LLMs. Finally, we present results comparing model performance on GSM8K and Warren Buffett Letters datasets. The best-performing model, Qwen 2.5-3B-Instruct, achieved 98.2% and 98.5% mean token accuracy on the respective datasets, with a compute time of 40–42 hours and a cost of $78–$82.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Yiqiao Yin"
+    ],
+    "doi": "10.1038/s41598-026-39296-8",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41673205/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41673205"
+    }
+  },
+  {
+    "paper_id": "pubmed:41360938",
+    "title": "Mindbench.ai: an actionable platform to evaluate the profile and performance of large language models in a mental healthcare context.",
+    "abstract": "Individuals are increasingly utilizing large language model (LLM)-based tools for mental health guidance and crisis support in place of human experts. While AI technology has great potential to improve health outcomes, insufficient empirical evidence exists to suggest that AI technology can be deployed as a clinical replacement; thus, there is an urgent need to assess and regulate such tools. Regulatory efforts have been made and multiple evaluation frameworks have been proposed, however,field-wide assessment metrics have yet to be formally integrated. In this paper, we introduce a comprehensive online platform that aggregates evaluation approaches and serves as a dynamic online resource to simplify LLM and LLM-based tool assessment: MindBench.ai. At its core, MindBench.ai is designed to provide easily accessible/interpretable information for diverse stakeholders (patients, clinicians, developers, regulators, etc.). To create MindBench.ai, we built off our work developing MINDapps.org to support informed decision-making around smartphone app use for mental health, and expanded the technical MINDapps.org framework to encompass novel large language model (LLM) functionalities through benchmarking approaches. The MindBench.ai platform is designed as a partnership with the National Alliance on Mental Illness (NAMI) to provide assessment tools that systematically evaluate LLMs and LLM-based tools with objective and transparent criteria from a healthcare standpoint, assessing both profile (i.e. technical features, privacy protections, and conversational style) and performance characteristics (i.e. clinical reasoning skills). With infrastructure designed to scale through community and expert contributions, along with adapting to technological advances, this platform establishes a critical foundation for the dynamic, empirical evaluation of LLM-based mental health tools-transforming assessment into a living, continuously evolving resource rather than a static snapshot.",
+    "year": 2025,
+    "venue": "NPP - digital psychiatry and neuroscience",
+    "authors": [
+      "Bridget Dwyer",
+      "Matthew Flathers",
+      "Akane Sano",
+      "Allison Dempsey",
+      "Andrea Cipriani",
+      "Asim H Gazi",
+      "Bryce Hill",
+      "Carla Gorban",
+      "Carolyn I Rodriguez",
+      "Charles Stromeyer",
+      "Darlene King",
+      "Eden Rozenblit",
+      "Gillian Strudwick",
+      "Jake Linardon",
+      "Jiaee Cheong",
+      "Joseph Firth",
+      "Julian Herpertz",
+      "Julian Schwarz",
+      "Khai Truong",
+      "Margaret Emerson",
+      "Martin P Paulus",
+      "Michelle Patriquin",
+      "Yining Hua",
+      "Soumya Choudhary",
+      "Steven Siddals",
+      "Laura Ospina Pinillos",
+      "Jason Bantjes",
+      "Stephen M Schueller",
+      "Xuhai Xu",
+      "Ken Duckworth",
+      "Daniel H Gillison",
+      "Michael Wood",
+      "John Torous"
+    ],
+    "doi": "10.1038/s44277-025-00049-6",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41360938/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41360938"
+    }
+  },
+  {
+    "paper_id": "pubmed:41325172",
+    "title": "Contextualizing Clinical Benchmarks: A Tripartite Approach to Evaluating LLM-Based Tools in Mental Health Settings.",
+    "abstract": "The rapid proliferation of Large Language Model (LLM)-based tools in mental health care presents an urgent need for clinical evaluation frameworks. With millions already engaging with Artificial Intelligence (AI) tools, mental health disciplines require immediate, practical evaluation approaches rather than awaiting idealized methodologies. This paper introduces a practical, implementable approach to evaluating LLM-based tools in mental health settings through both theoretical analysis and actionable assessment methods. We propose a tripartite evaluation framework comprising: (1) the technical profile layer, which assesses foundational model safety and infrastructure compliance; (2) the health care knowledge layer, which validates domain-specific clinical knowledge and safety boundaries; and (3) the clinical reasoning layer, which evaluates decision-making capabilities and reasoning processes. Each proposed layer includes concrete evaluation methods that clinical teams can implement immediately, from direct model questioning to adversarial testing approaches. As health care organizations conduct and share evaluations using this approach, the field can collectively develop the specialized benchmarks and reasoning assessments essential for ensuring LLM integrations enhance rather than compromise patient care in the mental health space. The framework serves both as an immediate practical guide and a foundation for building more sophisticated evaluation resources tailored to mental health contexts.",
+    "year": 2025,
+    "venue": "Journal of psychiatric practice",
+    "authors": [
+      "Matthew Flathers",
+      "Bridget Dwyer",
+      "Eden Rozenblit",
+      "John Torous"
+    ],
+    "doi": "10.1097/PRA.0000000000000892",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41325172/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41325172"
+    }
+  },
+  {
+    "paper_id": "pubmed:41319399",
+    "title": "MedSumGraph: enhancing GraphRAG for medical QA with summarization and optimized prompts.",
+    "abstract": "The rapid development of large language models (LLMs) has accelerated research into applying artificial intelligence (AI) to domains such as medical question answering and clinical decision support. However, LLMs face substantial limitations in medical contexts due to challenges in understanding specialized terminology, complex contextual information, hallucination issues (i.e., generating incorrect responses), and the black-box nature of their reasoning processes. To address these issues, methods like retrieval-augmented generation (RAG) and its graph-based variant, GraphRAG, have been proposed to incorporate external knowledge into LLMs. Nonetheless, these approaches often rely heavily on external resources and increase system complexity. In this study, we introduce MedSumGraph, a medical question-answering system that enhances GraphRAG by integrating structured medical knowledge summaries and optimized prompt designs. Our method enables LLMs to better interpret domain-specific knowledge without requiring additional training, and it enhances the reliability and interpretability of responses by directly embedding factual evidence and graph-based reasoning into the generation process. MedSumGraph achieves competitive performance on two out of eight multiple-choice medical QA benchmarks, including MedQA (USMLE), outperforming closed-source LLMs and domain-specific foundation models. Moreover, it generalizes effectively to open-domain QA tasks, yielding significant gains in reasoning over common knowledge and evaluating the truthfulness of answers. These findings demonstrate the potential of structured summarization and graph-based reasoning in enhancing the trustworthiness and versatility of LLM-driven medical AI systems.",
+    "year": 2026,
+    "venue": "Artificial intelligence in medicine",
+    "authors": [
+      "DaeHo Kim",
+      "SoYeop Yoo",
+      "OkRan Jeong"
+    ],
+    "doi": "10.1016/j.artmed.2025.103311",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41319399/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41319399"
+    }
+  },
+  {
+    "paper_id": "pubmed:41109093",
+    "title": "MedARC: Adaptive multi-agent refinement and collaboration for enhanced medical reasoning in large language models.",
+    "abstract": "Large Language Models (LLMs) have shown remarkable potential in medical question answering (QA), yet their deployment in clinical settings remains limited by hallucinations, inconsistent reasoning, and difficulties in handling complex biomedical information. To address these challenges, we propose MedARC (Medical Agent Refinement and Collaboration), a novel multi-agent framework that enhances medical QA through structured debate among multiple LLM agents. MedARC introduces two key mechanisms: (1) structured inter-agent summarization to extract and refine key agreements and disagreements across agents, and (2) confidence-aware aggregation to synthesize final answers based on the most reliable and well-reasoned contributions. We evaluate MedARC on three representative medical QA benchmarks, spanning yes/no, factoid, and open-ended QA tasks. Experimental results demonstrate that MedARC significantly improves performance over zero-shot and chain-of-thought (CoT) prompting baselines. For instance, in the yes/no QA task on PubMedQA, MedARC boosts accuracy from 72.9 % (zero-shot) to 77.2 % using DeepSeek-V3 as the backbone model. Human evaluation further confirms gains in factual consistency and completeness with MedARC. We conduct extensive ablation studies and sensitivity analyses, revealing that MedARC's structured summarization and aggregation modules contribute independently to performance improvements. Additionally, we explore the impact of heterogeneous agent configurations and varying numbers of debate rounds on overall system effectiveness. Overall, MedARC provides a reliable and scalable solution for enhancing LLM-based medical QA systems. The code for this study is publicly available on GitHub (https://github.com/asdmiao/MedARC).",
+    "year": 2026,
+    "venue": "International journal of medical informatics",
+    "authors": [
+      "Yongming Miao",
+      "Jiaxin Wen",
+      "Yuemei Luo",
+      "Jin Li"
+    ],
+    "doi": "10.1016/j.ijmedinf.2025.106136",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41109093/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "41109093"
+    }
+  },
+  {
+    "paper_id": "pubmed:40945061",
+    "title": "Leveraging large language models for automating water distribution network optimization.",
+    "abstract": "Effective management of Water Distribution Networks (WDNs) is essential to ensure efficient and reliable water supply in cities. However, many management tasks require complex system modelling and optimization approaches, which heavily rely on specialized domain expertise and human resources. Recent advancements in Large Language Models (LLMs) offer promising opportunities to automate complex hydraulic decision-making tasks. This study presents an LLM-based agent framework to automate WDN management tasks. Two tasks are considered to evaluate the feasibility and limitations of LLM agents: hydraulic model calibration and pump operation optimization. The key component of the proposed framework is an Orchestrating Agent that interprets tasks and system states, generates update strategies or executable code, and interacts with three specialized agents to carry out implementation: a Knowledge Agent performing reasoning based on hydraulic principles, a Modelling Agent that interfaces with hydraulic simulation tool EPANET, and a Coding Agent that executes code and returns output feedback. To assess the capabilities of these agents, the framework was systematically tested on two benchmark WDNs - Net2 and Anytown. The results indicate that the reasoning capability demonstrated through interaction with the Knowledge Agent effectively replicates expert-level hydraulic thinking, though it lacks numerical precision. In contrast, the Modelling Agent, which integrates external simulation tools, enhances reliability, although interpreting and enforcing numerical constraints expressed in natural language remain challenging, particularly in looped networks such as Anytown where the agent often converged to suboptimal solutions. Furthermore, the Coding Agent, where code for optimization algorithms is iteratively generated and executed, delivers the most consistent and accurate performance across both networks, underscoring its practical potential. These findings highlight the potential of LLM-based agents for automated, accurate hydraulic optimization, and represent a significant step toward LLM-driven multi-agent frameworks for hydraulic decision-making. This work establishes a foundation for future advancements in specialized, domain-focused LLM applications in complex hydraulic management scenarios.",
+    "year": 2026,
+    "venue": "Water research",
+    "authors": [
+      "Jian Wang",
+      "Guangtao Fu",
+      "Dragan Savic"
+    ],
+    "doi": "10.1016/j.watres.2025.124536",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40945061/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40945061"
+    }
+  },
+  {
+    "paper_id": "pubmed:40031783",
+    "title": "A Causality-Aware Paradigm for Evaluating Creativity of Multimodal Large Language Models.",
+    "abstract": "Recently, numerous benchmarks have been developed to evaluate the logical reasoning abilities of large language models (LLMs). However, assessing the equally important creative capabilities of LLMs is challenging due to the subjective, diverse, and data-scarce nature of creativity, especially in multimodal scenarios. In this paper, we consider the comprehensive pipeline for evaluating the creativity of multimodal LLMs, with a focus on suitable evaluation platforms and methodologies. First, we find the Oogiri game-a creativity-driven task requiring humor, associative thinking, and the ability to produce unexpected responses to text, images, or both. This game aligns well with the input-output structure of modern multimodal LLMs and benefits from a rich repository of high-quality, human-annotated creative responses, making it an ideal platform for studying LLM creativity. Next, beyond using the Oogiri game for standard evaluations like ranking and selection, we propose LoTbench, an interactive, causality-aware evaluation framework, to further address some intrinsic risks in standard evaluations, such as information leakage and limited interpretability. The proposed LoTbench not only quantifies LLM creativity more effectively but also visualizes the underlying creative thought processes. Our results show that while most LLMs exhibit constrained creativity, the performance gap between LLMs and humans is not insurmountable. Furthermore, we observe a strong correlation between results from the multimodal cognition benchmark MMMU and LoTbench, but only a weak connection with traditional creativity metrics. This suggests that LoTbench better aligns with human cognitive theories, highlighting cognition as a critical foundation in the early stages of creativity and enabling the bridging of diverse concepts. Project Page.",
+    "year": 2025,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Zhongzhan Huang",
+      "Shanshan Zhong",
+      "Pan Zhou",
+      "Shanghua Gao",
+      "Marinka Zitnik",
+      "Liang Lin"
+    ],
+    "doi": "10.1109/TPAMI.2025.3539433",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40031783/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "40031783"
+    }
+  },
+  {
+    "paper_id": "pubmed:39079429",
+    "title": "Interpretable medical image Visual Question Answering via multi-modal relationship graph learning.",
+    "abstract": "Medical Visual Question Answering (VQA) is an important task in medical multi-modal Large Language Models (LLMs), aiming to answer clinically relevant questions regarding input medical images. This technique has the potential to improve the efficiency of medical professionals while relieving the burden on the public health system, particularly in resource-poor countries. However, existing medical VQA datasets are small and only contain simple questions (equivalent to classification tasks), which lack semantic reasoning and clinical knowledge. Our previous work proposed a clinical knowledge-driven image difference VQA benchmark using a rule-based approach (Hu et al., 2023). However, given the same breadth of information coverage, the rule-based approach shows an 85% error rate on extracted labels. We trained an LLM method to extract labels with 62% increased accuracy. We also comprehensively evaluated our labels with 2 clinical experts on 100 samples to help us fine-tune the LLM. Based on the trained LLM model, we proposed a large-scale medical VQA dataset, Medical-CXR-VQA, using LLMs focused on chest X-ray images. The questions involved detailed information, such as abnormalities, locations, levels, and types. Based on this dataset, we proposed a novel VQA method by constructing three different relationship graphs: spatial relationships, semantic relationships, and implicit relationship graphs on the image regions, questions, and semantic labels. We leveraged graph attention to learn the logical reasoning paths for different questions. These learned graph VQA reasoning paths can be further used for LLM prompt engineering and chain-of-thought, which are crucial for further fine-tuning and training multi-modal large language models. Moreover, we demonstrate that our approach has the qualities of evidence and faithfulness, which are crucial in the clinical field. The code and the dataset is available at https://github.com/Holipori/Medical-CXR-VQA.",
+    "year": 2024,
+    "venue": "Medical image analysis",
+    "authors": [
+      "Xinyue Hu",
+      "Lin Gu",
+      "Kazuma Kobayashi",
+      "Liangchen Liu",
+      "Mengliang Zhang",
+      "Tatsuya Harada",
+      "Ronald M Summers",
+      "Yingying Zhu"
+    ],
+    "doi": "10.1016/j.media.2024.103279",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39079429/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "39079429"
+    }
+  },
+  {
+    "paper_id": "pubmed:38613821",
+    "title": "PMC-LLaMA: toward building open-source language models for medicine.",
+    "abstract": "Recently, large language models (LLMs) have showcased remarkable capabilities in natural language understanding. While demonstrating proficiency in everyday conversations and question-answering (QA) situations, these models frequently struggle in domains that require precision, such as medical applications, due to their lack of domain-specific knowledge. In this article, we describe the procedure for building a powerful, open-source language model specifically designed for medicine applications, termed as PMC-LLaMA. We adapt a general-purpose LLM toward the medical domain, involving data-centric knowledge injection through the integration of 4.8M biomedical academic papers and 30K medical textbooks, as well as comprehensive domain-specific instruction fine-tuning, encompassing medical QA, rationale for reasoning, and conversational dialogues with 202M tokens. While evaluating various public medical QA benchmarks and manual rating, our lightweight PMC-LLaMA, which consists of only 13B parameters, exhibits superior performance, even surpassing ChatGPT. All models, codes, and datasets for instruction tuning will be released to the research community. Our contributions are 3-fold: (1) we build up an open-source LLM toward the medical domain. We believe the proposed PMC-LLaMA model can promote further development of foundation models in medicine, serving as a medical trainable basic generative language backbone; (2) we conduct thorough ablation studies to demonstrate the effectiveness of each proposed component, demonstrating how different training data and model scales affect medical LLMs; (3) we contribute a large-scale, comprehensive dataset for instruction tuning. In this article, we systematically investigate the process of building up an open-source medical-specific LLM, PMC-LLaMA.",
+    "year": 2024,
+    "venue": "Journal of the American Medical Informatics Association : JAMIA",
+    "authors": [
+      "Chaoyi Wu",
+      "Weixiong Lin",
+      "Xiaoman Zhang",
+      "Ya Zhang",
+      "Weidi Xie",
+      "Yanfeng Wang"
+    ],
+    "doi": "10.1093/jamia/ocae045",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38613821/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "38613821"
+    }
+  }
+]

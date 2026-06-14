@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2305.13289v4",
+  "title": "Achieving the Asymptotically Optimal Sample Complexity of Offline Reinforcement Learning: A DRO-Based Approach",
+  "abstract": "Offline reinforcement learning aims to learn from pre-collected datasets without active exploration. This problem faces significant challenges, including limited data availability and distributional shifts. Existing approaches adopt a pessimistic stance towards uncertainty by penalizing rewards of under-explored state-action pairs to estimate value functions conservatively. In this paper, we show that the distributionally robust optimization (DRO) based approach can also address these challenges and is {asymptotically minimax optimal}. Specifically, we directly model the uncertainty in the transition kernel and construct an uncertainty set of statistically plausible transition kernels. We then show that the policy that optimizes the worst-case performance over this uncertainty set has a near-optimal performance in the underlying problem. We first design a metric-based distribution-based uncertainty set such that with high probability the true transition kernel is in this set. We prove that to achieve a sub-optimality gap of $ε$, the sample complexity is $\\mathcal{O}(S^2C^{π^*}ε^{-2}(1-γ)^{-4})$, where $γ$ is the discount factor, $S$ is the number of states, and $C^{π^*}$ is the single-policy clipped concentrability coefficient which quantifies the distribution shift. To achieve the optimal sample complexity, we further propose a less conservative value-function-based uncertainty set, which, however, does not necessarily include the true transition kernel. We show that an improved sample complexity of $\\mathcal{O}(SC^{π^*}ε^{-2}(1-γ)^{-3})$ can be obtained, which asymptotically matches with the minimax lower bound for offline reinforcement learning, and thus is asymptotically minimax optimal.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Yue Wang",
+    "Jinjun Xiong",
+    "Shaofeng Zou"
+  ],
+  "doi": null,
+  "arxiv_id": "2305.13289v4",
+  "url": "http://arxiv.org/abs/2305.13289v4",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "paper_id": "pubmed:40611214",
+  "title": "Keyword-optimized template insertion for clinical note classification via prompt-based learning.",
+  "abstract": "Prompt-based learning involves the additions of prompts (i.e., templates) to the input of pre-trained large language models (PLMs) to adapt them to specific tasks with minimal training. This technique is particularly advantageous in clinical scenarios where the amount of annotated data is limited. This study aims to investigate the impact of template position on model performance and training efficiency in clinical note classification tasks using prompt-based learning, especially in zero- and few-shot settings. We developed a keyword-optimized template insertion method (KOTI) to enhance model performance by strategically placing prompt templates near relevant clinical information within the notes. The method involves defining task-specific keywords, identifying sentences containing these keywords, and inserting the prompt template in their vicinity. We compared KOTI with standard template insertion (STI) methods in which the template is directly appended at the end of the input text. Specifically, we compared STI with naïve tail-truncation (STI-s) and STI with keyword-optimized input truncation (STI-k). Experiments were conducted using two pre-trained encoder models, GatorTron and ClinicalBERT, and two decoder models, BioGPT and ClinicalT5, across five classification tasks, including dysmenorrhea, peripheral vascular disease, depression, osteoarthritis, and smoking status classification. Our experiments revealed that the KOTI approach consistently outperformed both STI-s and STI-k in zero-shot and few-shot scenarios for encoder models, with KOTI yielding a significant 24% F1 improvement over STI-k for GatorTron and 8% for Clinical BERT. Additionally, training with balanced examples further enhanced performance, particularly under few-shot conditions. In contrast, decoder-based models exhibited inconsistent results, with KOTI showing significant improvement in F1 score over STI-k for BioGPT (+19%), but a significant drop for ClinicalT5 (-18%), suggesting that KOTI is not beneficial across all transformer model architectures. Our findings underscore the significance of template position in prompt-based fine-tuning of encoder models and highlights KOTI's potential to optimize real-world clinical note classification tasks with few training examples.",
+  "year": 2025,
+  "venue": "BMC medical informatics and decision making",
+  "authors": [
+    "Eugenia Alleva",
+    "Isotta Landi",
+    "Leslee J Shaw",
+    "Erwin Böttinger",
+    "Ipek Ensari",
+    "Thomas J Fuchs"
+  ],
+  "doi": "10.1186/s12911-025-03071-y",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40611214/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:hybrid",
+    "route:entity_dataset",
+    "route:broad_synonym",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40611214"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.00356v1",
+  "title": "MemRouter: Memory-as-Embedding Routing for Long-Term Conversational Agents",
+  "abstract": "Long-term conversational agents must decide which turns to store in external memory, yet recent systems rely on autoregressive LLM generation at every turn to make that decision. We present MemRouter, a write-side memory router that decouples memory admission from the downstream answer backbone and replaces per-turn memory-management decoding with an embedding-based routing policy. MemRouter encodes each turn together with recent context, projects the resulting embeddings through a frozen LLM backbone, and predicts whether the turn should be stored using lightweight classification heads while training only 12M parameters. Under a controlled matched-harness comparison on LoCoMo, where the retrieval pipeline, answer prompts, and QA backbone (Qwen2.5-7B) are held identical, MemRouter outperforms an LLM-based memory manager on every question category (overall F1 52.0 vs 45.6, non-overlapping 95% CIs) while reducing memory-management p50 latency from 970ms to 58ms. Descriptive factorial averaging further shows that learned admission improves mean F1 by +10.3 over random storage, category-specific prompting adds +5.2 over a generic prompt, and retrieval contributes +0.7. These results suggest that write-side memory admission can be learned by a small supervised router, while answer generation remains a separate downstream component in long-horizon conversational QA.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Tianyu Hu",
+    "Weikai Lin",
+    "Weizhi Zhang",
+    "Jing Ma",
+    "Song Wang"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.00356v1",
+  "url": "http://arxiv.org/abs/2605.00356v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

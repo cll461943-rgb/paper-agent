@@ -1,0 +1,930 @@
+[
+  {
+    "paper_id": "pubmed:42284856",
+    "title": "Teaching with intelligence; AI-enhanced pedagogies in nursing education A scoping review.",
+    "abstract": "To map current evidence on AI integration in nursing education, identifying pedagogical applications, learning outcomes, future research directions. The integration of artificial intelligence (AI) into nursing education is expanding rapidly, offering opportunities to enhance learning. As the role of AI in healthcare expands, nursing education must evolve to prepare future nurses with the necessary knowledge and skills to effectively and ethically utilise these technologies. A scoping review following Arksey and O'Malley's framework. PRISMA-ScR guidelines and a hybrid AI-human methodology was adopted to ensure transparency and rigour. Covidence software supported blinded dual screening and consensus tracking. Generative AI assisted in structured data extraction, with manual verification by four independent reviewers. Data were analysed through descriptive mapping and reflexive thematic synthesis using Braun and Clarkes Framework. Nine studies (2023-2025) met the inclusion criteria, encompassing undergraduate, postgraduate and faculty contexts. AI tools including ChatGPT, MindMeld NLP and Deepgram were applied mainly as pedagogical enhancers providing simulation, adaptive feedback and reflective learning support. Five themes emerged: (1) knowledge and skills development; (2) self-efficacy and confidence building; (3) clinical reasoning and decision-making; (4) communication and empathy; and (5) engagement and pedagogical acceptability. Collectively, these studies demonstrated consistent improvements across cognitive, affective and behavioural learning domains. AI serves as a pedagogical amplifier, augmenting learning through adaptive, reflective and emotionally intelligent interaction. When ethically governed and contextually embedded, AI supports higher-order thinking, empathy and learner engagement, advancing a human-centred vision for technology-enhanced nursing education.",
+    "year": 2026,
+    "venue": "Nurse education in practice",
+    "authors": [
+      "Linda Nugent",
+      "Bridget Murray",
+      "Zena Moore",
+      "Declan Patton",
+      "Tom O'Connor",
+      "Chanel Watson",
+      "Killian Walsh",
+      "Vishnu Renjith",
+      "Jomin George"
+    ],
+    "doi": "10.1016/j.nepr.2026.104878",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42284856/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42284856"
+    }
+  },
+  {
+    "paper_id": "pubmed:42284574",
+    "title": "Knowledge-Augmented Large Language Model for Multimodal Electronic Health Record-Based Risk Prediction: Development and Validation Study.",
+    "abstract": "Accurate clinical outcome prediction using electronic health records (EHRs) is crucial for patient care and resource allocation. EHRs include both structured data and rich, unstructured clinical notes. However, prior machine learning methods struggle with the multimodality, long context of notes, and severe class imbalance in clinical tasks. This study aimed to introduce and evaluate KAMELEON (Knowledge-Augmented Multimodal EHR Learning for Outcome Prediction), a unified, 2-stage hybrid framework that integrates diverse EHR modalities and external biomedical knowledge to enhance clinical risk prediction. This study used the publicly available, deidentified Medical Information Mart for Intensive Care-III dataset, which includes structured and unstructured data for over 40,000 intensive care unit patients. The 2 tasks studied were 30-day readmission (403/10,031, 4% positive rate) and in-hospital mortality prediction (2423/17,903, 13% positive rate). Train-test splits were patient-disjoint (80:20). Performance was evaluated against general and medical large language models (LLMs) and structured baselines. Key metrics included the area under the receiver operating characteristic curve (AUROC), area under the precision-recall curve (AUPRC), and macro F The KAMELEON framework consistently outperformed all existing baselines. 30-day readmission: the KAMELEON-balanced random forests model achieved an AUROC of 0.85 and a sensitivity (recall) of 0.79. Ablation analysis shows the critical role of the LLM-generated reasoning, with its removal causing the AUROC to drop from 0.85 to 0.7 and sensitivity to fall by over 80%. In-hospital mortality: the KAMELEON-extreme gradient boosting model achieved an AUROC of 0.92 and an AUPRC of 0.650. Unstructured-only models showed limited ability to discern mortality, with AUROC values near chance (around 0.51-0.53). To our knowledge, KAMELEON represents one of the first systematic frameworks to enhance LLMs for health care prediction through graph-guided knowledge retrieval combined with structured machine learning. The framework demonstrates superior performance across both prediction tasks, highlighting the synergistic value of combining diverse data modalities and LLM reasoning for robust clinical risk estimation.",
+    "year": 2026,
+    "venue": "JMIR AI",
+    "authors": [
+      "Rituparna Datta",
+      "Jiaming Cui",
+      "Zihan Guan",
+      "Vishal Reddy",
+      "Joshua Eby",
+      "Gregory R Madden",
+      "Rupesh Silwal",
+      "Anil Vullikanti"
+    ],
+    "doi": "10.2196/88356",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42284574/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42284574"
+    }
+  },
+  {
+    "paper_id": "pubmed:42277077",
+    "title": "AIDx: a locally deployable AI system for physician clinical decision support.",
+    "abstract": "The dynamic environment of medicine, particularly in settings such as the Emergency Department, challenges physicians with an influx of patient data and the need for swift diagnosis and treatment under high-pressure conditions. Numerous AI models have been developed for medical applications, yet their integration into hospital systems remains limited because they often do not align with existing clinical workflows. To address these challenges, I developed AIDx, an AI-powered system designed to help physicians streamline clinical decision making, improve diagnostic support, and provide an integrated platform for AI-assisted analysis. Unlike many standalone systems, AIDx is designed for interoperability with electronic health record (EHR) systems and can leverage supplementary tools such as updated medical knowledge bases and auxiliary AI models. At its core, AIDx includes AIDx-Copilot, a large language model fine-tuned on de-identified EHR data and optionally grounded using retrieval-augmented generation (RAG) from open medical references. This study is a text-only benchmark assessment. I evaluated AIDx-Copilot using the MultiMedQA benchmark suite under a unified, deterministic, single-pass protocol (temperature=0; no voting). Across nine MultiMedQA subsets (MedQA, PubMedQA, MedMCQA, and medically focused MMLU subjects), AIDx-Copilot achieves a mean accuracy of 83.61% (SD 7.37). I report per-dataset Wilson 95% confidence intervals to quantify uncertainty from finite test set sizes. To isolate component contributions, I conducted ablation experiments comparing the base model, the fine-tuned model without retrieval, and the fine-tuned model with RAG enabled. EHR-based fine-tuning accounts for the majority of the performance gain (+17.8 percentage points over the base model on average), while RAG provides a modest additional benefit (+0.4 points on average) that varies by dataset. A qualitative error analysis of 200 incorrectly answered items identifies knowledge gaps (41.0%) and reasoning errors (38.0%) as the dominant failure modes. Comparative numbers for larger proprietary systems are provided only as context in the supplementary material because they may use different prompts and inference settings. The deployment configuration (quantized weights and on-premises serving) supports fast inference and local deployment. Under the quantized configuration, the system achieves a median latency of 0.84 seconds per query and fits within 28.1 GB of VRAM across two commodity GPUs. The primary results are based on public benchmark evaluations without RAG; I did not perform clinical, user-study, or real-world validations. In addition, while AIDx is designed to support fully local operation, specific deployments may choose to use third-party embedding or vector-search services; this paper documents the data-flow boundary and a fully local configuration path.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Alan Alwakeel"
+    ],
+    "doi": "10.1038/s41598-026-47470-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42277077/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42277077"
+    }
+  },
+  {
+    "paper_id": "pubmed:42271164",
+    "title": "Knowledge-guided multimodal reasoning framework for intelligent power grid maintenance.",
+    "abstract": "Power grid infrastructure maintenance requires reliable integration of heterogeneous data sources including historical fault records, technical documents, and visual inspection imagery. Existing approaches face challenges in ensuring output completeness, consistency verification, and systematic multimodal data integration-critical requirements for high-stakes operational decisions. This paper presents an integrated multimodal reasoning system designed to address these reliability requirements through systematic quality assurance mechanisms. The system architecture comprises three components: (1) a document processing pipeline constructing a structured knowledge base from 10,247 heterogeneous maintenance records (8,198 for training, remaining for validation and testing); (2) a retrieval-augmented reasoning module implementing a Recursive Augmented Thinking (RAT) mechanism with three-dimensional self-evaluation (slot completeness, confidence assessment, logical consistency verification) tailored to power grid fault diagnosis requirements; (3) an attention-enhanced visual detection module for identifying equipment anomalies. Validation on 120 real-world fault cases demonstrates that the RAT mechanism achieves 95% output completeness and 0.82 confidence score through iterative refinement (approximately 98% convergence within 3 iterations), compared to 65% completeness and 0.55 confidence for single-pass generation. Visual detection on 15,648 inspection images achieves 0.952 mAP@.5 with maintained robustness under challenging conditions (87.4% performance retention under occlusion, distance, and adverse weather). These results indicate practical deployment potential within the validated scope of operational power grid maintenance.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Yi Yang",
+      "Jingguo Ren",
+      "Zihan Liu",
+      "Yalong Chen"
+    ],
+    "doi": "10.1038/s41598-026-55379-y",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42271164/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42271164"
+    }
+  },
+  {
+    "paper_id": "pubmed:42269210",
+    "title": "Artificial intelligence to revolutionize surgical decision-making is still just around the corner.",
+    "abstract": "Medical artificial intelligence, especially large language models, has engendered both excitement and unease across the medical community, promising improved surgical diagnostic accuracy, perioperative decision-making, and patient safety amidst concerns of considerable bias and its implications on the future of human expertise. The evolution of artificial intelligence clinical decision support originated in the surgical field through early systems like AAPHelp, which leveraged Bayesian reasoning to diagnose acute abdominal pain. Despite the initial promise of artificial intelligence clinical decision support, attempts to develop more robust diagnostic tools largely fell short in the 1980s, with instruments unable to adequately diagnose and manage complex presentations, a lack of transparency in their decision-making processes, and limitations in scope. It was not until the 2010s that clinical decision support began to show renewed potential as a meaningful adjunct in surgical practice, largely driven by advancements in machine learning techniques and wider access to large clinical data sets. New artificial intelligence models, particularly those utilizing large language models, now demonstrate impressive capabilities, from predicting the risk of postoperative complications for individual patients to streamlining clinical documentation and beyond. However, challenges persist regarding transparency, bias, reliability, and integration into clinical workflows. Despite these hurdles, artificial intelligence-based tools like large language models represent an exciting new chapter in surgical decision-making. Built on a long history of clinical decision support systems in surgery, these technologies hold great promise to meaningfully augment surgical practice and improve care for patients.",
+    "year": 2026,
+    "venue": "Surgery",
+    "authors": [
+      "Selena K Zhang",
+      "Adam Rodman"
+    ],
+    "doi": "10.1016/j.surg.2026.110326",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42269210/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42269210"
+    }
+  },
+  {
+    "paper_id": "pubmed:42262949",
+    "title": "Multi-strategy RAG for Disease Comorbidity Prediction.",
+    "abstract": "Large Language Models (LLMs) are increasingly demonstrating considerable promise in predicting disease comorbidities. Although structural data from disease networks and retrieval-augmented generation (RAG) have been adopted to enhance disease comorbidity prediction, three underlying limitations remain. (i) Current RAGs implementations often compromise semantic coherence by relying on fixed chunking strategies. (ii) Structural information for disease networks is generally extracted using a single metric, regardless of potential disease associations driven by complex biological mechanisms. (iii) Conventional Chain-of-Thought (CoT) prompts are normally susceptible to error propagation due to their dependence on coarse-grained entity extraction. To overcome these limitations, this study introduced a novel multi-strategy RAG framework integrating a dual-track retrieval approach, a multi-stage CoT strategy, and a multi-metric heuristic to support high-quality, domain-specific reasoning. Built upon a dynamic vector database, the dual-track retrieval mechanism identified implicit relationships among diseases. We also developed a specialized dynamic ensemble heuristic strategy, which adapts supervised ensemble methods to improve disease association prediction by integrating multiple topological metrics. Furthermore, a multi-stage CoT strategy was further developed to enhance the transparency and robustness of the inference process. Finally, a dynamic selection mechanism was applied to adaptively integrate structured signals with semantic signals for optimized predictive performance. Extensive evaluations across multiple benchmarks indicated that our framework exceeded state-of-the-art baselines, registering AUC increases of 10.41% and 5.88%, Average Precision (AP) increases of 9.70% and 5.10%, and F1-score increases of 8.37% and 3.65%, respectively. Further experiments under zero-shot, few-shot, and ablation settings validated the model's effectiveness, generalizability, and interpretability.",
+    "year": 2026,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Yan Kang",
+      "Xu Wang",
+      "Yansheng Xu",
+      "Yaowei Wang"
+    ],
+    "doi": "10.1109/JBHI.2026.3701921",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42262949/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42262949"
+    }
+  },
+  {
+    "paper_id": "pubmed:42246974",
+    "title": "Retrieval-Augmented Language Models for Clinical Decision Support in the Classification of Inborn Errors of Immunity.",
+    "abstract": "Early diagnosis of inborn errors of immunity (IEIs) can make a difference in patient outcomes and even cut healthcare costs. However, there are some challenges to overcome, such as clinical complexity, low awareness, and limited resources. Generative artificial intelligence has attracted considerable global attention in medical domains, particularly when integrated into clinical decision support systems (CDSS), as it has the potential to facilitate data interpretation, clinical reasoning, and the optimal use of knowledge resources. Preliminary studies have explored the potential of large language models (LLMs) in various information retrieval tasks, but a systematic evaluation of LLMs with and without retrieval mechanisms for IEI classification is still unexplored. We evaluated and compared the validity and reliability of the responses generated by four open-source and closed-source LLMs, in their baseline form and with augmented data, across 169 IEI patient records, using two input scenarios and four prompt templates. Our primary finding was that the models varied in terms of reliability and performance. The most reliable models were Gemini-1.5-Pro and Llama-3.1-8B-Instruct ([Formula: see text]) and the best-performing model without data augmentation was Gemini with an F1 score of [Formula: see text]. The results also showed that retrieval strategies improved the average classification performance, increasing the F1 score from [Formula: see text] to [Formula: see text] across all models. DeepSeek-R1, which reasoned over retrieved information through the integration of quality refinement and structured retrieval, achieved the best weighted F1 score of [Formula: see text]. The study highlights the effective use of generative AI and retrieval-augmented models as a decision support tool for IEI classification. However, incorporating retrieval systems into clinical decision-making processes requires adequate input, effective prompt engineering, and the adoption of retrieval strategies.",
+    "year": 2026,
+    "venue": "Journal of clinical immunology",
+    "authors": [
+      "Afrooz Arzehgar",
+      "Saeed Varasteh Yazdi",
+      "Hamid Ahanchian",
+      "Saeid Eslami"
+    ],
+    "doi": "10.1007/s10875-026-02035-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42246974/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42246974"
+    }
+  },
+  {
+    "paper_id": "pubmed:42226232",
+    "title": "AD-GPT: large language models in Alzheimer's disease.",
+    "abstract": "Alzheimer's disease (AD) research produces extensive genomic and clinical data, yet general large language models (LLMs) often generate inaccurate or superficial outputs. We introduce AD-GPT, a domain-specific framework for reliable information retrieval and synthesis of AD-related knowledge. We integrated curated genomic resources, including cis-eQTL and sQTL data across 13 brain regions from GTEx, genomic location information from NCBI, and gene function annotations from OMIM, together with approximately 150,000 AD-related publications from NCBI's PubMed. AD-GPT adopts a retrieval-augmented generation (RAG) workflow with task-specific database partitioning, a BERT-based query router, and fine-tuned Llama models, augmented with router and context verifiers to validate task assignment and evidence relevance, supporting three tasks: genetic information retrieval, association study reasoning, and general AD-related knowledge synthesis. AD-GPT consistently outperformed strong baseline LLMs in evidence-grounded evaluation metrics across all tasks, including factual consistency, citation validity, and instruction-level faithfulness. Task-specific retrieval and stacked routing improved evidence grounding and substantially reduced hallucination in complex AD-related queries. AD-GPT harmonizes curated genomic databases with biomedical literature, offering a scalable and accurate informatics tool to advance AD research.",
+    "year": 2026,
+    "venue": "BMC medical informatics and decision making",
+    "authors": [
+      "Ziyu Liu",
+      "Lintao Tang",
+      "Zeliang Sun",
+      "Zhengliang Liu",
+      "Yanjun Lyu",
+      "Wei Ruan",
+      "Yangshuang Xu",
+      "Liang Shan",
+      "Jiyoon Shin",
+      "Xiaohe Chen",
+      "Dajiang Zhu",
+      "Tianming Liu",
+      "Rongjie Liu",
+      "Chao Huang"
+    ],
+    "doi": "10.1186/s12911-026-03579-x",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42226232/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42226232"
+    }
+  },
+  {
+    "paper_id": "pubmed:42213053",
+    "title": "Artificial Raman Expert: Autonomous Spectroscopic Reasoning Driven by Localized Large Language Models.",
+    "abstract": "Analytical sciences increasingly require autonomous systems capable of real-time heuristic reasoning and dynamic parameter adaptation. However, current automated laboratory platforms remain largely restricted to rigid synthesis workflows. Here, we introduce the Artificial Raman Expert (ARE), an autonomous AI-driven analytical framework powered by localized, open-source large language models (LLMs) to ensure strict data privacy and reproducibility. By integrating a structured knowledge base (A-Knowhow), ARE internalizes the tacit decision-making logic of seasoned spectroscopists. To ensure safe and scalable deployment, ARE's cognitive and optical reasoning was first validated within a risk-free virtual reality (VR) sandbox before being successfully translated to a physical Raman spectrometer. Across highly complex physicochemical scenarios, ARE demonstrated advanced cognitive capabilities: evaluating the spatial heterogeneity of pharmaceutical samples, performing spectral unmixing to isolate trace narcotics from severe forensic matrix interferences within just 3 analytical cycles, heuristically halting analyses after 8-10 iterations-despite human prompts mandating >30 positions-thereby reducing analytical time and resource consumption by ∼70%. Additionally, ARE conducted constraint-aware parameter tuning, dynamically capping laser exposure at 60 s to optimize signal-to-noise ratios while strictly preventing biological cell phototoxicity. By actively optimizing analytical resources and adapting to noisy data, ARE demonstrates the feasibility of context-aware autonomous spectroscopy. This work provides a foundational proof-of-concept for encoding tacit analytical expertise into AI-driven instrumentation, with potential for broader application across diverse analytical domains.",
+    "year": 2026,
+    "venue": "ACS sensors",
+    "authors": [
+      "Jeonghyun Lim",
+      "Hyeonju Lee",
+      "Dongha Shin"
+    ],
+    "doi": "10.1021/acssensors.6c00865",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42213053/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42213053"
+    }
+  },
+  {
+    "paper_id": "pubmed:42211289",
+    "title": "RareCure: An Open-Source Artificial Intelligence Pipeline for Context-Adaptive Treatment Discovery in Rare Solid Tumors.",
+    "abstract": "Background Rare cancers account for approximately 25-30% of cancer diagnoses in the United States, yet precision-oncology infrastructure has been built primarily for common tumor types. Soft tissue sarcomas exemplify this national gap: over 50 histological subtypes affect approximately 13,000 Americans each year, fewer than 5% of subtypes have dedicated clinical trials, and five-year metastatic survival has remained below 20% for decades. The National Cancer Institute has identified acceleration of precision approaches for understudied cancers as a federal strategic priority. This work introduces RareCure, an open-source artificial intelligence pipeline that automatically generates evidence-ranked therapeutic option dossiers for rare solid tumors, released under the Massachusetts Institute of Technology (MIT) license for unrestricted adoption by United States academic medical centers, community oncology practices, and resource-limited research settings. Methods RareCure integrates six computational modules previously available only as disconnected tools: somatic variant processing with tiered annotation; neoantigen prediction with dual human leukocyte antigen (HLA) resolution (architectural; batch-scale validation pending); drug-gene matching across four curated databases with harmonized scoring; clinical trial screening with ontology-aware query expansion to surface basket trials invisible to rare-subtype searches; retrieval-augmented evidence generation; and a context-adaptive orchestration agent using large language model (LLM) reasoning constrained by deterministic weight clamping, functionally verified through boundary condition testing. The pipeline was validated retrospectively on 260 soft tissue sarcoma patients from The Cancer Genome Atlas Sarcoma cohort (TCGA-SARC). A dual deployment architecture supports cloud-hosted LLMs for de-identified research data and locally hosted open-source models for institutional settings under the Health Insurance Portability and Accountability Act (HIPAA). Results The pipeline executed end-to-end on all 260 patients. At least one Tier 1 or Tier 2 drug match (US FDA-approved or genomically matched) was identified in 30.0% of patients (78/260; 95% confidence interval (CI): 24.5-36.0%), consistent with the 20-40% range reported in independent sarcoma genomic profiling studies, with partial overlap noted between the TCGA cohort and the OncoKB knowledge base used for tier annotation. Biomarker-driven matching was achieved in 78.8% of patients (205/260; 95% CI: 73.4-83.6%). Interpretation cost was $303.74 ($1.17 per patient), excluding upstream sequencing. Deterministic weight clamping triggered in 0.0% of standard runs; a boundary condition test confirmed correct interception of extreme weight distributions. Conclusions RareCure demonstrates that end-to-end treatment discovery for rare solid tumors can be automated within a single open-source pipeline, producing actionability rates concordant with published benchmarks at interpretation costs compatible with broad research applicability. The deterministic clamping design pattern, adaptive LLM reasoning within auditable bounds, has applicability beyond oncology to clinical artificial intelligence requiring regulatory traceability. Module-level ablation and external cohort validation are designated next steps. Source code is freely available under the MIT license without licensing barriers.",
+    "year": 2026,
+    "venue": "Cureus",
+    "authors": [
+      "Danielmartin Arogyasami"
+    ],
+    "doi": "10.7759/cureus.109744",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42211289/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42211289"
+    }
+  },
+  {
+    "paper_id": "pubmed:42207158",
+    "title": "Adaptive Fast-Slow Large Language Model Framework for Multidimensional Classification of Prenatal Ultrasound Reports: Comparative Study.",
+    "abstract": "Phenotype-driven prenatal diagnosis relies on the precise correlation between ultrasound findings and genetic outcomes; however, this process is hindered by the unstructured nature of clinical ultrasound reports. While large language models (LLMs) hold the potential to address this challenge, their specific application in this domain remains systematically underexplored. To establish an effective LLM implementation framework for the clinical multidimensional classification of prenatal ultrasound reports, we evaluated the open-source DeepSeek-V3.2 family on real-world anomalous reports-covering both factual and subjective categories-while integrating retrieval-augmented generation (RAG) and chain-of-thought (CoT) reasoning. From a cohort of 4256 pregnancies, we extracted 254 reports with fetal anomalies. We comprehensively evaluated both the high-speed base model (DeepSeek-V3.2-B) and the reasoning-enhanced model (DeepSeek-V3.2-R) across all 5 classification dimensions, comprising 4 factual extraction tasks-primary classification, standardized terminology, anatomical system, and abnormality count-and 1 subjective severity assessment. We further explicitly evaluated the efficacy of RAG for the subjective tasks. Finally, to validate the clinical utility of this approach, we performed a correlation analysis between the expert-validated multidimensional phenotypic profiles and definitive genetic outcomes derived from amniocentesis. While V3.2-B achieved high efficiency in factual tasks (accuracy and F1-score >90%), it underperformed in subjective severity grading (56.6% accuracy), exhibiting a recall of 0 for minor anomalies. Crucially, while RAG significantly improved both models' performance on internal retrieval datasets (P<.05), this benefit did not generalize to external test datasets (P>.05). In contrast, the V3.2-R model utilizing CoT reasoning achieved superior robustness (86% accuracy and F1-score=0.75) on external data without RAG; notably, introducing RAG to V3.2-R degraded performance to 81%, suggesting potential noise interference. Clinical validation against amniocentesis outcomes confirmed that accurate multidimensional phenotypic profiles significantly stratified pathogenic genetic risks. The rapid base models are efficient for factual classification, and RAG enhances performance on data similar to the knowledge base, whereas CoT is indispensable for subjective assessment. Within the constraints of our dataset and current retrieval implementation, CoT proved more robust than RAG for subjective assessment. However, this finding is specifically tied to our experimental setup and should not be generalized as a universal conclusion. We recommend clinically adopting this adaptive \"fast-slow\" LLM framework to efficiently perform the multidimensional classification of prenatal ultrasound anomalies. This privacy-preserving, locally deployable solution provides a scalable path to accelerate phenotype-genotype research and optimize invasive diagnostic decision-making.",
+    "year": 2026,
+    "venue": "Journal of medical Internet research",
+    "authors": [
+      "Wei Zhong",
+      "Huihui Yan",
+      "Yifan Liu",
+      "Yan Liu",
+      "Kai Yang",
+      "Huimin Gao",
+      "Zhengyang Yao",
+      "Wenjing Hao",
+      "Yousheng Yan",
+      "Chenghong Yin"
+    ],
+    "doi": "10.2196/91399",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42207158/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42207158"
+    }
+  },
+  {
+    "paper_id": "pubmed:42202198",
+    "title": "Ego-R1: Agentic Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning.",
+    "abstract": "Egocentric videos are inherently long-form, as they provide a continuous, first-person perspective of daily life, capturing complex social interactions and routines that naturally span days or weeks. Understanding and reasoning over egocentric videos that span hours or even days poses significant challenges due to their length, multimodal nature, and complex temporal dependencies over long time horizons. To this end, we introduce Ego-R1, a novel framework for reasoning over ultra-long (i.e., days and weeks) egocentric videos. Ego-R1 leverages a structured Chain-of-Tool-Thought (CoTT) process, orchestrated by an Ego-R1 Agent trained via reinforcement learning (RL). Inspired by human problem-solving strategies, CoTT decomposes complex reasoning into modular steps, empowering the agent to act as a high-level controller that dynamically invokes specialized tools-such as hierarchical memory retrievers and multimodal perceptors-to iteratively and collaboratively answer sub-questions. This approach enables effective temporal abstraction, long-horizon dependency tracking, and step-by-step multimodal reasoning. The framework is built upon a flexible toolkit designed for efficient temporal retrieval and granular visual analysis: Hierarchical RAG (H-RAG), a text-based module that performs efficient top-down temporal localization by aggregating video logs from day-level summaries down to 10-minute intervals; Video-LLM, a short-horizon perception module that analyzes local temporal windows to interpret dynamic interactions; and VLM, a fine-grained vision-language model used to extract high-resolution details, such as text or object attributes, from specific frames. We design a two-stage training paradigm involving supervised fine-tuning (SFT) of a pretrained language model using CoTT data, to enable dynamic tool proposal for long-range reasoning; followed by RL, to enhance the performance of plan smartly with tools. To facilitate training, we construct Ego-R1 Data, which consists of Ego-CoTT-25 K for SFT and Ego-QA-4.4 K for RL. Furthermore, we evaluate Ego-R1 on a newly curated week-long video QA benchmark, Ego-R1 Bench, which contains hybrid-source, human-verified QA pairs. Extensive experiments show that our 3B-parameter Ego-R1 Agent achieves the strongest performance among open-weight and tool-agent baselines, while offering interpretable tool-grounded reasoning trajectories. On Ego-R1 Bench, Ego-R1 achieves 46.0% accuracy, substantially outperforming Gemini-1.5-Pro (38.3%) and LLaVA-Video (29.0%); we further report Gemini-3.1-Pro as a stronger closed-source reference at 53.7%. Moreover, the framework exhibits strong generalization to standard exocentric video benchmarks; by leveraging the long-video nature of egocentric data to train the orchestrator's planning capabilities rather than overfitting the perceptors to a specific view, our modular design remains robust across domains. Ego-R1 Agent achieves 64.9% accuracy on Video-MME (long), surpassing leading open-weight models. These results validate that dynamic, tool-augmented reasoning effectively bridges the gap between limited context windows and the demands of understanding both week-long first-person experiences and general long-form video content.",
+    "year": 2026,
+    "venue": "IEEE transactions on pattern analysis and machine intelligence",
+    "authors": [
+      "Shulin Tian",
+      "Ruiqi Wang",
+      "Hongming Guo",
+      "Penghao Wu",
+      "Yuhao Dong",
+      "Xiuying Wang",
+      "Jingkang Yang",
+      "Hao Zhang",
+      "Hongyuan Zhu",
+      "Ziwei Liu"
+    ],
+    "doi": "10.1109/TPAMI.2026.3697367",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42202198/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42202198"
+    }
+  },
+  {
+    "paper_id": "pubmed:42201055",
+    "title": "Human-in-the-Loop Enhances Machine Learning Inference in Intraoperative Optical Coherence Tomography Glioma Imaging.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Medical sciences (Basel, Switzerland)",
+    "authors": [
+      "Radik Zinatullin",
+      "Alexander Sovetsky",
+      "Artem Grishin",
+      "Elena Kiseleva",
+      "Liudmila Kukhnina",
+      "Svetlana Korikova",
+      "Alexander Matveyev",
+      "Vladimir Zaitsev",
+      "Konstantin Yashin",
+      "Lev Matveev"
+    ],
+    "doi": "10.3390/medsci14020263",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42201055/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42201055"
+    }
+  },
+  {
+    "paper_id": "pubmed:42187939",
+    "title": "LLM-Augmented Multi-Agent Reinforcement Learning for Cross-Scenario Knowledge Transfer.",
+    "abstract": "Multi-agent reinforcement learning (MARL) relies on trial-and-error interactions to update policies. However, trial-and-error learning typically requires extensive interactions to achieve satisfactory performance, resulting in low sample efficiency, which limits its application in the real world. To reduce the trial-and-error costs of MARL and accelerate the convergence of multi-agent collaborative policies, we propose a MARL policy transfer method named LoLM-MARL, based on fine-tuning large language models (LLMs). First, leveraging the general world knowledge and reasoning capabilities of LLMs, low-rank adaptation (LoRA) is employed to fine-tune the pre-trained model on source tasks, thereby providing general decision-making knowledge for cross-scenario policy transfer. Second, a dynamic prompt construction method for LLMs is designed. By dynamically eliminating the state information of ineffective agents from the prompts, the method provides denser observation data for the large language model, thereby enhancing its policy representation capability in specific complex collaborative scenarios. Meanwhile, the dynamic prompt design concept enriches the training sub-scenarios for the algorithm, thereby laying the foundation for the model to learn more general decision-making knowledge. Finally, a Kullback-Leibler (KL) divergence regularization method based on an annealing strategy is constructed to ensure consistency between the policy distributions of the fine-tuned model and the pre-trained model, effectively mitigating the catastrophic forgetting problem during the fine-tuning process of the pre-trained model. Experimental results show that in zero-shot transfer tasks, LoLM-MARL achieves a maximum improvement of 101.4% in average win rate compared to existing state-of-the-art (SOTA) methods. In six few-shot transfer tasks, our method consistently achieves better generalization performance than traditional SOTA methods, and improves the convergence speed by 4 to 30 times compared to the training-from-scratch approach, providing a new solution paradigm for efficient policy transfer in complex dynamic environments.",
+    "year": 2026,
+    "venue": "Entropy (Basel, Switzerland)",
+    "authors": [
+      "Chao Li",
+      "Yanfei Liu",
+      "Jieling Wang",
+      "Zhong Wang",
+      "Kewei Lu",
+      "Chengjin Wang"
+    ],
+    "doi": "10.3390/e28050525",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42187939/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42187939"
+    }
+  },
+  {
+    "paper_id": "pubmed:42187527",
+    "title": "A Clinical Decision Support System for Post-Surgical Cardiovascular Remote Monitoring.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Clinics and practice",
+    "authors": [
+      "Charalampia Pylarinou",
+      "Francesk Mulita",
+      "Efstratios Koletsis",
+      "Vasileios Leivaditis",
+      "Elias Liolis",
+      "Lefteris Gortzis",
+      "Dimosthenis Mavrilas"
+    ],
+    "doi": "10.3390/clinpract16050093",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42187527/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42187527"
+    }
+  },
+  {
+    "paper_id": "pubmed:42180085",
+    "title": "Accuracy of large language models in head and neck cancers: a comparative analysis of ChatGPT and Gemini in TNM staging and clinical decision support.",
+    "abstract": "Large Language Models (LLMs) are increasingly integrated into oncological workflows. This study evaluated and compared the performance of ChatGPT-4o and Gemini 1.5 Pro in TNM staging and treatment planning for head and neck malignancies across diverse anatomical sites. A retrospective analysis was performed on 180 patients with head and neck cancer. Clinical data were processed through structured prompts to simulate real-world clinical inquiries. AI-generated TNM stages and treatment protocols were compared against AJCC 8th Edition guidelines and expert multidisciplinary tumor board decisions. The analysis focused on diagnostic accuracy, inter-rater agreement, and the impact of anatomical complexity on model performance. Both models demonstrated comparable proficiency in TNM staging accuracy (ChatGPT: 75.6%, Gemini: 75.0%), showing substantial agreement with expert standards (x While both LLMs provide reliable staging support, Gemini exhibits superior clinical reasoning in synthesizing multidimensional data into actionable treatment recommendations. However, a staging error rate of 25% remains a critical concern, potentially leading to inappropriate clinical pathways. These models should be viewed as auxiliary tools within an 'augmented intelligence' ecosystem, integrated with imaging and multidisciplinary inputs, rather than independent decision-makers. Strict expert supervision is mandatory to prevent subsite-specific errors from impacting surgical and oncological outcomes.",
+    "year": 2026,
+    "venue": "Frontiers in oncology",
+    "authors": [
+      "Deniz Baklaci",
+      "Hüseyin Işık",
+      "Duygu Erdem",
+      "Gökhan F Kılıç"
+    ],
+    "doi": "10.3389/fonc.2026.1828538",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42180085/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42180085"
+    }
+  },
+  {
+    "paper_id": "pubmed:42179707",
+    "title": "CLEAR-AI: confounder-aware learning for equitable and accurate reasoning in AI for diagnosis.",
+    "abstract": "A critical challenge impeding the deployment of artificial intelligence (AI) models in healthcare lies in implicit bias against multiple correlated sensitive attributes. We developed a multibranch adversarial debiasing approach that can debias a multilabel diagnostic model simultaneously for correlating confounding factors using a dynamic weighted gradient reversal technique to reduce disparities. The proposed methodology was evaluated on chest X-ray imaging data-trained on CheXpert and evaluated on two external datasets [MIMIC-CXR (Beth Israel, Massachusetts, United States) and Emory Healthcare (Atlanta, Georgia, United States)]. The disease classification performance of the proposed debiased method significantly overlaps with the baselines, indicating no drop in the task performance. We found the debiased model to reduce TPR and FPR disparities across multifactor subgroups [age, race, and support device(s)] while maintaining overall task performance. Although we focused on three specific confounders, the proposed adversarial debiasing framework readily extends to account for an arbitrary number of sensitive variables. The findings highlight the promising potential of adversarial training techniques to enhance fairness and trustworthiness in the deployment of AI models in diverse healthcare settings.",
+    "year": 2026,
+    "venue": "Journal of medical imaging (Bellingham, Wash.)",
+    "authors": [
+      "Vedant Joshi",
+      "Ramon Correa",
+      "Avisha Das",
+      "Judy Gichoya",
+      "Imon Banerjee"
+    ],
+    "doi": "10.1117/1.JMI.13.3.034503",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42179707/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42179707"
+    }
+  },
+  {
+    "paper_id": "pubmed:42177027",
+    "title": "Artificial Intelligence in the Teaching Practice of Nursing Professionals: Opportunities, Applications, and Challenges.",
+    "abstract": "The incorporation of artificial intelligence (AI) into nursing education is becoming a key tool to respond to the growing demands for patient safety and excellence in care. This article examines the potential of AI to enrich training, highlighting the need for students to become familiar with technologies that are already embedded in clinical practice. Five areas of application are addressed: (i) intelligent tutoring systems that personalize learning pathways and enhance academic performance; (ii) immersive clinical simulation with virtual/augmented reality, which strengthens clinical reasoning and interprofessional communication; (iii) automated assessment and feedback, capable of drastically reducing faculty workload without compromising validity; (iv) adaptive curriculum design and agile resource generation, which lessen competency gaps and accelerate the development of teaching materials; and (v) tools to support faculty, freeing up time for high-pedagogical-value mentoring. Although these developments contribute to personalization, efficiency, and the strengthening of competencies, their sustainable impact requires addressing ethical and operational challenges: digital literacy gaps, algorithmic bias, data protection, and transparency requirements imposed by regulation. The article concludes that the effective integration of AI calls for a balanced approach that combines technological innovation with pedagogical reflection and aligns with the humanistic values of nursing. Permanent AI literacy programs, institutional frameworks for ethical governance, investment in inclusive infrastructures, and robust research agendas that assess the real transfer of competencies to the clinical setting are recommended.",
+    "year": 2026,
+    "venue": "Enfermeria clinica",
+    "authors": [
+      "Antonio Rosa-Castillo",
+      "Fernando Campaña-Castillo",
+      "Guillermo Moreno-Muñoz",
+      "Anna Falco-Pegueroles",
+      "Cecilio Angulo-Bahón",
+      "Silvia Carla da Silva-André-Uehara"
+    ],
+    "doi": "10.1016/j.enfcle.2026.502489",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42177027/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42177027"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174962",
+    "title": "Leveraging Large Language Models with Retrieval-Augmented Generation for Semantic Mapping of Clinical Data Lakes to SNOMED CT.",
+    "abstract": "Mapping local clinical concepts to standardized terminologies such as SNOMED CT is essential for semantic interoperability and large-scale research, but manual mapping is labor-intensive and difficult to scale. We report a preliminary evaluation of a hybrid approach combining retrieval-augmented generation (RAG) and a large language model (LLM) to support the mapping of hospital datalake concepts to SNOMED CT. Using a dataset of 2,768 concepts annotated by the SIMED across five semantic categories (organisms, healthcare locations, laboratory samples, allergies, and clinical assessments), the pipeline consistently outperformed retrieval-only baselines. For organism concepts, strict accuracy reached 92.8% (weighted 98.0%, top-3 96.7%), while allergy and assessment concepts achieved 84.7% and 72.1% strict accuracy, respectively. Healthcare location and laboratory sample concepts remained more challenging, with strict accuracies of 57.5% and 57.1%, and weighted accuracy varied strongly depending on frequency distributions. Overall, strict accuracy was 72.8%, weighted accuracy 76.1%, and top-3 accuracy 83.1%. These findings suggest that combining RAG with LLM-based reasoning can reduce expert workload while maintaining accuracy, representing a step toward scalable, AI-assisted semantic interoperability in healthcare. The approach relies on a retrieval-augmented generation pipeline using embedding-based candidate retrieval followed by LLM-based disambiguation (GPT-4.1-mini), and is evaluated against a retrieval-only baseline. By improving semantic consistency in clinical data lakes, it indirectly supports interoperable access to patient-level health data.",
+    "year": 2026,
+    "venue": "Studies in health technology and informatics",
+    "authors": [
+      "Frederic Ehrler",
+      "Florian Singer",
+      "Deniz Geçer",
+      "Julien Houeix",
+      "Emmanuel Durand"
+    ],
+    "doi": "10.3233/SHTI260288",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174962/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174962"
+    }
+  },
+  {
+    "paper_id": "pubmed:42174892",
+    "title": "Modeling the Clinical Reasoning Workflow: A Dynamic, Time-Aware CDSS for the Emergency Department.",
+    "abstract": "Emergency Departments (ED) require rapid differentiation of time-sensitive critical conditions. We present a dynamic Clinical Decision Support System (CDSS) utilizing a Time-Aware Retrieval-Augmented Generation (RAG) framework. In a retrospective pilot study of 70 cases (Aortic Dissection, MI, Stroke, and Trauma Controls), the system's Top-1 diagnostic accuracy significantly improved from 69.5% (triage) to 86.7% (discharge). This validates the system's capability to integrate evolving FHIR data with clinical guidelines to reduce the diagnostic uncertainty.",
+    "year": 2026,
+    "venue": "Studies in health technology and informatics",
+    "authors": [
+      "Chaeyeon Park",
+      "Sanga Ahn",
+      "Hansol Chang",
+      "Wonchul Cha",
+      "Junsang Yoo"
+    ],
+    "doi": "10.3233/SHTI260216",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42174892/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42174892"
+    }
+  },
+  {
+    "paper_id": "pubmed:42151138",
+    "title": "Hybrid reasoning for perception, explanation, and autonomous action in manufacturing.",
+    "abstract": "Industrial processes must operate robustly in unpredictable environments, where errors are costly and difficult to detect. AI-based control systems offer a path forward but typically rely on large, labeled datasets, limiting their generalization to variable, data-scarce settings. Foundation models promise broader reasoning and knowledge integration yet struggle to deliver the quantitative precision required in engineering. Here, we introduce Control and Interpretation of Production via Hybrid Expertise and Reasoning (CIPHER): a systems-level vision-language-action (VLA) framework designed for industrial perception, explanation and control. CIPHER integrates a process expert for quantitative characterization of system states with retrieval-augmented reasoning grounded in process physics and knowledge. This hybrid design enables strong generalization to out-of-distribution tasks, allowing the agent to interpret textual or visual inputs, explain its decisions, and autonomously generate precise machine instructions without explicit supervision. In this work, CIPHER is deployed within multiple manufacturing systems, demonstrating precise, context-aware, and transparent control, with potential for deployment in real industrial environments.",
+    "year": 2026,
+    "venue": "Nature communications",
+    "authors": [
+      "Christos Margadji",
+      "Sebastian William Pattinson"
+    ],
+    "doi": "10.1038/s41467-026-72378-9",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42151138/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42151138"
+    }
+  },
+  {
+    "paper_id": "pubmed:42143662",
+    "title": "Novelty to necessity: large language models in clinical practice-a call to action for physicians.",
+    "abstract": "Large language models (LLMs) represent a rapidly advancing subset of artificial intelligence with significant potential to augment clinical practice. These tools can assist in literature synthesis, documentation, clinical reasoning, and patient communication. Despite demonstrated capabilities, adoption in healthcare remains limited due to barriers such as limited AI literacy, trust concerns, integration challenges, and generational disparities in digital proficiency. This review critically examines the role of LLMs as cognitive adjuncts in medicine, emphasizing the need for calibrated trust, human oversight, structured implementation strategies, and robust regulatory governance. Evidence suggests that stepwise integration of LLMs, beginning with low-risk tasks, may enhance physician efficiency, reduce cognitive burden, and may support high-quality care. Key limitations, including hallucinations, data currency, environmental impact, and data security, have to be addressed, alongside the need for continuous model refinement. Rigorous clinical trials are needed to establish the efficacy of LLMs. This includes the recognition that LLMs trained on vast web data may contain personal health information, creating a significant privacy risk. Responsible adoption of LLMs is essential to meet the demands of modern medicine while preserving clinical accountability and patient-centered care.",
+    "year": 2026,
+    "venue": "Internal and emergency medicine",
+    "authors": [
+      "Vittorio Beltrani",
+      "Olivier Giannini",
+      "Omar F AbouEzzeddine",
+      "Martin R Gruebler",
+      "Federico Mastroleo",
+      "Gregorio Tersalvi"
+    ],
+    "doi": "10.1007/s11739-026-04393-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42143662/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42143662"
+    }
+  },
+  {
+    "paper_id": "pubmed:42135531",
+    "title": "Advancing conversational diagnostic AI with multimodal reasoning.",
+    "abstract": "Real-world clinical practice is inherently multimodal, relying on the synthesis of patient history with visual information such as medical imagery and clinical documents. Although large language models (LLMs) have shown promise in diagnostic dialogue, their evaluation has been largely restricted to text-only interactions, failing to capture the complexity of modern remote care delivery. Here we introduce a multimodal extension of the Articulate Medical Intelligence Explorer (multimodal AMIE), capable of gathering, interpreting and reasoning about multimodal data within a diagnostic conversation. To achieve this, we developed a state-aware dialogue framework that dynamically guides history-taking based on diagnostic uncertainty and evolving patient states, emulating the structured reasoning of experienced clinicians. We evaluated this updated, state-aware version of multimodal AMIE against primary care physicians (PCPs) in a randomized, blinded exploratory study comprising 105 simulated telehealth consultations, which included dermatology photographs, electrocardiograms and clinical documents. As assessed by 18 specialist physicians, multimodal AMIE outperformed PCPs not only in diagnostic accuracy but also in conversation quality, including history-taking and empathy. Specifically, multimodal AMIE demonstrated superior performance on 29 of 32 evaluation axes, including seven of nine metrics that assess multimodal reasoning. These results validate the efficacy of state-aware reasoning in bridging the gap between text and visual information and demonstrate the potential for artificial intelligence (AI) systems to augment clinicians in complex, multimodal diagnostic settings.",
+    "year": 2026,
+    "venue": "Nature medicine",
+    "authors": [
+      "Khaled Saab",
+      "Chunjong Park",
+      "Tim Strother",
+      "Jan Freyberg",
+      "David G T Barrett",
+      "Yong Cheng",
+      "Wei-Hung Weng",
+      "David Stutz",
+      "Nenad Tomasev",
+      "Anil Palepu",
+      "Valentin Liévin",
+      "Yash Sharma",
+      "Roma Ruparel",
+      "Abdullah Ahmed",
+      "Elahe Vedadi",
+      "Kimberly Kanada",
+      "Cian Hughes",
+      "Yun Liu",
+      "Geoff Brown",
+      "Yang Gao",
+      "Sean Li",
+      "S Sara Mahdavi",
+      "James Manyika",
+      "Katherine Chou",
+      "Yossi Matias",
+      "Avinatan Hassidim",
+      "Dale R Webster",
+      "Joëlle Barral",
+      "S M Ali Eslami",
+      "Pushmeet Kohli",
+      "Adam Rodman",
+      "Vivek Natarajan",
+      "Mike Schaekermann",
+      "Tao Tu",
+      "Alan Karthikesalingam",
+      "Ryutaro Tanno"
+    ],
+    "doi": "10.1038/s41591-026-04371-0",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42135531/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42135531"
+    }
+  },
+  {
+    "paper_id": "pubmed:42114397",
+    "title": "Evidential reasoning-enabled deep learning for reliable treatment outcome prediction in cancer therapy.",
+    "abstract": "Treatment outcome prediction plays an important role in realizing personalized cancer therapy. In triple-negative breast cancer (TNBC), neoadjuvant chemotherapy (NAC) is widely used to downstage tumors and improve surgical outcomes. In head and neck cancer (HNC), early prediction of lesion progression can assist treatment planning. However, inter-patient heterogeneity in treatment response and tumor behavior limits the effectiveness of generalized treatment strategies. To address this issue, we developed an evidential reasoning rule-enabled deep neural network (ER",
+    "year": 2026,
+    "venue": "Artificial intelligence in medicine",
+    "authors": [
+      "Xi Chen",
+      "Xiaoxu Deng",
+      "Zhiguo Zhou"
+    ],
+    "doi": "10.1016/j.artmed.2026.103445",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42114397/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42114397"
+    }
+  },
+  {
+    "paper_id": "pubmed:42111234",
+    "title": "Personalized Case- and Evidence-Based TBI Prognosis with Small Language Models.",
+    "abstract": "Timely and accurate emergency department disposition for traumatic brain injury patients requires rapid synthesis of complex, multimodal data. Yet in practice, such decisions often rely on heuristics, resulting in variable outcomes. While large language models show promise for supporting evidence-based practice, their clinical deployment is limited by size, cost, and privacy concerns. We present a dual retrieval-augmented framework that leverages efficient, on-premise small language models and unifies evidence-based practice with case-based reasoning to enable personalized disposition prediction of patients with traumatic brain injury. Evidence-based practice is modeled by retrieving guideline passages tailored to each patient's presentation, while case-based reasoning retrieves similar patients as few-shot exemplars. This dual-retrieval strategy personalizes both clinical guidelines and case-based exemplars, enabling the language model to produce predictions that integrate guideline alignment with patient-specific context. We implemented this framework using two open-source language models under 4B parameters-Phi-4-mini and Qwen-2.5. Across both models, similar patient exemplars consistently improved classification performance, increasing sensitivity without sacrificing specificity. Clinical guidelines had less impact on performance, but when combined with exemplars, they shifted predictions toward more conservative, guideline-consistent behavior. Clinician evaluations suggest that while adding similar patient exemplars enhances accuracy, overreliance on exemplars may diminish reasoning quality, whereas guidelines improve the clinical relevance and justification of model outputs. These findings underscore how targeted retrieval can personalize both predictions and their rationale, enhancing the performance, interpretability, and trust-worthiness of AI-assisted clinical decision-making.",
+    "year": 2025,
+    "venue": "... IEEE-EMBS International Conference on Biomedical and Health Informatics. IEEE-EMBS International Conference on Biomedical and Health Informatics",
+    "authors": [
+      "Pranav Manjunath",
+      "Syed M Adil",
+      "Benjamin D Wissel",
+      "Daniel P Sexton",
+      "Brian Lerner",
+      "Timothy W Dunn"
+    ],
+    "doi": "10.1109/bhi67747.2025.11269507",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42111234/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42111234"
+    }
+  },
+  {
+    "paper_id": "pubmed:42111196",
+    "title": "Unveiling rare drug interactions via a BioGPT-enhanced dual graph framework for robust pharmacovigilance.",
+    "abstract": "Uncovering rare drug-drug interactions (DDIs) is pivotal for patient safety, yet hampered by severe class imbalance and semantic complexity in biomedical text. To address this, we present BIDGNN, a framework synergizing generative augmentation with dual-graph reasoning. We employ a BioGPT-driven generative adversarial network (BioGPT-GAN) to synthesize realistic training samples for underrepresented interactions, resolving data scarcity. Complementarily, a dual-graph architecture captures both explicit syntactic dependencies and implicit semantic correlations, fused via cross-modal attention. BIDGNN achieves an F1-score of 83.57% on the DDI 2013 benchmark, demonstrating superior sensitivity to minority interaction types. This work offers a robust, interpretable solution for automated pharmacovigilance, effectively translating massive literature into clinical safety insights.",
+    "year": 2026,
+    "venue": "iScience",
+    "authors": [
+      "Yaxun Jia",
+      "Zhu Yuan",
+      "Huaqi Zhang",
+      "Zhenye Wang",
+      "Huiyun Zhang",
+      "YunChao Gong",
+      "Zuo-Lin Xiang"
+    ],
+    "doi": "10.1016/j.isci.2026.115649",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42111196/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42111196"
+    }
+  },
+  {
+    "paper_id": "pubmed:42099558",
+    "title": "MTB-ImmunogenKG: An LLM-assisted knowledge graph for antigen selection in tuberculosis vaccine research.",
+    "abstract": "Tuberculosis (TB) vaccine design relies on the selection of optimal antigens. However, evidence on candidate antigens is scattered across the literature and rarely linked to critical vaccine parameters, such as immune responses, antigen combinations, and adjuvants. Here, we introduce ",
+    "year": 2026,
+    "venue": "Biosafety and health",
+    "authors": [
+      "Jielong Peng",
+      "Xinhao Zhuang",
+      "Yingying Chen",
+      "Haitong Xu",
+      "Yunjie Du",
+      "Bingdong Zhu",
+      "Guoping Zhao",
+      "Ying Wang",
+      "Yunchao Ling",
+      "Guoqing Zhang"
+    ],
+    "doi": "10.1016/j.bsheal.2026.02.001",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42099558/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42099558"
+    }
+  },
+  {
+    "paper_id": "pubmed:42096393",
+    "title": "LELN: A Large Language Model-Dynamically Enhanced Learning Network for Patient Similarity Calculation.",
+    "abstract": "The rapid expansion of Electronic Medical Record (EMR) data has advanced AI-driven patient similarity computation, a key technology for intelligent healthcare. However, the handling of heterogeneous EMR formats and the integration of domain knowledge constrain existing methods. While graph-based approaches show promise, they still struggle with these issues. To address this, we propose a Large Language Model-Dynamically Enhanced Learning Network (LELN), leveraging LLMs' commonsense knowledge and reasoning to dynamically structure EMR data and enhance medical knowledge integration. LELN in tegrates two LLM-basedmodules:DS-EE(DeepSeek-Event Extraction) extracts medical events to construct structured EMR event graphs, and DS-KB (DeepSeek-Knowledge Base) infers disease-relevant knowledge to augment feature representations. The model employs a dual-stage spatial-temporal feature aggregation strategy: a Graph Attention Network captures intra- and inter-event dependencies, followed by a Bidirectional Long-Short Term Memory (BiLSTM) with attention to model temporal disease progression. Additionally, a clinical prior-guided attention mechanism emphasizes discriminative diagnostic features, improving clinical relevance. Extensive experiments on heterogeneous datasets-a real-world Chinese dataset and public MIMIC-III-show LELN outperforms baselines, achieving F1 scores of 87.66% and 85.95%, demonstrating robustness and accuracy.",
+    "year": 2026,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Zhichao Zhu",
+      "Bo Bai",
+      "Jianqiang Li",
+      "Han Wang",
+      "Rui Li",
+      "Lan Lan"
+    ],
+    "doi": "10.1109/JBHI.2026.3691375",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42096393/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42096393"
+    }
+  },
+  {
+    "paper_id": "pubmed:42090870",
+    "title": "LLM-driven human-AI collaborative decision support system for complex industrial processes: A case study in metallurgy.",
+    "abstract": "Multi-source heterogeneous data in complex industrial processes often form data silos, hindering data integration and reducing human decision-makers' cognitive efficiency. We present a human-AI collaborative decision support system for complex industrial processes, driven by Large Language Models (LLMs). The system employs a meta-cognitive reasoning framework to decompose tasks and orchestrate tools. It integrates feedback-based knowledge retrieval, which maintains an evolving domain knowledge base, and a memory-augmented SQL constructor. The latter enables natural language access to time-series and relational data without model fine-tuning. These components form a unified architecture that coordinates technical documents, process data, and operator feedback under real-time and safety constraints. The system provides interpretable high-level recommendations while keeping human decision-makers in control. We deploy the system in a ladle preheating process in a steelmaking plant and construct a 340-query expert-annotated evaluation corpus. With DeepSeek-V3 as the driving LLM, the system achieves 99.1% answer correctness on this corpus and provides reliable and efficient decision support under practical inference-time constraints.",
+    "year": 2026,
+    "venue": "Neural networks : the official journal of the International Neural Network Society",
+    "authors": [
+      "Youcheng Zong",
+      "Runda Jia",
+      "Kang Li",
+      "Dazhan Xue",
+      "Liqiang Zhang",
+      "Dakuo He"
+    ],
+    "doi": "10.1016/j.neunet.2026.109055",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42090870/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42090870"
+    }
+  },
+  {
+    "paper_id": "pubmed:42080623",
+    "title": "Optimisation Drift and Substitution Risk in Artificial Intelligence-Supported Personalised Mental Health Nursing: A Critical Synthesis on Therapeutic Presence and Care Biography.",
+    "abstract": "Artificial intelligence-supported personalisation is accelerating in mental health services, yet it can reclassify relationship, biography, and judgement as optional. To explain how \"personalisation\" drifts into substitution and to specify minimum conditions for safe, workable implementation in mental health nursing. A debate essay using purposive critical synthesis of empirical and conceptual literature to organise three recurring tensions and derive auditable safeguards. Three tensions recur across current deployments: alliance-like chatbot support can be mistaken for therapeutic presence; automation can narrow clinical reasoning and contribute to deskilling; and trace-based personalisation can override care biography and erode trust through extractive data practices. The common failure mechanism is optimisation drift under weak governance, where simulated alliance replaces therapeutic presence, metric authority displaces professional judgement, and proxy traces override care biography. Service governance and procurement should treat therapeutic presence, narrative authority, and moral agency protection as non-negotiable clinical outcomes at the point of care. Implement relationally accountable augmentation with explicit red lines, escalation pathways, protected relational time, biography-first documentation, and evaluation that tests accountability and safety under routine conditions.",
+    "year": 2026,
+    "venue": "Journal of psychiatric and mental health nursing",
+    "authors": [
+      "Erman Yıldız"
+    ],
+    "doi": "10.1111/jpm.70137",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42080623/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42080623"
+    }
+  }
+]

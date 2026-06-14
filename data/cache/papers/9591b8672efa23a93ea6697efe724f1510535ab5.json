@@ -1,0 +1,71 @@
+{
+  "paper_id": "https://openalex.org/W4409362928",
+  "title": "ABQ-LLM: Arbitrary-Bit Quantized Inference Acceleration for Large Language Models",
+  "abstract": "Large Language Models (LLMs) have revolutionized natural language processing tasks. However, their practical application is constrained by substantial memory and computational demands. Post-training quantization (PTQ) is considered an effective method to accelerate LLM inference. Despite its growing popularity in LLM model compression, PTQ deployment faces two major challenges. First, low-bit quantization leads to performance degradation. Second, restricted by the limited integer computing unit type on GPUs, quantized matrix operations with different precisions cannot be effectively accelerated. To address these issues, we introduce a novel arbitrary-bit quantization algorithm and inference framework, ABQ-LLM. It achieves superior performance across various quantization settings and enables efficient arbitrary-precision quantized inference on the GPU. ABQ-LLM introduces several key innovations: (1) a distribution correction method for transformer blocks to mitigate distribution differences caused by full quantization of weights and activations, improving performance at low bit-widths. (2) the bit balance strategy to counteract performance degradation from asymmetric distribution issues at very low bit-widths (e.g., 2-bit). (3) an innovative quantization acceleration framework that reconstructs the quantization matrix multiplication of arbitrary precision combinations based on BTC (Binary TensorCore) equivalents, gets rid of the limitations of INT4/INT8 computing units. ABQ-LLM can convert each component bit width gain into actual acceleration gain, maximizing performance under mixed precision(e.g., W6A6, W2A8). Based on W2*A8 quantization configuration on LLaMA-7B model, it achieved a WikiText2 perplexity of 7.59 (2.17⬇ vs 9.76 in AffineQuant). Compared to SmoothQuant, we realized 1.6x acceleration improvement and 2.7x memory compression gain.",
+  "year": 2025,
+  "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+  "authors": [
+    "Chao Zeng",
+    "Songwei Liu",
+    "Yusheng Xie",
+    "Hong Liu",
+    "Xiaojian Wang",
+    "Miao Wei",
+    "Shu Yang",
+    "Fangmin Chen",
+    "Xing Mei"
+  ],
+  "doi": "https://doi.org/10.1609/aaai.v39i21.34385",
+  "arxiv_id": null,
+  "url": "https://doi.org/10.1609/aaai.v39i21.34385",
+  "citation_count": 11,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [
+    "https://openalex.org/W2963259903",
+    "https://openalex.org/W2981852735",
+    "https://openalex.org/W4281651027",
+    "https://openalex.org/W4309591680",
+    "https://openalex.org/W4310815131",
+    "https://openalex.org/W4385326807",
+    "https://openalex.org/W4387848958",
+    "https://openalex.org/W4388093177",
+    "https://openalex.org/W4393147284",
+    "https://openalex.org/W4406650295",
+    "https://openalex.org/W6853251322",
+    "https://openalex.org/W6992309071"
+  ],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Acceleration",
+      "Bit (key)",
+      "Inference",
+      "Computer science",
+      "Arithmetic",
+      "Programming language",
+      "Physics",
+      "Mathematics",
+      "Artificial intelligence",
+      "Quantum mechanics",
+      "Computer network"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4327546585",
+      "https://openalex.org/W2411923897",
+      "https://openalex.org/W4394546135",
+      "https://openalex.org/W4285347720",
+      "https://openalex.org/W4200259850",
+      "https://openalex.org/W2333831899",
+      "https://openalex.org/W2484894494",
+      "https://openalex.org/W2367385042",
+      "https://openalex.org/W4381186982",
+      "https://openalex.org/W2040781570"
+    ]
+  }
+}

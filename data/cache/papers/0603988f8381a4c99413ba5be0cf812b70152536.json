@@ -1,0 +1,30 @@
+{
+  "paper_id": "http://arxiv.org/abs/2503.11207v2",
+  "title": "Can Large Reasoning Models do Analogical Reasoning under Perceptual Uncertainty?",
+  "abstract": "This work presents a first evaluation of two state-of-the-art Large Reasoning Models (LRMs), OpenAI's o3-mini and DeepSeek R1, on analogical reasoning, focusing on well-established nonverbal human IQ tests based on Raven's progressive matrices. We benchmark with the I-RAVEN dataset and its extension, I-RAVEN-X, which tests the ability to generalize to longer reasoning rules and ranges of the attribute values. To assess the influence of visual uncertainties on these symbolic analogical reasoning tests, we extend the I-RAVEN-X dataset, which otherwise assumes an oracle perception. We adopt a two-fold strategy to simulate this imperfect visual perception: 1) we introduce confounding attributes which, being sampled at random, do not contribute to the prediction of the correct answer of the puzzles, and 2) we smoothen the distributions of the input attributes' values. We observe a sharp decline in OpenAI's o3-mini task accuracy, dropping from 86.6% on the original I-RAVEN to just 17.0% -- approaching random chance -- on the more challenging I-RAVEN-X, which increases input length and range and emulates perceptual uncertainty. This drop occurred despite spending 3.4x more reasoning tokens. A similar trend is also observed for DeepSeek R1: from 80.6% to 23.2%. On the other hand, a neuro-symbolic probabilistic abductive model, ARLC, that achieves state-of-the-art performances on I-RAVEN, can robustly reason under all these out-of-distribution tests, maintaining strong accuracy with only a modest accuracy reduction from 98.6% to 88.0%. Our code is available at https://github.com/IBM/raven-large-language-models.",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+    "Giacomo Camposampiero",
+    "Michael Hersche",
+    "Roger Wattenhofer",
+    "Abu Sebastian",
+    "Abbas Rahimi"
+  ],
+  "doi": null,
+  "arxiv_id": "2503.11207v2",
+  "url": "http://arxiv.org/abs/2503.11207v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:broad_synonym",
+    "route:hybrid",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

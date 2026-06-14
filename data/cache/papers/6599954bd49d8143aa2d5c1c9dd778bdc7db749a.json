@@ -1,0 +1,59 @@
+{
+  "paper_id": "https://openalex.org/W3037647403",
+  "title": "Data quality in the deep learning era: Active semi-supervised learning and text normalization for natural language understanding",
+  "abstract": "Deep Learning, a growing sub-field of machine learning, has been applied with tremendous success in a variety of domains, opening opportunities for achieving human level performance in many applications. However, Deep Learning methods depend on large quantities of data with millions of annotated instances. And while well-formed academic datasets have helped advance supervised learning research, in the real-word we are daily deluged by massive amounts of unstructured data, that remain unusable for current supervised learning approaches, as only a small portion is either labeled, cleaned or structured. \\n\\nIn order for a machine learning model to be effective, volume is not the only data dimension that is necessary. Quality is equally important and has proven to be a critical factor for the success of industrial applications of machine learning. According to IBM, poor data quality can cost more than 3 trillion US dollars per year for the US market alone. Inspired by the need for advanced methods that can efficiently address such bottlenecks, we develop machine learning techniques can be leveraged to improve upon data quality in both data-related dimensions: input and output space. \\n\\nHaving a set of labeled examples that can capture the task characteristics is one of the most important prerequisites for successfully applying machine learning. As such, we first focus on minimizing the annotation effort for any arbitrary user-defined task by exploring active learning methods. We show that the best performing active learning strategy depends on the task at-hand and we propose a combination of active learners, maximizing annotation performance early in the process. We demonstrate the viability of the approach on several relation extraction tasks. \\n\\nNext, we observe that even though our method can be used to speed up the collection of labeled training data, the rest will remain unlabeled and thus unexploited. Semi-supervised learning methods proposed in the literature can utilize additional unlabeled data, however, are typically compared on computer vision datasets such as CIFAR10. Here, we perform a systematic exploration of several semi-supervised methods for three sequence labeling tasks and two classification tasks. \\n\\nAdditionally, most methods have assumptions that are less suitable to realistic scenarios. For example, proposed methods in the recent literature treat all unlabeled examples equally. Yet, in many cases we would like to sort out examples that might be less useful or confusing, particularly in noisy settings where examples with low training loss or high confidence are more likely to be clean examples. In addition, most methods assume that the unlabeled data can be classified into the same classes as the labeled data. This does not take into consideration the very possible scenario of out-of-class instances. For example, our classifier may be distinguishing cats from dogs, but the unlabeled examples may contain additional classes, such as shells, butterflies, etc. To this end, we design methods to mitigate these issues, with a re-weighting mechanism that can be incorporated to any consistency-based regularizer. \\n\\nBoth active and semi-supervised learning methods aim to reduce labeling efforts by either automatically expanding the training set or selecting the most informative examples for human annotation. However, bootstrapping approaches often result in negative effects on NLP tasks due to the addition of falsely labeled instances. We address the challenge of producing good quality proxy labels, by leveraging the continuously growing stream of human annotations. We introduce a calibration of semi-supervised active learning where the confidence of the classifier is weighted by an auxiliary neural model that remove incorrectly labeled instances and dynamically adjusts the number of proxy labels included in each iteration. Experimental results show that our strategy outperforms baselines that combine traditional active learning with self-training. \\n\\nWe have explored various ways on how to improve the output space of examples. But the input representation is also equally important. Particularly for social media, (the most abundant source of raw data nowadays) informal writing can cause several bottlenecks. For example, most Information Extraction (IE) tools rely on accurate understanding of text and struggle with the noisy and informal nature of social media due to high out-of-vocabulary (OOV) word rates. In this work, we design a social media text normalization hybrid word-character attention-based encoder-decoder model that can serve as a pre-processing step for any off-the-shelf NLP tool to adapt to social media noisy text. Our model surpasses baseline neural models designed for text normalization and achieves comparable performance with state-of-the-art related work. \\n\\nAlthough we evaluate on NLP tasks, all methods developed are fairly general and can be applied to other supervised machine learning tasks in need of techniques that create meaningful data representations and simultaneously reduce the burden and cost of human annotations.",
+  "year": 2020,
+  "venue": "IDEALS (University of Illinois Urbana-Champaign)",
+  "authors": [
+    "Ismini Lourentzou"
+  ],
+  "doi": null,
+  "arxiv_id": null,
+  "url": "http://hdl.handle.net/2142/106375",
+  "citation_count": 2,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Natural language processing",
+      "Artificial intelligence",
+      "Computer science",
+      "Normalization (sociology)",
+      "Natural language",
+      "Active learning (machine learning)",
+      "Deep learning",
+      "Semi-supervised learning",
+      "Sociology",
+      "Anthropology"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W1141814",
+      "https://openalex.org/W2905615735",
+      "https://openalex.org/W3153230570",
+      "https://openalex.org/W3087541619",
+      "https://openalex.org/W3130694825",
+      "https://openalex.org/W2923644640",
+      "https://openalex.org/W2915058599",
+      "https://openalex.org/W3023371261",
+      "https://openalex.org/W3210156800",
+      "https://openalex.org/W2515319207",
+      "https://openalex.org/W3193882072",
+      "https://openalex.org/W3035963251",
+      "https://openalex.org/W3173151551",
+      "https://openalex.org/W3003586324",
+      "https://openalex.org/W2274762780",
+      "https://openalex.org/W3169537050",
+      "https://openalex.org/W3107203318",
+      "https://openalex.org/W3131146638",
+      "https://openalex.org/W2913669820",
+      "https://openalex.org/W2285503065"
+    ]
+  }
+}

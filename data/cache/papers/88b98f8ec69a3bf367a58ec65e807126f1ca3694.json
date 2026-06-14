@@ -1,0 +1,34 @@
+{
+  "paper_id": "pubmed:40832420",
+  "title": "Detecting Stigmatizing Language in Clinical Notes with Large Language Models for Addiction Care.",
+  "abstract": "Recent studies have found that stigmatizing terms can incline physicians to pursue punitive approaches to patient care. The intensive care unit (ICU) contains large volumes of progress notes that may contain stigmatizing language, which could perpetuate negative biases against patients and affect healthcare delivery. Patients with substance use disorders (alcohol, opioid, and non-opioid drugs) are particularly vulnerable to stigma. This study aimed to examine the performance of Large Language Models (LLMs) in the identification of stigmatizing language from ICU progress notes of patients with substance use disorders (SUD). Clinical notes were sampled from the Medical Information Mart for Intensive Care (MIMIC)-III, which contains 2,083,180 ICU notes. These 2,083,180 notes were passed into a rule-based labeling approach followed by manual verification for more ambiguous cases. The labeling approach followed the NIH guidelines on stigma in SUD. The labeling process resulted in identifying 38,552 stigmatizing encounters. To design our cohort, we randomly sampled an equivalent amount of non-stigmatizing encounters to create a dataset with 77,104 notes. This cohort was organized into train/development/test datasets (70/15/15). We utilized Meta's Llama-3 8B Instruct LLM to run the following experiments for stigma detection: (1) prompts with instructions that adhere to the NIH terms (Zero-Shot); (2) prompts with instructions and examples (in-context learning); (3) in-context learning with a selective retrieval system for the NIH terms (Retrieval Augmented Generation-RAG); and (4) supervised fine-tuning (SFT). We also created a baseline model using keyword search. Evaluation was performed on the held-out test set for accuracy, macro F1 score, and error analysis. The LLM-based approaches were prompted to provide their reasoning for label prediction. Additionally, all approaches were evaluated on an external validation dataset from the University of Wisconsin (UW) Health System with 288,130 ICU notes. SFT had the best performance with 97.2% accuracy, followed by in-context learning. The LLMs with in-context learning and SFT provided appropriate reasoning for false positives during human review. Both approaches identified clinical notes with stigmatizing language that were missed during annotation (10/93 false positives for SFT and 22/186 false positives for the in-context learning approach were considered valid after human review). SFT maintained its accuracy at 97.9% on a similarly balanced external validation dataset. Our findings demonstrate that LLMs, particularly using SFT and in-context learning, effectively identify stigmatizing language in ICU notes with high accuracy while explaining their reasoning in an asynchronous fashion without needing rigorous and time-intensive manual verification involved in labeling. These models also demonstrated the ability to identify novel stigmatizing language not explicitly in training data nor existing guidelines. This study highlights the potential of LLMs in reducing stigma in clinical documentation, especially for patients with SUD. These LLMs enable identification of stigmatizing language in clinical notes that can perpetuate negative stigma towards patients and encourage rewriting of notes.",
+  "year": 2025,
+  "venue": "medRxiv : the preprint server for health sciences",
+  "authors": [
+    "R Sethi",
+    "J Caskey",
+    "Y Gao",
+    "M M Churpek",
+    "T A Miller",
+    "A Mayampurath",
+    "E S Afshar",
+    "M Afshar",
+    "D Dligach"
+  ],
+  "doi": "10.1101/2025.08.08.25333315",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40832420/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:entity_dataset",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "40832420"
+  }
+}

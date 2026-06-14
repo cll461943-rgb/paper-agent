@@ -1,0 +1,62 @@
+{
+  "paper_id": "https://openalex.org/W4288088047",
+  "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language\\n Generation, Translation, and Comprehension",
+  "abstract": "We present BART, a denoising autoencoder for pretraining sequence-to-sequence\\nmodels. BART is trained by (1) corrupting text with an arbitrary noising\\nfunction, and (2) learning a model to reconstruct the original text. It uses a\\nstandard Tranformer-based neural machine translation architecture which,\\ndespite its simplicity, can be seen as generalizing BERT (due to the\\nbidirectional encoder), GPT (with the left-to-right decoder), and many other\\nmore recent pretraining schemes. We evaluate a number of noising approaches,\\nfinding the best performance by both randomly shuffling the order of the\\noriginal sentences and using a novel in-filling scheme, where spans of text are\\nreplaced with a single mask token. BART is particularly effective when fine\\ntuned for text generation but also works well for comprehension tasks. It\\nmatches the performance of RoBERTa with comparable training resources on GLUE\\nand SQuAD, achieves new state-of-the-art results on a range of abstractive\\ndialogue, question answering, and summarization tasks, with gains of up to 6\\nROUGE. BART also provides a 1.1 BLEU increase over a back-translation system\\nfor machine translation, with only target language pretraining. We also report\\nablation experiments that replicate other pretraining schemes within the BART\\nframework, to better measure which factors most influence end-task performance.\\n",
+  "year": 2019,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Lewis, Mike",
+    "Yinhan Liu",
+    "Naman Goyal",
+    "Marjan Ghazvininejad",
+    "Abdelrahman Mohamed",
+    "Omer Levy",
+    "Ves Stoyanov",
+    "Luke Zettlemoyer"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.1910.13461",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/1910.13461",
+  "citation_count": 238,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Machine translation",
+      "Computer science",
+      "Artificial intelligence",
+      "Natural language processing",
+      "Translation (biology)",
+      "Automatic summarization",
+      "Sequence (biology)",
+      "Security token",
+      "Speech recognition",
+      "Chemistry",
+      "Biochemistry",
+      "Genetics",
+      "Biology",
+      "Messenger RNA",
+      "Computer security",
+      "Gene"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2366403280",
+      "https://openalex.org/W1495108544",
+      "https://openalex.org/W2091301346",
+      "https://openalex.org/W4284703357",
+      "https://openalex.org/W2949968076",
+      "https://openalex.org/W2935811960",
+      "https://openalex.org/W2969407538",
+      "https://openalex.org/W2917049097",
+      "https://openalex.org/W2883671469",
+      "https://openalex.org/W2728761353"
+    ]
+  }
+}

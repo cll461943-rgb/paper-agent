@@ -1,0 +1,26 @@
+{
+  "paper_id": "pubmed:42082115",
+  "title": "AC-WGAN-GP for transcriptomic data augmentation: Enhancing stress classification in Synechocystis sp. PCC 6803 under data scarcity.",
+  "abstract": "Transcriptomic analyses of environmental stress responses in Synechocystis sp. PCC 6803 are often constrained by limited sample sizes, pronounced class imbalance, and technical heterogeneity across studies, which collectively limit the reliability of downstream machine learning analyses, particularly for multi-class stress classification. To address these challenges, we integrated 80 samples from 12 publicly available microarray and RNA-seq studies covering diverse abiotic stress conditions and applied systematic batch effect correction to harmonize cross-platform variation. An Auxiliary Classifier Wasserstein Generative Adversarial Network with Gradient Penalty (AC-WGAN-GP) was then trained to generate class-conditional synthetic gene expression profiles, and the impact of data augmentation was evaluated across multiple synthetic sample sizes using classification performance metrics, distributional fidelity measures, and manifold-based analyses. Batch correction substantially reduced study- and platform-driven variance, improving alignment of samples by biological condition. Synthetic data augmentation exhibited a non-monotonic effect on classifier performance, with moderate augmentation (500 synthetic samples per class) yielding the highest accuracy improvement (0.800 ± 0.028 compared with a baseline of 0.750 ± 0.020; p = 0.031), while larger augmentation volumes provided diminishing gains. In contrast, distributional fidelity metrics-including Wasserstein distance, Jensen-Shannon divergence, and preservation of gene-gene correlation structure-improved progressively with increasing synthetic sample size. Dimensionality reduction analyses indicated that synthetic samples aligned with the principal transcriptomic manifold, with moderate augmentation reinforcing class structure and higher augmentation leading to increased sample density. Compared with SMOTE and a conventional conditional GAN, AC-WGAN-GP showed lower correlation distortion and enabled computational evaluation of severely underrepresented stress conditions that were not assessable in the original dataset. Collectively, these findings demonstrate the methodological utility of Wasserstein-based conditional generative models for augmenting small, imbalanced microbial transcriptomic datasets, while underscoring the importance of task-specific optimization when balancing predictive performance against distributional realism.",
+  "year": 2026,
+  "venue": "Journal of microbiological methods",
+  "authors": [
+    "Abbas Karimi-Fard",
+    "Mohammad Karimi-Fard"
+  ],
+  "doi": "10.1016/j.mimet.2026.107529",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42082115/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42082115"
+  }
+}

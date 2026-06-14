@@ -1,0 +1,943 @@
+[
+  {
+    "paper_id": "pubmed:42286124",
+    "title": "A customized AI-based machine learning model for evaluating participants' activities under a workshop setting.",
+    "abstract": "Human action recognition (HAR) in the workshop-style environment poses unique challenges due to class imbalance, fused action boundaries, and context dependence. This study proposes a multi-stage fine-tuning supervised framework for workshop-style HAR based on a 3D CNN, supplemented by an unsupervised post-assessment. A total of 208 clips (100 frames per clip) from two internal and two external datasets were used, along with 183 clips generated from 152 videos in a subset of the public UCF101 dataset for an add-on supplementary analysis. An I3D-ResNet50 (I3D_R50) backbone was used to examine a pilot model for domain adaptation and subsequently optimized for cross-context generalization. In Study 1, the I3D_R50 model with a customized 57-class prediction head was trained on the internal dataset, achieving a solid class- and cluster-level performance, however, spurious co-activations and limited separation among similar actions were observed. Study 2 refined sample allocation and data augmentation, and applied threshold tuning to evaluate within-context adaptation (Test 1) and cross-context generalization (Test 2). Multi-level analyses (class-, clip-, cluster-, and person-level) revealed moderate co-activation and semantic fusion within context, whereas cross-context generalization suffered from structure over-merging and semantic drift. As a post-assessment, Study 3 provided supplementary evidence that the model captured certain semantic co-occurrence relationships, although its performance remained constrained by limited IGE-TREE specific training samples and fine-grained behavioral categories. Limitations include insufficient samples, blurred temporal sequence, and context dependency. Future work could explore domain-adversarial alignment, pose-guided normalization, and temporal contrastive modeling, and selective merging of semantically similar actions to enhance semantic disentanglement and generalization.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Xiaoyi Shao",
+      "Hua Li",
+      "Qian Ma",
+      "Kai Jin"
+    ],
+    "doi": "10.1038/s41598-026-57030-2",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42286124/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:title_like",
+      "route:core_topic"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42286124"
+    }
+  },
+  {
+    "paper_id": "pubmed:42279817",
+    "title": "Dual-Guided Semi-Supervised Semantic Segmentation for Citrus Quality Evaluation.",
+    "abstract": "Automated defect detection in precision agriculture serves as a critical technology for enhancing the quality of agricultural products. Although supervised-only semantic segmentation has demonstrated remarkable performance in citrus surface defect detection, it relies heavily on training with large-scale labeled data, which results in prohibitive acquisition costs. Semi-supervised learning mitigates reliance on labeled data by generating pseudo-labels. However, existing semi-supervised segmentation methods still face challenges. On the one hand, the instability of pseudo-labels and the propagation of noise can mislead the training of semi-supervised models. On the other hand, due to the lack of semantic constraints in feature learning, models often suffer from insufficient feature discriminability when handling complex samples, such as citrus surface defects characterized by similar textures and blurred boundaries. Therefore, this study proposes UP-ETS, a dual-guided semi-supervised semantic segmentation model based on the Mean Teacher-Student framework, specifically designed for the segmentation of complex citrus surface defects. UP-ETS employs Uncertainty Estimation (UE) based on Kullback-Leibler (KL) divergence to quantify the prediction discrepancy between the teacher and student models on blurred and ambiguous pixels. This mechanism guides the model to dynamically adjust weights, thereby reducing noise propagation and enhancing pseudo-label stability under complex citrus surface textures. Prototype Contrastive Learning (PCL) is utilized to align pixel-level features of difficult samples with class prototypes, optimizing the feature discriminability for complex citrus surfaces. Experimental results demonstrate that the UP-ETS model exhibits superior semi-supervised segmentation performance. Notably, at a labeled data ratio of only 1/16, the dice improved from 85.57% to 87.76% compared to the supervised-only baseline. Furthermore, the model shows significant performance enhancements in segmenting difficult samples, such as small targets, complex boundaries, and blurred regions. The results of ablation studies and t-SNE visualization prove the effectiveness of the proposed UE and PCL. These two methods synergistically guide the model to construct a feature space that is better structured and highly discriminative. Furthermore, UP-ETS outperforms various representative semi-supervised segmentation models in terms of segmentation performance, parameters, and inference speed. In cross-dataset validation, the model exhibits robust generalization capabilities, achieving performance comparable to supervised-only methods trained on the full augmented dataset. Consequently, the framework introduced in this study effectively mitigates the heavy dependency on annotated datasets, providing significant practical value for agricultural deployment.",
+    "year": 2026,
+    "venue": "Foods (Basel, Switzerland)",
+    "authors": [
+      "Xufeng Xu",
+      "Ruokai Guo",
+      "Kai Guo",
+      "Zetong Li",
+      "Zichao Wei",
+      "Xiuqin Rao"
+    ],
+    "doi": "10.3390/foods15112029",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42279817/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42279817"
+    }
+  },
+  {
+    "paper_id": "pubmed:42277359",
+    "title": "Scene-aware contrastive learning with multi-scale domain-invariant feature alignment for robust visual recognition under complex scenes.",
+    "abstract": "Deep learning models trained on curated datasets often fail when deployed in complex visual scenes involving illumination drift, occlusion, adverse weather, and cross-domain sensor variation. We propose an end-to-end framework that jointly addresses representational robustness and domain-invariant transfer through two integrated components. First, a scene-aware contrastive learning strategy generates positive pairs via physically grounded scene transformations-simulating fog, rain, illumination gradients, and structured occlusion-and employs an adaptive difficulty weighting mechanism that steers the contrastive gradient toward degradation conditions the encoder finds hardest to resolve. Second, a multi-scale domain-invariant feature alignment method applies distributional matching at multiple depths of the encoder hierarchy, coupled with a cross-scale consistency regularizer that prevents semantic drift between layers. The framework requires no target-domain data and operates with minimal or no annotation. Experiments on PACS and a cross-domain scene recognition benchmark (BDD-City) demonstrate that our method outperforms representative supervised, self-supervised, domain generalization, and domain adaptation baselines, with average cross-domain accuracy gains of 3.5 and over 4% points, respectively. Gains are most pronounced under severe degradation conditions, where baseline methods suffer the steepest performance drops. Ablation analysis confirms that each component contributes independently and that their interaction is synergistic.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Wenjun Li"
+    ],
+    "doi": "10.1038/s41598-026-57271-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42277359/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42277359"
+    }
+  },
+  {
+    "paper_id": "pubmed:42272749",
+    "title": "Advancing Normal Tissue Complication Probability Modeling with Supervised Contrastive Learning for Predicting Osteoradionecrosis.",
+    "abstract": "Normal tissue complication probability (NTCP) modeling using dose-volume histograms (DVHs) is fundamentally challenged by high dimensionality, severe multicollinearity, and substantial overlap between DVH profiles of patients with differing toxicity outcomes, limiting the effectiveness of classical classification approaches. We introduce SC-NTCP, a supervised contrastive learning framework that transforms DVH data into a compact, separable latent representation optimized for predicting osteoradionecrosis (ORN) in head and neck cancer patients. Rather than relying on raw, high-dimensional DVH features, SC-NTCP explicitly maximizes intra-class similarity and inter-class separability within the embedding space, enabling more accurate downstream classification. Using a cohort of head and neck cancer patients, we benchmarked SC-NTCP against logistic regression, support vector machines, multilayer perceptrons, and convolutional neural networks. SC-NTCP demonstrated superior discrimination (AUC = 0.77), improved calibration, and enhanced interpretability via gradient-based feature attribution, while the integration of clinical covariates further augmented predictive performance. By addressing the inherent limitations of DVH data, SC-NTCP offers a principled and interpretable approach for robust radiation toxicity prediction, with the potential to inform personalized treatment planning and improve clinical outcomes.",
+    "year": 2026,
+    "venue": "Proceedings of the ... Symposium on Applied Computing. Symposium on Applied Computing",
+    "authors": [
+      "Eric Ababio Anyimadu",
+      "Xinhua Zhang",
+      "Clifton David Fuller",
+      "G Elisabeta Marai",
+      "Guadalupe Canahuate"
+    ],
+    "doi": "10.1145/3748522.3779983",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42272749/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42272749"
+    }
+  },
+  {
+    "paper_id": "pubmed:42270897",
+    "title": "StyleGAN-based synthetic image augmentation for multi-class otoscopy image classification.",
+    "abstract": "Accurate diagnosis of eardrum abnormalities is pivotal for effectively managing various ear conditions. Otoscopy, a non-invasive diagnostic procedure, provides detailed views of the ear canal and eardrum to identify pathologies such as otitis media, tympanic membrane perforations, and other abnormalities. Despite advancements, classifying otoscopy images remains challenging due to lighting variations, motion blur, and diverse abnormalities, exacerbated by limited labeled datasets and subjective assessments. A significant barrier to accurate diagnosis is the lack of an objective evaluation method for eardrums, such as machine learning techniques to classify images as normal or abnormal. Moreover, when processing otoscopy videos, traditional approaches require extensive manual expertise to select representative frames for analysis. This study investigates the efficacy of artificial image augmentation using StyleGAN3 to enhance otoscopy image classification accuracy. Augmented datasets comprising artificial and composite otoscopy images were used to train and validate a ResNet-101 model. A total of 816 artificial and 816 composite images (250-Effusion, 340-Normal, 113-Perforation, and 113-Tympanosclerosis) and 80,685 classic augmented images (24651-Effusion, 33660-Normal, 11187-Perforation, and 11187-Tympanosclerosis) were used. Results demonstrate that integrating StyleGAN3-generated synthetic images significantly improves classification performance. Our approach achieved a mean test accuracy of 0.95 ± 0.03 and an F1-score of 0.96 ± 0.02, surpassing those of traditional augmentation methods, while representing an optimistic upper-bound scenario. In contrast, without any augmentation, the accuracy and F1-score are 0.82 ± 0.03 and 0.78 ± 0.02, respectively, and with classic augmentations, they are 0.87 ± 0.02 and 0.85 ± 0.02, respectively. These findings underscore the potential of GAN-based augmentation to bolster eardrum image classification systems and address challenges in diagnostic accuracy.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Seda Camalan",
+      "Carl D Langefeld",
+      "Amy Zinnia",
+      "Aaron C Moberly",
+      "Metin N Gurcan"
+    ],
+    "doi": "10.1038/s41598-026-56954-z",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42270897/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42270897"
+    }
+  },
+  {
+    "paper_id": "pubmed:42270722",
+    "title": "A CLIP-based framework for multiclass lung histopathology classification with prompt engineering and class-imbalance-aware focal optimization.",
+    "abstract": "Lung cancer remains one of the leading causes of cancer-related mortality worldwide, and accurate histopathological classification is essential for timely diagnosis and treatment planning. This study presents a Contrastive Language Image Pretraining (CLIP)-based framework for multiclass lung histopathology classification, designed to distinguish among benign lung tissue, lung adenocarcinoma, and lung squamous cell carcinoma. The proposed approach leverages a pretrained CLIP ViT-B/32 backbone, domain-specific prompt engineering, multimodal image text pairing, and similarity-based classification within a shared embedding space. To strengthen convergence and robustness during fine-tuning, the training pipeline incorporates data augmentation, Focal Loss, AdamW optimization, OneCycle learning rate scheduling, mixed-precision training, gradient clipping, and early stopping. The dataset is organized into separate training, validation, and testing splits, with the reported training and validation partitions containing 3,500 and 500 images per class, respectively. Experimental training on a Tesla T4 GPU demonstrated steady performance improvement across epochs, with the best validation accuracy reaching 95.20%, accompanied by a macro AUC of 0.9870 and a micro AUC of 0.9877, before early stopping was triggered at epoch 23. These findings indicate that integrating CLIP with pathology-specific text prompts provides a strong and reliable framework for automated lung cancer histopathology classification, with promising potential for future intelligent digital pathology systems.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Sadia Munawar",
+      "Fareeha Hanif",
+      "Ali Raza",
+      "Muhammad Farman",
+      "Evren Hincal"
+    ],
+    "doi": "10.1038/s41598-026-55588-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42270722/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42270722"
+    }
+  },
+  {
+    "paper_id": "pubmed:42268754",
+    "title": "Enhancing Cross-scale Feature Mutual Information via Heterogeneous Graph Contrastive Learning for Drug-Target Binding Affinity Prediction.",
+    "abstract": "Predicting drug-target binding affinity is a crucial step in drug discovery, with the aim of estimating the strength of interactions between unknown drug-target pairs. In recent years, with the advancement of graph neural networks and self-supervised learning, numerous novel approaches have been proposed by researchers. However, these methods still exhibit the following drawbacks: 1) They only consider drug-target interaction information when learning relationship features, resulting in low information density and an inability to obtain high-quality representations. 2) The integration of cross-scale features is rigid, with features across different scales showing no correlation, failing to reflect the consistency of the same entity's features across different perspectives. 3) They employ outdated Graph Contrastive Learning (GCL) strategies, which have been proven to yield highly biased estimates. Therefore, to address these challenges, we propose a method that Enhances cross-scale feature Mutual information via Heterogeneous Graph Contrastive Learning for predicting Drug-Target binding Affinity (EMHGCL-DTA). The proposed model reconstructs the relationship network on the macro scale, incorporating similarity information while preserving drug-target interaction data. Furthermore, to establish a connection between macro-scale and micro-scale features, our similarity information is derived directly from the molecular structures of drugs and targets. In addition, we introduce a pertinent unbiased feature augmentation strategy to enhance the representations of drugs and targets. The novelty and effectiveness of the EMHGCL-DTA model are validated on two datasets, where it outperforms state-of-the-art methods.",
+    "year": 2026,
+    "venue": "IEEE journal of biomedical and health informatics",
+    "authors": [
+      "Xiao Kang",
+      "Licai Zhang",
+      "Zekun Wang",
+      "Xinxing Yang",
+      "Lin Wang",
+      "Genke Yang",
+      "Jian Chu"
+    ],
+    "doi": "10.1109/JBHI.2026.3702061",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42268754/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42268754"
+    }
+  },
+  {
+    "paper_id": "pubmed:42259287",
+    "title": "Methamphetamine potentiates the use of outcome-specific associations via a hypothalamic-dopamine circuit.",
+    "abstract": "Drug cues strongly influence drug seeking and relapse to addiction. However, it is unclear how drug cues do this. We reveal that a novel pathway from ventral tegmental area dopamine (VTA",
+    "year": 2026,
+    "venue": "Neuron",
+    "authors": [
+      "Ivy B Hoang",
+      "Joseph J Munier",
+      "Anna Verghese",
+      "Masakazu Taira",
+      "Arvie R Abiero",
+      "Jessica Leake",
+      "Adrian Dawson",
+      "Mirari Wilcher",
+      "Kiruthika Ganesan",
+      "Miriam E Ortega",
+      "Vanessa Reyes",
+      "Zara Greer",
+      "Samuel J Millard",
+      "Lauren E DiFazio",
+      "Courtney Sercander",
+      "Elena Bagley",
+      "Bryony Winters",
+      "Alicia Izquierdo",
+      "Melissa J Sharpe"
+    ],
+    "doi": "10.1016/j.neuron.2026.05.008",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42259287/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42259287"
+    }
+  },
+  {
+    "paper_id": "pubmed:42253102",
+    "title": "SpaVGMC: A Unified Representation Learning Framework via Structural and Semantic Alignment in Spatial Transcriptomics.",
+    "abstract": "Spatial transcriptomics technologies profile gene expression within its native spatial context, offering new insights into tissue organization and disease. However, accurate spatial domain identification remains challenging due to local oversmoothing, impaired topological fidelity, and insufficient modeling of global semantic structures. To address these challenges, we propose SpaVGMC, a unified representation learning framework that jointly models structural dependencies and transcriptional semantics. The framework integrates structured variational representation learning, structural information alignment, and semantic alignment, allowing the capture of probabilistic uncertainty, multiscale spatial dependencies, and global transcriptional organization. Specifically, SpaVGMC formulates representation learning as a structured variational inference process with context-aware message-passing. A structural information alignment mechanism preserves topological fidelity by aligning latent embeddings with the spatial graph via mutual information at both the edge and neighborhood levels. In addition, a semantic alignment mechanism organizes representations according to transcriptional similarity through distribution-aware contrastive learning without requiring data augmentation. By jointly modeling representations, structures, and semantics, SpaVGMC learns robust, discriminative, and biologically interpretable embeddings. Extensive experiments across diverse spatial transcriptomics data sets demonstrate that SpaVGMC consistently outperforms state-of-the-art methods in spatial domain identification, showing improved agreement with tissue structures and enhanced detection of fine-grained subdomains. Collectively, these results establish SpaVGMC as a robust and scalable framework for spatial omics analysis.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Aitian Fan",
+      "Junliang Shang",
+      "Xiaohan Zhang",
+      "Wenjing Su",
+      "Defu Qiu",
+      "Hanxiang Wang",
+      "Jin-Xing Liu"
+    ],
+    "doi": "10.1021/acs.jcim.6c01121",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42253102/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42253102"
+    }
+  },
+  {
+    "paper_id": "pubmed:42249049",
+    "title": "A graph-based evaluation framework for smart disaster response systems using IoT design quality metrics.",
+    "abstract": "Disaster-response systems have been progressively installed in smart cities through IoT-enabled systems that assist in early warning, situational awareness, and coordination of emergencies. Nevertheless, the majority of existing studies measure such systems by means of data analytics, accuracy of prediction, or anomaly detection by AI, and the quality of the system-level design is not quantified in most cases. Specifically, no standardized framework exists to evaluate the complexity of architecture, resilience, recoverability, and reusability of IoT disaster-response systems before their implementation. The paper presents a graph-based design evaluation model, which represents the IoT disaster-response architectures as layered graphs and suggests a collection of quantitative design quality measures. In contrast to the learning-based approaches, the suggested framework is also algorithm-free and assesses the structure of the system, which can be compared objectively among the various IoT system setups. The framework is validated through a flood-response case study conducted in Pakistan where changes in sensor density, gateway connectivity, and interactions on decision-layers are examined. Evidence indicates that network redundancy is a validated variable that minimizes the complexity of detection and increases system recoverability, whereas sparse connectivity enhances the severity propagation and response latency. The developed framework offers a viable pre-deployment assessment tool, which augments AI-based monitoring systems and that will aid in robustly designed disaster-response systems.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Iqra Qayyum",
+      "Tahir Alyas",
+      "Qaiser Abbas",
+      "Turki Alghamdi",
+      "Nasser Aljohani",
+      "Saad Said Alqahtany",
+      "Muhammad Shoaib",
+      "Aidarus Mohamed Ibrahim"
+    ],
+    "doi": "10.1038/s41598-026-56182-5",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42249049/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42249049"
+    }
+  },
+  {
+    "paper_id": "pubmed:42246888",
+    "title": "Paired CycleGAN-based virtual staining for 3D X-ray histology of bone-implant systems.",
+    "abstract": "Three-dimensional X-ray histology offers a non-invasive alternative to conventional 2D histology, enabling volumetric imaging of biological tissues without physical sectioning or chemical staining. However, the intrinsic greyscale contrast of X-ray tomography limits its biochemical specificity compared with traditional histological stains. In this study, we extend deep-learning-based virtual staining to the X-ray domain via cross-modality image translation to generate artificially stained slices directly from synchrotron radiation microtomography (µCT) scans. Using over 50 co-registered pairs of µCT and toluidine blue-stained histology from bone-implant samples, we trained a modified CycleGAN network tailored for limited paired data. Whole-slide histology images were downsampled to the CT voxel size, with on-the-fly data augmentation for patch-based training. The model incorporates pixelwise supervision and greyscale consistency losses, enabling histologically realistic colour outputs while preserving structural detail. Results outperformed Pix2Pix and standard CycleGAN baselines across metrics of structural similarity, perceptual fidelity, and peak signal-to-noise ratio. Once trained, the model can be applied to full µCT volumes to produce virtually stained 3D datasets that enhance interpretability without additional sample preparation. This work introduces virtual staining to 3D X-ray imaging, which may provide a scalable route for chemically informative, label-free tissue characterization in biomedical research.",
+    "year": 2026,
+    "venue": "Journal of synchrotron radiation",
+    "authors": [
+      "Sarah C Irvine",
+      "Christian Lucas",
+      "Diana Krüger",
+      "Bianca C Guedert",
+      "Julian Moosmann",
+      "Berit Zeller-Plumhoff"
+    ],
+    "doi": "10.1107/S1600577526004340",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42246888/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42246888"
+    }
+  },
+  {
+    "paper_id": "pubmed:42245942",
+    "title": "Dual contextual learning for semi-supervised medical image classification.",
+    "abstract": "Semi-supervised learning (SSL) has emerged as a promising paradigm for medical image classification, addressing the critical challenge of limited labeled data in healthcare where expert annotation is expensive and time-consuming. Existing pseudo-labeling methods generate labels for each unlabeled sample independently based on model confidence, which often proves unreliable when dealing with ambiguous pathological features in early-stage lesions or borderline cases, leading to error accumulation. However, medical images contain rich contextual information-samples with similar pathological characteristics naturally cluster in feature space, and maintaining consistency within these neighborhoods could provide more robust supervision. In this paper, we propose a Hierarchical Semantic Calibration (HSC) framework that leverages these contextual relationships to enhance pseudo-labeling reliability. We introduce two complementary modules: (1) a local semantic neighborhood alignment that enforces consistency among mutual k-nearest neighbors sharing similar pathological features, reducing isolated labeling errors through collective evidence; and (2) a global cluster-prototype calibration that aligns class-level representations across different augmented views through contrastive learning, ensuring disease categories maintain consistent patterns despite imaging variations. Additionally, we introduce a neighborhood-prototype consistency regularization that bridges these two scales, adaptively weighting the alignment between local neighborhoods and global prototypes based on neighborhood compactness, ensuring hierarchical consistency from local pathological features to global disease patterns. Extensive experiments demonstrate that HSC consistently outperforms state-of-the-art methods, achieving 92.24% accuracy on NCT-CRC-HE with only 200 labeled samples (2.97% improvement over PEFAT) and 94.17% on ISIC2018 with 20% labeled data (2.21% improvement).",
+    "year": 2026,
+    "venue": "Frontiers in medicine",
+    "authors": [
+      "Jiaying Liu",
+      "Chengyang Li",
+      "Sangsha Fang",
+      "Fangfang Deng",
+      "Qinghu He",
+      "Miao Cao"
+    ],
+    "doi": "10.3389/fmed.2026.1810643",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42245942/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42245942"
+    }
+  },
+  {
+    "paper_id": "pubmed:42239199",
+    "title": "Leveraging Lineage Barcodes as Natural Augmentations for Contrastive Learning of Cell Fate in scRNA-seq Data.",
+    "abstract": "Deciphering how cells commit to future fates is essential for developing precision therapeutics that can reprogram stem cells or modulate immune functions. However, isolating these fate-determining signals in single-cell lineage tracing (scLT) remains challenging because differentiation programs are often confounded by unrelated processes like the cell cycle. To address this, we introduce Lineage-aware Contrastive Learning (LCL), a framework that treats inheritable lineage barcodes as a \"natural\" data augmentation to isolate subtle, lineage-specific signals. LCL utilizes a semi-supervised architecture to align unlabeled cells, facilitating the transfer of lineage structures to clinical datasets where explicit barcoding is unavailable. We demonstrate LCL's utility by predicting future cell-type compositions from early-time points, effectively modeling longitudinal fate commitment from cross-sectional data. Benchmarking on hematopoietic and fibroblast systems shows that LCL significantly outperforms standard models like scVI, establishing contrastive learning as a scalable paradigm for understanding and potentially manipulating cellular differentiation.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Shizhao Joshua Yang",
+      "Yixin Wang",
+      "Kevin Z Lin"
+    ],
+    "doi": "10.1101/2024.10.28.620670",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42239199/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42239199"
+    }
+  },
+  {
+    "paper_id": "pubmed:42233513",
+    "title": "A Data-Driven Normalization Framework for Subject-Specific Cerebrovascular Reactivity Assessment in Cerebrovascular Disease.",
+    "abstract": "Assessment of cerebrovascular reactivity (CVR) has been reported using acetazolamide-augmented blood oxygenation level-dependent (BOLD) MRI; however, wide intersubject baseline variability can complicate interpretation. To develop an integrated normalization framework combining machine learning-guided identification of healthy voxels for subject-specific baseline rescaling with atlas-based assessment. Retrospective. 26 subjects (age 51 ± 13 at first scan, 50% women, 34 exams) with unilateral steno-occlusive disease (SOD) and 9 subjects with bilateral disease (age 55 ± 12, 4/9 women) underwent acetazolamide-augmented BOLD-MRI. T1-weighted MPRAGE (1 mm isotropic) and gradient-echo EPI at 3 T. Machine learning models (random forest, XGBoost, LightGBM, and neural networks) were trained to identify healthy candidate voxels using a previously reported pipeline based on baseline resting-state BOLD temporal shift features derived from 32 arterial territories. A healthy reference CVR atlas was constructed from unaffected hemispheres. Individual CVR maps were rescaled using predicted healthy voxels and converted to Z-scores and risk index maps using the reference atlas. Coefficient of variation (CV) within normal hemispheres, lesion contrast-to-noise ratio (CNR), Lesion ROC AUC, asymmetry index (AI) in unilateral patients, and chi-square distance between thresholded normal and abnormal CVR distributions across all patients were compared between atlas-based group normalization alone and the proposed integrated normalization using paired t-tests. (cutoff p = 0.05). CV within normal hemispheres significantly decreased (1.07 ± 0.15 vs. 0.45 ± 0.09), indicating improved inter-subject stability. Lesion CNR and ROC AUC improved across all impairment thresholds (CNR: 0.73-1.12 vs. 0.79-1.19; AUC: 0.76-0.89 vs. 0.81-0.90). AI increased significantly at higher risk thresholds (≥ 0.78), with no significant difference at the lowest threshold (p = 0.181). Chi-square analysis demonstrated significantly increased separation between CVR distributions at intermediate thresholds. The proposed integrated normalization improves the stability, discriminability, and interpretability of acetazolamide-augmented BOLD-CVR for detection of cerebrovascular impairment. 3. Stage 2.",
+    "year": 2026,
+    "venue": "Journal of magnetic resonance imaging : JMRI",
+    "authors": [
+      "Yihui Zhu",
+      "Siddhant Dogra",
+      "Xiuyuan Wang",
+      "Jonathan R Polimeni",
+      "Seena Dehkharghani"
+    ],
+    "doi": "10.1002/jmri.70388",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42233513/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42233513"
+    }
+  },
+  {
+    "paper_id": "pubmed:42225901",
+    "title": "Improving seismic fault detection through fault-balanced patch extraction and deep learning networks (UNet, Efficient-UNet, and VGG19-UNet).",
+    "abstract": "Accurate seismic fault detection is essential for reliable structural interpretation, reservoir characterization, and drilling risk mitigation. Conventional attribute-based methods often suffer from noise sensitivity, fragmented fault continuity, and strong dependence on interpreter experience, particularly in structurally complex settings. This study evaluates the performance of three convolutional neural network-based segmentation models, Standard UNet, Efficient-UNet, and VGG19-UNet, for automatic fault detection using 2D seismic patches extracted from a real 3D seismic volume. To address the severe class imbalance inherent in fault interpretation, a fault-aware dataset preparation strategy was implemented. Training samples were extracted from fault-rich regions using a minimum fault-pixel threshold, combined with controlled fault-mask dilation and data augmentation. All models were trained using a unified Dice + Binary Cross-Entropy loss function and evaluated on 128 × 128 patches using both overlap-based metrics (Dice and IoU) and distance-tolerant measures to assess spatial robustness. The results show that the Standard UNet achieves the highest overall performance, with a mean Dice of 0.91 and IoU of 0.85, demonstrating strong balance between precision and recall. The VGG19-UNet provides competitive performance (Dice = 0.88, IoU = 0.81) with relatively consistent fault continuity, while the Efficient-UNet exhibits lower accuracy (Dice = 0.73, IoU = 0.61), particularly in detecting thin or low-contrast faults. Distance-tolerant evaluation further confirms the robustness of the Standard UNet, with F1 scores exceeding 0.98 at small spatial tolerances. These results highlight the importance of both dataset design and architectural choice in deep learning-based seismic fault detection. The proposed framework demonstrates strong performance on the studied dataset, while its broader applicability to other geological settings remains an important direction for future work.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Keyvan Najafzadeh",
+      "Mohammad Emami Niri",
+      "Abbas Bahroudi"
+    ],
+    "doi": "10.1038/s41598-026-56041-3",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42225901/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42225901"
+    }
+  },
+  {
+    "paper_id": "pubmed:42225794",
+    "title": "Respiratory sound-based AI screening of asthma and COPD via multi-feature fusion and CatBoost classification.",
+    "abstract": "Asthma and chronic obstructive pulmonary disease (COPD) are significant global health burdens with conventional diagnosis relying on resource-intensive spirometry. This paper presents a reproducible multimodal respiratory sound screening model combining complementary acoustic and clinical representations. The proposed method fuses handcrafted spectral-temporal features (MFCCs, chroma, spectral contrast, tonnetz, mel-spectrogram, tempogram) with precomputed cough and vowel embeddings and structured clinical metadata, processed via a class-weighted CatBoost ensemble on the standardized AIRS Kaggle benchmark dataset. The model achieves an overall accuracy of 90.3% with class-wise F1-scores of 0.945 (Healthy), 0.915 (Asthma), and 0.842 (COPD). Systematic ablation experiments confirm the importance of multimodal fusion (-7.8% accuracy without full feature fusion), the attention mechanism (-4.9%), and data augmentation (-6.7%). Additional metrics such as, Matthews Correlation Coefficient (MCC = 0.856) and Cohen's Kappa (κ = 0.849) - confirm robust classification under class imbalance. Structured multimodal feature fusion with gradient boosting enables scalable, reproducible respiratory disease screening applicable to telemedicine. Future work should address prospective validation on diverse, multi-institutional clinical cohorts.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Javed Rashid",
+      "Turke Althobaiti",
+      "Asad Ali",
+      "Hezam Gawbah",
+      "Muhammad Shoaib Saleem",
+      "Sultan Hussain"
+    ],
+    "doi": "10.1038/s41598-026-54803-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42225794/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42225794"
+    }
+  },
+  {
+    "paper_id": "pubmed:42224305",
+    "title": "Evaluating mobile app performance through sentiment analysis with SimCLR and MobileBERT.",
+    "abstract": "Mobile apps have significantly enhanced user engagement and convenience, providing seamless access to services anytime, anywhere. This paper presents a sentiment analysis (SA) model comprising SimCLR (Simple Contrastive Learning of Representations) and MobileBERT to measure the perceived performance of the mobile apps. The reviews of mobile apps are manually labeled as High and Low based on performance parameters (insightfulness, transparency, pertinence, precision, consistency, elaboration, and practical usability insights). These labels are aligned with attitudinal components, i.e., appreciation and judgment from appraisal theory. Appreciation concerns insightfulness, transparency, and pertinence of mobile app features, while judgment pertains to precision, consistency, elaboration, and practical usability. By integrating appraisal theory into this proposed model, a more comprehensive insight into user sentiment is achieved as compared to traditional SA models, which are heavily dependent on a very limited set of sentiment categories, i.e., positive and negative. The accuracy of manual annotation is ensured by the SHAP (SHapley Additive exPlanations) method of Explainable AI (XAI). In this study, SimCLR, a self-supervised learning framework, is employed to improve feature extraction and enhance the model's ability to generalize across different datasets, while MobileBERT, a lightweight transformer model for sentiment classification, ensures computational efficiency and high performance. The MobileBERT makes the proposed approach scalable, efficient, and highly suitable for real-time SA in resource-limited environments. Knowledge distillation is incorporated to teach a student model that is similar to the teacher model, increasing the robustness of the system. In this work, the Augmentation of data by replacing synonyms in the data using WordNet increases the quantity of the training data to make the model more robust to linguistic variations. The proposed model is optimized using the PCA (Principal Component Analysis) method for dimensionality reduction. The Optuna method is used for hyperparameter optimization, automating the search for the most effective configuration, including learning rate, batch sizes, etc. K-fold stratified cross-validation ensures model robustness. The results demonstrated that the integration of SimCLR, MobileBERT, distillation, data augmentation techniques, and fine-tuning using Optuna provides a highly efficient and accurate SA-based model, with a mean fold accuracy and ROC AUC of 88.63% and 90.91%, respectively. This approach offers a scalable solution for NLP (Natural Language Processing) tasks. The proposed approach will be highly beneficial not only for the developers, yielding a deeper and nuanced understanding of the user feedback to identify specific areas for improvement in app performance, but also to stakeholders like marketers, product managers, and user experience (UX) researchers.",
+    "year": 2026,
+    "venue": "PloS one",
+    "authors": [
+      "Ruping Zhang",
+      "Aman Ullah",
+      "Khair Ullah Khan",
+      "Muhammad Nawaz Khan",
+      "Rehan Tariq Chohan",
+      "Farhan Aadil"
+    ],
+    "doi": "10.1371/journal.pone.0349555",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42224305/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:entity_dataset",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42224305"
+    }
+  },
+  {
+    "paper_id": "pubmed:42223485",
+    "title": "The role of machine learning, deep learning, and MRI findings in the classification of pediatric posterior fossa tumors.",
+    "abstract": "Pediatric posterior fossa tumors represent a major subset of childhood central nervous system neoplasms; however, overlapping MRI features often hinder accurate non-invasive characterization. This study aimed to evaluate machine learning (ML) and deep learning (DL) models for classifying these tumors using MRI-derived radiomic features. This retrospective study analyzed MRI data from 63 pediatric patients with confirmed posterior fossa tumors, including 21 medulloblastoma (MB), 20 pilocytic astrocytoma (PA), 11 ependymoma (EP), and 11 diffuse midline glioma (DMG) cases. T2-weighted imaging, diffusion-weighted imaging, and apparent diffusion coefficient sequences showing the best single-model performance were used to construct gradient boosting machine (GBM), decision tree (DT), and random forest (RF) models and their ensemble combinations. Model performance was evaluated using standard classification metrics. A ResNet101V2-based DL model was developed using multiple MRI sequences. ML models were validated using fivefold cross-validation, whereas the DL model was trained using a 67/33 train-test split with data augmentation. The RF + GBM ensemble achieved the highest ML performance, with an overall accuracy of 78%, and showed the strongest classification for MB and PA, whereas EP and DMG remained difficult to distinguish. The DL model demonstrated high performance on T1-weighted imaging and contrast-enhanced T1-weighted imaging, achieving accuracies of 98% and 96%, respectively, but showed lower performance on diffusion-based sequences. ML and DL approaches improve MRI-based classification of pediatric posterior fossa tumors; however, accurate differentiation of EP and DMG remains challenging. These findings support the potential of AI-driven methods as clinically relevant, non-invasive decision-support tools in pediatric neuro-oncology.",
+    "year": 2026,
+    "venue": "Child's nervous system : ChNS : official journal of the International Society for Pediatric Neurosurgery",
+    "authors": [
+      "Emre Çapar",
+      "Zehra Filiz Karaman",
+      "Serhat Ünalan",
+      "Miray Aytan",
+      "Mehmet Kutalmış Topkaraoğlu",
+      "Tekin Akkuş",
+      "Ali Keserci",
+      "Abdulhakim Coşkun",
+      "Bilgin Keserci"
+    ],
+    "doi": "10.1007/s00381-026-07316-7",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42223485/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42223485"
+    }
+  },
+  {
+    "paper_id": "pubmed:42223026",
+    "title": "MPMFMol: Multitask Self-Supervised Pretraining with Multimodal Fine-Tuning for Molecular Property Prediction.",
+    "abstract": "Molecular property prediction is essential in drug discovery for early-stage compound evaluation. Recently, contrastive learning has demonstrated significant potential under limited labeled data by constructing augmented views. However, current augmentation strategies often disrupt molecular semantics and ignore chemical priors, limiting representation quality. Moreover, molecular data is inherently multimodal, including graphs, fingerprints, and sequences, yet how to effectively integrate their complementary information remains challenging. Therefore, we propose MPMFMol, a unified framework that integrates multitask self-supervised pretraining with multimodal fine-tuning for molecular property prediction. During pretraining, we construct heterogeneous augmented views based on molecular fragments to preserve original molecular semantics, enabling the graph encoder to capture fragment-level information. Meanwhile, fingerprint features are integrated into a multitask learning objective, reducing reliance on negative sampling and enhancing the encoder's representation capability. During fine-tuning, we further incorporate functional group and SMILES sequence information and design a stage-aware modality fusion strategy. Specifically, pretrained graph features are injected into the initial representation of functional groups to guide feature extraction and then fused with SMILES features to enable deep cross-modal interaction and enhance downstream predictive performance. Experimental results on six classification and three regression data sets demonstrate that MPMFMol outperforms state-of-the-art baselines.",
+    "year": 2026,
+    "venue": "Journal of chemical information and modeling",
+    "authors": [
+      "Yan Xia",
+      "An Xiong",
+      "Yike Wang",
+      "Junlin Xu",
+      "Yajie Meng",
+      "Leyi Wei",
+      "Quan Zou",
+      "Feifei Cui",
+      "Zilong Zhang",
+      "Xiulai Li"
+    ],
+    "doi": "10.1021/acs.jcim.5c03071",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42223026/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42223026"
+    }
+  },
+  {
+    "paper_id": "pubmed:42222839",
+    "title": "Review of deep learning models for Alzheimer's disease detection: MRI-centric approaches and multimodal extensions.",
+    "abstract": "Alzheimer's disease (AD) is a leading cause of dementia worldwide, and an early, reliable diagnosis is critical for timely intervention. Structural magnetic resonance imaging (MRI), coupled with deep learning (DL), has emerged as a promising non-invasive approach for automated diagnosis. This review evaluates DL models applied to MRI for AD detection, while also considering multimodal extensions (PET, fMRI, DTI, CSF, and cognitive data) that augment MRI-based pipelines. Following PRISMA guidelines, a comprehensive search of six databases (2010-June 2025) identified 70 peer-reviewed studies, with many of them integrating multimodals as well. Data on model architectures, datasets, pre-processing, validation protocols, and reported performance outcomes were extracted and synthesised. Most studies have employed 2D or 3D convolutional neural networks; however, recent work has also explored ensembles, vision transformers, graph neural networks, and generative models. ADNI was the primary dataset, in addition to OASIS, AIBL, UK Biobank, and other cohorts that were also utilised. Binary classification tasks distinguishing clinically diagnosed Alzheimer's disease (AD) patients from cognitively normal (CN) controls consistently reported high performance (>90% accuracy, AUC ≥ 0.95). In contrast, more clinically challenging tasks, such as multiclass classification across disease stages (CN, MCI, AD) and prediction of MCI-to-AD conversion, yielded substantially lower accuracy (approximately 70-85%). Reported near-perfect results (>99%) were often confined to single-site datasets lacking external validation, raising concerns of overfitting and reproducibility. Few studies have incorporated differential diagnosis of dementia, advanced harmonisation across scanners, or open-source pipelines. Promising advances include transfer learning, multimodal integration, harmonisation methods (such as ComBat, GANs, diffusion), and explainable AI techniques. Overall, DL shows strong potential for MRI-based AD detection, with multimodal inputs further improving performance.",
+    "year": 2026,
+    "venue": "Frontiers in artificial intelligence",
+    "authors": [
+      "Rajaa Daami Resen",
+      "Laith Sabah Alzubaidi",
+      "Haider A Alwzwazy",
+      "Manuel I Capel"
+    ],
+    "doi": "10.3389/frai.2026.1707043",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42222839/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42222839"
+    }
+  },
+  {
+    "paper_id": "pubmed:42212468",
+    "title": "Synchrotron-Based Deep Learning Network of the Inner Ear: Development and Expert Validation.",
+    "abstract": "To develop and externally validate a deep learning segmentation network capable of automatically segmenting the inner ear in preoperative clinical computed tomography (CT) scans across various resolutions and protocols. A deep learning-based segmentation network was developed using 100 cadaveric specimens that were scanned with synchrotron-radiation phase contrast imaging (SR-PCI) and various clinical CT scanners. Different acquisitions, protocols, and augmentations were used to create a total of 4,784 paired SR-PCI and clinical three-dimensional datasets used for deep learning training and model development. Performance and accuracy of the network were assessed on a separate unseen dataset and externally validated against manual segmentations from seven individual domain experts (otologists and radiologists), the mean expert performance, and a simultaneous truth and performance level (STAPLE) consensus segmentation. The network pipeline significantly outperformed each individual expert segmentation, the average of the expert segmentations, and the STAPLE consensus segmentation. Compared to the SR-PCI ground truth data, the network achieved a Dice similarity coefficient of 0.922, a maximum absolute Hausdorff distance of 0.329 mm, and an average Hausdorff distance of 0.006 mm on cone-beam CT and helical CT with resolutions as low as 625 μm. This is the first automated segmentation algorithm for the inner ear that has been shown to outperform segmentations from domain experts, establishing a new clinical gold standard. N/A.",
+    "year": 2026,
+    "venue": "The Laryngoscope",
+    "authors": [
+      "Ashley Micuda",
+      "Kyle Rioux",
+      "Luke Helpard",
+      "Munir Demir Bajin",
+      "Zahra Kassam",
+      "Sachin Pandey",
+      "Jaehyun Hwang",
+      "Griselda T Romero-Sanchez",
+      "Manas Sharma",
+      "Lorne S Parnes",
+      "Hanif M Ladak",
+      "Sumit K Agrawal"
+    ],
+    "doi": "10.1002/lary.70637",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42212468/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42212468"
+    }
+  },
+  {
+    "paper_id": "pubmed:42210111",
+    "title": "Deep learning for early detection of guava fruit anthracnose and fruit fly infestation.",
+    "abstract": "Anthracnose and fruit fly infestation are major biotic constraints on guava (Psidium guajava) production in South Asia, causing substantial yield losses and post-harvest degradation. Early-stage symptoms (lesions < 2 mm, subtle puncture marks) are often imperceptible to the naked eye, making timely intervention difficult. This study develops a deep learning-based classification system for early detection of both conditions using a dataset of 473 annotated guava fruit images from Bangladesh, verified by a plant pathologist, and pre-processed with unsharp masking and Contrast Limited Adaptive Histogram Equalization (CLAHE). After data augmentation, four architectures ResNet50, EfficientNetB3, DenseNet121, and Vision Transformer were evaluated using transfer learning with ImageNet pretrained weights. EfficientNetB3 achieved the highest performance: 98.5% accuracy, 98.3% precision, 98.2% recall, and 98.2% F1-score, with minimal cross-class confusion between anthracnose and fruit fly (ROC-AUC = 0.993). Ablation studies confirmed that CLAHE and unsharp masking together improved accuracy by 4.3% over baseline. Computational efficiency analysis showed that EfficientNetB3 (12.3 million parameters, 13 MB quantized size) achieves 214 ms inference on a Raspberry Pi 4B, confirming edge-deployment feasibility.",
+    "year": 2026,
+    "venue": "BMC plant biology",
+    "authors": [
+      "Aniket K Shahade",
+      "Gaikwad Vidya Shrimant",
+      "Madhura Phadke",
+      "Vidula V Meshram",
+      "Vishal A Meshram",
+      "Disha Sushant Wankhede",
+      "Makarand R Shahade"
+    ],
+    "doi": "10.1186/s12870-026-09125-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42210111/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42210111"
+    }
+  },
+  {
+    "paper_id": "pubmed:42204193",
+    "title": "PSCSE: prompt-based contrastive learning with sample filtering for unsupervised sentence embedding.",
+    "abstract": "Unsupervised sentence representation learning is critical in natural language processing. Recently, contrastive learning methods achieved remarkable performance by optimizing the alignment and uniformity of embedding spaces. Nevertheless, the dominant methods mainly focus on the data augmentation for the positive samples but ignore the sampling approach for the negative samples. Most methods rely on the random in-batch sampling approach for the generation of the negative samples. This approach could result in false negatives and create sampling biases for the model's discriminative ability. To address this problem, we propose a new method prompt-based contrastive learning with sample filtering for unsupervised sentence embedding (PSCSE). In the proposed model, we used the synthesized hard negatives generated by the \"NOT\"-style prompts (e.g., \"This sentence: [X] does not mean [MASK]\") to optimize the uniformity of the learned representations. In addition, we used the auxiliary encoder for the sample filtering approach to address the false negatives. We conducted experiments on the semantic textual similarity dataset and achieved remarkable performance by surpassing the dominant methods SimCSE, E-SimCSE, and PromptBERT by up to 1.0 points in the average Spearman's correlation score.",
+    "year": 2026,
+    "venue": "Scientific reports",
+    "authors": [
+      "Biao Li",
+      "Xuebing Yang",
+      "LiPing Xie"
+    ],
+    "doi": "10.1038/s41598-026-52560-1",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42204193/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42204193"
+    }
+  },
+  {
+    "paper_id": "pubmed:42201055",
+    "title": "Human-in-the-Loop Enhances Machine Learning Inference in Intraoperative Optical Coherence Tomography Glioma Imaging.",
+    "abstract": null,
+    "year": 2026,
+    "venue": "Medical sciences (Basel, Switzerland)",
+    "authors": [
+      "Radik Zinatullin",
+      "Alexander Sovetsky",
+      "Artem Grishin",
+      "Elena Kiseleva",
+      "Liudmila Kukhnina",
+      "Svetlana Korikova",
+      "Alexander Matveyev",
+      "Vladimir Zaitsev",
+      "Konstantin Yashin",
+      "Lev Matveev"
+    ],
+    "doi": "10.3390/medsci14020263",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42201055/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42201055"
+    }
+  },
+  {
+    "paper_id": "pubmed:42188739",
+    "title": "Evaluation of visual augmented feedback on manual wheelchair (MWC) users' wheelchair propulsion pattern in a MWC simulator to enhance training outcomes: a pilot study.",
+    "abstract": "Efficient manual wheelchair (MWC) propulsion is essential for long-term mobility but is associated with upper limb overuse injuries. Clinical guidelines recommend the semicircular (SC) pattern, yet novice users often adopt suboptimal techniques and receive limited feedback. This study evaluated whether visual augmented feedback delivered through the miWe virtual reality MWC simulator improves SC propulsion, contact angle, and cadence in novice users. Eight adults with no prior MWC experience participated in an ABA single-subject design with 6 experimental participants and 2 control participants. Baseline and post-test were conducted with a real MWC and SMARTWheel, while intervention sessions occurred in a gamified simulator equipped with a convolutional neural network (CNN) propulsion classifier. Results showed that experimental subjects improved SC propulsion usage, with Tau-U values ranging from 0.33 to 0.67 and 100% non-overlapping data (PND) across all experimental participants, indicating consistent improvement and retention at post-test. In contrast, control participants showed deterioration, with negative Tau-U values (-0.67 and -0.33) and 0% PND, indicating no improvement. Contact angle improved in experimental participants (Tau-U up to 0.67, PND = 100%) but not in controls (PND = 0%). Cadence showed variable changes across participants, with Tau-U values ranging from -0.67 to 0 and mixed PND results (0-100%), indicating no consistent reduction at post-test. These results support the use of automated visual feedback in virtual reality (VR)-based MWC training to promote efficient propulsion patterns aligned with clinical recommendations, with the strongest and most consistent effects observed for SC pattern adoption.",
+    "year": 2026,
+    "venue": "Disability and rehabilitation. Assistive technology",
+    "authors": [
+      "Salman Nourbakhsh",
+      "Juan Martinez Rocha",
+      "Eric Monacelli",
+      "Philippe S Archambault"
+    ],
+    "doi": "10.1080/17483107.2026.2674846",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42188739/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42188739"
+    }
+  },
+  {
+    "paper_id": "pubmed:42188244",
+    "title": "A Dual-Branch Deep Learning Framework with Explainability for Dental Caries Classification Using Intra-Oral Photographs and Radiographs.",
+    "abstract": "The accurate detection of dental caries is often hindered by modality-specific imaging challenges, such as illumination artifacts in intra-oral photographs and low lesion contrast in radiographs. This study proposes a comprehensive framework comprising three key components: (1) HybridAugment+, an entropy-guided adaptive augmentation strategy that applies stronger transformations to low-information images; (2) DBAttNet, a dual-branch attention network featuring illumination-reflection aware attention (IRAA) for photographs and contrast-frequency-aware attention (CFA) for radiographs; and (3) a CAM-based explainability method, selected through a systematic evaluation of five advanced techniques. This study utilized two datasets derived from public sources, comprising 639 intra-oral photographs (481 caries, 158 healthy) and 456 radiographs (268 caries, 188 healthy). These were annotated by two dentists, with established inter-rater reliability (κ = 0.82 for photographs, κ = 0.79 for radiographs). The experimental results demonstrate that HybridAugment+ improved performance over conventional augmentation by up to 8.72% on photographs and 7.67% on radiographs. Furthermore, DBAttNet achieved F1-scores of 97.90% on photographs and 95.72% on radiographs, outperforming ResNet50, InceptionV3, MSDNet, DCANet, and ARM-Net. A comparative evaluation identified XGrad-CAM as the most suitable explainability method, with optimal visualization thresholds of 30% for photographs and 20% for radiographs. Generalization experiments on ophthalmology (APTOS 2019, Messidor-2) and chest radiography datasets (Kermany CXR, NIH ChestX-ray14) demonstrated consistent performance gains over domain-specific methods (DT-Net, ConvNeXt-Tiny). These results confirm that the core design principles effectively transfer to other modalities facing analogous imaging challenges.",
+    "year": 2026,
+    "venue": "Journal of imaging",
+    "authors": [
+      "Lijuan Ren",
+      "Jinjing Chen"
+    ],
+    "doi": "10.3390/jimaging12050207",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42188244/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42188244"
+    }
+  },
+  {
+    "paper_id": "pubmed:42184117",
+    "title": "Identifying batch-integrated domains from spatial transcriptomics via graph autoencoder with contrastive learning based on cross-modality and data augmentation.",
+    "abstract": "Spatially resolved transcriptomics (SRT) allows for the comprehensive profiling of gene expression while preserving spatial context, advancing the study of tissue architecture. However, existing computational approaches still face key limitations, particularly the insufficient exploitation of histology information and the lack of cross-modal meaningful contrastive strategies for biological analyses. To overcome these challenges, we propose GCAST, a graph contrastive autoencoder framework for spatial transcriptomics that seamlessly integrates multimodal SRT data. GCAST adopts a self-supervised strategy to derive biologically meaningful representations directly from histology images when available. GCAST constructs dual graph views based on data augmentation and introduces a novel contrastive learning designed to leverage histology-weighted and gene-weighted features and improve biological interpretability. In addition, GCAST employs a block-diagonal graph construction to automatically align multiple datasets, achieving batch-effect correction without manual intervention. The framework not only captures spatial gene expression patterns to identify tissue domains but also adapts to datasets with or without histological images and supports the integration of multiple datasets for joint analyses. Overall, GCAST provides a unified and biologically informed framework that has the potential to facilitate deeper analyses of spatial transcriptomics.",
+    "year": 2026,
+    "venue": "Briefings in bioinformatics",
+    "authors": [
+      "Yexuan Mao",
+      "Lijun Quan",
+      "Xiangyu Chen",
+      "Siyuan Wang",
+      "Guozheng Zhang",
+      "Siqi Li",
+      "Yelu Jiang",
+      "Liangpeng Nie",
+      "Tingfang Wu",
+      "Lingkun Meng",
+      "Qiang Lyu"
+    ],
+    "doi": "10.1093/bib/bbag248",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42184117/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42184117"
+    }
+  },
+  {
+    "paper_id": "pubmed:42184115",
+    "title": "KSDiffusion: conditional diffusion for kinase-specific phosphorylation site prediction under data-limited and imbalanced regimes.",
+    "abstract": "Protein phosphorylation governs cellular signaling, making accurate identification of kinase-specific sites essential for understanding regulatory and disease mechanisms. Although computational approaches have shown promise in inferring kinase specificity, most existing methods primarily rely on local sequence patterns and remain limited in their ability to capture broader contextual information. More critically, experimentally validated kinase-substrate data are inherently scarce and highly imbalanced across kinase groups, substantially restricting the generalization performance of purely discriminative models, especially for underrepresented kinases. To address these challenges, we propose KSDiffusion, a unified framework for kinase-specific phosphorylation site prediction explicitly designed for data-limited and imbalanced regimes. KSDiffusion integrates a protein language model with task-aware conditional diffusion-based generative modeling. Specifically, an ESM-2-based encoder is employed to extract context-aware peptide representations enriched with evolutionary and structural information, while supervised contrastive learning further enhances kinase-specific discriminability in the embedding space. To alleviate data scarcity for rare kinase groups, we introduce a conditional diffusion model, termed KS-DiT, which generates biologically plausible and kinase-consistent synthetic representations that directly support downstream prediction. Comprehensive experiments across kinase groups spanning low-, medium-, and large-data regimes demonstrate that KSDiffusion consistently outperforms representative baseline methods. In particular, substantial improvements are achieved for data-scarce kinase groups, with AUC gains of up to $\\sim $15%, while maintaining competitive performance when sufficient training data are available. These results underscore the regime-dependent effectiveness of conditional diffusion-based augmentation and highlight the value of integrating protein language models with task-aware generative modeling for robust kinase-specific phosphorylation site prediction under realistic data constraints.",
+    "year": 2026,
+    "venue": "Briefings in bioinformatics",
+    "authors": [
+      "Shi Qiu",
+      "Chunguo Wu",
+      "Yuxiang Ma",
+      "Songye Gao",
+      "Limin Wang",
+      "Yanchun Liang",
+      "Xiaohu Shi"
+    ],
+    "doi": "10.1093/bib/bbag257",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42184115/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42184115"
+    }
+  },
+  {
+    "paper_id": "pubmed:42182473",
+    "title": "GatorDuo: Global-Consistency Dual-Graph Refinement With Pseudo-Label Agreement for Spatial Transcriptomics.",
+    "abstract": "Spatial transcriptomics (ST) measures gene expression together with spatial coordinates, enabling spatial domain identification of coherent tissue regions. Many recent approaches rely on graph-based modeling to combine spatial neighborhoods and transcriptomic (gene-expression) similarity, yet neighborhood construction is often unreliable under sparsity and technical noise. As a result, spurious cross-domain shortcut edges can persist in static graphs and propagate misleading signals during message passing, ultimately blurring domain boundaries and weakening cluster separability. In this paper, we propose GatorDuo, a topology-aware dual-graph contrastive self-supervised framework for robust spatial domain identification that couples gene-expression similarity with spatial proximity through complementary neighborhood graphs. GatorDuo introduces global-consistency-based graph refinement that uses a pseudo-label agreement mask to suppress cross-domain shortcut edges in both views, thus stabilizing neighborhood topology for representation learning. To avoid manual tuning of domain resolution, GatorDuo further employs a contextual bandit reinforcement-learning strategy to adaptively select the clustering granularity (the number of clusters) used for refinement. The refined view-specific embeddings are integrated via a hybrid-routing Mixture-of-Experts (MoE) module to generate a unified embedding, optimized with contrastive objectives augmented by an MoE-alignment term. Across eight public benchmarks spanning sequencing- and imaging-based ST at spot and single-cell resolution, and compared with ten representative baselines, GatorDuo consistently delivers strong and robust spatial domain identification performance across multiple clustering metrics, while yielding informative unified embeddings that can support downstream biological analyses.",
+    "year": 2026,
+    "venue": "bioRxiv : the preprint server for biology",
+    "authors": [
+      "Zhenhao Zhang",
+      "Antonio Jimeno Yepes",
+      "Jiang Bian",
+      "Fuyi Li",
+      "Yuxi Liu"
+    ],
+    "doi": "10.64898/2026.05.10.724039",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42182473/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42182473"
+    }
+  },
+  {
+    "paper_id": "pubmed:42179777",
+    "title": "Detection and classification of lung cancer using sequential hybridization of CNN and RNN type architectures.",
+    "abstract": "Early and accurate lung cancer detection from computed tomography (CT) images remains a challenging task because of the complex morphology of lung nodules, class imbalance, variation in image quality, and the risk of overfitting in deep learning models. Conventional manual interpretation is time-consuming and may be affected by inter-observer variability. Therefore, an automated and reliable CT-based classification framework is required to support early identification of benign, malignant, and normal lung conditions. This study proposes a sequential hybrid deep learning framework that integrates convolutional and recurrent neural network components for multiclass lung cancer classification. A dataset of 1,600 CT-scan images collected from multiple hospital data repositories across Bengaluru was used and divided in an approximate 70:30 ratio for training and validation. The preprocessing pipeline includes contrast enhancement using Contrast Limited Adaptive Histogram Equalization (CLAHE), morphological operations for lung segmentation, and nodule-focused masking to isolate diagnostically relevant lung regions. Data augmentation and transfer learning were applied to improve model generalization and reduce overfitting. DenseNet201 was used for feature extraction, while a bidirectional gated recurrent unit (BiGRU) module was incorporated for sequential representation learning. Hyperparameter optimization and early stopping were used to improve training stability and classification performance. The proposed DenseNet201-BiGRU sequential hybrid architecture achieved an overall accuracy of 95.8%. The class-wise accuracies were 97.33% for benign cases, 93.33% for malignant cases, and 96.67% for normal cases. Precision, recall, and F1-score values further demonstrated that the model maintained reliable classification performance across diverse and imbalanced CT image classes. The results indicate that sequential hybridization of DenseNet201-based feature extraction with BiGRU-based representation learning provides an efficient, precise, and robust framework for CT-based lung cancer classification. The proposed method improves classification reliability by combining enhanced preprocessing, focused lung-region extraction, transfer learning, and recurrent modeling. However, further validation using larger, multi-center datasets and additional clinical testing is required before real-world deployment and broader diagnostic application.",
+    "year": 2026,
+    "venue": "Frontiers in big data",
+    "authors": [
+      "Maheswari Vutukuri",
+      "Parveen Sultana Habibullah"
+    ],
+    "doi": "10.3389/fdata.2026.1786859",
+    "arxiv_id": null,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42179777/",
+    "citation_count": null,
+    "source": "pubmed",
+    "retrieval_path": [
+      "provider:pubmed",
+      "route:core_topic",
+      "route:title_like"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "pubmed",
+      "pmid": "42179777"
+    }
+  }
+]

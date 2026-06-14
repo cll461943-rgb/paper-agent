@@ -1,0 +1,65 @@
+{
+  "paper_id": "https://openalex.org/W4386721983",
+  "title": "Mitigating the Alignment Tax of RLHF",
+  "abstract": "LLMs acquire a wide range of abilities during pre-training, but aligning LLMs under Reinforcement Learning with Human Feedback (RLHF) can lead to forgetting pretrained abilities, which is also known as the alignment tax. To investigate alignment tax, we conducted experiments with existing RLHF algorithms using OpenLLaMA-3B, which revealed a pronounced alignment tax in NLP tasks. Whereas, despite various techniques to mitigate forgetting, they are often at odds with the RLHF performance, leading to a trade-off between alignment performance and forgetting mitigation, leading to an alignment-forgetting trade-off. In this paper we show that model averaging, which simply interpolates between pre and post RLHF model weights, surprisingly achieves the most strongest alignment-forgetting Pareto front among a wide range of competing methods. To understand its effectiveness, we offer theoretical insights into model averaging, revealing that it enhances performance Pareto front by increasing feature diversity on the layers where tasks share overlapped feature spaces. Empirical evidence corroborates our analysis by showing the benefits of averaging low-level transformer layers. Building on the analysis and the observation that averaging different layers of the transformer leads to significantly different alignment-forgetting trade-offs, we propose Heterogeneous Model Averaging (HMA) to Heterogeneously find various combination ratios of model layers. HMA seeks to maximize the alignment performance while incurring minimal alignment tax. Moreover, we validate HMA's performance across a range of RLHF algorithms over OpenLLaMA-3B and further extend our findings to Mistral-7B which is evaluated by open-sourced preference model and GPT4. Code available here: https://github.com/avalonstrel/Mitigating-the-Alignment-Tax-of-RLHF.git.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Yong Lin",
+    "Hangyu Lin",
+    "Xiong, Wei",
+    "Shizhe Diao",
+    "Liu, Jianmeng",
+    "Jipeng Zhang",
+    "Pan, Rui",
+    "Haoxiang Wang",
+    "Hu, Wenbin",
+    "Zhang, Hanning",
+    "Dong, Hanze",
+    "Renjie Pi",
+    "Han Zhao",
+    "Jiang, Nan",
+    "Ji, Heng",
+    "Yuan Yao",
+    "Tong Zhang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2309.06256",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2309.06256",
+  "citation_count": 9,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Generality",
+      "Forgetting",
+      "Foundation (evidence)",
+      "Computer science",
+      "Economics",
+      "Psychology",
+      "Management",
+      "Political science",
+      "Cognitive psychology",
+      "Law"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W2748952813",
+      "https://openalex.org/W2045049461",
+      "https://openalex.org/W1978893398",
+      "https://openalex.org/W2201908702",
+      "https://openalex.org/W4381094582",
+      "https://openalex.org/W2369625323",
+      "https://openalex.org/W2364579609",
+      "https://openalex.org/W1977906818",
+      "https://openalex.org/W4376167151"
+    ]
+  }
+}

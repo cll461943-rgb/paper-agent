@@ -78,7 +78,7 @@ def select_and_extract_evidence(
         "Return JSON only."
     )
 
-    batch_size = 5  # 控制批处理大小以提升 DeepSeek-flash 细粒度判断精度
+    batch_size = 7  # 平衡：20 篇论文需 3 个并发（vs. 5 需 4 个、10 需 2 个），提升稳定性
     batches = [papers[i : i + batch_size] for i in range(0, len(papers), batch_size)]
 
     def process_batch(batch: list[Paper]) -> list[dict[str, Any]]:
@@ -117,12 +117,15 @@ def select_and_extract_evidence(
         )
 
         try:
-            response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="pro")
+            # 不使用局部超时，依赖整体 budget timeout 机制
+            response = getattr(llm_client, "complete_json", lambda *_: None)(
+                system_prompt, user_prompt, model_type="pro"
+            )
             payload = response.get("selections") if isinstance(response, dict) else response
             if isinstance(payload, list):
                 return payload
         except Exception as exc:
-            LOGGER.warning("LLM batch evidence selection failed: %s", exc)
+            LOGGER.warning("LLM batch evidence selection failed or timed out: %s", exc)
         return []
 
     all_payloads = []

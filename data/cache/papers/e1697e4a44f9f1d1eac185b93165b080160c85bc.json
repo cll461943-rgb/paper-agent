@@ -1,0 +1,46 @@
+{
+  "paper_id": "https://openalex.org/W4403704344",
+  "title": "Fairness in Survival Analysis with Distributionally Robust Optimization",
+  "abstract": "We propose a general approach for encouraging fairness in survival analysis models based on minimizing a worst-case error across all subpopulations that occur with at least a user-specified probability. This approach can be used to convert many existing survival analysis models into ones that simultaneously encourage fairness, without requiring the user to specify which attributes or features to treat as sensitive in the training loss function. From a technical standpoint, our approach applies recent developments of distributionally robust optimization (DRO) to survival analysis. The complication is that existing DRO theory uses a training loss function that decomposes across contributions of individual data points, i.e., any term that shows up in the loss function depends only on a single training point. This decomposition does not hold for commonly used survival loss functions, including for the Cox proportional hazards model, its deep neural network variants, and many other recently developed models that use loss functions involving ranking or similarity score calculations. We address this technical hurdle using a sample splitting strategy. We demonstrate our sample splitting DRO approach by using it to create fair versions of a diverse set of existing survival analysis models including the Cox model (and its deep variant DeepSurv), the discrete-time model DeepHit, and the neural ODE model SODEN. We also establish a finite-sample theoretical guarantee to show what our sample splitting DRO loss converges to. For the Cox model, we further derive an exact DRO approach that does not use sample splitting. For all the models that we convert into DRO variants, we show that the DRO variants often score better on recently established fairness metrics (without incurring a significant drop in accuracy) compared to existing survival analysis fairness regularization techniques.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Shu Hu",
+    "George H. Chen"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2409.10538",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2409.10538",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:original_clean"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Robust optimization",
+      "Mathematical optimization",
+      "Computer science",
+      "Economics",
+      "Econometrics",
+      "Mathematics"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W4391375266",
+      "https://openalex.org/W3005017983",
+      "https://openalex.org/W2205708137",
+      "https://openalex.org/W3182145356",
+      "https://openalex.org/W3212504317",
+      "https://openalex.org/W1988872022",
+      "https://openalex.org/W2224558845",
+      "https://openalex.org/W3028487898",
+      "https://openalex.org/W2302257968",
+      "https://openalex.org/W2051074227"
+    ]
+  }
+}

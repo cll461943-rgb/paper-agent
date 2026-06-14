@@ -1,0 +1,51 @@
+{
+  "paper_id": "https://openalex.org/W4377121353",
+  "title": "Rethinking Data Augmentation for Tabular Data in Deep Learning",
+  "abstract": "Tabular data is the most widely used data format in machine learning (ML). While tree-based methods outperform DL-based methods in supervised learning, recent literature reports that self-supervised learning with Transformer-based models outperforms tree-based methods. In the existing literature on self-supervised learning for tabular data, contrastive learning is the predominant method. In contrastive learning, data augmentation is important to generate different views. However, data augmentation for tabular data has been difficult due to the unique structure and high complexity of tabular data. In addition, three main components are proposed together in existing methods: model structure, self-supervised learning methods, and data augmentation. Therefore, previous works have compared the performance without comprehensively considering these components, and it is not clear how each component affects the actual performance. In this study, we focus on data augmentation to address these issues. We propose a novel data augmentation method, $\\textbf{M}$ask $\\textbf{T}$oken $\\textbf{R}$eplacement ($\\texttt{MTR}$), which replaces the mask token with a portion of each tokenized column; $\\texttt{MTR}$ takes advantage of the properties of Transformer, which is becoming the predominant DL-based architecture for tabular data, to perform data augmentation for each column embedding. Through experiments with 13 diverse public datasets in both supervised and self-supervised learning scenarios, we show that $\\texttt{MTR}$ achieves competitive performance against existing data augmentation methods and improves model performance. In addition, we discuss specific scenarios in which $\\texttt{MTR}$ is most effective and identify the scope of its application. The code is available at https://github.com/somaonishi/MTR/.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Soma Onishi",
+    "Shoya Meguro"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2305.10308",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2305.10308",
+  "citation_count": 8,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Computer science",
+      "Artificial intelligence",
+      "Transformer",
+      "Embedding",
+      "Machine learning",
+      "Supervised learning",
+      "Data mining",
+      "Artificial neural network",
+      "Engineering",
+      "Voltage",
+      "Electrical engineering"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2081900870",
+      "https://openalex.org/W2183306018",
+      "https://openalex.org/W2549990292",
+      "https://openalex.org/W2345479200",
+      "https://openalex.org/W2951819827",
+      "https://openalex.org/W2849310602",
+      "https://openalex.org/W4285328440",
+      "https://openalex.org/W4390062853",
+      "https://openalex.org/W4389256085",
+      "https://openalex.org/W4313644201"
+    ]
+  }
+}

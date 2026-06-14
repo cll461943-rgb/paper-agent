@@ -67,12 +67,13 @@ class OpenAICompatibleLLMClient:
     def _endpoint(self) -> str:
         return self.base_url if self.base_url.endswith("/chat/completions") else f"{self.base_url}/chat/completions"
 
-    def _post_json(self, payload: dict[str, Any]) -> dict[str, Any]:
+    def _post_json(self, payload: dict[str, Any], timeout_seconds: float | None = None) -> dict[str, Any]:
+        read_timeout = timeout_seconds if timeout_seconds is not None else self.config.timeout_seconds
         response = self.session.post(
             self._endpoint(),
             headers={"Authorization": f"Bearer {self.api_key}"},
             json=payload,
-            timeout=(10, self.config.timeout_seconds),
+            timeout=(10, read_timeout),
         )
         response.raise_for_status()
         return response.json()
@@ -110,7 +111,7 @@ class OpenAICompatibleLLMClient:
             raise ValueError("invalid json boundaries")
         return json.loads(candidate[start : end + 1])
 
-    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash") -> Any | None:
+    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None) -> Any | None:
         if not self.is_available():
             return None
         try:
@@ -139,12 +140,12 @@ class OpenAICompatibleLLMClient:
         }
         started_at = time.perf_counter()
         try:
-            raw = self._post_json(payload)
+            raw = self._post_json(payload, timeout_seconds=timeout_seconds)
         except Exception as exc:
             # 尝试不使用 response_format 重新发起请求，以防部分中间代理报错
             try:
                 del payload["response_format"]
-                raw = self._post_json(payload)
+                raw = self._post_json(payload, timeout_seconds=timeout_seconds)
             except Exception as retry_exc:
                 self.budget.record_error(f"llm request failed: {retry_exc} (orig: {exc})")
                 self.budget.record_llm_elapsed(time.perf_counter() - started_at)
@@ -232,7 +233,7 @@ class MockLLMClient(OpenAICompatibleLLMClient):
     def is_available(self) -> bool:
         return True
 
-    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash") -> Any | None:
+    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None) -> Any | None:
         try:
             self.budget.reserve_llm_call()
         except BudgetExceededError as exc:

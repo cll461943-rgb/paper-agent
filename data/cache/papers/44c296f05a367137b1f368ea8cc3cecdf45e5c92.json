@@ -1,0 +1,60 @@
+{
+  "paper_id": "https://openalex.org/W4387797236",
+  "title": "Understanding Contrastive Learning via Distributionally Robust Optimization",
+  "abstract": "This study reveals the inherent tolerance of contrastive learning (CL) towards sampling bias, wherein negative samples may encompass similar semantics (\\eg labels). However, existing theories fall short in providing explanations for this phenomenon. We bridge this research gap by analyzing CL through the lens of distributionally robust optimization (DRO), yielding several key insights: (1) CL essentially conducts DRO over the negative sampling distribution, thus enabling robust performance across a variety of potential distributions and demonstrating robustness to sampling bias; (2) The design of the temperature $τ$ is not merely heuristic but acts as a Lagrange Coefficient, regulating the size of the potential distribution set; (3) A theoretical connection is established between DRO and mutual information, thus presenting fresh evidence for ``InfoNCE as an estimate of MI'' and a new estimation approach for $ϕ$-divergence-based generalized mutual information. We also identify CL's potential shortcomings, including over-conservatism and sensitivity to outliers, and introduce a novel Adjusted InfoNCE loss (ADNCE) to mitigate these issues. It refines potential distribution, improving performance and accelerating convergence. Extensive experiments on various domains (image, sentence, and graphs) validate the effectiveness of the proposal. The code is available at \\url{https://github.com/junkangwu/ADNCE}.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Junkang Wu",
+    "Jiawei Chen",
+    "Jiancan Wu",
+    "Wentao Shi",
+    "Xiang Wang",
+    "Xiangnan He"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2310.11048",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2310.11048",
+  "citation_count": 13,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:core_topic",
+    "route:original_clean",
+    "route:broad_synonym",
+    "route:method_task",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Outlier",
+      "Computer science",
+      "Mutual information",
+      "Robustness (evolution)",
+      "Heuristic",
+      "Mathematical optimization",
+      "Artificial intelligence",
+      "Machine learning",
+      "Mathematics",
+      "Biochemistry",
+      "Gene",
+      "Chemistry"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2466816617",
+      "https://openalex.org/W1970834875",
+      "https://openalex.org/W842936808",
+      "https://openalex.org/W3006513224",
+      "https://openalex.org/W2000517284",
+      "https://openalex.org/W2365318811",
+      "https://openalex.org/W2136503713",
+      "https://openalex.org/W2046456988",
+      "https://openalex.org/W2375330620",
+      "https://openalex.org/W2363755581"
+    ]
+  }
+}

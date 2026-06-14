@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/1910.07782v2",
+  "title": "The Distributed Bloom Filter",
+  "abstract": "The Distributed Bloom Filter is a space-efficient, probabilistic data structure designed to perform more efficient set reconciliations in distributed systems. It guarantees eventual consistency of states between nodes in a system, while still keeping bloom filter sizes as compact as possible. The eventuality can be tweaked as desired, by tweaking the distributed bloom filter's parameters. The scalability, as well as accuracy of the data structure is made possible by combining two novel ideas: The first idea introduces a new, computationally inexpensive way for populating bloom filters, making it possible to quickly compute new bloom filters when interacting with peers. The second idea introduces the concept of unique bloom filter mappings between peers. By applying these two simple ideas, one can achieve incredibly bandwidth-efficient set reconciliation in networks. Instead of trying to minimize the false positive rate of a single bloom filter, we use the unique bloom filter mappings to increase the probability for an element to propagate through a network. We compare the standard bloom filter with the distributed bloom filter and show that even with a false positive rate of 50%, i.e. even with a very small bloom filter size, the distributed bloom filter still manages to reach complete set reconciliation across the network in a highly space-efficient, as well as time-efficient way.",
+  "year": 2019,
+  "venue": null,
+  "authors": [
+    "Lum Ramabaja",
+    "Arber Avdullahu"
+  ],
+  "doi": null,
+  "arxiv_id": "1910.07782v2",
+  "url": "http://arxiv.org/abs/1910.07782v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:method_task",
+    "route:entity_dataset"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

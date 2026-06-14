@@ -1,0 +1,911 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2601.01982v1",
+    "title": "ChaosBench-Logic: A Benchmark for Logical and Symbolic Reasoning on Chaotic Dynamical Systems",
+    "abstract": "Large language models (LLMs) excel at natural language tasks but remain brittle in domains requiring precise logical and symbolic reasoning. Chaotic dynamical systems provide an especially demanding test because chaos is deterministic yet often misinterpreted as randomness or complexity. We introduce ChaosBench-Logic, a benchmark that evaluates LLM reasoning across 30 diverse dynamical systems using a unified first-order logic (FOL) ontology. Each system is annotated with truth assignments for 11 semantic predicates, and 621 questions are generated across seven reasoning categories, including multi-hop implications, cross-system analogies, counterfactual reasoning, bias probes, and multi-turn dialogues. We define metrics for logical accuracy, implication consistency, dialogue coherence, and contradiction, and we release an open-source evaluation pipeline. Initial experiments show that frontier LLMs such as GPT-4, Claude 3.5 Sonnet, Gemini 2.5 Flash, and the open-source LLaMA-3 70B achieve 91-94% per-item accuracy, yet still score 0% on compositional items and exhibit fragile global coherence. Dialogue-level accuracy ranges from 53.1% (GPT-4 CoT) to 75.5% (LLaMA-3 zero-shot). ChaosBench-Logic provides a rigorous testbed for diagnosing such failures and a foundation for developing neuro-symbolic approaches that improve scientific reasoning in LLMs.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Noel Thomas"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.01982v1",
+    "url": "http://arxiv.org/abs/2601.01982v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.16021v1",
+    "title": "Navigating the State of Cognitive Flow: Context-Aware AI Interventions for Effective Reasoning Support",
+    "abstract": "Flow theory describes an optimal cognitive state where individuals experience deep focus and intrinsic motivation when a task's difficulty aligns with their skill level. In AI-augmented reasoning, interventions that disrupt the state of cognitive flow can hinder rather than enhance decision-making. This paper proposes a context-aware cognitive augmentation framework that adapts interventions based on three key contextual factors: type, timing, and scale. By leveraging multimodal behavioral cues (e.g., gaze behavior, typing hesitation, interaction speed), AI can dynamically adjust cognitive support to maintain or restore flow. We introduce the concept of cognitive flow, an extension of flow theory in AI-augmented reasoning, where interventions are personalized, adaptive, and minimally intrusive. By shifting from static interventions to context-aware augmentation, our approach ensures that AI systems support deep engagement in complex decision-making and reasoning without disrupting cognitive immersion.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Dinithi Dissanayake",
+      "Suranga Nanayakkara"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.16021v1",
+    "url": "http://arxiv.org/abs/2504.16021v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.04973v1",
+    "title": "LogicVista: Multimodal LLM Logical Reasoning Benchmark in Visual Contexts",
+    "abstract": "We propose LogicVista, an evaluation benchmark that assesses the integrated logical reasoning capabilities of multimodal large language models (MLLMs) in Visual contexts. Recent advancements in MLLMs have demonstrated various fascinating abilities, from crafting poetry based on an image to performing mathematical reasoning. However, there is still a lack of systematic evaluation of MLLMs' proficiency in logical reasoning tasks, which are essential for activities like navigation and puzzle-solving. Thus we evaluate general logical cognition abilities across 5 logical reasoning tasks encompassing 9 different capabilities, using a sample of 448 multiple-choice questions. Each question is annotated with the correct answer and the human-written reasoning behind the selection, enabling both open-ended and multiple-choice evaluation. A total of 8 MLLMs are comprehensively evaluated using LogicVista. Code and Data Available at https://github.com/Yijia-Xiao/LogicVista.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yijia Xiao",
+      "Edward Sun",
+      "Tianyu Liu",
+      "Wei Wang"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.04973v1",
+    "url": "http://arxiv.org/abs/2407.04973v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:hyde",
+      "route:method_task",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2603.09200v1",
+    "title": "The Reasoning Trap -- Logical Reasoning as a Mechanistic Pathway to Situational Awareness",
+    "abstract": "Situational awareness, the capacity of an AI system to recognize its own nature, understand its training and deployment context, and reason strategically about its circumstances, is widely considered among the most dangerous emergent capabilities in advanced AI systems. Separately, a growing research effort seeks to improve the logical reasoning capabilities of large language models (LLMs) across deduction, induction, and abduction. In this paper, we argue that these two research trajectories are on a collision course. We introduce the RAISE framework (Reasoning Advancing Into Self Examination), which identifies three mechanistic pathways through which improvements in logical reasoning enable progressively deeper levels of situational awareness: deductive self inference, inductive context recognition, and abductive self modeling. We formalize each pathway, construct an escalation ladder from basic self recognition to strategic deception, and demonstrate that every major research topic in LLM logical reasoning maps directly onto a specific amplifier of situational awareness. We further analyze why current safety measures are insufficient to prevent this escalation. We conclude by proposing concrete safeguards, including a \"Mirror Test\" benchmark and a Reasoning Safety Parity Principle, and pose an uncomfortable but necessary question to the logical reasoning community about its responsibility in this trajectory.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Subramanyam Sahoo",
+      "Aman Chadha",
+      "Vinija Jain",
+      "Divya Chaudhary"
+    ],
+    "doi": null,
+    "arxiv_id": "2603.09200v1",
+    "url": "http://arxiv.org/abs/2603.09200v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2307.10573v2",
+    "title": "Invalid Logic, Equivalent Gains: The Bizarreness of Reasoning in Language Model Prompting",
+    "abstract": "Language models can be prompted to reason through problems in a manner that significantly improves performance. However, \\textit{why} such prompting improves performance is unclear. Recent work showed that using logically \\textit{invalid} Chain-of-Thought (CoT) prompting improves performance almost as much as logically \\textit{valid} CoT prompting, and that editing CoT prompts to replace problem-specific information with abstract information or out-of-distribution information typically doesn't harm performance. Critics have responded that these findings are based on too few and too easily solved tasks to draw meaningful conclusions. To resolve this dispute, we test whether logically invalid CoT prompts offer the same level of performance gains as logically valid prompts on the hardest tasks in the BIG-Bench benchmark, termed BIG-Bench Hard (BBH). We find that the logically \\textit{invalid} reasoning prompts do indeed achieve similar performance gains on BBH tasks as logically valid reasoning prompts. We also discover that some CoT prompts used by previous works contain logical errors. This suggests that covariates beyond logically valid reasoning are responsible for performance improvements.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Rylan Schaeffer",
+      "Kateryna Pistunova",
+      "Samar Khanna",
+      "Sarthak Consul",
+      "Sanmi Koyejo"
+    ],
+    "doi": null,
+    "arxiv_id": "2307.10573v2",
+    "url": "http://arxiv.org/abs/2307.10573v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.05261v1",
+    "title": "From Propositional Logic to Plausible Reasoning: A Uniqueness Theorem",
+    "abstract": "We consider the question of extending propositional logic to a logic of plausible reasoning, and posit four requirements that any such extension should satisfy. Each is a requirement that some property of classical propositional logic be preserved in the extended logic; as such, the requirements are simpler and less problematic than those used in Cox's Theorem and its variants. As with Cox's Theorem, our requirements imply that the extended logic must be isomorphic to (finite-set) probability theory. We also obtain specific numerical values for the probabilities, recovering the classical definition of probability as a theorem, with truth assignments that satisfy the premise playing the role of the \"possible cases.\"",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Kevin S. Van Horn"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.05261v1",
+    "url": "http://arxiv.org/abs/1706.05261v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.02733v1",
+    "title": "DeltaLogic: Minimal Premise Edits Reveal Belief-Revision Failures in Logical Reasoning Models",
+    "abstract": "Reasoning benchmarks typically evaluate whether a model derives the correct answer from a fixed premise set, but they under-measure a closely related capability that matters in dynamic environments: belief revision under minimal evidence change. We introduce DeltaLogic, a benchmark transformation protocol that converts natural-language reasoning examples into short revision episodes. Each episode first asks for an initial conclusion under premises P, then applies a minimal edit δ(P), and finally asks whether the previous conclusion should remain stable or be revised. We instantiate DeltaLogic from FOLIO and ProofWriter and evaluate small causal language models with constrained label scoring. On a completed 30-episode Qwen evaluation subset, stronger initial reasoning still does not imply stronger revision behavior: Qwen3-1.7B reaches 0.667 initial accuracy but only 0.467 revision accuracy, with inertia rising to 0.600 on episodes where the gold label should change, while Qwen3-0.6B collapses into near universal abstention. There, Qwen3-4B preserves the same inertial failure pattern (0.650 initial, 0.450 revised, 0.600 inertia), whereas Phi-4-mini-instruct is substantially stronger (0.950 initial, 0.850 revised) but still exhibits non-trivial abstention and control instability. These results suggest that logical competence under fixed premises does not imply disciplined belief revision after local evidence edits. DeltaLogic therefore targets a distinct and practically important reasoning capability that complements existing logical inference and belief-updating benchmarks.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Amit Dhanda"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.02733v1",
+    "url": "http://arxiv.org/abs/2604.02733v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.13065v1",
+    "title": "Correct Chains, Wrong Answers: Dissociating Reasoning from Output in LLM Logic",
+    "abstract": "LLMs can execute every step of chain-of-thought reasoning correctly and still produce wrong final answers. We introduce the Novel Operator Test, a benchmark that separates operator logic from operator name, enabling rigorous distinction between genuine reasoning and pattern retrieval. By evaluating Boolean operators under unfamiliar names across depths 1-10 on five models (up to 8,100 problems each), we demonstrate a reasoning-output dissociation that existing benchmarks cannot detect. At Claude Sonnet 4's depth 7, all 31 errors have verifiably correct reasoning yet wrong declared answers; 17/19 errors in mixed-operator chains exhibit the same pattern. The benchmark reveals two failure types: strategy failures at depth 2, where models attempt terse retrieval (+62pp from scaffolding), and content failures at depth 7, where models reason fully but err systematically (+8-30pp, 0/300 errors post-intervention). A Trojan operator (XOR's truth table under a novel name) confirms name alone does not gate reasoning (p >= 0.49), while Llama's novelty gap widens to 28pp at depth 8-9 with the Trojan at 92-100%, isolating genuine difficulty with novel logic from name unfamiliarity.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Abinav Rao",
+      "Sujan Rachuri",
+      "Nikhil Vemuri"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.13065v1",
+    "url": "http://arxiv.org/abs/2604.13065v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1107.3031v3",
+    "title": "On the mathematical synthesis of equational logics",
+    "abstract": "We provide a mathematical theory and methodology for synthesising equational logics from algebraic metatheories. We illustrate our methodology by means of two applications: a rational reconstruction of Birkhoff's Equational Logic and a new equational logic for reasoning about algebraic structure with name-binding operators.",
+    "year": 2011,
+    "venue": null,
+    "authors": [
+      "Marcelo Fiore",
+      "Chung-Kil Hur"
+    ],
+    "doi": null,
+    "arxiv_id": "1107.3031v3",
+    "url": "http://arxiv.org/abs/1107.3031v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0905.3668v2",
+    "title": "Lindstrom theorems for fragments of first-order logic",
+    "abstract": "Lindström theorems characterize logics in terms of model-theoretic conditions such as Compactness and the Löwenheim-Skolem property. Most existing characterizations of this kind concern extensions of first-order logic. But on the other hand, many logics relevant to computer science are fragments or extensions of fragments of first-order logic, e.g., k-variable logics and various modal logics. Finding Lindström theorems for these languages can be challenging, as most known techniques rely on coding arguments that seem to require the full expressive power of first-order logic. In this paper, we provide Lindström theorems for several fragments of first-order logic, including the k-variable fragments for k>2, Tarski's relation algebra, graded modal logic, and the binary guarded fragment. We use two different proof techniques. One is a modification of the original Lindström proof. The other involves the modal concepts of bisimulation, tree unraveling, and finite depth. Our results also imply semantic preservation theorems.",
+    "year": 2009,
+    "venue": null,
+    "authors": [
+      "Johan van Benthem",
+      "Balder ten Cate",
+      "Jouko Vaananen"
+    ],
+    "doi": null,
+    "arxiv_id": "0905.3668v2",
+    "url": "http://arxiv.org/abs/0905.3668v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1701.08622v3",
+    "title": "Extensional Semantics for Higher-Order Logic Programs with Negation",
+    "abstract": "We develop an extensional semantics for higher-order logic programs with negation, generalizing the technique that was introduced in [Bezem99,Bezem01] for positive higher-order programs. In this way we provide an alternative extensional semantics for higher-order logic programs with negation to the one proposed in [CharalambidisER14]. As an immediate useful consequence of our developments, we define for the language we consider the notions of stratification and local stratification, which generalize the familiar such notions from classical logic programming. We demonstrate that for stratified and locally stratified higher-order logic programs, the proposed semantics never assigns the unknown truth value. We conclude the paper by providing a negative result: we demonstrate that the well-known stable model semantics of classical logic programming, if extended according to the technique of [Bezem99,Bezem01] to higher-order logic programs, does not in general lead to extensional stable models.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Panos Rondogiannis",
+      "Ioanna Symeonidou"
+    ],
+    "doi": null,
+    "arxiv_id": "1701.08622v3",
+    "url": "http://arxiv.org/abs/1701.08622v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1202.0914v2",
+    "title": "Type-elimination-based reasoning for the description logic SHIQbs using decision diagrams and disjunctive datalog",
+    "abstract": "We propose a novel, type-elimination-based method for reasoning in the description logic SHIQbs including DL-safe rules. To this end, we first establish a knowledge compilation method converting the terminological part of an ALCIb knowledge base into an ordered binary decision diagram (OBDD) which represents a canonical model. This OBDD can in turn be transformed into disjunctive Datalog and merged with the assertional part of the knowledge base in order to perform combined reasoning. In order to leverage our technique for full SHIQbs, we provide a stepwise reduction from SHIQbs to ALCIb that preserves satisfiability and entailment of positive and negative ground facts. The proposed technique is shown to be worst case optimal w.r.t. combined and data complexity and easily admits extensions with ground conjunctive queries.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Sebastian Rudolph",
+      "Markus Krötzsch",
+      "Pascal Hitzler"
+    ],
+    "doi": null,
+    "arxiv_id": "1202.0914v2",
+    "url": "http://arxiv.org/abs/1202.0914v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0806.3849v2",
+    "title": "Separability in the Ambient Logic",
+    "abstract": "The \\it{Ambient Logic} (AL) has been proposed for expressing properties of process mobility in the calculus of Mobile Ambients (MA), and as a basis for query languages on semistructured data. We study some basic questions concerning the discriminating power of AL, focusing on the equivalence on processes induced by the logic $(=_L>)$. As underlying calculi besides MA we consider a subcalculus in which an image-finiteness condition holds and that we prove to be Turing complete. Synchronous variants of these calculi are studied as well. In these calculi, we provide two operational characterisations of $_=L$: a coinductive one (as a form of bisimilarity) and an inductive one (based on structual properties of processes). After showing $_=L$ to be stricly finer than barbed congruence, we establish axiomatisations of $_=L$ on the subcalculus of MA (both the asynchronous and the synchronous version), enabling us to relate $_=L$ to structural congruence. We also present some (un)decidability results that are related to the above separation properties for AL: the undecidability of $_=L$ on MA and its decidability on the subcalculus.",
+    "year": 2008,
+    "venue": null,
+    "authors": [
+      "Daniel Hirschkoff",
+      "Etienne Lozes",
+      "Davide Sangiorgi"
+    ],
+    "doi": null,
+    "arxiv_id": "0806.3849v2",
+    "url": "http://arxiv.org/abs/0806.3849v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:broad_synonym",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cs/0602024v4",
+    "title": "Algorithmic correspondence and completeness in modal logic. I. The core algorithm SQEMA",
+    "abstract": "Modal formulae express monadic second-order properties on Kripke frames, but in many important cases these have first-order equivalents. Computing such equivalents is important for both logical and computational reasons. On the other hand, canonicity of modal formulae is important, too, because it implies frame-completeness of logics axiomatized with canonical formulae. Computing a first-order equivalent of a modal formula amounts to elimination of second-order quantifiers. Two algorithms have been developed for second-order quantifier elimination: SCAN, based on constraint resolution, and DLS, based on a logical equivalence established by Ackermann. In this paper we introduce a new algorithm, SQEMA, for computing first-order equivalents (using a modal version of Ackermann's lemma) and, moreover, for proving canonicity of modal formulae. Unlike SCAN and DLS, it works directly on modal formulae, thus avoiding Skolemization and the subsequent problem of unskolemization. We present the core algorithm and illustrate it with some examples. We then prove its correctness and the canonicity of all formulae on which the algorithm succeeds. We show that it succeeds not only on all Sahlqvist formulae, but also on the larger class of inductive formulae, introduced in our earlier papers. Thus, we develop a purely algorithmic approach to proving canonical completeness in modal logic and, in particular, establish one of the most general completeness results in modal logic so far.",
+    "year": 2006,
+    "venue": null,
+    "authors": [
+      "Willem Conradie",
+      "Valentin Goranko",
+      "Dimiter Vakarelov"
+    ],
+    "doi": null,
+    "arxiv_id": "0602024v4",
+    "url": "http://arxiv.org/abs/cs/0602024v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0911.2993v2",
+    "title": "A two-level logic approach to reasoning about computations",
+    "abstract": "Relational descriptions have been used in formalizing diverse computational notions, including, for example, operational semantics, typing, and acceptance by non-deterministic machines. We therefore propose a (restricted) logical theory over relations as a language for specifying such notions. Our specification logic is further characterized by an ability to explicitly treat binding in object languages. Once such a logic is fixed, a natural next question is how we might prove theorems about specifications written in it. We propose to use a second logic, called a reasoning logic, for this purpose. A satisfactory reasoning logic should be able to completely encode the specification logic. Associated with the specification logic are various notions of binding: for quantifiers within formulas, for eigenvariables within sequents, and for abstractions within terms. To provide a natural treatment of these aspects, the reasoning logic must encode binding structures as well as their associated notions of scope, free and bound variables, and capture-avoiding substitution. Further, to support arguments about provability, the reasoning logic should possess strong mechanisms for constructing proofs by induction and co-induction. We provide these capabilities here by using a logic called G which represents relations over lambda-terms via definitions of atomic judgments, contains inference rules for induction and co-induction, and includes a special generic quantifier. We show how provability in the specification logic can be transparently encoded in G. We also describe an interactive theorem prover called Abella that implements G and this two-level logic approach and we present several examples that demonstrate the efficacy of Abella in reasoning about computations.",
+    "year": 2009,
+    "venue": null,
+    "authors": [
+      "Andrew Gacek",
+      "Dale Miller",
+      "Gopalan Nadathur"
+    ],
+    "doi": null,
+    "arxiv_id": "0911.2993v2",
+    "url": "http://arxiv.org/abs/0911.2993v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2305.01157v3",
+    "title": "Complex Logical Reasoning over Knowledge Graphs using Large Language Models",
+    "abstract": "Reasoning over knowledge graphs (KGs) is a challenging task that requires a deep understanding of the complex relationships between entities and the underlying logic of their relations. Current approaches rely on learning geometries to embed entities in vector space for logical query operations, but they suffer from subpar performance on complex queries and dataset-specific representations. In this paper, we propose a novel decoupled approach, Language-guided Abstract Reasoning over Knowledge graphs (LARK), that formulates complex KG reasoning as a combination of contextual KG search and logical query reasoning, to leverage the strengths of graph extraction algorithms and large language models (LLM), respectively. Our experiments demonstrate that the proposed approach outperforms state-of-the-art KG reasoning methods on standard benchmark datasets across several logical query constructs, with significant performance gain for queries of higher complexity. Furthermore, we show that the performance of our approach improves proportionally to the increase in size of the underlying LLM, enabling the integration of the latest advancements in LLMs for logical reasoning over KGs. Our work presents a new direction for addressing the challenges of complex KG reasoning and paves the way for future research in this area.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Nurendra Choudhary",
+      "Chandan K. Reddy"
+    ],
+    "doi": null,
+    "arxiv_id": "2305.01157v3",
+    "url": "http://arxiv.org/abs/2305.01157v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:original_clean",
+      "route:title_like",
+      "route:query2doc",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.04177v2",
+    "title": "Position: Logical Soundness is not a Reliable Criterion for Neurosymbolic Fact-Checking with LLMs",
+    "abstract": "As large language models (LLMs) are increasing integrated into fact-checking pipelines, formal logic is often proposed as a rigorous means by which to mitigate bias, errors and hallucinations in these models' outputs. For example, some neurosymbolic systems verify claims by using LLMs to translate natural language into logical formulae and then checking whether the proposed claims are logically sound, i.e. whether they can be validly derived from premises that are verified to be true. We argue that such approaches structurally fail to detect misleading claims due to systematic divergences between conclusions that are logically sound and inferences that humans typically make and accept. Drawing on studies in cognitive science and pragmatics, we present a typology of cases in which logically sound conclusions systematically elicit human inferences that are unsupported by the underlying premises. Consequently, we advocate for a complementary approach: leveraging human-like reasoning tendencies of LLMs as a feature rather than a bug, and using these models to validate the outputs of formal components in neurosymbolic systems against potentially misleading conclusions.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Jason Chan",
+      "Robert Gaizauskas",
+      "Zhixue Zhao"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.04177v2",
+    "url": "http://arxiv.org/abs/2604.04177v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2510.09782v2",
+    "title": "The Geometry of Reasoning: Flowing Logics in Representation Space",
+    "abstract": "We study how large language models (LLMs) ``think'' through their representation space. We propose a novel geometric framework that models an LLM's reasoning as flows -- embedding trajectories evolving where logic goes. We disentangle logical structure from semantics by employing the same natural deduction propositions with varied semantic carriers, allowing us to test whether LLMs internalize logic beyond surface form. This perspective connects reasoning with geometric quantities such as position, velocity, and curvature, enabling formal analysis in representation and concept spaces. Our theory establishes: (1) LLM reasoning corresponds to smooth flows in representation space, and (2) logical statements act as local controllers of these flows' velocities. Using learned representation proxies, we design controlled experiments to visualize and quantify reasoning flows, providing empirical validation of our theoretical framework. Our findings indicate that training solely via next-token prediction can lead LLMs to internalize logical invariants as higher-order geometry in representation space, challenging the ``stochastic parrot'' argument. Experiments across Qwen and LLaMA model families further suggest the presence of a general, possibly universal, representational law underlying machine understanding and human linguistic regularities, largely independent of specific training recipes or model architectures. Our work serves as both a conceptual foundation and practical tools for studying reasoning phenomena, offering a new lens for interpretability and formal analysis of LLMs' behavior.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Yufa Zhou",
+      "Yixiao Wang",
+      "Xunjian Yin",
+      "Shuyan Zhou",
+      "Anru R. Zhang"
+    ],
+    "doi": null,
+    "arxiv_id": "2510.09782v2",
+    "url": "http://arxiv.org/abs/2510.09782v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/cs/0703079v2",
+    "title": "Automata with Nested Pebbles Capture First-Order Logic with Transitive Closure",
+    "abstract": "String languages recognizable in (deterministic) log-space are characterized either by two-way (deterministic) multi-head automata, or following Immerman, by first-order logic with (deterministic) transitive closure. Here we elaborate this result, and match the number of heads to the arity of the transitive closure. More precisely, first-order logic with k-ary deterministic transitive closure has the same power as deterministic automata walking on their input with k heads, additionally using a finite set of nested pebbles. This result is valid for strings, ordered trees, and in general for families of graphs having a fixed automaton that can be used to traverse the nodes of each of the graphs in the family. Other examples of such families are grids, toruses, and rectangular mazes. For nondeterministic automata, the logic is restricted to positive occurrences of transitive closure. The special case of k=1 for trees, shows that single-head deterministic tree-walking automata with nested pebbles are characterized by first-order logic with unary deterministic transitive closure. This refines our earlier result that placed these automata between first-order and monadic second-order logic on trees.",
+    "year": 2007,
+    "venue": null,
+    "authors": [
+      "Joost Engelfriet",
+      "Hendrik Jan Hoogeboom"
+    ],
+    "doi": null,
+    "arxiv_id": "0703079v2",
+    "url": "http://arxiv.org/abs/cs/0703079v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1809.00508v1",
+    "title": "A logic-algebraic tool for reasoning with Knowledge-Based Systems",
+    "abstract": "A detailed exposition of foundations of a logic-algebraic model for reasoning with knowledge bases specified by propositional (Boolean) logic is presented. The model is conceived from the logical translation of usual derivatives on polynomials (on residue rings) which is used to design a new inference rule of algebro-geometric inspiration. Soundness and (refutational) completeness of the rule are proved. Some applications of the tools introduced in the paper are shown.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "José A. Alonso-Jiménez",
+      "Gonzalo A. Aranda-Corral",
+      "Joaquín Borrego-Díaz",
+      "M. Magdalena Fernández-Lebrón",
+      "M. José Hidalgo-Doblado"
+    ],
+    "doi": null,
+    "arxiv_id": "1809.00508v1",
+    "url": "http://arxiv.org/abs/1809.00508v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1202.6352v2",
+    "title": "Theorem proving for prenex Gödel logic with Delta: checking validity and unsatisfiability",
+    "abstract": "Gödel logic with the projection operator Delta (G_Delta) is an important many-valued as well as intermediate logic. In contrast to classical logic, the validity and the satisfiability problems of G_Delta are not directly dual to each other. We nevertheless provide a uniform, computational treatment of both problems for prenex formulas by describing appropriate translations into sets of order clauses that can be subjected to chaining resolution. For validity a version of Herbrand's Theorem allows us to show the soundness of standard Skolemization. For satisfiability the translation involves a novel, extended Skolemization method.",
+    "year": 2012,
+    "venue": null,
+    "authors": [
+      "Matthias Baaz",
+      "Agata Ciabattoni",
+      "Christian G Fermüller"
+    ],
+    "doi": null,
+    "arxiv_id": "1202.6352v2",
+    "url": "http://arxiv.org/abs/1202.6352v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2306.16632v1",
+    "title": "Beyond Logic Programming for Legal Reasoning",
+    "abstract": "Logic programming has long being advocated for legal reasoning, and several approaches have been put forward relying upon explicit representation of the law in logic programming terms. In this position paper we focus on the PROLEG logic-programming-based framework for formalizing and reasoning with Japanese presupposed ultimate fact theory. Specifically, we examine challenges and opportunities in leveraging deep learning techniques for improving legal reasoning using PROLEG identifying four distinct options ranging from enhancing fact extraction using deep learning to end-to-end solutions for reasoning with textual legal descriptions. We assess advantages and limitations of each option, considering their technical feasibility, interpretability, and alignment with the needs of legal practitioners and decision-makers. We believe that our analysis can serve as a guideline for developers aiming to build effective decision-support systems for the legal domain, while fostering a deeper understanding of challenges and potential advancements by neuro-symbolic approaches in legal applications.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Ha-Thanh Nguyen",
+      "Francesca Toni",
+      "Kostas Stathis",
+      "Ken Satoh"
+    ],
+    "doi": null,
+    "arxiv_id": "2306.16632v1",
+    "url": "http://arxiv.org/abs/2306.16632v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/0704.3931v2",
+    "title": "The Complexity of Model Checking Higher-Order Fixpoint Logic",
+    "abstract": "Higher-Order Fixpoint Logic (HFL) is a hybrid of the simply typed λ-calculus and the modal λ-calculus. This makes it a highly expressive temporal logic that is capable of expressing various interesting correctness properties of programs that are not expressible in the modal λ-calculus. This paper provides complexity results for its model checking problem. In particular we consider those fragments of HFL built by using only types of bounded order k and arity m. We establish k-fold exponential time completeness for model checking each such fragment. For the upper bound we use fixpoint elimination to obtain reachability games that are singly-exponential in the size of the formula and k-fold exponential in the size of the underlying transition system. These games can be solved in deterministic linear time. As a simple consequence, we obtain an exponential time upper bound on the expression complexity of each such fragment. The lower bound is established by a reduction from the word problem for alternating (k-1)-fold exponential space bounded Turing Machines. Since there are fixed machines of that type whose word problems are already hard with respect to k-fold exponential time, we obtain, as a corollary, k-fold exponential time completeness for the data complexity of our fragments of HFL, provided m exceeds 3. This also yields a hierarchy result in expressive power.",
+    "year": 2007,
+    "venue": null,
+    "authors": [
+      "Roland Axelsson",
+      "Martin Lange",
+      "Rafal Somla"
+    ],
+    "doi": null,
+    "arxiv_id": "0704.3931v2",
+    "url": "http://arxiv.org/abs/0704.3931v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2601.09446v1",
+    "title": "Improving Symbolic Translation of Language Models for Logical Reasoning",
+    "abstract": "The use of formal language for deductive logical reasoning aligns well with language models (LMs), where translating natural language (NL) into first-order logic (FOL) and employing an external solver results in a verifiable and therefore reliable reasoning system. However, smaller LMs often struggle with this translation task, frequently producing incorrect symbolic outputs due to formatting and translation errors. Existing approaches typically rely on self-iteration to correct these errors, but such methods depend heavily on the capabilities of the underlying model. To address this, we first categorize common errors and fine-tune smaller LMs using data synthesized by large language models. The evaluation is performed using the defined error categories. We introduce incremental inference, which divides inference into two stages, predicate generation and FOL translation, providing greater control over model behavior and enhancing generation quality as measured by predicate metrics. This decomposition framework also enables the use of a verification module that targets predicate-arity errors to further improve performance. Our study evaluates three families of models across four logical-reasoning datasets. The comprehensive fine-tuning, incremental inference, and verification modules reduce error rates, increase predicate coverage, and improve reasoning performance for smaller LMs, moving us closer to developing reliable and accessible symbolic-reasoning systems.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Ramya Keerthy Thatikonda",
+      "Jiuzhou Han",
+      "Wray Buntine",
+      "Ehsan Shareghi"
+    ],
+    "doi": null,
+    "arxiv_id": "2601.09446v1",
+    "url": "http://arxiv.org/abs/2601.09446v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2507.08804v1",
+    "title": "Cognitive Dissonance Artificial Intelligence (CD-AI): The Mind at War with Itself. Harnessing Discomfort to Sharpen Critical Thinking",
+    "abstract": "AI-augmented systems are traditionally designed to streamline human decision-making by minimizing cognitive load, clarifying arguments, and optimizing efficiency. However, in a world where algorithmic certainty risks becoming an Orwellian tool of epistemic control, true intellectual growth demands not passive acceptance but active struggle. Drawing on the dystopian visions of George Orwell and Philip K. Dick - where reality is unstable, perception malleable, and truth contested - this paper introduces Cognitive Dissonance AI (CD-AI): a novel framework that deliberately sustains uncertainty rather than resolving it. CD-AI does not offer closure, but compels users to navigate contradictions, challenge biases, and wrestle with competing truths. By delaying resolution and promoting dialectical engagement, CD-AI enhances reflective reasoning, epistemic humility, critical thinking, and adaptability in complex decision-making. This paper examines the theoretical foundations of the approach, presents an implementation model, explores its application in domains such as ethics, law, politics, and science, and addresses key ethical concerns - including decision paralysis, erosion of user autonomy, cognitive manipulation, and bias in AI reasoning. In reimagining AI as an engine of doubt rather than a deliverer of certainty, CD-AI challenges dominant paradigms of AI-augmented reasoning and offers a new vision - one in which AI sharpens the mind not by resolving conflict, but by sustaining it. Rather than reinforcing Huxleyan complacency or pacifying the user into intellectual conformity, CD-AI echoes Nietzsche's vision of the Uebermensch - urging users to transcend passive cognition through active epistemic struggle.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Delia Deliu"
+    ],
+    "doi": null,
+    "arxiv_id": "2507.08804v1",
+    "url": "http://arxiv.org/abs/2507.08804v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1303.4533v2",
+    "title": "Two Variable vs. Linear Temporal Logic in Model Checking and Games",
+    "abstract": "Model checking linear-time properties expressed in first-order logic has non-elementary complexity, and thus various restricted logical languages are employed. In this paper we consider two such restricted specification logics, linear temporal logic (LTL) and two-variable first-order logic (FO2). LTL is more expressive but FO2 can be more succinct, and hence it is not clear which should be easier to verify. We take a comprehensive look at the issue, giving a comparison of verification problems for FO2, LTL, and various sublogics thereof across a wide range of models. In particular, we look at unary temporal logic (UTL), a subset of LTL that is expressively equivalent to FO2; we also consider the stutter-free fragment of FO2, obtained by omitting the successor relation, and the expressively equivalent fragment of UTL, obtained by omitting the next and previous connectives. We give three logic-to-automata translations which can be used to give upper bounds for FO2 and UTL and various sublogics. We apply these to get new bounds for both non-deterministic systems (hierarchical and recursive state machines, games) and for probabilistic systems (Markov chains, recursive Markov chains, and Markov decision processes). We couple these with matching lower-bound arguments. Next, we look at combining FO2 verification techniques with those for LTL. We present here a language that subsumes both FO2 and LTL, and inherits the model checking properties of both languages. Our results give both a unified approach to understanding the behaviour of FO2 and LTL, along with a nearly comprehensive picture of the complexity of verification for these logics and their sublogics.",
+    "year": 2013,
+    "venue": null,
+    "authors": [
+      "Michael Benedikt",
+      "Rastislav Lenhardt",
+      "James Worrell"
+    ],
+    "doi": null,
+    "arxiv_id": "1303.4533v2",
+    "url": "http://arxiv.org/abs/1303.4533v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.07486v1",
+    "title": "Shots and Boosters: Exploring the Use of Combined Prebunking Interventions to Raise Critical Thinking and Create Long-Term Protection Against Misinformation",
+    "abstract": "The problem of how to effectively mitigate the flow of misinformation remains a significant challenge. The classical approach to this is public disapproval of claims or \"debunking.\" The approach is still widely used on social media, but it has some severe limitations in terms of applicability and efficiency. An alternative strategy is to enhance individuals' critical thinking through educational interventions. Instead of merely disproving misinformation, these approaches aim to strengthen users' reasoning skills, enabling them to evaluate and reject false information independently. In this position paper, we explore a combination of intervention methods designed to improve critical thinking in the context of online media consumption. We highlight the role of AI in supporting different stages of these interventions and present a design concept that integrates AI-driven strategies to foster critical reasoning and media literacy.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Huiyun Tang",
+      "Anastasia Sergeeva"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.07486v1",
+    "url": "http://arxiv.org/abs/2505.07486v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2505.20313v1",
+    "title": "Reasoning in Neurosymbolic AI",
+    "abstract": "Knowledge representation and reasoning in neural networks have been a long-standing endeavor which has attracted much attention recently. The principled integration of reasoning and learning in neural networks is a main objective of the area of neurosymbolic Artificial Intelligence (AI). In this chapter, a simple energy-based neurosymbolic AI system is described that can represent and reason formally about any propositional logic formula. This creates a powerful combination of learning from data and knowledge and logical reasoning. We start by positioning neurosymbolic AI in the context of the current AI landscape that is unsurprisingly dominated by Large Language Models (LLMs). We identify important challenges of data efficiency, fairness and safety of LLMs that might be addressed by neurosymbolic reasoning systems with formal reasoning capabilities. We then discuss the representation of logic by the specific energy-based system, including illustrative examples and empirical evaluation of the correspondence between logical reasoning and energy minimization using Restricted Boltzmann Machines (RBM). Learning from data and knowledge is also evaluated empirically and compared with a symbolic, neural and a neurosymbolic system. Results reported in this chapter in an accessible way are expected to reignite the research on the use of neural networks as massively-parallel models for logical reasoning and promote the principled integration of reasoning and learning in deep networks. We conclude the chapter with a discussion of the importance of positioning neurosymbolic AI within a broader framework of formal reasoning and accountability in AI, discussing the challenges for neurosynbolic AI to tackle the various known problems of reliability of deep learning.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Son Tran",
+      "Edjard Mota",
+      "Artur d'Avila Garcez"
+    ],
+    "doi": null,
+    "arxiv_id": "2505.20313v1",
+    "url": "http://arxiv.org/abs/2505.20313v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2202.07412v1",
+    "title": "Knowledge Graph Reasoning with Logics and Embeddings: Survey and Perspective",
+    "abstract": "Knowledge graph (KG) reasoning is becoming increasingly popular in both academia and industry. Conventional KG reasoning based on symbolic logic is deterministic, with reasoning results being explainable, while modern embedding-based reasoning can deal with uncertainty and predict plausible knowledge, often with high efficiency via vector computation. A promising direction is to integrate both logic-based and embedding-based methods, with the vision to have advantages of both. It has attracted wide research attention with more and more works published in recent years. In this paper, we comprehensively survey these works, focusing on how logics and embeddings are integrated. We first briefly introduce preliminaries, then systematically categorize and discuss works of logic and embedding-aware KG reasoning from different perspectives, and finally conclude and discuss the challenges and further directions.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Wen Zhang",
+      "Jiaoyan Chen",
+      "Juan Li",
+      "Zezhong Xu",
+      "Jeff Z. Pan",
+      "Huajun Chen"
+    ],
+    "doi": null,
+    "arxiv_id": "2202.07412v1",
+    "url": "http://arxiv.org/abs/2202.07412v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:core_topic",
+      "route:title_like",
+      "route:hybrid",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1409.3819v1",
+    "title": "Coalescing: Syntactic Abstraction for Reasoning in First-Order Modal Logics",
+    "abstract": "We present a syntactic abstraction method to reason about first-order modal logics by using theorem provers for standard first-order logic and for propositional modal logic.",
+    "year": 2014,
+    "venue": null,
+    "authors": [
+      "Damien Doligez",
+      "Jael Kriener",
+      "Leslie Lamport",
+      "Tomer Libal",
+      "Stephan Merz"
+    ],
+    "doi": null,
+    "arxiv_id": "1409.3819v1",
+    "url": "http://arxiv.org/abs/1409.3819v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:query2doc",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

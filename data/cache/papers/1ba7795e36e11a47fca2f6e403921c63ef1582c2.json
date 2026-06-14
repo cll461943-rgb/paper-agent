@@ -1,0 +1,25 @@
+{
+  "paper_id": "pubmed:42277077",
+  "title": "AIDx: a locally deployable AI system for physician clinical decision support.",
+  "abstract": "The dynamic environment of medicine, particularly in settings such as the Emergency Department, challenges physicians with an influx of patient data and the need for swift diagnosis and treatment under high-pressure conditions. Numerous AI models have been developed for medical applications, yet their integration into hospital systems remains limited because they often do not align with existing clinical workflows. To address these challenges, I developed AIDx, an AI-powered system designed to help physicians streamline clinical decision making, improve diagnostic support, and provide an integrated platform for AI-assisted analysis. Unlike many standalone systems, AIDx is designed for interoperability with electronic health record (EHR) systems and can leverage supplementary tools such as updated medical knowledge bases and auxiliary AI models. At its core, AIDx includes AIDx-Copilot, a large language model fine-tuned on de-identified EHR data and optionally grounded using retrieval-augmented generation (RAG) from open medical references. This study is a text-only benchmark assessment. I evaluated AIDx-Copilot using the MultiMedQA benchmark suite under a unified, deterministic, single-pass protocol (temperature=0; no voting). Across nine MultiMedQA subsets (MedQA, PubMedQA, MedMCQA, and medically focused MMLU subjects), AIDx-Copilot achieves a mean accuracy of 83.61% (SD 7.37). I report per-dataset Wilson 95% confidence intervals to quantify uncertainty from finite test set sizes. To isolate component contributions, I conducted ablation experiments comparing the base model, the fine-tuned model without retrieval, and the fine-tuned model with RAG enabled. EHR-based fine-tuning accounts for the majority of the performance gain (+17.8 percentage points over the base model on average), while RAG provides a modest additional benefit (+0.4 points on average) that varies by dataset. A qualitative error analysis of 200 incorrectly answered items identifies knowledge gaps (41.0%) and reasoning errors (38.0%) as the dominant failure modes. Comparative numbers for larger proprietary systems are provided only as context in the supplementary material because they may use different prompts and inference settings. The deployment configuration (quantized weights and on-premises serving) supports fast inference and local deployment. Under the quantized configuration, the system achieves a median latency of 0.84 seconds per query and fits within 28.1 GB of VRAM across two commodity GPUs. The primary results are based on public benchmark evaluations without RAG; I did not perform clinical, user-study, or real-world validations. In addition, while AIDx is designed to support fully local operation, specific deployments may choose to use third-party embedding or vector-search services; this paper documents the data-flow boundary and a fully local configuration path.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Alan Alwakeel"
+  ],
+  "doi": "10.1038/s41598-026-47470-1",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42277077/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42277077"
+  }
+}

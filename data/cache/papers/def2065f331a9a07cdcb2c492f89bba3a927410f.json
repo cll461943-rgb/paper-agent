@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2601.13401v1",
+  "title": "Reasoning with Pixel-level Precision: QVLM Architecture and SQuID Dataset for Quantitative Geospatial Analytics",
+  "abstract": "Current Vision-Language Models (VLMs) fail at quantitative spatial reasoning because their architectures destroy pixel-level information required for counting and measurements. Vision encoders compress images through patch embeddings, reducing spatial indexing and losing the precise pixel-level tracking required for accurate counting. We present two contributions to address this fundamental limitation. First, we introduce SQuID (Satellite Quantitative Intelligence Dataset), a benchmark of 2,000 satellite image Question-Answer pairs with both numerical range and categorical answers, designed to evaluate quantitative spatial reasoning. The dataset spans three difficulty tiers with annotations automatically generated from human labels and their learned variability. Second, we propose QVLM (Quantitative Vision-Language Model), a code-generation architecture that maintains pixel precision by decoupling language understanding from visual analysis. Instead of encoding images into embeddings, QVLM generates executable code that first calls a segmentation model to obtain pixel-level masks, then operates directly on these masks, preserving spatial indexing throughout the reasoning process. Our experiments show that QVLM using GPT-5 as coder achieves 42.0% accuracy on SQuID compared to 28.1% for a VLM prompted with image-question pairs. Our work reveals that, for quantitative spatial reasoning, architectural decoupling enables better accuracy on quantitative tasks.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Peter A. Massih",
+    "Eric Cosatto"
+  ],
+  "doi": null,
+  "arxiv_id": "2601.13401v1",
+  "url": "http://arxiv.org/abs/2601.13401v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:broad_synonym"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

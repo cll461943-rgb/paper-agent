@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2603.03306v1",
+  "title": "Token-Oriented Object Notation vs JSON: A Benchmark of Plain and Constrained Decoding Generation",
+  "abstract": "Recently presented Token-Oriented Object Notation (TOON) aims to replace JSON as a serialization format for passing structured data to LLMs with significantly reduced token usage. While showing solid accuracy in LLM comprehension, there is a lack of tests against JSON generation. Though never present in training data, TOON syntax is simple enough to suggest one-shot in-context learning could support accurate generation. The inevitable prompt overhead can be an acceptable trade-off for shorter completions. To test this, we conducted a benchmark creating several test cases with regard to structural complexity, a validation pipeline, and comparing plain JSON generation vs structured output (via constrained decoding) JSON generation vs TOON one-shot in-context learning generation. JSON structured output was included to establish a minimum token budget baseline and to set a starting point for future experiments testing TOON constrained decoding inference enforcement. Key findings: TOON shows promising accuracy/token consumption ratio for in-domain generation tasks, though this advantage is often reduced by the \"prompt tax\" of instructional overhead in shorter contexts. Plain JSON generation shows the best one-shot and final accuracy, even compared with constrained decoding structured output, where the only significant advantage is the lowest token usage as a trade-off for slightly decreased accuracy overall and significant degradation for some models. Notably, for simple structures, this \"lowest token usage\" of constrained decoding outperformed even TOON, hinting that TOON enforcing via frameworks such as xgrammar may not yield the desired results. Furthermore, the results suggest a scaling hypothesis: TOON's true efficiency potential likely follows a non-linear curve, shining only beyond a specific point where cumulative syntax savings amortize the initial prompt overhead.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Ivan Matveev"
+  ],
+  "doi": null,
+  "arxiv_id": "2603.03306v1",
+  "url": "http://arxiv.org/abs/2603.03306v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hyde"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

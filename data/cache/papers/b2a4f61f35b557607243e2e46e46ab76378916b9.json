@@ -1,0 +1,26 @@
+{
+  "paper_id": "http://arxiv.org/abs/2605.29000v1",
+  "title": "Text-Preserving Lossy Text Compression: A Study of Strategic Deletion and LLM Reconstruction",
+  "abstract": "Traditional lossless text compression preserves every byte, but its gains on natural language are often modest in realistic operating regimes. We study \\emph{lossy semantic text compression}, where the encoder strategically deletes parts of the text and a large language model (LLM) reconstructs the original content from the retained skeleton. We benchmark a progression of deletion strategies, including uniform step deletion, word-length-guided deletion (WordLen), word-frequency-guided deletion (WordFreq), LP-optimized deletion (Opt), entropy-based deletion using GPT-2 surprisal, and hybrid methods that combine frequency and surprisal signals. Evaluation on the BBC News dataset across retention rates $\\r_{keep} \\in [0.1,0.9]$ shows three main findings. First, WordFreq is a strong low-cost baseline: despite using only a static frequency lookup, it remains competitive with much more expensive semantic methods while being far faster at the encoder. Second, semantic and hybrid methods provide their clearest gains at mild-to-moderate compression, whereas word-frequency deletion is often more robust at the lowest retention rates. Third, QLoRA fine-tuning yields a strong local decoder that is competitive with Gemini 2.0 Flash and is often strongest in decoder-only comparisons. Additional English and Chinese experiments show that the overall framework transfers across domains, while the best deletion rule remains dataset-dependent.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Yuchun Zou",
+    "Junhong Tong",
+    "Jun Li"
+  ],
+  "doi": null,
+  "arxiv_id": "2605.29000v1",
+  "url": "http://arxiv.org/abs/2605.29000v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

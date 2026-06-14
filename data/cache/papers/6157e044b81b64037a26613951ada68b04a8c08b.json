@@ -1,0 +1,30 @@
+{
+  "paper_id": "pubmed:42243383",
+  "title": "Lexical hints of accuracy in LLM reasoning chains.",
+  "abstract": "Fine-tuning Large Language Models (LLMs) with reinforcement learning to produce explicit Chain-of-Thought (CoT) reasoning improves performance across code, math, and general-knowledge benchmarks. However, on tasks where accuracy remains low, such as Humanity's Last Exam (HLE), models often express high self-confidence despite incorrect answers, revealing poor calibration. We investigate whether measurable properties of the CoT offer reliable, model-internal confidence signals. We analyze three feature classes: (i) CoT length, (ii) intra-CoT sentiment volatility, and (iii) lexicographic markers, including hedging terms. Using DeepSeek-R1, Claude 3.7 Sonnet, and Qwen-235B-Think, we evaluate these features on HLE, Omni-MATH, and GPQA-diamond. Across benchmarks, lexical uncertainty cues (e.g., guess, stuck, hard) are among the most informative indicators, while sentiment shifts provide a weaker but complementary signal. CoT length is informative only on Omni-MATH and GPQA, where accuracy is already high ([Formula: see text]), and carries no signal on the harder HLE ([Formula: see text]), indicating that CoT length predicts correctness only in the intermediate-difficulty benchmarks, i.e., inside the model's demonstrated capability, but still below saturation. Finally, uncertainty signals in the CoT are more salient than high-confidence markers, making errors easier to detect than correct responses. These findings support a lightweight post-hoc calibration method that complements unreliable self-reported probabilities.",
+  "year": 2026,
+  "venue": "Scientific reports",
+  "authors": [
+    "Arne Vanhoyweghen",
+    "Brecht Verbeken",
+    "Andres Algaba",
+    "Vincent Ginis"
+  ],
+  "doi": "10.1038/s41598-026-55000-2",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42243383/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:method_task",
+    "route:entity_dataset",
+    "route:core_topic"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42243383"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "paper_id": "pubmed:42197861",
+  "title": "Synthetic Spectrogram Augmentation via Semi-Supervised WGAN-GP for Acoustic Industrial Quality Inspection of Turbine Housings Under Extreme Data Scarcity.",
+  "abstract": "Impact-based acoustic inspection provides a rapid non-destructive approach for screening metallic components by analyzing the sound radiated after a controlled mechanical excitation. However, the limited availability of labeled data from defective parts remains a major challenge for deploying deep learning classifiers in production. This paper proposes a complete pipeline that converts raw impact-response audio recordings into magnitude log-spectrogram images and trains a semi-supervised Wasserstein GAN with gradient penalty (SS-WGAN-GP) designed to operate under extreme data scarcity. The architecture couples a shared convolutional backbone with two output heads: a Wasserstein critic for unsupervised discrimination between real and generated samples, and a binary classification head for supervised quality labeling, jointly optimized through a combined loss that balances Wasserstein distance, gradient penalty, and cross-entropy. A key property of the design is that the generator acts as a source of synthetic training samples, producing progressively more realistic spectrograms as training advances. These samples, in turn, enrich the feature representations learned by the shared backbone and improve the performance of the classification head. The classification head of the trained discriminator is deployed directly as the quality classifier, without requiring external data or post hoc retraining.",
+  "year": 2026,
+  "venue": "Sensors (Basel, Switzerland)",
+  "authors": [
+    "Ander Gracia Moisés",
+    "Óscar Del Barrio Farran",
+    "David Martinez García",
+    "María Puy Zudaire Latienda"
+  ],
+  "doi": "10.3390/s26103052",
+  "arxiv_id": null,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42197861/",
+  "citation_count": null,
+  "source": "pubmed",
+  "retrieval_path": [
+    "provider:pubmed",
+    "route:title_like",
+    "route:method_task"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "pubmed",
+    "pmid": "42197861"
+  }
+}

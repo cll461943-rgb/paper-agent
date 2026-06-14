@@ -1,0 +1,24 @@
+{
+  "paper_id": "http://arxiv.org/abs/2602.15214v1",
+  "title": "Decomposing Docker Container Startup Performance: A Three-Tier Measurement Study on Heterogeneous Infrastructure",
+  "abstract": "Container startup latency is a critical performance metric for CI/CD pipelines, serverless computing, and auto-scaling systems, yet practitioners lack empirical guidance on how infrastructure choices affect this latency. We present a systematic measurement study that decomposes Docker container startup into constituent operations across three heterogeneous infrastructure tiers: Azure Premium SSD (cloud SSD), Azure Standard HDD (cloud HDD), and macOS Docker Desktop (developer workstation with hypervisor-based virtualization). Using a reproducible benchmark suite that executes 50 iterations per test across 10 performance dimensions, we quantify previously under-characterized relationships between infrastructure configuration and container runtime behavior. Our key findings include: (1) container startup is dominated by runtime overhead rather than image size, with only 2.5% startup variation across images ranging from 5 MB to 155 MB on SSD; (2) storage tier selection imposes a 2.04x startup penalty (HDD 1157 ms vs. SSD 568 ms); (3) Docker Desktop's hypervisor layer introduces a 2.69x startup penalty and 9.5x higher CPU throttling variance compared to native Linux; (4) OverlayFS write performance collapses by up to two orders of magnitude compared to volume mounts on SSD-backed storage; and (5) Linux namespace creation contributes only 8-10 ms (<1.5%) of total startup time. All measurement scripts, raw data, and analysis tools are publicly available.",
+  "year": 2026,
+  "venue": null,
+  "authors": [
+    "Shamsher Khan"
+  ],
+  "doi": null,
+  "arxiv_id": "2602.15214v1",
+  "url": "http://arxiv.org/abs/2602.15214v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:title_like"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "paper_id": "http://arxiv.org/abs/2305.12356v1",
+  "title": "Integer or Floating Point? New Outlooks for Low-Bit Quantization on Large Language Models",
+  "abstract": "Efficient deployment of large language models (LLMs) necessitates low-bit quantization to minimize model size and inference cost. While low-bit integer formats (e.g., INT8/INT4) have been the conventional choice, emerging low-bit floating-point formats (e.g., FP8/FP4) offer a compelling alternative and are gaining support from cutting-edge hardware, such as NVIDIA's H100 GPU. However, the superiority of low-bit INT versus FP formats for quantization on LLMs remains unclear. In this study, we conduct a comparative analysis of INT and FP quantization with the same bit-width, revealing that the optimal quantization format varies across different layers due to the complexity and diversity of tensor distribution. Consequently, we advocate the Mixture of Formats Quantization (MoFQ), which selects the optimal format on a layer-wise basis. This simple yet effective approach achieves state-of-the-art results in both weight-only (W-only) and weight-activation (WA) post-training quantization scenarios when tested on LLaMA across various tasks. In 4-bit W-only quantization, MoFQ surpasses GPTQ without complex hyperparameter tuning and with an order of magnitude faster quantization speed. While in 8-bit WA quantization, MoFQ significantly outperforms INT/FP-only methods, achieving performance close to the full precision model. Notably, MoFQ incurs no hardware overhead compared to INT/FP-only quantization, as the bit-width remains unchanged.",
+  "year": 2023,
+  "venue": null,
+  "authors": [
+    "Yijia Zhang",
+    "Lingran Zhao",
+    "Shijie Cao",
+    "Wenqiang Wang",
+    "Ting Cao",
+    "Fan Yang",
+    "Mao Yang",
+    "Shanghang Zhang",
+    "Ningyi Xu"
+  ],
+  "doi": null,
+  "arxiv_id": "2305.12356v1",
+  "url": "http://arxiv.org/abs/2305.12356v1",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:core_topic",
+    "route:title_like",
+    "route:method_task",
+    "route:broad_synonym",
+    "route:original_clean",
+    "route:query2doc",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}

@@ -1,0 +1,947 @@
+[
+  {
+    "paper_id": "http://arxiv.org/abs/2103.01400v3",
+    "title": "Smoothness Analysis of Adversarial Training",
+    "abstract": "Deep neural networks are vulnerable to adversarial attacks. Recent studies about adversarial robustness focus on the loss landscape in the parameter space since it is related to optimization and generalization performance. These studies conclude that the difficulty of adversarial training is caused by the non-smoothness of the loss function: i.e., its gradient is not Lipschitz continuous. However, this analysis ignores the dependence of adversarial attacks on model parameters. Since adversarial attacks are optimized for models, they should depend on the parameters. Considering this dependence, we analyze the smoothness of the loss function of adversarial training using the optimal attacks for the model parameter in more detail. We reveal that the constraint of adversarial attacks is one cause of the non-smoothness and that the smoothness depends on the types of the constraints. Specifically, the $L_\\infty$ constraint can cause non-smoothness more than the $L_2$ constraint. Moreover, our analysis implies that if we flatten the loss function with respect to input data, the Lipschitz constant of the gradient of adversarial loss tends to increase. To address the non-smoothness, we show that EntropySGD smoothens the non-smooth loss and improves the performance of adversarial training.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Sekitoshi Kanai",
+      "Masanori Yamada",
+      "Hiroshi Takahashi",
+      "Yuki Yamanaka",
+      "Yasutoshi Ida"
+    ],
+    "doi": null,
+    "arxiv_id": "2103.01400v3",
+    "url": "http://arxiv.org/abs/2103.01400v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2205.14230v2",
+    "title": "Semi-supervised Semantics-guided Adversarial Training for Trajectory Prediction",
+    "abstract": "Predicting the trajectories of surrounding objects is a critical task for self-driving vehicles and many other autonomous systems. Recent works demonstrate that adversarial attacks on trajectory prediction, where small crafted perturbations are introduced to history trajectories, may significantly mislead the prediction of future trajectories and induce unsafe planning. However, few works have addressed enhancing the robustness of this important safety-critical task.In this paper, we present a novel adversarial training method for trajectory prediction. Compared with typical adversarial training on image tasks, our work is challenged by more random input with rich context and a lack of class labels. To address these challenges, we propose a method based on a semi-supervised adversarial autoencoder, which models disentangled semantic features with domain knowledge and provides additional latent labels for the adversarial training. Extensive experiments with different types of attacks demonstrate that our Semisupervised Semantics-guided Adversarial Training (SSAT) method can effectively mitigate the impact of adversarial attacks by up to 73% and outperform other popular defense methods. In addition, experiments show that our method can significantly improve the system's robust generalization to unseen patterns of attacks. We believe that such semantics-guided architecture and advancement on robust generalization is an important step for developing robust prediction models and enabling safe decision-making.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Ruochen Jiao",
+      "Xiangguo Liu",
+      "Takami Sato",
+      "Qi Alfred Chen",
+      "Qi Zhu"
+    ],
+    "doi": null,
+    "arxiv_id": "2205.14230v2",
+    "url": "http://arxiv.org/abs/2205.14230v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:entity_dataset"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2010.01736v2",
+    "title": "Geometry-aware Instance-reweighted Adversarial Training",
+    "abstract": "In adversarial machine learning, there was a common belief that robustness and accuracy hurt each other. The belief was challenged by recent studies where we can maintain the robustness and improve the accuracy. However, the other direction, whether we can keep the accuracy while improving the robustness, is conceptually and practically more interesting, since robust accuracy should be lower than standard accuracy for any model. In this paper, we show this direction is also promising. Firstly, we find even over-parameterized deep networks may still have insufficient model capacity, because adversarial training has an overwhelming smoothing effect. Secondly, given limited model capacity, we argue adversarial data should have unequal importance: geometrically speaking, a natural data point closer to/farther from the class boundary is less/more robust, and the corresponding adversarial data point should be assigned with larger/smaller weight. Finally, to implement the idea, we propose geometry-aware instance-reweighted adversarial training, where the weights are based on how difficult it is to attack a natural data point. Experiments show that our proposal boosts the robustness of standard adversarial training; combining two directions, we improve both robustness and accuracy of standard adversarial training.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Jingfeng Zhang",
+      "Jianing Zhu",
+      "Gang Niu",
+      "Bo Han",
+      "Masashi Sugiyama",
+      "Mohan Kankanhalli"
+    ],
+    "doi": null,
+    "arxiv_id": "2010.01736v2",
+    "url": "http://arxiv.org/abs/2010.01736v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hybrid",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1801.05075v2",
+    "title": "A Human-Grounded Evaluation Benchmark for Local Explanations of Machine Learning",
+    "abstract": "Research in interpretable machine learning proposes different computational and human subject approaches to evaluate model saliency explanations. These approaches measure different qualities of explanations to achieve diverse goals in designing interpretable machine learning systems. In this paper, we propose a human attention benchmark for image and text domains using multi-layer human attention masks aggregated from multiple human annotators. We then present an evaluation study to evaluate model saliency explanations obtained using Grad-cam and LIME techniques. We demonstrate our benchmark's utility for quantitative evaluation of model explanations by comparing it with human subjective ratings and ground-truth single-layer segmentation masks evaluations. Our study results show that our threshold agnostic evaluation method with the human attention baseline is more effective than single-layer object segmentation masks to ground truth. Our experiments also reveal user biases in the subjective rating of model saliency explanations.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Sina Mohseni",
+      "Jeremy E. Block",
+      "Eric D. Ragan"
+    ],
+    "doi": null,
+    "arxiv_id": "1801.05075v2",
+    "url": "http://arxiv.org/abs/1801.05075v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2005.10190v4",
+    "title": "Feature Purification: How Adversarial Training Performs Robust Deep Learning",
+    "abstract": "Despite the empirical success of using Adversarial Training to defend deep learning models against adversarial perturbations, so far, it still remains rather unclear what the principles are behind the existence of adversarial perturbations, and what adversarial training does to the neural network to remove them. In this paper, we present a principle that we call Feature Purification, where we show one of the causes of the existence of adversarial examples is the accumulation of certain small dense mixtures in the hidden weights during the training process of a neural network; and more importantly, one of the goals of adversarial training is to remove such mixtures to purify hidden weights. We present both experiments on the CIFAR-10 dataset to illustrate this principle, and a theoretical result proving that for certain natural classification tasks, training a two-layer neural network with ReLU activation using randomly initialized gradient descent indeed satisfies this principle. Technically, we give, to the best of our knowledge, the first result proving that the following two can hold simultaneously for training a neural network with ReLU activation. (1) Training over the original data is indeed non-robust to small adversarial perturbations of some radius. (2) Adversarial training, even with an empirical perturbation algorithm such as FGM, can in fact be provably robust against ANY perturbations of the same radius. Finally, we also prove a complexity lower bound, showing that low complexity models such as linear classifiers, low-degree polynomials, or even the neural tangent kernel for this network, CANNOT defend against perturbations of this same radius, no matter what algorithms are used to train them.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Zeyuan Allen-Zhu",
+      "Yuanzhi Li"
+    ],
+    "doi": null,
+    "arxiv_id": "2005.10190v4",
+    "url": "http://arxiv.org/abs/2005.10190v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2104.09630v2",
+    "title": "Quaternion Generative Adversarial Networks",
+    "abstract": "Latest Generative Adversarial Networks (GANs) are gathering outstanding results through a large-scale training, thus employing models composed of millions of parameters requiring extensive computational capabilities. Building such huge models undermines their replicability and increases the training instability. Moreover, multi-channel data, such as images or audio, are usually processed by realvalued convolutional networks that flatten and concatenate the input, often losing intra-channel spatial relations. To address these issues related to complexity and information loss, we propose a family of quaternion-valued generative adversarial networks (QGANs). QGANs exploit the properties of quaternion algebra, e.g., the Hamilton product, that allows to process channels as a single entity and capture internal latent relations, while reducing by a factor of 4 the overall number of parameters. We show how to design QGANs and to extend the proposed approach even to advanced models.We compare the proposed QGANs with real-valued counterparts on several image generation benchmarks. Results show that QGANs are able to obtain better FID scores than real-valued GANs and to generate visually pleasing images. Furthermore, QGANs save up to 75% of the training parameters. We believe these results may pave the way to novel, more accessible, GANs capable of improving performance and saving computational resources.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Eleonora Grassucci",
+      "Edoardo Cicero",
+      "Danilo Comminiello"
+    ],
+    "doi": null,
+    "arxiv_id": "2104.09630v2",
+    "url": "http://arxiv.org/abs/2104.09630v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2110.03135v4",
+    "title": "Label Noise in Adversarial Training: A Novel Perspective to Study Robust Overfitting",
+    "abstract": "We show that label noise exists in adversarial training. Such label noise is due to the mismatch between the true label distribution of adversarial examples and the label inherited from clean examples - the true label distribution is distorted by the adversarial perturbation, but is neglected by the common practice that inherits labels from clean examples. Recognizing label noise sheds insights on the prevalence of robust overfitting in adversarial training, and explains its intriguing dependence on perturbation radius and data quality. Also, our label noise perspective aligns well with our observations of the epoch-wise double descent in adversarial training. Guided by our analyses, we proposed a method to automatically calibrate the label to address the label noise and robust overfitting. Our method achieves consistent performance improvements across various models and datasets without introducing new hyper-parameters or additional tuning.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Chengyu Dong",
+      "Liyuan Liu",
+      "Jingbo Shang"
+    ],
+    "doi": null,
+    "arxiv_id": "2110.03135v4",
+    "url": "http://arxiv.org/abs/2110.03135v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1905.11475v4",
+    "title": "GAT: Generative Adversarial Training for Adversarial Example Detection and Robust Classification",
+    "abstract": "The vulnerabilities of deep neural networks against adversarial examples have become a significant concern for deploying these models in sensitive domains. Devising a definitive defense against such attacks is proven to be challenging, and the methods relying on detecting adversarial samples are only valid when the attacker is oblivious to the detection mechanism. In this paper we propose a principled adversarial example detection method that can withstand norm-constrained white-box attacks. Inspired by one-versus-the-rest classification, in a K class classification problem, we train K binary classifiers where the i-th binary classifier is used to distinguish between clean data of class i and adversarially perturbed samples of other classes. At test time, we first use a trained classifier to get the predicted label (say k) of the input, and then use the k-th binary classifier to determine whether the input is a clean sample (of class k) or an adversarially perturbed example (of other classes). We further devise a generative approach to detecting/classifying adversarial examples by interpreting each binary classifier as an unnormalized density model of the class-conditional data. We provide comprehensive evaluation of the above adversarial example detection/classification methods, and demonstrate their competitive performances and compelling properties.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Xuwang Yin",
+      "Soheil Kolouri",
+      "Gustavo K. Rohde"
+    ],
+    "doi": null,
+    "arxiv_id": "1905.11475v4",
+    "url": "http://arxiv.org/abs/1905.11475v4",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.13160v2",
+    "title": "Data-Driven DRO and Economic Decision Theory: An Analytical Synthesis With Bayesian Nonparametric Advancements",
+    "abstract": "We develop an analytical synthesis that bridges data-driven Distributionally Robust Optimization (DRO) and Economic Decision Theory under Ambiguity (DTA). By reinterpreting standard regularization and DRO techniques as data-driven counterparts of ambiguity-averse decision models, we provide a unified framework that clarifies their intrinsic connections. Building on this synthesis, we propose a novel DRO approach that leverages a popular DTA model of smooth ambiguity-averse preferences together with tools from Bayesian nonparametric statistics. Our baseline framework employs Dirichlet Process (DP) posteriors, which naturally extend to heterogeneous data sources via Hierarchical Dirichlet Processes (HDPs), and can be further refined to induce outlier robustness through a procedure that selectively filters poorly-fitting observations during training. Theoretical performance guarantees and convergence results, together with extensive simulations and real-data experiments, illustrate the method's favorable performance in terms of prediction accuracy and stability.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Nicola Bariletto",
+      "Khai Nguyen",
+      "Nhat Ho"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.13160v2",
+    "url": "http://arxiv.org/abs/2405.13160v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:query2doc",
+      "route:hyde",
+      "route:title_like",
+      "route:entity_dataset",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2006.11604v1",
+    "title": "How do SGD hyperparameters in natural training affect adversarial robustness?",
+    "abstract": "Learning rate, batch size and momentum are three important hyperparameters in the SGD algorithm. It is known from the work of Jastrzebski et al. arXiv:1711.04623 that large batch size training of neural networks yields models which do not generalize well. Yao et al. arXiv:1802.08241 observe that large batch training yields models that have poor adversarial robustness. In the same paper, the authors train models with different batch sizes and compute the eigenvalues of the Hessian of loss function. They observe that as the batch size increases, the dominant eigenvalues of the Hessian become larger. They also show that both adversarial training and small-batch training leads to a drop in the dominant eigenvalues of the Hessian or lowering its spectrum. They combine adversarial training and second order information to come up with a new large-batch training algorithm and obtain robust models with good generalization. In this paper, we empirically observe the effect of the SGD hyperparameters on the accuracy and adversarial robustness of networks trained with unperturbed samples. Jastrzebski et al. considered training models with a fixed learning rate to batch size ratio. They observed that higher the ratio, better is the generalization. We observe that networks trained with constant learning rate to batch size ratio, as proposed in Jastrzebski et al., yield models which generalize well and also have almost constant adversarial robustness, independent of the batch size. We observe that momentum is more effective with varying batch sizes and a fixed learning rate than with constant learning rate to batch size ratio based SGD training.",
+    "year": 2020,
+    "venue": null,
+    "authors": [
+      "Sandesh Kamath",
+      "Amit Deshpande",
+      "K V Subrahmanyam"
+    ],
+    "doi": null,
+    "arxiv_id": "2006.11604v1",
+    "url": "http://arxiv.org/abs/2006.11604v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2407.15549v3",
+    "title": "Latent Adversarial Training Improves Robustness to Persistent Harmful Behaviors in LLMs",
+    "abstract": "Large language models (LLMs) can often be made to behave in undesirable ways that they are explicitly fine-tuned not to. For example, the LLM red-teaming literature has produced a wide variety of 'jailbreaking' techniques to elicit harmful text from models that were fine-tuned to be harmless. Recent work on red-teaming, model editing, and interpretability suggests that this challenge stems from how (adversarial) fine-tuning largely serves to suppress rather than remove undesirable capabilities from LLMs. Prior work has introduced latent adversarial training (LAT) as a way to improve robustness to broad classes of failures. These prior works have considered untargeted latent space attacks where the adversary perturbs latent activations to maximize loss on examples of desirable behavior. Untargeted LAT can provide a generic type of robustness but does not leverage information about specific failure modes. Here, we experiment with targeted LAT where the adversary seeks to minimize loss on a specific competing task. We find that it can augment a wide variety of state-of-the-art methods. First, we use targeted LAT to improve robustness to jailbreaks, outperforming a strong R2D2 baseline with orders of magnitude less compute. Second, we use it to more effectively remove backdoors with no knowledge of the trigger. Finally, we use it to more effectively unlearn knowledge for specific undesirable tasks in a way that is also more robust to re-learning. Overall, our results suggest that targeted LAT can be an effective tool for defending against harmful behaviors from LLMs.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Abhay Sheshadri",
+      "Aidan Ewart",
+      "Phillip Guo",
+      "Aengus Lynch",
+      "Cindy Wu",
+      "Vivek Hebbar",
+      "Henry Sleight",
+      "Asa Cooper Stickland",
+      "Ethan Perez",
+      "Dylan Hadfield-Menell",
+      "Stephen Casper"
+    ],
+    "doi": null,
+    "arxiv_id": "2407.15549v3",
+    "url": "http://arxiv.org/abs/2407.15549v3",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2212.05680v2",
+    "title": "REAP: A Large-Scale Realistic Adversarial Patch Benchmark",
+    "abstract": "Machine learning models are known to be susceptible to adversarial perturbation. One famous attack is the adversarial patch, a sticker with a particularly crafted pattern that makes the model incorrectly predict the object it is placed on. This attack presents a critical threat to cyber-physical systems that rely on cameras such as autonomous cars. Despite the significance of the problem, conducting research in this setting has been difficult; evaluating attacks and defenses in the real world is exceptionally costly while synthetic data are unrealistic. In this work, we propose the REAP (REalistic Adversarial Patch) benchmark, a digital benchmark that allows the user to evaluate patch attacks on real images, and under real-world conditions. Built on top of the Mapillary Vistas dataset, our benchmark contains over 14,000 traffic signs. Each sign is augmented with a pair of geometric and lighting transformations, which can be used to apply a digitally generated patch realistically onto the sign. Using our benchmark, we perform the first large-scale assessments of adversarial patch attacks under realistic conditions. Our experiments suggest that adversarial patch attacks may present a smaller threat than previously believed and that the success rate of an attack on simpler digital simulations is not predictive of its actual effectiveness in practice. We release our benchmark publicly at https://github.com/wagner-group/reap-benchmark.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Nabeel Hingun",
+      "Chawin Sitawarin",
+      "Jerry Li",
+      "David Wagner"
+    ],
+    "doi": null,
+    "arxiv_id": "2212.05680v2",
+    "url": "http://arxiv.org/abs/2212.05680v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2403.03788v1",
+    "title": "PPTC-R benchmark: Towards Evaluating the Robustness of Large Language Models for PowerPoint Task Completion",
+    "abstract": "The growing dependence on Large Language Models (LLMs) for finishing user instructions necessitates a comprehensive understanding of their robustness to complex task completion in real-world situations. To address this critical need, we propose the PowerPoint Task Completion Robustness benchmark (PPTC-R) to measure LLMs' robustness to the user PPT task instruction and software version. Specifically, we construct adversarial user instructions by attacking user instructions at sentence, semantic, and multi-language levels. To assess the robustness of Language Models to software versions, we vary the number of provided APIs to simulate both the newest version and earlier version settings. Subsequently, we test 3 closed-source and 4 open-source LLMs using a benchmark that incorporates these robustness settings, aiming to evaluate how deviations impact LLMs' API calls for task completion. We find that GPT-4 exhibits the highest performance and strong robustness in our benchmark, particularly in the version update and the multilingual settings. However, we find that all LLMs lose their robustness when confronted with multiple challenges (e.g., multi-turn) simultaneously, leading to significant performance drops. We further analyze the robustness behavior and error reasons of LLMs in our benchmark, which provide valuable insights for researchers to understand the LLM's robustness in task completion and develop more robust LLMs and agents. We release the code and data at \\url{https://github.com/ZekaiGalaxy/PPTCR}.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Zekai Zhang",
+      "Yiduo Guo",
+      "Yaobo Liang",
+      "Dongyan Zhao",
+      "Nan Duan"
+    ],
+    "doi": null,
+    "arxiv_id": "2403.03788v1",
+    "url": "http://arxiv.org/abs/2403.03788v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2504.04596v1",
+    "title": "SECQUE: A Benchmark for Evaluating Real-World Financial Analysis Capabilities",
+    "abstract": "We introduce SECQUE, a comprehensive benchmark for evaluating large language models (LLMs) in financial analysis tasks. SECQUE comprises 565 expert-written questions covering SEC filings analysis across four key categories: comparison analysis, ratio calculation, risk assessment, and financial insight generation. To assess model performance, we develop SECQUE-Judge, an evaluation mechanism leveraging multiple LLM-based judges, which demonstrates strong alignment with human evaluations. Additionally, we provide an extensive analysis of various models' performance on our benchmark. By making SECQUE publicly available, we aim to facilitate further research and advancements in financial AI.",
+    "year": 2025,
+    "venue": null,
+    "authors": [
+      "Noga Ben Yoash",
+      "Meni Brief",
+      "Oded Ovadia",
+      "Gil Shenderovitz",
+      "Moshik Mishaeli",
+      "Rachel Lemberg",
+      "Eitam Sheetrit"
+    ],
+    "doi": null,
+    "arxiv_id": "2504.04596v1",
+    "url": "http://arxiv.org/abs/2504.04596v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2101.11453v2",
+    "title": "Meta Adversarial Training against Universal Patches",
+    "abstract": "Recently demonstrated physical-world adversarial attacks have exposed vulnerabilities in perception systems that pose severe risks for safety-critical applications such as autonomous driving. These attacks place adversarial artifacts in the physical world that indirectly cause the addition of a universal patch to inputs of a model that can fool it in a variety of contexts. Adversarial training is the most effective defense against image-dependent adversarial attacks. However, tailoring adversarial training to universal patches is computationally expensive since the optimal universal patch depends on the model weights which change during training. We propose meta adversarial training (MAT), a novel combination of adversarial training with meta-learning, which overcomes this challenge by meta-learning universal patches along with model training. MAT requires little extra computation while continuously adapting a large set of patches to the current model. MAT considerably increases robustness against universal patch attacks on image classification and traffic-light detection.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Jan Hendrik Metzen",
+      "Nicole Finnie",
+      "Robin Hutmacher"
+    ],
+    "doi": null,
+    "arxiv_id": "2101.11453v2",
+    "url": "http://arxiv.org/abs/2101.11453v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1909.04779v1",
+    "title": "Localized Adversarial Training for Increased Accuracy and Robustness in Image Classification",
+    "abstract": "Today's state-of-the-art image classifiers fail to correctly classify carefully manipulated adversarial images. In this work, we develop a new, localized adversarial attack that generates adversarial examples by imperceptibly altering the backgrounds of normal images. We first use this attack to highlight the unnecessary sensitivity of neural networks to changes in the background of an image, then use it as part of a new training technique: localized adversarial training. By including locally adversarial images in the training set, we are able to create a classifier that suffers less loss than a non-adversarially trained counterpart model on both natural and adversarial inputs. The evaluation of our localized adversarial training algorithm on MNIST and CIFAR-10 datasets shows decreased accuracy loss on natural images, and increased robustness against adversarial inputs.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Eitan Rothberg",
+      "Tingting Chen",
+      "Luo Jie",
+      "Hao Ji"
+    ],
+    "doi": null,
+    "arxiv_id": "1909.04779v1",
+    "url": "http://arxiv.org/abs/1909.04779v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2203.13890v2",
+    "title": "Improving Robustness of Jet Tagging Algorithms with Adversarial Training",
+    "abstract": "Deep learning is a standard tool in the field of high-energy physics, facilitating considerable sensitivity enhancements for numerous analysis strategies. In particular, in identification of physics objects, such as jet flavor tagging, complex neural network architectures play a major role. However, these methods are reliant on accurate simulations. Mismodeling can lead to non-negligible differences in performance in data that need to be measured and calibrated against. We investigate the classifier response to input data with injected mismodelings and probe the vulnerability of flavor tagging algorithms via application of adversarial attacks. Subsequently, we present an adversarial training strategy that mitigates the impact of such simulated attacks and improves the classifier robustness. We examine the relationship between performance and vulnerability and show that this method constitutes a promising approach to reduce the vulnerability to poor modeling.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Annika Stein",
+      "Xavier Coubez",
+      "Spandan Mondal",
+      "Andrzej Novak",
+      "Alexander Schmidt"
+    ],
+    "doi": null,
+    "arxiv_id": "2203.13890v2",
+    "url": "http://arxiv.org/abs/2203.13890v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:broad_synonym",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.05644v1",
+    "title": "Inverting The Generator Of A Generative Adversarial Network",
+    "abstract": "Generative adversarial networks (GANs) learn to synthesise new samples from a high-dimensional distribution by passing samples drawn from a latent space through a generative network. When the high-dimensional distribution describes images of a particular data set, the network should learn to generate visually similar image samples for latent variables that are close to each other in the latent space. For tasks such as image retrieval and image classification, it may be useful to exploit the arrangement of the latent space by projecting images into it, and using this as a representation for discriminative tasks. GANs often consist of multiple layers of non-linear computations, making them very difficult to invert. This paper introduces techniques for projecting image samples into the latent space using any pre-trained GAN, provided that the computational graph is available. We evaluate these techniques on both MNIST digits and Omniglot handwritten characters. In the case of MNIST digits, we show that projections into the latent space maintain information about the style and the identity of the digit. In the case of Omniglot characters, we show that even characters from alphabets that have not been seen during training may be projected well into the latent space; this suggests that this approach may have applications in one-shot learning.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Antonia Creswell",
+      "Anil Anthony Bharath"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.05644v1",
+    "url": "http://arxiv.org/abs/1611.05644v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1812.03411v2",
+    "title": "Feature Denoising for Improving Adversarial Robustness",
+    "abstract": "Adversarial attacks to image classification systems present challenges to convolutional networks and opportunities for understanding them. This study suggests that adversarial perturbations on images lead to noise in the features constructed by these networks. Motivated by this observation, we develop new network architectures that increase adversarial robustness by performing feature denoising. Specifically, our networks contain blocks that denoise the features using non-local means or other filters; the entire networks are trained end-to-end. When combined with adversarial training, our feature denoising networks substantially improve the state-of-the-art in adversarial robustness in both white-box and black-box attack settings. On ImageNet, under 10-iteration PGD white-box attacks where prior art has 27.9% accuracy, our method achieves 55.7%; even under extreme 2000-iteration PGD white-box attacks, our method secures 42.6% accuracy. Our method was ranked first in Competition on Adversarial Attacks and Defenses (CAAD) 2018 --- it achieved 50.6% classification accuracy on a secret, ImageNet-like test dataset against 48 unknown attackers, surpassing the runner-up approach by ~10%. Code is available at https://github.com/facebookresearch/ImageNet-Adversarial-Training.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Cihang Xie",
+      "Yuxin Wu",
+      "Laurens van der Maaten",
+      "Alan Yuille",
+      "Kaiming He"
+    ],
+    "doi": null,
+    "arxiv_id": "1812.03411v2",
+    "url": "http://arxiv.org/abs/1812.03411v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2108.11785v1",
+    "title": "A Hierarchical Assessment of Adversarial Severity",
+    "abstract": "Adversarial Robustness is a growing field that evidences the brittleness of neural networks. Although the literature on adversarial robustness is vast, a dimension is missing in these studies: assessing how severe the mistakes are. We call this notion \"Adversarial Severity\" since it quantifies the downstream impact of adversarial corruptions by computing the semantic error between the misclassification and the proper label. We propose to study the effects of adversarial noise by measuring the Robustness and Severity into a large-scale dataset: iNaturalist-H. Our contributions are: (i) we introduce novel Hierarchical Attacks that harness the rich structured space of labels to create adversarial examples. (ii) These attacks allow us to benchmark the Adversarial Robustness and Severity of classification models. (iii) We enhance the traditional adversarial training with a simple yet effective Hierarchical Curriculum Training to learn these nodes gradually within the hierarchical tree. We perform extensive experiments showing that hierarchical defenses allow deep models to boost the adversarial Robustness by 1.85% and reduce the severity of all attacks by 0.17, on average.",
+    "year": 2021,
+    "venue": null,
+    "authors": [
+      "Guillaume Jeanneret",
+      "Juan C Perez",
+      "Pablo Arbelaez"
+    ],
+    "doi": null,
+    "arxiv_id": "2108.11785v1",
+    "url": "http://arxiv.org/abs/2108.11785v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2406.09181v2",
+    "title": "A Large-scale Universal Evaluation Benchmark For Face Forgery Detection",
+    "abstract": "With the rapid development of AI-generated content (AIGC) technology, the production of realistic fake facial images and videos that deceive human visual perception has become possible. Consequently, various face forgery detection techniques have been proposed to identify such fake facial content. However, evaluating the effectiveness and generalizability of these detection techniques remains a significant challenge. To address this, we have constructed a large-scale evaluation benchmark called DeepFaceGen, aimed at quantitatively assessing the effectiveness of face forgery detection and facilitating the iterative development of forgery detection technology. DeepFaceGen consists of 776,990 real face image/video samples and 773,812 face forgery image/video samples, generated using 34 mainstream face generation techniques. During the construction process, we carefully consider important factors such as content diversity, fairness across ethnicities, and availability of comprehensive labels, in order to ensure the versatility and convenience of DeepFaceGen. Subsequently, DeepFaceGen is employed in this study to evaluate and analyze the performance of 13 mainstream face forgery detection techniques from various perspectives. Through extensive experimental analysis, we derive significant findings and propose potential directions for future research. The code and dataset for DeepFaceGen are available at https://github.com/HengruiLou/DeepFaceGen.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Yijun Bei",
+      "Hengrui Lou",
+      "Jinsong Geng",
+      "Erteng Liu",
+      "Lechao Cheng",
+      "Jie Song",
+      "Mingli Song",
+      "Zunlei Feng"
+    ],
+    "doi": null,
+    "arxiv_id": "2406.09181v2",
+    "url": "http://arxiv.org/abs/2406.09181v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.08408v1",
+    "title": "Semantic Segmentation using Adversarial Networks",
+    "abstract": "Adversarial training has been shown to produce state of the art results for generative image modeling. In this paper we propose an adversarial training approach to train semantic segmentation models. We train a convolutional semantic segmentation network along with an adversarial network that discriminates segmentation maps coming either from the ground truth or from the segmentation network. The motivation for our approach is that it can detect and correct higher-order inconsistencies between ground truth segmentation maps and the ones produced by the segmentation net. Our experiments show that our adversarial training approach leads to improved accuracy on the Stanford Background and PASCAL VOC 2012 datasets.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Pauline Luc",
+      "Camille Couprie",
+      "Soumith Chintala",
+      "Jakob Verbeek"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.08408v1",
+    "url": "http://arxiv.org/abs/1611.08408v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1807.10272v2",
+    "title": "Evaluating and Understanding the Robustness of Adversarial Logit Pairing",
+    "abstract": "We evaluate the robustness of Adversarial Logit Pairing, a recently proposed defense against adversarial examples. We find that a network trained with Adversarial Logit Pairing achieves 0.6% accuracy in the threat model in which the defense is considered. We provide a brief overview of the defense and the threat models/claims considered, as well as a discussion of the methodology and results of our attack, which may offer insights into the reasons underlying the vulnerability of ALP to adversarial attack.",
+    "year": 2018,
+    "venue": null,
+    "authors": [
+      "Logan Engstrom",
+      "Andrew Ilyas",
+      "Anish Athalye"
+    ],
+    "doi": null,
+    "arxiv_id": "1807.10272v2",
+    "url": "http://arxiv.org/abs/1807.10272v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:hyde",
+      "route:method_task"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2604.22853v1",
+    "title": "FastAT Benchmark: A Comprehensive Framework for Fair Evaluation of Fast Adversarial Training Methods",
+    "abstract": "Fast Adversarial Training (FastAT) seeks to achieve adversarial robustness at a fraction of the computational cost incurred by standard multi-step methods such as PGD-AT. Although numerous FastAT techniques have been proposed in recent years, fair comparison among them remains elusive. Existing benchmarks and public leaderboards typically permit diverse model architectures, varying training configurations, and external data sources, making it unclear whether reported improvements reflect genuine algorithmic advances or merely more favorable experimental conditions. To address this problem, we introduce the FastAT Benchmark, a controlled evaluation framework built on three core design principles: unified architecture requirements, standardized training settings, and strict prohibition of external or synthetic data. The benchmark implements over twenty representative FastAT methods within a single codebase, enabling direct and reproducible comparison. Each method is assessed through a dual-metric evaluation framework that measures both adversarial robustness (accuracy under PGD, AutoAttack, and CR Attack) and computational cost (GPU training time and peak memory footprint). Comprehensive experiments on CIFAR-10, CIFAR-100, and Tiny-ImageNet provide reliable baseline measurements and reveal that well-designed single-step methods can match or surpass PGD-AT robustness at substantially lower cost, while no single method dominates across all evaluation dimensions. The complete benchmark, including source code, configuration files, and experimental results, is publicly available to support transparent and fair evaluation of future FastAT research.",
+    "year": 2026,
+    "venue": null,
+    "authors": [
+      "Chao Pan",
+      "Xin Yao"
+    ],
+    "doi": null,
+    "arxiv_id": "2604.22853v1",
+    "url": "http://arxiv.org/abs/2604.22853v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1611.06953v1",
+    "title": "Associative Adversarial Networks",
+    "abstract": "We propose a higher-level associative memory for learning adversarial networks. Generative adversarial network (GAN) framework has a discriminator and a generator network. The generator (G) maps white noise (z) to data samples while the discriminator (D) maps data samples to a single scalar. To do so, G learns how to map from high-level representation space to data space, and D learns to do the opposite. We argue that higher-level representation spaces need not necessarily follow a uniform probability distribution. In this work, we use Restricted Boltzmann Machines (RBMs) as a higher-level associative memory and learn the probability distribution for the high-level features generated by D. The associative memory samples its underlying probability distribution and G learns how to map these samples to data space. The proposed associative adversarial networks (AANs) are generative models in the higher-levels of the learning, and use adversarial non-stochastic models D and G for learning the mapping between data and higher-level representation spaces. Experiments show the potential of the proposed networks.",
+    "year": 2016,
+    "venue": null,
+    "authors": [
+      "Tarik Arici",
+      "Asli Celikyilmaz"
+    ],
+    "doi": null,
+    "arxiv_id": "1611.06953v1",
+    "url": "http://arxiv.org/abs/1611.06953v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1706.06749v1",
+    "title": "Cross-language Learning with Adversarial Neural Networks: Application to Community Question Answering",
+    "abstract": "We address the problem of cross-language adaptation for question-question similarity reranking in community question answering, with the objective to port a system trained on one input language to another input language given labeled training data for the first language and only unlabeled data for the second language. In particular, we propose to use adversarial training of neural networks to learn high-level features that are discriminative for the main learning task, and at the same time are invariant across the input languages. The evaluation results show sizable improvements for our cross-language adversarial neural network (CLANN) model over a strong non-adversarial system.",
+    "year": 2017,
+    "venue": null,
+    "authors": [
+      "Shafiq Joty",
+      "Preslav Nakov",
+      "Lluís Màrquez",
+      "Israa Jaradat"
+    ],
+    "doi": null,
+    "arxiv_id": "1706.06749v1",
+    "url": "http://arxiv.org/abs/1706.06749v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:title_like",
+      "route:core_topic",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/1902.06705v2",
+    "title": "On Evaluating Adversarial Robustness",
+    "abstract": "Correctly evaluating defenses against adversarial examples has proven to be extremely difficult. Despite the significant amount of recent work attempting to design defenses that withstand adaptive attacks, few have succeeded; most papers that propose defenses are quickly shown to be incorrect. We believe a large contributing factor is the difficulty of performing security evaluations. In this paper, we discuss the methodological foundations, review commonly accepted best practices, and suggest new methods for evaluating defenses to adversarial examples. We hope that both researchers developing defenses as well as readers and reviewers who wish to understand the completeness of an evaluation consider our advice in order to avoid common pitfalls.",
+    "year": 2019,
+    "venue": null,
+    "authors": [
+      "Nicholas Carlini",
+      "Anish Athalye",
+      "Nicolas Papernot",
+      "Wieland Brendel",
+      "Jonas Rauber",
+      "Dimitris Tsipras",
+      "Ian Goodfellow",
+      "Aleksander Madry",
+      "Alexey Kurakin"
+    ],
+    "doi": null,
+    "arxiv_id": "1902.06705v2",
+    "url": "http://arxiv.org/abs/1902.06705v2",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2201.00912v1",
+    "title": "An Adversarial Benchmark for Fake News Detection Models",
+    "abstract": "With the proliferation of online misinformation, fake news detection has gained importance in the artificial intelligence community. In this paper, we propose an adversarial benchmark that tests the ability of fake news detectors to reason about real-world facts. We formulate adversarial attacks that target three aspects of \"understanding\": compositional semantics, lexical relations, and sensitivity to modifiers. We test our benchmark using BERT classifiers fine-tuned on the LIAR arXiv:arch-ive/1705648 and Kaggle Fake-News datasets, and show that both models fail to respond to changes in compositional and lexical meaning. Our results strengthen the need for such models to be used in conjunction with other fact checking methods.",
+    "year": 2022,
+    "venue": null,
+    "authors": [
+      "Lorenzo Jaime Yu Flores",
+      "Yiding Hao"
+    ],
+    "doi": null,
+    "arxiv_id": "2201.00912v1",
+    "url": "http://arxiv.org/abs/2201.00912v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:hyde"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2308.03243v1",
+    "title": "Unsupervised Adversarial Detection without Extra Model: Training Loss Should Change",
+    "abstract": "Adversarial robustness poses a critical challenge in the deployment of deep learning models for real-world applications. Traditional approaches to adversarial training and supervised detection rely on prior knowledge of attack types and access to labeled training data, which is often impractical. Existing unsupervised adversarial detection methods identify whether the target model works properly, but they suffer from bad accuracies owing to the use of common cross-entropy training loss, which relies on unnecessary features and strengthens adversarial attacks. We propose new training losses to reduce useless features and the corresponding detection method without prior knowledge of adversarial attacks. The detection rate (true positive rate) against all given white-box attacks is above 93.9% except for attacks without limits (DF($\\infty$)), while the false positive rate is barely 2.5%. The proposed method works well in all tested attack types and the false positive rates are even better than the methods good at certain types.",
+    "year": 2023,
+    "venue": null,
+    "authors": [
+      "Chien Cheng Chyou",
+      "Hung-Ting Su",
+      "Winston H. Hsu"
+    ],
+    "doi": null,
+    "arxiv_id": "2308.03243v1",
+    "url": "http://arxiv.org/abs/2308.03243v1",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:title_like",
+      "route:method_task",
+      "route:original_clean",
+      "route:query2doc",
+      "route:hyde",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  },
+  {
+    "paper_id": "http://arxiv.org/abs/2405.18770v6",
+    "title": "Multimodal Adversarial Defense for Vision-Language Models by Leveraging One-To-Many Relationships",
+    "abstract": "Pre-trained vision-language (VL) models are highly vulnerable to adversarial attacks. However, existing defense methods primarily focus on image classification, overlooking two key aspects of VL tasks: multimodal attacks, where both image and text can be perturbed, and the one-to-many relationship of images and texts, where a single image can correspond to multiple textual descriptions and vice versa (1:N and N:1). This work is the first to explore defense strategies against multimodal attacks in VL tasks, whereas prior VL defense methods focus on vision robustness. We propose multimodal adversarial training (MAT), which incorporates adversarial perturbations in both image and text modalities during training, significantly outperforming existing unimodal defenses. Furthermore, we discover that MAT is limited by deterministic one-to-one (1:1) image-text pairs in VL training data. To address this, we conduct a comprehensive study on leveraging one-to-many relationships to enhance robustness, investigating diverse augmentation techniques. Our analysis shows that, for a more effective defense, augmented image-text pairs should be well-aligned, diverse, yet avoid distribution shift -- conditions overlooked by prior research. This work pioneers defense strategies against multimodal attacks, providing insights for building robust VLMs from both optimization and data perspectives. Our code is publicly available at https://github.com/CyberAgentAILab/multimodal-adversarial-training.",
+    "year": 2024,
+    "venue": null,
+    "authors": [
+      "Futa Waseda",
+      "Antonio Tejero-de-Pablos",
+      "Isao Echizen"
+    ],
+    "doi": null,
+    "arxiv_id": "2405.18770v6",
+    "url": "http://arxiv.org/abs/2405.18770v6",
+    "citation_count": null,
+    "source": "arxiv",
+    "retrieval_path": [
+      "provider:arxiv",
+      "route:core_topic",
+      "route:method_task",
+      "route:title_like",
+      "route:query2doc",
+      "route:hyde",
+      "route:original_clean",
+      "route:broad_synonym"
+    ],
+    "references": [],
+    "citations": [],
+    "metadata": {
+      "raw_source": "arxiv"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "paper_id": "https://openalex.org/W4389814482",
+  "title": "ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks",
+  "abstract": "This study examines 4-bit quantization methods like GPTQ in large language models (LLMs), highlighting GPTQ's overfitting and limited enhancement in Zero-Shot tasks. While prior works merely focusing on zero-shot measurement, we extend task scope to more generative categories such as code generation and abstractive summarization, in which we found that INT4 quantization can significantly underperform. However, simply shifting to higher precision formats like FP6 has been particularly challenging, thus overlooked, due to poor performance caused by the lack of sophisticated integration and system acceleration strategies on current AI hardware. Our results show that FP6, even with a coarse-grain quantization scheme, performs robustly across various algorithms and tasks, demonstrating its superiority in accuracy and versatility. Notably, with the FP6 quantization, \\codestar-15B model performs comparably to its FP16 counterpart in code generation, and for smaller models like the 406M it closely matches their baselines in summarization. Neither can be achieved by INT4. To better accommodate various AI hardware and achieve the best system performance, we propose a novel 4+2 design for FP6 to achieve similar latency to the state-of-the-art INT4 fine-grain quantization. With our design, FP6 can become a promising solution to the current 4-bit quantization methods used in LLMs.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Xiaoxia Wu",
+    "Haojun Xia",
+    "Stephen Youn",
+    "Zheng Zhen",
+    "Shiyang Chen",
+    "Arash Bakhtiari",
+    "M. B. Wyatt",
+    "Aminabadi, Reza Yazdani",
+    "Yuxiong He",
+    "Olatunji Ruwase",
+    "Song, Leon",
+    "Zhewei Yao"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2312.08583",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2312.08583",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:query2doc"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Automatic summarization",
+      "Quantization (signal processing)",
+      "Computer science",
+      "Vector quantization",
+      "Generative grammar",
+      "Computer engineering",
+      "Artificial intelligence",
+      "Algorithm"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2366403280",
+      "https://openalex.org/W1495108544",
+      "https://openalex.org/W2091301346",
+      "https://openalex.org/W2121067345",
+      "https://openalex.org/W3209251257",
+      "https://openalex.org/W3204400881",
+      "https://openalex.org/W3183118997",
+      "https://openalex.org/W3214410901",
+      "https://openalex.org/W3204296682",
+      "https://openalex.org/W2917767146"
+    ]
+  }
+}

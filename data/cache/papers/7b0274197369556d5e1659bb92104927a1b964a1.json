@@ -1,0 +1,50 @@
+{
+  "paper_id": "https://openalex.org/W4396913773",
+  "title": "MuMath-Code: Combining Tool-Use Large Language Models with Multi-perspective Data Augmentation for Mathematical Reasoning",
+  "abstract": "The tool-use Large Language Models (LLMs) that integrate with external Python interpreters have significantly enhanced mathematical reasoning capabilities for open-source LLMs, while tool-free methods chose another track: augmenting math reasoning data. However, a great method to integrate the above two research paths and combine their advantages remains to be explored. In this work, we firstly include new math questions via multi-perspective data augmenting methods and then synthesize code-nested solutions to them. The open LLMs (i.e., Llama-2) are finetuned on the augmented dataset to get the resulting models, MuMath-Code ($μ$-Math-Code). During the inference phase, our MuMath-Code generates code and interacts with the external python interpreter to get the execution results. Therefore, MuMath-Code leverages the advantages of both the external tool and data augmentation. To fully leverage the advantages of our augmented data, we propose a two-stage training strategy: In Stage-1, we finetune Llama-2 on pure CoT data to get an intermediate model, which then is trained on the code-nested data in Stage-2 to get the resulting MuMath-Code. Our MuMath-Code-7B achieves 83.8 on GSM8K and 52.4 on MATH, while MuMath-Code-70B model achieves new state-of-the-art performance among open methods -- achieving 90.7% on GSM8K and 55.1% on MATH. Extensive experiments validate the combination of tool use and data augmentation, as well as our two-stage training strategy. We release the proposed dataset along with the associated code for public use.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+    "Shuo Yin",
+    "Weihao You",
+    "Zhilong Ji",
+    "Guoqiang Zhong",
+    "Jinfeng Bai"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2405.07551",
+  "arxiv_id": null,
+  "url": "http://arxiv.org/abs/2405.07551",
+  "citation_count": 1,
+  "source": "openalex",
+  "retrieval_path": [
+    "provider:openalex",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "openalex",
+    "concepts": [
+      "Perspective (graphical)",
+      "Computer science",
+      "Code (set theory)",
+      "Programming language",
+      "Artificial intelligence",
+      "Natural language processing",
+      "Set (abstract data type)"
+    ],
+    "cited_by_api_url": null,
+    "related_works": [
+      "https://openalex.org/W2149537132",
+      "https://openalex.org/W2018871932",
+      "https://openalex.org/W641279757",
+      "https://openalex.org/W370975646",
+      "https://openalex.org/W1670566515",
+      "https://openalex.org/W4242022592",
+      "https://openalex.org/W596972243",
+      "https://openalex.org/W4313230280",
+      "https://openalex.org/W69751022",
+      "https://openalex.org/W3204019825"
+    ]
+  }
+}

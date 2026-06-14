@@ -1,0 +1,27 @@
+{
+  "paper_id": "http://arxiv.org/abs/1711.00489v2",
+  "title": "Don't Decay the Learning Rate, Increase the Batch Size",
+  "abstract": "It is common practice to decay the learning rate. Here we show one can usually obtain the same learning curve on both training and test sets by instead increasing the batch size during training. This procedure is successful for stochastic gradient descent (SGD), SGD with momentum, Nesterov momentum, and Adam. It reaches equivalent test accuracies after the same number of training epochs, but with fewer parameter updates, leading to greater parallelism and shorter training times. We can further reduce the number of parameter updates by increasing the learning rate $ε$ and scaling the batch size $B \\propto ε$. Finally, one can increase the momentum coefficient $m$ and scale $B \\propto 1/(1-m)$, although this tends to slightly reduce the test accuracy. Crucially, our techniques allow us to repurpose existing training schedules for large batch training with no hyper-parameter tuning. We train ResNet-50 on ImageNet to $76.1\\%$ validation accuracy in under 30 minutes.",
+  "year": 2017,
+  "venue": null,
+  "authors": [
+    "Samuel L. Smith",
+    "Pieter-Jan Kindermans",
+    "Chris Ying",
+    "Quoc V. Le"
+  ],
+  "doi": null,
+  "arxiv_id": "1711.00489v2",
+  "url": "http://arxiv.org/abs/1711.00489v2",
+  "citation_count": null,
+  "source": "arxiv",
+  "retrieval_path": [
+    "provider:arxiv",
+    "route:hybrid"
+  ],
+  "references": [],
+  "citations": [],
+  "metadata": {
+    "raw_source": "arxiv"
+  }
+}
