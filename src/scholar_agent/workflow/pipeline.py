@@ -34,13 +34,65 @@ LOGGER = logging.getLogger(__name__)
 
 def deduplicate_papers(papers: list[Paper]) -> list[Paper]:
     """去重候选论文池，保留元数据最全的记录，并合并检索路径。"""
-    seen: dict[str, Paper] = {}
+    import re
+    
+    def _normalize_title(val: str | None) -> str:
+        if not val:
+            return ""
+        # 移除非数字字母并转小写
+        t = re.sub(r"[^a-z0-9]+", " ", val.lower()).strip()
+        return re.sub(r"\s+", " ", t)
+
+    def _normalize_id(val: str | None) -> str:
+        if not val:
+            return ""
+        t = val.strip().lower()
+        t = re.sub(r"^https?://(dx\.)?doi\.org/", "", t)
+        t = re.sub(r"^doi:", "", t)
+        t = re.sub(r"^https?://arxiv\.org/(abs|pdf)/", "", t)
+        t = re.sub(r"\.pdf$", "", t)
+        t = re.sub(r"v\d+$", "", t)
+        return t.strip()
+
+    seen_by_id: dict[str, Paper] = {}
+    seen_by_doi: dict[str, Paper] = {}
+    seen_by_arxiv: dict[str, Paper] = {}
+    seen_by_title: dict[str, Paper] = {}
+
     for p in papers:
+        # 查找已有匹配
+        existing: Paper | None = None
+        
+        # 1. 尝试以 paper_id 查找
         pid = p.paper_id
-        if pid not in seen:
-            seen[pid] = p
+        if pid in seen_by_id:
+            existing = seen_by_id[pid]
+            
+        # 2. 尝试以 DOI 查找
+        p_doi = _normalize_id(p.doi)
+        if not existing and p_doi and p_doi in seen_by_doi:
+            existing = seen_by_doi[p_doi]
+            
+        # 3. 尝试以 arXiv ID 查找
+        p_arxiv = _normalize_id(p.arxiv_id)
+        if not existing and p_arxiv and p_arxiv in seen_by_arxiv:
+            existing = seen_by_arxiv[p_arxiv]
+            
+        # 4. 尝试以规范化 Title 查找
+        p_title = _normalize_title(p.title)
+        if not existing and p_title and p_title in seen_by_title:
+            existing = seen_by_title[p_title]
+
+        if not existing:
+            # 记录新的
+            seen_by_id[pid] = p
+            if p_doi:
+                seen_by_doi[p_doi] = p
+            if p_arxiv:
+                seen_by_arxiv[p_arxiv] = p
+            if p_title:
+                seen_by_title[p_title] = p
         else:
-            existing = seen[pid]
             # 合并字段
             if not existing.abstract and p.abstract:
                 existing.abstract = p.abstract
@@ -72,7 +124,24 @@ def deduplicate_papers(papers: list[Paper]) -> list[Paper]:
                 if cit not in existing.citations:
                     existing.citations.append(cit)
 
-    return list(seen.values())
+            # 更新缺少的 key 索引
+            if p_doi and p_doi not in seen_by_doi:
+                seen_by_doi[p_doi] = existing
+            if p_arxiv and p_arxiv not in seen_by_arxiv:
+                seen_by_arxiv[p_arxiv] = existing
+            if p_title and p_title not in seen_by_title:
+                seen_by_title[p_title] = existing
+
+    # 去重后，所有保留的 Paper 对象都记录在以唯一 ID 为 Key 的 values 中，
+    # 我们用 set 对对象本身进行去重保留唯一物理对象列表即可。
+    unique_papers = []
+    seen_objects = set()
+    for p in seen_by_id.values():
+        if id(p) not in seen_objects:
+            seen_objects.add(id(p))
+            unique_papers.append(p)
+            
+    return unique_papers
 
 
 class PaperAgentPipeline:
@@ -206,9 +275,23 @@ class PaperAgentPipeline:
             final_review = review_retrieval_results(query_plan, all_candidates, len(rounds_history), self.llm_client)
             rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
 
-        # 6. 细粒度证据筛选
-        LOGGER.info("Starting fine-grained evidence selection for %d papers", len(all_candidates))
-        selections = select_and_extract_evidence(all_candidates, query_plan, self.llm_client)
+        # 6. 细粒度证据筛选 (先进行粗排截断，最多只送 20 篇以控制 LLM 成本和噪声)
+        def _get_rough_score(p: Paper) -> float:
+            bge = p.metadata.get("bge_score")
+            try:
+                bge_val = float(bge) if bge is not None else 0.5
+            except (ValueError, TypeError):
+                bge_val = 0.5
+            paths = len(p.retrieval_path) if p.retrieval_path else 1
+            return bge_val + paths * 0.01
+
+        all_candidates.sort(key=_get_rough_score, reverse=True)
+        max_selection = getattr(self.config.budget, "max_llm_selection_papers", 20)
+        selection_candidates = all_candidates[:max_selection]
+
+        LOGGER.info("Starting fine-grained evidence selection for %d papers (filtered from %d candidates)", 
+                    len(selection_candidates), len(all_candidates))
+        selections = select_and_extract_evidence(selection_candidates, query_plan, self.llm_client)
 
         # 7. 本地规则硬核校验与降级
         LOGGER.info("Validating evidence and constraints locally")
