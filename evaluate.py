@@ -353,12 +353,23 @@ def run_evaluation(
     # 用例筛选
     indices = list(range(len(all_cases)))
     if cases_filter:
-        indices = parse_cases_arg(cases_filter, len(all_cases))
-        if not indices:
-            print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
-            sys.exit(1)
+        if cases_filter.strip().lower() == "all":
+            # 允许指定 "all" 跑全量
+            pass
+        else:
+            indices = parse_cases_arg(cases_filter, len(all_cases))
+            if not indices:
+                print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
+                sys.exit(1)
     elif limit is not None and limit > 0:
         indices = indices[:limit]
+    else:
+        # 默认每次随机跑 5 个并取平均
+        import random
+        random.seed(time.time())
+        if len(indices) > 5:
+            indices = random.sample(indices, 5)
+            print(f"🎲 Randomly sampled 5 test cases out of {len(all_cases)} (Indices: {[i+1 for i in indices]})")
 
     eval_cases = [all_cases[i] for i in indices]
     print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation.")
