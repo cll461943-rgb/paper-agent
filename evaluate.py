@@ -429,7 +429,26 @@ def run_evaluation(
         err_list = []
 
         try:
-            res = pipeline.run(query, retrieval_only=recall_only)
+            import threading
+            thread_res = {}
+            def worker():
+                try:
+                    thread_res["res"] = pipeline.run(query, retrieval_only=recall_only)
+                except Exception as e:
+                    thread_res["exc"] = e
+            
+            t = threading.Thread(target=worker)
+            t.daemon = True
+            t.start()
+            t.join(timeout=300.0)  # 5分钟立即截断
+            
+            if t.is_alive():
+                raise TimeoutError("Case evaluation timed out after 300.0s and was truncated.")
+            
+            if "exc" in thread_res:
+                raise thread_res["exc"]
+            
+            res = thread_res.get("res")
 
             # 汇聚推荐论文
             result_papers = [
