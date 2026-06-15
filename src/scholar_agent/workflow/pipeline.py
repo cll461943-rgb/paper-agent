@@ -276,6 +276,14 @@ class PaperAgentPipeline:
             rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
 
         # 6. 细粒度证据筛选 (先进行粗排截断，最多只送 20 篇以控制 LLM 成本和噪声)
+        def _get_title_match_bonus(title: str, query: str) -> float:
+            import re
+            stop_words = {"the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from", "that", "this", "these", "those"}
+            q_words = set(re.findall(r"\b\w{3,}\b", query.lower())) - stop_words
+            t_words = set(re.findall(r"\b\w{3,}\b", title.lower())) - stop_words
+            intersect = q_words.intersection(t_words)
+            return min(len(intersect) * 0.1, 0.5)
+
         def _get_rough_score(p: Paper) -> float:
             import math
             bge = p.metadata.get("bge_score")
@@ -290,7 +298,9 @@ class PaperAgentPipeline:
                 
             route_bonus = 0.0
             for path in p.retrieval_path:
-                if "title_exact" in path or "title_like" in path:
+                if "title_exact" in path:
+                    route_bonus += 1.0
+                elif "title_like" in path:
                     route_bonus += 0.2
                 if "reference_expansion" in path or "citation_expansion" in path:
                     route_bonus += 0.05
@@ -298,7 +308,9 @@ class PaperAgentPipeline:
             paths_val = len(p.retrieval_path) if p.retrieval_path else 1
             base_score = bge_val if bge_val > 0.0 else 0.5
             
-            return base_score + paths_val * 0.01 + citation_score + route_bonus
+            title_bonus = _get_title_match_bonus(p.title, original_query)
+            
+            return base_score + paths_val * 0.01 + citation_score + route_bonus + title_bonus
 
         all_candidates.sort(key=_get_rough_score, reverse=True)
 

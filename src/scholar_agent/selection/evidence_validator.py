@@ -16,6 +16,47 @@ def _normalize(s: str) -> str:
     return re.sub(r"[^a-zA-Z0-9\u4e00-\u9fa5]", "", s).lower()
 
 
+def _check_constraint_match(constraint: str, paper_content_norm: str, paper_title: str, paper_abstract: str) -> bool:
+    constraint_norm = _normalize(constraint)
+    if not constraint_norm:
+        return True
+    
+    # 1. 尝试直接子串匹配
+    if constraint_norm in paper_content_norm:
+        return True
+        
+    # 2. 如果是多词组合，去除停用词后核心词必须全部包含（支持顺序和定语变化）
+    import re
+    words = re.findall(r"\b\w{3,}\b", constraint.lower())
+    stop_words = {"the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from", "that", "this", "these", "those", "language", "model", "models"}
+    core_words = [w for w in words if w not in stop_words]
+    
+    if core_words:
+        raw_paper_text = (paper_title or "") + " " + (paper_abstract or "")
+        paper_words = set(re.findall(r"\b\w+\b", raw_paper_text.lower()))
+        if all(cw in paper_words for cw in core_words):
+            return True
+            
+    # 3. 常见缩写或同义词映射
+    synonyms = {
+        "llm": {"llm", "llms", "large language model", "large language models", "foundation model", "foundation models"},
+        "nlp": {"nlp", "natural language processing"},
+        "multilingual": {"multilingual", "multi-lingual", "cross-lingual", "crosslingual"},
+        "cross-lingual": {"multilingual", "multi-lingual", "cross-lingual", "crosslingual"},
+        "contrastive learning": {"contrastive learning", "contrastive loss", "contrastive pretraining", "contrastive pre-training"},
+    }
+    
+    constraint_lower = constraint.lower()
+    for key, syns in synonyms.items():
+        if key in constraint_lower:
+            for syn in syns:
+                syn_norm = _normalize(syn)
+                if syn_norm and syn_norm in paper_content_norm:
+                    return True
+                    
+    return False
+
+
 def validate_evidence(
     paper: Paper,
     selection: SelectionResult,
@@ -58,8 +99,7 @@ def validate_evidence(
     # 3. 校验 must-have 强约束词
     paper_content_norm = _normalize((paper.title or "") + " " + (paper.abstract or ""))
     for constraint in plan.must_have_constraints:
-        constraint_norm = _normalize(constraint)
-        if constraint_norm and constraint_norm not in paper_content_norm:
+        if not _check_constraint_match(constraint, paper_content_norm, paper.title, paper.abstract):
             is_validated = False
             validated_notes.append(
                 f"Missing must-have constraint: '{constraint}' was not found in paper text."

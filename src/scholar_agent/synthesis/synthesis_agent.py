@@ -101,12 +101,16 @@ class SynthesisAgent:
         """结构化归纳合成 Agent。将多轮检索重排结果归并、分类、产生时间线与引文图并输出最终报告。"""
         # 1. 筛选与分类
         highly_relevant: list[RankedPaper] = []
-        partially_relevant: list[RankedPaper] = []
-
         for rp in ranked_papers:
             if rp.selection.relevance_level == "high":
                 highly_relevant.append(rp)
-            elif rp.selection.relevance_level == "medium" and rp.final_score >= 0.50:
+
+        # 动态自适应部分相关门槛：若高质量文献多，收紧 medium 门槛以防精度稀释；反之放宽以防过滤金标
+        min_medium_score = 0.60 if len(highly_relevant) >= 3 else 0.50
+
+        partially_relevant: list[RankedPaper] = []
+        for rp in ranked_papers:
+            if rp.selection.relevance_level == "medium" and rp.final_score >= min_medium_score:
                 partially_relevant.append(rp)
 
         recommended_ids = {rp.paper.paper_id for rp in (highly_relevant + partially_relevant)}

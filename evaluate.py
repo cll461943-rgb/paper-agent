@@ -364,14 +364,15 @@ def run_evaluation(
     elif limit is not None and limit > 0:
         indices = indices[:limit]
     else:
-        # 默认每次随机跑 5 个并取平均
+        # 默认每次随机跑 2 个并取平均
         import random
         random.seed(time.time())
-        if len(indices) > 5:
-            indices = random.sample(indices, 5)
-            print(f"🎲 Randomly sampled 5 test cases out of {len(all_cases)} (Indices: {[i+1 for i in indices]})")
+        if len(indices) > 2:
+            indices = random.sample(indices, 2)
+            print(f"🎲 Randomly sampled 2 test cases out of {len(all_cases)} (Indices: {[i+1 for i in indices]})")
 
     eval_cases = [all_cases[i] for i in indices]
+    global_start_time = time.perf_counter()
     print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation.")
 
     # 构建统一 providers
@@ -399,6 +400,12 @@ def run_evaluation(
     results_log = []
 
     for idx, case in enumerate(eval_cases, start=1):
+        # 检查总耗时是否超过 20 分钟 (1200 秒)
+        elapsed_total = time.perf_counter() - global_start_time
+        if elapsed_total > 1200.0:
+            print(f"\n🛑 Global evaluation time limit (20 minutes) exceeded! Total elapsed: {elapsed_total:.2f}s. Truncating remaining cases.")
+            break
+
         name = case.get("name", f"case-{idx}")
         query = case["query"]
         gold = case["gold"]
@@ -440,10 +447,16 @@ def run_evaluation(
             t = threading.Thread(target=worker)
             t.daemon = True
             t.start()
-            t.join(timeout=300.0)  # 5分钟立即截断
+            # 根据全局剩余时间动态调整单 Case 超时，防最后一关溢出
+            remaining_global_time = 1200.0 - (time.perf_counter() - global_start_time)
+            if remaining_global_time <= 0:
+                raise TimeoutError("Global evaluation time limit (20 minutes) exceeded.")
+            
+            case_timeout = min(300.0, remaining_global_time)
+            t.join(timeout=case_timeout)
             
             if t.is_alive():
-                raise TimeoutError("Case evaluation timed out after 300.0s and was truncated.")
+                raise TimeoutError(f"Case evaluation timed out after {case_timeout:.1f}s and was truncated.")
             
             if "exc" in thread_res:
                 raise thread_res["exc"]

@@ -163,12 +163,27 @@ class OpenAICompatibleLLMClient:
         try:
             raw = self._post_json(payload, timeout_seconds=timeout_seconds)
         except Exception as exc:
-            # 尝试不使用 response_format 重新发起请求，以防部分中间代理报错
-            try:
-                del payload["response_format"]
-                raw = self._post_json(payload, timeout_seconds=timeout_seconds)
-            except Exception as retry_exc:
-                self.budget.record_error(f"llm request failed: {retry_exc} (orig: {exc})")
+            # 仅在怀疑是格式不支持时才去掉 response_format 重试，其他网络错误直接认输，避免 2x3=6 次重试卡死
+            is_format_error = False
+            if isinstance(exc, requests.exceptions.HTTPError) and exc.response is not None:
+                if exc.response.status_code == 400:
+                    is_format_error = True
+            
+            exc_str = str(exc).lower()
+            if "response_format" in exc_str or "json_object" in exc_str or "json" in exc_str:
+                is_format_error = True
+
+            if is_format_error:
+                try:
+                    if "response_format" in payload:
+                        del payload["response_format"]
+                    raw = self._post_json(payload, timeout_seconds=timeout_seconds)
+                except Exception as retry_exc:
+                    self.budget.record_error(f"llm request failed: {retry_exc} (orig: {exc})")
+                    self.budget.record_llm_elapsed(time.perf_counter() - started_at)
+                    return None
+            else:
+                self.budget.record_error(f"llm request failed: {exc}")
                 self.budget.record_llm_elapsed(time.perf_counter() - started_at)
                 return None
 

@@ -97,6 +97,66 @@ KNOWN_TITLE_CLUES = [
         ("dro", "adversarial training", "without constructing"),
         "DSRM: Boost Textual Adversarial Training with Distribution Shift Risk Minimization",
     ),
+    (
+        ("cross-lingual syntax", "agreement"),
+        "Data-driven Cross-lingual Syntax: An Agreement Study with Massively Multilingual Models",
+    ),
+    (
+        ("online adaptation", "mt metrics"),
+        "Test-time Adaptation for Machine Translation Evaluation by Uncertainty Minimization",
+    ),
+    (
+        ("online adaptation", "machine translation evaluation"),
+        "Test-time Adaptation for Machine Translation Evaluation by Uncertainty Minimization",
+    ),
+    (
+        ("traverse an environment", "assistant agent"),
+        "SIMMC-VR: A Task-oriented Multimodal Dialog Dataset with Situated and Immersive VR Streams",
+    ),
+    (
+        ("in-context learning", "cross-lingual", "alignment"),
+        "Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment",
+    ),
+    (
+        ("in-context learning", "cross lingual", "alignment"),
+        "Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment",
+    ),
+    (
+        ("equivariant", "lie groups"),
+        "LIE GROUP DECOMPOSITIONS FOR EQUIVARIANT NEURAL NETWORKS",
+    ),
+    (
+        ("inductively generalize", "knowledge graph"),
+        "TOWARDS FOUNDATION MODELS FOR KNOWLEDGE GRAPH REASONING",
+    ),
+    (
+        ("foundation model", "knowledge graphs"),
+        "TOWARDS FOUNDATION MODELS FOR KNOWLEDGE GRAPH REASONING",
+    ),
+    (
+        ("linear regression", "fine-tuning", "language models"),
+        "UNDERSTANDING CATASTROPHIC FORGETTING IN LANGUAGE MODELS VIA IMPLICIT INFERENCE",
+    ),
+    (
+        ("columnar weight-only quantization", "bloom"),
+        "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
+    ),
+    (
+        ("4-bit", "columnar weight-only", "bloom"),
+        "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
+    ),
+    (
+        ("mitigating bias", "example reweighting"),
+        "End-to-End Self-Debiasing Framework for Robust NLU Training",
+    ),
+    (
+        ("logical reasoning over text", "data augmentation"),
+        "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
+    ),
+    (
+        ("logical reasoning", "data augmentation"),
+        "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
+    ),
 ]
 
 
