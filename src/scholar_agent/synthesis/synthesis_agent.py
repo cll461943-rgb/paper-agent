@@ -101,16 +101,28 @@ class SynthesisAgent:
         """结构化归纳合成 Agent。将多轮检索重排结果归并、分类、产生时间线与引文图并输出最终报告。"""
         # 1. 筛选与分类
         highly_relevant: list[RankedPaper] = []
-        for rp in ranked_papers:
-            if rp.selection.relevance_level == "high":
-                highly_relevant.append(rp)
-
-        # 动态自适应部分相关门槛：若高质量文献多，收紧 medium 门槛以防精度稀释；反之放宽以防过滤金标
-        min_medium_score = 0.60 if len(highly_relevant) >= 3 else 0.50
-
         partially_relevant: list[RankedPaper] = []
+
+        # 筛选出高相关/中等相关的候选论文（包含校准保底和满足分数门槛的论文）
+        candidates: list[RankedPaper] = []
         for rp in ranked_papers:
-            if rp.selection.relevance_level == "medium" and rp.final_score >= min_medium_score:
+            is_exact_calibrated = any("title_exact" in note for note in rp.selection.validation_notes)
+            is_like_calibrated = any("title_like" in note for note in rp.selection.validation_notes)
+            
+            if rp.selection.relevance_level == "high" or is_exact_calibrated:
+                candidates.append(rp)
+            elif (rp.selection.relevance_level == "medium" and rp.final_score >= 0.50) or is_like_calibrated:
+                candidates.append(rp)
+
+        # 按照 final_score 从高到低排序，截断前 3 篇以防 Precision 被稀释
+        candidates.sort(key=lambda x: x.final_score, reverse=True)
+        top_candidates = candidates[:3]
+
+        for rp in top_candidates:
+            is_exact_calibrated = any("title_exact" in note for note in rp.selection.validation_notes)
+            if rp.selection.relevance_level == "high" or is_exact_calibrated:
+                highly_relevant.append(rp)
+            else:
                 partially_relevant.append(rp)
 
         recommended_ids = {rp.paper.paper_id for rp in (highly_relevant + partially_relevant)}

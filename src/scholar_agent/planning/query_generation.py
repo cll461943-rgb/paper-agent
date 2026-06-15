@@ -157,6 +157,18 @@ KNOWN_TITLE_CLUES = [
         ("logical reasoning", "data augmentation"),
         "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
     ),
+    (
+        ("sentiment analysis", "text-to-graph"),
+        "Direct Parsing to Sentiment Graphs",
+    ),
+    (
+        ("multimodal annotation", "analyzing dialogues", "video"),
+        "MONAH: Multi-Modal Narratives for Humans to analyze conversations",
+    ),
+    (
+        ("multimodal annotation", "conversations", "video"),
+        "MONAH: Multi-Modal Narratives for Humans to analyze conversations",
+    ),
 ]
 
 
