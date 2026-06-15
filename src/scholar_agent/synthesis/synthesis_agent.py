@@ -106,7 +106,7 @@ class SynthesisAgent:
         for rp in ranked_papers:
             if rp.selection.relevance_level == "high":
                 highly_relevant.append(rp)
-            elif rp.selection.relevance_level == "medium" and rp.final_score >= 0.65:
+            elif rp.selection.relevance_level == "medium" and rp.final_score >= 0.50:
                 partially_relevant.append(rp)
 
         recommended_ids = {rp.paper.paper_id for rp in (highly_relevant + partially_relevant)}
