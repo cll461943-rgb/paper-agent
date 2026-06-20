@@ -1,0 +1,3886 @@
+{
+  "summary": {
+    "dataset": "C:\\Users\\33316\\Desktop\\claude-code-src-main\\paper-agent\\data\\AutoScholarQuery_dev.jsonl",
+    "mode": "mock",
+    "providers": [
+      "pasa_local"
+    ],
+    "known_title_clues_enabled": false,
+    "time_cutoff_days": 7,
+    "n_cases": 100,
+    "candidate_pool_macro": {
+      "precision": 0.0008,
+      "recall": 0.0764,
+      "f1": 0.0016
+    },
+    "recall_at_20": 0.0581,
+    "recall_at_50": 0.0764,
+    "recall_at_100": 0.0764
+  },
+  "cases": [
+    {
+      "index": 1,
+      "question": "Could you list the works exploit knowledge from pre-trained vision-language models for text-guided queries in 3D scenes?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2023-03-18",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 3,
+        "predicted_count": 153,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "CLIP-Fields: Weakly Supervised Semantic Fields for Robotic Memory",
+          "match_key": "clipfieldsweaklysupervisedsemanticfieldsforroboticmemory",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "ConceptFusion: Open-set Multimodal 3D Mapping",
+          "match_key": "conceptfusionopensetmultimodaldmapping",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "OpenScene: 3D Scene Understanding with Open Vocabularies",
+          "match_key": "openscenedsceneunderstandingwithopenvocabularies",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 35.4389
+    },
+    {
+      "index": 2,
+      "question": "Could you provide me some works related to representer theorems in machine learning?",
+      "success": true,
+      "error": null,
+      "candidate_count": 172,
+      "cutoff_date": "2023-05-24",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 172,
+        "false_negative": 2,
+        "predicted_count": 172,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "A representer theorem for deep kernel learning",
+          "match_key": "arepresentertheoremfordeepkernellearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "A representer theorem for deep neural networks",
+          "match_key": "arepresentertheoremfordeepneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.8372
+    },
+    {
+      "index": 3,
+      "question": "Which studies discuss the effects and mechanisms of weight decay regularization in machine learning?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2022-09-26",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 157,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 2,
+        "precision": 0.0063,
+        "recall": 0.5,
+        "f1": 0.0125
+      },
+      "gold_coverage": [
+        {
+          "gold": "Three Mechanisms of Weight Decay Regularization",
+          "match_key": "threemechanismsofweightdecayregularization",
+          "matched": true,
+          "candidate_rank": 1
+        },
+        {
+          "gold": "L2 Regularization versus Batch and Weight Normalization",
+          "match_key": "lregularizationversusbatchandweightnormalization",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.5,
+      "recall_at_50": 0.5,
+      "recall_at_100": 0.5,
+      "elapsed_seconds": 10.8047
+    },
+    {
+      "index": 4,
+      "question": "Could you mention some papers that propose neural algorithms for f-divergence regularized costs?",
+      "success": true,
+      "error": null,
+      "candidate_count": 156,
+      "cutoff_date": "2022-05-23",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 156,
+        "false_negative": 3,
+        "predicted_count": 156,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Stochastic Optimization for Large-scale Optimal Transport",
+          "match_key": "stochasticoptimizationforlargescaleoptimaltransport",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Large-Scale Optimal Transport and Mapping Estimation",
+          "match_key": "largescaleoptimaltransportandmappingestimation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Score-based Generative Neural Networks for Large-Scale Optimal Transport",
+          "match_key": "scorebasedgenerativeneuralnetworksforlargescaleoptimaltransport",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.2297
+    },
+    {
+      "index": 5,
+      "question": "What works implemented temporal pixel-wise audio-visual interaction module in FCN-based methods for AVS?",
+      "success": true,
+      "error": null,
+      "candidate_count": 164,
+      "cutoff_date": "2024-03-10",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 164,
+        "false_negative": 1,
+        "predicted_count": 164,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Audio-Visual Segmentation",
+          "match_key": "audiovisualsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 13.7548
+    },
+    {
+      "index": 6,
+      "question": "Which papers describe work aimed at increasing the faithfulness of Large Language Models (LLMs) by changing the prediction generation method?",
+      "success": true,
+      "error": null,
+      "candidate_count": 143,
+      "cutoff_date": "2023-11-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 143,
+        "false_negative": 5,
+        "predicted_count": 143,
+        "gold_count": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Stay on topic with Classifier-Free Guidance",
+          "match_key": "stayontopicwithclassifierfreeguidance",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Selection-Inference: Exploiting Large Language Models for Interpretable\n  Logical Reasoning",
+          "match_key": "selectioninferenceexploitinglargelanguagemodelsforinterpretablelogicalreasoning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Question Decomposition Improves the Faithfulness of Model-Generated\n  Reasoning",
+          "match_key": "questiondecompositionimprovesthefaithfulnessofmodelgeneratedreasoning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Faithful Chain-of-Thought Reasoning",
+          "match_key": "faithfulchainofthoughtreasoning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Faithful Explanations of Black-box NLP Models Using LLM-generated\n  Counterfactuals",
+          "match_key": "faithfulexplanationsofblackboxnlpmodelsusingllmgeneratedcounterfactuals",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.5352
+    },
+    {
+      "index": 7,
+      "question": "Which works focus on face verification models and discuss their performance in unconstrained environments?",
+      "success": true,
+      "error": null,
+      "candidate_count": 159,
+      "cutoff_date": "2023-12-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 159,
+        "false_negative": 3,
+        "predicted_count": 159,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "ArcFace: Additive Angular Margin Loss for Deep Face Recognition",
+          "match_key": "arcfaceadditiveangularmarginlossfordeepfacerecognition",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "CurricularFace: Adaptive Curriculum Learning Loss for Deep Face\n  Recognition",
+          "match_key": "curricularfaceadaptivecurriculumlearninglossfordeepfacerecognition",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "AdaFace: Quality Adaptive Margin for Face Recognition",
+          "match_key": "adafacequalityadaptivemarginforfacerecognition",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.6334
+    },
+    {
+      "index": 8,
+      "question": "Any works about hallucination assessment in GPT-4V?",
+      "success": true,
+      "error": null,
+      "candidate_count": 215,
+      "cutoff_date": "2024-01-12",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 214,
+        "false_negative": 0,
+        "predicted_count": 215,
+        "gold_count": 1,
+        "precision": 0.0047,
+        "recall": 1.0,
+        "f1": 0.0093
+      },
+      "gold_coverage": [
+        {
+          "gold": "Holistic Analysis of Hallucination in GPT-4V(ision): Bias and\n  Interference Challenges",
+          "match_key": "holisticanalysisofhallucinationingptvisionbiasandinterferencechallenges",
+          "matched": true,
+          "candidate_rank": 9
+        }
+      ],
+      "recall_at_20": 1.0,
+      "recall_at_50": 1.0,
+      "recall_at_100": 1.0,
+      "elapsed_seconds": 9.078
+    },
+    {
+      "index": 9,
+      "question": "Which papers discussed alternative resolution schemes related to unit scaling?",
+      "success": true,
+      "error": null,
+      "candidate_count": 176,
+      "cutoff_date": "2023-03-13",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 176,
+        "false_negative": 1,
+        "predicted_count": 176,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "High-Performance Large-Scale Image Recognition Without Normalization",
+          "match_key": "highperformancelargescaleimagerecognitionwithoutnormalization",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.5256
+    },
+    {
+      "index": 10,
+      "question": "What studies have shown the global convergence of Gradient Descent (GD) for simple linear networks and two-layer networks?",
+      "success": true,
+      "error": null,
+      "candidate_count": 151,
+      "cutoff_date": "2022-06-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 151,
+        "false_negative": 3,
+        "predicted_count": 151,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "SGD Learns Over-parameterized Networks that Provably Generalize on Linearly Separable Data",
+          "match_key": "sgdlearnsoverparameterizednetworksthatprovablygeneralizeonlinearlyseparabledata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "The Implicit Bias of Gradient Descent on Separable Data",
+          "match_key": "theimplicitbiasofgradientdescentonseparabledata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Fine-Grained Analysis of Optimization and Generalization for Overparameterized Two-Layer Neural Networks",
+          "match_key": "finegrainedanalysisofoptimizationandgeneralizationforoverparameterizedtwolayerneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 14.6659
+    },
+    {
+      "index": 11,
+      "question": "What papers discuss the use of knowledge distillation for model compression?",
+      "success": true,
+      "error": null,
+      "candidate_count": 190,
+      "cutoff_date": "2023-11-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 190,
+        "false_negative": 3,
+        "predicted_count": 190,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Distilling Task-Specific Knowledge from BERT into Simple Neural Networks",
+          "match_key": "distillingtaskspecificknowledgefrombertintosimpleneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "TinyBERT: Distilling BERT for Natural Language Understanding",
+          "match_key": "tinybertdistillingbertfornaturallanguageunderstanding",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices",
+          "match_key": "mobilebertacompacttaskagnosticbertforresourcelimiteddevices",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.7366
+    },
+    {
+      "index": 12,
+      "question": "Could you tell me about the research that revealed different variants of pretrained transformer models?",
+      "success": true,
+      "error": null,
+      "candidate_count": 172,
+      "cutoff_date": "2023-02-12",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 172,
+        "false_negative": 1,
+        "predicted_count": 172,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Attention Is All You Need",
+          "match_key": "attentionisallyouneed",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.1914
+    },
+    {
+      "index": 13,
+      "question": "What research studies have been cited for applying the CLIP model for various downstream applications like image-based object detection, segmentation, and video applications?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2023-06-01",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 5,
+        "predicted_count": 158,
+        "gold_count": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Bridging the Gap between Object and Image-level Representations for\n  Open-Vocabulary Detection",
+          "match_key": "bridgingthegapbetweenobjectandimagelevelrepresentationsforopenvocabularydetection",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Open-Vocabulary Semantic Segmentation with Mask-adapted CLIP",
+          "match_key": "openvocabularysemanticsegmentationwithmaskadaptedclip",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Language-Grounded Indoor 3D Semantic Segmentation in the Wild",
+          "match_key": "languagegroundedindoordsemanticsegmentationinthewild",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Expanding Language-Image Pretrained Models for General Video Recognition",
+          "match_key": "expandinglanguageimagepretrainedmodelsforgeneralvideorecognition",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "ActionCLIP: A New Paradigm for Video Action Recognition",
+          "match_key": "actionclipanewparadigmforvideoactionrecognition",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 16.4645
+    },
+    {
+      "index": 14,
+      "question": "Which studies indicate a natural conflict between adversarial robustness and standard accuracy?",
+      "success": true,
+      "error": null,
+      "candidate_count": 165,
+      "cutoff_date": "2024-03-19",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 164,
+        "false_negative": 1,
+        "predicted_count": 165,
+        "gold_count": 2,
+        "precision": 0.0061,
+        "recall": 0.5,
+        "f1": 0.012
+      },
+      "gold_coverage": [
+        {
+          "gold": "Robustness May Be at Odds with Accuracy",
+          "match_key": "robustnessmaybeatoddswithaccuracy",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Theoretically Principled Trade-off between Robustness and Accuracy",
+          "match_key": "theoreticallyprincipledtradeoffbetweenrobustnessandaccuracy",
+          "matched": true,
+          "candidate_rank": 33
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.5,
+      "recall_at_100": 0.5,
+      "elapsed_seconds": 10.7666
+    },
+    {
+      "index": 15,
+      "question": "Which paper introduced the concept of dataset distillation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 168,
+      "cutoff_date": "2023-11-29",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 168,
+        "false_negative": 1,
+        "predicted_count": 168,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Dataset Distillation",
+          "match_key": "datasetdistillation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.9225
+    },
+    {
+      "index": 16,
+      "question": "Which papers tried to accelerate Neural Differential Equations models using higher-order regularization terms?",
+      "success": true,
+      "error": null,
+      "candidate_count": 149,
+      "cutoff_date": "2023-02-24",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 149,
+        "false_negative": 1,
+        "predicted_count": 149,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Learning differential equations that are easy to solve",
+          "match_key": "learningdifferentialequationsthatareeasytosolve",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.0136
+    },
+    {
+      "index": 17,
+      "question": "In what works are SMLD diffusion models considered?",
+      "success": true,
+      "error": null,
+      "candidate_count": 181,
+      "cutoff_date": "2022-06-10",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 181,
+        "false_negative": 1,
+        "predicted_count": 181,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Generative Modeling by Estimating Gradients of the Data Distribution",
+          "match_key": "generativemodelingbyestimatinggradientsofthedatadistribution",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.2381
+    },
+    {
+      "index": 18,
+      "question": "Which works use standard fine-tuning to attempt to localize edits in parameter updating methods?",
+      "success": true,
+      "error": null,
+      "candidate_count": 164,
+      "cutoff_date": "2023-06-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 164,
+        "false_negative": 2,
+        "predicted_count": 164,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Editing Factual Knowledge in Language Models",
+          "match_key": "editingfactualknowledgeinlanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Fast Model Editing at Scale",
+          "match_key": "fastmodeleditingatscale",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.6079
+    },
+    {
+      "index": 19,
+      "question": "Could you provide me some studies performed on adversarial training?",
+      "success": true,
+      "error": null,
+      "candidate_count": 185,
+      "cutoff_date": "2024-03-12",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 185,
+        "false_negative": 5,
+        "predicted_count": 185,
+        "gold_count": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "CyCADA: Cycle-Consistent Adversarial Domain Adaptation",
+          "match_key": "cycadacycleconsistentadversarialdomainadaptation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Self-Ensembling with GAN-based Data Augmentation for Domain Adaptation\n  in Semantic Segmentation",
+          "match_key": "selfensemblingwithganbaseddataaugmentationfordomainadaptationinsemanticsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Learning from Synthetic Data: Addressing Domain Shift for Semantic\n  Segmentation",
+          "match_key": "learningfromsyntheticdataaddressingdomainshiftforsemanticsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Learning to Adapt Structured Output Space for Semantic Segmentation",
+          "match_key": "learningtoadaptstructuredoutputspaceforsemanticsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Both Style and Distortion Matter: Dual-Path Unsupervised Domain\n  Adaptation for Panoramic Semantic Segmentation",
+          "match_key": "bothstyleanddistortionmatterdualpathunsuperviseddomainadaptationforpanoramicsemanticsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.1783
+    },
+    {
+      "index": 20,
+      "question": "Which papers worked on lower bound theory for ReLU Networks?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2022-09-16",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 2,
+        "predicted_count": 153,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "The Expressive Power of Neural Networks: A View from the Width",
+          "match_key": "theexpressivepowerofneuralnetworksaviewfromthewidth",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Approximating Continuous Functions by ReLU Nets of Minimal Width",
+          "match_key": "approximatingcontinuousfunctionsbyrelunetsofminimalwidth",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.287
+    },
+    {
+      "index": 21,
+      "question": "Are there any studies which used conditional Gaussian distributions over feature spaces in the context of adversarial robustness?",
+      "success": true,
+      "error": null,
+      "candidate_count": 161,
+      "cutoff_date": "2024-03-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 161,
+        "false_negative": 2,
+        "predicted_count": 161,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Max-Mahalanobis Linear Discriminant Analysis Networks",
+          "match_key": "maxmahalanobislineardiscriminantanalysisnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Shaping Deep Feature Space towards Gaussian Mixture for Visual\n  Classification",
+          "match_key": "shapingdeepfeaturespacetowardsgaussianmixtureforvisualclassification",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.4941
+    },
+    {
+      "index": 22,
+      "question": "What research focused on the development of sequential action understanding datasets?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2023-10-13",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 1,
+        "predicted_count": 162,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "SoccerNet: A Scalable Dataset for Action Spotting in Soccer Videos",
+          "match_key": "soccernetascalabledatasetforactionspottinginsoccervideos",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.8981
+    },
+    {
+      "index": 23,
+      "question": "Which papers cover information-sharing strategies to mitigate heterogeneity in Federated Learning?",
+      "success": true,
+      "error": null,
+      "candidate_count": 165,
+      "cutoff_date": "2023-10-01",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 165,
+        "false_negative": 3,
+        "predicted_count": 165,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Federated Learning with Non-IID Data",
+          "match_key": "federatedlearningwithnoniiddata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Communication-Efficient On-Device Machine Learning: Federated Distillation and Augmentation under Non-IID Private Data",
+          "match_key": "communicationefficientondevicemachinelearningfederateddistillationandaugmentationundernoniidprivatedata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "G-PATE: Scalable Differentially Private Data Generator via Private Aggregation of Teacher Discriminators",
+          "match_key": "gpatescalabledifferentiallyprivatedatageneratorviaprivateaggregationofteacherdiscriminators",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.1019
+    },
+    {
+      "index": 24,
+      "question": "What were the methods proposed for learning the prompt from downstream data in continual input embedding space?",
+      "success": true,
+      "error": null,
+      "candidate_count": 166,
+      "cutoff_date": "2023-05-26",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 166,
+        "false_negative": 1,
+        "predicted_count": 166,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+          "match_key": "prefixtuningoptimizingcontinuouspromptsforgeneration",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.2318
+    },
+    {
+      "index": 25,
+      "question": "Could you provide me some works focused on 3D diffusion models based on implicit fields?",
+      "success": true,
+      "error": null,
+      "candidate_count": 170,
+      "cutoff_date": "2024-03-24",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 169,
+        "false_negative": 6,
+        "predicted_count": 170,
+        "gold_count": 7,
+        "precision": 0.0059,
+        "recall": 0.1429,
+        "f1": 0.0113
+      },
+      "gold_coverage": [
+        {
+          "gold": "3D Neural Field Generation using Triplane Diffusion",
+          "match_key": "dneuralfieldgenerationusingtriplanediffusion",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "LION: Latent Point Diffusion Models for 3D Shape Generation",
+          "match_key": "lionlatentpointdiffusionmodelsfordshapegeneration",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Diffusion-SDF: Text-to-Shape via Voxelized Diffusion",
+          "match_key": "diffusionsdftexttoshapeviavoxelizeddiffusion",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation",
+          "match_key": "sdfusionmultimodaldshapecompletionreconstructionandgeneration",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Neural Wavelet-domain Diffusion for 3D Shape Generation, Inversion, and\n  Manipulation",
+          "match_key": "neuralwaveletdomaindiffusionfordshapegenerationinversionandmanipulation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "3DQD: Generalized Deep 3D Shape Prior via Part-Discretized Diffusion\n  Process",
+          "match_key": "dqdgeneralizeddeepdshapepriorviapartdiscretizeddiffusionprocess",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "HyperDiffusion: Generating Implicit Neural Fields with Weight-Space\n  Diffusion",
+          "match_key": "hyperdiffusiongeneratingimplicitneuralfieldswithweightspacediffusion",
+          "matched": true,
+          "candidate_rank": 4
+        }
+      ],
+      "recall_at_20": 0.1429,
+      "recall_at_50": 0.1429,
+      "recall_at_100": 0.1429,
+      "elapsed_seconds": 12.493
+    },
+    {
+      "index": 26,
+      "question": "Any research on building a prompting pipeline where the LLM reasons over the extracted KG subgraphs?",
+      "success": true,
+      "error": null,
+      "candidate_count": 168,
+      "cutoff_date": "2024-06-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 168,
+        "false_negative": 1,
+        "predicted_count": 168,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "MindMap: Knowledge Graph Prompting Sparks Graph of Thoughts in Large\n  Language Models",
+          "match_key": "mindmapknowledgegraphpromptingsparksgraphofthoughtsinlargelanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.2564
+    },
+    {
+      "index": 27,
+      "question": "Who proposed improvements to the accuracy of optimization-based attacks using different image priors?",
+      "success": true,
+      "error": null,
+      "candidate_count": 164,
+      "cutoff_date": "2023-06-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 164,
+        "false_negative": 3,
+        "predicted_count": 164,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "iDLG: Improved Deep Leakage from Gradients",
+          "match_key": "idlgimproveddeepleakagefromgradients",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Inverting Gradients - How easy is it to break privacy in federated learning?",
+          "match_key": "invertinggradientshoweasyisittobreakprivacyinfederatedlearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "See through Gradients: Image Batch Recovery via GradInversion",
+          "match_key": "seethroughgradientsimagebatchrecoveryviagradinversion",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 13.5752
+    },
+    {
+      "index": 28,
+      "question": "Which studies are related to the empowerment of modern natural language processing systems by text embedders?",
+      "success": true,
+      "error": null,
+      "candidate_count": 156,
+      "cutoff_date": "2024-02-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 156,
+        "false_negative": 1,
+        "predicted_count": 156,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "match_key": "densepassageretrievalforopendomainquestionanswering",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.7488
+    },
+    {
+      "index": 29,
+      "question": "Could you provide me some works that lean on uncertainty or diversity criteria for their selection strategies?",
+      "success": true,
+      "error": null,
+      "candidate_count": 164,
+      "cutoff_date": "2023-10-24",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 164,
+        "false_negative": 3,
+        "predicted_count": 164,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "LiDAL: Inter-frame Uncertainty Based Active Learning for 3D LiDAR Semantic Segmentation",
+          "match_key": "lidalinterframeuncertaintybasedactivelearningfordlidarsemanticsegmentation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Dirichlet-based Uncertainty Calibration for Active Domain Adaptation",
+          "match_key": "dirichletbaseduncertaintycalibrationforactivedomainadaptation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Active Learning for Point Cloud Semantic Segmentation via Spatial-Structural Diversity Reasoning",
+          "match_key": "activelearningforpointcloudsemanticsegmentationviaspatialstructuraldiversityreasoning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.9341
+    },
+    {
+      "index": 30,
+      "question": "What work proposed a model that estimates pixel-wise weights for pre-specified WB presets?",
+      "success": true,
+      "error": null,
+      "candidate_count": 169,
+      "cutoff_date": "2024-02-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 169,
+        "false_negative": 1,
+        "predicted_count": 169,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Auto White-Balance Correction for Mixed-Illuminant Scenes",
+          "match_key": "autowhitebalancecorrectionformixedilluminantscenes",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.83
+    },
+    {
+      "index": 31,
+      "question": "Which papers introduced the use of VAEs and 3D convolutional networks to generate voxelized molecules?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-06-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 157,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Learning a Continuous Representation of 3D Molecular Structures with Deep Generative Models",
+          "match_key": "learningacontinuousrepresentationofdmolecularstructureswithdeepgenerativemodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.5505
+    },
+    {
+      "index": 32,
+      "question": "Which research papers propose motion trajectory conditioned on scene image?",
+      "success": true,
+      "error": null,
+      "candidate_count": 161,
+      "cutoff_date": "2024-02-23",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 161,
+        "false_negative": 1,
+        "predicted_count": 161,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Long-term Human Motion Prediction with Scene Context",
+          "match_key": "longtermhumanmotionpredictionwithscenecontext",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.602
+    },
+    {
+      "index": 33,
+      "question": "What is a noteworthy study that discusses Federated Learning with cyclic client participation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2023-10-30",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 1,
+        "predicted_count": 160,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "On the Convergence of Federated Averaging with Cyclic Client Participation",
+          "match_key": "ontheconvergenceoffederatedaveragingwithcyclicclientparticipation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.3846
+    },
+    {
+      "index": 34,
+      "question": "Can you provide references where rewards are shaped by training a reinforcement learning agent to learn and complete intermediate tasks guided by language?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2023-02-20",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 3,
+        "predicted_count": 153,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Using Natural Language for Reward Shaping in Reinforcement Learning",
+          "match_key": "usingnaturallanguageforrewardshapinginreinforcementlearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "EAGER: Asking and Answering Questions for Automatic Reward Shaping in Language-guided RL",
+          "match_key": "eageraskingandansweringquestionsforautomaticrewardshapinginlanguageguidedrl",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "ELLA: Exploration through Learned Language Abstraction",
+          "match_key": "ellaexplorationthroughlearnedlanguageabstraction",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.2115
+    },
+    {
+      "index": 35,
+      "question": "Which work first introduced the idea of converting visual features into readable embeddings for LLMs?",
+      "success": true,
+      "error": null,
+      "candidate_count": 163,
+      "cutoff_date": "2024-02-12",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 163,
+        "false_negative": 1,
+        "predicted_count": 163,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Multimodal Few-Shot Learning with Frozen Language Models",
+          "match_key": "multimodalfewshotlearningwithfrozenlanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.5854
+    },
+    {
+      "index": 36,
+      "question": "What researches used averaging and max pooling in feature aggregation on a multi-view rendering-based method?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2023-11-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 2,
+        "predicted_count": 160,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Learning Local Shape Descriptors from Part Correspondences With\n  Multi-view Convolutional Networks",
+          "match_key": "learninglocalshapedescriptorsfrompartcorrespondenceswithmultiviewconvolutionalnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Self-Supervised Learning with Multi-View Rendering for 3D Point Cloud\n  Analysis",
+          "match_key": "selfsupervisedlearningwithmultiviewrenderingfordpointcloudanalysis",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 14.3188
+    },
+    {
+      "index": 37,
+      "question": "Which studies proposed to increase the representation ability of quantization by replacing uniform quantization with non-uniform quantization?",
+      "success": true,
+      "error": null,
+      "candidate_count": 154,
+      "cutoff_date": "2023-01-28",
+      "candidate_pool": {
+        "true_positive": 2,
+        "false_positive": 152,
+        "false_negative": 1,
+        "predicted_count": 154,
+        "gold_count": 3,
+        "precision": 0.013,
+        "recall": 0.6667,
+        "f1": 0.0255
+      },
+      "gold_coverage": [
+        {
+          "gold": "Nonuniform-to-Uniform Quantization: Towards Accurate Quantization via Generalized Straight-Through Estimation",
+          "match_key": "nonuniformtouniformquantizationtowardsaccuratequantizationviageneralizedstraightthroughestimation",
+          "matched": true,
+          "candidate_rank": 20
+        },
+        {
+          "gold": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks",
+          "match_key": "additivepowersoftwoquantizationanefficientnonuniformdiscretizationforneuralnetworks",
+          "matched": true,
+          "candidate_rank": 13
+        },
+        {
+          "gold": "LQ-Nets: Learned Quantization for Highly Accurate and Compact Deep Neural Networks",
+          "match_key": "lqnetslearnedquantizationforhighlyaccurateandcompactdeepneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.6667,
+      "recall_at_50": 0.6667,
+      "recall_at_100": 0.6667,
+      "elapsed_seconds": 10.7023
+    },
+    {
+      "index": 38,
+      "question": "What research suggests that duplicate examples can hurt the performance in document retrieval?",
+      "success": true,
+      "error": null,
+      "candidate_count": 165,
+      "cutoff_date": "2023-01-30",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 165,
+        "false_negative": 2,
+        "predicted_count": 165,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Deduplicating Training Data Makes Language Models Better",
+          "match_key": "deduplicatingtrainingdatamakeslanguagemodelsbetter",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Scaling Laws and Interpretability of Learning from Repeated Data",
+          "match_key": "scalinglawsandinterpretabilityoflearningfromrepeateddata",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.2416
+    },
+    {
+      "index": 39,
+      "question": "Could you list some works that tried to re-introduce hierarchical designs into transformer?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2023-11-27",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 2,
+        "predicted_count": 160,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Multiscale Vision Transformers",
+          "match_key": "multiscalevisiontransformers",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Video Swin Transformer",
+          "match_key": "videoswintransformer",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.5277
+    },
+    {
+      "index": 40,
+      "question": "Can you name the studies that used Counterfactual examples as data augmentation in Natural Language Processing (NLP)?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2024-06-02",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 3,
+        "predicted_count": 162,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Learning the Difference that Makes a Difference with\n  Counterfactually-Augmented Data",
+          "match_key": "learningthedifferencethatmakesadifferencewithcounterfactuallyaugmenteddata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Polyjuice: Generating Counterfactuals for Explaining, Evaluating, and\n  Improving Models",
+          "match_key": "polyjuicegeneratingcounterfactualsforexplainingevaluatingandimprovingmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Evaluating Models' Local Decision Boundaries via Contrast Sets",
+          "match_key": "evaluatingmodelslocaldecisionboundariesviacontrastsets",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.4546
+    },
+    {
+      "index": 41,
+      "question": "What are some works that have improved the theoretical convergence rate of local stochastic gradient descent ascent algorithms in federated learning?",
+      "success": true,
+      "error": null,
+      "candidate_count": 148,
+      "cutoff_date": "2023-04-13",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 148,
+        "false_negative": 1,
+        "predicted_count": 148,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "FedNest: Federated Bilevel, Minimax, and Compositional Optimization",
+          "match_key": "fednestfederatedbilevelminimaxandcompositionaloptimization",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.9937
+    },
+    {
+      "index": 42,
+      "question": "What studies structured the learned RL algorithm as a black box using a neural network as a general purpose sequence model in meta-RL methods?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-09-19",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 157,
+        "false_negative": 6,
+        "predicted_count": 157,
+        "gold_count": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "RL$^2$: Fast Reinforcement Learning via Slow Reinforcement Learning",
+          "match_key": "rlfastreinforcementlearningviaslowreinforcementlearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Learning to reinforcement learn",
+          "match_key": "learningtoreinforcementlearn",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "A Simple Neural Attentive Meta-Learner",
+          "match_key": "asimpleneuralattentivemetalearner",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Generalization of Reinforcement Learners with Working and Episodic Memory",
+          "match_key": "generalizationofreinforcementlearnerswithworkingandepisodicmemory",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Rapid Task-Solving in Novel Environments",
+          "match_key": "rapidtasksolvinginnovelenvironments",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Recurrent Model-Free RL Can Be a Strong Baseline for Many POMDPs",
+          "match_key": "recurrentmodelfreerlcanbeastrongbaselineformanypomdps",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.868
+    },
+    {
+      "index": 43,
+      "question": "What papers proposed text data augmentation techniques like synonym replacement, positional swaps and back translation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 161,
+      "cutoff_date": "2022-02-19",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 161,
+        "false_negative": 1,
+        "predicted_count": 161,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Improving Neural Machine Translation Models with Monolingual Data",
+          "match_key": "improvingneuralmachinetranslationmodelswithmonolingualdata",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.4946
+    },
+    {
+      "index": 44,
+      "question": "What studies propose the usage of diffusion models for processing graph data?",
+      "success": true,
+      "error": null,
+      "candidate_count": 165,
+      "cutoff_date": "2023-06-15",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 165,
+        "false_negative": 2,
+        "predicted_count": 165,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Diffusion Models for Graphs Benefit From Discrete State Spaces",
+          "match_key": "diffusionmodelsforgraphsbenefitfromdiscretestatespaces",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Score-based Generative Modeling of Graphs via the System of Stochastic Differential Equations",
+          "match_key": "scorebasedgenerativemodelingofgraphsviathesystemofstochasticdifferentialequations",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.4234
+    },
+    {
+      "index": 45,
+      "question": "Can you show some applications of diffusion models in zero-shot classification and supervised segmentation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2023-08-16",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 2,
+        "predicted_count": 162,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Your Diffusion Model is Secretly a Zero-Shot Classifier",
+          "match_key": "yourdiffusionmodelissecretlyazeroshotclassifier",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SegDiff: Image Segmentation with Diffusion Probabilistic Models",
+          "match_key": "segdiffimagesegmentationwithdiffusionprobabilisticmodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.3641
+    },
+    {
+      "index": 46,
+      "question": "Any works on breaking the representational symmetry based on spatial coordinates or specific object types?",
+      "success": true,
+      "error": null,
+      "candidate_count": 171,
+      "cutoff_date": "2023-05-17",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 171,
+        "false_negative": 1,
+        "predicted_count": 171,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "SPACE: Unsupervised Object-Oriented Scene Representation via Spatial Attention and Decomposition",
+          "match_key": "spaceunsupervisedobjectorientedscenerepresentationviaspatialattentionanddecomposition",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.4504
+    },
+    {
+      "index": 47,
+      "question": "What works talk about the LLM-Blender, which uses a pair-ranker model for optimal LLM output selection?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2024-03-18",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and\n  Generative Fusion",
+          "match_key": "llmblenderensemblinglargelanguagemodelswithpairwiserankingandgenerativefusion",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.8887
+    },
+    {
+      "index": 48,
+      "question": "What studies demonstrated the capability of LLMs to provide chain-of-thought explanations that elucidate their reasoning processes?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2023-11-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 2,
+        "predicted_count": 162,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+          "match_key": "chainofthoughtpromptingelicitsreasoninginlargelanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Large Language Models are Zero-Shot Reasoners",
+          "match_key": "largelanguagemodelsarezeroshotreasoners",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.4184
+    },
+    {
+      "index": 49,
+      "question": "Which works focused on designing interventions for causal discovery?",
+      "success": true,
+      "error": null,
+      "candidate_count": 152,
+      "cutoff_date": "2023-05-24",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 152,
+        "false_negative": 1,
+        "predicted_count": 152,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Interventions, Where and How? Experimental Design for Causal Models at Scale",
+          "match_key": "interventionswhereandhowexperimentaldesignforcausalmodelsatscale",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.8967
+    },
+    {
+      "index": 50,
+      "question": "What research focused on deploying the PW-learner and the RA-learner in the estimation of the CATE?",
+      "success": true,
+      "error": null,
+      "candidate_count": 163,
+      "cutoff_date": "2022-05-22",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 163,
+        "false_negative": 1,
+        "predicted_count": 163,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Nonparametric Estimation of Heterogeneous Treatment Effects: From Theory to Learning Algorithms",
+          "match_key": "nonparametricestimationofheterogeneoustreatmenteffectsfromtheorytolearningalgorithms",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.8715
+    },
+    {
+      "index": 51,
+      "question": "Which study approaches the problem of convergence rates of classic TD from the perspective of Ordinary Differential Equations (ODE) analysis?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-02-17",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 157,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Finite-Time Error Bounds For Linear Stochastic Approximation and TD Learning",
+          "match_key": "finitetimeerrorboundsforlinearstochasticapproximationandtdlearning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.0258
+    },
+    {
+      "index": 52,
+      "question": "Which works focus on the application of Bayesian Optimization in the area of global non-convex optimization?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2022-11-09",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 4,
+        "predicted_count": 160,
+        "gold_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design",
+          "match_key": "gaussianprocessoptimizationinthebanditsettingnoregretandexperimentaldesign",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Convergence rates of efficient global optimization algorithms",
+          "match_key": "convergenceratesofefficientglobaloptimizationalgorithms",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
+          "match_key": "thompsonsamplingforcontextualbanditswithlinearpayoffs",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "On Lower Bounds for Standard and Robust Gaussian Process Bandit Optimization",
+          "match_key": "onlowerboundsforstandardandrobustgaussianprocessbanditoptimization",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.0356
+    },
+    {
+      "index": 53,
+      "question": "Which research contains over thousands of single-choice questions covering numerous different ability dimensions?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2023-10-03",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "MMBench: Is Your Multi-modal Model an All-around Player?",
+          "match_key": "mmbenchisyourmultimodalmodelanallaroundplayer",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.1896
+    },
+    {
+      "index": 54,
+      "question": "Which study used a weak supervision type, foreground mask, as a substitute for costly 3D CAD annotations?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2024-03-31",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 1,
+        "predicted_count": 153,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Weakly supervised 3D Reconstruction with Adversarial Constraint",
+          "match_key": "weaklysuperviseddreconstructionwithadversarialconstraint",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.816
+    },
+    {
+      "index": 55,
+      "question": "What are the studies manipulate the generation process of a pre-trained model to implicitly control the generated content?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2023-02-09",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 9,
+        "predicted_count": 162,
+        "gold_count": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Diffusion-based Image Translation using Disentangled Style and Content Representation",
+          "match_key": "diffusionbasedimagetranslationusingdisentangledstyleandcontentrepresentation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation",
+          "match_key": "plugandplaydiffusionfeaturesfortextdrivenimagetoimagetranslation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+          "match_key": "prompttopromptimageeditingwithcrossattentioncontrol",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Blended Diffusion for Text-driven Editing of Natural Images",
+          "match_key": "blendeddiffusionfortextdriveneditingofnaturalimages",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "ILVR: Conditioning Method for Denoising Diffusion Probabilistic Models",
+          "match_key": "ilvrconditioningmethodfordenoisingdiffusionprobabilisticmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Null-text Inversion for Editing Real Images using Guided Diffusion Models",
+          "match_key": "nulltextinversionforeditingrealimagesusingguideddiffusionmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "DiffEdit: Diffusion-based semantic image editing with mask guidance",
+          "match_key": "diffeditdiffusionbasedsemanticimageeditingwithmaskguidance",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Leveraging Off-the-shelf Diffusion Model for Multi-attribute Fashion Image Manipulation",
+          "match_key": "leveragingofftheshelfdiffusionmodelformultiattributefashionimagemanipulation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Diffusion Models already have a Semantic Latent Space",
+          "match_key": "diffusionmodelsalreadyhaveasemanticlatentspace",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.3585
+    },
+    {
+      "index": 56,
+      "question": "What research works explore human bodies rendering through multi-view videos?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2023-09-03",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 3,
+        "predicted_count": 160,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Neural Human Video Rendering by Learning Dynamic Textures and\n  Rendering-to-Video Translation",
+          "match_key": "neuralhumanvideorenderingbylearningdynamictexturesandrenderingtovideotranslation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Neural Articulated Radiance Field",
+          "match_key": "neuralarticulatedradiancefield",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Vid2Actor: Free-viewpoint Animatable Person Synthesis from Video in the\n  Wild",
+          "match_key": "vidactorfreeviewpointanimatablepersonsynthesisfromvideointhewild",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.5121
+    },
+    {
+      "index": 57,
+      "question": "What is the research that estimates a transformation between two point clouds by deforming a template shape?",
+      "success": true,
+      "error": null,
+      "candidate_count": 150,
+      "cutoff_date": "2023-11-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 150,
+        "false_negative": 1,
+        "predicted_count": 150,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "3D-CODED : 3D Correspondences by Deep Deformation",
+          "match_key": "dcodeddcorrespondencesbydeepdeformation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.3528
+    },
+    {
+      "index": 58,
+      "question": "Which papers studied learning invariant representations for domain adaptation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2020-12-12",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 157,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Domain-Adversarial Training of Neural Networks",
+          "match_key": "domainadversarialtrainingofneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.2248
+    },
+    {
+      "index": 59,
+      "question": "Can you give me examples of papers that used optimization and translation models to recover atomic coordinates from generated voxel grids?",
+      "success": true,
+      "error": null,
+      "candidate_count": 163,
+      "cutoff_date": "2023-06-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 163,
+        "false_negative": 1,
+        "predicted_count": 163,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Learning a Continuous Representation of 3D Molecular Structures with Deep Generative Models",
+          "match_key": "learningacontinuousrepresentationofdmolecularstructureswithdeepgenerativemodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.2251
+    },
+    {
+      "index": 60,
+      "question": "Could you provide some works that tackle regression as an ordinal classification problem?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2022-09-26",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 3,
+        "predicted_count": 158,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Deep Ordinal Regression Network for Monocular Depth Estimation",
+          "match_key": "deepordinalregressionnetworkformonoculardepthestimation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Rank consistent ordinal regression for neural networks with application to age estimation",
+          "match_key": "rankconsistentordinalregressionforneuralnetworkswithapplicationtoageestimation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Deep Neural Networks for Rank-Consistent Ordinal Regression Based On Conditional Probabilities",
+          "match_key": "deepneuralnetworksforrankconsistentordinalregressionbasedonconditionalprobabilities",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.0896
+    },
+    {
+      "index": 61,
+      "question": "What research has been done on learning the relative position of texts in the latent embedding space?",
+      "success": true,
+      "error": null,
+      "candidate_count": 149,
+      "cutoff_date": "2024-02-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 149,
+        "false_negative": 2,
+        "predicted_count": 149,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+          "match_key": "sentencebertsentenceembeddingsusingsiamesebertnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+          "match_key": "simcsesimplecontrastivelearningofsentenceembeddings",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.0219
+    },
+    {
+      "index": 62,
+      "question": "What applications for federated learning are discussed in the field of healthcare?",
+      "success": true,
+      "error": null,
+      "candidate_count": 177,
+      "cutoff_date": "2024-03-25",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 177,
+        "false_negative": 1,
+        "predicted_count": 177,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "A Secure Federated Learning Framework for 5G Networks",
+          "match_key": "asecurefederatedlearningframeworkforgnetworks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.8367
+    },
+    {
+      "index": 63,
+      "question": "Which papers used guidance to influence the sampling procedure within their diffusion models?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2023-01-18",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 2,
+        "predicted_count": 153,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Diffusion Models Beat GANs on Image Synthesis",
+          "match_key": "diffusionmodelsbeatgansonimagesynthesis",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Classifier-Free Diffusion Guidance",
+          "match_key": "classifierfreediffusionguidance",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.6928
+    },
+    {
+      "index": 64,
+      "question": "What studies are about the emergence of sequence-structure co-design methods and their superiority over previous methods?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-01-25",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 156,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 2,
+        "precision": 0.0064,
+        "recall": 0.5,
+        "f1": 0.0126
+      },
+      "gold_coverage": [
+        {
+          "gold": "Iterative Refinement Graph Neural Network for Antibody Sequence-Structure Co-design",
+          "match_key": "iterativerefinementgraphneuralnetworkforantibodysequencestructurecodesign",
+          "matched": true,
+          "candidate_rank": 8
+        },
+        {
+          "gold": "Conditional Antibody Design as 3D Equivariant Graph Translation",
+          "match_key": "conditionalantibodydesignasdequivariantgraphtranslation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.5,
+      "recall_at_50": 0.5,
+      "recall_at_100": 0.5,
+      "elapsed_seconds": 8.1937
+    },
+    {
+      "index": 65,
+      "question": "Which studies illustrate usage of semantic tokens for ASR or speech resynthesis?",
+      "success": true,
+      "error": null,
+      "candidate_count": 156,
+      "cutoff_date": "2023-08-24",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 156,
+        "false_negative": 2,
+        "predicted_count": 156,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Textless Speech-to-Speech Translation on Real Data",
+          "match_key": "textlessspeechtospeechtranslationonrealdata",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "CoBERT: Self-Supervised Speech Representation Learning Through Code\n  Representation Learning",
+          "match_key": "cobertselfsupervisedspeechrepresentationlearningthroughcoderepresentationlearning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.2225
+    },
+    {
+      "index": 66,
+      "question": "What research papers joined the recent considerations of the regret minimization when the sender repeatedly interacts with receivers?",
+      "success": true,
+      "error": null,
+      "candidate_count": 166,
+      "cutoff_date": "2023-04-20",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 166,
+        "false_negative": 3,
+        "predicted_count": 166,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Multi-Receiver Online Bayesian Persuasion",
+          "match_key": "multireceiveronlinebayesianpersuasion",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Learning to Persuade on the Fly: Robustness Against Ignorance",
+          "match_key": "learningtopersuadeontheflyrobustnessagainstignorance",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Online Bayesian Recommendation with No Regret",
+          "match_key": "onlinebayesianrecommendationwithnoregret",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.2043
+    },
+    {
+      "index": 67,
+      "question": "Is there any recent work that used an implicit model to produce a non-parametric distribution over SO​(3) that can model objects with large symmetry groups?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2023-02-20",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 161,
+        "false_negative": 0,
+        "predicted_count": 162,
+        "gold_count": 1,
+        "precision": 0.0062,
+        "recall": 1.0,
+        "f1": 0.0123
+      },
+      "gold_coverage": [
+        {
+          "gold": "Implicit-PDF: Non-Parametric Representation of Probability Distributions on the Rotation Manifold",
+          "match_key": "implicitpdfnonparametricrepresentationofprobabilitydistributionsontherotationmanifold",
+          "matched": true,
+          "candidate_rank": 11
+        }
+      ],
+      "recall_at_20": 1.0,
+      "recall_at_50": 1.0,
+      "recall_at_100": 1.0,
+      "elapsed_seconds": 9.3681
+    },
+    {
+      "index": 68,
+      "question": "What are the studies that talk about using prompts and example-based definitions with regards to in-context learning (ICL)?",
+      "success": true,
+      "error": null,
+      "candidate_count": 195,
+      "cutoff_date": "2023-11-28",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 195,
+        "false_negative": 2,
+        "predicted_count": 195,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Fantastically Ordered Prompts and Where to Find Them: Overcoming\n  Few-Shot Prompt Order Sensitivity",
+          "match_key": "fantasticallyorderedpromptsandwheretofindthemovercomingfewshotpromptordersensitivity",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+          "match_key": "chainofthoughtpromptingelicitsreasoninginlargelanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.4047
+    },
+    {
+      "index": 69,
+      "question": "Which studies have updated challenge test sets in a dynamic way similar to RealTime QA?",
+      "success": true,
+      "error": null,
+      "candidate_count": 162,
+      "cutoff_date": "2022-07-20",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 162,
+        "false_negative": 3,
+        "predicted_count": 162,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Dynabench: Rethinking Benchmarking in NLP",
+          "match_key": "dynabenchrethinkingbenchmarkinginnlp",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "DynaSent: A Dynamic Benchmark for Sentiment Analysis",
+          "match_key": "dynasentadynamicbenchmarkforsentimentanalysis",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Dynaboard: An Evaluation-As-A-Service Platform for Holistic Next-Generation Benchmarking",
+          "match_key": "dynaboardanevaluationasaserviceplatformforholisticnextgenerationbenchmarking",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.8188
+    },
+    {
+      "index": 70,
+      "question": "Can you provide works that extended the zero-shot learning capability of CLIP to monocular depth estimation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-07-12",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 156,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 2,
+        "precision": 0.0064,
+        "recall": 0.5,
+        "f1": 0.0126
+      },
+      "gold_coverage": [
+        {
+          "gold": "Can Language Understand Depth?",
+          "match_key": "canlanguageunderstanddepth",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Learning to Adapt CLIP for Few-Shot Monocular Depth Estimation",
+          "match_key": "learningtoadaptclipforfewshotmonoculardepthestimation",
+          "matched": true,
+          "candidate_rank": 1
+        }
+      ],
+      "recall_at_20": 0.5,
+      "recall_at_50": 0.5,
+      "recall_at_100": 0.5,
+      "elapsed_seconds": 8.6311
+    },
+    {
+      "index": 71,
+      "question": "Which paper discusses indirect measurements of hypothesized theoretical entities known as constructs in social sciences?",
+      "success": true,
+      "error": null,
+      "candidate_count": 151,
+      "cutoff_date": "2024-06-06",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 151,
+        "false_negative": 1,
+        "predicted_count": 151,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Measurement and Fairness",
+          "match_key": "measurementandfairness",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.028
+    },
+    {
+      "index": 72,
+      "question": "What works have previously used continuation techniques when the objective function is differentiable?",
+      "success": true,
+      "error": null,
+      "candidate_count": 167,
+      "cutoff_date": "2023-07-04",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 167,
+        "false_negative": 3,
+        "predicted_count": 167,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Piecewise linear regularized solution paths",
+          "match_key": "piecewiselinearregularizedsolutionpaths",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "The Lasso Problem and Uniqueness",
+          "match_key": "thelassoproblemanduniqueness",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Complexity Analysis of the Lasso Regularization Path",
+          "match_key": "complexityanalysisofthelassoregularizationpath",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.9949
+    },
+    {
+      "index": 73,
+      "question": "Which work was first to use open-source models for QA systems with citation capability?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2024-06-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "WebGLM: Towards An Efficient Web-Enhanced Question Answering System with\n  Human Preferences",
+          "match_key": "webglmtowardsanefficientwebenhancedquestionansweringsystemwithhumanpreferences",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.8726
+    },
+    {
+      "index": 74,
+      "question": "Could you provide me the work that scales the training dataset to billions in the field of Vision-Language Pre-training?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2023-12-12",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Scaling Up Visual and Vision-Language Representation Learning With Noisy\n  Text Supervision",
+          "match_key": "scalingupvisualandvisionlanguagerepresentationlearningwithnoisytextsupervision",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.8846
+    },
+    {
+      "index": 75,
+      "question": "Which studies have focused on grounding elements in mobile UI based on instructions?",
+      "success": true,
+      "error": null,
+      "candidate_count": 172,
+      "cutoff_date": "2024-01-10",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 172,
+        "false_negative": 4,
+        "predicted_count": 172,
+        "gold_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Mapping Natural Language Instructions to Mobile UI Action Sequences",
+          "match_key": "mappingnaturallanguageinstructionstomobileuiactionsequences",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "A Dataset for Interactive Vision-Language Navigation with Unknown\n  Command Feasibility",
+          "match_key": "adatasetforinteractivevisionlanguagenavigationwithunknowncommandfeasibility",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "VUT: Versatile UI Transformer for Multi-Modal Multi-Task User Interface\n  Modeling",
+          "match_key": "vutversatileuitransformerformultimodalmultitaskuserinterfacemodeling",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Spotlight: Mobile UI Understanding using Vision-Language Models with a\n  Focus",
+          "match_key": "spotlightmobileuiunderstandingusingvisionlanguagemodelswithafocus",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.9346
+    },
+    {
+      "index": 76,
+      "question": "Any studies that introduced a special [LENGTH] token to the encoder for response length prediction?",
+      "success": true,
+      "error": null,
+      "candidate_count": 156,
+      "cutoff_date": "2023-05-15",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 156,
+        "false_negative": 2,
+        "predicted_count": 156,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+          "match_key": "maskpredictparalleldecodingofconditionalmaskedlanguagemodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "match_key": "bertpretrainingofdeepbidirectionaltransformersforlanguageunderstanding",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.5927
+    },
+    {
+      "index": 77,
+      "question": "Who used the spawning method to explore the connection between LMC and the Neural Tangent Kernel dynamics?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2023-07-10",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 152,
+        "false_negative": 0,
+        "predicted_count": 153,
+        "gold_count": 1,
+        "precision": 0.0065,
+        "recall": 1.0,
+        "f1": 0.013
+      },
+      "gold_coverage": [
+        {
+          "gold": "Deep learning versus kernel learning: an empirical study of loss landscape geometry and the time evolution of the Neural Tangent Kernel",
+          "match_key": "deeplearningversuskernellearninganempiricalstudyoflosslandscapegeometryandthetimeevolutionoftheneuraltangentkernel",
+          "matched": true,
+          "candidate_rank": 23
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 1.0,
+      "recall_at_100": 1.0,
+      "elapsed_seconds": 10.2381
+    },
+    {
+      "index": 78,
+      "question": "Which papers researched on few-shot learning in drug discovery?",
+      "success": true,
+      "error": null,
+      "candidate_count": 159,
+      "cutoff_date": "2023-04-17",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 159,
+        "false_negative": 4,
+        "predicted_count": 159,
+        "gold_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Low Data Drug Discovery with One-shot Learning",
+          "match_key": "lowdatadrugdiscoverywithoneshotlearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Meta-Learning GNN Initializations for Low-Resource Molecular Property Prediction",
+          "match_key": "metalearninggnninitializationsforlowresourcemolecularpropertyprediction",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Few-Shot Graph Learning for Molecular Property Prediction",
+          "match_key": "fewshotgraphlearningformolecularpropertyprediction",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Property-Aware Relation Networks for Few-Shot Molecular Property Prediction",
+          "match_key": "propertyawarerelationnetworksforfewshotmolecularpropertyprediction",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.8523
+    },
+    {
+      "index": 79,
+      "question": "Which papers investigated the use of diffusion models in specific domains such as images?",
+      "success": true,
+      "error": null,
+      "candidate_count": 165,
+      "cutoff_date": "2023-02-09",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 165,
+        "false_negative": 5,
+        "predicted_count": 165,
+        "gold_count": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Diffusion Models Beat GANs on Image Synthesis",
+          "match_key": "diffusionmodelsbeatgansonimagesynthesis",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Improved Denoising Diffusion Probabilistic Models",
+          "match_key": "improveddenoisingdiffusionprobabilisticmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+          "match_key": "photorealistictexttoimagediffusionmodelswithdeeplanguageunderstanding",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "match_key": "hierarchicaltextconditionalimagegenerationwithcliplatents",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "match_key": "highresolutionimagesynthesiswithlatentdiffusionmodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.234
+    },
+    {
+      "index": 80,
+      "question": "What are the studies that focus on quadratic reward functions?",
+      "success": true,
+      "error": null,
+      "candidate_count": 167,
+      "cutoff_date": "2023-06-14",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 167,
+        "false_negative": 8,
+        "predicted_count": 167,
+        "gold_count": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Bandit Principal Component Analysis",
+          "match_key": "banditprincipalcomponentanalysis",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Bandit Phase Retrieval",
+          "match_key": "banditphaseretrieval",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Rank-1 Bandits",
+          "match_key": "stochasticrankbandits",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Bilinear Bandits with Low-rank Structure",
+          "match_key": "bilinearbanditswithlowrankstructure",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Low-Rank Generalized Linear Bandit Problems",
+          "match_key": "lowrankgeneralizedlinearbanditproblems",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Structured Stochastic Linear Bandits",
+          "match_key": "structuredstochasticlinearbandits",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Low-rank Bandits with Latent Mixtures",
+          "match_key": "lowrankbanditswithlatentmixtures",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Linear Bandits with Hidden Low Rank Structure",
+          "match_key": "stochasticlinearbanditswithhiddenlowrankstructure",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 7.6798
+    },
+    {
+      "index": 81,
+      "question": "What works developed contrastive learning for OOD detection?",
+      "success": true,
+      "error": null,
+      "candidate_count": 167,
+      "cutoff_date": "2022-09-27",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 167,
+        "false_negative": 3,
+        "predicted_count": 167,
+        "gold_count": 3,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Hybrid Discriminative-Generative Training via Contrastive Learning",
+          "match_key": "hybriddiscriminativegenerativetrainingviacontrastivelearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "RODD: A Self-Supervised Approach for Robust Out-of-Distribution Detection",
+          "match_key": "roddaselfsupervisedapproachforrobustoutofdistributiondetection",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Contrastive Training for Improved Out-of-Distribution Detection",
+          "match_key": "contrastivetrainingforimprovedoutofdistributiondetection",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.7226
+    },
+    {
+      "index": 82,
+      "question": "What work tried to estimate the global translation by marrying a supporting-foot-based method with an RNN-based root translation regression model?",
+      "success": true,
+      "error": null,
+      "candidate_count": 166,
+      "cutoff_date": "2024-02-28",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 166,
+        "false_negative": 1,
+        "predicted_count": 166,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "TransPose: Real-time 3D Human Translation and Pose Estimation with Six\n  Inertial Sensors",
+          "match_key": "transposerealtimedhumantranslationandposeestimationwithsixinertialsensors",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.5453
+    },
+    {
+      "index": 83,
+      "question": "Could you provide me some works related to policy-gradient methods?",
+      "success": true,
+      "error": null,
+      "candidate_count": 156,
+      "cutoff_date": "2023-09-19",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 156,
+        "false_negative": 4,
+        "predicted_count": 156,
+        "gold_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Bayesian Model-Agnostic Meta-Learning",
+          "match_key": "bayesianmodelagnosticmetalearning",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+          "match_key": "modelagnosticmetalearningforfastadaptationofdeepnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Multimodal Model-Agnostic Meta-Learning via Task-Aware Modulation",
+          "match_key": "multimodalmodelagnosticmetalearningviataskawaremodulation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Fast Context Adaptation via Meta-Learning",
+          "match_key": "fastcontextadaptationviametalearning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.5913
+    },
+    {
+      "index": 84,
+      "question": "Which paper converts behavioral cloning into a conditional energy-based modeling problem?",
+      "success": true,
+      "error": null,
+      "candidate_count": 158,
+      "cutoff_date": "2023-01-18",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 158,
+        "false_negative": 1,
+        "predicted_count": 158,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Implicit Behavioral Cloning",
+          "match_key": "implicitbehavioralcloning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.7046
+    },
+    {
+      "index": 85,
+      "question": "Which works are related to Networks with discrete Key-Value bottlenecks?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2022-09-27",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 156,
+        "false_negative": 0,
+        "predicted_count": 157,
+        "gold_count": 1,
+        "precision": 0.0064,
+        "recall": 1.0,
+        "f1": 0.0127
+      },
+      "gold_coverage": [
+        {
+          "gold": "Discrete Key-Value Bottleneck",
+          "match_key": "discretekeyvaluebottleneck",
+          "matched": true,
+          "candidate_rank": 6
+        }
+      ],
+      "recall_at_20": 1.0,
+      "recall_at_50": 1.0,
+      "recall_at_100": 1.0,
+      "elapsed_seconds": 12.583
+    },
+    {
+      "index": 86,
+      "question": "What research has been done on using variational inference or Latent Variable Modeling for radiance field uncertainty in NeRF?",
+      "success": true,
+      "error": null,
+      "candidate_count": 150,
+      "cutoff_date": "2024-03-19",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 150,
+        "false_negative": 2,
+        "predicted_count": 150,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Stochastic Neural Radiance Fields: Quantifying Uncertainty in Implicit\n  3D Representations",
+          "match_key": "stochasticneuralradiancefieldsquantifyinguncertaintyinimplicitdrepresentations",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Conditional-Flow NeRF: Accurate 3D Modelling with Reliable Uncertainty\n  Quantification",
+          "match_key": "conditionalflownerfaccuratedmodellingwithreliableuncertaintyquantification",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.4028
+    },
+    {
+      "index": 87,
+      "question": "In what works were approaches proposed to mitigate the computational burden of NeRF training?",
+      "success": true,
+      "error": null,
+      "candidate_count": 159,
+      "cutoff_date": "2024-03-19",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 159,
+        "false_negative": 4,
+        "predicted_count": 159,
+        "gold_count": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Direct Voxel Grid Optimization: Super-fast Convergence for Radiance\n  Fields Reconstruction",
+          "match_key": "directvoxelgridoptimizationsuperfastconvergenceforradiancefieldsreconstruction",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Improved Direct Voxel Grid Optimization for Radiance Fields\n  Reconstruction",
+          "match_key": "improveddirectvoxelgridoptimizationforradiancefieldsreconstruction",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Plenoxels: Radiance Fields without Neural Networks",
+          "match_key": "plenoxelsradiancefieldswithoutneuralnetworks",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Instant Neural Graphics Primitives with a Multiresolution Hash Encoding",
+          "match_key": "instantneuralgraphicsprimitiveswithamultiresolutionhashencoding",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.539
+    },
+    {
+      "index": 88,
+      "question": "Can you list the references where they have classified the method of knowledge updating and model editing for language-literature models?",
+      "success": true,
+      "error": null,
+      "candidate_count": 152,
+      "cutoff_date": "2023-11-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 152,
+        "false_negative": 2,
+        "predicted_count": 152,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Editing Large Language Models: Problems, Methods, and Opportunities",
+          "match_key": "editinglargelanguagemodelsproblemsmethodsandopportunities",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Knowledge Editing for Large Language Models: A Survey",
+          "match_key": "knowledgeeditingforlargelanguagemodelsasurvey",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.3144
+    },
+    {
+      "index": 89,
+      "question": "Can you provide me some works where LLMs are utilized to perform summarization with the fixed aspects provided by humans?",
+      "success": true,
+      "error": null,
+      "candidate_count": 167,
+      "cutoff_date": "2023-11-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 167,
+        "false_negative": 2,
+        "predicted_count": 167,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "News Summarization and Evaluation in the Era of GPT-3",
+          "match_key": "newssummarizationandevaluationintheeraofgpt",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Exploring the Limits of ChatGPT for Query or Aspect-based Text\n  Summarization",
+          "match_key": "exploringthelimitsofchatgptforqueryoraspectbasedtextsummarization",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.4698
+    },
+    {
+      "index": 90,
+      "question": "Can you name the papers that have discussed strategies to counteract the high variance issue of LR gradient?",
+      "success": true,
+      "error": null,
+      "candidate_count": 157,
+      "cutoff_date": "2023-12-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 157,
+        "false_negative": 1,
+        "predicted_count": 157,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "High-Dimensional Continuous Control Using Generalized Advantage Estimation",
+          "match_key": "highdimensionalcontinuouscontrolusinggeneralizedadvantageestimation",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.292
+    },
+    {
+      "index": 91,
+      "question": "Are there any studies employing GPT-3 Codex in training-free neural-symbolic framework?",
+      "success": true,
+      "error": null,
+      "candidate_count": 161,
+      "cutoff_date": "2023-10-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 161,
+        "false_negative": 2,
+        "predicted_count": 161,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Binding Language Models in Symbolic Languages",
+          "match_key": "bindinglanguagemodelsinsymboliclanguages",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Evaluating Large Language Models Trained on Code",
+          "match_key": "evaluatinglargelanguagemodelstrainedoncode",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 12.8754
+    },
+    {
+      "index": 92,
+      "question": "What are some studies that have adapted the representation of Gaussian splatting for text-to-3D generation?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2023-11-21",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 159,
+        "false_negative": 1,
+        "predicted_count": 160,
+        "gold_count": 2,
+        "precision": 0.0063,
+        "recall": 0.5,
+        "f1": 0.0123
+      },
+      "gold_coverage": [
+        {
+          "gold": "DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content\n  Creation",
+          "match_key": "dreamgaussiangenerativegaussiansplattingforefficientdcontentcreation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Text-to-3D using Gaussian Splatting",
+          "match_key": "texttodusinggaussiansplatting",
+          "matched": true,
+          "candidate_rank": 14
+        }
+      ],
+      "recall_at_20": 0.5,
+      "recall_at_50": 0.5,
+      "recall_at_100": 0.5,
+      "elapsed_seconds": 10.1862
+    },
+    {
+      "index": 93,
+      "question": "What studies made advances in the photorealistic synthesis of images conditioned on text prompts?",
+      "success": true,
+      "error": null,
+      "candidate_count": 169,
+      "cutoff_date": "2023-09-07",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 169,
+        "false_negative": 6,
+        "predicted_count": 169,
+        "gold_count": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Diffusion Models Beat GANs on Image Synthesis",
+          "match_key": "diffusionmodelsbeatgansonimagesynthesis",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Photorealistic Text-to-Image Diffusion Models with Deep Language\n  Understanding",
+          "match_key": "photorealistictexttoimagediffusionmodelswithdeeplanguageunderstanding",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "match_key": "hierarchicaltextconditionalimagegenerationwithcliplatents",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "match_key": "highresolutionimagesynthesiswithlatentdiffusionmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "MaskGIT: Masked Generative Image Transformer",
+          "match_key": "maskgitmaskedgenerativeimagetransformer",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Muse: Text-To-Image Generation via Masked Generative Transformers",
+          "match_key": "musetexttoimagegenerationviamaskedgenerativetransformers",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.0489
+    },
+    {
+      "index": 94,
+      "question": "What papers involve prefix techniques used in LLMs?",
+      "success": true,
+      "error": null,
+      "candidate_count": 179,
+      "cutoff_date": "2023-05-17",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 179,
+        "false_negative": 2,
+        "predicted_count": 179,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+          "match_key": "prefixtuningoptimizingcontinuouspromptsforgeneration",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks",
+          "match_key": "ptuningvprompttuningcanbecomparabletofinetuninguniversallyacrossscalesandtasks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 9.9059
+    },
+    {
+      "index": 95,
+      "question": "What papers analyse stochastic optimization methods under the arbitrary sampling paradigm?",
+      "success": true,
+      "error": null,
+      "candidate_count": 153,
+      "cutoff_date": "2023-02-20",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 153,
+        "false_negative": 16,
+        "predicted_count": 153,
+        "gold_count": 16,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "On Optimal Probabilities in Stochastic Coordinate Descent Methods",
+          "match_key": "onoptimalprobabilitiesinstochasticcoordinatedescentmethods",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Coordinate Descent with Arbitrary Sampling I: Algorithms and Complexity",
+          "match_key": "coordinatedescentwitharbitrarysamplingialgorithmsandcomplexity",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Accelerated Coordinate Descent with Arbitrary Sampling and Best Rates for Minibatches",
+          "match_key": "acceleratedcoordinatedescentwitharbitrarysamplingandbestratesforminibatches",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Reformulations of Linear Systems: Algorithms and Convergence Theory",
+          "match_key": "stochasticreformulationsoflinearsystemsalgorithmsandconvergencetheory",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Momentum and Stochastic Momentum for Stochastic Gradient, Newton, Proximal Point and Subspace Descent Methods",
+          "match_key": "momentumandstochasticmomentumforstochasticgradientnewtonproximalpointandsubspacedescentmethods",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Convergence Analysis of Inexact Randomized Iterative Methods",
+          "match_key": "convergenceanalysisofinexactrandomizediterativemethods",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "A New Perspective on Randomized Gossip Algorithms",
+          "match_key": "anewperspectiveonrandomizedgossipalgorithms",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Revisiting Randomized Gossip Algorithms: General Framework, Convergence Rates and Novel Block and Accelerated Protocols",
+          "match_key": "revisitingrandomizedgossipalgorithmsgeneralframeworkconvergenceratesandnovelblockandacceleratedprotocols",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SGD: General Analysis and Improved Rates",
+          "match_key": "sgdgeneralanalysisandimprovedrates",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SGD for Structured Nonconvex Functions: Learning Rates, Minibatching and Interpolation",
+          "match_key": "sgdforstructurednonconvexfunctionslearningratesminibatchingandinterpolation",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "SAGA with Arbitrary Sampling",
+          "match_key": "sagawitharbitrarysampling",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Nonconvex Variance Reduced Optimization with Arbitrary Sampling",
+          "match_key": "nonconvexvariancereducedoptimizationwitharbitrarysampling",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization",
+          "match_key": "unifiedanalysisofstochasticgradientmethodsforcompositeconvexandsmoothoptimization",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Hamiltonian Gradient Methods for Smooth Games",
+          "match_key": "stochastichamiltoniangradientmethodsforsmoothgames",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Gradient Descent-Ascent and Consensus Optimization for Smooth Games: Convergence Analysis under Expected Co-coercivity",
+          "match_key": "stochasticgradientdescentascentandconsensusoptimizationforsmoothgamesconvergenceanalysisunderexpectedcocoercivity",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Stochastic Extragradient: General Analysis and Improved Rates",
+          "match_key": "stochasticextragradientgeneralanalysisandimprovedrates",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.3882
+    },
+    {
+      "index": 96,
+      "question": "What papers used Hermite expansion to study the Neural Tangent Kernel?",
+      "success": true,
+      "error": null,
+      "candidate_count": 152,
+      "cutoff_date": "2022-11-08",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 152,
+        "false_negative": 5,
+        "predicted_count": 152,
+        "gold_count": 5,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Toward Deeper Understanding of Neural Networks:The Power of Initialization and a Dual View on Expressivity",
+          "match_key": "towarddeeperunderstandingofneuralnetworksthepowerofinitializationandadualviewonexpressivity",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Reverse Engineering the Neural Tangent Kernel",
+          "match_key": "reverseengineeringtheneuraltangentkernel",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Global Convergence of Deep Networks with One Wide Layer Followed by Pyramidal Topology",
+          "match_key": "globalconvergenceofdeepnetworkswithonewidelayerfollowedbypyramidaltopology",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Effect of Activation Functions on the Training of Overparametrized Neural Nets",
+          "match_key": "effectofactivationfunctionsonthetrainingofoverparametrizedneuralnets",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Fast Neural Kernel Embeddings for General Activations",
+          "match_key": "fastneuralkernelembeddingsforgeneralactivations",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.0601
+    },
+    {
+      "index": 97,
+      "question": "What works defined the settings of the DDPM model based on the continuous limit of βt?",
+      "success": true,
+      "error": null,
+      "candidate_count": 169,
+      "cutoff_date": "2022-06-10",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 169,
+        "false_negative": 1,
+        "predicted_count": 169,
+        "gold_count": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Denoising Diffusion Probabilistic Models",
+          "match_key": "denoisingdiffusionprobabilisticmodels",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 11.3286
+    },
+    {
+      "index": 98,
+      "question": "Which papers established improvements over the no-regret framework when specific learning dynamics are in place?",
+      "success": true,
+      "error": null,
+      "candidate_count": 160,
+      "cutoff_date": "2022-09-21",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 160,
+        "false_negative": 2,
+        "predicted_count": 160,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Fast Convergence of Regularized Learning in Games",
+          "match_key": "fastconvergenceofregularizedlearningingames",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Near-Optimal No-Regret Learning in General Games",
+          "match_key": "nearoptimalnoregretlearningingeneralgames",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 10.8609
+    },
+    {
+      "index": 99,
+      "question": "What works researched the effect of adversarial perturbations on image-to-image tasks?",
+      "success": true,
+      "error": null,
+      "candidate_count": 163,
+      "cutoff_date": "2023-07-17",
+      "candidate_pool": {
+        "true_positive": 1,
+        "false_positive": 162,
+        "false_negative": 2,
+        "predicted_count": 163,
+        "gold_count": 3,
+        "precision": 0.0061,
+        "recall": 0.3333,
+        "f1": 0.012
+      },
+      "gold_coverage": [
+        {
+          "gold": "Deep Image Destruction: Vulnerability of Deep Image-to-Image Models against Adversarial Attacks",
+          "match_key": "deepimagedestructionvulnerabilityofdeepimagetoimagemodelsagainstadversarialattacks",
+          "matched": true,
+          "candidate_rank": 22
+        },
+        {
+          "gold": "Towards Adversarially Robust Deep Image Denoising",
+          "match_key": "towardsadversariallyrobustdeepimagedenoising",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Evaluating Robustness of Deep Image Super-Resolution Against Adversarial Attacks",
+          "match_key": "evaluatingrobustnessofdeepimagesuperresolutionagainstadversarialattacks",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.3333,
+      "recall_at_100": 0.3333,
+      "elapsed_seconds": 10.0326
+    },
+    {
+      "index": 100,
+      "question": "What works explore the vulnerability of models to inversion attacks causing the leakage of private information?",
+      "success": true,
+      "error": null,
+      "candidate_count": 155,
+      "cutoff_date": "2024-01-15",
+      "candidate_pool": {
+        "true_positive": 0,
+        "false_positive": 155,
+        "false_negative": 2,
+        "predicted_count": 155,
+        "gold_count": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "gold_coverage": [
+        {
+          "gold": "Membership Inference Attacks against Machine Learning Models",
+          "match_key": "membershipinferenceattacksagainstmachinelearningmodels",
+          "matched": false,
+          "candidate_rank": null
+        },
+        {
+          "gold": "Comprehensive Privacy Analysis of Deep Learning: Passive and Active\n  White-box Inference Attacks against Centralized and Federated Learning",
+          "match_key": "comprehensiveprivacyanalysisofdeeplearningpassiveandactivewhiteboxinferenceattacksagainstcentralizedandfederatedlearning",
+          "matched": false,
+          "candidate_rank": null
+        }
+      ],
+      "recall_at_20": 0.0,
+      "recall_at_50": 0.0,
+      "recall_at_100": 0.0,
+      "elapsed_seconds": 8.9406
+    }
+  ]
+}
