@@ -173,7 +173,11 @@ class PaperAgentPipeline:
             query_plan = heuristic_understand_query(original_query)
 
         # 3. 初始化多路检索器
-        retriever = MultiRouteRetriever(self.providers, budget, parallel=True)
+        retriever = MultiRouteRetriever(
+            self.providers,
+            budget,
+            parallel=bool(getattr(self.config.app, "parallel_retrieval", False)),
+        )
         rounds_history: list[SearchProcessRound] = []
 
         # 4. 第一轮检索规划与执行
@@ -184,98 +188,7 @@ class PaperAgentPipeline:
             subqueries = heuristic_generate_search_queries(query_plan)
             budget.record_search_queries(len(subqueries))
 
-        # 执行第一轮检索
-        LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
-        _, candidate_pool = retriever.retrieve(subqueries)
-        all_candidates = deduplicate_papers(candidate_pool)
- 
-        round_1_record = SearchProcessRound(
-            round_index=1,
-            search_goal="构建包含核心主题的基础论文候选池",
-            queries=[q.query for q in subqueries],
-            candidates_found=len(all_candidates),
-            review_conclusion="第一轮检索完成"
-        )
-        rounds_history.append(round_1_record)
-
-        # 5. 主控多轮迭代检索环 (最多 config.app.max_retrieval_rounds 轮)
-        max_rounds = getattr(self.config.budget, "max_retrieval_rounds", 3)
-        
-        for r in range(2, max_rounds + 1):
-            if not all_candidates:
-                LOGGER.info("No candidates found in Round %d. Aborting dynamic loop.", r - 1)
-                break
-
-            # 5.1 结果审阅与差距分析
-            LOGGER.info("Reviewing candidates for Round %d", r)
-            review_res = review_retrieval_results(query_plan, all_candidates, r - 1, self.llm_client)
-            # 更新上一轮的审阅结论
-            rounds_history[-1].review_conclusion = review_res.get("reason", "审阅完成")
-
-            # 5.2 决策是否提前终止
-            if review_res.get("next_action") == "stop_search":
-                LOGGER.info("Result Review Agent decided to STOP search in Round %d", r)
-                break
-
-            # 5.3 检索策略优化
-            LOGGER.info("Optimizing search strategy for Round %d", r)
-            opt_res = optimize_search_strategy(query_plan, review_res, all_candidates, r - 1, self.llm_client)
-
-            new_subqueries_data = opt_res.get("new_subqueries", [])
-            new_queries = []
-            for item in new_subqueries_data:
-                new_queries.append(
-                    SearchQuery(
-                        query=item.get("query", ""),
-                        route="hybrid",
-                        intent=item.get("reason", "expanded search"),
-                        priority=1
-                    )
-                )
-
-            new_candidates: list[Paper] = []
-            if new_queries:
-                budget.record_search_queries(len(new_queries))
-                _, new_pool = retriever.retrieve(new_queries)
-                new_candidates.extend(new_pool)
-
-            # 5.4 引文网络扩展
-            if review_res.get("need_citation_expansion") or opt_res.get("citation_expansion_seeds"):
-                seed_ids = set(opt_res.get("citation_expansion_seeds", []))
-                seed_papers = [p for p in all_candidates if p.paper_id in seed_ids]
-                if not seed_papers:
-                    # 兜底选择前 3 篇作为种子
-                    seed_papers = all_candidates[:3]
-                
-                LOGGER.info("Expanding citation network for Round %d with %d seeds", r, len(seed_papers))
-                expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=5)
-                new_candidates.extend(expanded_pool)
-
-            # 合并去重新候选
-            if new_candidates:
-                all_candidates.extend(new_candidates)
-                all_candidates = deduplicate_papers(all_candidates)
-
-            # 记录当前轮
-            round_record = SearchProcessRound(
-                round_index=r,
-                search_goal=opt_res.get("search_goal", "补充缺失主题与硬约束项"),
-                queries=[q.query for q in new_queries],
-                candidates_found=len(all_candidates),
-                review_conclusion="检索完成"
-            )
-            rounds_history.append(round_record)
-
-            if opt_res.get("stop_after_this_round", False):
-                LOGGER.info("Strategy Optimizer Agent decided to STOP after Round %d", r)
-                break
-
-        # 最后一轮的最终审阅更新
-        if rounds_history and rounds_history[-1].review_conclusion == "检索完成":
-            final_review = review_retrieval_results(query_plan, all_candidates, len(rounds_history), self.llm_client)
-            rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
-
-        # 6. 细粒度证据筛选 (先进行粗排截断，最多只送 20 篇以控制 LLM 成本和噪声)
+        # 定义用于粗排评分的内部函数，以便多轮迭代复用
         def _get_title_match_bonus(title: str, query: str) -> float:
             import re
             stop_words = {"the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from", "that", "this", "these", "those"}
@@ -312,6 +225,104 @@ class PaperAgentPipeline:
             
             return base_score + paths_val * 0.01 + citation_score + route_bonus + title_bonus
 
+        # 执行第一轮检索
+        LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
+        _, candidate_pool = retriever.retrieve(subqueries)
+        all_candidates = deduplicate_papers(candidate_pool)
+        all_candidates.sort(key=_get_rough_score, reverse=True)
+ 
+        round_1_record = SearchProcessRound(
+            round_index=1,
+            search_goal="构建包含核心主题的基础论文候选池",
+            queries=[q.query for q in subqueries],
+            candidates_found=len(all_candidates),
+            review_conclusion="第一轮检索完成"
+        )
+        rounds_history.append(round_1_record)
+
+        # 5. 主控多轮迭代检索环 (最多 config.app.max_retrieval_rounds 轮)
+        if retrieval_only and (not self.llm_client or not self.llm_client.is_available()):
+            max_rounds = 1
+        else:
+            max_rounds = getattr(self.config.budget, "max_retrieval_rounds", 3)
+        
+        for r in range(2, max_rounds + 1):
+            # 5.1 结果审阅与差距分析
+            LOGGER.info("Reviewing candidates for Round %d", r)
+            review_res = review_retrieval_results(query_plan, all_candidates, r - 1, self.llm_client, self.config)
+            # 更新上一轮的审阅结论
+            rounds_history[-1].review_conclusion = review_res.get("reason", "审阅完成")
+
+            # 5.2 决策是否提前终止
+            if review_res.get("next_action") == "stop_search":
+                LOGGER.info("Result Review Agent decided to STOP search in Round %d", r)
+                break
+
+            # 5.3 检索策略优化
+            LOGGER.info("Optimizing search strategy for Round %d", r)
+            opt_res = optimize_search_strategy(query_plan, review_res, all_candidates, r - 1, self.llm_client)
+
+            new_subqueries_data = opt_res.get("new_subqueries", [])
+            new_queries = []
+            for item in new_subqueries_data:
+                new_queries.append(
+                    SearchQuery(
+                        query=item.get("query", ""),
+                        route="hybrid",
+                        intent=item.get("reason", "expanded search"),
+                        priority=1
+                    )
+                )
+
+            new_candidates: list[Paper] = []
+            if new_queries:
+                budget.record_search_queries(len(new_queries))
+                _, new_pool = retriever.retrieve(new_queries)
+                new_candidates.extend(new_pool)
+
+            # 5.4 引文网络扩展
+            enable_refchain = False
+            query_type = getattr(query_plan, "query_type", "unknown")
+            if query_type in {"citation_tracking", "survey", "method_comparison"}:
+                enable_refchain = True
+            elif len(all_candidates) < 100:
+                enable_refchain = True
+
+            if enable_refchain and (review_res.get("need_citation_expansion") or opt_res.get("citation_expansion_seeds")):
+                seed_ids = set(opt_res.get("citation_expansion_seeds", []))
+                seed_papers = [p for p in all_candidates if p.paper_id in seed_ids]
+                if not seed_papers:
+                    seed_papers = all_candidates[:3]
+                
+                LOGGER.info("Expanding citation network for Round %d with %d seeds", r, len(seed_papers))
+                expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=5)
+                new_candidates.extend(expanded_pool)
+
+            # 合并去重新候选
+            if new_candidates:
+                all_candidates.extend(new_candidates)
+                all_candidates = deduplicate_papers(all_candidates)
+                all_candidates.sort(key=_get_rough_score, reverse=True)
+
+            # 记录当前轮
+            round_record = SearchProcessRound(
+                round_index=r,
+                search_goal=opt_res.get("search_goal", "补充缺失主题与硬约束项"),
+                queries=[q.query for q in new_queries],
+                candidates_found=len(all_candidates),
+                review_conclusion="检索完成"
+            )
+            rounds_history.append(round_record)
+
+            if opt_res.get("stop_after_this_round", False):
+                LOGGER.info("Strategy Optimizer Agent decided to STOP after Round %d", r)
+                break
+
+        # 最后一轮的最终审阅更新
+        if rounds_history and rounds_history[-1].review_conclusion == "检索完成":
+            final_review = review_retrieval_results(query_plan, all_candidates, len(rounds_history), self.llm_client, self.config)
+            rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
+
         all_candidates.sort(key=_get_rough_score, reverse=True)
 
         # 存储候选池供评估框架审计
@@ -334,20 +345,44 @@ class PaperAgentPipeline:
                 run_metrics=budget.get_metrics()
             )
 
-        max_selection = getattr(self.config.budget, "max_llm_selection_papers", 20)
-        selection_candidates = all_candidates[:max_selection]
+        query_type = getattr(query_plan, "query_type", "unknown")
+        if query_type in ("exact_title", "specific_paper"):
+            max_selection = 5 if query_type == "exact_title" else 10
+        elif query_type in ("dataset_constraint", "method_comparison"):
+            max_selection = 15
+        elif query_type in ("survey", "broad_topic", "latest_work"):
+            max_selection = 20
+        else:
+            max_selection = getattr(self.config.budget, "max_llm_selection_papers", 15)
+        # 取粗排前 max_selection 篇；同时强制纳入 title_exact / title_like 命中的论文
+        # 这些论文是 LLM 或 heuristic 认为标题命中的候选，但粗排分可能偏低，必须保证进入精排
+        selection_set = list(all_candidates[:max_selection])
+        selection_ids = {p.paper_id for p in selection_set}
+        for p in all_candidates[max_selection:]:
+            has_title_match = any(
+                "title_exact" in path or "title_like" in path
+                for path in (p.retrieval_path or [])
+            )
+            if has_title_match and p.paper_id not in selection_ids:
+                selection_set.append(p)
+                selection_ids.add(p.paper_id)
+                if len(selection_set) >= max_selection + 10:
+                    break
+        selection_candidates = selection_set
 
         LOGGER.info("Starting fine-grained evidence selection for %d papers (filtered from %d candidates)", 
                     len(selection_candidates), len(all_candidates))
-        selections = select_and_extract_evidence(selection_candidates, query_plan, self.llm_client)
+        from scholar_agent.selection.batch_evidence_selector import batch_select_and_extract_evidence
+        selections = batch_select_and_extract_evidence(selection_candidates, query_plan, self.llm_client)
 
         # 7. 本地规则硬核校验与降级
         LOGGER.info("Validating evidence and constraints locally")
         validated_selections = validate_selections(all_candidates, selections, query_plan)
+        self.selections = validated_selections
 
         # 8. 多维度综合重排
         LOGGER.info("Reranking papers based on blending formula")
-        ranked_papers = rerank_papers(all_candidates, validated_selections)
+        ranked_papers = rerank_papers(all_candidates, validated_selections, self.config, original_query)
 
         # 存储候选池供评估框架审计
         self.candidate_pool = all_candidates
@@ -364,7 +399,8 @@ class PaperAgentPipeline:
             query_plan=query_plan,
             search_rounds=rounds_history,
             ranked_papers=ranked_papers,
-            metrics=budget.get_metrics()
+            metrics=budget.get_metrics(),
+            config=self.config
         )
 
         LOGGER.info("Pipeline completed successfully. Found %d recommended papers.", 

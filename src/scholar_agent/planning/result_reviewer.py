@@ -13,6 +13,7 @@ def review_retrieval_results(
     papers: list[Paper],
     round_index: int,
     llm_client: object | None = None,
+    config: Any | None = None,
 ) -> dict[str, Any]:
     """Result Review Agent
     每轮检索后，让大语言模型审阅候选论文（摘要和标题等），判断是否满足查询约束，
@@ -26,19 +27,25 @@ def review_retrieval_results(
             "noise_patterns": []
         },
         "candidate_quality": {
-            "enough_candidates": len(papers) >= 15,
-            "hard_constraint_coverage": "high" if len(papers) >= 10 else "medium",
+            "enough_candidates": len(papers) >= 20,
+            "hard_constraint_coverage": "high" if len(papers) >= 15 else "medium",
             "precision_risk": "low",
-            "recall_risk": "low" if len(papers) >= 15 else "medium"
+            "recall_risk": "low" if len(papers) >= 20 else "medium"
         },
-        "next_action": "stop_search" if len(papers) >= 20 or round_index >= 2 else "continue_search",
+        "next_action": "stop_search" if round_index >= 3 else "continue_search",
         "suggested_new_keywords": [],
         "suggested_excluded_terms": [],
-        "need_citation_expansion": len(papers) > 0 and len(papers) < 10,
-        "reason": "已找到足够候选论文，或已达最大迭代轮数。" if len(papers) >= 15 else "候选论文较少，建议继续检索。"
+        "need_citation_expansion": len(papers) > 0 and len(papers) < 15,
+        "reason": "已找到足够候选论文，或已达最大迭代轮数。" if len(papers) >= 20 else "候选论文较少，建议继续检索。"
     }
 
-    if llm_client is None or not papers or len(papers) >= 20 or round_index >= 2:
+    if not papers:
+        fallback["coverage_analysis"]["missing_aspects"] = ["All aspects (0 papers found)"]
+        fallback["next_action"] = "continue_search"
+        fallback["reason"] = "No papers found in the initial search. Must expand keywords."
+        return fallback
+
+    if llm_client is None or round_index >= 3:
         return fallback
 
     # 仅向大模型呈现 Top 20 篇候选论文进行审阅，以降低 Token 消耗并控制预算
@@ -86,11 +93,14 @@ def review_retrieval_results(
         "}\n\n"
         f"QueryPlan Contract: {plan.model_dump_json()}\n"
         f"Current Candidate Papers (Top {len(papers_payload)}): {papers_payload}\n"
-        f"Current Retrieval Round: {round_index}"
+        f"Current Retrieval Round: {round_index}\n"
+        "CRITICAL: When analyzing missing_aspects, check if the candidate papers cover ALL methods, datasets, and entities specified in the QueryPlan. "
+        "If any method/dataset/entity is NOT mentioned in the titles or abstracts of the candidate papers, add it to missing_aspects. "
+        "Be thorough and prefer recall over precision - if in doubt, add it to missing_aspects."
     )
 
     # 审阅工作需要相对深度的理解，使用 pro 级模型
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="pro")
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     if response is None:
         return fallback
     try:
@@ -98,6 +108,25 @@ def review_retrieval_results(
         for key in ["coverage_analysis", "candidate_quality", "next_action", "reason"]:
             if key not in response:
                 return fallback
+
+        # 增强 recall_risk 判断逻辑
+        coverage = response.get("coverage_analysis", {})
+        missing_aspects = coverage.get("missing_aspects", [])
+        candidate_quality = response.get("candidate_quality", {})
+
+        # 如果有明显 missing_aspects，强制 recall_risk 为 high
+        if missing_aspects and len(missing_aspects) > 0:
+            candidate_quality["recall_risk"] = "high"
+            # 且如果还没达到配置中规定的硬上限，且轮数未超限，强制 next_action 为 continue_search
+            max_pool_size = 100
+            max_rounds = 3
+            if config and hasattr(config, "budget"):
+                max_pool_size = getattr(config.budget, "max_candidate_pool_size", 100)
+                max_rounds = getattr(config.budget, "max_retrieval_rounds", 3)
+            if len(papers) < max_pool_size and round_index < max_rounds:
+                response["next_action"] = "continue_search"
+                response["reason"] = f"Missing aspects detected: {missing_aspects}. Continue search to improve recall."
+
         return dict(response)
     except Exception as exc:
         LOGGER.warning("Result Review Agent parse response failed: %s", exc)

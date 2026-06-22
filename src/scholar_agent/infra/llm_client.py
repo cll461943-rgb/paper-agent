@@ -1,22 +1,14 @@
 from __future__ import annotations
 
 import json
+import logging
 import time
 from dataclasses import dataclass
 from typing import Any
 
 import requests
-from urllib3.util import connection
 
-_original_create_connection = connection.create_connection
-
-def patched_create_connection(address, *args, **kwargs):
-    host, port = address
-    if host == "api.deepseek.com":
-        return _original_create_connection(("3.173.21.63", port), *args, **kwargs)
-    return _original_create_connection(address, *args, **kwargs)
-
-connection.create_connection = patched_create_connection
+LOGGER = logging.getLogger(__name__)
 
 from scholar_agent.infra.config import LLMConfig
 from scholar_agent.workflow.budget import BudgetExceededError, BudgetManager
@@ -34,7 +26,7 @@ class OpenAICompatibleLLMClient:
         self.config = config
         self.budget = budget
         self.session = requests.Session()
-        self.session.trust_env = False  # 直连国内 DeepSeek 接口，不走代理以规避 SSL 握手冲突
+        self.session.trust_env = getattr(config, "trust_env", True)
         self.session.headers.update(
             {
                 "Content-Type": "application/json",
@@ -69,7 +61,7 @@ class OpenAICompatibleLLMClient:
 
     def _post_json(self, payload: dict[str, Any], timeout_seconds: float | None = None) -> dict[str, Any]:
         read_timeout = timeout_seconds if timeout_seconds is not None else self.config.timeout_seconds
-        max_retries = 3
+        max_retries = getattr(self.config, "max_retries", 3)
         last_exc = None
         for attempt in range(max_retries):
             try:

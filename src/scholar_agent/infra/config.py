@@ -34,6 +34,7 @@ class ProviderConfig(BaseModel):
     fp16: bool = False
     normalize_embeddings: bool = True
     embedding_cache_dir: str = "data/cache/embeddings"
+    enable_fts: bool = False
 
 
 class ProviderSection(BaseModel):
@@ -66,25 +67,52 @@ class LLMConfig(BaseModel):
     timeout_seconds: int = 90
     max_tokens: int = 2048
     temperature: float = 0.2
+    trust_env: bool = True
+    max_retries: int = 3
 
 
 class BudgetConfig(BaseModel):
-    max_search_queries: int = 15
+    max_search_queries: int = 20
     max_retrieval_rounds: int = 3
-    max_results_per_query: int = 30
-    max_candidate_pool_size: int = 500
+    max_results_per_query: int = 40
+    max_candidate_pool_size: int = 600
     max_seed_papers: int = 10
     max_refchain_depth: int = 1
     max_llm_selection_papers: int = 50
     max_final_papers: int = 20
     max_evidence_summary_papers: int = 10
     max_llm_calls: int = 30
+    max_api_calls: int = 1000
     llm_timeout_seconds: int = 90
     api_timeout_seconds: int = 20
     retry_times: int = 2
     known_title_seed_only: bool = False
     enable_query_expansion: bool = True
     adaptive_provider_fallback: bool = True
+    source_auto_route: bool = True  # 按 query_type 自动启用源
+    enable_translated_route: bool = True  # 自动生成英文翻译检索式
+
+
+class DynamicKConfig(BaseModel):
+    exact_title_k: int = 1
+    specific_query_k: int = 2
+    dataset_constraint_k: int = 3
+    method_comparison_k: int = 3
+    survey_k: int = 5
+    broad_topic_k: int = 5
+    score_gap_top1: float = 0.15
+    score_gap_top3: float = 0.10
+    min_final_score: float = 0.55
+    fallback_k: int = 3
+
+
+class RankingConfig(BaseModel):
+    max_final_papers: int = 20
+    weights: dict[str, float] = Field(default_factory=dict)
+
+
+class KnownTitleCluesConfig(BaseModel):
+    enabled: bool = True
 
 
 class AppConfig(BaseModel):
@@ -92,7 +120,9 @@ class AppConfig(BaseModel):
     providers: ProviderSection = ProviderSection()
     llm: LLMConfig = LLMConfig()
     budget: BudgetConfig = BudgetConfig()
-    ranking: dict[str, Any] = {}
+    ranking: RankingConfig = RankingConfig()
+    dynamic_k: DynamicKConfig = DynamicKConfig()
+    known_title_clues: KnownTitleCluesConfig = KnownTitleCluesConfig()
 
 
 def _load_dotenv_if_present(path: str | Path = ".env") -> None:

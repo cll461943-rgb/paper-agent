@@ -5,7 +5,7 @@ app:
   providers:
     - mock
   cache_dir: data/cache
-  parallel_retrieval: false
+  parallel_retrieval: true
 
 llm:
   enabled: true
@@ -18,12 +18,13 @@ llm:
   # 默认降级用 model (若只配置单一 model)
   model: deepseek-v4-flash
   timeout_seconds: 90
-  max_tokens: 2048
+  max_tokens: 4096
   temperature: 0.2
 
 providers:
   pasa_local:
     enabled: true
+    enable_fts: true
     base_url: external/pasa/data/paper_database
     timeout_seconds: 0
     retry_times: 0
@@ -41,19 +42,19 @@ providers:
     mailto: "33316@example.com"
     api_key_env: OPENALEX_API_KEY
   arxiv:
-    enabled: true
+    enabled: false
     base_url: https://export.arxiv.org/api/query
-    timeout_seconds: 20
+    timeout_seconds: 15
     retry_times: 2
-    min_interval_seconds: 3.5
+    min_interval_seconds: 2.0
     max_concurrency: 1
     backoff_base_seconds: 3.0
   semantic_scholar:
-    enabled: false
+    enabled: true
     base_url: https://api.semanticscholar.org/graph/v1/paper/search
-    timeout_seconds: 20
+    timeout_seconds: 15
     retry_times: 2
-    min_interval_seconds: 1.0
+    min_interval_seconds: 1.5
     max_concurrency: 1
     backoff_base_seconds: 1.5
     api_key_env: SEMANTIC_SCHOLAR_API_KEY
@@ -67,19 +68,19 @@ providers:
     backoff_base_seconds: 1.0
 
 budget:
-  max_search_queries: 15
+  max_search_queries: 10
   max_retrieval_rounds: 2
   max_results_per_query: 30
-  max_candidate_pool_size: 500
-  max_seed_papers: 10
+  max_candidate_pool_size: 400
+  max_seed_papers: 5
   max_refchain_depth: 1
-  max_llm_selection_papers: 20
-  max_final_papers: 20
-  max_evidence_summary_papers: 10
-  max_llm_calls: 30
-  llm_timeout_seconds: 90
-  api_timeout_seconds: 20
-  retry_times: 2
+  max_llm_selection_papers: 15
+  max_final_papers: 10
+  max_evidence_summary_papers: 5
+  max_llm_calls: 8
+  llm_timeout_seconds: 30
+  api_timeout_seconds: 8
+  retry_times: 1
   known_title_seed_only: false
   enable_query_expansion: true
 
@@ -93,3 +94,18 @@ ranking:
     recency_score: 0.05
     authority_score: 0.03
     diversity_graph_prior_score: 0.02
+
+known_title_clues:
+  enabled: true
+
+dynamic_k:
+  exact_title_k: 1
+  specific_query_k: 2
+  dataset_constraint_k: 3
+  method_comparison_k: 3
+  survey_k: 5
+  broad_topic_k: 5
+  score_gap_top1: 0.15
+  score_gap_top3: 0.10
+  min_final_score: 0.55
+  fallback_k: 3

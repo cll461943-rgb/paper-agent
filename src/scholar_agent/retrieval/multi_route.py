@@ -80,6 +80,7 @@ class MultiRouteRetriever:
         component = f"retrieval.{provider.name}.{query.route}"
         cache_hit = self._has_query_cache_hit(provider, query, limit)
         api_calls_delta = self._search_api_calls(provider, cache_hit)
+        api_calls_reserved = 0
         cache_hits_delta = 1 if cache_hit else 0
         errors_delta = 0
         papers: list[Paper] = []
@@ -99,14 +100,15 @@ class MultiRouteRetriever:
                 error=f"skipped_after_{block_reason}",
             )
         try:
+            if api_calls_delta:
+                self.budget.reserve_api_call(api_calls_delta)
+                api_calls_reserved = api_calls_delta
             papers = provider.search(query, limit=limit)
             provider_error = getattr(provider, "last_error", None)
             if provider_error:
                 self._mark_provider_error(provider, provider_error)
                 self.budget.record_error(f"{provider.name}.{query.route}: {provider_error}")
                 errors_delta = 1
-            if api_calls_delta:
-                self.budget.record_api_call(api_calls_delta)
             if cache_hits_delta:
                 self.budget.record_cache_hit(cache_hits_delta)
             return RetrievalResult(
@@ -120,8 +122,6 @@ class MultiRouteRetriever:
         except Exception as exc:
             errors_delta = 1
             self._mark_provider_error(provider, str(exc))
-            if api_calls_delta:
-                self.budget.record_api_call(api_calls_delta)
             if cache_hits_delta:
                 self.budget.record_cache_hit(cache_hits_delta)
             self.budget.record_error(f"{provider.name} search failed for route={query.route}: {exc}")
@@ -136,7 +136,7 @@ class MultiRouteRetriever:
             self.budget.record_component_cost(
                 component,
                 time.perf_counter() - started_at,
-                api_calls_delta=api_calls_delta,
+                api_calls_delta=api_calls_reserved,
                 cache_hits_delta=cache_hits_delta,
                 errors_delta=errors_delta,
                 items_delta=len(papers),
@@ -183,67 +183,101 @@ class MultiRouteRetriever:
             for query in queries
             if query.route == "title_like" and self._looks_like_title_query(query.query)
         ]
+        title_like_queries = title_like_queries[:3]
+
+        def _fetch(provider: PaperProvider, query: SearchQuery) -> RetrievalResult | None:
+            component = f"retrieval.{provider.name}.title_exact"
+            started_at = time.perf_counter()
+            papers: list[Paper] = []
+            limit = min(10, self.budget.config.max_results_per_query)
+            exact_query = self._title_exact_query(query.query)
+            cache_hit = self._has_query_cache_hit(provider, exact_query, limit)
+            block_reason = self._provider_block_reasons.get(provider.name)
+            if block_reason and not cache_hit:
+                self.budget.record_component_cost(
+                    component,
+                    time.perf_counter() - started_at,
+                    items_delta=0,
+                )
+                return RetrievalResult(
+                    provider=provider.name,
+                    route="title_exact",
+                    search_query=query,
+                    papers=[],
+                    error=f"skipped_after_{block_reason}",
+                )
+            api_calls_delta = 0 if cache_hit else self._title_exact_api_calls(provider)
+            api_calls_reserved = 0
+            cache_hits_delta = 1 if cache_hit else 0
+            errors_delta = 0
+            try:
+                if api_calls_delta:
+                    self.budget.reserve_api_call(api_calls_delta)
+                    api_calls_reserved = api_calls_delta
+                papers = provider.search_title_exact(
+                    query.query,
+                    limit=limit,
+                )
+                if cache_hits_delta:
+                    self.budget.record_cache_hit(cache_hits_delta)
+            except Exception as exc:
+                errors_delta = 1
+                self._mark_provider_error(provider, str(exc))
+                self.budget.record_error(f"{provider.name} title_exact failed: {exc}")
+            finally:
+                self.budget.record_component_cost(
+                    component,
+                    time.perf_counter() - started_at,
+                    api_calls_delta=api_calls_reserved,
+                    cache_hits_delta=cache_hits_delta,
+                    errors_delta=errors_delta,
+                    items_delta=len(papers),
+                )
+            if not papers:
+                return None
+            return RetrievalResult(
+                provider=provider.name,
+                route="title_exact",
+                search_query=query,
+                papers=papers,
+                truncated=False,
+            )
+
+        tasks = []
         for provider in providers:
             if not self._overrides("search_title_exact", provider):
                 continue
             for query in title_like_queries:
-                component = f"retrieval.{provider.name}.title_exact"
-                started_at = time.perf_counter()
-                papers: list[Paper] = []
-                limit = min(10, self.budget.config.max_results_per_query)
-                exact_query = self._title_exact_query(query.query)
-                cache_hit = self._has_query_cache_hit(provider, exact_query, limit)
-                block_reason = self._provider_block_reasons.get(provider.name)
-                if block_reason and not cache_hit:
-                    self.budget.record_component_cost(
-                        component,
-                        time.perf_counter() - started_at,
-                        items_delta=0,
-                    )
-                    results.append(
-                        RetrievalResult(
-                            provider=provider.name,
-                            route="title_exact",
-                            search_query=query,
-                            papers=[],
-                            error=f"skipped_after_{block_reason}",
-                        )
-                    )
-                    continue
-                api_calls_delta = 0 if cache_hit else self._title_exact_api_calls(provider)
-                cache_hits_delta = 1 if cache_hit else 0
-                try:
-                    papers = provider.search_title_exact(
-                        query.query,
-                        limit=limit,
-                    )
-                    if api_calls_delta:
-                        self.budget.record_api_call(api_calls_delta)
-                    if cache_hits_delta:
-                        self.budget.record_cache_hit(cache_hits_delta)
-                finally:
-                    self.budget.record_component_cost(
-                        component,
-                        time.perf_counter() - started_at,
-                        api_calls_delta=api_calls_delta,
-                        cache_hits_delta=cache_hits_delta,
-                        items_delta=len(papers),
-                    )
-                if not papers:
-                    continue
-                results.append(
-                    RetrievalResult(
-                        provider=provider.name,
-                        route="title_exact",
-                        search_query=query,
-                        papers=papers,
-                        truncated=False,
-                    )
-                )
+                tasks.append((provider, query))
+
+        if not tasks:
+            return results
+
+        if self.parallel and len(tasks) > 1:
+            with ThreadPoolExecutor(max_workers=min(len(tasks), 8)) as executor:
+                future_map = [executor.submit(_fetch, p, q) for p, q in tasks]
+                for future in as_completed(future_map):
+                    res = future.result()
+                    if res is not None:
+                        results.append(res)
+        else:
+            for p, q in tasks:
+                res = _fetch(p, q)
+                if res is not None:
+                    results.append(res)
+                    
         return results
 
     def _search_provider_routes(self, provider: PaperProvider, queries: list[SearchQuery]) -> list[RetrievalResult]:
-        return [self._search_one(provider, query) for query in queries]
+        results = []
+        started_at = time.perf_counter()
+        provider_time_budget = 25.0
+        for query in queries:
+            if time.perf_counter() - started_at > provider_time_budget:
+                self.budget.record_error(f"{provider.name} skipped remaining queries due to provider_time_budget ({provider_time_budget}s)")
+                break
+            results.append(self._search_one(provider, query))
+        return results
 
     def _record_unavailable_provider(self, provider: PaperProvider, queries: list[SearchQuery]) -> RetrievalResult | None:
         message = getattr(provider, "last_error", None) or "provider unavailable"
@@ -278,17 +312,25 @@ class MultiRouteRetriever:
                     component = f"retrieval.{provider.name}.{route}"
                     operation_limit = remaining
                     api_calls_delta = self._reference_api_calls(provider, paper, operation_limit, route)
+                    api_calls_reserved = 0
+                    errors_delta = 0
                     papers: list[Paper] = []
                     started_at = time.perf_counter()
                     try:
-                        papers = operation(paper, limit=operation_limit)[:operation_limit]
                         if api_calls_delta:
-                            self.budget.record_api_call(api_calls_delta)
+                            self.budget.reserve_api_call(api_calls_delta)
+                            api_calls_reserved = api_calls_delta
+                        papers = operation(paper, limit=operation_limit)[:operation_limit]
+                    except Exception as exc:
+                        errors_delta = 1
+                        self._mark_provider_error(provider, str(exc))
+                        self.budget.record_error(f"{provider.name} {route} failed: {exc}")
                     finally:
                         self.budget.record_component_cost(
                             component,
                             time.perf_counter() - started_at,
-                            api_calls_delta=api_calls_delta,
+                            api_calls_delta=api_calls_reserved,
+                            errors_delta=errors_delta,
                             items_delta=len(papers),
                         )
                     expanded.extend(
@@ -321,7 +363,21 @@ class MultiRouteRetriever:
         def _get_queries_for_provider(prov: PaperProvider) -> list[SearchQuery]:
             if prov.name in LOCAL_ZERO_API_PROVIDERS or prov.name == "pasa_local":
                 return queries
-            return queries[:8]
+            
+            route_priority = {
+                "openalex": {"title_like", "title_exact", "core_topic", "method_task", "broad_synonym", "dataset", "translated"},
+                "arxiv": {"latest", "title_like", "core_topic", "method_task"},
+                "pubmed": {"biomedical", "dataset", "method_task", "core_topic"},
+                "semantic_scholar": {"title_like", "core_topic", "method_task", "citation_seed"},
+            }
+            allowed = route_priority.get(prov.name, set())
+            selected = []
+            for q in queries:
+                if getattr(q, "sources", None) and prov.name in q.sources:
+                    selected.append(q)
+                elif q.route in allowed:
+                    selected.append(q)
+            return selected[:4]
 
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:
@@ -334,8 +390,7 @@ class MultiRouteRetriever:
         else:
             for provider in providers:
                 prov_queries = _get_queries_for_provider(provider)
-                for query in prov_queries:
-                    results.append(self._search_one(provider, query))
+                results.extend(self._search_provider_routes(provider, prov_queries))
 
         if include_title_exact:
             results.extend(self._title_exact_results(queries, providers))

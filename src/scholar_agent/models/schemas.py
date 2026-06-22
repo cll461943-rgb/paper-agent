@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 class QueryPlan(BaseModel):
     original_query: str
     language: str = "zh"
+    query_type: str = "unknown"
     research_topic: str | None = None
     task: str | None = None
     methods: list[str] = Field(default_factory=list)
@@ -29,6 +30,8 @@ class SearchQuery(BaseModel):
     optional_terms: list[str] = Field(default_factory=list)
     filters: dict[str, Any] = Field(default_factory=dict)
     priority: int = 1
+    sources: list[str] = Field(default_factory=list)
+    max_results: int | None = None
 
 
 class Paper(BaseModel):
