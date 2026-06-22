@@ -67,7 +67,7 @@ class LLMConfig(BaseModel):
     timeout_seconds: int = 90
     max_tokens: int = 2048
     temperature: float = 0.2
-    trust_env: bool = True
+    trust_env: bool = False
     max_retries: int = 3
 
 
