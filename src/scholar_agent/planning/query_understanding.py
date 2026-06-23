@@ -5,6 +5,9 @@ from scholar_agent.models.schemas import QueryPlan
 
 LOGGER = logging.getLogger(__name__)
 
+# Regex pattern for matching year mentions in queries
+YEAR_PATTERN = re.compile(r'\b(19|20)\d{2}\b')
+
 COMMON_METHOD_HINTS = [
     "knowledge distillation",
     "llm",
@@ -20,6 +23,32 @@ COMMON_METHOD_HINTS = [
     "tf-idf",
     "transformer",
     "diffusion",
+    "lora",
+    "low-rank adaptation",
+    "contrastive learning",
+    "prompt tuning",
+    "instruction tuning",
+    "in-context learning",
+    "chain-of-thought",
+    "few-shot",
+    "zero-shot",
+    "self-supervised",
+    "semi-supervised",
+    "active learning",
+    "curriculum learning",
+    "meta-learning",
+    "federated learning",
+    "pruning",
+    "quantization",
+    "neural architecture search",
+    "graph neural network",
+    "attention mechanism",
+    "cross-attention",
+    "self-attention",
+    "reinforcement learning from human feedback",
+    "direct preference optimization",
+    "retrieval augmented generation",
+    "rag",
 ]
 
 COMMON_TASK_HINTS = [
@@ -37,6 +66,16 @@ COMMON_ENTITY_HINTS = [
     "document-level event extraction", "vocabulary watermarking", "hallucination",
     "factual consistency", "abstractive summarization", "quantized pretraining",
     "scholarly documents",
+    "text generation", "code generation", "image generation",
+    "sentiment analysis", "named entity recognition", "relation extraction",
+    "machine translation", "question answering", "reading comprehension",
+    "text classification", "semantic segmentation", "object detection",
+    "speech recognition", "text-to-speech", "image captioning",
+    "visual question answering", "dialogue system", "chatbot",
+    "embedding", "representation learning", "feature extraction",
+    "alignment", "safety", "jailbreak", "red-teaming",
+    "long context", "context window", "token limit",
+    "parameter-efficient", "adapter", "prefix tuning",
 ]
 
 CHINESE_METHOD_PATTERNS = [
@@ -92,6 +131,16 @@ def _flatten_phrase_matches(matches: list[tuple[str, ...]]) -> list[str]:
             if item:
                 values.append(item)
     return sorted(set(values))
+
+
+def _looks_like_specific_paper(query: str) -> bool:
+    """判断查询是否在找特定论文（有明确标题片段、年份或作者信息）。"""
+    lowered = query.lower()
+    title_words = len([w for w in query.split() if len(w) > 4])
+    # 标题词数多 + 有年份信息或作者信息 → likely specific paper
+    has_year = bool(YEAR_PATTERN.search(query))
+    has_author = any(kw in lowered for kw in ("author", "et al", "et al.", "written by", "published by"))
+    return title_words >= 5 and (has_year or has_author)
 
 
 def _clean_query_prefix(text: str) -> str:
@@ -186,6 +235,15 @@ def heuristic_understand_query(query: str) -> QueryPlan:
             time_range = {"start_year": int(match.group(1)), "end_year": int(match.group(2))}
             must_have.append(f"year>={match.group(1)}")
             must_have.append(f"year<={match.group(2)}")
+        else:
+            # 检查 after/since 及其中文表达
+            years = [int(y) for y in re.findall(r"\b(20\d{2})\b", query)]
+            if years:
+                lowered = query.lower()
+                if re.search(r"\bafter\s+20\d{2}\b|\bsince\s+20\d{2}\b|之后|以来|后", lowered):
+                    max_year = max(years)
+                    time_range = {"start_year": max_year, "end_year": 2026}
+                    must_have.append(f"year>={max_year}")
 
     if not methods:
         uncertainty.append("method not explicitly recognized")
@@ -199,9 +257,28 @@ def heuristic_understand_query(query: str) -> QueryPlan:
         nice_to_have.append("survey")
         task = "find_survey_and_primary_papers"
 
+    # 推断 query_type
+    query_type = "unknown"
+    # 检查引号包裹的精确标题 → exact_title
+    quoted_phrases_all = re.findall(r'"([^"]+)"|"([^"]+)"|\'([^\']+)\'', query)
+    quoted_text = [item for match in quoted_phrases_all for item in match if item]
+    if quoted_text and len(quoted_text[0].split()) >= 4:
+        query_type = "exact_title"
+    elif "survey" in lowered or "review" in lowered or "综述" in query:
+        query_type = "survey"
+    elif "comparison" in lowered or "compare" in lowered or "对比" in query or "比较" in query:
+        query_type = "method_comparison"
+    elif any(c in lowered or c in query for c in ("dataset", "bench", "eval", "数据集")):
+        query_type = "dataset_constraint"
+    elif any(c in lowered or c in query for c in ("latest", "recent", "newest", "最新")):
+        query_type = "latest_work"
+    elif _looks_like_specific_paper(query):
+        query_type = "specific_paper"
+
     return QueryPlan(
         original_query=query,
         language="zh" if re.search(r"[\u4e00-\u9fff]", query) else "en",
+        query_type=query_type,
         research_topic=research_topic,
         task=task,
         methods=methods,
@@ -228,18 +305,21 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
         "Return JSON only. Do not assume a domain like medicine unless the user explicitly says so. "
         "Keep unknown facts in uncertainty instead of inventing them. "
         "CRITICAL: List fields (methods, datasets, entities, venues, must_have_constraints, nice_to_have_constraints, exclude_terms, uncertainty) "
-        "MUST be returned as JSON arrays (e.g. [\"term1\", \"term2\"]), never as raw strings."
+        "MUST be returned as JSON arrays (e.g. [\"term1\", \"term2\"]), never as raw strings. "
+        "CRITICAL: If the user query is in Chinese, you MUST extract English equivalent terms in methods, datasets, and entities fields "
+        "so that the search can match English paper databases. For example, '幻觉' → 'hallucination', '知识蒸馏' → 'knowledge distillation'."
     )
     user_prompt = (
         "Output a JSON object matching this shape exactly: "
         "{original_query, language, research_topic, task, methods, datasets, entities, "
         "time_range, venues, must_have_constraints, nice_to_have_constraints, exclude_terms, "
         "expected_output, uncertainty}. "
+        "If the query is in Chinese, provide English translations for all key terms in methods, datasets, and entities. "
         f"User query: {query!r}. "
         f"Heuristic reference: {fallback.model_dump_json()}"
     )
     # 用 pro 级别的模型进行理解
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="pro")
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     if response is None:
         return fallback
     try:

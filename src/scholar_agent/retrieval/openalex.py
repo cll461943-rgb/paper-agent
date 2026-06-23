@@ -162,6 +162,7 @@ class OpenAlexProvider(PaperProvider):
             references=[ref for ref in item.get("referenced_works", []) if ref],
             metadata={
                 "raw_source": "openalex",
+                "published_time": item.get("publication_date"),
                 "concepts": [concept.get("display_name") for concept in item.get("concepts", []) if concept.get("display_name")],
                 "cited_by_api_url": item.get("cited_by_api_url"),
                 "related_works": [work for work in item.get("related_works", []) if work],

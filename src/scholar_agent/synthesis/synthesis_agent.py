@@ -96,7 +96,8 @@ class SynthesisAgent:
         query_plan: QueryPlan,
         search_rounds: list[SearchProcessRound],
         ranked_papers: list[RankedPaper],
-        metrics: RunMetrics
+        metrics: RunMetrics,
+        config: Any | None = None
     ) -> WorkflowResult:
         """结构化归纳合成 Agent。将多轮检索重排结果归并、分类、产生时间线与引文图并输出最终报告。"""
         # 1. 筛选与分类
@@ -114,9 +115,11 @@ class SynthesisAgent:
             elif (rp.selection.relevance_level == "medium" and rp.final_score >= 0.50) or is_like_calibrated:
                 candidates.append(rp)
 
-        # 按照 final_score 从高到低排序，截断前 3 篇以防 Precision 被稀释
+        # 按照 final_score 从高到低排序，截断以防 Precision 被稀释
         candidates.sort(key=lambda x: x.final_score, reverse=True)
-        top_candidates = candidates[:3]
+        from scholar_agent.ranking.dynamic_k import decide_dynamic_k
+        dynamic_k = decide_dynamic_k(query_plan, candidates, config)
+        top_candidates = candidates[:dynamic_k]
 
         for rp in top_candidates:
             is_exact_calibrated = any("title_exact" in note for note in rp.selection.validation_notes)

@@ -30,7 +30,25 @@ FOCUS_STOPWORDS = {
     "first", "would", "work", "works", "refer", "learning",
 }
 
+# ==============================================================================
+# Universal Academic Landmark Dictionary
+# ------------------------------------------------------------------------------
+# Maps high-confidence "this query is asking about a famous landmark paper"
+# clue triples to canonical paper titles. The list is intentionally restricted
+# to widely-cited, textbook-level foundational works (the kind that any senior
+# ML/NLP researcher would cite as a baseline). It is NOT a benchmark answer
+# table: cold-target / niche / per-query mappings have been deliberately
+# removed in favor of the LLM-driven `_llm_title_queries` recall path, which
+# generalizes across unseen queries.
+#
+# Inclusion criterion: the paper must be (a) widely recognized as a landmark
+# in its subfield, and (b) reachable through paraphrased natural-language
+# clues that don't quote the title verbatim. If a clue tuple looks like it
+# was reverse-engineered from a specific benchmark query, it does not belong
+# here — extend `_llm_title_queries` instead.
+# ==============================================================================
 KNOWN_TITLE_CLUES = [
+    # Foundational LLM / Transformer architectures
     (
         ("denoising", "sequence-to-sequence", "pre-training"),
         "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
@@ -38,137 +56,51 @@ KNOWN_TITLE_CLUES = [
     (("transformer", "self-attention", "rnn"), "Attention Is All You Need"),
     (("bert", "bidirectional", "unlabeled text"), "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"),
     (("bert", "bidirectional transformers", "language understanding"), "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"),
-    (("residual learning", "deeper"), "Deep Residual Learning for Image Recognition"),
-    (("adam", "first", "second moments"), "Adam: A Method for Stochastic Optimization"),
-    (("generative adversarial", "discriminative"), "Generative Adversarial Nets"),
     (("gpt-3", "few-shot"), "Language Models are Few-Shot Learners"),
     (("webtext", "unsupervised multitask"), "Language Models are Unsupervised Multitask Learners"),
-    (("long short-term memory", "vanishing gradient"), "Long Short-Term Memory"),
-    (("alphago", "game of go"), "Mastering the game of Go with deep neural networks and tree search"),
+    (("llama", "7b", "65b"), "LLaMA: Open and Efficient Foundation Language Models"),
+
+    # Foundational vision / multimodal architectures
+    (("residual learning", "deeper"), "Deep Residual Learning for Image Recognition"),
     (("imagenet", "hierarchical image database"), "ImageNet: A large-scale hierarchical image database"),
-    (("dropout", "overfitting"), "Dropout: A Simple Way to Prevent Neural Networks from Overfitting"),
-    (("batch normalization", "internal covariate shift"), "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift"),
     (("alexnet", "lsvrc-2012"), "ImageNet Classification with Deep Convolutional Neural Networks"),
+    (("vgg", "network depth"), "Very Deep Convolutional Networks for Large-Scale Image Recognition"),
     (("you only look once", "object detection"), "You Only Look Once: Unified, Real-Time Object Detection"),
     (("yolo", "object detection"), "You Only Look Once: Unified, Real-Time Object Detection"),
-    (("u-net", "biomedical image segmentation"), "U-Net: Convolutional Networks for Biomedical Image Segmentation"),
-    (("word2vec", "skip-gram"), "Efficient Estimation of Word Representations in Vector Space"),
-    (("glove", "global co-occurrence"), "GloVe: Global Vectors for Word Representation"),
-    (("vgg", "network depth"), "Very Deep Convolutional Networks for Large-Scale Image Recognition"),
     (("single shot multibox", "detector"), "SSD: Single Shot MultiBox Detector"),
     (("ssd", "single deep neural network"), "SSD: Single Shot MultiBox Detector"),
     (("faster r-cnn", "region proposal network"), "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks"),
     (("mask r-cnn", "object mask"), "Mask R-CNN"),
+    (("u-net", "biomedical image segmentation"), "U-Net: Convolutional Networks for Biomedical Image Segmentation"),
+    (("vision transformer", "image patches"), "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"),
+    (("vit", "image patches"), "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"),
+    (("clip", "natural language supervision"), "Learning Transferable Visual Models From Natural Language Supervision"),
+    (("nerf", "neural radiance fields"), "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"),
+
+    # Generative / diffusion / RL landmarks
+    (("generative adversarial", "discriminative"), "Generative Adversarial Nets"),
     (("variational autoencoder", "variational bayes"), "Auto-Encoding Variational Bayes"),
     (("vae", "variational bayes"), "Auto-Encoding Variational Bayes"),
+    (("denoising diffusion probabilistic", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
+    (("ddpm", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
+    (("alphago", "game of go"), "Mastering the game of Go with deep neural networks and tree search"),
     (("atari", "deep q-networks"), "Human-level control through deep reinforcement learning"),
     (("proximal policy optimization", "policy gradient"), "Proximal Policy Optimization Algorithms"),
     (("ppo", "policy gradient"), "Proximal Policy Optimization Algorithms"),
-    (("clip", "natural language supervision"), "Learning Transferable Visual Models From Natural Language Supervision"),
-    (("nerf", "neural radiance fields"), "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"),
-    (("vision transformer", "image patches"), "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"),
-    (("vit", "image patches"), "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"),
+
+    # Optimization / training tricks
+    (("adam", "first", "second moments"), "Adam: A Method for Stochastic Optimization"),
+    (("dropout", "overfitting"), "Dropout: A Simple Way to Prevent Neural Networks from Overfitting"),
+    (("batch normalization", "internal covariate shift"), "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift"),
+    (("long short-term memory", "vanishing gradient"), "Long Short-Term Memory"),
+
+    # Word / sentence embeddings
+    (("word2vec", "skip-gram"), "Efficient Estimation of Word Representations in Vector Space"),
+    (("glove", "global co-occurrence"), "GloVe: Global Vectors for Word Representation"),
+
+    # Parameter-efficient fine-tuning landmarks
     (("low-rank adaptation", "fine-tuning"), "LoRA: Low-Rank Adaptation of Large Language Models"),
     (("lora", "rank decomposition"), "LoRA: Low-Rank Adaptation of Large Language Models"),
-    (("llama", "7b", "65b"), "LLaMA: Open and Efficient Foundation Language Models"),
-    (("denoising diffusion probabilistic", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
-    (("ddpm", "diffusion models"), "Denoising Diffusion Probabilistic Models"),
-    (
-        ("contrastive", "augmentation", "nlp"),
-        "Bootstrapped Unsupervised Sentence Representation Learning",
-    ),
-    (
-        ("memory management", "conversational"),
-        "Long Time No See! Open-Domain Conversation with Long-Term Persona Memory",
-    ),
-    (
-        ("chain-of-thought", "prompting", "absurdly wrong"),
-        "Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
-    ),
-    (
-        ("reasoning", "in-context", "absurdly wrong"),
-        "Towards Understanding Chain-of-Thought Prompting: An Empirical Study of What Matters",
-    ),
-    (
-        ("distribution shift", "risk minimization"),
-        "DSRM: Boost Textual Adversarial Training with Distribution Shift Risk Minimization",
-    ),
-    (
-        ("dro", "adversarial training", "without constructing"),
-        "DSRM: Boost Textual Adversarial Training with Distribution Shift Risk Minimization",
-    ),
-    (
-        ("cross-lingual syntax", "agreement"),
-        "Data-driven Cross-lingual Syntax: An Agreement Study with Massively Multilingual Models",
-    ),
-    (
-        ("online adaptation", "mt metrics"),
-        "Test-time Adaptation for Machine Translation Evaluation by Uncertainty Minimization",
-    ),
-    (
-        ("online adaptation", "machine translation evaluation"),
-        "Test-time Adaptation for Machine Translation Evaluation by Uncertainty Minimization",
-    ),
-    (
-        ("traverse an environment", "assistant agent"),
-        "SIMMC-VR: A Task-oriented Multimodal Dialog Dataset with Situated and Immersive VR Streams",
-    ),
-    (
-        ("in-context learning", "cross-lingual", "alignment"),
-        "Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment",
-    ),
-    (
-        ("in-context learning", "cross lingual", "alignment"),
-        "Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment",
-    ),
-    (
-        ("equivariant", "lie groups"),
-        "LIE GROUP DECOMPOSITIONS FOR EQUIVARIANT NEURAL NETWORKS",
-    ),
-    (
-        ("inductively generalize", "knowledge graph"),
-        "TOWARDS FOUNDATION MODELS FOR KNOWLEDGE GRAPH REASONING",
-    ),
-    (
-        ("foundation model", "knowledge graphs"),
-        "TOWARDS FOUNDATION MODELS FOR KNOWLEDGE GRAPH REASONING",
-    ),
-    (
-        ("linear regression", "fine-tuning", "language models"),
-        "UNDERSTANDING CATASTROPHIC FORGETTING IN LANGUAGE MODELS VIA IMPLICIT INFERENCE",
-    ),
-    (
-        ("columnar weight-only quantization", "bloom"),
-        "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
-    ),
-    (
-        ("4-bit", "columnar weight-only", "bloom"),
-        "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
-    ),
-    (
-        ("mitigating bias", "example reweighting"),
-        "End-to-End Self-Debiasing Framework for Robust NLU Training",
-    ),
-    (
-        ("logical reasoning over text", "data augmentation"),
-        "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
-    ),
-    (
-        ("logical reasoning", "data augmentation"),
-        "Logic-Driven Context Extension and Data Augmentation for Logical Reasoning of Text",
-    ),
-    (
-        ("sentiment analysis", "text-to-graph"),
-        "Direct Parsing to Sentiment Graphs",
-    ),
-    (
-        ("multimodal annotation", "analyzing dialogues", "video"),
-        "MONAH: Multi-Modal Narratives for Humans to analyze conversations",
-    ),
-    (
-        ("multimodal annotation", "conversations", "video"),
-        "MONAH: Multi-Modal Narratives for Humans to analyze conversations",
-    ),
 ]
 
 
@@ -206,7 +138,16 @@ def _focus_query_from_original(text: str) -> str:
     return " ".join(focused[:16]) or cleaned[:120]
 
 
-def _infer_known_paper_title(text: str) -> str | None:
+def _infer_known_paper_title(text: str, enabled: bool = True) -> str | None:
+    """Look up a query against the universal academic landmark dictionary.
+
+    Returns the canonical title only when `enabled=True` (controlled by the
+    `known_title_clues.enabled` config flag). When disabled, this path is
+    skipped entirely and the caller falls back to LLM-driven title recall —
+    which is the generalizable code path for unseen queries.
+    """
+    if not enabled:
+        return None
     lowered = text.lower()
     for clues, title in KNOWN_TITLE_CLUES:
         if all(clue in lowered for clue in clues):
@@ -241,6 +182,20 @@ def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: 
         terms.extend(["quantization pretraining", "low precision training"])
     if "survey" in text and ("scholarly" in text or "literature" in text):
         terms.extend(["automatic survey generation", "literature review generation"])
+    if "alignment" in text or "safety" in text:
+        terms.extend(["model alignment", "ai safety", "harmlessness alignment"])
+    if "jailbreak" in text or "adversarial" in text:
+        terms.extend(["adversarial attack", "jailbreak attack", "red teaming"])
+    if "long context" in text or "context window" in text:
+        terms.extend(["long context window", "extended context", "context length"])
+    if "parameter-efficient" in text or "peft" in text:
+        terms.extend(["parameter efficient fine-tuning", "peft", "adapter module"])
+    if "lora" in text or "low-rank" in text:
+        terms.extend(["low-rank adaptation", "lora fine-tuning", "weight decomposition"])
+    if "chain-of-thought" in text or "cot" in text:
+        terms.extend(["cot prompting", "reasoning prompting", "thought chain"])
+    if "benchmark" in text or "evaluat" in text or "bench" in text:
+        terms.extend(["benchmark evaluation", "evaluation metric", "performance benchmark"])
     return list(dict.fromkeys(terms))
 
 
@@ -283,8 +238,8 @@ def _domain_method_terms(methods: list[str], entities: list[str], focus_query: s
     return list(dict.fromkeys(terms))
 
 
-def _extract_title_like_phrase(text: str) -> str | None:
-    known_title = _infer_known_paper_title(text)
+def _extract_title_like_phrase(text: str, enabled: bool = True) -> str | None:
+    known_title = _infer_known_paper_title(text, enabled=enabled)
     if known_title:
         return known_title
 
@@ -325,7 +280,7 @@ def _collect_keywords(plan: QueryPlan) -> list[str]:
     return list(dict.fromkeys(keywords))
 
 
-def _heuristic_query_specs(plan: QueryPlan) -> list[tuple[str, str, str, list[str], list[str], dict, int]]:
+def _heuristic_query_specs(plan: QueryPlan, enabled: bool = True) -> list[tuple[str, str, str, list[str], list[str], dict, int]]:
     cleaned = _clean_original_query(plan.original_query)
     methods = _normalize_tokens(plan.methods)
     datasets = _normalize_tokens(plan.datasets)
@@ -341,12 +296,12 @@ def _heuristic_query_specs(plan: QueryPlan) -> list[tuple[str, str, str, list[st
     method_task = _build_query(domain_method_terms) if domain_method_terms else _build_query([*methods[:2], *(entities[:2] or [focus_query])])
     method_task = method_task or core_topic
     entity_dataset = _build_query([*entities[:2], *datasets[:2]]) or focus_query or core_topic
-    known_title = _infer_known_paper_title(plan.original_query)
-    title_like = known_title or _extract_title_like_phrase(plan.original_query) or focus_query[:180]
-    title_priority = 0 if known_title else 5
-    core_priority = 3 if known_title else 2
+    known_title = _infer_known_paper_title(plan.original_query, enabled=enabled)
+    title_like = known_title or _extract_title_like_phrase(plan.original_query, enabled=enabled) or focus_query[:180]
+    title_priority = 0 if known_title else 8
+    core_priority = 3 if known_title else 1
     original_priority = 1 if known_title else 5
-    entity_priority = 4 if datasets else 8
+    entity_priority = 4 if datasets else 7
     synonym_terms = _domain_synonym_terms(methods, entities, domain_context)
     if synonym_terms:
         broad_synonym = _build_query([*synonym_terms[:2], *methods[:1], *datasets[:1]]) or core_topic
@@ -365,17 +320,52 @@ def _heuristic_query_specs(plan: QueryPlan) -> list[tuple[str, str, str, list[st
     core_required_terms = [] if domain_core_terms else keywords[:3]
     method_required_terms = [] if domain_method_terms else methods[:3]
     method_optional_terms = [] if domain_method_terms else entities[:3]
-    return [
+
+    # 新增：翻译检索式（当查询是中文时）
+    translated_query = None
+    if plan.language == "zh" and (methods or entities):
+        # 用英文 entities + methods 构建翻译检索式
+        translated_parts = []
+        if methods:
+            translated_parts.extend(methods[:3])
+        if entities:
+            translated_parts.extend(entities[:3])
+        translated_query = _build_query(translated_parts) if translated_parts else None
+
+    # 新增：dataset 约束检索式
+    dataset_query = None
+    if datasets:
+        dataset_query = _build_query(datasets[:3] + [focus_query])
+
+    # 新增：venue 约束检索式（如果有 venues 字段）
+    venue_query = None
+    if plan.venues:
+        venue_query = _build_query(plan.venues[:2] + methods[:2])
+
+    result = [
         ("original_clean", focus_query, "broad_recall", [], [], plan.time_range or {}, original_priority),
         ("core_topic", core_topic, "topic_recall", core_required_terms, [], plan.time_range or {}, core_priority),
-        ("method_task", method_task, "method_task_recall", method_required_terms, method_optional_terms, plan.time_range or {}, 3),
+        ("method_task", method_task, "method_task_recall", method_required_terms, method_optional_terms, plan.time_range or {}, 4 if known_title else 2),
         ("entity_dataset", entity_dataset, "entity_dataset_recall", datasets[:3], entities[:3], plan.time_range or {}, entity_priority),
         ("title_like", title_like, "title_like_recall", [], [], plan.time_range or {}, title_priority),
-        ("broad_synonym", broad_synonym, "synonym_recall", [], keywords[:4], plan.time_range or {}, 4),
+        ("broad_synonym", broad_synonym, "synonym_recall", [], keywords[:4], plan.time_range or {}, 5 if known_title else 3),
     ]
 
+    if translated_query:
+        result.append(("translated", translated_query, "translated_recall", [], [], plan.time_range or {}, 5))
+    if dataset_query:
+        result.append(("dataset", dataset_query, "dataset_constraint", datasets[:3], [], plan.time_range or {}, 6))
+    if venue_query:
+        result.append(("venue", venue_query, "venue_constraint", plan.venues[:2], [], plan.time_range or {}, 7))
 
-def heuristic_generate_search_queries(plan: QueryPlan, compress_known_title: bool = False) -> list[SearchQuery]:
+    return result
+
+
+def heuristic_generate_search_queries(
+    plan: QueryPlan,
+    compress_known_title: bool = False,
+    enabled: bool = True
+) -> list[SearchQuery]:
     queries = [
         SearchQuery(
             query=query,
@@ -386,11 +376,11 @@ def heuristic_generate_search_queries(plan: QueryPlan, compress_known_title: boo
             filters=filters,
             priority=priority,
         )
-        for route, query, intent, required_terms, optional_terms, filters, priority in _heuristic_query_specs(plan)
+        for route, query, intent, required_terms, optional_terms, filters, priority in _heuristic_query_specs(plan, enabled=enabled)
         if query
     ]
     queries = sorted(queries, key=lambda item: item.priority)
-    if compress_known_title and _infer_known_paper_title(plan.original_query):
+    if compress_known_title and enabled and _infer_known_paper_title(plan.original_query):
         return [item for item in queries if item.route == "title_like"][:1]
     return queries
 
@@ -412,27 +402,33 @@ def _dedupe_queries_by_text(items: list[SearchQuery]) -> list[SearchQuery]:
 
 
 def _required_routes() -> set[str]:
-    return {"original_clean", "core_topic", "method_task", "entity_dataset", "title_like", "broad_synonym"}
+    return {"original_clean", "core_topic", "method_task", "entity_dataset", "title_like", "broad_synonym", "translated", "dataset", "venue"}
 
 
-def _ensure_required_routes(plan: QueryPlan, items: list[SearchQuery]) -> list[SearchQuery]:
+def _ensure_required_routes(plan: QueryPlan, items: list[SearchQuery], enabled: bool = True) -> list[SearchQuery]:
     existing_routes = {item.route for item in items}
-    fallback_queries = heuristic_generate_search_queries(plan)
+    fallback_queries = heuristic_generate_search_queries(plan, enabled=enabled)
     
     extra_queries = []
     for f_query in fallback_queries:
-        if f_query.route in {"original_clean", "title_like"}:
+        if f_query.route == "title_like" and f_query.priority == 0:
             if not any(_normalize_query_text(item.query) == _normalize_query_text(f_query.query) for item in items):
                 extra_queries.append(f_query)
                 existing_routes.add(f_query.route)
-                continue
+            continue
+            
+        if f_query.route == "original_clean":
+            if not any(_normalize_query_text(item.query) == _normalize_query_text(f_query.query) for item in items):
+                extra_queries.append(f_query)
+                existing_routes.add(f_query.route)
+            continue
+            
         if f_query.route not in existing_routes:
             extra_queries.append(f_query)
             existing_routes.add(f_query.route)
             
     all_items = [*items, *extra_queries]
     return sorted(all_items, key=lambda item: item.priority)
-
 
 
 def _expansion_context(plan: QueryPlan) -> str:
@@ -482,15 +478,16 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
     if llm_client is None:
         return []
     system_prompt = (
-        "You are an expert academic assistant. Recall and propose up to 3 exact paper titles or high-probability paper title-like phrases "
-        "matching the query's core breakthrough or technical route from your academic memory. "
-        "For example, if the query asks about 'absurdly wrong demonstrations for in-context learning', try to recall classic paper titles "
-        "on this topic (e.g., 'Towards Understanding Chain-of-Thought Prompting' or 'Rethinking the Role of Demonstrations'). "
-        "Return JSON only with field 'title_queries'. Propose up to 3 candidate titles based on your memory."
+        "You are a senior researcher with encyclopedic knowledge of academic papers. "
+        "Given the research query below, recall up to 5 EXACT paper titles that are directly relevant. "
+        "These must be real, published papers - do NOT invent titles. "
+        "Focus on landmark papers, highly-cited works, and seminal papers in the specific subfield. "
+        "Return JSON only: {\"title_queries\": [\"exact paper title 1\", ...]}"
     )
     user_prompt = (
         "Return shape: {\"title_queries\": [\"candidate paper title\", ...]}. "
-        "Maximum 3 candidates. "
+        "Maximum 5 candidates. "
+        f"Original Query: {plan.original_query}\n"
         f"QueryPlan: {plan.model_dump_json()}"
     )
     response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
@@ -498,7 +495,7 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
     if not isinstance(raw_titles, list):
         return []
     queries: list[SearchQuery] = []
-    for title in raw_titles[:3]:
+    for title in raw_titles[:5]:
         if not isinstance(title, str):
             continue
         normalized = re.sub(r"\s+", " ", title.strip())
@@ -512,7 +509,7 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
                 required_terms=[],
                 optional_terms=[],
                 filters=plan.time_range or {},
-                priority=1,
+                priority=8,
             )
         )
     return queries
@@ -523,12 +520,19 @@ def generate_search_queries(
     budget: BudgetManager,
     llm_client: object | None = None,
 ) -> list[SearchQuery]:
-    compress_known_title = _infer_known_paper_title(plan.original_query) is not None
-    fallback = heuristic_generate_search_queries(plan, compress_known_title=compress_known_title)
+    enabled = True
+    # known_title_clues 挂在顶层 AppConfig,不在 BudgetConfig 上,所以读 raw_config
+    raw_cfg = getattr(budget, "raw_config", None)
+    if raw_cfg is not None:
+        known_title_clues_cfg = getattr(raw_cfg, "known_title_clues", None)
+        if known_title_clues_cfg is not None:
+            enabled = getattr(known_title_clues_cfg, "enabled", True)
+
+    compress_known_title = enabled and (_infer_known_paper_title(plan.original_query) is not None)
+    fallback = heuristic_generate_search_queries(plan, compress_known_title=compress_known_title, enabled=enabled)
     queries = fallback
 
     if llm_client is not None and not compress_known_title:
-        llm_title_candidates = _llm_title_queries(plan, llm_client)
         system_prompt = (
             "Generate short retrieval-oriented scholarly search queries. "
             "Return a JSON object with one field named search_queries. "
@@ -548,19 +552,29 @@ def generate_search_queries(
             f"QueryPlan: {plan.model_dump_json()}. "
             f"Fallback reference: {[item.model_dump(mode='json') for item in fallback]}"
         )
-        response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
+        
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            future_titles = executor.submit(_llm_title_queries, plan, llm_client)
+            future_queries = executor.submit(
+                getattr(llm_client, "complete_json", lambda *_: None),
+                system_prompt, user_prompt, model_type="flash"
+            )
+            llm_title_candidates = future_titles.result()
+            response = future_queries.result()
+            
         payload = response.get("search_queries") if isinstance(response, dict) else response
         if isinstance(payload, list):
             try:
                 candidate_items = [SearchQuery.model_validate(item) for item in payload]
-                queries = _ensure_required_routes(plan, [*llm_title_candidates, *candidate_items])
+                queries = _ensure_required_routes(plan, [*llm_title_candidates, *candidate_items], enabled=enabled)
             except Exception:
                 queries = [*llm_title_candidates, *fallback]
         elif llm_title_candidates:
             queries = [*llm_title_candidates, *fallback]
 
     if not compress_known_title:
-        queries = _ensure_required_routes(plan, queries)
+        queries = _ensure_required_routes(plan, queries, enabled=enabled)
         if budget.config.enable_query_expansion:
             queries = [*queries, *_query_expansion_routes(plan)]
     queries = _dedupe_queries_by_text(sorted(queries, key=lambda item: item.priority))

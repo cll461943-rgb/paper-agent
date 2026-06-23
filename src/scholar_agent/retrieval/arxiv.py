@@ -109,7 +109,10 @@ class ArxivProvider(PaperProvider):
                 arxiv_id=entry_id.rsplit("/", 1)[-1] if entry_id else None,
                 url=entry_id or None,
                 source=self.name,
-                metadata={"raw_source": "arxiv"},
+                metadata={
+                    "raw_source": "arxiv",
+                    "published_time": published[:10] if len(published) >= 10 else published or None,
+                },
             )
             cached_paper_dict = self.cache.get_paper_dict(self.paper_cache_key(paper))
             if cached_paper_dict is not None:

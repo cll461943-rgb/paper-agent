@@ -14,6 +14,46 @@ from scholar_agent.retrieval.base import PaperProvider
 LOGGER = logging.getLogger(__name__)
 
 
+MONTHS = {
+    "jan": "01",
+    "feb": "02",
+    "mar": "03",
+    "apr": "04",
+    "may": "05",
+    "jun": "06",
+    "jul": "07",
+    "aug": "08",
+    "sep": "09",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12",
+}
+
+
+def _pubmed_publication_date(article: ET.Element) -> str | None:
+    year = (
+        article.findtext(".//Article/ArticleDate/Year")
+        or article.findtext(".//JournalIssue/PubDate/Year")
+    )
+    if not year or not year.isdigit():
+        return None
+    month = (
+        article.findtext(".//Article/ArticleDate/Month")
+        or article.findtext(".//JournalIssue/PubDate/Month")
+        or "12"
+    )
+    day = (
+        article.findtext(".//Article/ArticleDate/Day")
+        or article.findtext(".//JournalIssue/PubDate/Day")
+        or "31"
+    )
+    month = MONTHS.get(month.strip().lower()[:3], month)
+    try:
+        return f"{int(year):04d}-{int(month):02d}-{int(day):02d}"
+    except ValueError:
+        return f"{int(year):04d}-12-31"
+
+
 class PubMedProvider(PaperProvider):
     name = "pubmed"
 
@@ -138,7 +178,11 @@ class PubMedProvider(PaperProvider):
                 doi=doi,
                 url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
                 source=self.name,
-                metadata={"raw_source": "pubmed", "pmid": pmid},
+                metadata={
+                    "raw_source": "pubmed",
+                    "pmid": pmid,
+                    "published_time": _pubmed_publication_date(article),
+                },
             )
 
             cached_paper_dict = self.cache.get_paper_dict(self.paper_cache_key(paper))

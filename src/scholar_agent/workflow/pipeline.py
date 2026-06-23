@@ -227,7 +227,7 @@ class PaperAgentPipeline:
 
         # 执行第一轮检索
         LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
-        _, candidate_pool = retriever.retrieve(subqueries)
+        _, candidate_pool = retriever.retrieve(subqueries, original_query=original_query, query_plan=query_plan)
         all_candidates = deduplicate_papers(candidate_pool)
         all_candidates.sort(key=_get_rough_score, reverse=True)
  
@@ -277,7 +277,7 @@ class PaperAgentPipeline:
             new_candidates: list[Paper] = []
             if new_queries:
                 budget.record_search_queries(len(new_queries))
-                _, new_pool = retriever.retrieve(new_queries)
+                _, new_pool = retriever.retrieve(new_queries, original_query=original_query, query_plan=query_plan)
                 new_candidates.extend(new_pool)
 
             # 5.4 引文网络扩展

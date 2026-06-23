@@ -127,6 +127,7 @@ class SemanticScholarProvider(PaperProvider):
                 "external_ids": external_ids,
                 "fields_of_study": item.get("fieldsOfStudy") or [],
                 "reference_count": item.get("referenceCount"),
+                "published_time": f"{item.get('year')}-12-31" if item.get("year") else None,
             },
         )
 

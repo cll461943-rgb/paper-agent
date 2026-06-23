@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import threading
 import time
 from typing import Any
 
@@ -19,6 +20,7 @@ class BudgetManager:
         self.config = config.budget  # 对应 budget 相关的限制
         self.raw_config = config
         self.start_time = time.perf_counter()
+        self._lock = threading.Lock()
         
         self.llm_calls_used = 0
         self.llm_elapsed_seconds = 0.0
@@ -36,9 +38,10 @@ class BudgetManager:
 
     def reserve_llm_call(self) -> None:
         max_llm = getattr(self.config, "max_llm_calls", 30)
-        if self.llm_calls_used >= max_llm:
-            raise BudgetExceededError(f"LLM call budget exceeded: current={self.llm_calls_used}, max={max_llm}")
-        self.llm_calls_used += 1
+        with self._lock:
+            if self.llm_calls_used >= max_llm:
+                raise BudgetExceededError(f"LLM call budget exceeded: current={self.llm_calls_used}, max={max_llm}")
+            self.llm_calls_used += 1
 
     def reserve_retrieval_round(self) -> None:
         max_rounds = getattr(self.config, "max_retrieval_rounds", 3)
@@ -58,6 +61,15 @@ class BudgetManager:
     def record_api_call(self, count: int = 1) -> None:
         self.api_calls_used += count
 
+    def reserve_api_call(self, count: int = 1) -> None:
+        max_api = getattr(self.config, "max_api_calls", 1000)
+        with self._lock:
+            if self.api_calls_used + count > max_api:
+                raise BudgetExceededError(
+                    f"API call budget exceeded: current={self.api_calls_used}, requested={count}, max={max_api}"
+                )
+            self.api_calls_used += count
+
     def record_cache_hit(self, count: int = 1) -> None:
         self.cache_hits += count
 
@@ -66,11 +78,12 @@ class BudgetManager:
 
     def reserve_search_queries(self, count: int) -> None:
         max_queries = getattr(self.config, "max_search_queries", 15)
-        if self.search_queries_used + count > max_queries:
-            raise BudgetExceededError(
-                f"Search queries budget exceeded: current={self.search_queries_used}, requested={count}, max={max_queries}"
-            )
-        self.search_queries_used += count
+        with self._lock:
+            if self.search_queries_used + count > max_queries:
+                raise BudgetExceededError(
+                    f"Search queries budget exceeded: current={self.search_queries_used}, requested={count}, max={max_queries}"
+                )
+            self.search_queries_used += count
 
     def record_component_cost(
         self,

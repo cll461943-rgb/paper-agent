@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import logging
 import re
 import time
+
+LOGGER = logging.getLogger(__name__)
 
 from scholar_agent.models.schemas import Paper, RetrievalResult, SearchQuery
 from scholar_agent.retrieval.base import PaperProvider
@@ -176,6 +179,96 @@ class MultiRouteRetriever:
         titleish_words = sum(1 for word in words if word[:1].isupper() or word.isupper())
         return titleish_words >= 3
 
+    def _domain_scores(self, text: str) -> dict[str, float]:
+        text_l = text.lower()
+
+        keyword_groups = {
+            "biomedical": [
+                "antibody", "protein", "gene", "dna", "rna", "medical",
+                "clinical", "disease", "cancer", "vaccine", "biomedical",
+                "drug", "biological", "cell", "receptor", "virus",
+                "pathogen", "diagnosis", "protein design", "antibody design",
+            ],
+            "cs_ai": [
+                "llm", "large language model", "transformer", "diffusion",
+                "neural network", "deep learning", "nlp", "computer vision",
+                "video generation", "image", "dataset", "reinforcement learning",
+                "fine-tuning", "finetuning", "agent", "dpo", "language model",
+                "autoregressive", "scaling law", "vision-language",
+                "vision language", "watermarking", "test time training",
+                "mixture of experts", "moe", "multimodal",
+            ],
+            "physics_math": [
+                "quantum", "physics", "math", "equation", "monte carlo",
+                "differential", "algebra", "topology", "geometry",
+                "statistical", "thermodynamics", "optics",
+            ],
+        }
+
+        scores = {}
+        for domain, kws in keyword_groups.items():
+            hit = 0
+            for kw in kws:
+                if kw in text_l:
+                    hit += 1
+            scores[domain] = hit / max(len(kws), 1)
+
+        return scores
+
+    def _determine_providers_by_keywords(
+        self,
+        query,
+        original_query: str = "",
+        query_plan=None,
+    ) -> set[str]:
+        # 1. 永远保留核心库
+        allowed = {"pasa_local", "openalex", "semantic_scholar"}
+
+        # 2. 聚合上下文语义特征
+        parts = [
+            original_query or "",
+            getattr(query, "query", "") or "",
+            " ".join(getattr(query, "required_terms", []) or []),
+            " ".join(getattr(query, "optional_terms", []) or []),
+        ]
+
+        if query_plan is not None:
+            parts.extend(getattr(query_plan, "methods", []) or [])
+            parts.extend(getattr(query_plan, "datasets", []) or [])
+            parts.extend(getattr(query_plan, "entities", []) or [])
+            parts.append(getattr(query_plan, "research_topic", "") or "")
+
+        routing_text = " ".join(parts)
+        scores = self._domain_scores(routing_text)
+
+        route = getattr(query, "route", "")
+
+        # 3. 生医领域追加 PubMed
+        if scores["biomedical"] > 0 or any(
+            x in routing_text.lower()
+            for x in ["protein", "antibody", "clinical", "medical", "biomedical", "drug"]
+        ):
+            allowed.add("pubmed")
+
+        # 4. AI/CS/latest/title-like 追加 arXiv
+        if (
+            scores["cs_ai"] > 0
+            or route in {"title_like", "title_exact", "latest", "translated"}
+            or any(x in routing_text.lower() for x in ["arxiv", "preprint", "latest", "recent"])
+        ):
+            allowed.add("arxiv")
+
+        # 5. 物理/数学追加 arXiv
+        if scores["physics_math"] > 0:
+            allowed.add("arxiv")
+
+        # 6. 自带 sources 取并集
+        explicit_sources = set(getattr(query, "sources", []) or [])
+        if explicit_sources:
+            allowed |= explicit_sources
+
+        return allowed
+
     def _title_exact_results(self, queries: list[SearchQuery], providers: list[PaperProvider]) -> list[RetrievalResult]:
         results: list[RetrievalResult] = []
         title_like_queries = [
@@ -348,7 +441,27 @@ class MultiRouteRetriever:
                     remaining -= len(papers)
         return expanded
 
-    def retrieve(self, queries: list[SearchQuery], include_title_exact: bool = True) -> tuple[list[RetrievalResult], list[Paper]]:
+    def _need_broad_safety_search(self, candidate_pool: list[Paper], results: list[RetrievalResult], query_plan) -> bool:
+        if len(candidate_pool) < 120:
+            return True
+
+        providers_used = {r.provider for r in results if not r.error}
+        if "semantic_scholar" not in providers_used:
+            return True
+
+        query_type = getattr(query_plan, "query_type", "unknown")
+        if query_type in {"survey", "broad_topic", "method_comparison"} and len(candidate_pool) < 250:
+            return True
+
+        return False
+
+    def retrieve(
+        self,
+        queries: list[SearchQuery],
+        include_title_exact: bool = True,
+        original_query: str = "",
+        query_plan = None,
+    ) -> tuple[list[RetrievalResult], list[Paper]]:
         self.budget.reserve_retrieval_round()
         providers: list[PaperProvider] = []
         results: list[RetrievalResult] = []
@@ -370,14 +483,30 @@ class MultiRouteRetriever:
                 "pubmed": {"biomedical", "dataset", "method_task", "core_topic"},
                 "semantic_scholar": {"title_like", "core_topic", "method_task", "citation_seed"},
             }
-            allowed = route_priority.get(prov.name, set())
+            allowed_routes = route_priority.get(prov.name, set())
             selected = []
             for q in queries:
+                # 动态关键词文献库过滤匹配
+                allowed_provs = self._determine_providers_by_keywords(
+                    q,
+                    original_query=original_query,
+                    query_plan=query_plan,
+                )
+                if prov.name not in allowed_provs:
+                    continue
+                
                 if getattr(q, "sources", None) and prov.name in q.sources:
                     selected.append(q)
-                elif q.route in allowed:
+                elif q.route in allowed_routes:
                     selected.append(q)
-            return selected[:4]
+
+            max_by_provider = {
+                "openalex": 6,
+                "semantic_scholar": 6,
+                "arxiv": 3,
+                "pubmed": 3,
+            }
+            return selected[:max_by_provider.get(prov.name, 4)]
 
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:
@@ -399,5 +528,31 @@ class MultiRouteRetriever:
         for result in results:
             for paper in result.papers:
                 candidate_pool.append(paper)
+
+        # 5. 安全兜底检索逻辑
+        if self._need_broad_safety_search(candidate_pool, results, query_plan):
+            safety_queries = [
+                q for q in queries
+                if q.route in {"core_topic", "method_task", "broad_synonym", "translated", "title_like"}
+            ][:3]
+
+            safety_providers = [
+                p for p in providers
+                if p.name in {"openalex", "semantic_scholar", "pasa_local"}
+            ]
+
+            for provider in safety_providers:
+                for q in safety_queries:
+                    already_run = any(
+                        r.provider == provider.name and r.search_query.query == q.query
+                        for r in results
+                        if not r.error
+                    )
+                    if not already_run:
+                        LOGGER.info("Triggered safety fallback search for query: '%s' on %s", q.query, provider.name)
+                        fallback_res = self._search_one(provider, q)
+                        results.append(fallback_res)
+                        for paper in fallback_res.papers:
+                            candidate_pool.append(paper)
 
         return results, candidate_pool

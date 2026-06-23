@@ -119,19 +119,15 @@ def validate_evidence(
         if len(validated_notes) >= 2 or any("year" in note.lower() for note in validated_notes):
             relevance_level = "low"
 
-    # 基于高置信度召回路径（精确/相似标题匹配）的硬性等级保底与校验旁路，确保极度相关的文献不被LLM主观偏差或字面约束字眼缺失所过滤
+    # 基于高置信度召回路径（精确/相似标题匹配），不在这里改写 relevance_level，只在 validation_notes 中留存供 Ranker 加分
     paths = paper.retrieval_path or []
     is_exact_title = any("title_exact" in p for p in paths)
     is_like_title = any("title_like" in p for p in paths)
 
     if is_exact_title:
-        relevance_level = "high"
-        is_validated = True
-        validated_notes.append("Path calibration: title_exact matched, force high relevance.")
+        validated_notes.append("Path calibration: title_exact matched.")
     elif is_like_title:
-        if relevance_level in ("low", "irrelevant"):
-            relevance_level = "medium"
-            validated_notes.append("Path calibration: title_like matched, set medium relevance floor.")
+        validated_notes.append("Path calibration: title_like matched.")
 
     return SelectionResult(
         paper_id=selection.paper_id,

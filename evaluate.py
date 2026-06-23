@@ -125,7 +125,11 @@ def _merge_gold_key_sets(gold_key_sets: list[set[str]], paper_key_sets: list[set
 
 
 def score_papers_against_gold(papers: list[Any], gold_items: list[dict[str, Any] | str]) -> dict[str, float | int]:
-    gold_key_sets = [keys for item in gold_items if (keys := gold_match_keys(item))]
+    gold_key_sets = []
+    for item in gold_items:
+        keys = gold_match_keys(item)
+        if keys:
+            gold_key_sets.append(keys)
     paper_key_sets = [paper_match_keys(paper) for paper in papers]
     gold_key_sets = _merge_gold_key_sets(gold_key_sets, paper_key_sets)
     matched_gold_indexes: set[int] = set()
@@ -192,7 +196,7 @@ class StatsLLMClient:
         prev_tokens = curr_budget.token_estimate if curr_budget else 0
 
         # 调用底层客户端
-        result = self.base_client.complete_json(system_prompt, user_prompt, model_type)
+        result = self.base_client.complete_json(system_prompt, user_prompt, model_type, timeout_seconds=timeout_seconds)
 
         elapsed = time.perf_counter() - started_at
         tokens_used = (curr_budget.token_estimate - prev_tokens) if curr_budget else 0
@@ -295,9 +299,9 @@ def run_evaluation(
     mode: str = "live",
     limit: int | None = None,
     cases_filter: str | None = None,
+    simple: bool = False,
     output_path: str | None = None,
     time_budget: float = 30.0,
-    recall_only: bool = False,
 ) -> None:
     # 加载配置
     config = load_config()
@@ -305,11 +309,11 @@ def run_evaluation(
 
     # 强制在 live 模式下激活主要的在线检索提供商
     if mode == "live":
-        config.app.providers = ["pasa_local", "openalex", "arxiv", "pubmed"]
+        config.app.providers = ["pasa_local", "openalex", "arxiv", "semantic_scholar", "pubmed"]
         config.providers.pasa_local.enabled = True
         config.providers.openalex.enabled = True
         config.providers.arxiv.enabled = True
-        config.providers.semantic_scholar.enabled = False
+        config.providers.semantic_scholar.enabled = True
         config.providers.pubmed.enabled = True
     else:
         config.app.providers = ["mock"]
@@ -320,6 +324,7 @@ def run_evaluation(
 
     # 全量验证集路径寻址
     candidate_paths = [
+        Path("data/RealScholarQuery_test.jsonl"),
         Path("C:/Users/33316/Desktop/claude-code-src-main/agengt-code/data/benchmarks/litsearch_dev_20.json"),
         Path("data/benchmarks/litsearch_dev_20.json"),
         Path("../agengt-code/data/benchmarks/litsearch_dev_20.json"),
@@ -338,42 +343,49 @@ def run_evaluation(
         sys.exit(1)
 
     print(f"Loading dataset: {dataset_path.resolve()}")
+    all_cases = []
     try:
-        with open(dataset_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        if dataset_path.suffix == ".jsonl":
+            with open(dataset_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        raw = json.loads(line)
+                        all_cases.append({
+                            "name": raw.get("qid") or f"case-{len(all_cases)+1}",
+                            "query": raw.get("question") or raw.get("query") or "",
+                            "gold": raw.get("answer") or raw.get("answers") or [],
+                            "k": 500,
+                        })
+        else:
+            with open(dataset_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            all_cases = data.get("cases", [])
     except Exception as exc:
         print(f"❌ Error loading dataset: {exc}", file=sys.stderr)
         sys.exit(1)
 
-    all_cases = data.get("cases", [])
     if not all_cases:
         print("❌ Error: No test cases found in the dataset.", file=sys.stderr)
         sys.exit(1)
 
     # 用例筛选
+    import random as _random
     indices = list(range(len(all_cases)))
     if cases_filter:
-        if cases_filter.strip().lower() == "all":
-            # 允许指定 "all" 跑全量
-            pass
-        else:
-            indices = parse_cases_arg(cases_filter, len(all_cases))
-            if not indices:
-                print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
-                sys.exit(1)
+        indices = parse_cases_arg(cases_filter, len(all_cases))
+        if not indices:
+            print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
+            sys.exit(1)
+    elif simple:
+        indices = [0]
     elif limit is not None and limit > 0:
-        indices = indices[:limit]
-    else:
-        # 默认每次随机跑 2 个并取平均
-        import random
-        random.seed(time.time())
-        if len(indices) > 2:
-            indices = random.sample(indices, 2)
-            print(f"🎲 Randomly sampled 2 test cases out of {len(all_cases)} (Indices: {[i+1 for i in indices]})")
+        # 随机抽样，而非顺序取前 N 个
+        if limit < len(indices):
+            indices = sorted(_random.sample(indices, limit))
+        # 若 limit >= 总数，则直接使用全量（不截断）
 
     eval_cases = [all_cases[i] for i in indices]
-    global_start_time = time.perf_counter()
-    print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation.")
+    print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation (indices: {[i+1 for i in indices]}).")
 
     # 构建统一 providers
     providers = build_providers(config)
@@ -400,12 +412,6 @@ def run_evaluation(
     results_log = []
 
     for idx, case in enumerate(eval_cases, start=1):
-        # 检查总耗时是否超过 20 分钟 (1200 秒)
-        elapsed_total = time.perf_counter() - global_start_time
-        if elapsed_total > 1200.0:
-            print(f"\n🛑 Global evaluation time limit (20 minutes) exceeded! Total elapsed: {elapsed_total:.2f}s. Truncating remaining cases.")
-            break
-
         name = case.get("name", f"case-{idx}")
         query = case["query"]
         gold = case["gold"]
@@ -436,32 +442,7 @@ def run_evaluation(
         err_list = []
 
         try:
-            import threading
-            thread_res = {}
-            def worker():
-                try:
-                    thread_res["res"] = pipeline.run(query, retrieval_only=recall_only)
-                except Exception as e:
-                    thread_res["exc"] = e
-            
-            t = threading.Thread(target=worker)
-            t.daemon = True
-            t.start()
-            # 根据全局剩余时间动态调整单 Case 超时，防最后一关溢出
-            remaining_global_time = 1200.0 - (time.perf_counter() - global_start_time)
-            if remaining_global_time <= 0:
-                raise TimeoutError("Global evaluation time limit (20 minutes) exceeded.")
-            
-            case_timeout = min(300.0, remaining_global_time)
-            t.join(timeout=case_timeout)
-            
-            if t.is_alive():
-                raise TimeoutError(f"Case evaluation timed out after {case_timeout:.1f}s and was truncated.")
-            
-            if "exc" in thread_res:
-                raise thread_res["exc"]
-            
-            res = thread_res.get("res")
+            res = pipeline.run(query)
 
             # 汇聚推荐论文
             result_papers = [
@@ -508,16 +489,11 @@ def run_evaluation(
 
         # 计算得分
         if not has_error:
-            if not recall_only:
-                # 最终推荐得分 (限制前 k)
-                final_scores = score_papers_against_gold(result_papers[:k], gold)
-                case_f1 = final_scores["f1"]
-                case_prec = final_scores["precision"]
-                case_rec = final_scores["recall"]
-
-                total_f1_final += case_f1
-                total_precision_final += case_prec
-                total_recall_final += case_rec
+            # 最终推荐得分 (限制前 k)
+            final_scores = score_papers_against_gold(result_papers[:k], gold)
+            case_f1 = final_scores["f1"]
+            case_prec = final_scores["precision"]
+            case_rec = final_scores["recall"]
 
             # 候选池 @300 & @500 得分
             cand_scores_300 = score_papers_against_gold(candidate_pool[:300], gold)
@@ -525,11 +501,13 @@ def run_evaluation(
             cand_rec_300 = cand_scores_300["recall"]
             cand_rec_500 = cand_scores_500["recall"]
 
+            total_f1_final += case_f1
+            total_precision_final += case_prec
+            total_recall_final += case_rec
             total_candidate_recall_300 += cand_rec_300
             total_candidate_recall_500 += cand_rec_500
 
-            if not recall_only:
-                print(f"  -> Prec: {case_prec:.4f} | Recall: {case_rec:.4f} | F1: {case_f1:.4f}")
+            print(f"  -> Prec: {case_prec:.4f} | Recall: {case_rec:.4f} | F1: {case_f1:.4f}")
             print(f"  -> Candidate Recall@300: {cand_rec_300:.4f} | Recall@500: {cand_rec_500:.4f}")
             print(f"  -> Elapsed: {elapsed:.2f}s | LLM calls: {budget.llm_calls_used}")
         else:
@@ -563,10 +541,9 @@ def run_evaluation(
     # 3. 输出汇总模型性能报表 (与 baseline 对齐并展示提升)
     print("\n" + "=" * 70)
     print("和 baseline 比:")
-    if not recall_only:
-        print(format_compare("avg_f1_final", avg_f1, BASELINE_METRICS["avg_f1_final"]))
-        print(format_compare("avg_precision_final", avg_prec, BASELINE_METRICS["avg_precision_final"]))
-        print(format_compare("avg_recall_final", avg_rec, BASELINE_METRICS["avg_recall_final"]))
+    print(format_compare("avg_f1_final", avg_f1, BASELINE_METRICS["avg_f1_final"]))
+    print(format_compare("avg_precision_final", avg_prec, BASELINE_METRICS["avg_precision_final"]))
+    print(format_compare("avg_recall_final", avg_rec, BASELINE_METRICS["avg_recall_final"]))
     print(format_compare("avg_candidate_recall_300", avg_cand_rec_300, BASELINE_METRICS["avg_candidate_recall_300"]))
     print(format_compare("avg_candidate_recall_500", avg_cand_rec_500, BASELINE_METRICS["avg_candidate_recall_500"]))
     print(format_compare("avg_wall_time", avg_time, BASELINE_METRICS["avg_wall_time"], is_time=True))
@@ -652,7 +629,11 @@ def run_evaluation(
 
 
 if __name__ == "__main__":
-    setup_logging(logging.WARNING)
+    # 强制设置 sys.stdout 编码为 utf-8，解决 Windows 环境下打印 emoji 时 UnicodeEncodeError 问题
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+    setup_logging(logging.INFO)
     
     parser = argparse.ArgumentParser(description="Scholar Agent V2.0 Evaluation Runner")
     parser.add_argument(
@@ -671,7 +652,12 @@ if __name__ == "__main__":
         "-c", "--cases",
         type=str,
         default=None,
-        help="指定仅运行的部分案例编号（如：'1,2,5-7'）"
+        help="指定仅运行的部分案例编号（如：'1,2,5-7'），不指定则默认全量"
+    )
+    parser.add_argument(
+        "-s", "--simple",
+        action="store_true",
+        help="只运行1条简单测试（即第1个案例）"
     )
     parser.add_argument(
         "-o", "--output",
@@ -684,11 +670,6 @@ if __name__ == "__main__":
         type=float,
         default=30.0,
         help="单个 Query 的最大耗时预算（秒），超过此值算为超时，默认 30.0"
-    )
-    parser.add_argument(
-        "--recall-only",
-        action="store_true",
-        help="仅评估检索召回率（Recall@300, Recall@500），跳过证据筛选与合成"
     )
 
     args = parser.parse_args()
@@ -719,7 +700,7 @@ if __name__ == "__main__":
         mode=run_mode,
         limit=args.limit,
         cases_filter=args.cases,
+        simple=args.simple,
         output_path=args.output,
-        time_budget=args.time_budget,
-        recall_only=args.recall_only
+        time_budget=args.time_budget
     )

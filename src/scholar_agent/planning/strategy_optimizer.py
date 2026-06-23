@@ -20,15 +20,32 @@ def optimize_search_strategy(
     """
     # 启发式兜底数据，以防 LLM 挂了或在 Mock 下运行
     fallback_seeds = [p.paper_id for p in candidates[:3]] if candidates else []
+    missing_aspects = review_result.get("coverage_analysis", {}).get("missing_aspects", [])
+    suggested_keywords = review_result.get("suggested_new_keywords", [])
+
+    # 增强 fallback：基于每个 missing_aspect 生成独立检索式
+    fallback_subqueries = []
+    if missing_aspects:
+        for aspect in missing_aspects[:5]:  # 最多 5 个
+            fallback_subqueries.append({
+                "query": aspect,
+                "reason": f"补充缺失方面: {aspect}"
+            })
+    elif suggested_keywords:
+        fallback_subqueries.append({
+            "query": " ".join(suggested_keywords),
+            "reason": "基于审阅建议补充缺失的关键词"
+        })
+    elif plan.research_topic:
+        fallback_subqueries.append({
+            "query": plan.research_topic,
+            "reason": "基于研究主题补充检索"
+        })
+
     fallback = {
         "round": round_index + 1,
         "search_goal": "补充缺失主题与硬约束项",
-        "new_subqueries": [
-            {
-                "query": " ".join(review_result.get("suggested_new_keywords", []) or [plan.research_topic or ""]),
-                "reason": "基于审阅建议补充缺失的关键词"
-            }
-        ] if review_result.get("suggested_new_keywords") else [],
+        "new_subqueries": fallback_subqueries,
         "citation_expansion_seeds": fallback_seeds,
         "negative_filters": review_result.get("suggested_excluded_terms", []),
         "stop_after_this_round": False
@@ -61,7 +78,10 @@ def optimize_search_strategy(
         f"QueryPlan Contract: {plan.model_dump_json()}\n"
         f"Review Agent Findings: {review_result}\n"
         f"Current Candidates Metadata: {[{'paper_id': p.paper_id, 'title': p.title} for p in candidates[:15]]}\n"
-        f"Next Round Index: {round_index + 1}"
+        f"Next Round Index: {round_index + 1}\n"
+        "CRITICAL: When generating new_subqueries, create a separate query for EACH missing_aspect. "
+        "Do NOT merge all missing aspects into one query. Each query should focus on a specific missing aspect to improve recall. "
+        "Also consider citation expansion and synonym expansion to cover more variations."
     )
 
     response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
