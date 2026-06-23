@@ -23,7 +23,7 @@ def build_providers(
     if explicit_provider_names:
         selected_names = provider_names
     elif selected_mode == "live":
-        selected_names = ["pasa_local", "openalex", "arxiv", "pubmed"]
+        selected_names = ["pasa_local", "openalex", "semantic_scholar", "arxiv", "pubmed"]
     else:
         selected_names = list(config.app.providers)
     cache = JsonFileCache(config.app.cache_dir)

@@ -478,10 +478,10 @@ class MultiRouteRetriever:
                 return queries
             
             route_priority = {
-                "openalex": {"title_like", "title_exact", "core_topic", "method_task", "broad_synonym", "dataset", "translated"},
-                "arxiv": {"latest", "title_like", "core_topic", "method_task"},
-                "pubmed": {"biomedical", "dataset", "method_task", "core_topic"},
-                "semantic_scholar": {"title_like", "core_topic", "method_task", "citation_seed"},
+                "openalex": {"title_like", "title_exact", "core_topic", "method_task", "broad_synonym", "dataset", "translated", "evolved", "query2doc", "hyde"},
+                "arxiv": {"latest", "title_like", "core_topic", "method_task", "evolved"},
+                "pubmed": {"biomedical", "dataset", "method_task", "core_topic", "evolved"},
+                "semantic_scholar": {"title_like", "core_topic", "method_task", "citation_seed", "evolved", "query2doc", "hyde"},
             }
             allowed_routes = route_priority.get(prov.name, set())
             selected = []

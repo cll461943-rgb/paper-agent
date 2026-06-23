@@ -7,7 +7,26 @@
 # Python ignores
 __pycache__/
 *.pyc
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
 
-# Local evaluation logs
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Local evaluation logs and runtime markers
+*.log
+*.pid
 evaluation_report.json
 
+# Generated caches and large local indexes
+data/cache/
+data/*.sqlite
+data/*.sqlite-*
+data/cs_paper_2nd/
+data/cs_paper_2nd.zip
+outputs/

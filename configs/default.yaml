@@ -17,10 +17,10 @@ llm:
   model_pro: deepseek-v4-pro
   # 默认降级用 model (若只配置单一 model)
   model: deepseek-v4-flash
-  timeout_seconds: 90
+  timeout_seconds: 30
   max_tokens: 4096
   temperature: 0.2
-  trust_env: false
+  trust_env: true
 
 providers:
   pasa_local:
@@ -78,7 +78,7 @@ budget:
   max_llm_selection_papers: 15
   max_final_papers: 10
   max_evidence_summary_papers: 5
-  max_llm_calls: 8
+  max_llm_calls: 6
   llm_timeout_seconds: 30
   api_timeout_seconds: 8
   retry_times: 1
@@ -97,7 +97,7 @@ ranking:
     diversity_graph_prior_score: 0.02
 
 known_title_clues:
-  enabled: true
+  enabled: false
 
 dynamic_k:
   exact_title_k: 1

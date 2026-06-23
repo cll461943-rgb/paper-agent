@@ -44,7 +44,7 @@ def test_synthesis_agent_grouping_and_graph():
         relevance_level="medium",
         reason="Partial match",
     )
-    rp2 = RankedPaper(paper=p2, selection=s2, final_score=0.7, rank=2)
+    rp2 = RankedPaper(paper=p2, selection=s2, final_score=0.8, rank=2)
 
     p3 = Paper(
         paper_id="p3",

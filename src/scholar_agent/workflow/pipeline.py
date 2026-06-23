@@ -212,9 +212,9 @@ class PaperAgentPipeline:
             route_bonus = 0.0
             for path in p.retrieval_path:
                 if "title_exact" in path:
-                    route_bonus += 1.0
+                    route_bonus += 0.25
                 elif "title_like" in path:
-                    route_bonus += 0.2
+                    route_bonus += 0.05
                 if "reference_expansion" in path or "citation_expansion" in path:
                     route_bonus += 0.05
                     
@@ -265,12 +265,17 @@ class PaperAgentPipeline:
             new_subqueries_data = opt_res.get("new_subqueries", [])
             new_queries = []
             for item in new_subqueries_data:
+                route = item.get("route") or "evolved"
                 new_queries.append(
                     SearchQuery(
                         query=item.get("query", ""),
-                        route="hybrid",
+                        route=route,
                         intent=item.get("reason", "expanded search"),
-                        priority=1
+                        required_terms=item.get("required_terms", []),
+                        optional_terms=item.get("optional_terms", []),
+                        filters=item.get("filters", {}),
+                        sources=item.get("sources", ["openalex", "semantic_scholar"]),
+                        priority=1,
                     )
                 )
 
@@ -346,29 +351,67 @@ class PaperAgentPipeline:
             )
 
         query_type = getattr(query_plan, "query_type", "unknown")
-        if query_type in ("exact_title", "specific_paper"):
-            max_selection = 5 if query_type == "exact_title" else 10
-        elif query_type in ("dataset_constraint", "method_comparison"):
-            max_selection = 15
-        elif query_type in ("survey", "broad_topic", "latest_work"):
+        if query_type == "exact_title":
+            max_selection = 10
+        elif query_type == "specific_paper":
             max_selection = 20
+        elif query_type == "dataset_constraint":
+            max_selection = 30
+        elif query_type == "method_comparison":
+            max_selection = 35
+        elif query_type == "survey":
+            max_selection = 40
+        elif query_type == "broad_topic":
+            max_selection = 40
+        elif query_type == "latest_work":
+            max_selection = 35
         else:
             max_selection = getattr(self.config.budget, "max_llm_selection_papers", 15)
-        # 取粗排前 max_selection 篇；同时强制纳入 title_exact / title_like 命中的论文
-        # 这些论文是 LLM 或 heuristic 认为标题命中的候选，但粗排分可能偏低，必须保证进入精排
-        selection_set = list(all_candidates[:max_selection])
-        selection_ids = {p.paper_id for p in selection_set}
-        for p in all_candidates[max_selection:]:
+
+        selection_candidates = []
+        # 1. 粗排 topN
+        selection_candidates.extend(all_candidates[:max_selection])
+
+        def top_by_route(papers: list[Paper], route: str, k: int) -> list[Paper]:
+            selected = []
+            for p in papers:
+                paths = p.retrieval_path or []
+                if any(path == f"route:{route}" for path in paths):
+                    selected.append(p)
+                    if len(selected) >= k:
+                        break
+            return selected
+
+        def top_by_provider(papers: list[Paper], provider: str, k: int) -> list[Paper]:
+            selected = []
+            for p in papers:
+                paths = p.retrieval_path or []
+                if any(path == f"provider:{provider}" for path in paths):
+                    selected.append(p)
+                    if len(selected) >= k:
+                        break
+            return selected
+
+        # 2. 每个 route 至少保留若干篇
+        for route in ["core_topic", "method_task", "dataset", "translated", "broad_synonym", "query2doc", "hyde", "citation_seed"]:
+            selection_candidates.extend(top_by_route(all_candidates, route, k=3))
+
+        # 3. 每个 provider 至少保留若干篇
+        for provider in ["pasa_local", "openalex", "semantic_scholar", "pubmed", "arxiv"]:
+            selection_candidates.extend(top_by_provider(all_candidates, provider, k=3))
+
+        # 4. title_exact/title_like 命中的论文
+        title_match_candidates = []
+        for p in all_candidates:
             has_title_match = any(
                 "title_exact" in path or "title_like" in path
                 for path in (p.retrieval_path or [])
             )
-            if has_title_match and p.paper_id not in selection_ids:
-                selection_set.append(p)
-                selection_ids.add(p.paper_id)
-                if len(selection_set) >= max_selection + 10:
-                    break
-        selection_candidates = selection_set
+            if has_title_match:
+                title_match_candidates.append(p)
+        selection_candidates.extend(title_match_candidates[:10])
+
+        selection_candidates = deduplicate_papers(selection_candidates)[:40]
 
         LOGGER.info("Starting fine-grained evidence selection for %d papers (filtered from %d candidates)", 
                     len(selection_candidates), len(all_candidates))

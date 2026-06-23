@@ -381,7 +381,8 @@ def heuristic_generate_search_queries(
     ]
     queries = sorted(queries, key=lambda item: item.priority)
     if compress_known_title and enabled and _infer_known_paper_title(plan.original_query):
-        return [item for item in queries if item.route == "title_like"][:1]
+        keep_routes = {"title_like", "core_topic", "method_task", "broad_synonym"}
+        return [item for item in queries if item.route in keep_routes][:4]
     return queries
 
 
@@ -490,7 +491,8 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
         f"Original Query: {plan.original_query}\n"
         f"QueryPlan: {plan.model_dump_json()}"
     )
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
+    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
     raw_titles = response.get("title_queries") if isinstance(response, dict) else response
     if not isinstance(raw_titles, list):
         return []
@@ -537,12 +539,16 @@ def generate_search_queries(
             "Generate short retrieval-oriented scholarly search queries. "
             "Return a JSON object with one field named search_queries. "
             "Required routes: original_clean, core_topic, method_task, entity_dataset, title_like, broad_synonym. "
-            "CRITICAL: Each query must be extremely concise (2-4 words maximum). Avoid natural language sentences, "
-            "connecting words, or broad words like 'shows', 'proposes', 'investigate', 'applications'. "
-            "Use exact technical terms and actively include academic synonyms, alternative phrasing, or broader/narrower "
-            "concepts (e.g. if the topic is contrastive learning, generate alternative queries with 'unsupervised sentence representation' "
-            "or 'SimCSE'). "
-            "Use double quotes for multi-word exact phrases where appropriate (e.g., '\"in-context learning\"' or '\"sentence representation\"')."
+            "CRITICAL: Control the length of each query strictly based on its route:\n"
+            "- title_like: 4-12 words\n"
+            "- core_topic: 3-8 words\n"
+            "- method_task: 5-12 words (must preserve method + task)\n"
+            "- entity_dataset: dataset + task + domain\n"
+            "- broad_synonym: 3-8 words\n"
+            "- query2doc/hyde: 20-60 words\n"
+            "Avoid natural language sentences, connecting words, or broad words like 'shows', 'proposes', 'investigate'. "
+            "Use exact technical terms and actively include academic synonyms, alternative phrasing, or broader/narrower concepts. "
+            "Use double quotes for multi-word exact phrases where appropriate."
         )
         user_prompt = (
             "Return a JSON object shaped as "
@@ -554,11 +560,12 @@ def generate_search_queries(
         )
         
         import concurrent.futures
+        timeout = getattr(budget.config, "llm_timeout_seconds", 30)
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
             future_titles = executor.submit(_llm_title_queries, plan, llm_client)
             future_queries = executor.submit(
                 getattr(llm_client, "complete_json", lambda *_: None),
-                system_prompt, user_prompt, model_type="flash"
+                system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout
             )
             llm_title_candidates = future_titles.result()
             response = future_queries.result()

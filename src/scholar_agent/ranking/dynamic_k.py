@@ -21,11 +21,11 @@ def decide_dynamic_k(query_contract: Any, ranked_papers: list[Any], config: Any)
     dynamic_k_cfg = getattr(config, "dynamic_k", None)
     score_gap_top1 = 0.15
     exact_title_k = 1
-    method_comparison_k = 5
-    survey_k = 20  # Survey 类型需要进行大量检索，不应被硬性截断
-    min_final_score = 0.45  # 降低门槛，减少开方漏掌的情况
-    fallback_k = 5
-    max_final_papers = 20
+    method_comparison_k = 3
+    survey_k = 5
+    min_final_score = 0.55
+    fallback_k = 3
+    max_final_papers = 10
 
     if dynamic_k_cfg:
         score_gap_top1 = getattr(dynamic_k_cfg, "score_gap_top1", 0.15)

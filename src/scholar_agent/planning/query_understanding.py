@@ -97,6 +97,14 @@ CHINESE_ENTITY_PATTERNS = [
     (r"论文推荐", "paper recommendation"),
     (r"引用网络|引文网络", "citation network"),
     (r"重排序|重排", "reranking"),
+    (r"查询分解|问题分解|子查询", "query decomposition"),
+    (r"查询改写|查询扩展", "query reformulation"),
+    (r"引文追踪|引用追踪", "citation tracking"),
+    (r"参考文献扩展", "reference expansion"),
+    (r"语义检索", "semantic retrieval"),
+    (r"多源检索", "multi-source retrieval"),
+    (r"学习排序|学习式排序", "learning-to-rank"),
+    (r"学术智能体|科研智能体", "scholarly agent"),
 ]
 
 QUERY_PREFIXES = [
@@ -189,6 +197,31 @@ def _extract_chinese_matches(text: str, patterns: list[tuple[str, str]]) -> list
     return list(dict.fromkeys(matches))
 
 
+def normalize_constraints(plan: QueryPlan) -> QueryPlan:
+    must = set(plan.must_have_constraints)
+    nice = set(plan.nice_to_have_constraints)
+
+    # 数据集、benchmark、明确年份一般是硬约束
+    for d in plan.datasets:
+        must.add(d)
+
+    # 用户明确说“使用/基于/with/using/采用”的方法，加入硬约束
+    explicit_method_markers = ["using", "with", "based on", "采用", "基于", "使用"]
+    if any(m in plan.original_query.lower() for m in explicit_method_markers):
+        for m in plan.methods:
+            must.add(m)
+    else:
+        for m in plan.methods:
+            nice.add(m)
+
+    for e in plan.entities:
+        nice.add(e)
+
+    plan.must_have_constraints = list(must)
+    plan.nice_to_have_constraints = list(nice)
+    return plan
+
+
 def heuristic_understand_query(query: str) -> QueryPlan:
     lowered = query.lower()
     cleaned_query = _clean_query_prefix(query)
@@ -275,7 +308,7 @@ def heuristic_understand_query(query: str) -> QueryPlan:
     elif _looks_like_specific_paper(query):
         query_type = "specific_paper"
 
-    return QueryPlan(
+    plan = QueryPlan(
         original_query=query,
         language="zh" if re.search(r"[\u4e00-\u9fff]", query) else "en",
         query_type=query_type,
@@ -292,6 +325,7 @@ def heuristic_understand_query(query: str) -> QueryPlan:
         expected_output="top_papers",
         uncertainty=uncertainty,
     )
+    return normalize_constraints(plan)
 
 
 def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
@@ -319,7 +353,8 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
         f"Heuristic reference: {fallback.model_dump_json()}"
     )
     # 用 pro 级别的模型进行理解
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
+    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
     if response is None:
         return fallback
     try:
@@ -375,7 +410,7 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
             else:
                 payload["language"] = "en"
 
-        return QueryPlan.model_validate(payload)
+        return normalize_constraints(QueryPlan.model_validate(payload))
     except Exception as exc:
         LOGGER.warning("LLM QueryPlan validation failed: %s. Raw response: %s. Falling back to heuristic.", exc, response)
         return fallback
