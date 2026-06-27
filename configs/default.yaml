@@ -3,7 +3,11 @@ app:
   mode: mock          # 可选: mock, live
   output_format: json
   providers:
-    - mock
+    - pasa_local
+    - openalex
+    - semantic_scholar
+    - arxiv
+    - pubmed
   cache_dir: data/cache
   parallel_retrieval: true
 
@@ -18,15 +22,16 @@ llm:
   # 默认降级用 model (若只配置单一 model)
   model: deepseek-v4-flash
   timeout_seconds: 30
-  max_tokens: 4096
+  max_tokens: 8192
   temperature: 0.2
-  trust_env: true
+  trust_env: false
+  max_retries: 1
 
 providers:
   pasa_local:
     enabled: true
     enable_fts: true
-    base_url: external/pasa/data/paper_database
+    base_url: data
     timeout_seconds: 0
     retry_times: 0
     min_interval_seconds: 0.0
@@ -35,78 +40,87 @@ providers:
   openalex:
     enabled: true
     base_url: https://api.openalex.org/works
-    timeout_seconds: 20
-    retry_times: 2
-    min_interval_seconds: 0.35
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 1.0
     max_concurrency: 1
-    backoff_base_seconds: 1.0
-    mailto: "33316@example.com"
+    backoff_base_seconds: 2.0
+    mailto: "cll461943@gmail.com"
     api_key_env: OPENALEX_API_KEY
   arxiv:
     enabled: false
     base_url: https://export.arxiv.org/api/query
-    timeout_seconds: 15
-    retry_times: 2
+    timeout_seconds: 5
+    retry_times: 0
     min_interval_seconds: 2.0
     max_concurrency: 1
     backoff_base_seconds: 3.0
   semantic_scholar:
     enabled: true
     base_url: https://api.semanticscholar.org/graph/v1/paper/search
-    timeout_seconds: 15
-    retry_times: 2
-    min_interval_seconds: 1.5
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 2.0
     max_concurrency: 1
     backoff_base_seconds: 1.5
     api_key_env: SEMANTIC_SCHOLAR_API_KEY
   pubmed:
     enabled: true
     base_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
-    timeout_seconds: 20
-    retry_times: 2
+    timeout_seconds: 8
+    retry_times: 1
     min_interval_seconds: 0.35
     max_concurrency: 1
     backoff_base_seconds: 1.0
 
 budget:
-  max_search_queries: 10
-  max_retrieval_rounds: 2
-  max_results_per_query: 30
-  max_candidate_pool_size: 400
-  max_seed_papers: 5
+  max_search_queries: 30
+  max_retrieval_rounds: 3
+  max_results_per_query: 50
+  max_candidate_pool_size: 800
+  max_seed_papers: 10
   max_refchain_depth: 1
-  max_llm_selection_papers: 15
-  max_final_papers: 10
-  max_evidence_summary_papers: 5
-  max_llm_calls: 6
+  max_llm_selection_papers: 100
+  max_final_papers: 20
+  max_evidence_summary_papers: 10
+  max_llm_calls: 60
   llm_timeout_seconds: 30
   api_timeout_seconds: 8
   retry_times: 1
   known_title_seed_only: false
   enable_query_expansion: true
+  adaptive_provider_fallback: true
+  source_auto_route: true
+  enable_translated_route: true
 
 ranking:
+  max_final_papers: 20
+  pre_rank_topk: 200
   weights:
-    llm_relevance_score: 0.25
-    bge_reranker_score: 0.20
-    constraint_coverage_score: 0.20
-    evidence_completeness_score: 0.15
-    source_agreement_score: 0.10
-    recency_score: 0.05
-    authority_score: 0.03
-    diversity_graph_prior_score: 0.02
+    llm_relevance: 0.25
+    bge: 0.18
+    constraint: 0.20
+    evidence: 0.15
+    source_agreement: 0.08
+    recency: 0.05
+    authority: 0.05
+    graph_prior: 0.02
+    title_bonus: 0.02
 
 known_title_clues:
-  enabled: false
+  enabled: true
 
 dynamic_k:
   exact_title_k: 1
   specific_query_k: 2
   dataset_constraint_k: 3
   method_comparison_k: 3
-  survey_k: 5
-  broad_topic_k: 5
+  survey_k: 10
+  broad_topic_k: 10
   score_gap_top1: 0.15
   score_gap_top3: 0.10
-  min_final_score: 0.55
-  fallback_k: 3
+  min_final_score: 0.45
+  fallback_k: 5
+  k_max: 20
+  hard_max_output: 12
+
