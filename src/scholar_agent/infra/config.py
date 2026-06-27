@@ -42,16 +42,35 @@ class ProviderSection(BaseModel):
         enabled=True,
         base_url="external/pasa/data/paper_database",
     )
-    openalex: ProviderConfig = ProviderConfig(base_url="https://api.openalex.org/works")
-    arxiv: ProviderConfig = ProviderConfig(base_url="https://export.arxiv.org/api/query")
-    semantic_scholar: ProviderConfig = ProviderConfig(
+    # P0-6: OpenAlex timeout=8 retry=1 min_interval=1.0 backoff=2.0
+    openalex: ProviderConfig = ProviderConfig(
+        base_url="https://api.openalex.org/works",
+        timeout_seconds=8,
+        retry_times=1,
+        min_interval_seconds=1.0,
+        backoff_base_seconds=2.0,
+    )
+    # P0-6: arXiv default disabled, timeout=5 retry=0
+    arxiv: ProviderConfig = ProviderConfig(
         enabled=False,
+        base_url="https://export.arxiv.org/api/query",
+        timeout_seconds=5,
+        retry_times=0,
+    )
+    # P0-6: Semantic Scholar enabled, timeout=8 retry=1
+    semantic_scholar: ProviderConfig = ProviderConfig(
+        enabled=True,
         base_url="https://api.semanticscholar.org/graph/v1/paper/search",
         api_key_env="SEMANTIC_SCHOLAR_API_KEY",
+        timeout_seconds=8,
+        retry_times=1,
     )
+    # P0-6: PubMed timeout=8 retry=1
     pubmed: ProviderConfig = ProviderConfig(
         enabled=True,
         base_url="https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+        timeout_seconds=8,
+        retry_times=1,
     )
 
 
@@ -64,11 +83,21 @@ class LLMConfig(BaseModel):
     model: str = "deepseek-v4-flash"
     model_flash: str = "deepseek-v4-flash"
     model_pro: str = "deepseek-v4-pro"
-    timeout_seconds: int = 90
+    timeout_seconds: int = 30  # P0-6: 90→30
     max_tokens: int = 2048
     temperature: float = 0.2
     trust_env: bool = False
-    max_retries: int = 3
+    max_retries: int = 1  # P0-6: 3→1
+    # Effect-first: per-task max_tokens (overrides global max_tokens when >0)
+    max_tokens_query_understanding: int = 4096
+    max_tokens_evidence_selection: int = 8192
+    max_tokens_listwise_rerank: int = 8192
+    max_tokens_synthesis: int = 8192
+    # Effect-first: per-stage timeouts (overrides global timeout_seconds when >0)
+    timeout_evidence_selection: int = 35
+    timeout_listwise_rerank: int = 90
+    # Effect-first: circuit breaker threshold (reasoning models need more tolerance)
+    circuit_breaker_max_timeouts: int = 2
 
 
 class BudgetConfig(BaseModel):
@@ -83,7 +112,7 @@ class BudgetConfig(BaseModel):
     max_evidence_summary_papers: int = 10
     max_llm_calls: int = 30
     max_api_calls: int = 1000
-    llm_timeout_seconds: int = 90
+    llm_timeout_seconds: int = 30  # P0-6: 90→30
     api_timeout_seconds: int = 20
     retry_times: int = 2
     known_title_seed_only: bool = False
@@ -91,6 +120,8 @@ class BudgetConfig(BaseModel):
     adaptive_provider_fallback: bool = True
     source_auto_route: bool = True  # 按 query_type 自动启用源
     enable_translated_route: bool = True  # 自动生成英文翻译检索式
+    # Effect-first: configurable case deadline (default 180s, effect-first uses 240s)
+    case_deadline_seconds: int = 180
 
 
 class DynamicKConfig(BaseModel):
@@ -98,21 +129,52 @@ class DynamicKConfig(BaseModel):
     specific_query_k: int = 2
     dataset_constraint_k: int = 3
     method_comparison_k: int = 3
-    survey_k: int = 5
-    broad_topic_k: int = 5
+    survey_k: int = 10  # P0-5: 5→10
+    broad_topic_k: int = 10  # P0-5: 5→10
     score_gap_top1: float = 0.15
     score_gap_top3: float = 0.10
-    min_final_score: float = 0.55
-    fallback_k: int = 3
+    min_final_score: float = 0.45  # P0-5: 0.55→0.45
+    fallback_k: int = 5  # P0-5: 3→5
+    # F1-aware controller ceiling: max K the controller is allowed to pick.
+    # Raise (e.g. 40) for datasets with many gold papers (real50 avg_gold=15.8).
+    k_max: int = 20
+    # Hard cap on total output (chosen K + recall guard). Raise for high-recall
+    # datasets so the guard can actually add high-confidence papers beyond K.
+    hard_max_output: int = 12
 
 
 class RankingConfig(BaseModel):
     max_final_papers: int = 20
-    weights: dict[str, float] = Field(default_factory=dict)
+    pre_rank_topk: int = 200
+    # P1: Default weights matching final_reranker.py defaults
+    weights: dict[str, float] = Field(default_factory=lambda: {
+        "llm_relevance": 0.25,
+        "bge": 0.18,
+        "constraint": 0.20,
+        "evidence": 0.15,
+        "source_agreement": 0.08,
+        "recency": 0.05,
+        "authority": 0.05,
+        "graph_prior": 0.02,
+        "title_bonus": 0.02,
+    })
+    # Effect-first: LLM listwise reranker params
+    listwise_topk: int = 40
+    listwise_fallback_topk: int = 20
+    listwise_score_weight: float = 0.55
+    llm_evidence_weight: float = 0.20
 
 
 class KnownTitleCluesConfig(BaseModel):
     enabled: bool = True
+
+
+class SelectionConfig(BaseModel):
+    exact_title_selection_topk: int = 8
+    constraint_selection_topk: int = 15
+    broad_selection_topk: int = 20
+    default_selection_topk: int = 12
+    batch_size: int = 5
 
 
 class AppConfig(BaseModel):
@@ -123,13 +185,14 @@ class AppConfig(BaseModel):
     ranking: RankingConfig = RankingConfig()
     dynamic_k: DynamicKConfig = DynamicKConfig()
     known_title_clues: KnownTitleCluesConfig = KnownTitleCluesConfig()
+    selection: SelectionConfig = SelectionConfig()
 
 
 def _load_dotenv_if_present(path: str | Path = ".env") -> None:
     env_path = Path(path)
     if not env_path.exists():
         return
-    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+    for raw_line in env_path.read_text(encoding="utf-8", errors="ignore").splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
@@ -143,5 +206,5 @@ def load_config(path: str | Path | None = None) -> AppConfig:
     if not config_path.exists():
         # Fallback to local default configs inside project
         config_path = Path(__file__).parents[2] / "configs" / "default.yaml"
-    raw_data = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    raw_data = yaml.safe_load(config_path.read_text(encoding="utf-8", errors="ignore"))
     return AppConfig.model_validate(raw_data)

@@ -11,7 +11,9 @@ import requests
 LOGGER = logging.getLogger(__name__)
 
 from scholar_agent.infra.config import LLMConfig
+from scholar_agent.utils.json_repair import safe_json_loads
 from scholar_agent.workflow.budget import BudgetExceededError, BudgetManager
+from scholar_agent.workflow.llm_circuit_breaker import LLMCircuitBreaker
 
 
 @dataclass
@@ -35,6 +37,22 @@ class OpenAICompatibleLLMClient:
                 "Connection": "close",  # 显式关闭连接复用，防止 Keep-Alive 长链接被网关意外掐断
             }
         )
+        # P2: Dynamic timeout override (set by pipeline Deadline) and circuit breaker
+        self._timeout_override: float | None = None
+        self._circuit_breaker: LLMCircuitBreaker | None = None
+
+    @property
+    def timeout(self) -> float | None:
+        """Dynamic timeout override — set by pipeline to enforce Deadline."""
+        return self._timeout_override
+
+    @timeout.setter
+    def timeout(self, value: float | None) -> None:
+        self._timeout_override = value
+
+    def set_circuit_breaker(self, breaker: LLMCircuitBreaker) -> None:
+        """Attach a circuit breaker to track LLM call outcomes."""
+        self._circuit_breaker = breaker
 
     @property
     def api_key(self) -> str:
@@ -124,27 +142,45 @@ class OpenAICompatibleLLMClient:
             raise ValueError("invalid json boundaries")
         return json.loads(candidate[start : end + 1])
 
-    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None) -> Any | None:
+    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None, max_tokens: int | None = None) -> Any | None:
+        # P2: Check circuit breaker first — if tripped, skip all LLM calls
+        if self._circuit_breaker is not None and not self._circuit_breaker.can_call():
+            LOGGER.debug("LLM circuit breaker tripped, skipping call")
+            return None
         if not self.is_available():
             return None
+        # P2: Use timeout_override from pipeline Deadline when explicit timeout_seconds not provided
+        effective_timeout = timeout_seconds if timeout_seconds is not None else self._timeout_override
         try:
             self.budget.reserve_llm_call()
         except BudgetExceededError as exc:
             self.budget.record_error(str(exc))
             return None
 
-        # 根据 model_type 选择 deepseek-v4-flash 还是 pro，并允许环境变量覆盖
+        # 根据 model_type 选择模型，允许 DeepSeek 环境变量覆盖。
+        # 若当前配置使用非 DeepSeek 的 api_key_env（如 GPT55_API_KEY），则直接读取 config 值，
+        # 避免 DEEPSEEK_MODEL_PRO/FLASH 污染其他 provider 的模型名。
         import os
-        model_name = (
-            os.getenv("DEEPSEEK_MODEL_PRO", self.config.model_pro)
-            if model_type == "pro"
-            else os.getenv("DEEPSEEK_MODEL_FLASH", self.config.model_flash)
-        )
+        _is_deepseek_config = self.config.api_key_env in ("DEEPSEEK_API_KEY", "OPENAI_API_KEY", "")
+        if _is_deepseek_config:
+            model_name = (
+                os.getenv("DEEPSEEK_MODEL_PRO", self.config.model_pro)
+                if model_type == "pro"
+                else os.getenv("DEEPSEEK_MODEL_FLASH", self.config.model_flash)
+            )
+        else:
+            # 非 DeepSeek 配置：直接使用 config 文件中声明的模型名
+            model_name = (
+                self.config.model_pro if model_type == "pro" else self.config.model_flash
+            )
+
+        # Effect-first: per-task max_tokens override
+        effective_max_tokens = max_tokens if (max_tokens is not None and max_tokens > 0) else self.config.max_tokens
 
         payload = {
             "model": model_name,
             "temperature": self.config.temperature,
-            "max_tokens": self.config.max_tokens,
+            "max_tokens": effective_max_tokens,
             "response_format": {"type": "json_object"},
             "messages": [
                 {"role": "system", "content": system_prompt},
@@ -153,14 +189,21 @@ class OpenAICompatibleLLMClient:
         }
         started_at = time.perf_counter()
         try:
-            raw = self._post_json(payload, timeout_seconds=timeout_seconds)
+            raw = self._post_json(payload, timeout_seconds=effective_timeout)
         except Exception as exc:
+            # P2: Record to circuit breaker
+            if self._circuit_breaker is not None:
+                if isinstance(exc, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
+                    self._circuit_breaker.record_timeout()
+                else:
+                    self._circuit_breaker.record_error(str(exc))
+
             # 仅在怀疑是格式不支持时才去掉 response_format 重试，其他网络错误直接认输，避免 2x3=6 次重试卡死
             is_format_error = False
             if isinstance(exc, requests.exceptions.HTTPError) and exc.response is not None:
                 if exc.response.status_code == 400:
                     is_format_error = True
-            
+
             exc_str = str(exc).lower()
             if "response_format" in exc_str or "json_object" in exc_str or "json" in exc_str:
                 is_format_error = True
@@ -169,7 +212,7 @@ class OpenAICompatibleLLMClient:
                 try:
                     if "response_format" in payload:
                         del payload["response_format"]
-                    raw = self._post_json(payload, timeout_seconds=timeout_seconds)
+                    raw = self._post_json(payload, timeout_seconds=effective_timeout)
                 except Exception as retry_exc:
                     self.budget.record_error(f"llm request failed: {retry_exc} (orig: {exc})")
                     self.budget.record_llm_elapsed(time.perf_counter() - started_at)
@@ -181,6 +224,9 @@ class OpenAICompatibleLLMClient:
 
         elapsed = time.perf_counter() - started_at
         self.budget.record_llm_elapsed(elapsed)
+        # P2: Record success to circuit breaker
+        if self._circuit_breaker is not None:
+            self._circuit_breaker.record_success()
         content = (
             ((raw.get("choices") or [{}])[0].get("message") or {}).get("content")
             or ((raw.get("choices") or [{}])[0].get("text"))
@@ -192,12 +238,14 @@ class OpenAICompatibleLLMClient:
             or self._estimate_tokens(system_prompt + user_prompt + content)
         )
         self.budget.record_token_estimate(token_estimate)
+        # P2: Local JSON repair — no LLM repair calls (per optimization doc)
+        result = safe_json_loads(content)
+        if result is not None:
+            return result
+        # Fallback: try legacy extract_json_payload
         try:
             return self.extract_json_payload(content)
         except Exception as exc:
-            repaired = self._repair_json_content(content, model_name)
-            if repaired is not None:
-                return repaired
             self.budget.record_error(f"llm json parse failed: {exc}")
             return None
 
@@ -228,7 +276,7 @@ class OpenAICompatibleLLMClient:
         }
         started_at = time.perf_counter()
         try:
-            raw = self._post_json(payload)
+            raw = self._post_json(payload, timeout_seconds=10)  # P0-6: explicit 10s timeout for repair
         except Exception as exc:
             self.budget.record_error(f"llm json repair failed: {exc}")
             self.budget.record_llm_elapsed(time.perf_counter() - started_at)
@@ -261,7 +309,7 @@ class MockLLMClient(OpenAICompatibleLLMClient):
     def is_available(self) -> bool:
         return True
 
-    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None) -> Any | None:
+    def complete_json(self, system_prompt: str, user_prompt: str, model_type: str = "flash", timeout_seconds: float | None = None, max_tokens: int | None = None) -> Any | None:
         try:
             self.budget.reserve_llm_call()
         except BudgetExceededError as exc:

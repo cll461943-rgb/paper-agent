@@ -77,6 +77,14 @@ class SelectionResult(BaseModel):
     # 证据校验判定属性
     is_validated: bool = True
     validation_notes: list[str] = Field(default_factory=list)
+    # 数值化分数（供 final_reranker 使用）
+    relevance_score: float | None = None
+    constraint_score: float | None = None
+    evidence_score: float | None = None
+    uncertainty: list[str] = Field(default_factory=list)
+    evidence_support: float = 0.0
+    score_cap: float | None = None
+    label: str | None = None
 
 
 class RankedPaper(BaseModel):
@@ -153,9 +161,22 @@ class WorkflowResult(BaseModel):
     search_process: list[SearchProcessRound] = Field(default_factory=list)
     highly_relevant_papers: list[RankedPaper] = Field(default_factory=list)
     partially_relevant_papers: list[RankedPaper] = Field(default_factory=list)
+    supporting_papers: list[RankedPaper] = Field(default_factory=list)  # Task 4: weak/background, not in eval
     method_clusters: list[dict[str, Any]] = Field(default_factory=list)
     timeline: list[dict[str, Any]] = Field(default_factory=list)
     citation_graph: dict[str, Any] = Field(default_factory=dict)
     recommendation_reasoning: list[dict[str, Any]] = Field(default_factory=list)
     agent_self_report: dict[str, Any] = Field(default_factory=dict)
     run_metrics: RunMetrics
+    # Task 5: K controller metadata for evaluation
+    dynamic_k_chosen: int | None = None
+    expected_f1_curve: dict[int, float] | None = None
+    g_hat: float | None = None
+    # V2 K controller metadata
+    g_hat_scope: float | None = None
+    g_hat_pool: float | None = None
+    g_hat_visible: float | None = None
+    low_confidence_uniform: bool = False
+    p_floor: float | None = None
+    tie_break_reason: str = ""
+    second_pass_triggered: bool = False
