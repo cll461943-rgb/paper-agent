@@ -57,6 +57,46 @@ def _check_constraint_match(constraint: str, paper_content_norm: str, paper_titl
     return False
 
 
+def _selection_constraint_coverage(selection: SelectionResult, plan: QueryPlan) -> float:
+    """计算 selection 对 plan 约束的覆盖比例。"""
+    constraints = []
+    constraints.extend(plan.datasets or [])
+    constraints.extend(plan.methods or [])
+    constraints.extend(plan.must_have_constraints or [])
+
+    constraints = list(dict.fromkeys([c for c in constraints if c]))
+    if not constraints:
+        return 1.0 if selection.relevance_level in {"high", "medium"} else 0.3
+
+    matched = set(x.lower() for x in selection.matched_constraints)
+    hit = 0
+    for c in constraints:
+        c_low = c.lower()
+        if c_low in matched:
+            hit += 1
+        elif any(c_low in m or m in c_low for m in matched):
+            hit += 1
+
+    return hit / max(len(constraints), 1)
+
+
+def _valid_evidence_ratio(selection: SelectionResult, paper: Paper) -> float:
+    """计算 selection 中证据片段真实存在于 paper 文本的比例。"""
+    if not selection.evidence:
+        return 0.0
+
+    text = f"{paper.title} {paper.abstract or ''}".lower()
+    valid = 0
+
+    for ev in selection.evidence:
+        ev_text = getattr(ev, "text", "") or ""
+        ev_text_low = ev_text.lower().strip()
+        if ev_text_low and ev_text_low in text:
+            valid += 1
+
+    return valid / max(len(selection.evidence), 1)
+
+
 def validate_evidence(
     paper: Paper,
     selection: SelectionResult,
@@ -119,15 +159,37 @@ def validate_evidence(
         if len(validated_notes) >= 2 or any("year" in note.lower() for note in validated_notes):
             relevance_level = "low"
 
-    # 基于高置信度召回路径（精确/相似标题匹配），不在这里改写 relevance_level，只在 validation_notes 中留存供 Ranker 加分
-    paths = paper.retrieval_path or []
-    is_exact_title = any("title_exact" in p for p in paths)
-    is_like_title = any("title_like" in p for p in paths)
+    # 5. 计算 constraint coverage 和 valid evidence ratio，写入 validation_notes
+    coverage = _selection_constraint_coverage(selection, plan)
+    evidence_ratio = _valid_evidence_ratio(selection, paper)
+    validated_notes.append(f"constraint_coverage={coverage:.3f}")
+    validated_notes.append(f"valid_evidence_ratio={evidence_ratio:.3f}")
 
-    if is_exact_title:
-        validated_notes.append("Path calibration: title_exact matched.")
-    elif is_like_title:
-        validated_notes.append("Path calibration: title_like matched.")
+    # 6. 基于证据和约束覆盖的降级规则
+    is_local_fallback = not selection.evidence and "local" in (selection.reason or "").lower()
+
+    if relevance_level == "high":
+        if not is_local_fallback and evidence_ratio < 0.5:
+            relevance_level = "medium"
+            validated_notes.append("Downgraded: high relevance without enough verifiable evidence.")
+        if plan.must_have_constraints and coverage < 0.5:
+            relevance_level = "medium"
+            validated_notes.append("Downgraded: high relevance with low must-have coverage.")
+
+    if relevance_level == "medium":
+        if not is_local_fallback and evidence_ratio < 0.2:
+            relevance_level = "low"
+            validated_notes.append("Downgraded: medium relevance with no substantive verifiable evidence.")
+        elif not is_local_fallback and (coverage < 0.25 and evidence_ratio < 0.5):
+            relevance_level = "low"
+            validated_notes.append("Downgraded: medium relevance with weak constraint/evidence support.")
+
+    # 7. 检索路径信息保留（语义中性，不影响 level）
+    paths = paper.retrieval_path or []
+    if any("title_exact" in p for p in paths):
+        validated_notes.append("Path: title_exact matched.")
+    elif any("title_like" in p for p in paths):
+        validated_notes.append("Path: title_like matched.")
 
     return SelectionResult(
         paper_id=selection.paper_id,
@@ -138,7 +200,11 @@ def validate_evidence(
         reason=selection.reason,
         confidence=selection.confidence,
         is_validated=is_validated,
-        validation_notes=validated_notes
+        validation_notes=validated_notes,
+        relevance_score=selection.relevance_score,
+        constraint_score=selection.constraint_score,
+        evidence_score=selection.evidence_score,
+        uncertainty=selection.uncertainty,
     )
 
 
