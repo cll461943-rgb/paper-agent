@@ -25,6 +25,9 @@ llm:
   temperature: 0.2
   trust_env: false
   max_retries: 2
+  # LLM circuit breaker: trip after N consecutive timeouts (default was 2, too aggressive).
+  # Effect-first configs use 3-5; we use 6 here to tolerate noisy API while keeping protection.
+  circuit_breaker_max_timeouts: 6
 
 providers:
   pasa_local:

@@ -495,8 +495,12 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
     response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     raw_titles = response.get("title_queries") if isinstance(response, dict) else response
     if not isinstance(raw_titles, list):
-        logger.warning("LLM title queries: no valid response, got=%s", type(raw_titles).__name__)
-        return []
+        logger.warning("LLM title queries: no valid response, got=%s — attempting heuristic fallback", type(raw_titles).__name__)
+        # Bug fix: when LLM is unavailable (circuit-tripped) or returns invalid response,
+        # build heuristic titles from the QueryPlan so title_like routes still get queries.
+        raw_titles = _heuristic_title_fallback(plan)
+        if not raw_titles:
+            return []
     queries: list[SearchQuery] = []
     for title in raw_titles[:10]:
         if not isinstance(title, str):
@@ -515,10 +519,42 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
                 priority=8,
             )
         )
-    logger.info("LLM title queries: generated %d candidates from %d raw titles", len(queries), len(raw_titles))
+    logger.info("LLM title queries: generated %d candidates from %d raw titles", len(queries), len(raw_titles) if isinstance(raw_titles, list) else 0)
     for q in queries:
         logger.info("  LLM title candidate: %s", q.query[:80])
     return queries
+
+
+def _heuristic_title_fallback(plan: QueryPlan) -> list[str]:
+    """Build heuristic title queries from QueryPlan when LLM is unavailable.
+
+    When circuit breaker trips or LLM returns None, we fall back to extracting
+    method/topic terms from the QueryPlan to build search queries for title_like routes.
+    """
+    titles: list[str] = []
+    methods = plan.methods or []
+    # Fix: QueryPlan doesn't have 'topics' — use research_topic / entities instead
+    research_topic = plan.research_topic or ""
+    entities = plan.entities or []
+    if methods:
+        # Combine top method with research topic if available
+        primary = methods[0] if methods else ""
+        if research_topic:
+            titles.append(f"{primary}: {research_topic}")
+        elif entities:
+            titles.append(f"{primary} {entities[0]}")
+        else:
+            titles.append(primary)
+    # Include entities as standalone search
+    if entities:
+        titles.extend(entities[:2])
+    # Add research_topic as standalone search
+    if research_topic:
+        titles.append(research_topic)
+    # Add subtitle hint if available (but note: QueryPlan doesn't have subtitle_hint, use task instead)
+    if plan.task:
+        titles.append(plan.task)
+    return [t for t in titles if isinstance(t, str) and len(t.split()) >= 3][:10]  # type: ignore[arg-type]  # noqa: E501
 
 
 def _llm_term_mapping_queries(plan: QueryPlan, llm_client: object | None) -> list[SearchQuery]:

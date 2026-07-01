@@ -1,0 +1,558 @@
+{
+  "summary": {
+    "mode": "live",
+    "n_cases": 5,
+    "avg_f1_final": 0.0,
+    "avg_precision_final": 0.0,
+    "avg_recall_final": 0.0,
+    "avg_candidate_recall_50": 0.2,
+    "avg_candidate_recall_100": 0.2,
+    "avg_candidate_recall_300": 0.4,
+    "avg_candidate_recall_500": 0.4,
+    "avg_selector_recall": 0.2,
+    "avg_final_transfer_rate": 0.0,
+    "avg_wall_time": 216.8543,
+    "queries_over_time_budget": 5,
+    "queries_with_errors": 0,
+    "total_llm_calls": 22,
+    "total_api_calls": 470,
+    "total_token_estimate": 33820,
+    "total_cache_hits": 1
+  },
+  "topk_sweep_summary": {
+    "topk_case_count": 5,
+    "avg_f1_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0
+    },
+    "avg_precision_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0
+    },
+    "avg_recall_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0
+    },
+    "avg_oracle_f1": 0.0,
+    "avg_dynamic_k_f1": 0.0,
+    "avg_oracle_best_k": 0.0,
+    "avg_dynamic_k_chosen": 4.2,
+    "avg_output_k": 4.2
+  },
+  "k_predictor_classification": {
+    "categories": {
+      "good_match": 0,
+      "under_output": 0,
+      "over_output": 0,
+      "ranking_failure": 5,
+      "probability_calibration_failure": 0,
+      "g_hat_underestimate_failure": 0
+    },
+    "per_case": [
+      {
+        "case": "Case #118",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 3,
+        "gap": 0.0,
+        "g_hat": 52.65,
+        "gold_count": 11,
+        "lc_uniform": false,
+        "mean_prob": 0.15,
+        "std_prob": 0.0
+      },
+      {
+        "case": "Case #158",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 3,
+        "gap": 0.0,
+        "g_hat": 68.1,
+        "gold_count": 1,
+        "lc_uniform": false,
+        "mean_prob": 0.15,
+        "std_prob": 0.0
+      },
+      {
+        "case": "Case #169",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 3,
+        "gap": 0.0,
+        "g_hat": 33.3,
+        "gold_count": 1,
+        "lc_uniform": false,
+        "mean_prob": 0.15,
+        "std_prob": 0.0
+      },
+      {
+        "case": "Case #241",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 4,
+        "gap": 0.0,
+        "g_hat": 75.2,
+        "gold_count": 1,
+        "lc_uniform": false,
+        "mean_prob": 1.0,
+        "std_prob": 0.0
+      },
+      {
+        "case": "Case #679",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 8,
+        "gap": 0.0,
+        "g_hat": 16.35,
+        "gold_count": 2,
+        "lc_uniform": false,
+        "mean_prob": 0.15,
+        "std_prob": 0.0
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_index": 118,
+      "name": "AutoScholarQuery_test_117",
+      "query": "What are some works in vision that stress the importance of data selection in supervised or semi-supervised setting?",
+      "success": true,
+      "elapsed_seconds": 237.1148,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.0,
+      "candidate_recall_100": 0.0,
+      "candidate_recall_300": 0.0,
+      "candidate_recall_500": 0.0,
+      "selector_recall": 0.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 4,
+      "api_calls": 120,
+      "dynamic_k_chosen": 3,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=24.999991599997884)"
+      ]
+    },
+    {
+      "case_index": 158,
+      "name": "AutoScholarQuery_test_157",
+      "query": "What work proposes the intrinsic local dimension estimation scheme for the latent manifold through the robust rank estimate?",
+      "success": true,
+      "elapsed_seconds": 205.411,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 1.0,
+      "candidate_recall_100": 1.0,
+      "candidate_recall_300": 1.0,
+      "candidate_recall_500": 1.0,
+      "selector_recall": 1.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 5,
+      "api_calls": 86,
+      "dynamic_k_chosen": 3,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=23.06631600000037)"
+      ]
+    },
+    {
+      "case_index": 169,
+      "name": "AutoScholarQuery_test_168",
+      "query": "Could you mention a study that generates diverse reasoning paths using CoT?",
+      "success": true,
+      "elapsed_seconds": 208.3351,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.0,
+      "candidate_recall_100": 0.0,
+      "candidate_recall_300": 1.0,
+      "candidate_recall_500": 1.0,
+      "selector_recall": 0.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 5,
+      "api_calls": 65,
+      "dynamic_k_chosen": 3,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=24.999997499999154)",
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=26.14103790000081)"
+      ]
+    },
+    {
+      "case_index": 241,
+      "name": "AutoScholarQuery_test_240",
+      "query": "Could you provide me some critiques on benchmarks in NLP about annotation artifacts?",
+      "success": true,
+      "elapsed_seconds": 252.7454,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.0,
+      "candidate_recall_100": 0.0,
+      "candidate_recall_300": 0.0,
+      "candidate_recall_500": 0.0,
+      "selector_recall": 0.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 4,
+      "api_calls": 115,
+      "dynamic_k_chosen": 4,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=24.999997399998392)",
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=24.999997399998392)"
+      ]
+    },
+    {
+      "case_index": 679,
+      "name": "AutoScholarQuery_test_678",
+      "query": "Which papers propose heuristic-based uncertainty metrics for generative Large Language Models (LLMs) considering machine translation?",
+      "success": true,
+      "elapsed_seconds": 180.665,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.0,
+      "candidate_recall_100": 0.0,
+      "candidate_recall_300": 0.0,
+      "candidate_recall_500": 0.0,
+      "selector_recall": 0.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 4,
+      "api_calls": 84,
+      "dynamic_k_chosen": 8,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: HTTPSConnectionPool(host='api.tokenhub.market', port=443): Read timed out. (read timeout=24.999996099999407)",
+        "semantic_scholar skipped remaining queries due to provider_time_budget (20.0s)"
+      ]
+    }
+  ],
+  "llm_stats": {
+    "deepseek-v4-flash": {
+      "calls": 22,
+      "tokens": 66048,
+      "elapsed": 601.5989622999841
+    }
+  },
+  "retrieval_stats": {
+    "semantic_scholar": {
+      "elapsed": 151.0250465000281,
+      "calls": 64,
+      "items": 0
+    },
+    "pubmed": {
+      "elapsed": 2.304256699997495,
+      "calls": 1,
+      "items": 0
+    },
+    "openalex": {
+      "elapsed": 533.94224819999,
+      "calls": 405,
+      "items": 0
+    }
+  },
+  "component_stats": {
+    "query_understanding": {
+      "elapsed": 416.9733301999913,
+      "calls": 17,
+      "tokens": 52601
+    },
+    "evidence_selector": {
+      "elapsed": 82.37527469999623,
+      "calls": 3,
+      "tokens": 13447
+    },
+    "retrieval.semantic_scholar.core_topic": {
+      "elapsed": 28.01846019999357,
+      "calls": 5,
+      "tokens": 0
+    },
+    "retrieval.pubmed.method_task": {
+      "elapsed": 2.304129299998749,
+      "calls": 1,
+      "tokens": 0
+    },
+    "retrieval.pubmed.dataset": {
+      "elapsed": 0.00012739999874611385,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.method_task": {
+      "elapsed": 4.330436600001121,
+      "calls": 1,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.broad_synonym": {
+      "elapsed": 1.117349700001796,
+      "calls": 1,
+      "tokens": 0
+    },
+    "retrieval.openalex.core_topic": {
+      "elapsed": 26.477065200000652,
+      "calls": 5,
+      "tokens": 0
+    },
+    "retrieval.openalex.method_task": {
+      "elapsed": 23.936308299998927,
+      "calls": 4,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.title_like": {
+      "elapsed": 23.276415900003485,
+      "calls": 6,
+      "tokens": 0
+    },
+    "retrieval.openalex.broad_synonym": {
+      "elapsed": 7.320754600001237,
+      "calls": 1,
+      "tokens": 0
+    },
+    "retrieval.openalex.entity_dataset": {
+      "elapsed": 13.380634299999656,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.openalex.title_like": {
+      "elapsed": 56.97631609999735,
+      "calls": 8,
+      "tokens": 0
+    },
+    "retrieval.openalex.reference_expansion": {
+      "elapsed": 186.06323709999924,
+      "calls": 180,
+      "tokens": 0
+    },
+    "retrieval.openalex.citation_expansion": {
+      "elapsed": 0.0001326000055996701,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.related_work_expansion": {
+      "elapsed": 204.72920799999338,
+      "calls": 200,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.reference_expansion": {
+      "elapsed": 46.45149230001334,
+      "calls": 25,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.citation_expansion": {
+      "elapsed": 45.74058300001343,
+      "calls": 25,
+      "tokens": 0
+    },
+    "retrieval.openalex.title_exact": {
+      "elapsed": 15.05859199999395,
+      "calls": 5,
+      "tokens": 0
+    },
+    "search_planning": {
+      "elapsed": 102.25035739999657,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.entity_dataset": {
+      "elapsed": 2.0903088000013668,
+      "calls": 1,
+      "tokens": 0
+    }
+  }
+}

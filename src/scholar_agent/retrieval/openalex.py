@@ -312,9 +312,16 @@ class OpenAlexProvider(PaperProvider):
 
     def _expand_works(self, work_ids: list[str], route: str, limit: int) -> list[Paper]:
         papers: list[Paper] = []
+        # Bug fix: cache 404/empty responses per-work_id to avoid re-fetching dead IDs.
+        # Without this, the same dead reference IDs were each retried every case,
+        # wasting ~10s per retry and burning the provider_time_budget.
+        _404_cache: set[str] = set()
         for work_id in work_ids[:limit]:
             normalized_url = _normalize_openalex_work_url(work_id)
             if not normalized_url:
+                continue
+            # Skip if we've recently seen this as 404/dead
+            if normalized_url in _404_cache:
                 continue
             last_exc = None
             item = None
@@ -333,6 +340,10 @@ class OpenAlexProvider(PaperProvider):
                     last_exc = exc
                     exc_msg = str(exc).lower()
                     is_transient = "429" in exc_msg or "too many requests" in exc_msg or "rate limit" in exc_msg or "timeout" in exc_msg or "timed out" in exc_msg
+                    # 404 is permanent (dead ID) — cache it, don't keep retrying.
+                    if "404" in exc_msg:
+                        _404_cache.add(normalized_url)
+                        break
                     if is_transient and attempt < max_tries - 1:
                         LOGGER.warning("OpenAlex work expansion failed on credential attempt %d/%d, retrying with next key: %s", attempt + 1, max_tries, exc)
                         time.sleep(0.5)
@@ -340,6 +351,7 @@ class OpenAlexProvider(PaperProvider):
                     else:
                         self.last_error = str(exc)
                         LOGGER.warning("OpenAlex work expansion failed for id=%s: %s", work_id, exc)
+                        _404_cache.add(normalized_url)
                         break
 
             if item is None:
