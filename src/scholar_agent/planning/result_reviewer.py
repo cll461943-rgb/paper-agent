@@ -48,47 +48,8 @@ def review_retrieval_results(
     if llm_client is None or round_index >= 3:
         return fallback
 
-    def top_by_route(papers_list: list[Paper], route: str, k: int) -> list[Paper]:
-        selected = []
-        for p in papers_list:
-            paths = p.retrieval_path or []
-            if any(path == f"route:{route}" for path in paths):
-                selected.append(p)
-                if len(selected) >= k:
-                    break
-        return selected
-
-    def top_by_provider(papers_list: list[Paper], provider: str, k: int) -> list[Paper]:
-        selected = []
-        for p in papers_list:
-            paths = p.retrieval_path or []
-            if any(path == f"provider:{provider}" for path in paths):
-                selected.append(p)
-                if len(selected) >= k:
-                    break
-        return selected
-
-    def local_deduplicate(papers_list: list[Paper]) -> list[Paper]:
-        seen = set()
-        res = []
-        for p in papers_list:
-            if p.paper_id not in seen:
-                seen.add(p.paper_id)
-                res.append(p)
-        return res
-
-    review_candidates = []
-    review_candidates.extend(papers[:10])                         # 粗排头部
-    
-    for route in ["core_topic", "method_task", "dataset", "translated", "broad_synonym", "query2doc", "hyde", "citation_seed"]:
-        review_candidates.extend(top_by_route(papers, route, 2))
-        
-    for provider in ["pasa_local", "openalex", "semantic_scholar", "pubmed", "arxiv"]:
-        review_candidates.extend(top_by_provider(papers, provider, 2))
-        
-    review_candidates.extend(papers[50:100:10])                    # 长尾抽样
-    sample_papers = local_deduplicate(review_candidates)[:40]
-
+    # 仅向大模型呈现 Top 20 篇候选论文进行审阅，以降低 Token 消耗并控制预算
+    sample_papers = papers[:20]
     papers_payload = [
         {
             "paper_id": p.paper_id,
@@ -139,8 +100,7 @@ def review_retrieval_results(
     )
 
     # 审阅工作需要相对深度的理解，使用 pro 级模型
-    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     if response is None:
         return fallback
     try:

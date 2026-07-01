@@ -295,29 +295,39 @@ bd dolt push          # Push beads data to remote
 
 ## Chat History Management
 
-本系统自动保存会话快照到 `.claude/chat-history/`。
+Claude Code 会自动保存历史到 `~/.claude/history.jsonl`。
 
-### 触发历史记录查看
-
-输入以下任一触发词查看历史：
-- `/history`
-- `历史记录`
-- `查看历史`
-
-### 自动保存时机
-
-- 完成重大操作后
-- 会话自然结束前  
-- 用户明确要求时
-
-### 手动管理历史
+### 查看历史会话
 
 ```bash
-# 查看历史索引
-ls -la .claude/chat-history/
+# 列出最近20个会话
+python .claude/history_viewer.py list
 
-# 读取特定会话
-cat .claude/chat-history/session_YYYYMMDD_HHMMSS.json
+# 列出最近50个会话
+python .claude/history_viewer.py list 50
+
+# 查看特定会话详情
+python .claude/history_viewer.py show <session_id>
+
+# 按项目过滤
+python .claude/history_viewer.py project paper-agent
+```
+
+### 历史记录说明
+
+- **Claude Code CLI 不支持 `/history` 斜杠命令** - 这是 IDE/桌面应用的功能
+- 历史记录存储在 `~/.claude/history.jsonl`（全局，跨项目）
+- 每次会话由 `sessionId` 唯一标识
+- 包含您输入的所有消息和命令
+
+### 手动管理会话文件
+
+```bash
+# 查看历史文件位置
+ls -la ~/.claude/history.jsonl
+
+# 查看最后10条历史
+tail -10 ~/.claude/history.jsonl | python -m json.tool
 ```
 
 ---

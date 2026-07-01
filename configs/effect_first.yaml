@@ -5,6 +5,7 @@ app:
   providers:
     - openalex
     - semantic_scholar
+    - faiss_vector
   cache_dir: data/cache
   parallel_retrieval: true
 
@@ -18,8 +19,8 @@ llm:
   model_pro: deepseek-v4-pro
   # Effect-first: use Pro as default model for LLM-led stages
   model: deepseek-v4-pro
-  # Increased from 15s: 47% of cases had LLM timeouts causing heuristic fallback
-  timeout_seconds: 45
+  # Increased for reasoning models (kimi-k2.7-code etc.) with <think> tags
+  timeout_seconds: 60
   max_tokens: 8192
   temperature: 0.0
   trust_env: false
@@ -29,11 +30,13 @@ llm:
   max_tokens_evidence_selection: 8192
   max_tokens_listwise_rerank: 8192
   max_tokens_synthesis: 8192
-  # Per-stage timeouts
-  timeout_evidence_selection: 60
-  timeout_listwise_rerank: 90
-  # Effect-first: more tolerance for reasoning model timeouts (default 2 too aggressive)
-  circuit_breaker_max_timeouts: 5
+  # Per-stage timeouts (aggressive: 45s each — fail fast on reasoning model)
+  timeout_evidence_selection: 45
+  timeout_listwise_rerank: 45
+  # 闭环架构：LLM pool review 超时（分批审阅候选池）
+  timeout_pool_review: 45
+  # Effect-first: reasoning models need more tolerance
+  circuit_breaker_max_timeouts: 3
 
 providers:
   pasa_local:
@@ -68,9 +71,9 @@ providers:
     base_url: https://api.semanticscholar.org/graph/v1/paper/search
     timeout_seconds: 8
     retry_times: 1
-    min_interval_seconds: 2.0
+    min_interval_seconds: 1.0
     max_concurrency: 1
-    backoff_base_seconds: 1.5
+    backoff_base_seconds: 1.0
     api_key_env: SEMANTIC_SCHOLAR_API_KEY
   pubmed:
     enabled: false
@@ -82,13 +85,14 @@ providers:
     backoff_base_seconds: 1.0
 
 budget:
-  max_search_queries: 14
+  max_search_queries: 20
+  # 闭环迭代需要更多轮次（LLM 审阅→重新理解→补充检索）
   max_retrieval_rounds: 2
-  max_results_per_query: 40
-  max_candidate_pool_size: 800
-  max_seed_papers: 5
+  max_results_per_query: 30
+  max_candidate_pool_size: 500
+  max_seed_papers: 3
   max_refchain_depth: 1
-  max_llm_selection_papers: 80
+  max_llm_selection_papers: 60
   max_final_papers: 12
   max_evidence_summary_papers: 5
   max_llm_calls: 40
@@ -97,28 +101,37 @@ budget:
   retry_times: 1
   known_title_seed_only: false
   enable_query_expansion: true
-  # Effect-first: longer case deadline for LLM-led stages (default 180s)
-  # Increased from 240s to 360s to accommodate 45s LLM timeout
-  case_deadline_seconds: 360
+  # Deadline: 420s — listwise reranker needs ~21s after evidence selection finishes
+  case_deadline_seconds: 420
 
 ranking:
   max_final_papers: 12
-  pre_rank_topk: 200
+  pre_rank_topk: 120
+  # Effect-first: LLM listwise is the PRIMARY signal (0.50 weight)
+  # If listwise unavailable, falls back to LLM_Relevance (evidence selector) at 0.40
   weights:
-    llm_listwise_score: 0.55
-    llm_evidence_score: 0.20
-    constraint_coverage: 0.10
-    source_agreement: 0.07
-    title_similarity: 0.05
-    recency_authority: 0.03
-  # Effect-first: LLM listwise reranker params
-  listwise_topk: 40
-  listwise_fallback_topk: 20
-  listwise_score_weight: 0.55
-  llm_evidence_weight: 0.20
+    llm_listwise_score: 0.50
+    llm_relevance: 0.15
+    constraint_coverage: 0.12
+    evidence_completeness: 0.08
+    source_agreement: 0.05
+    bge_reranker: 0.04
+    recency: 0.02
+    authority: 0.02
+    diversity_graph_prior: 0.02
+    title_exact_bonus: 0.10
+    title_like_bonus: 0.03
+  # Effect-first: LLM listwise reranker params (reduced for time optimization)
+  listwise_topk: 30
+  listwise_fallback_topk: 15
+  listwise_score_weight: 0.50
+  llm_evidence_weight: 0.15
 
 selection:
   batch_size: 8
+  # LLM pool review (reduced for time optimization: 80 papers max, 12 per batch)
+  pool_review_batch_size: 12
+  pool_review_max_papers: 80
 
 known_title_clues:
   enabled: true
@@ -136,4 +149,16 @@ dynamic_k:
   fallback_k: 5
   k_max: 20
   hard_max_output: 12
+
+# Semantic bridge: re-enabled (was disabled, caused Pool Recall 0/3).
+# BGE-M3 vector reranking is essential for surfacing gold papers that
+# API keyword search misses due to vocabulary mismatch.
+# HyDE LLM call is disabled in pipeline.py to save 20-30s per case.
+enable_semantic_bridge: true
+embedding_model_name: "C:/Users/33316/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181"
+embedding_device: cuda
+embedding_cache_dir: data/cache/embeddings
+rrf_k: 60
+rrf_keyword_weight: 1.0
+rrf_vector_weight: 1.5
 

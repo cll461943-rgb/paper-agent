@@ -92,11 +92,9 @@ def expand_with_refchain(seed_papers: list[Paper], providers: list[PaperProvider
     for provider in providers:
         operations = refchain_operations(provider)
         for seed_index, paper in enumerate(seed_papers, start=1):
-            remaining = limit_per_seed
+            # Each route gets its own independent budget
             for route, source, operation in operations:
-                if remaining <= 0:
-                    break
-                papers = operation(paper, limit=remaining)[:remaining]
+                papers = operation(paper, limit=limit_per_seed)[:limit_per_seed]
                 expanded.extend(
                     annotate_refchain_candidate(
                         candidate,
@@ -109,5 +107,4 @@ def expand_with_refchain(seed_papers: list[Paper], providers: list[PaperProvider
                     )
                     for candidate in papers
                 )
-                remaining -= len(papers)
     return expanded

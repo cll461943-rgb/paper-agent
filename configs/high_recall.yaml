@@ -1,0 +1,137 @@
+# High-Recall 配置 �?适用�?CNScholarQuery real50 等大 gold 数据�?# 基于 effect_first，提�?k_max �?hard_max_output 以避�?top-K 截断丢失 gold
+# 用法: python evaluate.py -f data/开�?测试�?CNScholarQuery_ZH_real50_polished.jsonl --config configs/high_recall.yaml
+
+app:
+  name: scholar-agent
+  mode: mock
+  output_format: json
+  providers:
+    - pasa_local
+    - openalex
+    - semantic_scholar
+  cache_dir: data/cache
+  parallel_retrieval: true
+
+llm:
+  enabled: true
+  mode: auto
+  api_key_env: DEEPSEEK_API_KEY
+  base_url_env: DEEPSEEK_BASE_URL
+  base_url: https://api.deepseek.com
+  model_flash: deepseek-v4-flash
+  model_pro: deepseek-v4-pro
+  model: deepseek-v4-pro
+  timeout_seconds: 15
+  max_tokens: 8192
+  temperature: 0.2
+  trust_env: false
+  max_retries: 1
+  max_tokens_query_understanding: 4096
+  max_tokens_evidence_selection: 8192
+  max_tokens_listwise_rerank: 8192
+  max_tokens_synthesis: 8192
+  timeout_evidence_selection: 60
+  timeout_listwise_rerank: 90
+  circuit_breaker_max_timeouts: 5
+
+providers:
+  pasa_local:
+    enabled: true
+    enable_fts: true
+    base_url: data
+    timeout_seconds: 0
+    retry_times: 0
+    min_interval_seconds: 0.0
+    max_concurrency: 1
+    backoff_base_seconds: 0.0
+  openalex:
+    enabled: true
+    base_url: https://api.openalex.org/works
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 1.0
+    max_concurrency: 1
+    backoff_base_seconds: 2.0
+    mailto: "cll461943@gmail.com"
+    api_key_env: OPENALEX_API_KEY
+  arxiv:
+    enabled: false
+    base_url: https://export.arxiv.org/api/query
+    timeout_seconds: 5
+    retry_times: 0
+    min_interval_seconds: 2.0
+    max_concurrency: 1
+    backoff_base_seconds: 3.0
+  semantic_scholar:
+    enabled: true
+    base_url: https://api.semanticscholar.org/graph/v1/paper/search
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 2.0
+    max_concurrency: 1
+    backoff_base_seconds: 1.5
+    api_key_env: SEMANTIC_SCHOLAR_API_KEY
+  pubmed:
+    enabled: false
+    base_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 0.35
+    max_concurrency: 1
+    backoff_base_seconds: 1.0
+
+budget:
+  max_search_queries: 14
+  max_retrieval_rounds: 2
+  max_results_per_query: 40
+  max_candidate_pool_size: 800
+  max_seed_papers: 5
+  max_refchain_depth: 1
+  max_llm_selection_papers: 80
+  max_final_papers: 40
+  max_evidence_summary_papers: 5
+  max_llm_calls: 40
+  llm_timeout_seconds: 15
+  api_timeout_seconds: 8
+  retry_times: 1
+  known_title_seed_only: false
+  enable_query_expansion: true
+  case_deadline_seconds: 240
+
+ranking:
+  max_final_papers: 40
+  pre_rank_topk: 200
+  weights:
+    llm_listwise_score: 0.55
+    llm_evidence_score: 0.20
+    constraint_coverage: 0.10
+    source_agreement: 0.07
+    title_similarity: 0.05
+    recency_authority: 0.03
+  listwise_topk: 40
+  listwise_fallback_topk: 20
+  listwise_score_weight: 0.55
+  llm_evidence_weight: 0.20
+
+selection:
+  batch_size: 8
+
+known_title_clues:
+  enabled: true
+
+dynamic_k:
+  exact_title_k: 1
+  specific_query_k: 2
+  dataset_constraint_k: 8
+  method_comparison_k: 8
+  survey_k: 20
+  broad_topic_k: 20
+  score_gap_top1: 0.15
+  score_gap_top3: 0.10
+  min_final_score: 0.35
+  fallback_k: 10
+  # High-recall: raise ceilings so large-gold cases (real50 avg_gold=15.8, max=65)
+  # are not artificially capped at 12
+  k_max: 40
+  hard_max_output: 40
+

@@ -118,18 +118,50 @@ class OpenAlexProvider(PaperProvider):
             backoff_base_seconds=config.backoff_base_seconds,
         )
         import os
-        self.api_key = os.getenv(config.api_key_env) if config.api_key_env else None
+        import threading
+        self._lock = threading.Lock()
+        self.credentials: list[tuple[str | None, str | None]] = []
+        
+        # Load multiple credentials for round-robin polling to prevent crashes
+        creds_str = os.getenv("OPENALEX_CREDENTIALS")
+        if creds_str:
+            for item in creds_str.split(","):
+                item = item.strip()
+                if not item:
+                    continue
+                if ":" in item:
+                    email, key = item.split(":", 1)
+                    self.credentials.append((email.strip(), key.strip()))
+                else:
+                    self.credentials.append((item.strip(), None))
+        
+        # Fallback to config values if no credentials variable found
+        if not self.credentials:
+            api_key = os.getenv(config.api_key_env) if config.api_key_env else None
+            self.credentials.append((config.mailto, api_key))
+            
+        self._current_index = 0
         self.last_error: str | None = None
+
+    def _get_next_credentials(self) -> tuple[str | None, str | None]:
+        if not self.credentials:
+            return None, None
+        with self._lock:
+            email, key = self.credentials[self._current_index]
+            self._current_index = (self._current_index + 1) % len(self.credentials)
+            LOGGER.debug("OpenAlex round-robin selected credential: %s", email)
+            return email, key
 
     def _build_params(self, query: SearchQuery, limit: int) -> dict[str, Any]:
         params: dict[str, Any] = {
             "search": _sanitize_openalex_search(query),
             "per-page": limit,
         }
-        if self.config.mailto:
-            params["mailto"] = self.config.mailto
-        if self.api_key:
-            params["api_key"] = self.api_key
+        email, key = self._get_next_credentials()
+        if email:
+            params["mailto"] = email
+        if key:
+            params["api_key"] = key
 
         start_year = query.filters.get("start_year")
         end_year = query.filters.get("end_year")
@@ -176,11 +208,29 @@ class OpenAlexProvider(PaperProvider):
         if cached is not None:
             return [Paper.model_validate(item) for item in cached]
 
-        try:
-            payload = self.http.get_json(self.config.base_url, params=self._build_params(query, limit))
-        except Exception as exc:
-            self.last_error = str(exc)
-            LOGGER.warning("OpenAlex search failed for query=%s: %s", query.query, exc)
+        last_exc = None
+        payload = None
+        max_tries = max(1, len(self.credentials))
+        for attempt in range(max_tries):
+            try:
+                # _build_params calls self._get_next_credentials() internally
+                payload = self.http.get_json(self.config.base_url, params=self._build_params(query, limit))
+                break
+            except Exception as exc:
+                last_exc = exc
+                exc_msg = str(exc).lower()
+                is_transient = "429" in exc_msg or "too many requests" in exc_msg or "rate limit" in exc_msg or "timeout" in exc_msg or "timed out" in exc_msg
+                if is_transient and attempt < max_tries - 1:
+                    LOGGER.warning("OpenAlex search failed on credential attempt %d/%d, retrying with next key: %s", attempt + 1, max_tries, exc)
+                    time.sleep(0.5)
+                    continue
+                else:
+                    self.last_error = str(exc)
+                    LOGGER.warning("OpenAlex search failed for query=%s: %s", query.query, exc)
+                    return []
+
+        if payload is None:
+            self.last_error = str(last_exc)
             return []
 
         papers: list[Paper] = []
@@ -222,15 +272,34 @@ class OpenAlexProvider(PaperProvider):
 
         escaped_title = title.replace('"', '\\"')
         params = {"filter": f'title.search:"{escaped_title}"', "per-page": limit}
-        if self.config.mailto:
-            params["mailto"] = self.config.mailto
-        if self.api_key:
-            params["api_key"] = self.api_key
-        try:
-            payload = self.http.get_json(self.config.base_url, params=params)
-        except Exception as exc:
-            self.last_error = str(exc)
-            LOGGER.warning("OpenAlex title search failed for title=%s: %s", title, exc)
+        last_exc = None
+        payload = None
+        max_tries = max(1, len(self.credentials))
+        for attempt in range(max_tries):
+            email, key = self._get_next_credentials()
+            current_params = dict(params)
+            if email:
+                current_params["mailto"] = email
+            if key:
+                current_params["api_key"] = key
+            try:
+                payload = self.http.get_json(self.config.base_url, params=current_params)
+                break
+            except Exception as exc:
+                last_exc = exc
+                exc_msg = str(exc).lower()
+                is_transient = "429" in exc_msg or "too many requests" in exc_msg or "rate limit" in exc_msg or "timeout" in exc_msg or "timed out" in exc_msg
+                if is_transient and attempt < max_tries - 1:
+                    LOGGER.warning("OpenAlex title search failed on credential attempt %d/%d, retrying with next key: %s", attempt + 1, max_tries, exc)
+                    time.sleep(0.5)
+                    continue
+                else:
+                    self.last_error = str(exc)
+                    LOGGER.warning("OpenAlex title search failed for title=%s: %s", title, exc)
+                    return []
+
+        if payload is None:
+            self.last_error = str(last_exc)
             return []
         papers: list[Paper] = []
         for item in payload.get("results", [])[:limit]:
@@ -247,16 +316,33 @@ class OpenAlexProvider(PaperProvider):
             normalized_url = _normalize_openalex_work_url(work_id)
             if not normalized_url:
                 continue
-            params = {}
-            if self.config.mailto:
-                params["mailto"] = self.config.mailto
-            if self.api_key:
-                params["api_key"] = self.api_key
-            try:
-                item = self.http.get_json(normalized_url, params=params if params else None)
-            except Exception as exc:
-                self.last_error = str(exc)
-                LOGGER.warning("OpenAlex work expansion failed for id=%s: %s", work_id, exc)
+            last_exc = None
+            item = None
+            max_tries = max(1, len(self.credentials))
+            for attempt in range(max_tries):
+                params = {}
+                email, key = self._get_next_credentials()
+                if email:
+                    params["mailto"] = email
+                if key:
+                    params["api_key"] = key
+                try:
+                    item = self.http.get_json(normalized_url, params=params if params else None)
+                    break
+                except Exception as exc:
+                    last_exc = exc
+                    exc_msg = str(exc).lower()
+                    is_transient = "429" in exc_msg or "too many requests" in exc_msg or "rate limit" in exc_msg or "timeout" in exc_msg or "timed out" in exc_msg
+                    if is_transient and attempt < max_tries - 1:
+                        LOGGER.warning("OpenAlex work expansion failed on credential attempt %d/%d, retrying with next key: %s", attempt + 1, max_tries, exc)
+                        time.sleep(0.5)
+                        continue
+                    else:
+                        self.last_error = str(exc)
+                        LOGGER.warning("OpenAlex work expansion failed for id=%s: %s", work_id, exc)
+                        break
+
+            if item is None:
                 continue
             paper = self._paper_from_openalex_item(item)
             paper = self.enrich_paper(
@@ -282,21 +368,39 @@ class OpenAlexProvider(PaperProvider):
         if not cited_by_url:
             return []
 
-        citation_params = {
-            "per-page": limit,
-        }
-        if self.config.mailto:
-            citation_params["mailto"] = self.config.mailto
-        if self.api_key:
-            citation_params["api_key"] = self.api_key
-        try:
-            payload = self.http.get_json(
-                cited_by_url,
-                params=citation_params,
-            )
-        except Exception as exc:
-            self.last_error = str(exc)
-            LOGGER.warning("OpenAlex citation expansion failed for id=%s: %s", paper.paper_id, exc)
+        last_exc = None
+        payload = None
+        max_tries = max(1, len(self.credentials))
+        for attempt in range(max_tries):
+            citation_params = {
+                "per-page": limit,
+            }
+            email, key = self._get_next_credentials()
+            if email:
+                citation_params["mailto"] = email
+            if key:
+                citation_params["api_key"] = key
+            try:
+                payload = self.http.get_json(
+                    cited_by_url,
+                    params=citation_params,
+                )
+                break
+            except Exception as exc:
+                last_exc = exc
+                exc_msg = str(exc).lower()
+                is_transient = "429" in exc_msg or "too many requests" in exc_msg or "rate limit" in exc_msg or "timeout" in exc_msg or "timed out" in exc_msg
+                if is_transient and attempt < max_tries - 1:
+                    LOGGER.warning("OpenAlex citation expansion failed on credential attempt %d/%d, retrying with next key: %s", attempt + 1, max_tries, exc)
+                    time.sleep(0.5)
+                    continue
+                else:
+                    self.last_error = str(exc)
+                    LOGGER.warning("OpenAlex citation expansion failed for id=%s: %s", paper.paper_id, exc)
+                    return []
+
+        if payload is None:
+            self.last_error = str(last_exc)
             return []
 
         papers: list[Paper] = []

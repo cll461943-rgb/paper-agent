@@ -294,18 +294,11 @@ class StatsLLMClient:
             model_name = "mock-pro" if model_type == "pro" else "mock-flash"
         else:
             import os
-            _is_deepseek_config = self.base_client.config.api_key_env in ("DEEPSEEK_API_KEY", "OPENAI_API_KEY", "")
-            if _is_deepseek_config:
-                model_name = (
-                    os.getenv("DEEPSEEK_MODEL_PRO", self.base_client.config.model_pro)
-                    if model_type == "pro"
-                    else os.getenv("DEEPSEEK_MODEL_FLASH", self.base_client.config.model_flash)
-                )
-            else:
-                model_name = (
-                    self.base_client.config.model_pro if model_type == "pro"
-                    else self.base_client.config.model_flash
-                )
+            model_name = (
+                os.getenv("DEEPSEEK_MODEL_PRO", self.base_client.config.model_pro)
+                if model_type == "pro"
+                else os.getenv("DEEPSEEK_MODEL_FLASH", self.base_client.config.model_flash)
+            )
 
         started_at = time.perf_counter()
         
@@ -710,8 +703,6 @@ def run_evaluation(
             queries_with_errors += 1
             err_list = [str(exc)]
             total_errors_logged += 1
-            import traceback
-            traceback.print_exc()
             print(f"  ❌ Case failed with exception: {exc}")
 
         elapsed = time.perf_counter() - start_time

@@ -1,0 +1,101 @@
+app:
+  name: scholar-agent
+  mode: live
+  output_format: json
+  providers:
+    - pasa_local
+    - openalex
+    - arxiv
+    - pubmed
+  cache_dir: data/cache
+  parallel_retrieval: false
+
+llm:
+  enabled: true
+  mode: auto
+  api_key_env: DEEPSEEK_API_KEY
+  base_url_env: DEEPSEEK_BASE_URL
+  base_url: https://api.deepseek.com
+  model_flash: deepseek-v4-flash
+  model_pro: deepseek-v4-pro
+  model: deepseek-v4-flash
+  timeout_seconds: 90
+  max_tokens: 2048
+  temperature: 0.2
+
+providers:
+  pasa_local:
+    enabled: true
+    base_url: data
+    timeout_seconds: 0
+    retry_times: 0
+    min_interval_seconds: 0.0
+    max_concurrency: 1
+    backoff_base_seconds: 0.0
+  openalex:
+    enabled: true
+    base_url: https://api.openalex.org/works
+    timeout_seconds: 20
+    retry_times: 2
+    min_interval_seconds: 0.35
+    max_concurrency: 1
+    backoff_base_seconds: 1.0
+    mailto: "cll461943@gmail.com"
+    api_key_env: OPENALEX_API_KEY
+  arxiv:
+    enabled: true
+    base_url: https://export.arxiv.org/api/query
+    timeout_seconds: 20
+    retry_times: 2
+    min_interval_seconds: 3.5
+    max_concurrency: 1
+    backoff_base_seconds: 3.0
+  semantic_scholar:
+    enabled: false
+    base_url: https://api.semanticscholar.org/graph/v1/paper/search
+    timeout_seconds: 20
+    retry_times: 2
+    min_interval_seconds: 1.0
+    max_concurrency: 1
+    backoff_base_seconds: 1.5
+    api_key_env: SEMANTIC_SCHOLAR_API_KEY
+  pubmed:
+    enabled: true
+    base_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
+    timeout_seconds: 20
+    retry_times: 2
+    min_interval_seconds: 0.35
+    max_concurrency: 1
+    backoff_base_seconds: 1.0
+
+budget:
+  max_search_queries: 20
+  max_retrieval_rounds: 3
+  max_results_per_query: 40
+  max_candidate_pool_size: 600
+  max_seed_papers: 10
+  max_refchain_depth: 1
+  max_llm_selection_papers: 10
+  max_final_papers: 20
+  max_evidence_summary_papers: 10
+  max_llm_calls: 30
+  llm_timeout_seconds: 90
+  api_timeout_seconds: 20
+  retry_times: 2
+  known_title_seed_only: false
+  enable_query_expansion: true
+
+ranking:
+  weights:
+    llm_relevance_score: 0.25
+    bge_reranker_score: 0.20
+    constraint_coverage_score: 0.20
+    evidence_completeness_score: 0.15
+    source_agreement_score: 0.10
+    recency_score: 0.05
+    authority_score: 0.03
+    diversity_graph_prior_score: 0.02
+
+known_title_clues:
+  enabled: false
+

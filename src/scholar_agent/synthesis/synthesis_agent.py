@@ -97,36 +97,123 @@ class SynthesisAgent:
         search_rounds: list[SearchProcessRound],
         ranked_papers: list[RankedPaper],
         metrics: RunMetrics,
-        config: Any | None = None
+        config: Any | None = None,
+        listwise_result: Any | None = None,
     ) -> WorkflowResult:
-        """结构化归纳合成 Agent。将多轮检索重排结果归并、分类、产生时间线与引文图并输出最终报告。"""
-        # 1. 筛选与分类
-        highly_relevant: list[RankedPaper] = []
-        partially_relevant: list[RankedPaper] = []
+        """结构化归纳合成 Agent。将多轮检索重排结果归并、分类、产生时间线与引文图并输出最终报告。
 
-        # 筛选出高相关/中等相关的候选论文（包含校准保底和满足分数门槛的论文）
-        candidates: list[RankedPaper] = []
-        for rp in ranked_papers:
-            is_exact_calibrated = any("title_exact" in note for note in rp.selection.validation_notes)
-            is_like_calibrated = any("title_like" in note for note in rp.selection.validation_notes)
-            
-            if rp.selection.relevance_level == "high" or is_exact_calibrated:
-                candidates.append(rp)
-            elif (rp.selection.relevance_level == "medium" and rp.final_score >= 0.50) or is_like_calibrated:
-                candidates.append(rp)
+        Task 4: Uses F1-aware K controller to choose optimal output count.
+        Weak/background papers go to supporting_papers, NOT into eval list.
+        """
+        # 1. 使用 selection_cutoff.py 进行概率最优双截断分层
+        from scholar_agent.selection.selection_cutoff import (
+            partition_ranked_papers,
+            find_score_gap_k,
+            find_percentile_drop_k,
+            logistic_calibration,
+        )
 
-        # 按照 final_score 从高到低排序，截断以防 Precision 被稀释
-        candidates.sort(key=lambda x: x.final_score, reverse=True)
-        from scholar_agent.ranking.dynamic_k import decide_dynamic_k
-        dynamic_k = decide_dynamic_k(query_plan, candidates, config)
-        top_candidates = candidates[:dynamic_k]
+        # 读取 config 配置参数
+        _dk_cfg = getattr(config, "dynamic_k", None) if config else None
+        _recall_beta = float(getattr(_dk_cfg, "recall_beta", 1.5)) if _dk_cfg else 1.5
+        _max_output = int(getattr(_dk_cfg, "hard_max_output", 12)) if _dk_cfg else 12
+        _min_high = int(getattr(_dk_cfg, "min_high", 1)) if _dk_cfg else 1
 
-        for rp in top_candidates:
-            is_exact_calibrated = any("title_exact" in note for note in rp.selection.validation_notes)
-            if rp.selection.relevance_level == "high" or is_exact_calibrated:
-                highly_relevant.append(rp)
-            else:
-                partially_relevant.append(rp)
+        # ── Score-gap 检测：利用得分断崖定位自然分界点 ──
+        # 在 F_beta 截断之前，先检查 top-N 论文中是否存在显著的得分断崖。
+        # 断崖存在 → 用断崖位置作为 max_output（自然分界比数学截断更准确）
+        # 断崖不存在 → 回退到 F_beta + logistic 校准
+        _scores = [float(rp.final_score) for rp in ranked_papers] if ranked_papers else []
+        _gap_k = find_score_gap_k(
+            _scores,
+            gap_threshold=0.08,
+            relative_threshold=0.10,
+            max_k=_max_output,
+            min_k=2,
+        )
+        if _gap_k is not None:
+            _effective_max = min(_gap_k, _max_output)
+            LOGGER.info(
+                "Score-gap K selection: gap at position %d → effective max_output=%d "
+                "(config max=%d)",
+                _gap_k, _effective_max, _max_output,
+            )
+        else:
+            # Score-gap 未触发（平滑分布）→ 用相对衰减截断选择 K
+            _drop_ratio = float(getattr(_dk_cfg, "drop_ratio", 0.15)) if _dk_cfg else 0.15
+            _pct_k = find_percentile_drop_k(
+                _scores,
+                drop_ratio=_drop_ratio,
+                max_k=_max_output,
+                min_k=_min_high,
+            )
+            _effective_max = _pct_k
+            LOGGER.info(
+                "Score-gap: no gap found → percentile-drop K=%d "
+                "(drop_ratio=%.0f%%, config max=%d)",
+                _pct_k, _drop_ratio * 100, _max_output,
+            )
+
+        # ── Expected-Fβ 双截断 ──
+        # P0-5/P0-6: 区分 rank_score (final_score, 用于排序) 和 relevance_probability
+        # (用于 Expected-Fβ 截断)。如果 listwise reranker 输出了 relevance_probability，
+        # 直接使用它作为 p_i（listwise reranker 已校准）；否则回退到 logistic 校准的 final_score。
+        def _get_relevance_prob(rp) -> float:
+            """Extract relevance_probability from subscores/metadata, fall back to final_score."""
+            # Try subscores first (set by compute_paper_score)
+            sub = getattr(rp, "subscores", None)
+            if isinstance(sub, dict) and "relevance_probability" in sub:
+                p = float(sub["relevance_probability"])
+                if p > 0:
+                    return p
+            # Try paper.metadata (set by rerank_papers)
+            paper = getattr(rp, "paper", None)
+            if paper is not None and paper.metadata:
+                p = paper.metadata.get("relevance_probability")
+                if p is not None:
+                    try:
+                        p = float(p)
+                        if p > 0:
+                            return p
+                    except (ValueError, TypeError):
+                        pass
+            # Fall back to final_score
+            return float(getattr(rp, "final_score", 0.0))
+
+        # Check if any paper has relevance_probability > 0
+        _has_rel_prob = any(_get_relevance_prob(rp) > 0 for rp in ranked_papers) if ranked_papers else False
+
+        if _has_rel_prob:
+            # Use relevance_probability directly (already calibrated by listwise reranker)
+            _cal = None  # identity calibration — probabilities are already calibrated
+            _score_getter = _get_relevance_prob
+            LOGGER.info("Using LLM relevance_probability for Expected-Fβ cutoff (listwise-calibrated)")
+        else:
+            # Fallback: logistic calibration of final_score
+            _cal = logistic_calibration(midpoint=0.5, temperature=0.12)
+            _score_getter = None  # use default (final_score)
+            LOGGER.info("Falling back to logistic-calibrated final_score for Expected-Fβ cutoff")
+
+        partition = partition_ranked_papers(
+            ranked_papers,
+            recall_beta=_recall_beta,
+            calibration=_cal,
+            score_getter=_score_getter,
+            set_should_output=True,
+            min_high=_min_high,
+            max_output=_effective_max,
+        )
+
+        highly_relevant = partition.high
+        partially_relevant = partition.partial
+        supporting_papers = partition.excluded
+
+        dynamic_k = len(highly_relevant) + len(partially_relevant)
+        
+        # 统计曲线与置信度元数据以兼容 evaluate.py
+        _expected_f1_curve = {k: f for k, f in enumerate(partition.core.f_curve, start=1)} if hasattr(partition.core, "f_curve") else None
+        _g_hat = partition.core.r_hat if hasattr(partition.core, "r_hat") else None
+        _p_floor = partition.core.threshold if hasattr(partition.core, "threshold") else None
 
         recommended_ids = {rp.paper.paper_id for rp in (highly_relevant + partially_relevant)}
         recommended_papers = [rp.paper for rp in (highly_relevant + partially_relevant)]
@@ -171,15 +258,28 @@ class SynthesisAgent:
 
         citation_graph = {"nodes": nodes, "links": links}
 
-        # 3. 产生推荐说明 (recommendation_reasoning)
+        # 3. 产生推荐说明 (recommendation_reasoning) — P2: per-paper reason + evidence
         recommendation_reasoning: list[dict[str, Any]] = []
         for rp in (highly_relevant + partially_relevant):
+            evidence_score = rp.subscores.get("Evidence_Completeness", -1.0)
+            constraint_cov = rp.subscores.get("Constraint_Coverage", -1.0)
+            penalty_mult = rp.subscores.get("Penalty_Multiplier", 1.0)
             recommendation_reasoning.append({
                 "paper_id": rp.paper.paper_id,
                 "title": rp.paper.title,
                 "relevance": rp.selection.relevance_level,
+                "final_score": round(rp.final_score or 0.0, 4),
                 "strength": rp.selection.reason,
-                "critique": f"Constraint coverage: {rp.subscores.get('Constraint_Coverage', 1.0):.2%}. Year: {rp.paper.year or 'N/A'}."
+                "evidence_score": round(evidence_score, 3) if evidence_score >= 0 else None,
+                "constraint_coverage": round(constraint_cov, 3) if constraint_cov >= 0 else None,
+                "penalty_multiplier": round(penalty_mult, 3),
+                "validation_notes": rp.selection.validation_notes[:3] if rp.selection.validation_notes else [],
+                "critique": (
+                    f"Score={rp.final_score:.3f} (penalty x{penalty_mult:.2f}). "
+                    f"Constraint coverage: {constraint_cov:.2%}. "
+                    f"Evidence: {evidence_score:.2%}. "
+                    f"Year: {rp.paper.year or 'N/A'}."
+                )
             })
 
         # 4. 获取大模型辅助的方法分类聚类、学术脉络时间线和自我反思报告
@@ -198,7 +298,11 @@ class SynthesisAgent:
                 "Your task is to analyze a set of recommended papers, group them into logical 'method_clusters' (categories based on technical methodologies), "
                 "build an chronological 'timeline' of key milestones, and generate an 'agent_self_report' reflecting on the search strategy effectiveness, gaps identified, and refinement history. "
                 "Return a JSON object containing fields: 'method_clusters', 'timeline', and 'agent_self_report'. "
-                "Return JSON only."
+                "Return JSON only.\n\n"
+                "CRITICAL CONSTRAINT: You must NOT add, delete, or rerank any papers. "
+                "The paper set is final and frozen. You can only organize papers into clusters and describe them. "
+                "Do not suggest removing or adding papers. Do not change the order of papers. "
+                "Your method_clusters paper_ids must reference ONLY papers from the provided list."
             )
 
             papers_payload = [
@@ -239,7 +343,17 @@ class SynthesisAgent:
                 )
                 if isinstance(response, dict):
                     if "method_clusters" in response:
-                        method_clusters = response["method_clusters"]
+                        # Guard: filter out any paper_ids not in the recommended set
+                        _valid_ids = recommended_ids
+                        _mc = response["method_clusters"]
+                        if isinstance(_mc, list):
+                            for cluster in _mc:
+                                if isinstance(cluster, dict) and "paper_ids" in cluster:
+                                    cluster["paper_ids"] = [
+                                        pid for pid in cluster["paper_ids"]
+                                        if pid in _valid_ids
+                                    ]
+                        method_clusters = _mc
                     if "timeline" in response:
                         timeline = response["timeline"]
                     if "agent_self_report" in response:
@@ -253,10 +367,25 @@ class SynthesisAgent:
             search_process=search_rounds,
             highly_relevant_papers=highly_relevant,
             partially_relevant_papers=partially_relevant,
+            supporting_papers=supporting_papers,
             method_clusters=method_clusters,
             timeline=timeline,
             citation_graph=citation_graph,
             recommendation_reasoning=recommendation_reasoning,
             agent_self_report=agent_self_report,
-            run_metrics=metrics
+            run_metrics=metrics,
+            dynamic_k_chosen=dynamic_k,
+            expected_f1_curve=_expected_f1_curve,
+            g_hat=_g_hat,
+            g_hat_scope=_g_hat,
+            g_hat_pool=_g_hat,
+            g_hat_visible=_g_hat,
+            low_confidence_uniform=False,
+            p_floor=_p_floor,
+            tie_break_reason=(
+                f"Score-gap K={_gap_k} → effective_max={_effective_max}"
+                if _gap_k is not None
+                else f"Percentile-drop K={_effective_max} → cutoff (k1={len(highly_relevant)}, k2={dynamic_k})"
+            ),
+            second_pass_triggered=False,
         )

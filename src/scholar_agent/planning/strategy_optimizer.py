@@ -84,8 +84,7 @@ def optimize_search_strategy(
         "Also consider citation expansion and synonym expansion to cover more variations."
     )
 
-    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     if response is None:
         return fallback
     try:

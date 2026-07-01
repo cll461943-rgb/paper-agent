@@ -381,8 +381,7 @@ def heuristic_generate_search_queries(
     ]
     queries = sorted(queries, key=lambda item: item.priority)
     if compress_known_title and enabled and _infer_known_paper_title(plan.original_query):
-        keep_routes = {"title_like", "core_topic", "method_task", "broad_synonym"}
-        return [item for item in queries if item.route in keep_routes][:4]
+        return [item for item in queries if item.route == "title_like"][:1]
     return queries
 
 
@@ -478,26 +477,28 @@ def _query_expansion_routes(plan: QueryPlan) -> list[SearchQuery]:
 def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[SearchQuery]:
     if llm_client is None:
         return []
+    import logging
+    logger = logging.getLogger("scholar_agent.planning.query_generation")
     system_prompt = (
         "You are a senior researcher with encyclopedic knowledge of academic papers. "
-        "Given the research query below, recall up to 5 EXACT paper titles that are directly relevant. "
+        "Given the research query below, recall up to 10 EXACT paper titles that are directly relevant. "
         "These must be real, published papers - do NOT invent titles. "
-        "Focus on landmark papers, highly-cited works, and seminal papers in the specific subfield. "
+        "Focus on landmark papers, highly-cited works, and seminal papers in the specific subfield.\n\n"
         "Return JSON only: {\"title_queries\": [\"exact paper title 1\", ...]}"
     )
     user_prompt = (
         "Return shape: {\"title_queries\": [\"candidate paper title\", ...]}. "
-        "Maximum 5 candidates. "
+        "Maximum 10 candidates. "
         f"Original Query: {plan.original_query}\n"
         f"QueryPlan: {plan.model_dump_json()}"
     )
-    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     raw_titles = response.get("title_queries") if isinstance(response, dict) else response
     if not isinstance(raw_titles, list):
+        logger.warning("LLM title queries: no valid response, got=%s", type(raw_titles).__name__)
         return []
     queries: list[SearchQuery] = []
-    for title in raw_titles[:5]:
+    for title in raw_titles[:10]:
         if not isinstance(title, str):
             continue
         normalized = re.sub(r"\s+", " ", title.strip())
@@ -514,6 +515,71 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
                 priority=8,
             )
         )
+    logger.info("LLM title queries: generated %d candidates from %d raw titles", len(queries), len(raw_titles))
+    for q in queries:
+        logger.info("  LLM title candidate: %s", q.query[:80])
+    return queries
+
+
+def _llm_term_mapping_queries(plan: QueryPlan, llm_client: object | None) -> list[SearchQuery]:
+    """LLM 术语映射：生成 gold 论文可能使用的标准学术术语，弥补词汇不匹配。
+
+    诊断发现：keyword(原始查询) 全 miss，因为 gold 论文标题不包含查询术语。
+    本函数让 LLM 生成 10-15 个"如果有一篇完美匹配的论文，它标题/摘要会用什么术语"，
+    这些术语作为 broad_synonym 路由的 keyword 查询发送，绕过词汇不匹配。
+    """
+    if llm_client is None:
+        return []
+    import logging
+    logger = logging.getLogger("scholar_agent.planning.query_generation")
+    system_prompt = (
+        "You are an expert academic search analyst specializing in vocabulary mismatch bridging. "
+        "The user's query may use informal, non-standard, or application-level terms that differ from "
+        "the terminology used in actual paper titles and abstracts. Your job is to generate ALTERNATIVE "
+        "academic search terms that relevant papers would ACTUALLY use in their titles/abstracts.\n\n"
+        "CRITICAL RULES:\n"
+        "1. Do NOT repeat terms already in the query — generate DIFFERENT terms that describe the same research.\n"
+        "2. Think: 'If a paper perfectly answers this query, what words would appear in its title?'\n"
+        "3. Map informal descriptions → standard academic terminology.\n"
+        "   Examples: 'perturbation for contamination' → 'training data extraction, data contamination, memorization'\n"
+        "             'explore eigenspectrum' → 'spectral filter, graph neural network, eigendecomposition'\n"
+        "             'zero-violation feasible region' → 'zero constraint violation, constrained MDP, safe RL'\n"
+        "4. Generate 10-15 short phrases (2-4 words each), each could be a standalone keyword search.\n"
+        "5. Cover different angles: method names, task names, application domains, related techniques.\n\n"
+        "Return JSON only: {\"term_queries\": [\"phrase 1\", \"phrase 2\", ...]}"
+    )
+    user_prompt = (
+        "Return shape: {\"term_queries\": [\"short academic phrase\", ...]}. "
+        "Maximum 15 phrases, each 2-4 words. "
+        f"Original Query: {plan.original_query}\n"
+        f"QueryPlan: {plan.model_dump_json()}"
+    )
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
+    raw_terms = response.get("term_queries") if isinstance(response, dict) else response
+    if not isinstance(raw_terms, list):
+        logger.warning("LLM term mapping: no valid response, got=%s", type(raw_terms).__name__)
+        return []
+    queries: list[SearchQuery] = []
+    for term in raw_terms[:15]:
+        if not isinstance(term, str):
+            continue
+        normalized = re.sub(r"\s+", " ", term.strip())
+        if len(normalized.split()) < 2:
+            continue
+        queries.append(
+            SearchQuery(
+                query=normalized[:120],
+                route="broad_synonym",
+                intent="llm_term_mapping",
+                required_terms=[],
+                optional_terms=[],
+                filters=plan.time_range or {},
+                priority=6,
+            )
+        )
+    logger.info("LLM term mapping: generated %d alternative term queries", len(queries))
+    for q in queries:
+        logger.info("  LLM term mapping: %s", q.query[:80])
     return queries
 
 
@@ -539,16 +605,12 @@ def generate_search_queries(
             "Generate short retrieval-oriented scholarly search queries. "
             "Return a JSON object with one field named search_queries. "
             "Required routes: original_clean, core_topic, method_task, entity_dataset, title_like, broad_synonym. "
-            "CRITICAL: Control the length of each query strictly based on its route:\n"
-            "- title_like: 4-12 words\n"
-            "- core_topic: 3-8 words\n"
-            "- method_task: 5-12 words (must preserve method + task)\n"
-            "- entity_dataset: dataset + task + domain\n"
-            "- broad_synonym: 3-8 words\n"
-            "- query2doc/hyde: 20-60 words\n"
-            "Avoid natural language sentences, connecting words, or broad words like 'shows', 'proposes', 'investigate'. "
-            "Use exact technical terms and actively include academic synonyms, alternative phrasing, or broader/narrower concepts. "
-            "Use double quotes for multi-word exact phrases where appropriate."
+            "CRITICAL: Each query must be extremely concise (2-4 words maximum). Avoid natural language sentences, "
+            "connecting words, or broad words like 'shows', 'proposes', 'investigate', 'applications'. "
+            "Use exact technical terms and actively include academic synonyms, alternative phrasing, or broader/narrower "
+            "concepts (e.g. if the topic is contrastive learning, generate alternative queries with 'unsupervised sentence representation' "
+            "or 'SimCSE'). "
+            "Use double quotes for multi-word exact phrases where appropriate (e.g., '\"in-context learning\"' or '\"sentence representation\"')."
         )
         user_prompt = (
             "Return a JSON object shaped as "
@@ -560,25 +622,28 @@ def generate_search_queries(
         )
         
         import concurrent.futures
-        timeout = getattr(budget.config, "llm_timeout_seconds", 30)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
             future_titles = executor.submit(_llm_title_queries, plan, llm_client)
+            future_terms = executor.submit(_llm_term_mapping_queries, plan, llm_client)
             future_queries = executor.submit(
                 getattr(llm_client, "complete_json", lambda *_: None),
-                system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout
+                system_prompt, user_prompt, model_type="flash"
             )
             llm_title_candidates = future_titles.result()
+            llm_term_candidates = future_terms.result()
             response = future_queries.result()
-            
+
         payload = response.get("search_queries") if isinstance(response, dict) else response
         if isinstance(payload, list):
             try:
                 candidate_items = [SearchQuery.model_validate(item) for item in payload]
-                queries = _ensure_required_routes(plan, [*llm_title_candidates, *candidate_items], enabled=enabled)
+                queries = _ensure_required_routes(
+                    plan, [*llm_title_candidates, *llm_term_candidates, *candidate_items], enabled=enabled
+                )
             except Exception:
-                queries = [*llm_title_candidates, *fallback]
-        elif llm_title_candidates:
-            queries = [*llm_title_candidates, *fallback]
+                queries = [*llm_title_candidates, *llm_term_candidates, *fallback]
+        elif llm_title_candidates or llm_term_candidates:
+            queries = [*llm_title_candidates, *llm_term_candidates, *fallback]
 
     if not compress_known_title:
         queries = _ensure_required_routes(plan, queries, enabled=enabled)

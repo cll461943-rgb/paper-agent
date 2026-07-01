@@ -10,9 +10,10 @@ LOGGER = logging.getLogger(__name__)
 from scholar_agent.models.schemas import Paper, RetrievalResult, SearchQuery
 from scholar_agent.retrieval.base import PaperProvider
 from scholar_agent.retrieval.refchain import annotate_refchain_candidate, refchain_operations
+from scholar_agent.retrieval.source_health import SourceHealthManager
 from scholar_agent.workflow.budget import BudgetManager
 
-LOCAL_ZERO_API_PROVIDERS = {"mock", "pasa_local"}
+LOCAL_ZERO_API_PROVIDERS = {"mock", "pasa_local", "faiss_vector"}
 
 
 class MultiRouteRetriever:
@@ -21,10 +22,12 @@ class MultiRouteRetriever:
         providers: list[PaperProvider],
         budget: BudgetManager,
         parallel: bool = False,
+        health_manager: SourceHealthManager | None = None,
     ) -> None:
         self.providers = providers
         self.budget = budget
         self.parallel = parallel
+        self._health = health_manager
         self._provider_error_counts: dict[str, int] = {}
         self._provider_block_reasons: dict[str, str] = {}
 
@@ -53,9 +56,35 @@ class MultiRouteRetriever:
         error_count = self._provider_error_counts.get(provider.name, 0) + 1
         self._provider_error_counts[provider.name] = error_count
         if self._is_rate_limit_error(error):
-            self._provider_block_reasons[provider.name] = "rate_limited"
-        elif error_count >= 2:
+            # Allow up to 3 rate-limit errors before blocking (was 1)
+            if error_count >= 3:
+                self._provider_block_reasons[provider.name] = "rate_limited"
+        elif error_count >= 5:
             self._provider_block_reasons[provider.name] = "repeated_errors"
+
+    def _is_provider_blocked(self, provider_name: str) -> str | None:
+        """Check if a provider is blocked. Delegates to health_manager when available."""
+        if self._health is not None:
+            if not self._health.before_call(provider_name):
+                state = self._health.get_state(provider_name)
+                return state.value
+            return None
+        # Legacy fallback
+        return self._provider_block_reasons.get(provider_name)
+
+    def _record_provider_error(self, provider: PaperProvider, error: str) -> None:
+        """Record a provider error. Delegates to health_manager when available."""
+        if self._health is not None:
+            self._health.record_error(provider.name, error)
+        # Also track in legacy system for backward-compatible block_reasons
+        self._mark_provider_error(provider, error)
+
+    def _record_provider_success(
+        self, provider: PaperProvider, elapsed: float, items: int
+    ) -> None:
+        """Record a successful provider call. Only health_manager tracks this."""
+        if self._health is not None:
+            self._health.record_success(provider.name, elapsed, items)
 
     @staticmethod
     def _overrides(method_name: str, provider: PaperProvider) -> bool:
@@ -88,7 +117,7 @@ class MultiRouteRetriever:
         errors_delta = 0
         papers: list[Paper] = []
         started_at = time.perf_counter()
-        block_reason = self._provider_block_reasons.get(provider.name)
+        block_reason = self._is_provider_blocked(provider.name)
         if block_reason and not cache_hit:
             self.budget.record_component_cost(
                 component,
@@ -107,11 +136,14 @@ class MultiRouteRetriever:
                 self.budget.reserve_api_call(api_calls_delta)
                 api_calls_reserved = api_calls_delta
             papers = provider.search(query, limit=limit)
+            _elapsed = time.perf_counter() - started_at
             provider_error = getattr(provider, "last_error", None)
             if provider_error:
-                self._mark_provider_error(provider, provider_error)
+                self._record_provider_error(provider, provider_error)
                 self.budget.record_error(f"{provider.name}.{query.route}: {provider_error}")
                 errors_delta = 1
+            else:
+                self._record_provider_success(provider, _elapsed, len(papers))
             if cache_hits_delta:
                 self.budget.record_cache_hit(cache_hits_delta)
             return RetrievalResult(
@@ -124,7 +156,7 @@ class MultiRouteRetriever:
             )
         except Exception as exc:
             errors_delta = 1
-            self._mark_provider_error(provider, str(exc))
+            self._record_provider_error(provider, str(exc))
             if cache_hits_delta:
                 self.budget.record_cache_hit(cache_hits_delta)
             self.budget.record_error(f"{provider.name} search failed for route={query.route}: {exc}")
@@ -276,7 +308,7 @@ class MultiRouteRetriever:
             for query in queries
             if query.route == "title_like" and self._looks_like_title_query(query.query)
         ]
-        title_like_queries = title_like_queries[:3]
+        title_like_queries = title_like_queries[:5]
 
         def _fetch(provider: PaperProvider, query: SearchQuery) -> RetrievalResult | None:
             component = f"retrieval.{provider.name}.title_exact"
@@ -285,7 +317,7 @@ class MultiRouteRetriever:
             limit = min(10, self.budget.config.max_results_per_query)
             exact_query = self._title_exact_query(query.query)
             cache_hit = self._has_query_cache_hit(provider, exact_query, limit)
-            block_reason = self._provider_block_reasons.get(provider.name)
+            block_reason = self._is_provider_blocked(provider.name)
             if block_reason and not cache_hit:
                 self.budget.record_component_cost(
                     component,
@@ -311,11 +343,12 @@ class MultiRouteRetriever:
                     query.query,
                     limit=limit,
                 )
+                self._record_provider_success(provider, time.perf_counter() - started_at, len(papers))
                 if cache_hits_delta:
                     self.budget.record_cache_hit(cache_hits_delta)
             except Exception as exc:
                 errors_delta = 1
-                self._mark_provider_error(provider, str(exc))
+                self._record_provider_error(provider, str(exc))
                 self.budget.record_error(f"{provider.name} title_exact failed: {exc}")
             finally:
                 self.budget.record_component_cost(
@@ -364,7 +397,7 @@ class MultiRouteRetriever:
     def _search_provider_routes(self, provider: PaperProvider, queries: list[SearchQuery]) -> list[RetrievalResult]:
         results = []
         started_at = time.perf_counter()
-        provider_time_budget = 25.0
+        provider_time_budget = self._health.get_time_budget(provider.name) if self._health else 60.0
         for query in queries:
             if time.perf_counter() - started_at > provider_time_budget:
                 self.budget.record_error(f"{provider.name} skipped remaining queries due to provider_time_budget ({provider_time_budget}s)")
@@ -396,14 +429,15 @@ class MultiRouteRetriever:
         if limit_per_seed <= 0:
             return expanded
         for provider in providers:
+            if self._is_provider_blocked(provider.name):
+                LOGGER.info("Skipping refchain for blocked provider %s", provider.name)
+                continue
             operations = refchain_operations(provider)
             for seed_index, paper in enumerate(seed_papers, start=1):
-                remaining = limit_per_seed
+                # Each route gets its own independent budget (not shared across routes)
                 for route, source, operation in operations:
-                    if remaining <= 0:
-                        break
                     component = f"retrieval.{provider.name}.{route}"
-                    operation_limit = remaining
+                    operation_limit = limit_per_seed
                     api_calls_delta = self._reference_api_calls(provider, paper, operation_limit, route)
                     api_calls_reserved = 0
                     errors_delta = 0
@@ -414,9 +448,10 @@ class MultiRouteRetriever:
                             self.budget.reserve_api_call(api_calls_delta)
                             api_calls_reserved = api_calls_delta
                         papers = operation(paper, limit=operation_limit)[:operation_limit]
+                        self._record_provider_success(provider, time.perf_counter() - started_at, len(papers))
                     except Exception as exc:
                         errors_delta = 1
-                        self._mark_provider_error(provider, str(exc))
+                        self._record_provider_error(provider, str(exc))
                         self.budget.record_error(f"{provider.name} {route} failed: {exc}")
                     finally:
                         self.budget.record_component_cost(
@@ -438,11 +473,16 @@ class MultiRouteRetriever:
                         )
                         for candidate in papers
                     )
-                    remaining -= len(papers)
         return expanded
 
-    def _need_broad_safety_search(self, candidate_pool: list[Paper], results: list[RetrievalResult], query_plan) -> bool:
-        if len(candidate_pool) < 120:
+    def _need_broad_safety_search(self, candidate_pool: list[Paper], results: list[RetrievalResult], query_plan, routing_config=None) -> bool:
+        # 动态阈值：优先用 routing_config，否则默认 120
+        if routing_config is not None and hasattr(routing_config, "broad_safety_threshold"):
+            threshold = routing_config.broad_safety_threshold
+        else:
+            threshold = 120
+
+        if len(candidate_pool) < threshold:
             return True
 
         providers_used = {r.provider for r in results if not r.error}
@@ -450,7 +490,7 @@ class MultiRouteRetriever:
             return True
 
         query_type = getattr(query_plan, "query_type", "unknown")
-        if query_type in {"survey", "broad_topic", "method_comparison"} and len(candidate_pool) < 250:
+        if query_type in {"survey", "broad_topic", "method_comparison"} and len(candidate_pool) < max(threshold, 250):
             return True
 
         return False
@@ -461,12 +501,13 @@ class MultiRouteRetriever:
         include_title_exact: bool = True,
         original_query: str = "",
         query_plan = None,
+        routing_config = None,
     ) -> tuple[list[RetrievalResult], list[Paper]]:
         self.budget.reserve_retrieval_round()
         providers: list[PaperProvider] = []
         results: list[RetrievalResult] = []
         for provider in self.providers:
-            if provider.is_available():
+            if provider.is_available() and not self._is_provider_blocked(provider.name):
                 providers.append(provider)
                 continue
             unavailable_result = self._record_unavailable_provider(provider, queries)
@@ -476,14 +517,32 @@ class MultiRouteRetriever:
         def _get_queries_for_provider(prov: PaperProvider) -> list[SearchQuery]:
             if prov.name in LOCAL_ZERO_API_PROVIDERS or prov.name == "pasa_local":
                 return queries
-            
-            route_priority = {
-                "openalex": {"title_like", "title_exact", "core_topic", "method_task", "broad_synonym", "dataset", "translated", "evolved", "query2doc", "hyde"},
-                "arxiv": {"latest", "title_like", "core_topic", "method_task", "evolved"},
-                "pubmed": {"biomedical", "dataset", "method_task", "core_topic", "evolved"},
-                "semantic_scholar": {"title_like", "core_topic", "method_task", "citation_seed", "evolved", "query2doc", "hyde"},
-            }
-            allowed_routes = route_priority.get(prov.name, set())
+
+            # 动态路由：优先用 routing_config，否则 fallback 到硬编码表
+            if routing_config is not None:
+                allowed_routes = routing_config.routes_per_provider.get(prov.name)
+                if allowed_routes is None:
+                    allowed_routes = None  # None = 全路由
+                else:
+                    allowed_routes = set(allowed_routes)
+                max_cap = routing_config.caps_per_provider.get(prov.name, 4)
+            else:
+                # P2 Task 5: 静态硬编码 fallback（向后兼容）
+                route_priority = {
+                    "openalex": {"title_like", "title_exact", "core_topic", "method_task", "broad_synonym", "entity_dataset", "dataset", "translated", "query2doc", "hyde", "evolved", "hybrid", "feedback_expansion"},
+                    "arxiv": {"latest", "title_like", "title_exact", "core_topic", "broad_synonym", "feedback_expansion"},
+                    "pubmed": {"biomedical", "dataset", "method_task", "feedback_expansion"},
+                    "semantic_scholar": {"title_like", "title_exact", "core_topic", "broad_synonym", "method_task", "citation_seed", "translated", "feedback_expansion"},
+                }
+                allowed_routes = route_priority.get(prov.name, set())
+                max_by_provider = {
+                    "openalex": 8,
+                    "semantic_scholar": 5,
+                    "arxiv": 3,
+                    "pubmed": 2,
+                }
+                max_cap = max_by_provider.get(prov.name, 4)
+
             selected = []
             for q in queries:
                 # 动态关键词文献库过滤匹配
@@ -494,19 +553,13 @@ class MultiRouteRetriever:
                 )
                 if prov.name not in allowed_provs:
                     continue
-                
+
                 if getattr(q, "sources", None) and prov.name in q.sources:
                     selected.append(q)
-                elif q.route in allowed_routes:
+                elif allowed_routes is None or q.route in allowed_routes:
                     selected.append(q)
 
-            max_by_provider = {
-                "openalex": 6,
-                "semantic_scholar": 6,
-                "arxiv": 3,
-                "pubmed": 3,
-            }
-            return selected[:max_by_provider.get(prov.name, 4)]
+            return selected[:max_cap]
 
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:
@@ -530,7 +583,7 @@ class MultiRouteRetriever:
                 candidate_pool.append(paper)
 
         # 5. 安全兜底检索逻辑
-        if self._need_broad_safety_search(candidate_pool, results, query_plan):
+        if self._need_broad_safety_search(candidate_pool, results, query_plan, routing_config):
             safety_queries = [
                 q for q in queries
                 if q.route in {"core_topic", "method_task", "broad_synonym", "translated", "title_like"}
@@ -538,7 +591,7 @@ class MultiRouteRetriever:
 
             safety_providers = [
                 p for p in providers
-                if p.name in {"openalex", "semantic_scholar", "pasa_local"}
+                if p.name in {"openalex", "semantic_scholar", "pasa_local", "arxiv"}
             ]
 
             for provider in safety_providers:

@@ -57,18 +57,34 @@ class OpenAICompatibleLLMClient:
     @property
     def api_key(self) -> str:
         import os
+        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if provider == "gpt55":
+            return os.getenv("GPT55_API_KEY", "")
+        if provider == "tokenhub":
+            return os.getenv("TOKENHUB_API_KEY", "")
         return os.getenv(self.config.api_key_env, os.getenv("DEEPSEEK_API_KEY", ""))
 
     @property
     def base_url(self) -> str:
         import os
+        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if provider == "gpt55":
+            url = os.getenv("GPT55_BASE_URL", "https://cdn.coderelay.cn/v1")
+            return url.rstrip("/")
+        if provider == "tokenhub":
+            url = os.getenv("TOKENHUB_BASE_URL", "https://api.tokenhub.market/v1")
+            return url.rstrip("/")
         url = os.getenv(self.config.base_url_env, os.getenv("DEEPSEEK_BASE_URL", self.config.base_url))
         return url.rstrip("/")
 
     @property
     def model(self) -> str:
         import os
-        # 允许直接读取 model
+        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if provider == "gpt55":
+            return os.getenv("GPT55_MODEL", "gpt-5.5")
+        if provider == "tokenhub":
+            return os.getenv("TOKENHUB_MODEL", "kimi-k2.7-code")
         return os.getenv("DEEPSEEK_MODEL", self.config.model)
 
     def is_available(self) -> bool:
@@ -157,21 +173,26 @@ class OpenAICompatibleLLMClient:
             self.budget.record_error(str(exc))
             return None
 
-        # 根据 model_type 选择模型，允许 DeepSeek 环境变量覆盖。
-        # 若当前配置使用非 DeepSeek 的 api_key_env（如 GPT55_API_KEY），则直接读取 config 值，
-        # 避免 DEEPSEEK_MODEL_PRO/FLASH 污染其他 provider 的模型名。
+        # 根据 model_type 选择 model，并根据 ACTIVE_LLM_PROVIDER 决定默认配置或覆盖
         import os
-        _is_deepseek_config = self.config.api_key_env in ("DEEPSEEK_API_KEY", "OPENAI_API_KEY", "")
-        if _is_deepseek_config:
+        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if provider == "gpt55":
+            model_name = (
+                os.getenv("GPT55_MODEL_PRO", "gpt-5.5")
+                if model_type == "pro"
+                else os.getenv("GPT55_MODEL_FLASH", "gpt-5.5")
+            )
+        elif provider == "tokenhub":
+            model_name = (
+                os.getenv("TOKENHUB_MODEL_PRO", "kimi-k2.7-code")
+                if model_type == "pro"
+                else os.getenv("TOKENHUB_MODEL_FLASH", "kimi-k2.7-code")
+            )
+        else:
             model_name = (
                 os.getenv("DEEPSEEK_MODEL_PRO", self.config.model_pro)
                 if model_type == "pro"
                 else os.getenv("DEEPSEEK_MODEL_FLASH", self.config.model_flash)
-            )
-        else:
-            # 非 DeepSeek 配置：直接使用 config 文件中声明的模型名
-            model_name = (
-                self.config.model_pro if model_type == "pro" else self.config.model_flash
             )
 
         # Effect-first: per-task max_tokens override
@@ -181,12 +202,18 @@ class OpenAICompatibleLLMClient:
             "model": model_name,
             "temperature": self.config.temperature,
             "max_tokens": effective_max_tokens,
-            "response_format": {"type": "json_object"},
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
         }
+        # tokenhub (kimi-k2.7-code) is a reasoning model — response_format: json_object
+        # conflicts with its internal reasoning mode and causes silent timeouts.
+        # Other providers (deepseek, gpt55) work fine with json_object.
+        import os as _os
+        _provider = _os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if _provider != "tokenhub":
+            payload["response_format"] = {"type": "json_object"}
         started_at = time.perf_counter()
         try:
             raw = self._post_json(payload, timeout_seconds=effective_timeout)
@@ -227,11 +254,26 @@ class OpenAICompatibleLLMClient:
         # P2: Record success to circuit breaker
         if self._circuit_breaker is not None:
             self._circuit_breaker.record_success()
-        content = (
-            ((raw.get("choices") or [{}])[0].get("message") or {}).get("content")
-            or ((raw.get("choices") or [{}])[0].get("text"))
-            or ""
-        )
+
+        # Extract content — reasoning models (kimi-k2.7-code) may put output in
+        # reasoning_content or embed <思维> tags in content
+        _msg = (raw.get("choices") or [{}])[0].get("message") or {}
+        content = _msg.get("content") or _msg.get("text") or ""
+        # Strip <思维>...</思维> tags that kimi-k2.7-code embeds in content
+        if "<思维>" in content or "<思维 " in content:
+            import re as _re
+            content = _re.sub(r"<思维[^>]*>.*?</思维>", "", content, flags=_re.DOTALL).strip()
+        # If content is empty after stripping, try reasoning_content (some providers
+        # put the actual answer there for reasoning models)
+        if not content:
+            _rc = _msg.get("reasoning_content") or ""
+            if _rc:
+                # reasoning_content may itself contain <思维> tags — strip them
+                if "<思维>" in _rc or "<思维 " in _rc:
+                    import re as _re2
+                    _rc = _re2.sub(r"<思维[^>]*>.*?</思维>", "", _rc, flags=_re2.DOTALL).strip()
+                content = _rc
+
         usage = raw.get("usage") or {}
         token_estimate = int(
             usage.get("total_tokens")
@@ -242,7 +284,21 @@ class OpenAICompatibleLLMClient:
         result = safe_json_loads(content)
         if result is not None:
             return result
-        # Fallback: try legacy extract_json_payload
+
+        # Fallback 1: Extract JSON block from mixed content (reasoning text + JSON)
+        # kimi-k2.7-code returns reasoning text followed by JSON, e.g.:
+        # "Let me analyze... The answer is:\n{"key": "value"}"
+        # safe_json_loads fails on this because it starts with non-JSON text.
+        # Fix: find the first '{' and last '}' and extract the JSON between them.
+        first_brace = content.find('{')
+        last_brace = content.rfind('}')
+        if first_brace >= 0 and last_brace > first_brace:
+            json_substr = content[first_brace:last_brace + 1]
+            result = safe_json_loads(json_substr)
+            if result is not None:
+                return result
+
+        # Fallback 2: try legacy extract_json_payload
         try:
             return self.extract_json_payload(content)
         except Exception as exc:
@@ -262,7 +318,6 @@ class OpenAICompatibleLLMClient:
             "model": model_name,
             "temperature": 0.0,
             "max_tokens": min(2048, self.config.max_tokens),
-            "response_format": {"type": "json_object"},
             "messages": [
                 {
                     "role": "system",
@@ -274,6 +329,11 @@ class OpenAICompatibleLLMClient:
                 {"role": "user", "content": broken_content},
             ],
         }
+        # tokenhub reasoning model conflicts with response_format
+        import os as _os2
+        _provider2 = _os2.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+        if _provider2 != "tokenhub":
+            payload["response_format"] = {"type": "json_object"}
         started_at = time.perf_counter()
         try:
             raw = self._post_json(payload, timeout_seconds=10)  # P0-6: explicit 10s timeout for repair
@@ -284,11 +344,19 @@ class OpenAICompatibleLLMClient:
 
         elapsed = time.perf_counter() - started_at
         self.budget.record_llm_elapsed(elapsed)
-        content = (
-            ((raw.get("choices") or [{}])[0].get("message") or {}).get("content")
-            or ((raw.get("choices") or [{}])[0].get("text"))
-            or ""
-        )
+        _msg = (raw.get("choices") or [{}])[0].get("message") or {}
+        content = _msg.get("content") or _msg.get("text") or ""
+        # Strip <思维> tags for reasoning models
+        if "<思维>" in content or "<思维 " in content:
+            import re as _re3
+            content = _re3.sub(r"<思维[^>]*>.*?</思维>", "", content, flags=_re3.DOTALL).strip()
+        if not content:
+            _rc = _msg.get("reasoning_content") or ""
+            if _rc:
+                if "<思维>" in _rc or "<思维 " in _rc:
+                    import re as _re4
+                    _rc = _re4.sub(r"<思维[^>]*>.*?</思维>", "", _rc, flags=_re4.DOTALL).strip()
+                content = _rc
         usage = raw.get("usage") or {}
         token_estimate = int(
             usage.get("total_tokens")

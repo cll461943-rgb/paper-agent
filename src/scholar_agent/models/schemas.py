@@ -82,9 +82,6 @@ class SelectionResult(BaseModel):
     constraint_score: float | None = None
     evidence_score: float | None = None
     uncertainty: list[str] = Field(default_factory=list)
-    evidence_support: float = 0.0
-    score_cap: float | None = None
-    label: str | None = None
 
 
 class RankedPaper(BaseModel):

@@ -97,14 +97,6 @@ CHINESE_ENTITY_PATTERNS = [
     (r"论文推荐", "paper recommendation"),
     (r"引用网络|引文网络", "citation network"),
     (r"重排序|重排", "reranking"),
-    (r"查询分解|问题分解|子查询", "query decomposition"),
-    (r"查询改写|查询扩展", "query reformulation"),
-    (r"引文追踪|引用追踪", "citation tracking"),
-    (r"参考文献扩展", "reference expansion"),
-    (r"语义检索", "semantic retrieval"),
-    (r"多源检索", "multi-source retrieval"),
-    (r"学习排序|学习式排序", "learning-to-rank"),
-    (r"学术智能体|科研智能体", "scholarly agent"),
 ]
 
 QUERY_PREFIXES = [
@@ -197,31 +189,6 @@ def _extract_chinese_matches(text: str, patterns: list[tuple[str, str]]) -> list
     return list(dict.fromkeys(matches))
 
 
-def normalize_constraints(plan: QueryPlan) -> QueryPlan:
-    must = set(plan.must_have_constraints)
-    nice = set(plan.nice_to_have_constraints)
-
-    # 数据集、benchmark、明确年份一般是硬约束
-    for d in plan.datasets:
-        must.add(d)
-
-    # 用户明确说“使用/基于/with/using/采用”的方法，加入硬约束
-    explicit_method_markers = ["using", "with", "based on", "采用", "基于", "使用"]
-    if any(m in plan.original_query.lower() for m in explicit_method_markers):
-        for m in plan.methods:
-            must.add(m)
-    else:
-        for m in plan.methods:
-            nice.add(m)
-
-    for e in plan.entities:
-        nice.add(e)
-
-    plan.must_have_constraints = list(must)
-    plan.nice_to_have_constraints = list(nice)
-    return plan
-
-
 def heuristic_understand_query(query: str) -> QueryPlan:
     lowered = query.lower()
     cleaned_query = _clean_query_prefix(query)
@@ -307,8 +274,16 @@ def heuristic_understand_query(query: str) -> QueryPlan:
         query_type = "latest_work"
     elif _looks_like_specific_paper(query):
         query_type = "specific_paper"
+    elif any(p in lowered for p in ("all papers", "papers that discuss", "papers about",
+                                     "papers explaining", "papers that show",
+                                     "list research", "show me research",
+                                     "papers that share", "provide me with all",
+                                     "could you list research", "papers on")) and not re.search(r'\([A-Z]{2,8}\)', query):
+        # broad_topic only when no specific technique abbreviation (e.g. "(QAT)")
+        # is present — those indicate focused method queries, not broad surveys
+        query_type = "broad_topic"
 
-    plan = QueryPlan(
+    return QueryPlan(
         original_query=query,
         language="zh" if re.search(r"[\u4e00-\u9fff]", query) else "en",
         query_type=query_type,
@@ -325,36 +300,76 @@ def heuristic_understand_query(query: str) -> QueryPlan:
         expected_output="top_papers",
         uncertainty=uncertainty,
     )
-    return normalize_constraints(plan)
 
 
-def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
+def understand_query(
+    query: str,
+    llm_client: object | None = None,
+    feedback: str | None = None,
+    prev_plan: QueryPlan | None = None,
+) -> QueryPlan:
+    """LLM-first 查询理解。启发式仅作 fallback，不注入 LLM prompt 避免锚定。
+
+    Args:
+        query: 原始用户查询
+        llm_client: LLM 客户端，None 时直接返回启发式结果
+        feedback: 上一轮 LLM pool review 的修正建议（闭环迭代时传入）
+        prev_plan: 上一轮的 QueryPlan（闭环迭代时传入，用于在追加语义上扩展而非重置）
+    """
     fallback = heuristic_understand_query(query)
     if llm_client is None:
         return fallback
 
-    # 使用 pro 级别的模型做复杂查询解析，保证意图契约准确
+    # LLM-first：system prompt 引导独立分析，不提供启发式参考
     system_prompt = (
-        "You convert a scholarly search request into a strict QueryPlan JSON object. "
-        "Return JSON only. Do not assume a domain like medicine unless the user explicitly says so. "
-        "Keep unknown facts in uncertainty instead of inventing them. "
-        "CRITICAL: List fields (methods, datasets, entities, venues, must_have_constraints, nice_to_have_constraints, exclude_terms, uncertainty) "
-        "MUST be returned as JSON arrays (e.g. [\"term1\", \"term2\"]), never as raw strings. "
-        "CRITICAL: If the user query is in Chinese, you MUST extract English equivalent terms in methods, datasets, and entities fields "
-        "so that the search can match English paper databases. For example, '幻觉' → 'hallucination', '知识蒸馏' → 'knowledge distillation'."
+        "You are an expert scholarly search intent analyst. Your job is to INDEPENDENTLY analyze "
+        "the user's research query and produce a strict QueryPlan JSON object. "
+        "Do not guess or invent facts — keep uncertain aspects in the 'uncertainty' field. "
+        "Think step by step: first identify the core research topic, then extract methods/datasets/entities, "
+        "then determine the query_type, then list hard constraints. "
+        "Return JSON only, no explanation text.\n"
+        "CRITICAL: List fields (methods, datasets, entities, venues, must_have_constraints, "
+        "nice_to_have_constraints, exclude_terms, uncertainty) MUST be JSON arrays, never raw strings. "
+        "CRITICAL: If the user query is in Chinese, you MUST extract English equivalent terms in "
+        "methods, datasets, and entities fields so the search can match English paper databases. "
+        "For example, '幻觉' → 'hallucination', '知识蒸馏' → 'knowledge distillation'."
     )
+
+    feedback_clause = ""
+    if feedback:
+        feedback_clause = (
+            f"\n\nPREVIOUS ROUND FEEDBACK (from LLM pool review of candidate papers):\n{feedback}\n"
+            "Based on this feedback, REFINE your understanding: add any missing methods/datasets/entities "
+            "that the candidate pool failed to cover. Do NOT remove previously identified terms — only ADD. "
+            "If the feedback suggests the query_type was wrong, correct it."
+        )
+
+    prev_plan_clause = ""
+    if prev_plan is not None:
+        prev_plan_clause = (
+            f"\n\nPREVIOUS QueryPlan (refine on this basis, do not narrow):\n"
+            f"{prev_plan.model_dump_json()}"
+        )
+
     user_prompt = (
-        "Output a JSON object matching this shape exactly: "
-        "{original_query, language, research_topic, task, methods, datasets, entities, "
+        "Analyze the following scholarly search query INDEPENDENTLY and output a JSON object matching "
+        "this shape exactly: "
+        "{original_query, language, research_topic, task, query_type, methods, datasets, entities, "
         "time_range, venues, must_have_constraints, nice_to_have_constraints, exclude_terms, "
         "expected_output, uncertainty}. "
-        "If the query is in Chinese, provide English translations for all key terms in methods, datasets, and entities. "
-        f"User query: {query!r}. "
-        f"Heuristic reference: {fallback.model_dump_json()}"
+        "query_type must be one of: 'exact_title', 'single_gold', 'specific_paper', "
+        "'dataset_constraint', 'method_comparison', 'latest_work', 'broad_topic', 'survey', 'unknown'. "
+        "Use 'survey' for comprehensive reviews/overviews, 'broad_topic' for wide research areas, "
+        "'method_comparison' for comparing approaches, 'specific_paper' for finding particular papers, "
+        "'exact_title'/'single_gold' when a specific title is mentioned. "
+        "IMPORTANT: Do NOT use 'broad_topic' if the query mentions a specific technique, method, or acronym "
+        "in parentheses (e.g. '(QAT)', '(BERT)') — use 'specific_paper' instead. "
+        "If the query is in Chinese, provide English translations for all key terms in methods, datasets, "
+        "and entities. "
+        f"User query: {query!r}.{feedback_clause}{prev_plan_clause}"
     )
-    # 用 pro 级别的模型进行理解
-    timeout = getattr(llm_client.budget.config, "llm_timeout_seconds", 30) if getattr(llm_client, "budget", None) else 30
-    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash", timeout_seconds=timeout)
+
+    response = getattr(llm_client, "complete_json", lambda *_: None)(system_prompt, user_prompt, model_type="flash")
     if response is None:
         return fallback
     try:
@@ -363,8 +378,8 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
 
         # 柔性类型转换与格式自适应修复，防止 ValidationError
         list_fields = [
-            "methods", "datasets", "entities", "venues", 
-            "must_have_constraints", "nice_to_have_constraints", 
+            "methods", "datasets", "entities", "venues",
+            "must_have_constraints", "nice_to_have_constraints",
             "exclude_terms", "uncertainty"
         ]
         for field in list_fields:
@@ -379,7 +394,7 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
                         payload[field] = []
                 else:
                     payload[field] = [str(val)]
-                    
+
         # time_range 兼容性修复
         t_range = payload.get("time_range")
         if t_range is not None:
@@ -410,7 +425,23 @@ def understand_query(query: str, llm_client: object | None = None) -> QueryPlan:
             else:
                 payload["language"] = "en"
 
-        return normalize_constraints(QueryPlan.model_validate(payload))
+        # 闭环迭代：如果传入了 prev_plan，合并语义字段（只追加不删除）
+        if prev_plan is not None:
+            for field in list_fields:
+                prev_vals = set(getattr(prev_plan, field, []) or [])
+                curr_vals = payload.get(field) or []
+                # 追加 prev 中有但 curr 没有的，保留 curr 新增的
+                merged = list(dict.fromkeys(curr_vals + [v for v in prev_vals if v not in set(curr_vals)]))
+                payload[field] = merged
+            # query_type：如果 LLM 改了就用 LLM 的，否则保留 prev
+            if not payload.get("query_type") or payload.get("query_type") == "unknown":
+                payload["query_type"] = prev_plan.query_type
+        else:
+            # 首轮：LLM 缺 query_type 时从 fallback 补
+            if not payload.get("query_type") or payload.get("query_type") == "unknown":
+                payload["query_type"] = fallback.query_type
+
+        return QueryPlan.model_validate(payload)
     except Exception as exc:
         LOGGER.warning("LLM QueryPlan validation failed: %s. Raw response: %s. Falling back to heuristic.", exc, response)
         return fallback

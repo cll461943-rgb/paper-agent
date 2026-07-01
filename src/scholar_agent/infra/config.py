@@ -186,13 +186,21 @@ class AppConfig(BaseModel):
     dynamic_k: DynamicKConfig = DynamicKConfig()
     known_title_clues: KnownTitleCluesConfig = KnownTitleCluesConfig()
     selection: SelectionConfig = SelectionConfig()
+    # Semantic bridge: BGE-M3 vector re-ranking + RRF fusion
+    enable_semantic_bridge: bool = False
+    embedding_model_name: str = "BAAI/bge-m3"
+    embedding_device: str = "cuda"
+    embedding_cache_dir: str = "data/cache/embeddings"
+    rrf_k: int = 60
+    rrf_keyword_weight: float = 1.0
+    rrf_vector_weight: float = 1.5
 
 
 def _load_dotenv_if_present(path: str | Path = ".env") -> None:
     env_path = Path(path)
     if not env_path.exists():
         return
-    for raw_line in env_path.read_text(encoding="utf-8", errors="ignore").splitlines():
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#") or "=" not in line:
             continue
@@ -206,5 +214,5 @@ def load_config(path: str | Path | None = None) -> AppConfig:
     if not config_path.exists():
         # Fallback to local default configs inside project
         config_path = Path(__file__).parents[2] / "configs" / "default.yaml"
-    raw_data = yaml.safe_load(config_path.read_text(encoding="utf-8", errors="ignore"))
+    raw_data = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     return AppConfig.model_validate(raw_data)

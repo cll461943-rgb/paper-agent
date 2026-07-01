@@ -25,6 +25,8 @@ from scholar_agent.planning import (
 from scholar_agent.retrieval import MultiRouteRetriever, build_providers, expand_with_refchain
 from scholar_agent.retrieval.query_expansion import QueryExpander
 from scholar_agent.retrieval.source_health import SourceHealthManager
+from scholar_agent.retrieval.embedding_service import EmbeddingService
+from scholar_agent.retrieval.semantic_bridge import SemanticBridge
 from scholar_agent.selection.evidence_selector import select_and_extract_evidence
 from scholar_agent.selection.evidence_validator import validate_selections
 from scholar_agent.ranking.final_reranker import rerank_papers
@@ -265,31 +267,18 @@ class PaperAgentPipeline:
         if self.llm_client is not None and hasattr(self.llm_client, "set_circuit_breaker"):
             self.llm_client.set_circuit_breaker(llm_circuit_breaker)
 
+        # P0-3: Log all prompt contracts at startup for auditing
+        try:
+            from scholar_agent.prompts import PromptRegistry
+            LOGGER.info("=== Prompt Contracts ===")
+            for summary in PromptRegistry.summaries():
+                LOGGER.info("  %s", summary)
+        except Exception:
+            pass  # prompts module is optional, pipeline still works without it
+
         LOGGER.info("Starting PaperAgentPipeline for query: %s (deadline=%.0fs)", original_query, _case_deadline_secs)
 
-        # 2. 意图理解与提取意图契约
-        query_deadline = case_deadline.child(DEFAULT_QUERY_UNDERSTANDING, "query_understanding")
-        use_llm_query = (
-            self.llm_client is not None
-            and not query_deadline.expired()
-            and getattr(self.config.budget, "max_llm_calls", 8) > 0
-        )
-        if use_llm_query:
-            # Dynamically set LLM timeout based on remaining deadline
-            _configured_timeout = getattr(self.config.llm, "timeout_seconds", 15)
-            _effective_timeout = query_deadline.timeout_for(_configured_timeout)
-            if hasattr(self.llm_client, "timeout"):
-                self.llm_client.timeout = _effective_timeout
-            try:
-                query_plan = understand_query(original_query, self.llm_client)
-            except Exception as exc:
-                LOGGER.warning("LLM Query understanding failed: %s. Falling back to heuristic.", exc)
-                query_plan = heuristic_understand_query(original_query)
-        else:
-            LOGGER.info("Skipping LLM query understanding (deadline=%s, llm=%s)", query_deadline, bool(self.llm_client))
-            query_plan = heuristic_understand_query(original_query)
-
-        # 3. 初始化多路检索器
+        # 2. 初始化多路检索器
         retriever = MultiRouteRetriever(
             self.providers,
             budget,
@@ -300,25 +289,11 @@ class PaperAgentPipeline:
         query_expander = QueryExpander()
         rounds_history: list[SearchProcessRound] = []
 
-        # 4. 第一轮检索规划与执行
-        if self.llm_client is not None and not retrieval_deadline.expired() and getattr(self.config.budget, "max_llm_calls", 8) > 0:
-            try:
-                subqueries = generate_search_queries(query_plan, budget, self.llm_client)
-            except Exception as exc:
-                LOGGER.warning("LLM query generation failed: %s. Falling back to heuristic.", exc)
-                subqueries = heuristic_generate_search_queries(query_plan)
-                budget.record_search_queries(len(subqueries))
-        else:
-            LOGGER.info("Using heuristic query generation (deadline=%s)", retrieval_deadline)
-            subqueries = heuristic_generate_search_queries(query_plan)
-            budget.record_search_queries(len(subqueries))
+        # 导入新模块：动态路由 + LLM 池审阅
+        from scholar_agent.retrieval.dynamic_router import get_routing_config
+        from scholar_agent.selection.llm_pool_reviewer import llm_review_pool
 
-        # P2: Expand queries with acronym/synonym expansion from taxonomy
-        if query_expander.is_available():
-            subqueries = [query_expander.expand_query(q) for q in subqueries]
-            LOGGER.info("Query expansion: expanded %d queries with acronyms/synonyms", len(subqueries))
-
-        # 定义用于粗排评分的内部函数，以便多轮迭代复用
+        # 粗排评分函数（用于内部排序，不决定去留）
         def _get_title_match_bonus(title: str, query: str) -> float:
             import re
             stop_words = {"the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from", "that", "this", "these", "those"}
@@ -334,11 +309,11 @@ class PaperAgentPipeline:
                 bge_val = float(bge) if bge is not None else 0.0
             except (ValueError, TypeError):
                 bge_val = 0.0
-            
+
             citation_score = 0.0
             if p.citation_count is not None:
                 citation_score = math.log1p(max(0, p.citation_count)) * 0.01
-                
+
             route_bonus = 0.0
             for path in p.retrieval_path:
                 if "title_exact" in path:
@@ -347,172 +322,220 @@ class PaperAgentPipeline:
                     route_bonus += 0.2
                 if "reference_expansion" in path or "citation_expansion" in path:
                     route_bonus += 0.05
-                    
+
             paths_val = len(p.retrieval_path) if p.retrieval_path else 1
             base_score = bge_val if bge_val > 0.0 else 0.5
-            
+
             title_bonus = _get_title_match_bonus(p.title, original_query)
-            
+
             return base_score + paths_val * 0.01 + citation_score + route_bonus + title_bonus
 
-        # 执行第一轮检索
-        LOGGER.info("Executing Retrieval Round 1 with %d queries", len(subqueries))
-        _, candidate_pool = retriever.retrieve(subqueries, original_query=original_query, query_plan=query_plan)
-        all_candidates = deduplicate_papers(candidate_pool)
-        all_candidates.sort(key=_get_rough_score, reverse=True)
- 
-        round_1_record = SearchProcessRound(
-            round_index=1,
-            search_goal="构建包含核心主题的基础论文候选池",
-            queries=[q.query for q in subqueries],
-            candidates_found=len(all_candidates),
-            review_conclusion="第一轮检索完成"
-        )
-        rounds_history.append(round_1_record)
-
-        # 5. 主控多轮迭代检索环 (最多 config.app.max_retrieval_rounds 轮)
-        if retrieval_only and (not self.llm_client or not self.llm_client.is_available()):
+        # ── 闭环迭代架构 ──
+        # LLM-first 理解 → 动态路由 → 检索 → LLM 审阅粗排 → 重新理解（带 feedback）→ 收敛
+        all_candidates: list[Paper] = []
+        query_plan = None
+        prev_plan = None
+        last_review_feedback = None
+        max_rounds = getattr(self.config.budget, "max_retrieval_rounds", 3)
+        # retrieval_only 模式也要跑 LLM 审阅（评测才能反映新架构）
+        if not self.llm_client or not self.llm_client.is_available():
             max_rounds = 1
-        else:
-            max_rounds = getattr(self.config.budget, "max_retrieval_rounds", 3)
-        
-        for r in range(2, max_rounds + 1):
-            # P2: Check retrieval deadline before each round
+
+        pool_review_deadline = case_deadline.child(DEFAULT_RETRIEVAL, "pool_review")
+
+        for round_idx in range(1, max_rounds + 1):
             if retrieval_deadline.expired():
                 LOGGER.warning(
-                    "Retrieval deadline expired (%.1fs elapsed), stopping multi-round loop at round %d",
-                    retrieval_deadline.elapsed(), r,
+                    "Retrieval deadline expired (%.1fs elapsed), stopping at round %d",
+                    retrieval_deadline.elapsed(), round_idx,
                 )
                 break
-            # 5.1 结果审阅与差距分析
-            LOGGER.info("Reviewing candidates for Round %d (retrieval deadline: %.1fs remaining)", r, retrieval_deadline.remaining())
 
-            # P1.5 Task 6: Heuristic-first result review
-            # Only use LLM review when pool is small or query_type needs deep analysis
-            query_type_for_review = getattr(query_plan, "query_type", "unknown")
-            pool_size = len(all_candidates)
-            use_llm_review = (
-                pool_size < 50
-                or query_type_for_review in ("survey", "latest_work", "method_comparison", "broad_topic")
-            ) and getattr(self.config.budget, "max_llm_calls", 8) > 0
-            # P2: Don't use LLM review if retrieval deadline is close to expiring
-            if use_llm_review and retrieval_deadline.remaining() < 10.0:
-                use_llm_review = False
-                LOGGER.info("Skipping LLM review — low retrieval deadline remaining (%.1fs)", retrieval_deadline.remaining())
-
-            review_llm = self.llm_client if use_llm_review else None
-            review_res = review_retrieval_results(query_plan, all_candidates, r - 1, review_llm, self.config)
-            # 更新上一轮的审阅结论
-            rounds_history[-1].review_conclusion = review_res.get("reason", "审阅完成")
-
-            # 5.2 决策是否提前终止
-            if review_res.get("next_action") == "stop_search":
-                LOGGER.info("Result Review Agent decided to STOP search in Round %d", r)
-                break
-
-            # 5.3 检索策略优化
-            LOGGER.info("Optimizing search strategy for Round %d", r)
-            # P2: Use heuristic strategy optimization if deadline is low
-            opt_llm = self.llm_client if retrieval_deadline.remaining() >= 10.0 else None
-            if opt_llm is None and self.llm_client is not None:
-                LOGGER.info("Using heuristic strategy optimization (deadline remaining: %.1fs)", retrieval_deadline.remaining())
-            opt_res = optimize_search_strategy(query_plan, review_res, all_candidates, r - 1, opt_llm)
-
-            new_subqueries_data = opt_res.get("new_subqueries", [])
-            new_queries = []
-            for item in new_subqueries_data:
-                # P0-2: Don't hardcode route="hybrid" — use evolved route and preserve all fields
-                sources = item.get("sources") or ["openalex", "semantic_scholar"]
-                new_queries.append(
-                    SearchQuery(
-                        query=item.get("query", ""),
-                        route=item.get("route", "evolved"),
-                        intent=item.get("reason", "expanded search"),
-                        priority=item.get("priority", 1),
-                        required_terms=item.get("required_terms", []),
-                        optional_terms=item.get("optional_terms", []),
-                        filters=item.get("filters", {}),
-                        sources=sources,
+            # ── Step A: LLM-first query understanding（首轮独立，后续带 feedback） ──
+            query_deadline = case_deadline.child(DEFAULT_QUERY_UNDERSTANDING, f"query_understanding_r{round_idx}")
+            use_llm_query = (
+                self.llm_client is not None
+                and not query_deadline.expired()
+                and getattr(self.config.budget, "max_llm_calls", 8) > 0
+            )
+            if use_llm_query:
+                _configured_timeout = getattr(self.config.llm, "timeout_seconds", 15)
+                _effective_timeout = query_deadline.timeout_for(_configured_timeout)
+                if hasattr(self.llm_client, "timeout"):
+                    self.llm_client.timeout = _effective_timeout
+                try:
+                    query_plan = understand_query(
+                        original_query, self.llm_client,
+                        feedback=last_review_feedback,
+                        prev_plan=prev_plan,
                     )
+                except Exception as exc:
+                    LOGGER.warning("LLM Query understanding failed in round %d: %s. Falling back.", round_idx, exc)
+                    query_plan = heuristic_understand_query(original_query)
+            else:
+                LOGGER.info("Skipping LLM query understanding in round %d", round_idx)
+                query_plan = heuristic_understand_query(original_query)
+
+            prev_plan = query_plan
+            LOGGER.info("Round %d: query_type=%s, methods=%s", round_idx, query_plan.query_type, query_plan.methods[:3])
+
+            # ── Step B: 动态路由配置 ──
+            review_feedback_for_routing = None
+            if last_review_feedback:
+                review_feedback_for_routing = {
+                    "missing_aspects": last_review_feedback.get("missing_aspects", []),
+                    "noise_patterns": last_review_feedback.get("noise_patterns", []),
+                    "kept_count": len(all_candidates),
+                    "target_size": 150,
+                }
+            routing_config = get_routing_config(query_plan, review_feedback_for_routing)
+            LOGGER.info("Round %d routing: %s", round_idx, routing_config.reason)
+
+            # ── Step C: 查询生成（首轮 LLM，后续轮可复用或重新生成） ──
+            if round_idx == 1 or last_review_feedback:
+                if self.llm_client is not None and not retrieval_deadline.expired():
+                    try:
+                        subqueries = generate_search_queries(query_plan, budget, self.llm_client)
+                    except Exception as exc:
+                        LOGGER.warning("LLM query generation failed round %d: %s. Falling back.", round_idx, exc)
+                        subqueries = heuristic_generate_search_queries(query_plan)
+                        budget.record_search_queries(len(subqueries))
+                else:
+                    subqueries = heuristic_generate_search_queries(query_plan)
+                    budget.record_search_queries(len(subqueries))
+
+                if query_expander.is_available():
+                    subqueries = [query_expander.expand_query(q) for q in subqueries]
+
+            # ── Step D: 多源检索（用动态路由配置） ──
+            LOGGER.info("Round %d: retrieving with %d queries", round_idx, len(subqueries))
+            _, new_pool = retriever.retrieve(
+                subqueries,
+                original_query=original_query,
+                query_plan=query_plan,
+                routing_config=routing_config,
+            )
+
+            # 合并去重
+            all_candidates.extend(new_pool)
+            all_candidates = deduplicate_papers(all_candidates)
+            all_candidates.sort(key=_get_rough_score, reverse=True)
+
+            # ── Step E: 引文网络扩展（所有 query_type 均启用） ──
+            # faiss_vector 向量检索已覆盖大部分语义召回缺口，refchain 保持轻量
+            if round_idx <= 2:
+                seed_papers = all_candidates[:5]
+                try:
+                    expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=10)
+                    all_candidates.extend(expanded_pool)
+                    all_candidates = deduplicate_papers(all_candidates)
+                    all_candidates.sort(key=_get_rough_score, reverse=True)
+                    LOGGER.info("Refchain expansion: +%d papers (seeds=%d, total=%d)",
+                                len(expanded_pool), len(seed_papers), len(all_candidates))
+                except Exception as exc:
+                    LOGGER.warning("Refchain expansion failed round %d: %s", round_idx, exc)
+
+            # ── Step F: LLM 审阅粗排（替代 local_pre_rank） ──
+            pool_review_deadline = case_deadline.child(DEFAULT_RETRIEVAL, f"pool_review_r{round_idx}")
+            pool_review_llm = self.llm_client if (
+                self.llm_client is not None
+                and not pool_review_deadline.expired()
+                and getattr(self.config.budget, "max_llm_calls", 8) > 0
+            ) else None
+
+            if pool_review_llm and hasattr(self.llm_client, "timeout"):
+                _pr_timeout = pool_review_deadline.timeout_for(
+                    getattr(self.config.llm, "timeout_pool_review", None) or 60
                 )
+                self.llm_client.timeout = _pr_timeout
 
-            # P2: Add feedback-based expansion queries from candidate pool
-            if query_expander.is_available() and all_candidates:
-                feedback_queries = query_expander.feedback_expand(
-                    new_queries if new_queries else subqueries,
-                    all_candidates,
-                    query_plan,
-                    max_new_queries=3,
-                )
-                if feedback_queries:
-                    new_queries.extend(feedback_queries)
-                    LOGGER.info("Added %d feedback expansion queries for Round %d", len(feedback_queries), r)
+            review_result = llm_review_pool(
+                all_candidates,
+                query_plan,
+                pool_review_llm,
+                original_query,
+                config=self.config,
+                deadline=pool_review_deadline,
+                batch_size=getattr(getattr(self.config, "selection", None), "pool_review_batch_size", 10) or 10,
+                max_review_papers=getattr(getattr(self.config, "selection", None), "pool_review_max_papers", 200) or 200,
+            )
 
-            new_candidates: list[Paper] = []
-            if new_queries:
-                budget.record_search_queries(len(new_queries))
-                _, new_pool = retriever.retrieve(new_queries, original_query=original_query, query_plan=query_plan)
-                new_candidates.extend(new_pool)
+            # 更新 all_candidates 为 LLM 审阅后的保留集
+            all_candidates = review_result["kept_papers"]
+            # Set local_pre_rank_score so downstream sorting (Stage 6 sampling, listwise input) works
+            for p in all_candidates:
+                p.metadata["local_pre_rank_score"] = _get_rough_score(p)
+            all_candidates.sort(key=_get_rough_score, reverse=True)
 
-            # 5.4 引文网络扩展
-            enable_refchain = False
-            query_type = getattr(query_plan, "query_type", "unknown")
-            if query_type in {"citation_tracking", "survey", "method_comparison"}:
-                enable_refchain = True
-            elif len(all_candidates) < 100:
-                enable_refchain = True
-
-            if enable_refchain and (review_res.get("need_citation_expansion") or opt_res.get("citation_expansion_seeds")):
-                seed_ids = set(opt_res.get("citation_expansion_seeds", []))
-                seed_papers = [p for p in all_candidates if p.paper_id in seed_ids]
-                if not seed_papers:
-                    seed_papers = all_candidates[:3]
-
-                LOGGER.info("Expanding citation network for Round %d with %d seeds", r, len(seed_papers))
-                expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=5)
-                new_candidates.extend(expanded_pool)
-
-            # 合并去重新候选
-            if new_candidates:
-                all_candidates.extend(new_candidates)
-                all_candidates = deduplicate_papers(all_candidates)
-                all_candidates.sort(key=_get_rough_score, reverse=True)
-
-            # 记录当前轮
+            # 记录本轮
             round_record = SearchProcessRound(
-                round_index=r,
-                search_goal=opt_res.get("search_goal", "补充缺失主题与硬约束项"),
-                queries=[q.query for q in new_queries],
+                round_index=round_idx,
+                search_goal=f"Round {round_idx}: 动态路由+LLM审阅 (kept={len(all_candidates)}, missing={len(review_result.get('missing_aspects', []))})",
+                queries=[q.query for q in subqueries],
                 candidates_found=len(all_candidates),
-                review_conclusion="检索完成"
+                review_conclusion=f"coverage={review_result.get('coverage_score', 0):.2f}, converged={review_result.get('converged', True)}",
             )
             rounds_history.append(round_record)
 
-            if opt_res.get("stop_after_this_round", False):
-                LOGGER.info("Strategy Optimizer Agent decided to STOP after Round %d", r)
+            # ── Step G: 收敛判定 ──
+            missing_aspects = review_result.get("missing_aspects", [])
+            converged = review_result.get("converged", True)
+            if converged and not missing_aspects:
+                LOGGER.info("Round %d converged (no missing aspects, coverage=%.2f). Stopping loop.",
+                            round_idx, review_result.get("coverage_score", 0))
+                break
+            if round_idx >= max_rounds:
+                LOGGER.info("Round %d reached max_rounds. Stopping loop.", round_idx)
                 break
 
-        # 最后一轮的最终审阅更新 (P1.5: always heuristic, no LLM)
-        if rounds_history and rounds_history[-1].review_conclusion == "检索完成":
-            final_review = review_retrieval_results(query_plan, all_candidates, len(rounds_history), None, self.config)
-            rounds_history[-1].review_conclusion = final_review.get("reason", "最终检索完成")
+            # 准备下一轮的 feedback
+            last_review_feedback = review_result
+            LOGGER.info("Round %d: %d missing aspects, will re-understand in round %d",
+                        round_idx, len(missing_aspects), round_idx + 1)
 
+        # 最终排序
+        for p in all_candidates:
+            if "local_pre_rank_score" not in p.metadata:
+                p.metadata["local_pre_rank_score"] = _get_rough_score(p)
         all_candidates.sort(key=_get_rough_score, reverse=True)
 
-        # Local pre-rank: compress the rough-sorted pool down to pre_rank_topk
-        # (default 200) using cheap local signals before LLM selection.
-        from scholar_agent.ranking.local_pre_ranker import local_pre_rank
-        pre_rank_topk = getattr(self.config.ranking, "pre_rank_topk", 200)
-        pre_ranked_candidates = local_pre_rank(
-            all_candidates,
-            query_plan,
-            original_query,
-            topk=pre_rank_topk,
-        )
+        # pre_ranked_candidates = LLM 审阅后的池子（替代旧的 local_pre_rank 输出）
+        pre_ranked_candidates = all_candidates
         LOGGER.info(
-            "Local pre-rank: %d -> %d candidates (topk=%d)",
-            len(all_candidates), len(pre_ranked_candidates), pre_rank_topk,
+            "Stage 1 final: %d candidates after LLM pool review (closed-loop, %d rounds)",
+            len(pre_ranked_candidates), len(rounds_history),
         )
+
+        # Semantic bridge: BGE-M3 vector re-ranking + RRF fusion
+        # Bridges vocabulary mismatch that keyword search cannot handle
+        enable_semantic = getattr(self.config, "enable_semantic_bridge", False)
+        if enable_semantic and all_candidates:
+            try:
+                embedding_service = EmbeddingService(
+                    model_name=getattr(self.config, "embedding_model_name", "BAAI/bge-m3"),
+                    device=getattr(self.config, "embedding_device", "cuda"),
+                    cache_dir=getattr(self.config, "embedding_cache_dir", "data/cache/embeddings"),
+                )
+                bridge = SemanticBridge(
+                    embedding_service,
+                    keyword_weight=getattr(self.config, "rrf_keyword_weight", 1.0),
+                    vector_weight=getattr(self.config, "rrf_vector_weight", 1.5),
+                    rrf_k=getattr(self.config, "rrf_k", 60),
+                )
+                all_candidates = bridge.apply(
+                    candidate_pool=all_candidates,
+                    original_query=original_query,
+                    llm_client=self.llm_client,
+                    query_plan=query_plan,
+                    enable_hyde=False,  # Skip HyDE LLM call to save 20-30s per case
+                )
+                pre_ranked_candidates = all_candidates
+                LOGGER.info(
+                    "Semantic bridge applied: %d candidates after RRF fusion",
+                    len(all_candidates),
+                )
+            except Exception as e:
+                LOGGER.warning("Semantic bridge failed (falling back to keyword-only): %s", e)
 
         # 存储候选池供评估框架审计 (full pool, not pre-ranked subset)
         self.candidate_pool = all_candidates
@@ -587,7 +610,47 @@ class PaperAgentPipeline:
                     remaining_budget -= 1
                 idx += 1
 
-        # 3. Fill any remaining slots with top-scored papers
+        # 3a. Dense-only high-score papers (BGE-M3 vector search results not yet selected)
+        # These papers were found by faiss_vector but missed by route-based sampling.
+        # They may contain gold papers that keyword search couldn't find.
+        _dense_only = [
+            p for p in pre_ranked_candidates
+            if p.paper_id not in seen_ids
+            and any("faiss_vector" in path or "semantic" in path for path in (p.retrieval_path or []))
+            and float(p.metadata.get("vector_score", 0) or p.metadata.get("bge_score", 0) or 0) > 0.3
+        ]
+        _dense_only.sort(
+            key=lambda p: float(p.metadata.get("vector_score", 0) or p.metadata.get("bge_score", 0) or 0),
+            reverse=True,
+        )
+        _dense_budget = min(len(_dense_only), max(5, selection_budget // 8))
+        for p in _dense_only[:_dense_budget]:
+            if len(selection_candidates) >= selection_budget:
+                break
+            _add_unique(p)
+        if _dense_only:
+            LOGGER.info("Dense-only sampling: %d candidates (vector_score>0.3), added %d",
+                        len(_dense_only), _dense_budget)
+
+        # 3b. Soft-dropped high-score papers (pool review said soft_drop but score is high)
+        # Non-destructive pool review tags papers as soft_drop/noise instead of deleting.
+        # Give high-score soft_dropped papers a second chance at evidence selection.
+        _soft_dropped = [
+            p for p in pre_ranked_candidates
+            if p.paper_id not in seen_ids
+            and p.metadata.get("pool_review_action") in ("soft_drop", "noise")
+        ]
+        _soft_dropped.sort(key=_get_rough_score, reverse=True)
+        _soft_budget = min(len(_soft_dropped), max(3, selection_budget // 12))
+        for p in _soft_dropped[:_soft_budget]:
+            if len(selection_candidates) >= selection_budget:
+                break
+            _add_unique(p)
+        if _soft_dropped:
+            LOGGER.info("Soft-dropped sampling: %d candidates (pool_review=soft_drop/noise), added %d",
+                        len(_soft_dropped), _soft_budget)
+
+        # 4. Fill any remaining slots with top-scored papers
         for p in pre_ranked_candidates:
             if len(selection_candidates) >= selection_budget:
                 break
@@ -799,9 +862,13 @@ class PaperAgentPipeline:
         # 8. Effect-first 多维度综合重排
         # Use all_candidates (full pool) so gold papers cut by pre_rank aren't lost
         LOGGER.info("Reranking papers based on effect-first fusion formula")
+        _rel_probs = {}
+        if listwise_result is not None and listwise_result.success:
+            _rel_probs = getattr(listwise_result, "relevance_probabilities", {}) or {}
         ranked_papers = rerank_papers(
             all_candidates, validated_selections, self.config, original_query,
             listwise_scores=listwise_scores,
+            relevance_probabilities=_rel_probs,
         )
 
         # P1.5 Task 3: Store intermediate results for candidate-to-final trace

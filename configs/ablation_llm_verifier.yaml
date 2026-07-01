@@ -1,0 +1,121 @@
+# Ablation Level 4: + LLM Verifier
+# All providers + LLM for query understanding/verification, no query expansion
+# Purpose: Measure gain from LLM-guided query planning and evidence selection
+# Note: LLMCircuitBreaker + local JSON repair always active in pipeline
+
+app:
+  name: scholar-agent
+  mode: live
+  output_format: json
+  providers:
+    - pasa_local
+    - openalex
+    - semantic_scholar
+  cache_dir: data/cache
+  parallel_retrieval: true
+
+llm:
+  enabled: true
+  mode: auto
+  api_key_env: DEEPSEEK_API_KEY
+  base_url_env: DEEPSEEK_BASE_URL
+  base_url: https://api.deepseek.com
+  model_flash: deepseek-v4-flash
+  model_pro: deepseek-v4-pro
+  model: deepseek-v4-flash
+  timeout_seconds: 15
+  max_tokens: 4096
+  temperature: 0.2
+  trust_env: false
+  max_retries: 1
+
+providers:
+  pasa_local:
+    enabled: true
+    enable_fts: true
+    base_url: data
+    timeout_seconds: 0
+    retry_times: 0
+    min_interval_seconds: 0.0
+    max_concurrency: 1
+    backoff_base_seconds: 0.0
+  openalex:
+    enabled: true
+    base_url: https://api.openalex.org/works
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 1.0
+    max_concurrency: 1
+    backoff_base_seconds: 2.0
+    mailto: "cll461943@gmail.com"
+    api_key_env: OPENALEX_API_KEY
+  arxiv:
+    enabled: false
+    base_url: https://export.arxiv.org/api/query
+    timeout_seconds: 5
+    retry_times: 0
+    min_interval_seconds: 2.0
+    max_concurrency: 1
+    backoff_base_seconds: 3.0
+  semantic_scholar:
+    enabled: true
+    base_url: https://api.semanticscholar.org/graph/v1/paper/search
+    timeout_seconds: 8
+    retry_times: 1
+    min_interval_seconds: 2.0
+    max_concurrency: 1
+    backoff_base_seconds: 1.5
+    api_key_env: SEMANTIC_SCHOLAR_API_KEY
+  pubmed:
+    enabled: false
+    base_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
+    timeout_seconds: 8
+    retry_times: 0
+    min_interval_seconds: 0.35
+    max_concurrency: 1
+    backoff_base_seconds: 1.0
+
+budget:
+  max_search_queries: 14
+  max_retrieval_rounds: 2
+  max_results_per_query: 40
+  max_candidate_pool_size: 800
+  max_seed_papers: 5
+  max_refchain_depth: 1
+  max_llm_selection_papers: 30
+  max_final_papers: 12
+  max_evidence_summary_papers: 5
+  max_llm_calls: 8
+  llm_timeout_seconds: 15
+  api_timeout_seconds: 8
+  retry_times: 1
+  known_title_seed_only: false
+  enable_query_expansion: false
+
+ranking:
+  max_final_papers: 12
+  pre_rank_topk: 200
+  weights:
+    llm_relevance: 0.25
+    bge: 0.18
+    constraint: 0.20
+    evidence: 0.15
+    source_agreement: 0.08
+    recency: 0.05
+    authority: 0.05
+    graph_prior: 0.02
+    title_bonus: 0.02
+
+known_title_clues:
+  enabled: true
+
+dynamic_k:
+  exact_title_k: 1
+  specific_query_k: 2
+  method_comparison_k: 6
+  survey_k: 10
+  score_gap_top1: 0.15
+  min_final_score: 0.40
+  fallback_k: 5
+  hard_max_output: 12
+

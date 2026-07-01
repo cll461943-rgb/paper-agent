@@ -3,7 +3,6 @@ app:
   mode: mock          # 可选: mock, live
   output_format: json
   providers:
-    - pasa_local
     - openalex
     - semantic_scholar
     - arxiv
@@ -21,15 +20,15 @@ llm:
   model_pro: deepseek-v4-pro
   # 默认降级用 model (若只配置单一 model)
   model: deepseek-v4-flash
-  timeout_seconds: 30
+  timeout_seconds: 60
   max_tokens: 8192
   temperature: 0.2
   trust_env: false
-  max_retries: 1
+  max_retries: 2
 
 providers:
   pasa_local:
-    enabled: true
+    enabled: false
     enable_fts: true
     base_url: data
     timeout_seconds: 0
@@ -40,29 +39,29 @@ providers:
   openalex:
     enabled: true
     base_url: https://api.openalex.org/works
-    timeout_seconds: 8
-    retry_times: 1
+    timeout_seconds: 12
+    retry_times: 3
     min_interval_seconds: 1.0
     max_concurrency: 1
-    backoff_base_seconds: 2.0
+    backoff_base_seconds: 4.0
     mailto: "cll461943@gmail.com"
     api_key_env: OPENALEX_API_KEY
   arxiv:
     enabled: false
     base_url: https://export.arxiv.org/api/query
-    timeout_seconds: 5
-    retry_times: 0
+    timeout_seconds: 8
+    retry_times: 1
     min_interval_seconds: 2.0
     max_concurrency: 1
     backoff_base_seconds: 3.0
   semantic_scholar:
     enabled: true
     base_url: https://api.semanticscholar.org/graph/v1/paper/search
-    timeout_seconds: 8
-    retry_times: 1
+    timeout_seconds: 12
+    retry_times: 3
     min_interval_seconds: 2.0
     max_concurrency: 1
-    backoff_base_seconds: 1.5
+    backoff_base_seconds: 3.0
     api_key_env: SEMANTIC_SCHOLAR_API_KEY
   pubmed:
     enabled: true
@@ -84,9 +83,9 @@ budget:
   max_final_papers: 20
   max_evidence_summary_papers: 10
   max_llm_calls: 60
-  llm_timeout_seconds: 30
-  api_timeout_seconds: 8
-  retry_times: 1
+  llm_timeout_seconds: 60
+  api_timeout_seconds: 12
+  retry_times: 2
   known_title_seed_only: false
   enable_query_expansion: true
   adaptive_provider_fallback: true

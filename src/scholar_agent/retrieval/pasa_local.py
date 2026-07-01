@@ -50,9 +50,10 @@ class PasaLocalProvider(PaperProvider):
         self.root = Path(config.base_url)
         self.id2paper_path = self.root / "id2paper.json"
         self.paper_zip_path = self.root / "cs_paper_2nd.zip"
+        self.paper_dir_path = self.root / "cs_paper_2nd"
         self.fts_path = self.root / "pasa_local_fts.sqlite"
         self.enable_fts = bool(getattr(config, "enable_fts", False))
-        self._available = self.id2paper_path.exists() and self.paper_zip_path.exists()
+        self._available = self.id2paper_path.exists() and (self.paper_zip_path.exists() or self.paper_dir_path.is_dir())
         self._cache_key = str(self.root.resolve())
         self._index_ready = False
         self._paper_index: list[dict[str, Any]] = []
@@ -133,13 +134,21 @@ class PasaLocalProvider(PaperProvider):
     def _load_paper_json(self, title_key: str) -> dict[str, Any] | None:
         if title_key not in self._title_keys:
             return None
+        # Try reading from directory first
+        dir_file = self.paper_dir_path / title_key
+        if dir_file.exists():
+            try:
+                return json.loads(dir_file.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        # Fallback to ZIP archive
         archive = self._open_zip()
-        if archive is None:
-            return None
-        try:
-            return json.loads(archive.read(title_key).decode("utf-8"))
-        except Exception:
-            return None
+        if archive is not None:
+            try:
+                return json.loads(archive.read(title_key).decode("utf-8"))
+            except Exception:
+                pass
+        return None
 
     def _open_fts(self) -> sqlite3.Connection | None:
         if self._fts_conn is not None:

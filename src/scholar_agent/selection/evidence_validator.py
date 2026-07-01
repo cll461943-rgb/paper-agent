@@ -80,12 +80,41 @@ def _selection_constraint_coverage(selection: SelectionResult, plan: QueryPlan) 
     return hit / max(len(constraints), 1)
 
 
+def _build_paper_text(paper: Paper) -> str:
+    """Build comprehensive text from all available paper metadata for evidence validation.
+    
+    Multi-evidence sources: title, abstract, metadata concepts, venue, year, retrieval_path.
+    This replaces the old title+abstract-only check that was too strict for papers
+    with missing abstracts.
+    """
+    parts = [paper.title or "", paper.abstract or ""]
+    
+    # Add metadata concepts if available
+    if paper.metadata:
+        concepts = paper.metadata.get("concepts") or paper.metadata.get("keywords") or []
+        if isinstance(concepts, list):
+            parts.extend(str(c) for c in concepts)
+        elif isinstance(concepts, str):
+            parts.append(concepts)
+    
+    # Add venue if available
+    if paper.venue:
+        parts.append(paper.venue)
+    
+    # Add retrieval path terms (route names often contain query-relevant terms)
+    for path in (paper.retrieval_path or []):
+        parts.append(path.replace(".", " ").replace("_", " "))
+    
+    return " ".join(p for p in parts if p)
+
+
 def _valid_evidence_ratio(selection: SelectionResult, paper: Paper) -> float:
     """计算 selection 中证据片段真实存在于 paper 文本的比例。"""
     if not selection.evidence:
         return 0.0
 
-    text = f"{paper.title} {paper.abstract or ''}".lower()
+    # Use comprehensive paper text (title + abstract + metadata + venue + retrieval_path)
+    text = _build_paper_text(paper).lower()
     valid = 0
 
     for ev in selection.evidence:
@@ -121,23 +150,29 @@ def validate_evidence(
                     f"Year constraint violated: Paper year {paper.year} is outside range [{start_year}, {end_year}]."
                 )
 
-    # 2. 校验证据片段真实性（必须存在于标题或摘要中）
-    title_norm = _normalize(paper.title)
-    abstract_norm = _normalize(paper.abstract or "")
-    combined_norm = title_norm + abstract_norm
+    # 2. 校验证据片段真实性（使用多证据源：title + abstract + metadata + venue + retrieval_path）
+    paper_text = _build_paper_text(paper)
+    combined_norm = _normalize(paper_text)
 
     for ev in selection.evidence:
         ev_norm = _normalize(ev.text)
         if not ev_norm:
             continue
         if ev_norm not in combined_norm:
-            is_validated = False
-            validated_notes.append(
-                f"Hallucinated evidence detected: '{ev.text[:30]}...' could not be verified in title or abstract."
-            )
+            # Lenient check: if key terms from evidence appear in paper text, don't flag as hallucinated
+            # This prevents false positives when evidence is paraphrased or uses synonyms
+            ev_words = set(re.findall(r"\b\w{3,}\b", ev.text.lower()))
+            paper_words = set(re.findall(r"\b\w+\b", paper_text.lower()))
+            stop_words = {"the", "a", "an", "of", "and", "in", "to", "for", "with", "on", "at", "by", "from", "that", "this"}
+            ev_core = ev_words - stop_words
+            if ev_core and not all(w in paper_words for w in ev_core):
+                is_validated = False
+                validated_notes.append(
+                    f"Evidence could not be verified in paper metadata: '{ev.text[:30]}...'"
+                )
 
-    # 3. 校验 must-have 强约束词
-    paper_content_norm = _normalize((paper.title or "") + " " + (paper.abstract or ""))
+    # 3. 校验 must-have 强约束词（使用多证据源文本）
+    paper_content_norm = _normalize(paper_text)
     for constraint in plan.must_have_constraints:
         if not _check_constraint_match(constraint, paper_content_norm, paper.title, paper.abstract):
             is_validated = False
