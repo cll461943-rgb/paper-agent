@@ -837,7 +837,10 @@ class PaperAgentPipeline:
                 # A flash timeout shouldn't block the pro call — different phases, different models.
                 if hasattr(self, '_llm_circuit_breaker') and self._llm_circuit_breaker is not None:
                     _pre_reset_stats = self._llm_circuit_breaker.get_stats()
-                    self._llm_circuit_breaker.reset()
+                    if hasattr(self._llm_circuit_breaker, "reset_transient"):
+                        self._llm_circuit_breaker.reset_transient()
+                    else:
+                        self._llm_circuit_breaker.reset()
                     LOGGER.info(
                         "Reset LLM circuit breaker for listwise reranking phase (was: %s)",
                         _pre_reset_stats,

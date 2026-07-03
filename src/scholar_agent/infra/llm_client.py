@@ -240,7 +240,12 @@ class OpenAICompatibleLLMClient:
         except Exception as exc:
             # P2: Record to circuit breaker
             if self._circuit_breaker is not None:
-                if isinstance(exc, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
+                permanent_status = None
+                if isinstance(exc, requests.exceptions.HTTPError) and exc.response is not None:
+                    permanent_status = exc.response.status_code
+                if permanent_status in {401, 402, 403} and hasattr(self._circuit_breaker, "record_permanent_error"):
+                    self._circuit_breaker.record_permanent_error(str(exc))
+                elif isinstance(exc, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
                     self._circuit_breaker.record_timeout()
                 else:
                     self._circuit_breaker.record_error(str(exc))

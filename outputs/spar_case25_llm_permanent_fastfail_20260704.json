@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "mode": "live",
+    "n_cases": 1,
+    "avg_f1_final": 0.1053,
+    "avg_precision_final": 0.1,
+    "avg_recall_final": 0.1111,
+    "avg_candidate_recall_50": 0.1667,
+    "avg_candidate_recall_100": 0.1667,
+    "avg_candidate_recall_300": 0.1667,
+    "avg_candidate_recall_500": 0.1667,
+    "avg_selector_recall": 0.1667,
+    "avg_final_transfer_rate": 0.6667,
+    "avg_wall_time": 79.9821,
+    "queries_over_time_budget": 0,
+    "queries_with_errors": 0,
+    "total_llm_calls": 1,
+    "total_api_calls": 60,
+    "total_token_estimate": 0,
+    "total_cache_hits": 6
+  },
+  "topk_sweep_summary": {
+    "topk_case_count": 1,
+    "avg_f1_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.1053
+    },
+    "avg_precision_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.1
+    },
+    "avg_recall_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.1111
+    },
+    "avg_oracle_f1": 0.1053,
+    "avg_dynamic_k_f1": 0.1053,
+    "avg_oracle_best_k": 20.0,
+    "avg_dynamic_k_chosen": 20.0,
+    "avg_output_k": 20.0
+  },
+  "k_predictor_classification": {
+    "categories": {
+      "good_match": 1,
+      "under_output": 0,
+      "over_output": 0,
+      "ranking_failure": 0,
+      "probability_calibration_failure": 0,
+      "g_hat_underestimate_failure": 0
+    },
+    "per_case": [
+      {
+        "case": "Case #25",
+        "category": "good_match",
+        "oracle_k": 20,
+        "dynamic_k": 20,
+        "gap": 0.0,
+        "g_hat": 83.67,
+        "gold_count": 18,
+        "lc_uniform": false,
+        "mean_prob": 0.9103,
+        "std_prob": 0.0026
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_index": 25,
+      "name": "case-25",
+      "query": "How can AI methods improve sentiment analysis model accuracy? For instance, \"How is Xiaoming?\" might have completely different meanings depending on the context",
+      "success": true,
+      "elapsed_seconds": 79.9821,
+      "precision": 0.1,
+      "recall": 0.1111,
+      "f1": 0.1053,
+      "candidate_recall_50": 0.1667,
+      "candidate_recall_100": 0.1667,
+      "candidate_recall_300": 0.1667,
+      "candidate_recall_500": 0.1667,
+      "selector_recall": 0.16666666666666666,
+      "final_transfer_rate": 0.6666666666666666,
+      "llm_calls": 1,
+      "api_calls": 60,
+      "dynamic_k_chosen": 20,
+      "oracle_best_k": 20,
+      "oracle_f1": 0.1053,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.1053
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.1
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.1111
+        },
+        "oracle_best_k": 20,
+        "oracle_f1": 0.1053
+      },
+      "errors": [
+        "llm request failed: 403 Client Error: Forbidden for url: https://api.tokenhub.market/v1/chat/completions"
+      ]
+    }
+  ],
+  "llm_stats": {
+    "deepseek-v4-flash": {
+      "calls": 54,
+      "tokens": 0,
+      "elapsed": 0.3162113999715075
+    },
+    "deepseek-v4-pro": {
+      "calls": 1,
+      "tokens": 0,
+      "elapsed": 1.0099989594891667e-05
+    }
+  },
+  "retrieval_stats": {
+    "semantic_scholar": {
+      "elapsed": 0.009872700000414625,
+      "calls": 0,
+      "items": 0
+    },
+    "openalex": {
+      "elapsed": 74.61471750002238,
+      "calls": 60,
+      "items": 0
+    }
+  },
+  "component_stats": {
+    "query_understanding": {
+      "elapsed": 0.31599080000887625,
+      "calls": 4,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.core_topic": {
+      "elapsed": 0.001793500006897375,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.core_topic": {
+      "elapsed": 0.005417300009867176,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.broad_synonym": {
+      "elapsed": 0.004296200000680983,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.broad_synonym": {
+      "elapsed": 0.003343799995491281,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.title_like": {
+      "elapsed": 0.0036167999787721783,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.title_like": {
+      "elapsed": 0.0037829999928362668,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.reference_expansion": {
+      "elapsed": 39.6968452000292,
+      "calls": 30,
+      "tokens": 0
+    },
+    "retrieval.openalex.citation_expansion": {
+      "elapsed": 6.580000626854599e-05,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.related_work_expansion": {
+      "elapsed": 34.90542860000278,
+      "calls": 30,
+      "tokens": 0
+    },
+    "search_planning": {
+      "elapsed": 1.750001683831215e-05,
+      "calls": 2,
+      "tokens": 0
+    },
+    "evidence_selector": {
+      "elapsed": 0.00020309994579292834,
+      "calls": 48,
+      "tokens": 0
+    }
+  }
+}

@@ -30,6 +30,7 @@ class LLMCircuitBreaker:
         self._max_errors = max_errors
         self._tripped = False
         self._trip_reason = ""
+        self._permanent = False
         self._last_call_time: float = 0.0
 
     def record_timeout(self) -> None:
@@ -47,6 +48,8 @@ class LLMCircuitBreaker:
 
     def record_error(self, error: str = "") -> None:
         """Record a non-timeout LLM error. Trips after max_errors."""
+        if self._permanent:
+            return
         self._error_count += 1
         self._last_call_time = time.perf_counter()
         lowered = (error or "").lower()
@@ -63,8 +66,23 @@ class LLMCircuitBreaker:
                 self._error_count, error[:100],
             )
 
+    def record_permanent_error(self, error: str = "") -> None:
+        """Trip immediately for non-recoverable provider/auth/account errors."""
+        self._error_count += 1
+        self._last_call_time = time.perf_counter()
+        self._tripped = True
+        self._permanent = True
+        self._trip_reason = "permanent_error"
+        LOGGER.warning(
+            "LLM circuit breaker TRIPPED after permanent error. "
+            "All subsequent LLM calls in this case will use heuristic fallback. Last: %s",
+            error[:100],
+        )
+
     def record_success(self) -> None:
         """Record a successful LLM call. Resets timeout/error counters."""
+        if self._permanent:
+            return
         self._success_count += 1
         self._last_call_time = time.perf_counter()
         # Partial recovery: reset timeout count on success
@@ -88,7 +106,18 @@ class LLMCircuitBreaker:
             "timeouts": self._timeout_count,
             "errors": self._error_count,
             "successes": self._success_count,
+            "permanent": self._permanent,
         }
+
+    def reset_transient(self) -> None:
+        """Reset transient counters between phases without clearing permanent errors."""
+        if self._permanent:
+            return
+        self._timeout_count = 0
+        self._error_count = 0
+        self._success_count = 0
+        self._tripped = False
+        self._trip_reason = ""
 
     def reset(self) -> None:
         """Reset the circuit breaker for a new case."""
@@ -97,3 +126,4 @@ class LLMCircuitBreaker:
         self._success_count = 0
         self._tripped = False
         self._trip_reason = ""
+        self._permanent = False
