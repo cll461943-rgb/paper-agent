@@ -415,6 +415,18 @@ def select_case_indices(
     return indices
 
 
+def apply_time_budget_to_config(config: Any, time_budget: float | None) -> float:
+    """Keep evaluation timeout accounting and pipeline deadline aligned."""
+    budget_config = getattr(config, "budget", None)
+    configured_deadline = getattr(budget_config, "case_deadline_seconds", 180.0)
+    effective_budget = float(time_budget) if time_budget is not None else float(configured_deadline)
+
+    if budget_config is not None:
+        budget_config.case_deadline_seconds = effective_budget
+
+    return effective_budget
+
+
 def format_compare(label: str, current: float, baseline: float, is_time: bool = False) -> str:
     diff = current - baseline
     if is_time:
@@ -509,7 +521,7 @@ def run_evaluation(
     cases_filter: str | None = None,
     simple: bool = False,
     output_path: str | None = None,
-    time_budget: float = 30.0,
+    time_budget: float | None = None,
     config_path: str | None = None,
     trace_gold: bool = False,
     dataset_file: str | None = None,
@@ -517,6 +529,7 @@ def run_evaluation(
 ) -> None:
     # 加载配置
     config = load_config(config_path)
+    time_budget = apply_time_budget_to_config(config, time_budget)
     config.app.mode = mode
 
     # P1.5: Respect YAML provider settings — don't force-enable all providers
@@ -1119,8 +1132,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "-t", "--time-budget",
         type=float,
-        default=30.0,
-        help="单个 Query 的最大耗时预算（秒），超过此值算为超时，默认 30.0"
+        default=None,
+        help="单个 Query 的最大耗时预算（秒），同时作为 pipeline deadline；未指定则使用配置 case_deadline_seconds"
     )
     parser.add_argument(
         "--config",
