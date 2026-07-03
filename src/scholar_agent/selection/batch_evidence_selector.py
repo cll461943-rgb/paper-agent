@@ -404,33 +404,31 @@ def _llm_review_batch(
         stats.fallback_local += len(papers)
         return {}
 
-    # Determine effective timeout — safeguard against hierarchical deadline compression
-    effective_timeout = timeout_override
-    if deadline is not None:
-        rem = deadline.remaining()
-        # Look up absolute case remaining time
-        curr = deadline
-        abs_rem = rem
-        while curr._parent is not None:
-            curr = curr._parent
-            abs_rem = curr.remaining()
-        # Keep at least 15s timeout for API calls to avoid false breaker trips,
-        # unless the absolute case deadline itself is nearly exhausted.
-        min_safe = max(1.0, min(15.0, abs_rem))
-        if effective_timeout is not None:
-            effective_timeout = max(min_safe, min(float(effective_timeout), rem))
-        else:
-            effective_timeout = max(min_safe, rem)
+    def _timeout_for_next_call() -> float | None:
+        configured_timeout = timeout_override
+        if deadline is None:
+            return configured_timeout
+
+        remaining = deadline.remaining()
+        if remaining <= 1.0:
+            return None
+        if configured_timeout is None:
+            return remaining
+        return max(1.0, min(float(configured_timeout), remaining))
 
     stats.total_batches += 1
 
     # ── Attempt 1: Full batch, abstract[:800] ──
+    call_timeout = _timeout_for_next_call()
+    if call_timeout is None:
+        stats.fallback_local += len(papers)
+        return {}
     system_prompt, user_prompt = _build_evidence_prompt(plan, papers, abstract_limit=800)
     try:
         response = llm_client.complete_json(
             system_prompt, user_prompt,
             model_type="flash",
-            timeout_seconds=effective_timeout,
+            timeout_seconds=call_timeout,
             max_tokens=max_tokens,
         )
         if response is not None:
@@ -457,13 +455,17 @@ def _llm_review_batch(
         for half in halves:
             if not half:
                 continue
+            call_timeout = _timeout_for_next_call()
+            if call_timeout is None:
+                stats.fallback_local += len(half)
+                continue
             half_ids = {p.paper_id for p in half}
             sp, up = _build_evidence_prompt(plan, half, abstract_limit=800)
             try:
                 resp = llm_client.complete_json(
                     sp, up,
                     model_type="flash",
-                    timeout_seconds=effective_timeout,
+                    timeout_seconds=call_timeout,
                     max_tokens=max_tokens,
                 )
                 if resp is not None:
@@ -479,12 +481,16 @@ def _llm_review_batch(
             return result
 
     # ── Attempt 3: Truncated abstract[:200] ──
+    call_timeout = _timeout_for_next_call()
+    if call_timeout is None:
+        stats.fallback_local += len(papers)
+        return {}
     system_prompt, user_prompt = _build_evidence_prompt(plan, papers, abstract_limit=200)
     try:
         response = llm_client.complete_json(
             system_prompt, user_prompt,
             model_type="flash",
-            timeout_seconds=effective_timeout,
+            timeout_seconds=call_timeout,
             max_tokens=max_tokens,
         )
         if response is not None:
@@ -502,6 +508,10 @@ def _llm_review_batch(
             stats.llm_errors += 1
 
     # ── Attempt 4: Title + abstract_head[:100] + local_features ──
+    call_timeout = _timeout_for_next_call()
+    if call_timeout is None:
+        stats.fallback_local += len(papers)
+        return {}
     system_prompt, user_prompt = _build_evidence_prompt(
         plan, papers, abstract_limit=100, include_local_features=True
     )
@@ -509,7 +519,7 @@ def _llm_review_batch(
         response = llm_client.complete_json(
             system_prompt, user_prompt,
             model_type="flash",
-            timeout_seconds=effective_timeout,
+            timeout_seconds=call_timeout,
             max_tokens=max_tokens,
         )
         if response is not None:

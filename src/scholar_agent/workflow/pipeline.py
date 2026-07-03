@@ -233,6 +233,100 @@ def _build_diversified_top80(
     return result
 
 
+def _metadata_float(paper: Paper, key: str, default: float = 0.0) -> float:
+    try:
+        return float(paper.metadata.get(key, default))
+    except (TypeError, ValueError):
+        return default
+
+
+def _has_retrieval_route(paper: Paper, needle: str) -> bool:
+    return any(needle in path for path in (paper.retrieval_path or []))
+
+
+def _is_listwise_recall_bridge_candidate(
+    paper: Paper,
+    selection: SelectionResult,
+) -> bool:
+    """Allow strong low-level retrieval hits into listwise without relabeling them."""
+    if selection.relevance_level != "low":
+        return False
+
+    notes = " ".join(selection.validation_notes or []).lower()
+    if "year constraint violated" in notes:
+        return False
+
+    local_score = _metadata_float(paper, "local_pre_rank_score")
+    matched_count = len(selection.matched_constraints or [])
+    route_count = len(set(paper.retrieval_path or []))
+    has_title_exact = _has_retrieval_route(paper, "title_exact")
+    has_title_like = _has_retrieval_route(paper, "title_like")
+
+    if selection.is_validated is False and not (has_title_exact or has_title_like):
+        return False
+
+    if has_title_exact:
+        return local_score >= 0.30 or matched_count > 0 or route_count >= 2
+    if has_title_like:
+        return local_score >= 0.55 or (local_score >= 0.45 and matched_count > 0)
+
+    return local_score >= 0.70 and (matched_count > 0 or route_count >= 3)
+
+
+def _select_listwise_input_candidates(
+    all_candidates: list[Paper],
+    validated_selections: list[SelectionResult],
+    *,
+    max_low_bridge: int = 12,
+) -> tuple[list[Paper], int, int]:
+    """Select recall-first listwise inputs from validated evidence results.
+
+    High and medium candidates keep the existing behavior. A small number of
+    low-labeled candidates can be bridged into listwise when retrieval evidence
+    is strong enough that the listwise reranker should adjudicate them.
+    """
+    sel_map = {sel.paper_id: sel for sel in validated_selections}
+    selected: list[Paper] = []
+    bridge_candidates: list[Paper] = []
+    filtered_medium_count = 0
+
+    for paper in all_candidates:
+        selection = sel_map.get(paper.paper_id)
+        if selection is None:
+            continue
+
+        if selection.relevance_level == "high":
+            selected.append(paper)
+        elif selection.relevance_level == "medium":
+            rel_score = getattr(selection, "relevance_score", 0.0) or 0.0
+            if rel_score >= 0.25:
+                selected.append(paper)
+            else:
+                filtered_medium_count += 1
+        elif _is_listwise_recall_bridge_candidate(paper, selection):
+            bridge_candidates.append(paper)
+
+    selected_ids = {paper.paper_id for paper in selected}
+    bridge_candidates.sort(
+        key=lambda paper: _metadata_float(paper, "local_pre_rank_score"),
+        reverse=True,
+    )
+    bridged_count = 0
+    for paper in bridge_candidates:
+        if paper.paper_id not in selected_ids and len(selected) < 40:
+            selected.append(paper)
+            selected_ids.add(paper.paper_id)
+            bridged_count += 1
+        if bridged_count >= max_low_bridge:
+            break
+
+    selected.sort(
+        key=lambda paper: _metadata_float(paper, "local_pre_rank_score"),
+        reverse=True,
+    )
+    return selected, filtered_medium_count, bridged_count
+
+
 class PaperAgentPipeline:
     def __init__(
         self,
@@ -719,47 +813,25 @@ class PaperAgentPipeline:
         if self.llm_client is not None and not case_deadline.expired():
             from scholar_agent.ranking.llm_listwise_reranker import llm_listwise_rerank
 
-            # Build top candidates: high + medium from validated selections
-            _sel_map = {sel.paper_id: sel for sel in validated_selections}
-            _high_medium_papers = [
-                p for p in all_candidates
-                if p.paper_id in _sel_map
-                and _sel_map[p.paper_id].relevance_level in ("high", "medium")
-            ]
-
-
-            # Relevance gate: filter only extremely weak medium papers before listwise reranking.
-            # RECALL-FIRST: we err on the side of inclusion — gold papers that fall through
-            # LLM as medium (without evidence due to local fallback) must not be excluded.
-            _confident_papers = []
-            _filtered_count = 0
-            for p in _high_medium_papers:
-                sr = _sel_map[p.paper_id]
-                if sr.relevance_level == "high":
-                    _confident_papers.append(p)
-                elif sr.relevance_level == "medium":
-                    rel_score = getattr(sr, "relevance_score", 0.0) or 0.0
-                    # Only filter out truly weak medium papers (very low relevance score)
-                    if rel_score >= 0.25:
-                        _confident_papers.append(p)
-                    else:
-                        _filtered_count += 1
+            _listwise_input_papers, _filtered_count, _bridged_count = (
+                _select_listwise_input_candidates(all_candidates, validated_selections)
+            )
 
             if _filtered_count > 0:
                 LOGGER.info(
                     "Relevance gate: filtered %d weak-medium papers before listwise "
                     "(was %d, now %d)",
-                    _filtered_count, len(_high_medium_papers), len(_confident_papers),
+                    _filtered_count,
+                    len(_listwise_input_papers) + _filtered_count,
+                    len(_listwise_input_papers),
                 )
-            _high_medium_papers = _confident_papers
+            if _bridged_count > 0:
+                LOGGER.info(
+                    "Listwise recall bridge: added %d strong low-level candidates.",
+                    _bridged_count,
+                )
 
-            # Sort by local pre-rank score for consistent input
-            _high_medium_papers.sort(
-                key=lambda p: p.metadata.get("local_pre_rank_score", 0.0),
-                reverse=True,
-            )
-
-            if _high_medium_papers:
+            if _listwise_input_papers:
                 # Reset circuit breaker between evidence selection and listwise reranking.
                 # Evidence selection uses v4-flash (many calls); listwise uses v4-pro (1-3 calls).
                 # A flash timeout shouldn't block the pro call — different phases, different models.
@@ -782,11 +854,11 @@ class PaperAgentPipeline:
                     self.llm_client.timeout = _lr_timeout
 
                 LOGGER.info(
-                    "LLM listwise reranking: %d high+medium candidates (deadline=%s)",
-                    len(_high_medium_papers), _listwise_deadline,
+                    "LLM listwise reranking: %d candidates (deadline=%s)",
+                    len(_listwise_input_papers), _listwise_deadline,
                 )
                 listwise_result = llm_listwise_rerank(
-                    _high_medium_papers,
+                    _listwise_input_papers,
                     validated_selections,
                     query_plan,
                     self.llm_client,
@@ -804,7 +876,7 @@ class PaperAgentPipeline:
                 else:
                     LOGGER.info("Listwise reranker failed or unavailable. Using local fallback scoring.")
             else:
-                LOGGER.info("No high+medium candidates for listwise reranking.")
+                LOGGER.info("No eligible candidates for listwise reranking.")
         else:
             LOGGER.info("Listwise reranking skipped (LLM unavailable or deadline expired).")
 
@@ -830,7 +902,7 @@ class PaperAgentPipeline:
                 _second_pass_papers = _build_diversified_top80(
                     all_candidates, validated_selections,
                 )
-                if _second_pass_papers and len(_second_pass_papers) > len(_high_medium_papers):
+                if _second_pass_papers and len(_second_pass_papers) > len(_listwise_input_papers):
                     _sp_deadline = case_deadline.child(
                         DEFAULT_LISTWISE_RERANK, "second_pass_rerank"
                     )
@@ -882,7 +954,7 @@ class PaperAgentPipeline:
                     LOGGER.info(
                         "V2 Second-pass: diversified pool not larger than first-pass (%d vs %d). Skipping.",
                         len(_second_pass_papers) if _second_pass_papers else 0,
-                        len(_high_medium_papers) if _high_medium_papers else 0,
+                        len(_listwise_input_papers) if _listwise_input_papers else 0,
                     )
 
         # 8. Effect-first 多维度综合重排

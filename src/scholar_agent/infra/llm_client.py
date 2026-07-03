@@ -95,15 +95,29 @@ class OpenAICompatibleLLMClient:
 
     def _post_json(self, payload: dict[str, Any], timeout_seconds: float | None = None) -> dict[str, Any]:
         read_timeout = timeout_seconds if timeout_seconds is not None else self.config.timeout_seconds
+        deadline_at = (
+            time.perf_counter() + float(timeout_seconds)
+            if timeout_seconds is not None
+            else None
+        )
         max_retries = getattr(self.config, "max_retries", 3)
         last_exc = None
         for attempt in range(max_retries):
             try:
+                attempt_read_timeout = read_timeout
+                if deadline_at is not None:
+                    remaining = deadline_at - time.perf_counter()
+                    if remaining <= 0:
+                        if last_exc is not None:
+                            raise last_exc
+                        raise requests.exceptions.Timeout("LLM request deadline exhausted")
+                    attempt_read_timeout = max(0.001, remaining)
+                connect_timeout = min(10, attempt_read_timeout)
                 response = self.session.post(
                     self._endpoint(),
                     headers={"Authorization": f"Bearer {self.api_key}"},
                     json=payload,
-                    timeout=(10, read_timeout),
+                    timeout=(connect_timeout, attempt_read_timeout),
                 )
                 response.raise_for_status()
                 return response.json()
@@ -118,8 +132,14 @@ class OpenAICompatibleLLMClient:
                     should_retry = True
                 
                 if should_retry and attempt < max_retries - 1:
+                    sleep_seconds = 1.0
+                    if deadline_at is not None:
+                        remaining = deadline_at - time.perf_counter()
+                        if remaining <= 1.0:
+                            raise exc
+                        sleep_seconds = min(sleep_seconds, remaining)
                     LOGGER.warning(f"LLM request transient error: {exc}. Retrying in 1s (attempt {attempt + 1}/{max_retries})...")
-                    time.sleep(1)
+                    time.sleep(sleep_seconds)
                 else:
                     raise exc
         if last_exc:
