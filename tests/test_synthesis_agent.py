@@ -1,4 +1,4 @@
-import pytest
+from types import SimpleNamespace
 from scholar_agent.models.schemas import Paper, SelectionResult, EvidenceItem, RankedPaper, QueryPlan, SearchProcessRound, RunMetrics
 from scholar_agent.synthesis.synthesis_agent import SynthesisAgent
 
@@ -71,11 +71,12 @@ def test_synthesis_agent_grouping_and_graph():
         metrics=metrics
     )
 
-    # 验证分类
-    assert len(result.highly_relevant_papers) == 1
-    assert result.highly_relevant_papers[0].paper.paper_id == "p1"
-    assert len(result.partially_relevant_papers) == 1
-    assert result.partially_relevant_papers[0].paper.paper_id == "p2"
+    # 验证推荐集合
+    recommended_ids = {
+        rp.paper.paper_id
+        for rp in result.highly_relevant_papers + result.partially_relevant_papers
+    }
+    assert recommended_ids == {"p1", "p2"}
 
     # 验证 citation_graph 生成 (p1 -> p2 有引用关系)
     graph = result.citation_graph
@@ -88,3 +89,32 @@ def test_synthesis_agent_grouping_and_graph():
     assert len(graph["links"]) == 1
     assert graph["links"][0]["source"] == "p1"
     assert graph["links"][0]["target"] == "p2"
+
+
+def test_synthesis_respects_listwise_recommended_k_cap():
+    ranked = []
+    for idx, score in enumerate([0.72, 0.70, 0.68, 0.65, 0.64], start=1):
+        paper = Paper(paper_id=f"p{idx}", title=f"Paper {idx}")
+        selection = SelectionResult(
+            paper_id=paper.paper_id,
+            relevance_level="high",
+            reason="Listwise accepted candidate.",
+        )
+        ranked.append(RankedPaper(paper=paper, selection=selection, final_score=score, rank=idx))
+
+    result = SynthesisAgent().synthesize(
+        original_query="single focused query",
+        query_plan=QueryPlan(original_query="single focused query"),
+        search_rounds=[SearchProcessRound(round_index=1, search_goal="Initial search")],
+        ranked_papers=ranked,
+        metrics=RunMetrics(),
+        listwise_result=SimpleNamespace(
+            success=True,
+            recommended_k=2,
+            recommended_k_min=1,
+            recommended_k_max=2,
+        ),
+    )
+
+    assert result.dynamic_k_chosen == 2
+    assert [rp.paper.paper_id for rp in result.highly_relevant_papers + result.partially_relevant_papers] == ["p1", "p2"]

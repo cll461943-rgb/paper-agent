@@ -154,6 +154,33 @@ class SynthesisAgent:
                 _pct_k, _drop_ratio * 100, _max_output,
             )
 
+        def _positive_int(value: Any) -> int | None:
+            try:
+                parsed = int(value)
+            except (TypeError, ValueError):
+                return None
+            return parsed if parsed > 0 else None
+
+        _listwise_cap_note = ""
+        if listwise_result is not None and getattr(listwise_result, "success", False):
+            _recommended_k = _positive_int(getattr(listwise_result, "recommended_k", None))
+            if _recommended_k is not None:
+                _recommended_min = _positive_int(getattr(listwise_result, "recommended_k_min", None))
+                _recommended_max = _positive_int(getattr(listwise_result, "recommended_k_max", None))
+                if _recommended_min is not None:
+                    _recommended_k = max(_recommended_k, _recommended_min)
+                if _recommended_max is not None:
+                    _recommended_k = min(_recommended_k, _recommended_max)
+
+                _previous_max = _effective_max
+                _effective_max = max(_min_high, min(_effective_max, _recommended_k, len(ranked_papers)))
+                if _effective_max != _previous_max:
+                    _listwise_cap_note = f"Listwise recommended_k={_recommended_k} cap applied; "
+                    LOGGER.info(
+                        "Listwise recommended_k cap: effective max_output %d → %d",
+                        _previous_max, _effective_max,
+                    )
+
         # ── Expected-Fβ 双截断 ──
         # P0-5/P0-6: 区分 rank_score (final_score, 用于排序) 和 relevance_probability
         # (用于 Expected-Fβ 截断)。如果 listwise reranker 输出了 relevance_probability，
@@ -382,7 +409,7 @@ class SynthesisAgent:
             g_hat_visible=_g_hat,
             low_confidence_uniform=False,
             p_floor=_p_floor,
-            tie_break_reason=(
+            tie_break_reason=_listwise_cap_note + (
                 f"Score-gap K={_gap_k} → effective_max={_effective_max}"
                 if _gap_k is not None
                 else f"Percentile-drop K={_effective_max} → cutoff (k1={len(highly_relevant)}, k2={dynamic_k})"
