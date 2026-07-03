@@ -208,7 +208,10 @@ def _load_dotenv_if_present(path: str | Path = ".env") -> None:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, value = line.split("=", 1)
-        os.environ[key.strip()] = value.strip().strip("\"'")
+        key = key.strip()
+        if key in os.environ:
+            continue
+        os.environ[key] = value.strip().strip("\"'")
 
 
 def load_config(path: str | Path | None = None) -> AppConfig:

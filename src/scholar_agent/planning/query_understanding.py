@@ -176,6 +176,18 @@ def _looks_like_specific_paper(query: str) -> bool:
     return title_words >= 5 and (has_year or has_author)
 
 
+def _looks_like_focused_extension_query(query: str, acronyms: list[str]) -> bool:
+    lowered = query.lower()
+    if len(acronyms) < 2:
+        return False
+    if not re.search(r"\b(extended|extends|extend|extension)\b", lowered):
+        return False
+    if not re.search(r"\b(which|what)\s+(papers|works|studies)\b", lowered):
+        return False
+    broad_markers = ("survey", "review", "latest", "recent", "all papers", "all works")
+    return not any(marker in lowered for marker in broad_markers)
+
+
 def _clean_query_prefix(text: str) -> str:
     lowered = text.lower().strip()
     for prefix in QUERY_PREFIXES:
@@ -366,6 +378,8 @@ def heuristic_understand_query(query: str) -> QueryPlan:
     elif any(c in lowered or c in query for c in ("latest", "recent", "newest", "最新")):
         query_type = "latest_work"
     elif _looks_like_specific_paper(query):
+        query_type = "specific_paper"
+    elif _looks_like_focused_extension_query(query, acronyms):
         query_type = "specific_paper"
     elif any(p in lowered for p in ("all papers", "papers that discuss", "papers about",
                                      "papers explaining", "papers that show",

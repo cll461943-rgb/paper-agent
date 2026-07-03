@@ -106,3 +106,13 @@ def test_spar_personalized_immunotherapy_question_gets_precision_oncology_terms(
     assert "precision oncology" in plan.entities
     assert any("personalized cancer immunotherapy" in text for text in texts)
     assert any("immune checkpoint blockade" in text for text in texts)
+
+
+def test_focused_extension_question_routes_specific_paper():
+    plan = heuristic_understand_query(
+        "Which papers extended IPS and SNIPS methods to implicit feedback data?"
+    )
+
+    assert plan.query_type == "specific_paper"
+    assert "IPS" in plan.entities
+    assert "SNIPS" in plan.entities

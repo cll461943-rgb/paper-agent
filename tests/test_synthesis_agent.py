@@ -120,6 +120,61 @@ def test_synthesis_respects_listwise_recommended_k_cap():
     assert [rp.paper.paper_id for rp in result.highly_relevant_papers + result.partially_relevant_papers] == ["p1", "p2"]
 
 
+def test_synthesis_uses_expected_f1_controller_for_focused_listwise_k():
+    ranked = []
+    probs = [0.95, 0.70, 0.55, 0.41]
+    for idx, prob in enumerate(probs, start=1):
+        paper = Paper(
+            paper_id=f"p{idx}",
+            title=f"Paper {idx}",
+            metadata={"relevance_probability": prob, "local_pre_rank_score": 0.2},
+        )
+        selection = SelectionResult(
+            paper_id=paper.paper_id,
+            relevance_level="high" if idx == 1 else "medium",
+            reason="Listwise accepted candidate.",
+        )
+        ranked.append(RankedPaper(paper=paper, selection=selection, final_score=0.9 - idx * 0.03, rank=idx))
+
+    result = SynthesisAgent().synthesize(
+        original_query="Which papers extended IPS and SNIPS methods to implicit feedback data?",
+        query_plan=QueryPlan(
+            original_query="Which papers extended IPS and SNIPS methods to implicit feedback data?",
+            query_type="specific_paper",
+            entities=["IPS", "SNIPS"],
+        ),
+        search_rounds=[SearchProcessRound(round_index=1, search_goal="Initial search")],
+        ranked_papers=ranked,
+        metrics=RunMetrics(candidate_pool_size=100),
+        config=SimpleNamespace(
+            dynamic_k=SimpleNamespace(
+                hard_max_output=20,
+                min_high=1,
+                fallback_min_output=5,
+                recall_beta=1.5,
+                drop_ratio=0.15,
+            )
+        ),
+        listwise_result=SimpleNamespace(
+            success=True,
+            recommended_k=4,
+            recommended_k_min=1,
+            recommended_k_max=4,
+            relevance_probabilities={f"p{i}": p for i, p in enumerate(probs, start=1)},
+            relevance_levels={f"p{i}": "high" if i == 1 else "medium" for i in range(1, 5)},
+            relevance_confidences={f"p{i}": 0.9 for i in range(1, 5)},
+        ),
+    )
+
+    recommended_ids = [
+        rp.paper.paper_id
+        for rp in result.highly_relevant_papers + result.partially_relevant_papers
+    ]
+    assert result.dynamic_k_chosen == 2
+    assert recommended_ids == ["p1", "p2"]
+    assert "Expected-F1 controller K=2" in result.tie_break_reason
+
+
 def test_synthesis_fallback_k_floor_keeps_rank_five_candidate():
     ranked = []
     scores = [0.785, 0.75, 0.705, 0.6225, 0.6125, 0.6075]
@@ -198,3 +253,45 @@ def test_synthesis_llm_unavailable_wide_query_uses_recall_floor():
     assert result.dynamic_k_chosen == 20
     assert "p20" in recommended_ids
     assert "Fallback recall floor=20" in result.tie_break_reason
+
+
+def test_synthesis_llm_unavailable_focused_extension_uses_mid_recall_floor():
+    ranked = []
+    scores = [0.80, 0.77, 0.74, 0.71, 0.68, 0.64, 0.61, 0.59, 0.56, 0.54]
+    for idx, score in enumerate(scores, start=1):
+        paper = Paper(paper_id=f"p{idx}", title=f"Paper {idx}")
+        selection = SelectionResult(
+            paper_id=paper.paper_id,
+            relevance_level="high" if idx <= 5 else "medium",
+            reason="Local fallback selection.",
+        )
+        ranked.append(RankedPaper(paper=paper, selection=selection, final_score=score, rank=idx))
+
+    result = SynthesisAgent().synthesize(
+        original_query="Which papers extended IPS and SNIPS methods to implicit feedback data?",
+        query_plan=QueryPlan(
+            original_query="Which papers extended IPS and SNIPS methods to implicit feedback data?",
+            query_type="specific_paper",
+            entities=["IPS", "SNIPS"],
+        ),
+        search_rounds=[SearchProcessRound(round_index=1, search_goal="Initial search")],
+        ranked_papers=ranked,
+        metrics=RunMetrics(),
+        config=SimpleNamespace(
+            dynamic_k=SimpleNamespace(
+                hard_max_output=20,
+                min_high=1,
+                fallback_min_output=5,
+                recall_beta=1.5,
+                drop_ratio=0.15,
+            )
+        ),
+    )
+
+    recommended_ids = [
+        rp.paper.paper_id
+        for rp in result.highly_relevant_papers + result.partially_relevant_papers
+    ]
+    assert result.dynamic_k_chosen == 10
+    assert "p10" in recommended_ids
+    assert "Focused extension fallback floor=10" in result.tie_break_reason

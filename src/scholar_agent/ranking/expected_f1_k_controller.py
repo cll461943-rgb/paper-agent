@@ -319,6 +319,23 @@ def _precision_first_tie_break(
     if not curve:
         return 0, "Empty curve."
 
+    # Enforce the marginal probability floor as a hard prefix cap. Without this,
+    # a high g_hat can make E[F1] keep rising as low-probability papers are added,
+    # which caused focused single-gold queries to over-output.
+    floor_cap = min(effective_k_max, len(probs), k_max)
+    if p_floor > 0 and probs:
+        floor_cap = 1
+        for idx, prob in enumerate(probs, start=1):
+            if idx == 1:
+                continue
+            if prob < p_floor:
+                break
+            floor_cap = idx
+        floor_cap = min(floor_cap, effective_k_max, k_max)
+        curve = {k: v for k, v in curve.items() if k <= floor_cap}
+        if not curve:
+            return 1, f"p_floor={p_floor:.2f} cap forced K=1."
+
     # Step 1: Find max F1
     max_f1 = max(curve.values())
 
@@ -360,6 +377,8 @@ def _precision_first_tie_break(
             f"Expanded to K={best_k} (p_floor={p_floor:.2f} satisfied, "
             f"E[F1]={curve[best_k]:.4f})."
         )
+    if floor_cap < min(effective_k_max, k_max):
+        reason = f"p_floor={p_floor:.2f} capped candidate K at {floor_cap}; {reason}"
 
     return best_k, reason
 

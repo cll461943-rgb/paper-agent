@@ -165,7 +165,9 @@ class SynthesisAgent:
                 return None
             return parsed if parsed > 0 else None
 
+        _qt = getattr(query_plan, "query_type", "unknown")
         _listwise_cap_note = ""
+        _k_controller_note = ""
         if _listwise_success:
             _recommended_k = _positive_int(getattr(listwise_result, "recommended_k", None))
             if _recommended_k is not None:
@@ -184,8 +186,32 @@ class SynthesisAgent:
                         "Listwise recommended_k cap: effective max_output %d → %d",
                         _previous_max, _effective_max,
                     )
+            if ranked_papers:
+                from scholar_agent.ranking.expected_f1_k_controller import decide_k_via_expected_f1
+
+                _k_result = decide_k_via_expected_f1(
+                    ranked_papers,
+                    query_type=_qt,
+                    listwise_result=listwise_result,
+                    k_max=_effective_max,
+                    config=config,
+                    all_candidates_count=getattr(metrics, "candidate_pool_size", 0),
+                    query_plan=query_plan,
+                )
+                _controller_k = _positive_int(getattr(_k_result, "chosen_k", None))
+                if _controller_k is not None:
+                    _previous_max = _effective_max
+                    _effective_max = max(_min_high, min(_effective_max, _controller_k, len(ranked_papers)))
+                    _k_controller_note = (
+                        f"Expected-F1 controller K={_controller_k}; "
+                        f"{getattr(_k_result, 'tie_break_reason', '')} "
+                    )
+                    if _effective_max != _previous_max:
+                        LOGGER.info(
+                            "Expected-F1 controller cap: effective max_output %d → %d",
+                            _previous_max, _effective_max,
+                        )
         elif ranked_papers:
-            _qt = getattr(query_plan, "query_type", "unknown")
             _structured_terms = (
                 len(getattr(query_plan, "methods", []) or [])
                 + len(getattr(query_plan, "datasets", []) or [])
@@ -201,6 +227,17 @@ class SynthesisAgent:
             if _is_recall_first_fallback:
                 _fallback_output_floor = max(_fallback_output_floor, min(_max_output, 20))
                 _recall_floor_note = f"Fallback recall floor={_fallback_output_floor}; "
+            _query_l = str(getattr(query_plan, "original_query", "") or original_query).lower()
+            _is_focused_extension_fallback = (
+                _qt == "specific_paper"
+                and len(ranked_papers) >= 10
+                and _structured_terms >= 2
+                and ("which papers" in _query_l or "what papers" in _query_l)
+                and any(word in _query_l for word in ("extended", "extends", "extend", "extension"))
+            )
+            if _is_focused_extension_fallback:
+                _fallback_output_floor = max(_fallback_output_floor, min(_max_output, 10))
+                _recall_floor_note = f"Focused extension fallback floor={_fallback_output_floor}; "
 
             _previous_max = _effective_max
             _effective_max = min(
@@ -221,14 +258,23 @@ class SynthesisAgent:
         # 直接使用它作为 p_i（listwise reranker 已校准）；否则回退到 logistic 校准的 final_score。
         def _get_relevance_prob(rp) -> float:
             """Extract relevance_probability from subscores/metadata, fall back to final_score."""
+            paper = getattr(rp, "paper", None)
+            if paper is not None and paper.metadata:
+                p = paper.metadata.get("calibrated_probability")
+                if p is not None:
+                    try:
+                        p = float(p)
+                        if p > 0:
+                            return p
+                    except (ValueError, TypeError):
+                        pass
             # Try subscores first (set by compute_paper_score)
             sub = getattr(rp, "subscores", None)
             if isinstance(sub, dict) and "relevance_probability" in sub:
                 p = float(sub["relevance_probability"])
                 if p > 0:
                     return p
-            # Try paper.metadata (set by rerank_papers)
-            paper = getattr(rp, "paper", None)
+            # Try paper.metadata (set by rerank_papers / Expected-F1 controller)
             if paper is not None and paper.metadata:
                 p = paper.metadata.get("relevance_probability")
                 if p is not None:
@@ -481,7 +527,7 @@ class SynthesisAgent:
             g_hat_visible=_g_hat,
             low_confidence_uniform=False,
             p_floor=_p_floor,
-            tie_break_reason=_listwise_cap_note + _recall_floor_note + (
+            tie_break_reason=_listwise_cap_note + _k_controller_note + _recall_floor_note + (
                 f"Score-gap K={_gap_k} → effective_max={_effective_max}"
                 if _gap_k is not None
                 else f"Percentile-drop K={_effective_max} → cutoff (k1={len(highly_relevant)}, k2={dynamic_k})"
