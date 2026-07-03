@@ -9,6 +9,7 @@ from scholar_agent.infra.config import ProviderConfig
 from scholar_agent.infra.http_client import HttpClient
 from scholar_agent.models.schemas import Paper, SearchQuery
 from scholar_agent.retrieval.base import PaperProvider
+from scholar_agent.utils.title_query import looks_like_paper_title
 
 LOGGER = logging.getLogger(__name__)
 
@@ -91,18 +92,7 @@ def _normalize_openalex_work_url(work_id: str) -> str:
 
 
 def _looks_like_title(text: str) -> bool:
-    words = text.split()
-    bad_prefixes = [
-        "give me",
-        "find",
-        "papers which",
-        "papers that",
-        "show that",
-        "work on",
-        "studies about",
-    ]
-    lowered = text.lower()
-    return len(words) >= 5 and not any(prefix in lowered for prefix in bad_prefixes)
+    return looks_like_paper_title(text)
 
 
 class OpenAlexProvider(PaperProvider):

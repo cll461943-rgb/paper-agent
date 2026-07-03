@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 
 from scholar_agent.models.schemas import QueryPlan, SearchQuery
+from scholar_agent.utils.title_query import looks_like_paper_title
 from scholar_agent.workflow.budget import BudgetManager
 
 STOP_PREFIXES = [
@@ -508,6 +509,8 @@ def _llm_title_queries(plan: QueryPlan, llm_client: object | None) -> list[Searc
         normalized = re.sub(r"\s+", " ", title.strip())
         if len(normalized.split()) < 3:
             continue
+        if not looks_like_paper_title(normalized):
+            continue
         queries.append(
             SearchQuery(
                 query=normalized[:180],
@@ -554,7 +557,10 @@ def _heuristic_title_fallback(plan: QueryPlan) -> list[str]:
     # Add subtitle hint if available (but note: QueryPlan doesn't have subtitle_hint, use task instead)
     if plan.task:
         titles.append(plan.task)
-    return [t for t in titles if isinstance(t, str) and len(t.split()) >= 3][:10]  # type: ignore[arg-type]  # noqa: E501
+    return [
+        t for t in titles
+        if isinstance(t, str) and looks_like_paper_title(t)
+    ][:10]
 
 
 def _llm_term_mapping_queries(plan: QueryPlan, llm_client: object | None) -> list[SearchQuery]:

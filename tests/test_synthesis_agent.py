@@ -118,3 +118,40 @@ def test_synthesis_respects_listwise_recommended_k_cap():
 
     assert result.dynamic_k_chosen == 2
     assert [rp.paper.paper_id for rp in result.highly_relevant_papers + result.partially_relevant_papers] == ["p1", "p2"]
+
+
+def test_synthesis_fallback_k_floor_keeps_rank_five_candidate():
+    ranked = []
+    scores = [0.785, 0.75, 0.705, 0.6225, 0.6125, 0.6075]
+    for idx, score in enumerate(scores, start=1):
+        paper = Paper(paper_id=f"p{idx}", title=f"Paper {idx}")
+        selection = SelectionResult(
+            paper_id=paper.paper_id,
+            relevance_level="high" if idx <= 3 else "medium",
+            reason="Local fallback selection.",
+        )
+        ranked.append(RankedPaper(paper=paper, selection=selection, final_score=score, rank=idx))
+
+    result = SynthesisAgent().synthesize(
+        original_query="broad vaccine development query",
+        query_plan=QueryPlan(original_query="broad vaccine development query"),
+        search_rounds=[SearchProcessRound(round_index=1, search_goal="Initial search")],
+        ranked_papers=ranked,
+        metrics=RunMetrics(),
+        config=SimpleNamespace(
+            dynamic_k=SimpleNamespace(
+                hard_max_output=12,
+                min_high=1,
+                fallback_min_output=5,
+                recall_beta=1.5,
+                drop_ratio=0.15,
+            )
+        ),
+    )
+
+    recommended_ids = [
+        rp.paper.paper_id
+        for rp in result.highly_relevant_papers + result.partially_relevant_papers
+    ]
+    assert result.dynamic_k_chosen >= 5
+    assert "p5" in recommended_ids

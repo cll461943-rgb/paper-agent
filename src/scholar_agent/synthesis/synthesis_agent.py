@@ -118,6 +118,8 @@ class SynthesisAgent:
         _recall_beta = float(getattr(_dk_cfg, "recall_beta", 1.5)) if _dk_cfg else 1.5
         _max_output = int(getattr(_dk_cfg, "hard_max_output", 12)) if _dk_cfg else 12
         _min_high = int(getattr(_dk_cfg, "min_high", 1)) if _dk_cfg else 1
+        _fallback_min_output = int(getattr(_dk_cfg, "fallback_min_output", 5)) if _dk_cfg else 5
+        _listwise_success = bool(listwise_result is not None and getattr(listwise_result, "success", False))
 
         # ── Score-gap 检测：利用得分断崖定位自然分界点 ──
         # 在 F_beta 截断之前，先检查 top-N 论文中是否存在显著的得分断崖。
@@ -162,7 +164,7 @@ class SynthesisAgent:
             return parsed if parsed > 0 else None
 
         _listwise_cap_note = ""
-        if listwise_result is not None and getattr(listwise_result, "success", False):
+        if _listwise_success:
             _recommended_k = _positive_int(getattr(listwise_result, "recommended_k", None))
             if _recommended_k is not None:
                 _recommended_min = _positive_int(getattr(listwise_result, "recommended_k_min", None))
@@ -180,6 +182,19 @@ class SynthesisAgent:
                         "Listwise recommended_k cap: effective max_output %d → %d",
                         _previous_max, _effective_max,
                     )
+        elif ranked_papers:
+            _previous_max = _effective_max
+            _effective_max = min(
+                _max_output,
+                len(ranked_papers),
+                max(_effective_max, _fallback_min_output),
+            )
+            if _effective_max != _previous_max:
+                LOGGER.info(
+                    "Fallback K floor: effective max_output %d → %d "
+                    "(listwise unavailable, floor=%d)",
+                    _previous_max, _effective_max, _fallback_min_output,
+                )
 
         # ── Expected-Fβ 双截断 ──
         # P0-5/P0-6: 区分 rank_score (final_score, 用于排序) 和 relevance_probability
@@ -208,7 +223,10 @@ class SynthesisAgent:
             return float(getattr(rp, "final_score", 0.0))
 
         # Check if any paper has relevance_probability > 0
-        _has_rel_prob = any(_get_relevance_prob(rp) > 0 for rp in ranked_papers) if ranked_papers else False
+        _has_rel_prob = (
+            _listwise_success
+            and any(_get_relevance_prob(rp) > 0 for rp in ranked_papers)
+        ) if ranked_papers else False
 
         if _has_rel_prob:
             # Use relevance_probability directly (already calibrated by listwise reranker)

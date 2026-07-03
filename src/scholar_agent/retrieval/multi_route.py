@@ -11,6 +11,7 @@ from scholar_agent.models.schemas import Paper, RetrievalResult, SearchQuery
 from scholar_agent.retrieval.base import PaperProvider
 from scholar_agent.retrieval.refchain import annotate_refchain_candidate, refchain_operations
 from scholar_agent.retrieval.source_health import SourceHealthManager
+from scholar_agent.utils.title_query import looks_like_paper_title
 from scholar_agent.workflow.budget import BudgetManager
 
 LOCAL_ZERO_API_PROVIDERS = {"mock", "pasa_local", "faiss_vector"}
@@ -197,19 +198,7 @@ class MultiRouteRetriever:
 
     @staticmethod
     def _looks_like_title_query(text: str) -> bool:
-        words = re.findall(r"[A-Za-z][A-Za-z0-9\-]*", text or "")
-        if len(words) < 3:
-            return False
-        lowered = " ".join(words).lower()
-        bad_prefixes = [
-            "are there", "can you", "do you", "find papers", "give me",
-            "i am looking", "list all", "papers about", "papers on",
-            "papers that", "provide", "research papers", "show me",
-        ]
-        if any(lowered.startswith(prefix) for prefix in bad_prefixes):
-            return False
-        titleish_words = sum(1 for word in words if word[:1].isupper() or word.isupper())
-        return titleish_words >= 3
+        return looks_like_paper_title(text)
 
     def _domain_scores(self, text: str) -> dict[str, float]:
         text_l = text.lower()

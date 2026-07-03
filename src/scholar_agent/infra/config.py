@@ -141,6 +141,9 @@ class DynamicKConfig(BaseModel):
     # Hard cap on total output (chosen K + recall guard). Raise for high-recall
     # datasets so the guard can actually add high-confidence papers beyond K.
     hard_max_output: int = 12
+    min_high: int = 1
+    drop_ratio: float = 0.15
+    fallback_min_output: int = 5
 
 
 class RankingConfig(BaseModel):
