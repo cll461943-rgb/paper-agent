@@ -793,7 +793,8 @@ def run_pipeline_task(job_id: str, job_ref: dict):
         
     try:
         # 1. Load configuration
-        config = load_config(config_name)
+        root_dir = Path(__file__).parents[2]
+        config = load_config(root_dir / config_name)
         if mode == "mock":
             config.app.mode = "mock"
             config.app.providers = ["mock"]
@@ -1190,7 +1191,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
         # Route: GET /api/system/status
         if path == "/api/system/status":
             try:
-                config = load_config()
+                root_dir = Path(__file__).parents[2]
+                config = load_config(root_dir / "configs" / "default.yaml")
                 status = {
                     "status": "ok",
                     "message": "Scholar Agent API Service is active, provider: " + str(os.getenv("ACTIVE_LLM_PROVIDER", "tokenhub")),
@@ -1244,7 +1246,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
         if path == "/api/providers":
             providers_list = []
             try:
-                config = load_config()
+                root_dir = Path(__file__).parents[2]
+                config = load_config(root_dir / "configs" / "default.yaml")
                 providers_list.append({
                     "name": "Local Index",
                     "enabled": config.providers.pasa_local.enabled,
