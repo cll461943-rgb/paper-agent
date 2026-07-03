@@ -65,6 +65,16 @@ class Deadline:
             stage_name=stage_name,
         )
 
+    def child_with_reserve(
+        self,
+        seconds: float,
+        reserve_seconds: float,
+        stage_name: str = "",
+    ) -> "Deadline":
+        """Create a child while preserving parent time for later stages."""
+        available = max(0.0, self.remaining() - max(0.0, reserve_seconds))
+        return self.child(min(seconds, available), stage_name=stage_name)
+
     def timeout_for(self, config_timeout: float | None) -> float:
         """Return the effective timeout for an API/LLM call.
 

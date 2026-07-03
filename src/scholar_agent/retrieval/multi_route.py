@@ -301,8 +301,15 @@ class MultiRouteRetriever:
 
         return allowed
 
-    def _title_exact_results(self, queries: list[SearchQuery], providers: list[PaperProvider]) -> list[RetrievalResult]:
+    def _title_exact_results(
+        self,
+        queries: list[SearchQuery],
+        providers: list[PaperProvider],
+        deadline=None,
+    ) -> list[RetrievalResult]:
         results: list[RetrievalResult] = []
+        if deadline is not None and deadline.expired():
+            return results
         title_like_queries = [
             query
             for query in queries
@@ -388,17 +395,29 @@ class MultiRouteRetriever:
                         results.append(res)
         else:
             for p, q in tasks:
+                if deadline is not None and deadline.expired():
+                    break
                 res = _fetch(p, q)
                 if res is not None:
                     results.append(res)
                     
         return results
 
-    def _search_provider_routes(self, provider: PaperProvider, queries: list[SearchQuery]) -> list[RetrievalResult]:
+    def _search_provider_routes(
+        self,
+        provider: PaperProvider,
+        queries: list[SearchQuery],
+        deadline=None,
+    ) -> list[RetrievalResult]:
         results = []
         started_at = time.perf_counter()
         provider_time_budget = self._health.get_time_budget(provider.name) if self._health else 60.0
+        if deadline is not None:
+            provider_time_budget = min(provider_time_budget, max(0.0, deadline.remaining()))
         for query in queries:
+            if deadline is not None and deadline.expired():
+                self.budget.record_error(f"{provider.name} skipped remaining queries due to retrieval_deadline")
+                break
             if time.perf_counter() - started_at > provider_time_budget:
                 self.budget.record_error(f"{provider.name} skipped remaining queries due to provider_time_budget ({provider_time_budget}s)")
                 break
@@ -424,11 +443,21 @@ class MultiRouteRetriever:
             error=message,
         )
 
-    def expand_refchain(self, seed_papers: list[Paper], providers: list[PaperProvider], limit_per_seed: int) -> list[Paper]:
+    def expand_refchain(
+        self,
+        seed_papers: list[Paper],
+        providers: list[PaperProvider],
+        limit_per_seed: int,
+        deadline=None,
+    ) -> list[Paper]:
         expanded: list[Paper] = []
         if limit_per_seed <= 0:
             return expanded
+        if deadline is not None and deadline.expired():
+            return expanded
         for provider in providers:
+            if deadline is not None and deadline.expired():
+                break
             if self._is_provider_blocked(provider.name):
                 LOGGER.info("Skipping refchain for blocked provider %s", provider.name)
                 continue
@@ -436,6 +465,8 @@ class MultiRouteRetriever:
             for seed_index, paper in enumerate(seed_papers, start=1):
                 # Each route gets its own independent budget (not shared across routes)
                 for route, source, operation in operations:
+                    if deadline is not None and deadline.expired():
+                        return expanded
                     component = f"retrieval.{provider.name}.{route}"
                     operation_limit = limit_per_seed
                     api_calls_delta = self._reference_api_calls(provider, paper, operation_limit, route)
@@ -502,7 +533,12 @@ class MultiRouteRetriever:
         original_query: str = "",
         query_plan = None,
         routing_config = None,
+        deadline=None,
     ) -> tuple[list[RetrievalResult], list[Paper]]:
+        if deadline is not None and deadline.expired():
+            self.budget.record_error("retrieval skipped due to retrieval_deadline")
+            return [], []
+
         self.budget.reserve_retrieval_round()
         providers: list[PaperProvider] = []
         results: list[RetrievalResult] = []
@@ -564,18 +600,20 @@ class MultiRouteRetriever:
         if self.parallel and len(providers) > 1:
             with ThreadPoolExecutor(max_workers=len(providers)) as executor:
                 future_map = [
-                    executor.submit(self._search_provider_routes, provider, _get_queries_for_provider(provider))
+                    executor.submit(self._search_provider_routes, provider, _get_queries_for_provider(provider), deadline)
                     for provider in providers
                 ]
                 for future in as_completed(future_map):
                     results.extend(future.result())
         else:
             for provider in providers:
+                if deadline is not None and deadline.expired():
+                    break
                 prov_queries = _get_queries_for_provider(provider)
-                results.extend(self._search_provider_routes(provider, prov_queries))
+                results.extend(self._search_provider_routes(provider, prov_queries, deadline))
 
-        if include_title_exact:
-            results.extend(self._title_exact_results(queries, providers))
+        if include_title_exact and not (deadline is not None and deadline.expired()):
+            results.extend(self._title_exact_results(queries, providers, deadline))
 
         candidate_pool: list[Paper] = []
         for result in results:
@@ -596,6 +634,8 @@ class MultiRouteRetriever:
 
             for provider in safety_providers:
                 for q in safety_queries:
+                    if deadline is not None and deadline.expired():
+                        return results, candidate_pool
                     already_run = any(
                         r.provider == provider.name and r.search_query.query == q.query
                         for r in results

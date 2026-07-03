@@ -18,6 +18,25 @@ class ReferenceProvider(PaperProvider):
         ]
 
 
+class CountingProvider(PaperProvider):
+    name = "openalex"
+
+    def __init__(self) -> None:
+        self.search_calls = 0
+
+    def search(self, query: SearchQuery, limit: int) -> list[Paper]:
+        self.search_calls += 1
+        return [Paper(paper_id="p1", title="Paper 1")]
+
+
+class ExpiredDeadline:
+    def expired(self) -> bool:
+        return True
+
+    def remaining(self) -> float:
+        return 0.0
+
+
 def test_refchain_budget_exhaustion_skips_expansion_without_crashing():
     config = AppConfig()
     config.budget.max_api_calls = 0
@@ -31,3 +50,17 @@ def test_refchain_budget_exhaustion_skips_expansion_without_crashing():
     assert expanded == []
     assert budget.api_calls_used == 0
     assert any("API call budget exceeded" in error for error in budget.errors)
+
+
+def test_retrieval_deadline_skips_provider_search_when_expired():
+    config = AppConfig()
+    budget = BudgetManager(config)
+    provider = CountingProvider()
+    retriever = MultiRouteRetriever([provider], budget)
+    query = SearchQuery(query="test", route="core_topic", intent="test")
+
+    results, papers = retriever.retrieve([query], deadline=ExpiredDeadline())
+
+    assert results == []
+    assert papers == []
+    assert provider.search_calls == 0

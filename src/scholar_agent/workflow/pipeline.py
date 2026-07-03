@@ -277,6 +277,10 @@ class PaperAgentPipeline:
             pass  # prompts module is optional, pipeline still works without it
 
         LOGGER.info("Starting PaperAgentPipeline for query: %s (deadline=%.0fs)", original_query, _case_deadline_secs)
+        _listwise_reserve = min(
+            DEFAULT_LISTWISE_RERANK + DEFAULT_SYNTHESIS,
+            max(45.0, float(_case_deadline_secs) * 0.32),
+        )
 
         # 2. 初始化多路检索器
         retriever = MultiRouteRetriever(
@@ -285,7 +289,6 @@ class PaperAgentPipeline:
             parallel=bool(getattr(self.config.app, "parallel_retrieval", False)),
             health_manager=health_manager,
         )
-        retrieval_deadline = case_deadline.child(DEFAULT_RETRIEVAL, "retrieval")
         query_expander = QueryExpander()
         rounds_history: list[SearchProcessRound] = []
 
@@ -344,15 +347,19 @@ class PaperAgentPipeline:
         pool_review_deadline = case_deadline.child(DEFAULT_RETRIEVAL, "pool_review")
 
         for round_idx in range(1, max_rounds + 1):
-            if retrieval_deadline.expired():
+            if case_deadline.remaining() <= _listwise_reserve:
                 LOGGER.warning(
-                    "Retrieval deadline expired (%.1fs elapsed), stopping at round %d",
-                    retrieval_deadline.elapsed(), round_idx,
+                    "Stopping retrieval loop before round %d to preserve listwise reserve (remaining=%.1fs, reserve=%.1fs)",
+                    round_idx, case_deadline.remaining(), _listwise_reserve,
                 )
                 break
 
             # ── Step A: LLM-first query understanding（首轮独立，后续带 feedback） ──
-            query_deadline = case_deadline.child(DEFAULT_QUERY_UNDERSTANDING, f"query_understanding_r{round_idx}")
+            query_deadline = case_deadline.child_with_reserve(
+                DEFAULT_QUERY_UNDERSTANDING,
+                reserve_seconds=_listwise_reserve,
+                stage_name=f"query_understanding_r{round_idx}",
+            )
             use_llm_query = (
                 self.llm_client is not None
                 and not query_deadline.expired()
@@ -392,6 +399,11 @@ class PaperAgentPipeline:
             LOGGER.info("Round %d routing: %s", round_idx, routing_config.reason)
 
             # ── Step C: 查询生成（首轮 LLM，后续轮可复用或重新生成） ──
+            retrieval_deadline = case_deadline.child_with_reserve(
+                DEFAULT_RETRIEVAL,
+                reserve_seconds=_listwise_reserve,
+                stage_name=f"retrieval_r{round_idx}",
+            )
             if round_idx == 1 or last_review_feedback:
                 if self.llm_client is not None and not retrieval_deadline.expired():
                     try:
@@ -414,6 +426,7 @@ class PaperAgentPipeline:
                 original_query=original_query,
                 query_plan=query_plan,
                 routing_config=routing_config,
+                deadline=retrieval_deadline,
             )
 
             # 合并去重
@@ -426,7 +439,12 @@ class PaperAgentPipeline:
             if round_idx <= 2:
                 seed_papers = all_candidates[:5]
                 try:
-                    expanded_pool = retriever.expand_refchain(seed_papers, self.providers, limit_per_seed=10)
+                    expanded_pool = retriever.expand_refchain(
+                        seed_papers,
+                        self.providers,
+                        limit_per_seed=10,
+                        deadline=retrieval_deadline,
+                    )
                     all_candidates.extend(expanded_pool)
                     all_candidates = deduplicate_papers(all_candidates)
                     all_candidates.sort(key=_get_rough_score, reverse=True)
@@ -436,7 +454,11 @@ class PaperAgentPipeline:
                     LOGGER.warning("Refchain expansion failed round %d: %s", round_idx, exc)
 
             # ── Step F: LLM 审阅粗排（替代 local_pre_rank） ──
-            pool_review_deadline = case_deadline.child(DEFAULT_RETRIEVAL, f"pool_review_r{round_idx}")
+            pool_review_deadline = case_deadline.child_with_reserve(
+                DEFAULT_RETRIEVAL,
+                reserve_seconds=_listwise_reserve,
+                stage_name=f"pool_review_r{round_idx}",
+            )
             pool_review_llm = self.llm_client if (
                 self.llm_client is not None
                 and not pool_review_deadline.expired()
@@ -660,7 +682,11 @@ class PaperAgentPipeline:
 
         LOGGER.info("Starting fine-grained evidence selection for %d papers (filtered from %d pre-ranked candidates)",
                     len(selection_candidates), len(pre_ranked_candidates))
-        evidence_deadline = case_deadline.child(DEFAULT_EVIDENCE_SELECTION, "evidence_selection")
+        evidence_deadline = case_deadline.child_with_reserve(
+            DEFAULT_EVIDENCE_SELECTION,
+            reserve_seconds=_listwise_reserve,
+            stage_name="evidence_selection",
+        )
         from scholar_agent.selection.batch_evidence_selector import batch_select_and_extract_evidence
         # Effect-first: Set LLM timeout from config's evidence_selection timeout; local-only if expired
         if self.llm_client is not None and not evidence_deadline.expired():
