@@ -30,6 +30,7 @@ from scholar_agent.retrieval.semantic_bridge import SemanticBridge
 from scholar_agent.selection.evidence_selector import select_and_extract_evidence
 from scholar_agent.selection.evidence_validator import validate_selections
 from scholar_agent.ranking.final_reranker import rerank_papers
+from scholar_agent.ranking.local_pre_ranker import local_pre_rank_score
 from scholar_agent.synthesis.synthesis_agent import SynthesisAgent
 from scholar_agent.workflow.budget import BudgetManager
 from scholar_agent.workflow.deadline import (
@@ -424,8 +425,16 @@ class PaperAgentPipeline:
             base_score = bge_val if bge_val > 0.0 else 0.5
 
             title_bonus = _get_title_match_bonus(p.title, original_query)
+            plan_bonus = 0.0
+            constraint_bonus = 0.0
+            if query_plan is not None:
+                local_score, local_subscores = local_pre_rank_score(p, query_plan, original_query)
+                p.metadata["local_pre_rank_subscores"] = local_subscores
+                p.metadata["constraint_aware_local_score"] = local_score
+                plan_bonus = local_score * 0.65
+                constraint_bonus = max(0.0, local_subscores.get("constraint_coverage", 0.0)) * 0.35
 
-            return base_score + paths_val * 0.01 + citation_score + route_bonus + title_bonus
+            return base_score + paths_val * 0.01 + citation_score + route_bonus + title_bonus + plan_bonus + constraint_bonus
 
         # ── 闭环迭代架构 ──
         # LLM-first 理解 → 动态路由 → 检索 → LLM 审阅粗排 → 重新理解（带 feedback）→ 收敛
@@ -687,6 +696,14 @@ class PaperAgentPipeline:
             selection_budget = 65
         else:
             selection_budget = 45
+        llm_off_fallback = (
+            self.llm_client is None
+            or not self.llm_client.is_available()
+            or getattr(llm_circuit_breaker, "is_tripped", False)
+        )
+        if llm_off_fallback:
+            selection_budget = min(65, max(selection_budget, 55))
+            LOGGER.info("LLM-off fallback: expanded selection budget to %d", selection_budget)
 
         selection_candidates: list[Paper] = []
         seen_ids: set[str] = set()
@@ -697,11 +714,14 @@ class PaperAgentPipeline:
                 selection_candidates.append(paper)
 
         # 1. Title-matched papers first (title_exact / title_like)
+        # LLM-off fallback relies heavily on title-like routes; keep enough
+        # depth for multi-route title hits before route diversity fills the cap.
+        title_match_budget = min(20, max(10, selection_budget // 2))
         for p in pre_ranked_candidates:
             paths = getattr(p, "retrieval_path", [])
             if any("title_exact" in path or "title_like" in path for path in paths):
                 _add_unique(p)
-                if len(selection_candidates) >= 10:
+                if len(selection_candidates) >= title_match_budget:
                     break
 
         # 2. Route-based stratified round-robin fill

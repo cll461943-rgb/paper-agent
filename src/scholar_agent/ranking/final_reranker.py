@@ -138,6 +138,15 @@ def compute_paper_score(
             rel_prob = None
     subscores["relevance_probability"] = rel_prob if rel_prob is not None else llm_relevance
 
+    local_pre_rank = paper.metadata.get("constraint_aware_local_score")
+    if local_pre_rank is None:
+        local_pre_rank = paper.metadata.get("local_pre_rank_score")
+    try:
+        local_pre_rank = float(local_pre_rank) if local_pre_rank is not None else 0.0
+    except (ValueError, TypeError):
+        local_pre_rank = 0.0
+    subscores["Local_PreRank"] = min(max(local_pre_rank, 0.0), 1.0)
+
     # Effect-first weight scheme: LLM listwise is the primary signal (0.50).
     # If listwise_score is missing (reranker failed/skipped), redistribute its
     # weight to LLM_Relevance (evidence selector) so the formula degrades gracefully.
@@ -158,16 +167,17 @@ def compute_paper_score(
         )
     else:
         # Fallback path: listwise reranker didn't run or returned 0
-        # BGE vector similarity is the strongest signal when LLM is unavailable
+        # Constraint-aware local pre-rank is important when the LLM is unavailable.
         final_score = (
-            subscores["LLM_Relevance"]         * 0.25 +
-            subscores["BGE_Reranker"]          * 0.20 +
+            subscores["LLM_Relevance"]         * 0.22 +
+            subscores["Local_PreRank"]         * 0.18 +
+            subscores["BGE_Reranker"]          * 0.14 +
             subscores["Constraint_Coverage"]   * 0.15 +
-            subscores["Source_Agreement"]      * 0.12 +
-            subscores["Evidence_Completeness"] * 0.10 +
-            subscores["Recency"]               * 0.05 +
-            subscores["Authority"]             * 0.05 +
-            subscores["Diversity_Graph_Prior"] * 0.08 +
+            subscores["Source_Agreement"]      * 0.10 +
+            subscores["Evidence_Completeness"] * 0.09 +
+            subscores["Recency"]               * 0.04 +
+            subscores["Authority"]             * 0.03 +
+            subscores["Diversity_Graph_Prior"] * 0.05 +
             title_exact_bonus +
             title_like_bonus
         )

@@ -61,3 +61,44 @@ def test_biomedical_latest_work_routes_pubmed_core_queries():
     assert "non-small cell lung cancer" in plan.entities
     assert "core_topic" in routing.routes_per_provider["pubmed"]
     assert routing.caps_per_provider["pubmed"] >= 3
+
+
+def test_spar_autonomous_driving_question_gets_decision_terms():
+    question = (
+        "How can autonomous driving systems use deep learning to improve robotic "
+        "decision-making in complex traffic scenes?"
+    )
+    plan = heuristic_understand_query(question)
+    texts = [item.query.lower() for item in heuristic_generate_search_queries(plan)]
+
+    assert "autonomous driving" in plan.entities
+    assert "autonomous vehicle decision making" in plan.entities
+    assert any("autonomous vehicle decision making" in text for text in texts)
+
+
+def test_spar_alzheimer_csf_question_gets_biomarker_terms():
+    question = (
+        "How do tau protein and beta-amyloid concentration changes in cerebrospinal "
+        "fluid impact the prediction of Alzheimer's disease progression in early diagnosis?"
+    )
+    plan = heuristic_understand_query(question)
+    texts = [item.query.lower() for item in heuristic_generate_search_queries(plan)]
+
+    assert "cerebrospinal fluid biomarkers" in plan.entities
+    assert "tau protein" in plan.entities
+    assert any("cerebrospinal fluid biomarkers" in text for text in texts)
+    assert any("alzheimer disease progression" in text for text in texts)
+
+
+def test_spar_personalized_immunotherapy_question_gets_precision_oncology_terms():
+    question = (
+        "How can personalized immunotherapy be optimized for cancer treatment based "
+        "on different patient conditions? Can artificial intelligence be integrated?"
+    )
+    plan = heuristic_understand_query(question)
+    texts = [item.query.lower() for item in heuristic_generate_search_queries(plan)]
+
+    assert "personalized immunotherapy" in plan.entities
+    assert "precision oncology" in plan.entities
+    assert any("personalized cancer immunotherapy" in text for text in texts)
+    assert any("immune checkpoint blockade" in text for text in texts)

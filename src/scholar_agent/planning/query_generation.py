@@ -169,6 +169,30 @@ def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: 
         terms.extend(["masked face recognition", "occluded face recognition", "partial face recognition"])
     if "lung cancer" in text:
         terms.extend(["non-small cell lung cancer", "immune checkpoint inhibitors", "targeted lung cancer therapy"])
+    if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
+        terms.extend(["autonomous driving", "autonomous vehicle decision making", "motion planning"])
+    if "speech recognition" in text and ("gan" in text or "generative adversarial" in text):
+        terms.extend(["speech data augmentation", "adversarial speech recognition"])
+    if ("few-shot" in text or "few shot" in text or "unlabeled" in text) and (
+        "natural language" in text or "nlp" in text
+    ):
+        terms.extend(["few-shot learning", "data-efficient NLP", "semi-supervised NLP"])
+    if "network traffic" in text or "real-time traffic" in text:
+        terms.extend(["network traffic analysis", "traffic classification", "intrusion detection"])
+    if "multilingual" in text or "language barrier" in text:
+        terms.extend(["multilingual language models", "cross-lingual transfer", "machine translation"])
+    if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
+        terms.extend(["long-term reward optimization", "sequential decision making"])
+    if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
+        "computer vision" in text or "deep learning" in text
+    ):
+        terms.extend(["efficient deep learning inference", "model acceleration", "real-time computer vision"])
+    if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
+        terms.extend(["cerebrospinal fluid biomarkers", "amyloid beta tau", "Alzheimer disease progression"])
+    if "vaccine" in text and ("infectious" in text or "development" in text):
+        terms.extend(["vaccine development", "mRNA vaccines", "emerging infectious diseases"])
+    if "immunotherapy" in text and "cancer" in text:
+        terms.extend(["personalized cancer immunotherapy", "precision oncology", "immune checkpoint blockade"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.extend(["retrieval augmented generation hallucination", "faithful scholarly search"])
     if "sequence-to-sequence" in text and "denoising" in text and ("pre-training" in text or "pretraining" in text):
@@ -223,6 +247,30 @@ def _domain_core_terms(methods: list[str], entities: list[str], focus_query: str
         terms.extend(["masked face recognition", "occluded face recognition"])
     if "lung cancer" in text:
         terms.extend(["lung cancer treatment", "non-small cell lung cancer"])
+    if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
+        terms.extend(["autonomous driving", "autonomous vehicle decision making"])
+    if "speech recognition" in text and ("gan" in text or "generative adversarial" in text):
+        terms.extend(["speech recognition", "speech data augmentation"])
+    if ("few-shot" in text or "few shot" in text or "unlabeled" in text) and (
+        "natural language" in text or "nlp" in text
+    ):
+        terms.extend(["few-shot learning", "semi-supervised natural language processing"])
+    if "network traffic" in text or "real-time traffic" in text:
+        terms.extend(["network traffic analysis", "traffic classification"])
+    if "multilingual" in text or "language barrier" in text:
+        terms.extend(["multilingual language models", "cross-lingual transfer"])
+    if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
+        terms.extend(["reinforcement learning", "long-term reward optimization"])
+    if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
+        "computer vision" in text or "deep learning" in text
+    ):
+        terms.extend(["computer vision", "efficient inference"])
+    if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
+        terms.extend(["cerebrospinal fluid biomarkers", "Alzheimer disease progression"])
+    if "vaccine" in text and ("infectious" in text or "development" in text):
+        terms.extend(["vaccine development", "emerging infectious diseases"])
+    if "immunotherapy" in text and "cancer" in text:
+        terms.extend(["cancer immunotherapy", "precision oncology"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.extend(["retrieval augmented generation", "hallucination"])
         if "scholarly search" in text:
@@ -251,6 +299,30 @@ def _domain_method_terms(methods: list[str], entities: list[str], focus_query: s
         terms.extend(["deep face recognition", "masked face recognition"])
     if "lung cancer" in text:
         terms.extend(["immune checkpoint inhibitors", "targeted therapy lung cancer"])
+    if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
+        terms.extend(["motion planning", "decision making autonomous vehicles"])
+    if "speech recognition" in text and ("gan" in text or "generative adversarial" in text):
+        terms.extend(["generative adversarial network speech", "speech data augmentation"])
+    if ("few-shot" in text or "few shot" in text or "unlabeled" in text) and (
+        "natural language" in text or "nlp" in text
+    ):
+        terms.extend(["few-shot text classification", "semi-supervised NLP"])
+    if "network traffic" in text or "real-time traffic" in text:
+        terms.extend(["traffic classification", "intrusion detection"])
+    if "multilingual" in text or "language barrier" in text:
+        terms.extend(["cross-lingual transfer", "machine translation"])
+    if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
+        terms.extend(["reward optimization", "sequential decision making"])
+    if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
+        "computer vision" in text or "deep learning" in text
+    ):
+        terms.extend(["model acceleration", "real-time computer vision"])
+    if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
+        terms.extend(["amyloid beta tau biomarkers", "cerebrospinal fluid biomarker"])
+    if "vaccine" in text and ("infectious" in text or "development" in text):
+        terms.extend(["mRNA vaccines", "rapid vaccine development"])
+    if "immunotherapy" in text and "cancer" in text:
+        terms.extend(["personalized immunotherapy", "immune checkpoint blockade"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.append("retrieval augmented generation hallucination")
         if "citation network" in text:

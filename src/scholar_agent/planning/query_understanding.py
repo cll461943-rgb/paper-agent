@@ -28,6 +28,8 @@ COMMON_METHOD_HINTS = [
     "tf-idf",
     "transformer",
     "diffusion",
+    "generative adversarial network",
+    "convolutional neural network",
     "lora",
     "low-rank adaptation",
     "contrastive learning",
@@ -82,9 +84,25 @@ COMMON_ENTITY_HINTS = [
     "occluded face recognition", "partial face recognition",
     "medical imaging", "medical imaging diagnostics", "tumor detection",
     "cancer imaging", "lung cancer", "non-small cell lung cancer",
+    "computer vision", "efficient inference", "model acceleration",
+    "autonomous driving", "autonomous vehicle", "autonomous vehicles",
+    "autonomous vehicle decision making", "robotic decision making",
+    "driving decision making",
     "spam detection",
-    "speech recognition", "text-to-speech", "image captioning",
+    "speech recognition", "speech data augmentation", "text-to-speech", "image captioning",
     "visual question answering", "dialogue system", "chatbot",
+    "few-shot learning", "data-efficient natural language processing",
+    "semi-supervised natural language processing", "self-supervised natural language processing",
+    "network traffic analysis", "traffic classification", "intrusion detection",
+    "real-time traffic classification", "time series classification",
+    "multilingual language models", "cross-lingual transfer", "language barrier",
+    "machine translation", "reinforcement learning", "long-term reward optimization",
+    "sequential decision making",
+    "cerebrospinal fluid", "cerebrospinal fluid biomarkers",
+    "amyloid beta", "beta-amyloid", "tau protein", "Alzheimer's disease",
+    "vaccine development", "mRNA vaccines", "emerging infectious diseases",
+    "personalized immunotherapy", "cancer immunotherapy", "precision oncology",
+    "precision medicine", "immune checkpoint blockade",
     "embedding", "representation learning", "feature extraction",
     "alignment", "safety", "jailbreak", "red-teaming",
     "long context", "context window", "token limit",
@@ -200,6 +218,37 @@ def _derived_entity_hints(lowered: str) -> list[str]:
             hints.extend(["targeted lung cancer therapy", "immune checkpoint inhibitors"])
     if "medical imaging" in lowered and ("tumor" in lowered or "cancer" in lowered or "diagnos" in lowered):
         hints.extend(["medical imaging diagnostics", "tumor detection", "cancer imaging"])
+    if ("autonomous" in lowered or "driving" in lowered) and (
+        "decision" in lowered or "vehicle" in lowered or "robot" in lowered
+    ):
+        hints.extend(["autonomous driving", "autonomous vehicle decision making", "driving decision making"])
+    if "speech recognition" in lowered and ("gan" in lowered or "generative adversarial" in lowered):
+        hints.extend(["speech recognition", "speech data augmentation"])
+    if ("few-shot" in lowered or "few shot" in lowered or "unlabeled" in lowered) and (
+        "nlp" in lowered or "natural language" in lowered
+    ):
+        hints.extend(["few-shot learning", "data-efficient natural language processing", "semi-supervised natural language processing"])
+    if "network traffic" in lowered or ("real-time" in lowered and "traffic" in lowered):
+        hints.extend(["network traffic analysis", "traffic classification", "intrusion detection"])
+    if "multilingual" in lowered or "language barrier" in lowered:
+        hints.extend(["multilingual language models", "cross-lingual transfer", "machine translation"])
+    if "reinforcement learning" in lowered and ("long-term" in lowered or "long term" in lowered or "reward" in lowered):
+        hints.extend(["long-term reward optimization", "sequential decision making"])
+    if ("inference" in lowered or "processing time" in lowered or "speed" in lowered) and (
+        "computer vision" in lowered or "deep learning" in lowered
+    ):
+        hints.extend(["efficient inference", "model acceleration", "computer vision"])
+    if (
+        "cerebrospinal fluid" in lowered
+        or "amyloid" in lowered
+        or "β-amyloid" in lowered
+        or "aβ" in lowered
+    ) and ("alzheimer" in lowered or "tau" in lowered):
+        hints.extend(["cerebrospinal fluid biomarkers", "amyloid beta", "tau protein", "Alzheimer's disease"])
+    if "vaccine" in lowered and ("infectious" in lowered or "development" in lowered):
+        hints.extend(["vaccine development", "mRNA vaccines", "emerging infectious diseases"])
+    if "immunotherapy" in lowered and "cancer" in lowered:
+        hints.extend(["personalized immunotherapy", "cancer immunotherapy", "precision oncology", "immune checkpoint blockade"])
     if "tunisian arabic dialect" in lowered and "translat" in lowered:
         hints.append("tunisian arabic dialect translation")
         if "resource" in lowered or "data" in lowered:
