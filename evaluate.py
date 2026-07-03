@@ -12,6 +12,7 @@ import argparse
 import json
 import logging
 import os
+import random
 import re
 import sys
 import time
@@ -389,6 +390,31 @@ def parse_cases_arg(cases_str: str, max_cases: int) -> list[int]:
     return sorted(list(selected))
 
 
+def select_case_indices(
+    max_cases: int,
+    *,
+    cases_filter: str | None = None,
+    simple: bool = False,
+    limit: int | None = None,
+    random_seed: int = 123,
+) -> list[int]:
+    """Select evaluation case indexes deterministically.
+
+    ``limit`` intentionally samples rather than taking the first N cases, but
+    the sample must be reproducible so benchmark deltas are attributable to
+    code/config changes rather than a new random case set.
+    """
+    indices = list(range(max_cases))
+    if cases_filter:
+        return parse_cases_arg(cases_filter, max_cases)
+    if simple:
+        return [0]
+    if limit is not None and limit > 0 and limit < len(indices):
+        rng = random.Random(random_seed)
+        return sorted(rng.sample(indices, limit))
+    return indices
+
+
 def format_compare(label: str, current: float, baseline: float, is_time: bool = False) -> str:
     diff = current - baseline
     if is_time:
@@ -487,6 +513,7 @@ def run_evaluation(
     config_path: str | None = None,
     trace_gold: bool = False,
     dataset_file: str | None = None,
+    random_seed: int = 123,
 ) -> None:
     # 加载配置
     config = load_config(config_path)
@@ -567,24 +594,20 @@ def run_evaluation(
         print("❌ Error: No test cases found in the dataset.", file=sys.stderr)
         sys.exit(1)
 
-    # 用例筛选
-    import random as _random
-    indices = list(range(len(all_cases)))
-    if cases_filter:
-        indices = parse_cases_arg(cases_filter, len(all_cases))
-        if not indices:
-            print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
-            sys.exit(1)
-    elif simple:
-        indices = [0]
-    elif limit is not None and limit > 0:
-        # 随机抽样，而非顺序取前 N 个
-        if limit < len(indices):
-            indices = sorted(_random.sample(indices, limit))
-        # 若 limit >= 总数，则直接使用全量（不截断）
+    indices = select_case_indices(
+        len(all_cases),
+        cases_filter=cases_filter,
+        simple=simple,
+        limit=limit,
+        random_seed=random_seed,
+    )
+    if cases_filter and not indices:
+        print(f"❌ Error: filter '{cases_filter}' did not match any test cases.", file=sys.stderr)
+        sys.exit(1)
 
     eval_cases = [all_cases[i] for i in indices]
-    print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation (indices: {[i+1 for i in indices]}).")
+    seed_note = f", seed={random_seed}" if limit is not None and limit > 0 and not cases_filter and not simple else ""
+    print(f"Total cases in dataset: {len(all_cases)}. Selected {len(eval_cases)} cases for evaluation (indices: {[i+1 for i in indices]}{seed_note}).")
 
     # 构建统一 providers
     providers = build_providers(config)
@@ -1117,6 +1140,12 @@ if __name__ == "__main__":
         default=None,
         help="指定评测数据集文件路径（如 data/开发+测试集/CNScholarQuery_ZH_dev_1000.jsonl），覆盖默认搜索路径"
     )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=123,
+        help="limit 随机抽样的固定种子，默认 123；更换 seed 可得到另一组可复现样本"
+    )
 
     args = parser.parse_args()
 
@@ -1152,4 +1181,5 @@ if __name__ == "__main__":
         config_path=args.config,
         trace_gold=args.trace_gold,
         dataset_file=args.dataset_file,
+        random_seed=args.seed,
     )
