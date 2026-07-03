@@ -161,6 +161,34 @@ _ROUTING_TABLE: dict[str, dict[str, Any]] = {
 _DEFAULT_CONFIG = _ROUTING_TABLE["unknown"]
 
 
+def _is_biomedical_topic(query_plan: QueryPlan) -> bool:
+    text = " ".join(
+        [
+            query_plan.original_query or "",
+            query_plan.research_topic or "",
+            *query_plan.methods,
+            *query_plan.datasets,
+            *query_plan.entities,
+        ]
+    ).lower()
+    biomedical_terms = {
+        "antibody",
+        "biomedical",
+        "cancer",
+        "clinical",
+        "diagnosis",
+        "disease",
+        "drug",
+        "gene",
+        "lung cancer",
+        "medical",
+        "protein",
+        "therapy",
+        "treatment",
+    }
+    return any(term in text for term in biomedical_terms)
+
+
 def get_routing_config(
     query_plan: QueryPlan,
     review_feedback: dict[str, Any] | None = None,
@@ -182,6 +210,11 @@ def get_routing_config(
     caps = dict(base["caps"])
     safety_threshold = base["safety_threshold"]
     reasons = [base["reason"]]
+
+    if qt == "latest_work" and _is_biomedical_topic(query_plan):
+        routes["pubmed"] = {"core_topic", "method_task", "broad_synonym", "entity_dataset", "title_like"}
+        caps["pubmed"] = max(caps.get("pubmed", 0), 3)
+        reasons.append("biomedical latest_work: enable PubMed core routes")
 
     # 闭环调整：根据 review_feedback 动态调整
     if review_feedback:

@@ -159,6 +159,16 @@ def _infer_known_paper_title(text: str, enabled: bool = True) -> str | None:
 def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: str) -> list[str]:
     text = " ".join([*methods, *entities, focus_query]).lower()
     terms: list[str] = []
+    if "sentiment analysis" in text:
+        terms.extend(["context-aware sentiment analysis", "aspect-level sentiment classification"])
+    if "legal" in text and ("language model" in text or "large-scale language" in text or "llm" in text):
+        terms.extend(["legal large language models", "legal natural language processing", "legal text mining"])
+    if ("face recognition" in text or "facial recognition" in text) and (
+        "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
+    ):
+        terms.extend(["masked face recognition", "occluded face recognition", "partial face recognition"])
+    if "lung cancer" in text:
+        terms.extend(["non-small cell lung cancer", "immune checkpoint inhibitors", "targeted lung cancer therapy"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.extend(["retrieval augmented generation hallucination", "faithful scholarly search"])
     if "sequence-to-sequence" in text and "denoising" in text and ("pre-training" in text or "pretraining" in text):
@@ -203,6 +213,16 @@ def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: 
 def _domain_core_terms(methods: list[str], entities: list[str], focus_query: str) -> list[str]:
     text = " ".join([*methods, *entities, focus_query]).lower()
     terms: list[str] = []
+    if "sentiment analysis" in text:
+        terms.extend(["sentiment analysis", "contextual sentiment analysis"])
+    if "legal" in text and ("language model" in text or "large-scale language" in text or "llm" in text):
+        terms.extend(["large language models", "legal text analysis"])
+    if ("face recognition" in text or "facial recognition" in text) and (
+        "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
+    ):
+        terms.extend(["masked face recognition", "occluded face recognition"])
+    if "lung cancer" in text:
+        terms.extend(["lung cancer treatment", "non-small cell lung cancer"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.extend(["retrieval augmented generation", "hallucination"])
         if "scholarly search" in text:
@@ -221,6 +241,16 @@ def _domain_core_terms(methods: list[str], entities: list[str], focus_query: str
 def _domain_method_terms(methods: list[str], entities: list[str], focus_query: str) -> list[str]:
     text = " ".join([*methods, *entities, focus_query]).lower()
     terms: list[str] = []
+    if "sentiment analysis" in text:
+        terms.extend(["aspect-level sentiment classification", "sentiment classification"])
+    if "legal" in text and ("language model" in text or "large-scale language" in text or "llm" in text):
+        terms.extend(["legal NLP", "automated legal text analysis"])
+    if ("face recognition" in text or "facial recognition" in text) and (
+        "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
+    ):
+        terms.extend(["deep face recognition", "masked face recognition"])
+    if "lung cancer" in text:
+        terms.extend(["immune checkpoint inhibitors", "targeted therapy lung cancer"])
     if "retrieval augmented generation" in text and "hallucination" in text:
         terms.append("retrieval augmented generation hallucination")
         if "citation network" in text:

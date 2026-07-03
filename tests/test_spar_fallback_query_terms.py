@@ -1,0 +1,52 @@
+from scholar_agent.planning.query_generation import heuristic_generate_search_queries
+from scholar_agent.planning.query_understanding import heuristic_understand_query
+from scholar_agent.retrieval.dynamic_router import get_routing_config
+
+
+def _query_texts(question: str) -> list[str]:
+    plan = heuristic_understand_query(question)
+    return [item.query.lower() for item in heuristic_generate_search_queries(plan)]
+
+
+def test_spar_sentiment_question_gets_academic_fallback_terms():
+    texts = _query_texts(
+        'How can AI methods improve sentiment analysis model accuracy? For instance, '
+        '"How is Xiaoming?" might have completely different meanings depending on the context'
+    )
+
+    assert any("contextual sentiment analysis" in text for text in texts)
+    assert any("aspect-level sentiment classification" in text for text in texts)
+
+
+def test_spar_legal_llm_question_gets_legal_nlp_terms():
+    texts = _query_texts(
+        "How can large-scale language models improve automated legal text analysis systems "
+        "to minimize human intervention?"
+    )
+
+    assert any("legal text analysis" in text for text in texts)
+    assert any("legal nlp" in text or "legal natural language processing" in text for text in texts)
+
+
+def test_spar_occluded_face_question_gets_masked_face_terms():
+    texts = _query_texts(
+        "How can deep neural networks enhance real-time facial recognition performance while "
+        "reducing processing time? If a person is partially occluded, such as wearing a mask, "
+        "how can the system still recognize them?"
+    )
+
+    assert any("masked face recognition" in text for text in texts)
+    assert any("occluded face recognition" in text for text in texts)
+
+
+def test_biomedical_latest_work_routes_pubmed_core_queries():
+    plan = heuristic_understand_query(
+        "What breakthrough advancements have been made in lung cancer research? "
+        "Present the latest developments and challenges in treatment."
+    )
+
+    routing = get_routing_config(plan)
+
+    assert plan.query_type == "latest_work"
+    assert "core_topic" in routing.routes_per_provider["pubmed"]
+    assert routing.caps_per_provider["pubmed"] >= 3
