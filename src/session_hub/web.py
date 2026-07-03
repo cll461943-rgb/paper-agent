@@ -1066,10 +1066,15 @@ def build_graph_response(job_id: str, result: dict) -> dict:
                 "size": size,
                 "year": paper.get("year"),
                 "meta": {
-                    "authors": paper.get("authors", []),
+                    "authors": ", ".join(paper.get("authors", [])) if isinstance(paper.get("authors"), list) else "",
                     "venue": paper.get("venue", ""),
                     "citation_count": citation_cnt,
-                    "relevance": rel
+                    "relevance": rel,
+                    "abstract": paper.get("abstract", "") or "",
+                    "references": paper.get("references", []),
+                    "citations": paper.get("citations", []),
+                    "doi": paper.get("doi", "") or "",
+                    "url": paper.get("url", "") or ""
                 }
             })
             
@@ -1215,6 +1220,67 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "provider_count": {"healthy": 2, "total": 4}
                 }
             return send_json(start_response, status)
+            
+        # Route: GET /api/database/status
+        if path == "/api/database/status":
+            import sqlite3
+            root_dir = Path(__file__).parents[2]
+            
+            pasa_db = root_dir / "data" / "pasa_local_fts.sqlite"
+            pasa_info = {
+                "path": str(pasa_db.resolve()),
+                "exists": pasa_db.exists(),
+                "size_mb": round(pasa_db.stat().st_size / (1024 * 1024), 2) if pasa_db.exists() else 0.0,
+                "table_count": 0,
+                "paper_count": 0
+            }
+            if pasa_info["exists"]:
+                try:
+                    conn = sqlite3.connect(str(pasa_db))
+                    cursor = conn.cursor()
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+                    tables = cursor.fetchall()
+                    pasa_info["table_count"] = len(tables)
+                    
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='papers'")
+                    if cursor.fetchone():
+                        cursor.execute("SELECT count(*) FROM papers")
+                        pasa_info["paper_count"] = cursor.fetchone()[0]
+                    conn.close()
+                except Exception:
+                    pass
+                    
+            session_db = Path(DEFAULT_DB)
+            session_info = {
+                "path": str(session_db.resolve()),
+                "exists": session_db.exists(),
+                "size_mb": round(session_db.stat().st_size / (1024 * 1024), 2) if session_db.exists() else 0.0,
+                "table_count": 0,
+                "run_count": 0
+            }
+            if session_info["exists"]:
+                try:
+                    conn = sqlite3.connect(str(session_db))
+                    cursor = conn.cursor()
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+                    tables = cursor.fetchall()
+                    session_info["table_count"] = len(tables)
+                    
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='runs'")
+                    if cursor.fetchone():
+                        cursor.execute("SELECT count(*) FROM runs")
+                        session_info["run_count"] = cursor.fetchone()[0]
+                    conn.close()
+                except Exception:
+                    pass
+            if not session_info["run_count"]:
+                with JOBS_LOCK:
+                    session_info["run_count"] = len([k for k, v in ACTIVE_JOBS.items() if not v.get("is_eval")])
+                
+            return send_json(start_response, {
+                "pasa_local_fts": pasa_info,
+                "session_hub_index": session_info
+            })
             
         # Route: GET /api/configs
         if path == "/api/configs":
@@ -1464,9 +1530,21 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 "warnings": []
             })
             
-        # Route: GET /api/search/{jobId}
+        # Route: GET/DELETE /api/search/{jobId}
         if path.startswith("/api/search/"):
             job_id = path[len("/api/search/"):]
+            if method == "DELETE":
+                with JOBS_LOCK:
+                    if job_id in ACTIVE_JOBS:
+                        ACTIVE_JOBS.pop(job_id)
+                cache_file = CACHE_DIR / f"{job_id}.json"
+                if cache_file.exists():
+                    try:
+                        cache_file.unlink()
+                    except Exception:
+                        pass
+                return send_json(start_response, {"status": "succeeded", "message": f"Job {job_id} deleted successfully"})
+                
             with JOBS_LOCK:
                 job = ACTIVE_JOBS.get(job_id)
             if not job:

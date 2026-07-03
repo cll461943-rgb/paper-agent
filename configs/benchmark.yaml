@@ -1,33 +1,35 @@
-# Ablation Level 1: Local Only
-# Only pasa_local, LLM disabled, no query expansion
-# Purpose: Measure baseline recall from local corpus alone
-
+# 基准评测配置文件，专门供测试工程师用于验证前端和数据集评估精度。
 app:
   name: scholar-agent
-  mode: live
+  mode: mock          # 评测时默认使用 mock 模式进行离线快速回放，也可设为 live
   output_format: json
   providers:
-    - pasa_local
+    - openalex
+    - semantic_scholar
+    - arxiv
+    - pubmed
   cache_dir: data/cache
   parallel_retrieval: true
 
 llm:
-  enabled: false
+  enabled: true
   mode: auto
   api_key_env: DEEPSEEK_API_KEY
+  base_url_env: DEEPSEEK_BASE_URL
   base_url: https://api.deepseek.com
   model_flash: deepseek-v4-flash
   model_pro: deepseek-v4-pro
   model: deepseek-v4-flash
-  timeout_seconds: 8
-  max_tokens: 4096
+  timeout_seconds: 60
+  max_tokens: 8192
   temperature: 0.2
   trust_env: false
-  max_retries: 1
+  max_retries: 2
+  circuit_breaker_max_timeouts: 6
 
 providers:
   pasa_local:
-    enabled: true
+    enabled: false
     enable_fts: true
     base_url: data
     timeout_seconds: 0
@@ -36,57 +38,63 @@ providers:
     max_concurrency: 1
     backoff_base_seconds: 0.0
   openalex:
-    enabled: false
+    enabled: true
     base_url: https://api.openalex.org/works
-    timeout_seconds: 8
-    retry_times: 0
+    timeout_seconds: 12
+    retry_times: 3
     min_interval_seconds: 1.0
     max_concurrency: 1
-    backoff_base_seconds: 2.0
+    backoff_base_seconds: 4.0
+    mailto: "cll461943@gmail.com"
+    api_key_env: OPENALEX_API_KEY
   arxiv:
     enabled: false
     base_url: https://export.arxiv.org/api/query
-    timeout_seconds: 5
-    retry_times: 0
+    timeout_seconds: 8
+    retry_times: 1
     min_interval_seconds: 2.0
     max_concurrency: 1
     backoff_base_seconds: 3.0
   semantic_scholar:
-    enabled: false
+    enabled: true
     base_url: https://api.semanticscholar.org/graph/v1/paper/search
-    timeout_seconds: 8
-    retry_times: 0
+    timeout_seconds: 12
+    retry_times: 3
     min_interval_seconds: 2.0
     max_concurrency: 1
-    backoff_base_seconds: 1.5
+    backoff_base_seconds: 3.0
+    api_key_env: SEMANTIC_SCHOLAR_API_KEY
   pubmed:
-    enabled: false
+    enabled: true
     base_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
     timeout_seconds: 8
-    retry_times: 0
+    retry_times: 1
     min_interval_seconds: 0.35
     max_concurrency: 1
     backoff_base_seconds: 1.0
 
 budget:
-  max_search_queries: 8
-  max_retrieval_rounds: 1
-  max_results_per_query: 40
-  max_candidate_pool_size: 400
-  max_seed_papers: 5
-  max_refchain_depth: 0
-  max_llm_selection_papers: 30
-  max_final_papers: 12
-  max_evidence_summary_papers: 5
-  max_llm_calls: 0
-  llm_timeout_seconds: 8
-  api_timeout_seconds: 8
-  retry_times: 1
+  max_search_queries: 30
+  max_retrieval_rounds: 3
+  max_results_per_query: 50
+  max_candidate_pool_size: 800
+  max_seed_papers: 10
+  max_refchain_depth: 1
+  max_llm_selection_papers: 100
+  max_final_papers: 20
+  max_evidence_summary_papers: 10
+  max_llm_calls: 60
+  llm_timeout_seconds: 60
+  api_timeout_seconds: 12
+  retry_times: 2
   known_title_seed_only: false
-  enable_query_expansion: false
+  enable_query_expansion: true
+  adaptive_provider_fallback: true
+  source_auto_route: true
+  enable_translated_route: true
 
 ranking:
-  max_final_papers: 12
+  max_final_papers: 20
   pre_rank_topk: 200
   weights:
     llm_relevance: 0.25
@@ -105,9 +113,13 @@ known_title_clues:
 dynamic_k:
   exact_title_k: 1
   specific_query_k: 2
-  method_comparison_k: 6
+  dataset_constraint_k: 3
+  method_comparison_k: 3
   survey_k: 10
+  broad_topic_k: 10
   score_gap_top1: 0.15
-  min_final_score: 0.40
+  score_gap_top3: 0.10
+  min_final_score: 0.45
   fallback_k: 5
+  k_max: 20
   hard_max_output: 12
