@@ -9,6 +9,11 @@ LOGGER = logging.getLogger(__name__)
 YEAR_PATTERN = re.compile(r'\b(19|20)\d{2}\b')
 
 COMMON_METHOD_HINTS = [
+    "artificial intelligence",
+    "machine learning",
+    "deep learning",
+    "deep neural network",
+    "neural network",
     "knowledge distillation",
     "llm",
     "large language model",
@@ -56,7 +61,9 @@ COMMON_TASK_HINTS = [
     "translation", "translating", "planning", "reasoning", "summarization",
     "evaluation", "benchmark", "alignment", "quantization", "quantized",
     "pretraining", "pre-training", "captioning", "description", "extraction",
-    "watermarking",
+    "watermarking", "detection", "classification", "recognition", "diagnosis",
+    "diagnostics", "treatment", "therapy", "screening", "prediction",
+    "training efficiency",
 ]
 
 COMMON_ENTITY_HINTS = [
@@ -68,8 +75,14 @@ COMMON_ENTITY_HINTS = [
     "scholarly documents",
     "text generation", "code generation", "image generation",
     "sentiment analysis", "named entity recognition", "relation extraction",
+    "legal text analysis", "legal natural language processing", "legal nlp",
     "machine translation", "question answering", "reading comprehension",
     "text classification", "semantic segmentation", "object detection",
+    "face recognition", "facial recognition", "masked face recognition",
+    "occluded face recognition", "partial face recognition",
+    "medical imaging", "medical imaging diagnostics", "tumor detection",
+    "cancer imaging", "lung cancer", "non-small cell lung cancer",
+    "spam detection",
     "speech recognition", "text-to-speech", "image captioning",
     "visual question answering", "dialogue system", "chatbot",
     "embedding", "representation learning", "feature extraction",
@@ -157,18 +170,36 @@ def _contains_hint(lowered: str, hint: str) -> bool:
     if hint == "rl":
         return re.search(r"\brl\b|\breinforcement learning\b", lowered) is not None
     if hint == "large language model":
-        return re.search(r"\blarge language models?\b", lowered) is not None
+        return re.search(r"\blarge(?:[-\s]scale)?\s+language models?\b", lowered) is not None
     return re.search(rf"\b{re.escape(hint)}s?\b", lowered) is not None
 
 
 def _derived_entity_hints(lowered: str) -> list[str]:
     hints: list[str] = []
+    if "sentiment analysis" in lowered and ("context" in lowered or "accuracy" in lowered):
+        hints.extend(["context-aware sentiment analysis", "aspect-level sentiment classification"])
+    if "spam detection" in lowered:
+        hints.append("spam detection")
     if "knowledge distillation" in lowered and ("compress" in lowered or "compression" in lowered):
         hints.append("language model compression")
         if "language model" in lowered:
             hints.append("pre-trained language model")
         if "task-agnostic" in lowered or "task agnostic" in lowered:
             hints.append("task-agnostic knowledge distillation")
+    if "legal" in lowered and (
+        "language model" in lowered or "large-scale language" in lowered or "llm" in lowered
+    ):
+        hints.extend(["legal large language models", "legal natural language processing", "automated legal text analysis"])
+    if ("face recognition" in lowered or "facial recognition" in lowered) and (
+        "mask" in lowered or "masked" in lowered or "occlusion" in lowered or "occluded" in lowered
+    ):
+        hints.extend(["masked face recognition", "occluded face recognition", "partial face recognition"])
+    if "lung cancer" in lowered:
+        hints.append("non-small cell lung cancer")
+        if "treatment" in lowered or "therapy" in lowered:
+            hints.extend(["targeted lung cancer therapy", "immune checkpoint inhibitors"])
+    if "medical imaging" in lowered and ("tumor" in lowered or "cancer" in lowered or "diagnos" in lowered):
+        hints.extend(["medical imaging diagnostics", "tumor detection", "cancer imaging"])
     if "tunisian arabic dialect" in lowered and "translat" in lowered:
         hints.append("tunisian arabic dialect translation")
         if "resource" in lowered or "data" in lowered:

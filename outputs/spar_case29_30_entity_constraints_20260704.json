@@ -1,0 +1,305 @@
+{
+  "summary": {
+    "mode": "live",
+    "n_cases": 2,
+    "avg_f1_final": 0.0,
+    "avg_precision_final": 0.0,
+    "avg_recall_final": 0.0,
+    "avg_candidate_recall_50": 0.0625,
+    "avg_candidate_recall_100": 0.134,
+    "avg_candidate_recall_300": 0.241,
+    "avg_candidate_recall_500": 0.241,
+    "avg_selector_recall": 0.0625,
+    "avg_final_transfer_rate": 0.0,
+    "avg_wall_time": 81.0229,
+    "queries_over_time_budget": 0,
+    "queries_with_errors": 0,
+    "total_llm_calls": 2,
+    "total_api_calls": 101,
+    "total_token_estimate": 0,
+    "total_cache_hits": 4
+  },
+  "topk_sweep_summary": {
+    "topk_case_count": 2,
+    "avg_f1_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0357
+    },
+    "avg_precision_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.025
+    },
+    "avg_recall_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "5": 0.0,
+      "8": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0625
+    },
+    "avg_oracle_f1": 0.0357,
+    "avg_dynamic_k_f1": 0.0,
+    "avg_oracle_best_k": 10.0,
+    "avg_dynamic_k_chosen": 5.0,
+    "avg_output_k": 5.0
+  },
+  "k_predictor_classification": {
+    "categories": {
+      "good_match": 0,
+      "under_output": 1,
+      "over_output": 0,
+      "ranking_failure": 1,
+      "probability_calibration_failure": 0,
+      "g_hat_underestimate_failure": 0
+    },
+    "per_case": [
+      {
+        "case": "Case #29",
+        "category": "under_output",
+        "oracle_k": 20,
+        "dynamic_k": 5,
+        "gap": 0.0714,
+        "g_hat": 66.18,
+        "gold_count": 8,
+        "lc_uniform": false,
+        "mean_prob": 0.8109,
+        "std_prob": 0.0123
+      },
+      {
+        "case": "Case #30",
+        "category": "ranking_failure",
+        "oracle_k": 0,
+        "dynamic_k": 5,
+        "gap": 0.0,
+        "g_hat": 69.32,
+        "gold_count": 14,
+        "lc_uniform": false,
+        "mean_prob": 0.8325,
+        "std_prob": 0.0329
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case_index": 29,
+      "name": "case-29",
+      "query": "How can large-scale language models improve automated legal text analysis systems to minimize human intervention?",
+      "success": true,
+      "elapsed_seconds": 85.5935,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.125,
+      "candidate_recall_100": 0.125,
+      "candidate_recall_300": 0.125,
+      "candidate_recall_500": 0.125,
+      "selector_recall": 0.125,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 1,
+      "api_calls": 55,
+      "dynamic_k_chosen": 5,
+      "oracle_best_k": 20,
+      "oracle_f1": 0.0714,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0714
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.05
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.125
+        },
+        "oracle_best_k": 20,
+        "oracle_f1": 0.0714
+      },
+      "errors": [
+        "llm request failed: 403 Client Error: Forbidden for url: https://api.tokenhub.market/v1/chat/completions"
+      ]
+    },
+    {
+      "case_index": 30,
+      "name": "case-30",
+      "query": "How can deep neural networks enhance real-time facial recognition performance while reducing processing time? If a person is partially occluded, such as wearing a mask, how can the system still recognize them?",
+      "success": true,
+      "elapsed_seconds": 76.4522,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "candidate_recall_50": 0.0,
+      "candidate_recall_100": 0.1429,
+      "candidate_recall_300": 0.3571,
+      "candidate_recall_500": 0.3571,
+      "selector_recall": 0.0,
+      "final_transfer_rate": 0.0,
+      "llm_calls": 1,
+      "api_calls": 46,
+      "dynamic_k_chosen": 5,
+      "oracle_best_k": 0,
+      "oracle_f1": 0.0,
+      "topk_sweep": {
+        "f1_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "precision_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "recall_at_k": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "5": 0.0,
+          "8": 0.0,
+          "10": 0.0,
+          "15": 0.0,
+          "20": 0.0
+        },
+        "oracle_best_k": 0,
+        "oracle_f1": 0.0
+      },
+      "errors": [
+        "llm request failed: 403 Client Error: Forbidden for url: https://api.tokenhub.market/v1/chat/completions"
+      ]
+    }
+  ],
+  "llm_stats": {
+    "deepseek-v4-flash": {
+      "calls": 108,
+      "tokens": 0,
+      "elapsed": 0.7945611001050565
+    },
+    "deepseek-v4-pro": {
+      "calls": 2,
+      "tokens": 0,
+      "elapsed": 9.300012607127428e-06
+    }
+  },
+  "retrieval_stats": {
+    "semantic_scholar": {
+      "elapsed": 23.141265100013698,
+      "calls": 4,
+      "items": 0
+    },
+    "openalex": {
+      "elapsed": 151.3514457999845,
+      "calls": 97,
+      "items": 0
+    }
+  },
+  "component_stats": {
+    "query_understanding": {
+      "elapsed": 0.794169100059662,
+      "calls": 8,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.core_topic": {
+      "elapsed": 0.005793399992398918,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.core_topic": {
+      "elapsed": 0.012365100003080443,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.broad_synonym": {
+      "elapsed": 15.662214200012386,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.openalex.broad_synonym": {
+      "elapsed": 17.026164099981543,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.semantic_scholar.title_like": {
+      "elapsed": 7.473257500008913,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.openalex.title_like": {
+      "elapsed": 16.9776106000063,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.openalex.title_exact": {
+      "elapsed": 3.217384099989431,
+      "calls": 2,
+      "tokens": 0
+    },
+    "retrieval.openalex.reference_expansion": {
+      "elapsed": 54.16979429998901,
+      "calls": 41,
+      "tokens": 0
+    },
+    "retrieval.openalex.citation_expansion": {
+      "elapsed": 3.369999467395246e-05,
+      "calls": 0,
+      "tokens": 0
+    },
+    "retrieval.openalex.related_work_expansion": {
+      "elapsed": 59.94809390002047,
+      "calls": 50,
+      "tokens": 0
+    },
+    "search_planning": {
+      "elapsed": 3.6200013710185885e-05,
+      "calls": 4,
+      "tokens": 0
+    },
+    "evidence_selector": {
+      "elapsed": 0.00035580003168433905,
+      "calls": 96,
+      "tokens": 0
+    }
+  }
+}

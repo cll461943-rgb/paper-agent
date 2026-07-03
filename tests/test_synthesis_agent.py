@@ -155,3 +155,46 @@ def test_synthesis_fallback_k_floor_keeps_rank_five_candidate():
     ]
     assert result.dynamic_k_chosen >= 5
     assert "p5" in recommended_ids
+
+
+def test_synthesis_llm_unavailable_wide_query_uses_recall_floor():
+    ranked = []
+    scores = [0.80, 0.77, 0.74, 0.71, 0.68] + [0.45 - i * 0.003 for i in range(45)]
+    for idx, score in enumerate(scores, start=1):
+        paper = Paper(paper_id=f"p{idx}", title=f"Paper {idx}")
+        selection = SelectionResult(
+            paper_id=paper.paper_id,
+            relevance_level="high" if idx <= 5 else "medium",
+            reason="Local fallback selection.",
+        )
+        ranked.append(RankedPaper(paper=paper, selection=selection, final_score=score, rank=idx))
+
+    result = SynthesisAgent().synthesize(
+        original_query="large language models for automated legal text analysis",
+        query_plan=QueryPlan(
+            original_query="large language models for automated legal text analysis",
+            query_type="unknown",
+            methods=["large language model"],
+            entities=["legal text analysis", "legal natural language processing"],
+        ),
+        search_rounds=[SearchProcessRound(round_index=1, search_goal="Initial search")],
+        ranked_papers=ranked,
+        metrics=RunMetrics(),
+        config=SimpleNamespace(
+            dynamic_k=SimpleNamespace(
+                hard_max_output=20,
+                min_high=1,
+                fallback_min_output=5,
+                recall_beta=1.5,
+                drop_ratio=0.15,
+            )
+        ),
+    )
+
+    recommended_ids = [
+        rp.paper.paper_id
+        for rp in result.highly_relevant_papers + result.partially_relevant_papers
+    ]
+    assert result.dynamic_k_chosen == 20
+    assert "p20" in recommended_ids
+    assert "Fallback recall floor=20" in result.tie_break_reason

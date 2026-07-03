@@ -82,6 +82,31 @@ def _tokenize(text: str) -> set[str]:
     return set(re.findall(r"\b\w{2,}\b", text.lower()))
 
 
+def _text_constraints(plan: QueryPlan) -> list[str]:
+    """Text-matchable QueryPlan constraints used by local fallback scoring."""
+    constraints: list[str] = []
+    constraints.extend(plan.methods or [])
+    constraints.extend(plan.datasets or [])
+    constraints.extend(getattr(plan, "entities", []) or [])
+    constraints.extend(getattr(plan, "must_have_constraints", []) or [])
+
+    result: list[str] = []
+    seen: set[str] = set()
+    for constraint in constraints:
+        if not constraint:
+            continue
+        value = str(constraint).strip()
+        if not value:
+            continue
+        lowered = value.lower()
+        if lowered.startswith("year") or re.search(r"(?:^|\s)(?:year|20\d{2})\s*[<>=]", lowered):
+            continue
+        if lowered not in seen:
+            seen.add(lowered)
+            result.append(value)
+    return result
+
+
 def _local_score_paper(
     paper: Paper,
     plan: QueryPlan,
@@ -113,11 +138,10 @@ def _local_score_paper(
     else:
         components["abstract_overlap"] = 0.0
 
-    # 3. Constraint coverage: methods, datasets, entities (0-0.30)
+    # 3. Constraint coverage: methods, datasets, entities, text must-haves (0-0.30)
     matched_constraints = []
     constraint_score = 0.0
-    all_constraints = list(plan.methods) + list(plan.datasets) + list(getattr(plan, "entities", []))
-    for constraint in all_constraints:
+    for constraint in _text_constraints(plan):
         if not constraint:
             continue
         c_lower = constraint.lower()
@@ -210,7 +234,7 @@ def _local_score_to_selection(
     matched = []
     missing = []
     all_tokens = _tokenize(paper.title) | _tokenize(paper.abstract or "")
-    for constraint in list(plan.methods) + list(plan.datasets):
+    for constraint in _text_constraints(plan):
         if not constraint:
             continue
         c_tokens = _tokenize(constraint)
@@ -220,6 +244,12 @@ def _local_score_to_selection(
             matched.append(constraint)
         else:
             missing.append(constraint)
+
+    if matched or missing:
+        constraint_ratio = len(matched) / max(len(matched) + len(missing), 1)
+        constraint_numeric = max(fb_constraint, constraint_ratio)
+    else:
+        constraint_numeric = fb_constraint
 
     return SelectionResult(
         paper_id=paper.paper_id,
@@ -235,7 +265,7 @@ def _local_score_to_selection(
         confidence=min(score + 0.1, 0.9),
         is_validated=True,
         relevance_score=max(fb_rel, score),
-        constraint_score=fb_constraint,
+        constraint_score=constraint_numeric,
         evidence_score=fb_evidence,
         uncertainty=[],
     )
@@ -407,7 +437,7 @@ def _llm_review_batch(
     def _timeout_for_next_call() -> float | None:
         configured_timeout = timeout_override
         if deadline is None:
-            return configured_timeout
+            return float(configured_timeout) if configured_timeout is not None else 30.0
 
         remaining = deadline.remaining()
         if remaining <= 1.0:

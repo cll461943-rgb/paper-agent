@@ -62,6 +62,7 @@ def _selection_constraint_coverage(selection: SelectionResult, plan: QueryPlan) 
     constraints = []
     constraints.extend(plan.datasets or [])
     constraints.extend(plan.methods or [])
+    constraints.extend(plan.entities or [])
     constraints.extend(plan.must_have_constraints or [])
 
     constraints = list(dict.fromkeys([c for c in constraints if c]))

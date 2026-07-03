@@ -19,22 +19,31 @@ def test_spar_sentiment_question_gets_academic_fallback_terms():
 
 
 def test_spar_legal_llm_question_gets_legal_nlp_terms():
-    texts = _query_texts(
+    question = (
         "How can large-scale language models improve automated legal text analysis systems "
         "to minimize human intervention?"
     )
+    plan = heuristic_understand_query(question)
+    texts = [item.query.lower() for item in heuristic_generate_search_queries(plan)]
 
+    assert "large language model" in plan.methods
+    assert any("legal" in entity for entity in plan.entities)
     assert any("legal text analysis" in text for text in texts)
     assert any("legal nlp" in text or "legal natural language processing" in text for text in texts)
 
 
 def test_spar_occluded_face_question_gets_masked_face_terms():
-    texts = _query_texts(
+    question = (
         "How can deep neural networks enhance real-time facial recognition performance while "
         "reducing processing time? If a person is partially occluded, such as wearing a mask, "
         "how can the system still recognize them?"
     )
+    plan = heuristic_understand_query(question)
+    texts = [item.query.lower() for item in heuristic_generate_search_queries(plan)]
 
+    assert "deep neural network" in plan.methods
+    assert "masked face recognition" in plan.entities
+    assert "occluded face recognition" in plan.entities
     assert any("masked face recognition" in text for text in texts)
     assert any("occluded face recognition" in text for text in texts)
 
@@ -48,5 +57,7 @@ def test_biomedical_latest_work_routes_pubmed_core_queries():
     routing = get_routing_config(plan)
 
     assert plan.query_type == "latest_work"
+    assert "lung cancer" in plan.entities
+    assert "non-small cell lung cancer" in plan.entities
     assert "core_topic" in routing.routes_per_provider["pubmed"]
     assert routing.caps_per_provider["pubmed"] >= 3

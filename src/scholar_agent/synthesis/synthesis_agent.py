@@ -120,6 +120,8 @@ class SynthesisAgent:
         _min_high = int(getattr(_dk_cfg, "min_high", 1)) if _dk_cfg else 1
         _fallback_min_output = int(getattr(_dk_cfg, "fallback_min_output", 5)) if _dk_cfg else 5
         _listwise_success = bool(listwise_result is not None and getattr(listwise_result, "success", False))
+        _fallback_output_floor = _fallback_min_output
+        _recall_floor_note = ""
 
         # ── Score-gap 检测：利用得分断崖定位自然分界点 ──
         # 在 F_beta 截断之前，先检查 top-N 论文中是否存在显著的得分断崖。
@@ -183,17 +185,34 @@ class SynthesisAgent:
                         _previous_max, _effective_max,
                     )
         elif ranked_papers:
+            _qt = getattr(query_plan, "query_type", "unknown")
+            _structured_terms = (
+                len(getattr(query_plan, "methods", []) or [])
+                + len(getattr(query_plan, "datasets", []) or [])
+                + len(getattr(query_plan, "entities", []) or [])
+                + len(getattr(query_plan, "must_have_constraints", []) or [])
+            )
+            _is_recall_first_fallback = (
+                _qt in {"unknown", "broad_topic", "survey", "latest_work", "dataset_constraint", "method_comparison"}
+                and _qt not in {"exact_title", "single_gold", "specific_paper"}
+                and len(ranked_papers) >= 50
+                and _structured_terms >= 2
+            )
+            if _is_recall_first_fallback:
+                _fallback_output_floor = max(_fallback_output_floor, min(_max_output, 20))
+                _recall_floor_note = f"Fallback recall floor={_fallback_output_floor}; "
+
             _previous_max = _effective_max
             _effective_max = min(
                 _max_output,
                 len(ranked_papers),
-                max(_effective_max, _fallback_min_output),
+                max(_effective_max, _fallback_output_floor),
             )
             if _effective_max != _previous_max:
                 LOGGER.info(
                     "Fallback K floor: effective max_output %d → %d "
                     "(listwise unavailable, floor=%d)",
-                    _previous_max, _effective_max, _fallback_min_output,
+                    _previous_max, _effective_max, _fallback_output_floor,
                 )
 
         # ── Expected-Fβ 双截断 ──
@@ -249,11 +268,46 @@ class SynthesisAgent:
             max_output=_effective_max,
         )
 
-        highly_relevant = partition.high
-        partially_relevant = partition.partial
-        supporting_papers = partition.excluded
+        def _is_recommendable(rp: RankedPaper) -> bool:
+            level = getattr(getattr(rp, "selection", None), "relevance_level", "")
+            return level in {"high", "medium"}
+
+        _partition_output = [*partition.high, *partition.partial]
+        _demoted_weak = [rp for rp in _partition_output if not _is_recommendable(rp)]
+        highly_relevant = [rp for rp in partition.high if _is_recommendable(rp)]
+        partially_relevant = [rp for rp in partition.partial if _is_recommendable(rp)]
+        supporting_papers = [*_demoted_weak, *partition.excluded]
 
         dynamic_k = len(highly_relevant) + len(partially_relevant)
+        if (
+            not _listwise_success
+            and ranked_papers
+            and _fallback_output_floor > dynamic_k
+        ):
+            _target_k = min(_fallback_output_floor, _max_output, len(ranked_papers))
+            if _target_k > dynamic_k:
+                _current_recommended_ids = {
+                    rp.paper.paper_id for rp in [*highly_relevant, *partially_relevant]
+                }
+                _guard_extra = [
+                    rp for rp in ranked_papers[dynamic_k:_target_k]
+                    if _is_recommendable(rp)
+                    and rp.paper.paper_id not in _current_recommended_ids
+                ]
+                LOGGER.info(
+                    "Fallback recall guard: expanding output K %d → %d "
+                    "(listwise unavailable, floor=%d, eligible_extra=%d)",
+                    dynamic_k, _target_k, _fallback_output_floor, len(_guard_extra),
+                )
+                partially_relevant = [*partially_relevant, *_guard_extra]
+                _recommended_ids_after_guard = {
+                    rp.paper.paper_id for rp in [*highly_relevant, *partially_relevant]
+                }
+                supporting_papers = [
+                    rp for rp in ranked_papers
+                    if rp.paper.paper_id not in _recommended_ids_after_guard
+                ]
+                dynamic_k = len(highly_relevant) + len(partially_relevant)
         
         # 统计曲线与置信度元数据以兼容 evaluate.py
         _expected_f1_curve = {k: f for k, f in enumerate(partition.core.f_curve, start=1)} if hasattr(partition.core, "f_curve") else None
@@ -427,7 +481,7 @@ class SynthesisAgent:
             g_hat_visible=_g_hat,
             low_confidence_uniform=False,
             p_floor=_p_floor,
-            tie_break_reason=_listwise_cap_note + (
+            tie_break_reason=_listwise_cap_note + _recall_floor_note + (
                 f"Score-gap K={_gap_k} → effective_max={_effective_max}"
                 if _gap_k is not None
                 else f"Percentile-drop K={_effective_max} → cutoff (k1={len(highly_relevant)}, k2={dynamic_k})"

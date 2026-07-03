@@ -109,7 +109,7 @@ def test_batch_selector_parses_numeric_scores():
 
     # Mock LLM client that returns numeric scores
     class MockLLMClient:
-        def complete_json(self, system_prompt, user_prompt, model_type="flash"):
+        def complete_json(self, system_prompt, user_prompt, model_type="flash", **kwargs):
             return {
                 "selections": [
                     {
@@ -160,7 +160,7 @@ def test_batch_selector_fallback_on_invalid_json():
 
     # Mock LLM client that returns None (simulating failure)
     class MockLLMClient:
-        def complete_json(self, system_prompt, user_prompt, model_type="flash"):
+        def complete_json(self, system_prompt, user_prompt, model_type="flash", **kwargs):
             return None
 
     results = batch_select_and_extract_evidence([paper], plan, MockLLMClient())
@@ -170,10 +170,61 @@ def test_batch_selector_fallback_on_invalid_json():
     assert r.relevance_score is not None
     assert r.constraint_score is not None
     assert r.evidence_score is not None
-    # "transformer" not in title/abstract → low
-    assert r.relevance_level == "low"
-    assert r.relevance_score == 0.20  # fallback for "low"
+    # "transformer" not in title/abstract and only weak quality priors -> irrelevant
+    assert r.relevance_level == "irrelevant"
+    assert r.relevance_score is not None and 0.0 <= r.relevance_score < 0.08
     print(f"✅ test_batch_selector_fallback_on_invalid_json passed (level={r.relevance_level}, rel_score={r.relevance_score})")
+
+
+def test_batch_selector_local_fallback_uses_entities_as_constraints():
+    """LLM 不可用时，entities 也必须参与本地 matched/missing 与 final score。"""
+    from scholar_agent.selection.batch_evidence_selector import batch_select_and_extract_evidence
+    from scholar_agent.ranking.final_reranker import compute_paper_score
+
+    plan = QueryPlan(
+        original_query=(
+            "How can deep neural networks enhance real-time facial recognition performance "
+            "when a person is partially occluded, such as wearing a mask?"
+        ),
+        query_type="specific_query",
+        methods=["deep neural network"],
+        datasets=[],
+        entities=["face recognition", "masked face recognition", "occluded face recognition"],
+    )
+    gold_like = Paper(
+        paper_id="gold-like",
+        title="Efficient Masked Face Recognition Method during the COVID-19 Pandemic",
+        abstract="We propose an efficient masked face recognition method for occluded face recognition.",
+        year=2022,
+        citation_count=25,
+        retrieval_path=["provider:openalex", "route:core_topic"],
+    )
+    broad_noise = Paper(
+        paper_id="broad-noise",
+        title="Deep learning for AI",
+        abstract="A general overview of deep learning applications.",
+        year=2022,
+        citation_count=25,
+        retrieval_path=["provider:openalex", "route:core_topic"],
+    )
+
+    results = batch_select_and_extract_evidence(
+        [broad_noise, gold_like],
+        plan,
+        llm_client=None,
+        original_query=plan.original_query,
+    )
+    by_id = {result.paper_id: result for result in results}
+
+    assert "masked face recognition" in by_id["gold-like"].matched_constraints
+    assert "face recognition" in by_id["gold-like"].matched_constraints
+    assert len(by_id["gold-like"].matched_constraints) > len(by_id["broad-noise"].matched_constraints)
+
+    gold_score, gold_subscores = compute_paper_score(gold_like, by_id["gold-like"])
+    noise_score, noise_subscores = compute_paper_score(broad_noise, by_id["broad-noise"])
+    assert gold_subscores["Constraint_Coverage"] > noise_subscores["Constraint_Coverage"]
+    assert gold_score > noise_score
+    print("✅ test_batch_selector_local_fallback_uses_entities_as_constraints passed")
 
 
 if __name__ == "__main__":
@@ -183,4 +234,5 @@ if __name__ == "__main__":
     test_fallback_selection_has_numeric_scores()
     test_batch_selector_parses_numeric_scores()
     test_batch_selector_fallback_on_invalid_json()
+    test_batch_selector_local_fallback_uses_entities_as_constraints()
     print("\n🎉 All Slice 2 tests passed!")
