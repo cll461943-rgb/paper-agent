@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """CLI entry point — ``python -m session_hub ...``.
 
 Subcommands mirror the cass contract where it makes sense, but stay
@@ -5,13 +6,12 @@ deliberately small: index / search / list / show / share / ingest /
 stats. Every command supports ``--json`` for agent consumption.
 """
 
-from __future__ import annotations
-
 import argparse
 import json
 import os
 import sys
 from pathlib import Path
+from typing import List, Optional, Dict, Any
 
 from .connectors import ALL, get_connector
 from .index import SessionIndex
@@ -38,7 +38,7 @@ def cmd_index(args: argparse.Namespace) -> int:
     connectors = [c for c in connectors if c is not None]
     total_sessions = 0
     total_messages = 0
-    per_agent: dict[str, int] = {}
+    per_agent: Dict[str, int] = {}
     for conn in connectors:
         n_s = 0
         for root in conn.default_roots():
@@ -178,6 +178,12 @@ def cmd_agents(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_web(args: argparse.Namespace) -> int:
+    from .web import run_server
+    run_server(args.host, args.port)
+    return 0
+
+
 # ---------------------------------------------------------------- parser
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
@@ -190,7 +196,8 @@ def build_parser() -> argparse.ArgumentParser:
         default=DEFAULT_DB,
         help=f"SQLite index path (default: {DEFAULT_DB})",
     )
-    sub = p.add_subparsers(dest="cmd", required=True)
+    sub = p.add_subparsers(dest="cmd")
+    sub.required = True
 
     s = sub.add_parser("index", help="scan agent roots and rebuild the index")
     s.add_argument("--agent", action="append", help="limit to one agent (repeatable)")
@@ -238,10 +245,15 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--json", action="store_true")
     s.set_defaults(func=cmd_agents)
 
+    s = sub.add_parser("web", help="launch web UI for browsing sessions")
+    s.add_argument("--host", default="127.0.0.1", help="host to bind (default: 127.0.0.1)")
+    s.add_argument("--port", type=int, default=8000, help="port to bind (default: 8000)")
+    s.set_defaults(func=cmd_web)
+
     return p
 
 
-def main(argv: list[str] | None = None) -> int:
+def main(argv: Optional[List[str]] = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     return args.func(args)
