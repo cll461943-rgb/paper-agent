@@ -79,7 +79,16 @@ def _tokenize(text: str) -> set[str]:
     """Split text into lowercased word tokens (length >= 2)."""
     if not text:
         return set()
-    return set(re.findall(r"\b\w{2,}\b", text.lower()))
+    def _normalize_token(token: str) -> str:
+        if len(token) > 4 and token.endswith("ies"):
+            return token[:-3] + "y"
+        if len(token) > 4 and token.endswith(("ches", "shes", "xes", "zes")):
+            return token[:-2]
+        if len(token) > 3 and token.endswith("s") and not token.endswith("ss"):
+            return token[:-1]
+        return token
+
+    return {_normalize_token(t) for t in re.findall(r"\b\w{2,}\b", text.lower())}
 
 
 def _text_constraints(plan: QueryPlan) -> list[str]:

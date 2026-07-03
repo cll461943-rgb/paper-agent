@@ -227,6 +227,38 @@ def test_batch_selector_local_fallback_uses_entities_as_constraints():
     print("✅ test_batch_selector_local_fallback_uses_entities_as_constraints passed")
 
 
+def test_batch_selector_local_fallback_matches_plural_masked_faces():
+    """Local selector should not miss masked-face constraints due plural 'faces'."""
+    from scholar_agent.selection.batch_evidence_selector import batch_select_and_extract_evidence
+
+    plan = QueryPlan(
+        original_query="masked face recognition under occlusion",
+        query_type="specific_query",
+        methods=[],
+        datasets=[],
+        entities=["masked face recognition", "face recognition under occlusion"],
+    )
+    paper = Paper(
+        paper_id="plural-mask",
+        title="A novel facial recognition technique with focusing on masked faces",
+        abstract="The system improves face recognition under occlusion.",
+        year=2025,
+        retrieval_path=["provider:openalex", "route:core_topic"],
+    )
+
+    result = batch_select_and_extract_evidence(
+        [paper],
+        plan,
+        llm_client=None,
+        original_query=plan.original_query,
+    )[0]
+
+    assert "masked face recognition" in result.matched_constraints
+    assert "face recognition under occlusion" in result.matched_constraints
+    assert result.relevance_level in {"high", "medium"}
+    print("✅ test_batch_selector_local_fallback_matches_plural_masked_faces passed")
+
+
 if __name__ == "__main__":
     test_safe_score()
     test_fallback_numeric_scores()
@@ -235,4 +267,5 @@ if __name__ == "__main__":
     test_batch_selector_parses_numeric_scores()
     test_batch_selector_fallback_on_invalid_json()
     test_batch_selector_local_fallback_uses_entities_as_constraints()
+    test_batch_selector_local_fallback_matches_plural_masked_faces()
     print("\n🎉 All Slice 2 tests passed!")

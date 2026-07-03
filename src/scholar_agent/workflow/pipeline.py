@@ -234,6 +234,35 @@ def _build_diversified_top80(
     return result
 
 
+def _selection_budget_for_query(
+    query_type: str,
+    *,
+    llm_off_fallback: bool,
+    pool_size: int | None = None,
+) -> int:
+    """Choose selector depth.
+
+    When LLM review is unavailable, local evidence scoring is cheap and recall
+    should dominate. SPAR Case30 showed gold papers at ranks 103-198 that were
+    in the pool but cut before selector input.
+    """
+    if query_type in ("exact_title", "specific_paper", "single_gold"):
+        selection_budget = 40
+    elif query_type in ("dataset_constraint", "method_comparison"):
+        selection_budget = 50
+    elif query_type in ("survey", "broad_topic", "latest_work"):
+        selection_budget = 65
+    else:
+        selection_budget = 45
+
+    if llm_off_fallback:
+        selection_budget = max(selection_budget, 200)
+
+    if pool_size is not None:
+        selection_budget = min(selection_budget, max(pool_size, 0))
+    return selection_budget
+
+
 def _metadata_float(paper: Paper, key: str, default: float = 0.0) -> float:
     try:
         return float(paper.metadata.get(key, default))
@@ -687,22 +716,19 @@ class PaperAgentPipeline:
             )
 
         query_type = getattr(query_plan, "query_type", "unknown")
-        # P0-4: Stratified sampling — don't just take top-N, ensure route/provider diversity
-        if query_type in ("exact_title", "specific_paper", "single_gold"):
-            selection_budget = 40
-        elif query_type in ("dataset_constraint", "method_comparison"):
-            selection_budget = 50
-        elif query_type in ("survey", "broad_topic", "latest_work"):
-            selection_budget = 65
-        else:
-            selection_budget = 45
         llm_off_fallback = (
             self.llm_client is None
             or not self.llm_client.is_available()
             or getattr(llm_circuit_breaker, "is_tripped", False)
         )
+        # P0-4: Stratified sampling — don't just take top-N, ensure route/provider diversity.
+        # When LLM is unavailable, local selector is cheap; use a deeper recall-first budget.
+        selection_budget = _selection_budget_for_query(
+            query_type,
+            llm_off_fallback=llm_off_fallback,
+            pool_size=len(pre_ranked_candidates),
+        )
         if llm_off_fallback:
-            selection_budget = min(65, max(selection_budget, 55))
             LOGGER.info("LLM-off fallback: expanded selection budget to %d", selection_budget)
 
         selection_candidates: list[Paper] = []
@@ -803,7 +829,10 @@ class PaperAgentPipeline:
         )
         from scholar_agent.selection.batch_evidence_selector import batch_select_and_extract_evidence
         # Effect-first: Set LLM timeout from config's evidence_selection timeout; local-only if expired
-        if self.llm_client is not None and not evidence_deadline.expired():
+        if llm_off_fallback:
+            evidence_llm = None
+            LOGGER.info("Evidence selection: local-only mode (LLM unavailable or circuit breaker open)")
+        elif self.llm_client is not None and not evidence_deadline.expired():
             _ev_timeout = evidence_deadline.timeout_for(
                 getattr(self.config.llm, "timeout_evidence_selection", None) or
                 getattr(self.config.llm, "timeout_seconds", 15)
@@ -830,7 +859,7 @@ class PaperAgentPipeline:
         listwise_scores: dict[str, float] | None = None
         listwise_recommended_k: int | None = None
         listwise_result = None
-        if self.llm_client is not None and not case_deadline.expired():
+        if self.llm_client is not None and not llm_off_fallback and not case_deadline.expired():
             from scholar_agent.ranking.llm_listwise_reranker import llm_listwise_rerank
 
             _listwise_input_papers, _filtered_count, _bridged_count = (
@@ -901,7 +930,7 @@ class PaperAgentPipeline:
             else:
                 LOGGER.info("No eligible candidates for listwise reranking.")
         else:
-            LOGGER.info("Listwise reranking skipped (LLM unavailable or deadline expired).")
+            LOGGER.info("Listwise reranking skipped (LLM unavailable, circuit breaker open, or deadline expired).")
 
         # ── Task 5 (V2): Large-scope second-pass rerank ──
         # If query is large-scope and few confident papers from first pass,

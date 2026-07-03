@@ -107,6 +107,24 @@ def test_constraint_coverage():
     print(f"  PASS: constraint_coverage (hit={cov_hit:.3f}, miss={cov_miss:.3f})")
 
 
+def test_constraint_coverage_matches_masked_faces_plural():
+    """Plural titles like 'masked faces' should match 'masked face recognition'."""
+    plan = QueryPlan(
+        original_query="masked face recognition under occlusion",
+        entities=["masked face recognition", "face recognition under occlusion"],
+    )
+    paper = make_paper(
+        "p1",
+        "A novel facial recognition technique with focusing on masked faces",
+        abstract="The system improves face recognition under occlusion.",
+    )
+
+    cov = _constraint_coverage(paper, plan)
+
+    assert cov == 1.0, f"Expected both constraints to match, got coverage={cov}"
+    print(f"  PASS: masked_faces_plural_constraint_coverage (coverage={cov:.3f})")
+
+
 def test_recency_score():
     """Recency score should decay with age."""
     paper_new = make_paper("p1", "New paper", year=2025)
@@ -125,5 +143,6 @@ if __name__ == "__main__":
     test_title_exact_route_bonus()
     test_topk_truncation()
     test_constraint_coverage()
+    test_constraint_coverage_matches_masked_faces_plural()
     test_recency_score()
     print("\nAll tests passed.")

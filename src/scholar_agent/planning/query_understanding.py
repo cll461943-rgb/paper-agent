@@ -82,6 +82,8 @@ COMMON_ENTITY_HINTS = [
     "text classification", "semantic segmentation", "object detection",
     "face recognition", "facial recognition", "masked face recognition",
     "occluded face recognition", "partial face recognition",
+    "face recognition under occlusion", "real-time face recognition",
+    "efficient face recognition", "lightweight face recognition",
     "medical imaging", "medical imaging diagnostics", "tumor detection",
     "cancer imaging", "lung cancer", "non-small cell lung cancer",
     "computer vision", "efficient inference", "model acceleration",
@@ -211,7 +213,18 @@ def _derived_entity_hints(lowered: str) -> list[str]:
     if ("face recognition" in lowered or "facial recognition" in lowered) and (
         "mask" in lowered or "masked" in lowered or "occlusion" in lowered or "occluded" in lowered
     ):
-        hints.extend(["masked face recognition", "occluded face recognition", "partial face recognition"])
+        hints.extend([
+            "masked face recognition",
+            "occluded face recognition",
+            "partial face recognition",
+            "face recognition under occlusion",
+        ])
+        if "real-time" in lowered or "real time" in lowered or "processing time" in lowered or "speed" in lowered:
+            hints.extend([
+                "real-time face recognition",
+                "efficient face recognition",
+                "lightweight face recognition",
+            ])
     if "lung cancer" in lowered:
         hints.append("non-small cell lung cancer")
         if "treatment" in lowered or "therapy" in lowered:
@@ -235,7 +248,7 @@ def _derived_entity_hints(lowered: str) -> list[str]:
     if "reinforcement learning" in lowered and ("long-term" in lowered or "long term" in lowered or "reward" in lowered):
         hints.extend(["long-term reward optimization", "sequential decision making"])
     if ("inference" in lowered or "processing time" in lowered or "speed" in lowered) and (
-        "computer vision" in lowered or "deep learning" in lowered
+        "computer vision" in lowered or "deep learning" in lowered or "deep neural network" in lowered
     ):
         hints.extend(["efficient inference", "model acceleration", "computer vision"])
     if (

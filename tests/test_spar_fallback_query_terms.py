@@ -44,8 +44,12 @@ def test_spar_occluded_face_question_gets_masked_face_terms():
     assert "deep neural network" in plan.methods
     assert "masked face recognition" in plan.entities
     assert "occluded face recognition" in plan.entities
+    assert "face recognition under occlusion" in plan.entities
+    assert "efficient face recognition" in plan.entities
+    assert "real-time face recognition" in plan.entities
     assert any("masked face recognition" in text for text in texts)
     assert any("occluded face recognition" in text for text in texts)
+    assert any("efficient face recognition" in text for text in texts)
 
 
 def test_biomedical_latest_work_routes_pubmed_core_queries():

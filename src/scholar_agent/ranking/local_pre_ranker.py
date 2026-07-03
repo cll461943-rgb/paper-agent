@@ -30,8 +30,18 @@ STOPWORDS = {
 def _tokens(text: str | None) -> set[str]:
     if not text:
         return set()
+    def _normalize_token(token: str) -> str:
+        if len(token) > 4 and token.endswith("ies"):
+            return token[:-3] + "y"
+        if len(token) > 4 and token.endswith(("ches", "shes", "xes", "zes")):
+            return token[:-2]
+        if len(token) > 3 and token.endswith("s") and not token.endswith("ss"):
+            return token[:-1]
+        return token
+
     return {
-        t for t in re.findall(r"[a-zA-Z0-9][a-zA-Z0-9\-]+", text.lower())
+        _normalize_token(t)
+        for t in re.findall(r"[a-zA-Z0-9][a-zA-Z0-9\-]+", text.lower())
         if len(t) >= 3 and t not in STOPWORDS
     }
 

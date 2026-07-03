@@ -166,7 +166,14 @@ def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: 
     if ("face recognition" in text or "facial recognition" in text) and (
         "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
     ):
-        terms.extend(["masked face recognition", "occluded face recognition", "partial face recognition"])
+        terms.extend([
+            "masked face recognition",
+            "occluded face recognition",
+            "partial face recognition",
+            "face recognition under occlusion",
+        ])
+        if "real-time" in text or "real time" in text or "processing time" in text or "efficient" in text:
+            terms.extend(["real-time face recognition", "efficient face recognition", "lightweight face recognition"])
     if "lung cancer" in text:
         terms.extend(["non-small cell lung cancer", "immune checkpoint inhibitors", "targeted lung cancer therapy"])
     if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
@@ -184,7 +191,7 @@ def _domain_synonym_terms(methods: list[str], entities: list[str], focus_query: 
     if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
         terms.extend(["long-term reward optimization", "sequential decision making"])
     if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
-        "computer vision" in text or "deep learning" in text
+        "computer vision" in text or "deep learning" in text or "deep neural network" in text
     ):
         terms.extend(["efficient deep learning inference", "model acceleration", "real-time computer vision"])
     if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
@@ -244,7 +251,9 @@ def _domain_core_terms(methods: list[str], entities: list[str], focus_query: str
     if ("face recognition" in text or "facial recognition" in text) and (
         "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
     ):
-        terms.extend(["masked face recognition", "occluded face recognition"])
+        terms.extend(["masked face recognition", "occluded face recognition", "face recognition under occlusion"])
+        if "real-time" in text or "real time" in text or "processing time" in text or "efficient" in text:
+            terms.extend(["real-time face recognition", "efficient face recognition"])
     if "lung cancer" in text:
         terms.extend(["lung cancer treatment", "non-small cell lung cancer"])
     if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
@@ -262,7 +271,7 @@ def _domain_core_terms(methods: list[str], entities: list[str], focus_query: str
     if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
         terms.extend(["reinforcement learning", "long-term reward optimization"])
     if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
-        "computer vision" in text or "deep learning" in text
+        "computer vision" in text or "deep learning" in text or "deep neural network" in text
     ):
         terms.extend(["computer vision", "efficient inference"])
     if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
@@ -296,7 +305,7 @@ def _domain_method_terms(methods: list[str], entities: list[str], focus_query: s
     if ("face recognition" in text or "facial recognition" in text) and (
         "occlusion" in text or "occluded" in text or "mask" in text or "masked" in text
     ):
-        terms.extend(["deep face recognition", "masked face recognition"])
+        terms.extend(["deep face recognition", "masked face recognition", "lightweight face recognition"])
     if "lung cancer" in text:
         terms.extend(["immune checkpoint inhibitors", "targeted therapy lung cancer"])
     if "autonomous" in text and ("driving" in text or "vehicle" in text or "decision" in text):
@@ -314,7 +323,7 @@ def _domain_method_terms(methods: list[str], entities: list[str], focus_query: s
     if "reinforcement learning" in text and ("long-term" in text or "long term" in text or "reward" in text):
         terms.extend(["reward optimization", "sequential decision making"])
     if ("efficient inference" in text or "model acceleration" in text or "processing time" in text) and (
-        "computer vision" in text or "deep learning" in text
+        "computer vision" in text or "deep learning" in text or "deep neural network" in text
     ):
         terms.extend(["model acceleration", "real-time computer vision"])
     if ("cerebrospinal fluid" in text or "amyloid" in text or "tau protein" in text) and "alzheimer" in text:
