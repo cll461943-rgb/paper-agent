@@ -1,0 +1,196 @@
+import { useEffect, useMemo, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { GitBranch, RefreshCw } from "lucide-react";
+import { getResults, getSearchJob, getStageArtifact } from "../lib/api";
+import type { ResultsResponse, SearchJob, StageArtifactResponse } from "../types/api";
+import { JsonBlock, MetricCard, PageHeader, Panel, PaperCard, ProgressBar, StatusPill } from "../components/Common";
+
+const stageNames = ["query_plan", "retrieval", "selection", "ranking", "synthesis"];
+
+export function ResultsPage() {
+  const { jobId = "search_20260630_1042" } = useParams();
+  const [result, setResult] = useState<ResultsResponse | null>(null);
+  const [job, setJob] = useState<SearchJob | null>(null);
+  const [artifact, setArtifact] = useState<StageArtifactResponse | null>(null);
+  const [activeStage, setActiveStage] = useState(stageNames[0]);
+
+  useEffect(() => {
+    let cancelled = false;
+    let timer: number | undefined;
+
+    async function refreshRun() {
+      const [nextJob, nextResult] = await Promise.all([getSearchJob(jobId).catch(() => null), getResults(jobId).catch(() => null)]);
+      if (cancelled) {
+        return;
+      }
+      if (nextJob) {
+        setJob(nextJob);
+      }
+      if (nextResult) {
+        setResult(nextResult);
+      }
+
+      const status = nextJob?.status ?? nextResult?.status;
+      const stillRunning = status === "queued" || status === "running" || !nextResult?.result;
+      if (stillRunning && status !== "failed") {
+        timer = window.setTimeout(refreshRun, 5000);
+      }
+    }
+
+    void refreshRun();
+    return () => {
+      cancelled = true;
+      if (timer) {
+        window.clearTimeout(timer);
+      }
+    };
+  }, [jobId]);
+
+  useEffect(() => {
+    void getStageArtifact(jobId, activeStage).then(setArtifact);
+  }, [activeStage, jobId]);
+
+  const papers = useMemo(() => {
+    if (!result?.result) {
+      return [];
+    }
+    return [
+      ...result.result.highly_relevant_papers,
+      ...result.result.partially_relevant_papers,
+      ...result.result.supporting_papers,
+    ];
+  }, [result]);
+
+  if (!result) {
+    return <PageHeader eyebrow="Results" title="Loading result" description="Fetching run artifacts from the API fallback layer." />;
+  }
+
+  if (!result.result) {
+    const status = job?.status ?? result.status;
+    const progress = job?.progress ?? 0;
+    return (
+      <>
+        <PageHeader
+          eyebrow="Result Workspace"
+          title={jobId}
+          description={`Pipeline is ${status}${job?.stage ? ` / ${job.stage}` : ""}. Results will refresh automatically.`}
+        />
+
+        <Panel title="Run in progress" meta={status}>
+          <div className="job-card">
+            <div className="job-card-top">
+              <strong>{jobId}</strong>
+              <StatusPill tone={status === "failed" ? "danger" : status === "succeeded" ? "success" : "info"} label={status} />
+            </div>
+            <ProgressBar value={progress} />
+            <dl className="compact-dl two-col">
+              <div>
+                <dt>Stage</dt>
+                <dd>{job?.stage ?? "queued"}</dd>
+              </div>
+              <div>
+                <dt>Elapsed</dt>
+                <dd>{job?.elapsed_seconds?.toFixed(1) ?? "--"}s</dd>
+              </div>
+            </dl>
+            {job?.error ? <p className="graph-empty-note">{job.error}</p> : null}
+          </div>
+        </Panel>
+      </>
+    );
+  }
+
+  const metrics = result.result.run_metrics;
+
+  return (
+    <>
+      <PageHeader
+        eyebrow="Result Workspace"
+        title={result.job_id}
+        description={result.result.original_query}
+        actions={
+          <Link className="button primary" to={`/graph/${result.job_id}`}>
+            <GitBranch size={16} />
+            Open graph
+          </Link>
+        }
+      />
+
+      <div className="metric-grid">
+        <MetricCard label="Candidates" value={metrics.candidate_pool_size.toLocaleString()} detail="retrieved pool" />
+        <MetricCard label="Final papers" value={metrics.final_papers} detail={`dynamic k=${result.result.dynamic_k_chosen ?? "--"}`} />
+        <MetricCard label="LLM calls" value={metrics.llm_calls_used} detail={`${metrics.token_estimate.toLocaleString()} tokens`} />
+        <MetricCard label="Elapsed" value={`${metrics.elapsed_seconds.toFixed(1)}s`} detail={`${metrics.cache_hits} cache hits`} />
+      </div>
+
+      <div className="results-grid">
+        <Panel title="Ranked papers" meta={`${papers.length} visible`} className="results-list">
+          <div className="paper-list scrollbar-thin">
+            {papers.map((paper) => (
+              <PaperCard item={paper} key={paper.paper.paper_id} />
+            ))}
+          </div>
+        </Panel>
+
+        <Panel title="Decision trace" meta="workflow">
+          <div className="timeline-list">
+            {result.result.search_process.map((round) => (
+              <div className="timeline-item" key={round.round_index}>
+                <span>Round {round.round_index}</span>
+                <h3>{round.search_goal}</h3>
+                <p>{round.review_conclusion}</p>
+                <small>{round.candidates_found.toLocaleString()} candidates</small>
+              </div>
+            ))}
+          </div>
+        </Panel>
+
+        <Panel title="Stage artifact" meta={activeStage}>
+          <div className="stage-tabs">
+            {stageNames.map((stage) => (
+              <button className={stage === activeStage ? "active" : ""} key={stage} type="button" onClick={() => setActiveStage(stage)}>
+                {stage.replace("_", " ")}
+              </button>
+            ))}
+          </div>
+          <JsonBlock data={artifact?.data ?? { loading: true }} />
+        </Panel>
+      </div>
+
+      <Panel title="Component metrics" meta="per stage">
+        <div className="table-wrap scrollbar-thin">
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Elapsed</th>
+                <th>Items</th>
+                <th>API</th>
+                <th>LLM</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {metrics.component_metrics.map((metric) => (
+                <tr key={metric.component}>
+                  <td>{metric.component}</td>
+                  <td>{metric.elapsed_seconds.toFixed(1)}s</td>
+                  <td>{metric.items_delta.toLocaleString()}</td>
+                  <td>{metric.api_calls_total}</td>
+                  <td>{metric.llm_calls_total}</td>
+                  <td>
+                    <StatusPill tone={metric.errors_total ? "danger" : "success"} label={metric.errors_total ? "errors" : "clean"} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Panel>
+
+      <button className="floating-refresh" type="button" onClick={() => void getResults(jobId).then(setResult)} aria-label="Refresh results">
+        <RefreshCw size={18} />
+      </button>
+    </>
+  );
+}

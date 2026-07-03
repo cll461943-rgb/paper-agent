@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ArrowUpRight, Radar } from "lucide-react";
+import { ExternalLink, Radar } from "lucide-react";
 import {
   applyNodeChanges,
   Background,
@@ -346,6 +346,9 @@ export function GraphPage() {
   }
 
   const meta = (selectedNode?.meta ?? {}) as Record<string, unknown>;
+  const metaUrl = typeof meta.url === "string" ? meta.url : "";
+  const metaDoi = typeof meta.doi === "string" ? meta.doi : "";
+  const references = Array.isArray(meta.references) ? meta.references.map(String) : [];
 
   function toggleType(type: GraphNode["type"]) {
     setActiveTypes((current) => (current.includes(type) ? current.filter((item) => item !== type) : [...current, type]));
@@ -445,7 +448,7 @@ export function GraphPage() {
               {meta.abstract ? (
                 <div className="graph-detail-block">
                   <span>Abstract</span>
-                  <p style={{ textAlign: "justify", lineHeight: "1.4", fontSize: "12px", color: "#475569", margin: "4px 0" }}>{String(meta.abstract)}</p>
+                  <p className="graph-detail-long-copy">{String(meta.abstract)}</p>
                 </div>
               ) : null}
 
@@ -456,29 +459,31 @@ export function GraphPage() {
                 </div>
               ) : null}
 
-              {selectedNode.type === "paper" && (
-                <div style={{ display: "flex", gap: "8px", margin: "12px 0", flexWrap: "wrap" }}>
-                  {meta.url && (
-                    <a className="button primary small" href={String(meta.url)} target="_blank" rel="noreferrer" style={{ fontSize: "11px", padding: "4px 8px" }}>
+              {selectedNode.type === "paper" && (metaUrl || metaDoi) ? (
+                <div className="graph-detail-actions">
+                  {metaUrl ? (
+                    <a className="button primary small" href={metaUrl} target="_blank" rel="noreferrer">
+                      <ExternalLink size={12} />
                       Open Link
                     </a>
-                  )}
-                  {meta.doi && (
-                    <a className="button secondary small" href={`https://doi.org/${String(meta.doi)}`} target="_blank" rel="noreferrer" style={{ fontSize: "11px", padding: "4px 8px" }}>
+                  ) : null}
+                  {metaDoi ? (
+                    <a className="button secondary small" href={`https://doi.org/${metaDoi}`} target="_blank" rel="noreferrer">
+                      <ExternalLink size={12} />
                       Open DOI
                     </a>
-                  )}
+                  ) : null}
                 </div>
-              )}
+              ) : null}
 
-              {selectedNode.type === "paper" && meta.references && Array.isArray(meta.references) && meta.references.length > 0 ? (
+              {selectedNode.type === "paper" && references.length > 0 ? (
                 <div className="graph-detail-block">
-                  <span>References ({meta.references.length})</span>
-                  <ul className="scrollbar-thin" style={{ maxHeight: "110px", overflowY: "auto", paddingLeft: "16px", fontSize: "11px", color: "#64748b", display: "grid", gap: "4px", margin: "4px 0" }}>
-                    {meta.references.slice(0, 10).map((ref: any, idx: number) => (
-                      <li key={idx} style={{ overflowWrap: "anywhere" }}>{String(ref)}</li>
+                  <span>References ({references.length})</span>
+                  <ul className="graph-reference-list scrollbar-thin">
+                    {references.slice(0, 10).map((ref, idx) => (
+                      <li key={`${ref}-${idx}`}>{ref}</li>
                     ))}
-                    {meta.references.length > 10 ? <li style={{ listStyleType: "none", color: "#94a3b8" }}>...and {meta.references.length - 10} more</li> : null}
+                    {references.length > 10 ? <li className="graph-reference-more">...and {references.length - 10} more</li> : null}
                   </ul>
                 </div>
               ) : null}

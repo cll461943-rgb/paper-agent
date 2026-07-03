@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import {
   Activity,
   BarChart3,
+  Copy,
   Database,
   FlaskConical,
   GitBranch,
@@ -11,8 +12,8 @@ import {
   Settings,
   Trash2,
 } from "lucide-react";
-import { getRecentRuns, getSystemStatus } from "../lib/api";
-import type { SearchJob, SystemStatus } from "../types/api";
+import { deleteSearchJob, getDatabaseStatus, getRecentRuns, getSystemStatus } from "../lib/api";
+import type { DatabaseStatus, DatabaseStoreStatus, SearchJob, SystemStatus } from "../types/api";
 import { StatusPill } from "./Common";
 import scholarAgentLogo from "../assets/scholar-agent-icon.png";
 
@@ -23,15 +24,15 @@ export function AppShell() {
   const location = useLocation();
   const [status, setStatus] = useState<SystemStatus | null>(null);
   const [runs, setRuns] = useState<SearchJob[]>([]);
-  const [dbStatus, setDbStatus] = useState<any>(null);
+  const [dbStatus, setDbStatus] = useState<DatabaseStatus | null>(null);
+  const [copiedDbPath, setCopiedDbPath] = useState("");
 
   const handleDeleteRun = async (jobId: string, e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (confirm(`Are you sure you want to delete run ${jobId}?`)) {
+    if (window.confirm(`Delete run ${jobId}?`)) {
       try {
-        const baseUrl = localStorage.getItem("api_base_url") || "http://127.0.0.1:8000";
-        await fetch(`${baseUrl}/api/search/${jobId}`, { method: "DELETE" });
+        await deleteSearchJob(jobId);
         const nextRuns = await getRecentRuns();
         setRuns(nextRuns);
       } catch (err) {
@@ -40,25 +41,28 @@ export function AppShell() {
     }
   };
 
+  const handleCopyDbPath = async (path: string) => {
+    await navigator.clipboard.writeText(path);
+    setCopiedDbPath(path);
+    window.setTimeout(() => setCopiedDbPath(""), 1800);
+  };
+
   useEffect(() => {
     let cancelled = false;
     let interval: number | undefined;
 
     async function refreshShellData() {
-      const baseUrl = localStorage.getItem("api_base_url") || "http://127.0.0.1:8000";
       const [nextStatus, nextRuns, nextDbStatus] = await Promise.all([
         getSystemStatus(),
         getRecentRuns(),
-        fetch(`${baseUrl}/api/database/status`).then(r => r.json()).catch(() => null)
+        getDatabaseStatus(),
       ]);
       if (cancelled) {
         return;
       }
       setStatus(nextStatus);
       setRuns(nextRuns);
-      if (nextDbStatus) {
-        setDbStatus(nextDbStatus);
-      }
+      setDbStatus(nextDbStatus);
     }
 
     const refreshListener = () => {
@@ -134,67 +138,45 @@ export function AppShell() {
             <span>Recent runs</span>
           </div>
           {runs.slice(0, 3).map((run) => (
-            <NavLink key={run.job_id} to={`/results/${run.job_id}`} className="run-link" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-              <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-                <span style={{ fontSize: "11px", fontWeight: 600 }}>{run.job_id.replace("search_", "")}</span>
+            <NavLink key={run.job_id} to={`/results/${run.job_id}`} className="run-link">
+              <div className="run-link-main">
+                <span>{run.job_id.replace("search_", "")}</span>
                 <StatusPill tone={run.status === "failed" ? "danger" : run.status === "succeeded" ? "success" : "info"} label={run.status} />
               </div>
-              <button 
-                type="button" 
-                onClick={(e) => void handleDeleteRun(run.job_id, e)} 
-                style={{ background: "none", border: "none", cursor: "pointer", padding: "4px", color: "#94a3b8", display: "flex", alignItems: "center" }}
-                onMouseEnter={(e) => e.currentTarget.style.color = "#ef4444"}
-                onMouseLeave={(e) => e.currentTarget.style.color = "#94a3b8"}
-                aria-label="Delete run"
-              >
+              <button type="button" className="icon-button danger-hover" onClick={(e) => void handleDeleteRun(run.job_id, e)} aria-label={`Delete run ${run.job_id}`}>
                 <Trash2 size={13} />
               </button>
             </NavLink>
           ))}
+          {!runs.length ? <span className="sidebar-empty-copy">No recent runs yet.</span> : null}
         </div>
 
-        <div className="sidebar-card database-status" style={{ marginTop: "12px" }}>
+        <div className="sidebar-card database-status">
           <div className="sidebar-card-head">
             <Database size={16} />
             <span>Letos SQLite DB</span>
           </div>
           {dbStatus ? (
-            <div style={{ display: "grid", gap: "10px", marginTop: "8px" }}>
-              <div style={{ borderBottom: "1px dashed #e2e8f0", paddingBottom: "8px" }}>
-                <strong style={{ fontSize: "11px", color: "#334155", display: "block" }}>Local Index DB</strong>
-                <span style={{ fontSize: "10px", color: "#64748b" }}>{dbStatus.pasa_local_fts.size_mb} MB ({dbStatus.pasa_local_fts.paper_count} papers)</span>
-                <button 
-                  className="button secondary small" 
-                  type="button" 
-                  style={{ width: "100%", fontSize: "9px", padding: "2px 4px", marginTop: "4px", height: "auto" }}
-                  onClick={() => {
-                    void navigator.clipboard.writeText(dbStatus.pasa_local_fts.path).then(() => {
-                      alert("Path copied to clipboard! You can open it in Letos.");
-                    });
-                  }}
-                >
-                  Copy Letos Path
-                </button>
-              </div>
-              <div>
-                <strong style={{ fontSize: "11px", color: "#334155", display: "block" }}>Session Hub DB</strong>
-                <span style={{ fontSize: "10px", color: "#64748b" }}>{dbStatus.session_hub_index.size_mb} MB ({dbStatus.session_hub_index.run_count} runs)</span>
-                <button 
-                  className="button secondary small" 
-                  type="button" 
-                  style={{ width: "100%", fontSize: "9px", padding: "2px 4px", marginTop: "4px", height: "auto" }}
-                  onClick={() => {
-                    void navigator.clipboard.writeText(dbStatus.session_hub_index.path).then(() => {
-                      alert("Path copied to clipboard! You can open it in Letos.");
-                    });
-                  }}
-                >
-                  Copy Letos Path
-                </button>
-              </div>
+            <div className="db-status-list">
+              <DatabaseStoreCard
+                label="Local Index DB"
+                metric={`${dbStatus.pasa_local_fts.size_mb} MB`}
+                detail={`${dbStatus.pasa_local_fts.paper_count ?? 0} papers`}
+                store={dbStatus.pasa_local_fts}
+                copiedDbPath={copiedDbPath}
+                onCopyPath={handleCopyDbPath}
+              />
+              <DatabaseStoreCard
+                label="Session Hub DB"
+                metric={`${dbStatus.session_hub_index.size_mb} MB`}
+                detail={`${dbStatus.session_hub_index.run_count ?? 0} runs`}
+                store={dbStatus.session_hub_index}
+                copiedDbPath={copiedDbPath}
+                onCopyPath={handleCopyDbPath}
+              />
             </div>
           ) : (
-            <span style={{ fontSize: "11px", color: "#94a3b8" }}>Loading DB metrics...</span>
+            <span className="sidebar-empty-copy">DB metrics unavailable.</span>
           )}
         </div>
       </aside>
@@ -202,6 +184,35 @@ export function AppShell() {
       <main className="workspace">
         <Outlet />
       </main>
+    </div>
+  );
+}
+
+function DatabaseStoreCard({
+  label,
+  metric,
+  detail,
+  store,
+  copiedDbPath,
+  onCopyPath,
+}: {
+  label: string;
+  metric: string;
+  detail: string;
+  store: DatabaseStoreStatus;
+  copiedDbPath: string;
+  onCopyPath: (path: string) => Promise<void>;
+}) {
+  return (
+    <div className="db-status-item">
+      <div>
+        <strong>{label}</strong>
+        <span>{metric} / {detail}</span>
+      </div>
+      <button className="button secondary small" type="button" onClick={() => void onCopyPath(store.path)}>
+        <Copy size={12} />
+        {copiedDbPath === store.path ? "Copied" : "Copy path"}
+      </button>
     </div>
   );
 }

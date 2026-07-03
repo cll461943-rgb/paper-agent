@@ -1,4 +1,5 @@
 import { type ReactNode, useState } from "react";
+import { ChevronDown, Copy, ExternalLink } from "lucide-react";
 import type { RankedPaper } from "../types/api";
 
 export function PageHeader({
@@ -62,7 +63,8 @@ export function ProgressBar({ value }: { value: number }) {
 
 export function PaperCard({ item }: { item: RankedPaper }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const tags = Object.values(item.paper.metadata).flatMap((value) => (Array.isArray(value) ? value : []));
+  const [copiedBibtex, setCopiedBibtex] = useState(false);
+  const tags = Object.values(item.paper.metadata).flatMap((value) => (Array.isArray(value) ? value.map(String) : []));
 
   const handleCopyBibtex = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -70,23 +72,26 @@ export function PaperCard({ item }: { item: RankedPaper }) {
     const cleanTitle = item.paper.title.replace(/\$([^$]+)\$/g, "$1");
     const bib = `@article{paper_${item.paper.paper_id.slice(0, 8)},\n  title={${cleanTitle}},\n  author={${authorText}},\n  year={${item.paper.year ?? new Date().getFullYear()}},\n  journal={${item.paper.venue ?? "Academic Search"}}\n}`;
     void navigator.clipboard.writeText(bib).then(() => {
-      alert("BibTeX copied to clipboard!");
+      setCopiedBibtex(true);
+      window.setTimeout(() => setCopiedBibtex(false), 1600);
     });
   };
 
   return (
-    <article 
-      className={`paper-card ${isExpanded ? "expanded" : ""}`} 
-      onClick={() => setIsExpanded(!isExpanded)}
-      style={{ cursor: "pointer", transition: "all 0.2s ease" }}
-    >
+    <article className={`paper-card ${isExpanded ? "expanded" : ""}`}>
       <div className="paper-rank">#{item.rank}</div>
       <div className="paper-body">
-        <div className="paper-title-row">
-          <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#1e293b" }}>{item.paper.title}</h3>
+        <button className="paper-summary-button" type="button" onClick={() => setIsExpanded((current) => !current)} aria-expanded={isExpanded}>
+          <span className="paper-title-row">
+            <h3>{item.paper.title}</h3>
+            <ChevronDown className="paper-expand-icon" size={16} />
+          </span>
+        </button>
+        <div className="paper-score-row">
           <strong>{item.final_score.toFixed(3)}</strong>
+          <StatusPill tone={item.selection.relevance_level === "high" ? "success" : item.selection.relevance_level === "medium" ? "info" : "muted"} label={item.selection.relevance_level} />
         </div>
-        <p style={{ color: "#64748b", margin: "4px 0" }}>{item.selection.reason}</p>
+        <p>{item.selection.reason}</p>
         <div className="paper-meta">
           <span>{item.paper.year ?? "n/a"}</span>
           <span>{item.paper.venue ?? item.paper.source}</span>
@@ -94,42 +99,45 @@ export function PaperCard({ item }: { item: RankedPaper }) {
         </div>
         
         {isExpanded && (
-          <div className="paper-expanded-content" style={{ marginTop: "12px", borderTop: "1px solid #e2e8f0", paddingTop: "12px", display: "grid", gap: "8px" }} onClick={(e) => e.stopPropagation()}>
+          <div className="paper-expanded-content">
             {item.paper.authors && item.paper.authors.length > 0 && (
               <div>
-                <strong style={{ fontSize: "11px", color: "#475569", display: "block" }}>Authors</strong>
-                <p style={{ fontSize: "12px", color: "#334155", margin: "2px 0" }}>{item.paper.authors.join(", ")}</p>
+                <strong>Authors</strong>
+                <p>{item.paper.authors.join(", ")}</p>
               </div>
             )}
             
             {item.paper.abstract && (
               <div>
-                <strong style={{ fontSize: "11px", color: "#475569", display: "block" }}>Abstract</strong>
-                <p style={{ fontSize: "12px", color: "#475569", lineHeight: "1.4", margin: "2px 0", textAlign: "justify" }}>{item.paper.abstract}</p>
+                <strong>Abstract</strong>
+                <p>{item.paper.abstract}</p>
               </div>
             )}
             
-            <div className="paper-actions" style={{ display: "flex", gap: "8px", marginTop: "8px", flexWrap: "wrap" }}>
+            <div className="paper-actions">
               {item.paper.url && (
-                <a className="button secondary small" href={item.paper.url} target="_blank" rel="noreferrer" style={{ padding: "4px 8px", fontSize: "11px" }}>
+                <a className="button secondary small" href={item.paper.url} target="_blank" rel="noreferrer">
+                  <ExternalLink size={12} />
                   Open Link
                 </a>
               )}
               {item.paper.doi && (
-                <a className="button secondary small" href={`https://doi.org/${item.paper.doi}`} target="_blank" rel="noreferrer" style={{ padding: "4px 8px", fontSize: "11px" }}>
+                <a className="button secondary small" href={`https://doi.org/${item.paper.doi}`} target="_blank" rel="noreferrer">
+                  <ExternalLink size={12} />
                   Open DOI
                 </a>
               )}
-              <button className="button secondary small" type="button" onClick={handleCopyBibtex} style={{ padding: "4px 8px", fontSize: "11px" }}>
-                Copy BibTeX
+              <button className="button secondary small" type="button" onClick={handleCopyBibtex}>
+                <Copy size={12} />
+                {copiedBibtex ? "Copied" : "Copy BibTeX"}
               </button>
             </div>
           </div>
         )}
 
-        <div className="tag-row" style={{ marginTop: "8px" }}>
-          {tags.slice(0, 5).map((tag) => (
-            <span key={String(tag)}>{String(tag)}</span>
+        <div className="tag-row">
+          {tags.slice(0, 5).map((tag, index) => (
+            <span key={`${tag}-${index}`}>{tag}</span>
           ))}
         </div>
       </div>
