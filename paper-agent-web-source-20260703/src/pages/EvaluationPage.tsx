@@ -1,9 +1,21 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { FlaskConical, Shuffle } from "lucide-react";
-import { getConfigs, getDatasets, runEvalCase, runRandomEvalCase } from "../lib/api";
+import { getConfigs, getDatasets, getEvalCaseResult, runEvalCase, runRandomEvalCase } from "../lib/api";
 import type { EvalCaseResult } from "../types/api";
-import { PageHeader, Panel, StatusPill } from "../components/Common";
+import { BatchEvaluationPanel } from "../components/BatchEvaluationPanel";
+import { MetricCard, PageHeader, Panel, StatusPill } from "../components/Common";
+
+function formatScore(value: number | null | undefined) {
+  return typeof value === "number" ? value.toFixed(3) : "--";
+}
+
+function isEvalPending(result: EvalCaseResult | null) {
+  if (!result) {
+    return false;
+  }
+  return !result.eval_metrics && result.progress.some((stage) => stage.status === "queued" || stage.status === "running");
+}
 
 export function EvaluationPage() {
   const [datasets, setDatasets] = useState<string[]>([]);
@@ -12,6 +24,7 @@ export function EvaluationPage() {
   const [config, setConfig] = useState("local_full_pipeline.yaml");
   const [caseIndex, setCaseIndex] = useState(128);
   const [result, setResult] = useState<EvalCaseResult | null>(null);
+  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     void Promise.all([getDatasets(), getConfigs()]).then(([nextDatasets, nextConfigs]) => {
@@ -22,18 +35,36 @@ export function EvaluationPage() {
     });
   }, []);
 
+  useEffect(() => {
+    if (!result || !isEvalPending(result)) {
+      setIsRunning(false);
+      return;
+    }
+
+    const jobId = result.job_id;
+    const timer = window.setTimeout(() => {
+      void getEvalCaseResult(jobId).then(setResult);
+    }, 2500);
+
+    return () => window.clearTimeout(timer);
+  }, [result]);
+
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    setIsRunning(true);
     setResult(await runEvalCase({ dataset, case_index: caseIndex, config, mode: "research", trace_gold: true }));
   }
 
   async function handleRandom() {
+    setIsRunning(true);
     setResult(await runRandomEvalCase());
   }
 
   return (
     <>
-      <PageHeader eyebrow="Evaluation" title="Single-case diagnostics" description="Run deterministic evaluation slices against datasets and inspect pipeline pass-through." />
+      <PageHeader eyebrow="Evaluation" title="Reviewer evaluation workbench" description="Import benchmark cases, run deterministic evaluation slices, and inspect final quality and budget signals." />
+
+      <BatchEvaluationPanel dataset={dataset} config={config} />
 
       <div className="eval-grid">
         <Panel title="Case runner">
@@ -63,13 +94,13 @@ export function EvaluationPage() {
               </select>
             </label>
             <div className="form-actions">
-              <button className="button secondary" type="button" onClick={handleRandom}>
+              <button className="button secondary" type="button" onClick={handleRandom} disabled={isRunning}>
                 <Shuffle size={16} />
                 Random
               </button>
-              <button className="button primary" type="submit">
+              <button className="button primary" type="submit" disabled={isRunning}>
                 <FlaskConical size={16} />
-                Run case
+                {isRunning ? "Running" : "Run case"}
               </button>
             </div>
           </form>
@@ -89,44 +120,58 @@ export function EvaluationPage() {
       </div>
 
       {result ? (
-        <Panel title={result.job_id} meta={`${result.dataset} / case ${result.case_index}`}>
-          <div className="eval-summary">
-            <div>
-              <span>Query</span>
-              <strong>{result.query}</strong>
-            </div>
-            <div>
-              <span>Gold</span>
-              <strong>{result.gold.join(", ")}</strong>
-            </div>
+        <>
+          <div className="metric-grid eval-metrics-grid">
+            <MetricCard label="F1" value={formatScore(result.eval_metrics?.f1)} detail="70% contest weight" />
+            <MetricCard label="Precision" value={formatScore(result.eval_metrics?.precision)} detail={`${result.eval_metrics?.output_total ?? 0} final papers`} />
+            <MetricCard label="Recall" value={formatScore(result.eval_metrics?.recall)} detail={`${result.eval_metrics?.hits ?? 0}/${result.eval_metrics?.gold_total ?? result.gold.length} gold hits`} />
+            <MetricCard label="Budget" value={`${(result.budget?.elapsed_seconds ?? 0).toFixed(1)}s`} detail={`${result.budget?.api_calls ?? 0} API / ${result.budget?.token_estimate ?? 0} tokens`} />
           </div>
-          <div className="table-wrap scrollbar-thin">
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Stage</th>
-                  <th>Paper</th>
-                  <th>Source</th>
-                  <th>Score</th>
-                  <th>Pass</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[...result.candidate_pool, ...result.selection_candidates, ...result.ranked_papers, ...result.final_output].map((row, index) => (
-                  <tr key={`${row.stage}-${row.paper_id}-${index}`}>
-                    <td>{row.stage}</td>
-                    <td>{row.title}</td>
-                    <td>{row.source}</td>
-                    <td>{row.score?.toFixed(3) ?? "--"}</td>
-                    <td>
-                      <StatusPill tone={row.pass ? "success" : "danger"} label={row.pass ? "pass" : "hold"} />
-                    </td>
+
+          <Panel title={result.job_id} meta={`${result.dataset} / case ${result.case_index}`}>
+            <div className="eval-summary">
+              <div>
+                <span>Query</span>
+                <strong>{result.query}</strong>
+              </div>
+              <div>
+                <span>Gold</span>
+                <strong>{result.gold.join(", ")}</strong>
+              </div>
+            </div>
+            <div className="table-wrap scrollbar-thin">
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>Stage</th>
+                    <th>Paper</th>
+                    <th>Source</th>
+                    <th>Score</th>
+                    <th>Pass</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </Panel>
+                </thead>
+                <tbody>
+                  {[...result.candidate_pool, ...result.selection_candidates, ...result.ranked_papers, ...result.final_output].map((row, index) => (
+                    <tr key={`${row.stage}-${row.paper_id}-${index}`}>
+                      <td>{row.stage}</td>
+                      <td>{row.title}</td>
+                      <td>{row.source}</td>
+                      <td>{row.score?.toFixed(3) ?? "--"}</td>
+                      <td>
+                        <StatusPill tone={row.pass ? "success" : "danger"} label={row.pass ? "pass" : "hold"} />
+                      </td>
+                    </tr>
+                  ))}
+                  {!result.final_output.length && (
+                    <tr>
+                      <td colSpan={5}>Evaluation is still running. Metrics will refresh automatically.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </Panel>
+        </>
       ) : null}
     </>
   );

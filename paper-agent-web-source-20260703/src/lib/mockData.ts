@@ -569,6 +569,22 @@ export const mockEvalCaseResult: EvalCaseResult = {
   case_index: 128,
   query: mockQueryPlan.original_query,
   gold: ["A Survey on Multimodal Large Language Models for Medical Imaging"],
+  eval_metrics: {
+    hits: 1,
+    gold_total: 1,
+    output_total: 3,
+    precision: 0.3333,
+    recall: 1,
+    f1: 0.5,
+  },
+  budget: {
+    elapsed_seconds: 18.7,
+    api_calls: 24,
+    llm_calls: 3,
+    token_estimate: 6820,
+    candidate_pool_size: 42,
+    final_papers: 3,
+  },
   progress: [
     { stage: "Retrieval", status: "succeeded", elapsed_seconds: 4.3 },
     { stage: "Selection", status: "succeeded", elapsed_seconds: 7.2 },

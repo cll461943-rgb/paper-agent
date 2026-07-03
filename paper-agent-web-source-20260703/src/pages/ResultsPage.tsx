@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { GitBranch, RefreshCw } from "lucide-react";
 import { getResults, getSearchJob, getStageArtifact } from "../lib/api";
 import type { ResultsResponse, SearchJob, StageArtifactResponse } from "../types/api";
+import { ContestReadiness } from "../components/ContestReadiness";
 import { JsonBlock, MetricCard, PageHeader, Panel, PaperCard, ProgressBar, StatusPill } from "../components/Common";
 
 const stageNames = ["query_plan", "retrieval", "selection", "ranking", "synthesis"];
@@ -122,6 +123,8 @@ export function ResultsPage() {
         <MetricCard label="LLM calls" value={metrics.llm_calls_used} detail={`${metrics.token_estimate.toLocaleString()} tokens`} />
         <MetricCard label="Elapsed" value={`${metrics.elapsed_seconds.toFixed(1)}s`} detail={`${metrics.cache_hits} cache hits`} />
       </div>
+
+      <ContestReadiness result={result.result} jobId={result.job_id} />
 
       <div className="results-grid">
         <Panel title="Ranked papers" meta={`${papers.length} visible`} className="results-list">

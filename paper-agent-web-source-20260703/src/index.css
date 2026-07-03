@@ -938,6 +938,156 @@ select:focus {
   text-transform: uppercase;
 }
 
+.contest-review-panel {
+  margin-bottom: 18px;
+}
+
+.researcher-verdict {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel-muted);
+  padding: 14px;
+}
+
+.verdict-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--warning);
+}
+
+.researcher-verdict span {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.researcher-verdict p,
+.contest-review-note,
+.urgent-needs-grid p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.contest-score-grid {
+  display: grid;
+  overflow: hidden;
+  margin: 14px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contest-score-card {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  border-left: 1px solid var(--border);
+  background: #fff;
+  padding: 14px;
+}
+
+.contest-score-card:first-child {
+  border-left: 0;
+}
+
+.contest-score-card svg {
+  color: var(--primary);
+}
+
+.contest-score-card span,
+.requirement-table th {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contest-score-card strong {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.contest-score-card small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.requirement-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.requirement-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.requirement-table th,
+.requirement-table td {
+  border-bottom: 1px solid #e8eef7;
+  padding: 11px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.requirement-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.requirement-table td:first-child {
+  color: #1f2f45;
+  font-weight: 800;
+}
+
+.urgent-needs-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.urgent-needs-grid article {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 10px;
+  border-top: 1px solid #e8eef7;
+  padding-top: 12px;
+}
+
+.urgent-needs-grid svg {
+  color: var(--primary);
+}
+
+.urgent-needs-grid h3 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.urgent-needs-grid .button {
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.contest-review-note {
+  border-top: 1px solid #e8eef7;
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .floating-refresh {
   position: fixed;
   right: 24px;
@@ -1391,6 +1541,96 @@ select:focus {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 14px;
+}
+
+.batch-eval-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.95fr) minmax(360px, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.batch-import-panel {
+  display: grid;
+  min-width: 0;
+  gap: 12px;
+}
+
+.batch-input {
+  min-height: 178px;
+  resize: vertical;
+  font-family:
+    "Cascadia Code",
+    "Consolas",
+    monospace;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.batch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.batch-file-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.batch-file-button.disabled {
+  pointer-events: none;
+  opacity: 0.62;
+}
+
+.batch-file-button input {
+  display: none;
+}
+
+.batch-summary-grid {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.batch-summary-grid .metric-card {
+  min-height: 108px;
+}
+
+.batch-table-wrap {
+  max-height: 380px;
+}
+
+.batch-table {
+  min-width: 920px;
+}
+
+.batch-table td strong,
+.batch-table td span,
+.batch-table td small {
+  display: block;
+}
+
+.batch-table td strong {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.batch-table td span,
+.batch-table td small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.batch-error {
+  color: var(--danger) !important;
+  font-weight: 700;
 }
 
 .logs-grid,
@@ -2130,11 +2370,16 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .urgent-needs-grid {
+    grid-template-columns: 1fr;
+  }
+
   .workbench-grid,
   .results-grid,
   .graph-hero,
   .graph-grid,
   .eval-grid,
+  .batch-eval-layout,
   .logs-grid,
   .settings-grid {
     grid-template-columns: 1fr;
@@ -2179,6 +2424,8 @@ select:focus {
   }
 
   .metric-grid,
+  .batch-summary-grid,
+  .contest-score-grid,
   .form-row,
   .toggle-row,
   .form-actions,
@@ -2186,6 +2433,33 @@ select:focus {
   .field-grid,
   .eval-summary {
     grid-template-columns: 1fr;
+  }
+
+  .contest-score-card {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .contest-score-card:first-child {
+    border-top: 0;
+  }
+
+  .researcher-verdict {
+    grid-template-columns: 1fr;
+  }
+
+  .batch-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .batch-actions .button,
+  .batch-actions .icon-button {
+    width: 100%;
+  }
+
+  .batch-actions .icon-button {
+    height: 38px;
   }
 
   .nav-list {

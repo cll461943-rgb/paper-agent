@@ -898,6 +898,15 @@ def run_pipeline_task(job_id: str, job_ref: dict):
                 partially_relevant = result.partially_relevant_papers
                 final_papers = [rp.paper for rp in highly_relevant] + [rp.paper for rp in partially_relevant]
                 eval_metrics = compute_precision_recall_f1(final_papers, gold_items)
+                run_metrics = result_dict.get("run_metrics", {}) if isinstance(result_dict, dict) else {}
+                budget_summary = {
+                    "elapsed_seconds": round(float(run_metrics.get("elapsed_seconds", 0.0) or 0.0), 2),
+                    "api_calls": int(run_metrics.get("api_calls_used", 0) or 0),
+                    "llm_calls": int(run_metrics.get("llm_calls_used", 0) or 0),
+                    "token_estimate": int(run_metrics.get("token_estimate", 0) or 0),
+                    "candidate_pool_size": int(run_metrics.get("candidate_pool_size", len(pool_papers)) or 0),
+                    "final_papers": int(run_metrics.get("final_papers", len(final_papers)) or 0),
+                }
                 
                 # Make diagnostics
                 def make_diag_row(p_obj, stage, pass_val=True, reason=""):
@@ -925,6 +934,8 @@ def run_pipeline_task(job_id: str, job_ref: dict):
                     "case_index": job_ref.get("case_index", 0),
                     "query": query,
                     "gold": [g.get("title", "") if isinstance(g, dict) else g for g in gold_items],
+                    "eval_metrics": eval_metrics,
+                    "budget": budget_summary,
                     "progress": [
                         {"stage": "Retrieval", "status": "succeeded", "elapsed_seconds": 5.0},
                         {"stage": "Selection", "status": "succeeded", "elapsed_seconds": 10.0},
@@ -1458,6 +1469,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 "case_index": case_index,
                 "query": query,
                 "gold": [g.get("title", "") if isinstance(g, dict) else g for g in gold],
+                "eval_metrics": None,
+                "budget": None,
                 "progress": [{"stage": "Retrieval", "status": "running", "elapsed_seconds": 0.1}],
                 "candidate_pool": [],
                 "selection_candidates": [],
@@ -1522,6 +1535,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 "case_index": case_index,
                 "query": query,
                 "gold": [g.get("title", "") if isinstance(g, dict) else g for g in gold],
+                "eval_metrics": None,
+                "budget": None,
                 "progress": [{"stage": "Retrieval", "status": "running", "elapsed_seconds": 0.1}],
                 "candidate_pool": [],
                 "selection_candidates": [],
@@ -1561,10 +1576,29 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             if job["status"] == "running":
                 elapsed = time.time() - job["start_time"]
                 
-            # If it's an evaluation job, we need to return its case result state if complete
-            if job.get("is_eval") and job["status"] == "succeeded":
-                # Return the complete eval_result
-                return send_json(start_response, job.get("eval_result", {}))
+            # Evaluation jobs use the same URL for polling but return the eval contract.
+            if job.get("is_eval"):
+                if job["status"] == "succeeded":
+                    return send_json(start_response, job.get("eval_result", {}))
+                return send_json(start_response, {
+                    "job_id": job_id,
+                    "dataset": job.get("dataset", ""),
+                    "case_index": job.get("case_index", 0),
+                    "query": job.get("query", ""),
+                    "gold": [g.get("title", "") if isinstance(g, dict) else g for g in job.get("gold", [])],
+                    "eval_metrics": None,
+                    "budget": None,
+                    "progress": [{
+                        "stage": job["stage"],
+                        "status": job["status"],
+                        "elapsed_seconds": round(elapsed, 1)
+                    }],
+                    "candidate_pool": [],
+                    "selection_candidates": [],
+                    "ranked_papers": [],
+                    "final_output": [],
+                    "warnings": [job["error"]] if job.get("error") else []
+                })
                 
             return send_json(start_response, {
                 "job_id": job_id,

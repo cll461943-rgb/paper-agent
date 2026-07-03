@@ -365,6 +365,13 @@ export async function runEvalCase(payload: EvalCaseRequest): Promise<EvalCaseRes
   );
 }
 
+export async function getEvalCaseResult(jobId: string): Promise<EvalCaseResult> {
+  return requestJson<EvalCaseResult>(`/api/search/${jobId}`, { method: "GET" }, async () => ({
+    ...mockEvalCaseResult,
+    job_id: jobId,
+  }));
+}
+
 export async function runRandomEvalCase(): Promise<EvalCaseResult> {
   return requestJson<EvalCaseResult>(
     "/api/eval/random-case",

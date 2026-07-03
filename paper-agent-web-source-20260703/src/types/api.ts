@@ -143,6 +143,24 @@ export interface RunMetrics {
   component_metrics: ComponentMetric[];
 }
 
+export interface BenchmarkMetrics {
+  hits: number;
+  gold_total: number;
+  output_total: number;
+  precision: number;
+  recall: number;
+  f1: number;
+}
+
+export interface EvalBudgetSummary {
+  elapsed_seconds: number;
+  api_calls: number;
+  llm_calls: number;
+  token_estimate: number;
+  candidate_pool_size: number;
+  final_papers: number;
+}
+
 export interface SearchProcessRound {
   round_index: number;
   search_goal: string;
@@ -174,6 +192,7 @@ export interface WorkflowResult {
   p_floor?: number | null;
   tie_break_reason?: string;
   second_pass_triggered?: boolean;
+  benchmark_metrics?: BenchmarkMetrics | null;
 }
 
 export interface ProviderStatus {
@@ -242,6 +261,8 @@ export interface EvalCaseResult {
   case_index: number;
   query: string;
   gold: string[];
+  eval_metrics?: BenchmarkMetrics | null;
+  budget?: EvalBudgetSummary | null;
   progress: Array<{ stage: string; status: JobStatus; elapsed_seconds: number }>;
   candidate_pool: DiagnosticRow[];
   selection_candidates: DiagnosticRow[];
