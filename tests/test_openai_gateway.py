@@ -48,6 +48,15 @@ def close(server: ThreadingHTTPServer) -> None:
     server.server_close()
 
 
+def test_gateway_upstream_base_url_has_dedicated_env(monkeypatch):
+    monkeypatch.setenv("OPENAI_BASE_URL", "http://127.0.0.1:3010/v1")
+    monkeypatch.setenv("OPENAI_GATEWAY_UPSTREAM_BASE_URL", "https://upstream.example/v1")
+
+    config = GatewayConfig.from_env()
+
+    assert config.upstream_base_url == "https://upstream.example/v1"
+
+
 def test_gateway_returns_clear_503_without_api_keys():
     gateway = create_gateway_server(
         GatewayConfig(

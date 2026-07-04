@@ -32,7 +32,10 @@ class GatewayConfig:
         return cls(
             host=os.getenv("OPENAI_GATEWAY_HOST", "127.0.0.1"),
             port=int(os.getenv("OPENAI_GATEWAY_PORT", "3010")),
-            upstream_base_url=os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+            upstream_base_url=os.getenv(
+                "OPENAI_GATEWAY_UPSTREAM_BASE_URL",
+                os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+            ),
             api_keys=api_keys,
             timeout_seconds=float(os.getenv("OPENAI_GATEWAY_TIMEOUT_SECONDS", "60")),
         )
@@ -179,6 +182,9 @@ def create_gateway_server(config: GatewayConfig) -> ThreadingHTTPServer:
 
 
 def main() -> None:
+    from scholar_agent.infra.config import _load_dotenv_if_present
+
+    _load_dotenv_if_present()
     config = GatewayConfig.from_env()
     server = create_gateway_server(config)
     print(
