@@ -12,7 +12,7 @@ import tkinter as tk
 from tkinter import ttk
 from typing import Any
 
-from .batch_eval import BatchCase, BatchCaseResult, load_jsonl_cases, run_batch_cases
+from .batch_eval import BatchCase, BatchCaseResult, load_dataset_cases, run_batch_cases
 
 
 def _post_json(url: str, payload: dict[str, Any], timeout: float) -> dict[str, Any]:
@@ -55,7 +55,7 @@ class DesktopBatchGui:
         top = ttk.Frame(shell)
         top.pack(fill=X)
 
-        ttk.Label(top, text="Dataset JSONL").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=4)
+        ttk.Label(top, text="Dataset").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=4)
         ttk.Entry(top, textvariable=self.dataset_path).grid(row=0, column=1, sticky="ew", pady=4)
         ttk.Button(top, text="Browse", command=self._browse_dataset).grid(row=0, column=2, padx=(8, 0), pady=4)
 
@@ -103,14 +103,21 @@ class DesktopBatchGui:
         self.table.pack(fill=BOTH, expand=True)
 
     def _browse_dataset(self) -> None:
-        filename = filedialog.askopenfilename(filetypes=[("JSONL datasets", "*.jsonl"), ("All files", "*.*")])
+        filename = filedialog.askopenfilename(
+            filetypes=[
+                ("Supported datasets", "*.json *.jsonl *.csv *.tsv"),
+                ("JSON datasets", "*.json *.jsonl"),
+                ("Delimited datasets", "*.csv *.tsv"),
+                ("All files", "*.*"),
+            ]
+        )
         if filename:
             self.dataset_path.set(filename)
 
     def _start_batch(self) -> None:
         path = Path(self.dataset_path.get())
         if not path.exists():
-            messagebox.showerror("Dataset missing", "Select an existing JSONL dataset.")
+            messagebox.showerror("Dataset missing", "Select an existing JSON, JSONL, CSV, or TSV dataset.")
             return
         if self.worker_thread and self.worker_thread.is_alive():
             return
@@ -134,7 +141,7 @@ class DesktopBatchGui:
             limit = int(self.limit.get() or "0") or None
             timeout_seconds = float(self.timeout_seconds.get() or "60")
             workers = int(self.workers.get() or "4")
-            cases = load_jsonl_cases(self.dataset_path.get(), limit=limit)
+            cases = load_dataset_cases(self.dataset_path.get(), limit=limit)
             self.events.put(("loaded", len(cases)))
             results = run_batch_cases(
                 cases,

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import concurrent.futures
+import csv
 import json
 import time
 from dataclasses import dataclass
@@ -36,17 +37,114 @@ def load_jsonl_cases(path: str | Path, limit: int | None = None) -> list[BatchCa
             if not clean_line:
                 continue
             row = json.loads(clean_line)
-            case_index = int(row.get("case_index", row.get("caseIndex", line_index)))
-            gold = row.get("gold") or row.get("gold_titles") or row.get("references") or []
-            cases.append(
-                BatchCase(
-                    dataset=str(dataset_path),
-                    case_index=case_index,
-                    query=str(row.get("query") or row.get("question") or ""),
-                    gold=tuple(str(item.get("title", item)) if isinstance(item, dict) else str(item) for item in gold),
-                )
-            )
+            cases.append(_case_from_mapping(dataset_path, row, line_index))
     return cases
+
+
+def load_dataset_cases(path: str | Path, limit: int | None = None) -> list[BatchCase]:
+    dataset_path = Path(path)
+    suffix = dataset_path.suffix.lower()
+    if suffix == ".jsonl":
+        return load_jsonl_cases(dataset_path, limit=limit)
+    if suffix in {".csv", ".tsv"}:
+        return _load_delimited_cases(dataset_path, delimiter="\t" if suffix == ".tsv" else ",", limit=limit)
+    if suffix == ".json":
+        return _load_json_cases(dataset_path, limit=limit)
+    return _load_auto_detected_cases(dataset_path, limit=limit)
+
+
+def _load_auto_detected_cases(dataset_path: Path, limit: int | None) -> list[BatchCase]:
+    sample = dataset_path.read_text(encoding="utf-8-sig").lstrip()
+    if not sample:
+        return []
+    if sample[0] in "[{":
+        return _load_json_cases(dataset_path, limit=limit)
+    if "\t" in sample.splitlines()[0]:
+        return _load_delimited_cases(dataset_path, delimiter="\t", limit=limit)
+    if "," in sample.splitlines()[0]:
+        return _load_delimited_cases(dataset_path, delimiter=",", limit=limit)
+    return load_jsonl_cases(dataset_path, limit=limit)
+
+
+def _load_json_cases(dataset_path: Path, limit: int | None) -> list[BatchCase]:
+    try:
+        payload = json.loads(dataset_path.read_text(encoding="utf-8-sig"))
+    except json.JSONDecodeError as exc:
+        try:
+            return load_jsonl_cases(dataset_path, limit=limit)
+        except json.JSONDecodeError:
+            raise ValueError(f"{dataset_path} is neither valid JSON nor JSONL: {exc}") from exc
+
+    rows = _extract_case_rows(payload)
+    return [_case_from_mapping(dataset_path, row, index) for index, row in enumerate(rows[:limit])]
+
+
+def _load_delimited_cases(dataset_path: Path, *, delimiter: str, limit: int | None) -> list[BatchCase]:
+    with dataset_path.open("r", encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle, delimiter=delimiter))
+    return [_case_from_mapping(dataset_path, row, index) for index, row in enumerate(rows[:limit])]
+
+
+def _extract_case_rows(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [row for row in payload if isinstance(row, dict)]
+    if isinstance(payload, dict):
+        for key in ("cases", "data", "examples", "items", "queries"):
+            rows = payload.get(key)
+            if isinstance(rows, list):
+                return [row for row in rows if isinstance(row, dict)]
+        return [payload]
+    raise ValueError("dataset JSON must be an object, an array, or an object containing a cases/data/examples/items/queries array")
+
+
+def _case_from_mapping(dataset_path: Path, row: dict[str, Any], fallback_index: int) -> BatchCase:
+    case_index = int(row.get("case_index", row.get("caseIndex", row.get("index", fallback_index))))
+    return BatchCase(
+        dataset=str(dataset_path),
+        case_index=case_index,
+        query=str(row.get("query") or row.get("question") or row.get("prompt") or ""),
+        gold=tuple(_normalise_gold_items(row)),
+    )
+
+
+def _normalise_gold_items(row: dict[str, Any]) -> list[str]:
+    raw_gold = (
+        row.get("gold")
+        or row.get("gold_titles")
+        or row.get("references")
+        or row.get("answer")
+        or row.get("answers")
+        or row.get("expected")
+        or []
+    )
+    if isinstance(raw_gold, str):
+        stripped = raw_gold.strip()
+        if stripped.startswith("["):
+            try:
+                raw_gold = json.loads(stripped)
+            except json.JSONDecodeError:
+                raw_gold = stripped
+        if isinstance(raw_gold, str):
+            separators = [";", "|", "\n"]
+            parts = [raw_gold]
+            for separator in separators:
+                if separator in raw_gold:
+                    parts = raw_gold.split(separator)
+                    break
+            return [part.strip() for part in parts if part.strip()]
+    if isinstance(raw_gold, dict):
+        raw_gold = [raw_gold]
+    if not isinstance(raw_gold, list):
+        return [str(raw_gold)] if raw_gold else []
+    result: list[str] = []
+    for item in raw_gold:
+        if isinstance(item, dict):
+            value = item.get("title") or item.get("name") or item.get("paper_title") or item.get("id")
+            if value:
+                result.append(str(value))
+        elif item:
+            result.append(str(item))
+    return result
 
 
 def run_batch_cases(

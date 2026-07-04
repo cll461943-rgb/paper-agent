@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from urllib.parse import parse_qs, urlparse
 
+from .batch_eval import load_dataset_cases
 from .index import SessionIndex
 from .run_store import RunStore, default_logs_db_path
 
@@ -1021,31 +1022,15 @@ def load_eval_case(dataset_name: str, case_idx: int) -> tuple[str, list[dict]]:
         dataset_path = Path(dataset_name)
     if not dataset_path.exists():
         raise FileNotFoundError(f"Dataset {dataset_name} not found")
-        
-    all_cases = []
-    with open(dataset_path, "r", encoding="utf-8") as f:
-        for line in f:
-            if line.strip():
-                raw = json.loads(line)
-                answers = raw.get("answer") or raw.get("answers") or []
-                arxiv_ids = raw.get("answer_arxiv_id") or raw.get("answer_arxiv_ids") or []
-                gold = []
-                for i, ans in enumerate(answers):
-                    if isinstance(ans, dict):
-                        gold.append(ans)
-                    else:
-                        g = {"title": ans}
-                        if i < len(arxiv_ids) and arxiv_ids[i]:
-                            g["arxiv_id"] = arxiv_ids[i]
-                        gold.append(g)
-                all_cases.append({
-                    "query": raw.get("question") or raw.get("query") or "",
-                    "gold": gold
-                })
-    if case_idx < 0 or case_idx >= len(all_cases):
+
+    all_cases = load_dataset_cases(dataset_path)
+    matched = next((case for case in all_cases if case.case_index == case_idx), None)
+    if matched is None and 0 <= case_idx < len(all_cases):
+        matched = all_cases[case_idx]
+    if matched is None:
         raise IndexError(f"Case index {case_idx} out of range (0-{len(all_cases)-1})")
-    c = all_cases[case_idx]
-    return c["query"], c["gold"]
+    c = matched
+    return c.query, [{"title": item} for item in c.gold]
 
 # Graph generator logic
 def build_graph_response(job_id: str, result: dict) -> dict:
@@ -1359,7 +1344,11 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             try:
                 bench_dir = Path("data/benchmarks")
                 if bench_dir.exists():
-                    datasets = [p.name for p in bench_dir.glob("*.jsonl")]
+                    datasets = [
+                        p.name
+                        for pattern in ("*.jsonl", "*.json", "*.csv", "*.tsv")
+                        for p in bench_dir.glob(pattern)
+                    ]
             except Exception:
                 pass
             if not datasets:
@@ -1537,7 +1526,11 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             try:
                 bench_dir = Path("data/benchmarks")
                 if bench_dir.exists():
-                    datasets = [p.name for p in bench_dir.glob("*.jsonl")]
+                    datasets = [
+                        p.name
+                        for pattern in ("*.jsonl", "*.json", "*.csv", "*.tsv")
+                        for p in bench_dir.glob(pattern)
+                    ]
             except Exception:
                 pass
                 
