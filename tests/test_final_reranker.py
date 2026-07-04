@@ -76,3 +76,52 @@ def test_rerank_papers_ordering():
     assert ranked[1].paper.paper_id == "p2"
     assert ranked[1].rank == 2
     assert ranked[0].final_score > ranked[1].final_score
+
+
+def test_biomedical_route_bonus_requires_specific_treatment_signal():
+    base_kwargs = dict(
+        abstract="Non-small cell lung cancer treatment study.",
+        year=2025,
+        citation_count=0,
+        retrieval_path=["provider:pubmed", "route:biomedical"],
+    )
+    specific = Paper(
+        paper_id="specific",
+        title="RNA therapies for non-small cell lung cancer clinical trials",
+        **base_kwargs,
+    )
+    generic = Paper(
+        paper_id="generic",
+        title="General review of non-small cell lung cancer treatment",
+        **base_kwargs,
+    )
+    low_specific = Paper(
+        paper_id="low-specific",
+        title="RNA therapies for non-small cell lung cancer clinical trials",
+        **base_kwargs,
+    )
+    high_selection = SelectionResult(
+        paper_id="specific",
+        relevance_level="high",
+        matched_constraints=["lung cancer"],
+        missing_constraints=[],
+        evidence=[],
+        reason="local fallback",
+    )
+    low_selection = SelectionResult(
+        paper_id="low-specific",
+        relevance_level="low",
+        matched_constraints=[],
+        missing_constraints=[],
+        evidence=[],
+        reason="not selected",
+    )
+
+    specific_score, specific_subscores = compute_paper_score(specific, high_selection)
+    generic_score, generic_subscores = compute_paper_score(generic, high_selection)
+    _, low_subscores = compute_paper_score(low_specific, low_selection)
+
+    assert specific_subscores["Biomedical_Fallback_Bonus"] == pytest.approx(0.18)
+    assert generic_subscores["Biomedical_Fallback_Bonus"] == 0.0
+    assert low_subscores["Biomedical_Fallback_Bonus"] == 0.0
+    assert specific_score > generic_score

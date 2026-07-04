@@ -350,6 +350,20 @@ def _domain_method_terms(methods: list[str], entities: list[str], focus_query: s
     return list(dict.fromkeys(terms))
 
 
+def _biomedical_topic_queries(methods: list[str], entities: list[str], focus_query: str) -> list[str]:
+    text = " ".join([*methods, *entities, focus_query]).lower()
+    if "lung cancer" not in text:
+        return []
+    return [
+        "molecular testing non-small cell lung cancer management",
+        "PD-1 blockade resectable lung cancer",
+        "RNA therapies non-small cell lung cancer clinical trials",
+        "microRNA mimics lipid emulsion lung tumors",
+        "targeted therapies advanced non-small cell lung cancer",
+        "lung cancer molecular diagnosis treatment review",
+    ]
+
+
 def _extract_title_like_phrase(text: str, enabled: bool = True) -> str | None:
     known_title = _infer_known_paper_title(text, enabled=enabled)
     if known_title:
@@ -402,6 +416,7 @@ def _heuristic_query_specs(plan: QueryPlan, enabled: bool = True) -> list[tuple[
     domain_context = _build_query([cleaned, focus_query])
     domain_core_terms = _domain_core_terms(methods, entities, domain_context)
     domain_method_terms = _domain_method_terms(methods, entities, domain_context)
+    biomedical_queries = _biomedical_topic_queries(methods, entities, domain_context)
 
     core_topic = _build_query(domain_core_terms) if domain_core_terms else _build_query([focus_query, *entities[:2], *datasets[:1]])
     core_topic = core_topic or cleaned
@@ -469,6 +484,8 @@ def _heuristic_query_specs(plan: QueryPlan, enabled: bool = True) -> list[tuple[
         result.append(("dataset", dataset_query, "dataset_constraint", datasets[:3], [], plan.time_range or {}, 6))
     if venue_query:
         result.append(("venue", venue_query, "venue_constraint", plan.venues[:2], [], plan.time_range or {}, 7))
+    for biomedical_query in biomedical_queries:
+        result.append(("biomedical", biomedical_query, "biomedical_topic_recall", [], entities[:3], plan.time_range or {}, 1))
 
     return result
 

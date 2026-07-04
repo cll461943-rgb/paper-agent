@@ -212,9 +212,9 @@ def get_routing_config(
     reasons = [base["reason"]]
 
     if qt == "latest_work" and _is_biomedical_topic(query_plan):
-        routes["pubmed"] = {"core_topic", "method_task", "broad_synonym", "entity_dataset", "title_like"}
-        caps["pubmed"] = max(caps.get("pubmed", 0), 3)
-        reasons.append("biomedical latest_work: enable PubMed core routes")
+        routes["pubmed"] = {"biomedical", "core_topic", "method_task", "broad_synonym", "entity_dataset", "title_like"}
+        caps["pubmed"] = max(caps.get("pubmed", 0), 6)
+        reasons.append("biomedical latest_work: enable PubMed biomedical/core routes")
 
     # 闭环调整：根据 review_feedback 动态调整
     if review_feedback:

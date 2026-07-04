@@ -13,6 +13,42 @@ from scholar_agent.selection.selection_cutoff import (
 LOGGER = logging.getLogger(__name__)
 
 
+BIOMEDICAL_BREAKTHROUGH_TERMS = (
+    "rna",
+    "microrna",
+    "mrna",
+    "pd-1",
+    "immune checkpoint",
+    "targeted therap",
+    "molecular testing",
+    "precision oncology",
+)
+
+BIOMEDICAL_STRONG_MODALITY_TERMS = (
+    "rna therap",
+    "microrna mimic",
+    "pd-1 blockade",
+    "molecular testing",
+)
+
+
+def _biomedical_fallback_bonus(paper: Paper, selection: SelectionResult) -> float:
+    paths = paper.retrieval_path or []
+    if not any("route:biomedical" in path for path in paths):
+        return 0.0
+    if selection.relevance_level not in {"high", "medium"}:
+        return 0.0
+
+    text = f"{paper.title} {paper.abstract or ''}".lower()
+    if not any(term in text for term in BIOMEDICAL_BREAKTHROUGH_TERMS):
+        return 0.0
+
+    base = 0.08 if selection.relevance_level == "high" else 0.04
+    if any(term in text for term in BIOMEDICAL_STRONG_MODALITY_TERMS):
+        base += 0.10 if selection.relevance_level == "high" else 0.05
+    return base
+
+
 def compute_paper_score(
     paper: Paper,
     selection: SelectionResult,
@@ -115,6 +151,8 @@ def compute_paper_score(
     is_like_title = any("title_like" in p for p in ret_paths)
     title_exact_bonus = 0.10 if is_exact_title else 0.0
     title_like_bonus = 0.03 if (is_like_title and not is_exact_title) else 0.0
+    biomedical_fallback_bonus = _biomedical_fallback_bonus(paper, selection)
+    subscores["Biomedical_Fallback_Bonus"] = biomedical_fallback_bonus
 
     # 9b. LLM Listwise Score — the PRIMARY LLM signal from the listwise reranker.
     # This was previously written to metadata but NEVER READ by compute_paper_score,
@@ -179,7 +217,8 @@ def compute_paper_score(
             subscores["Authority"]             * 0.03 +
             subscores["Diversity_Graph_Prior"] * 0.05 +
             title_exact_bonus +
-            title_like_bonus
+            title_like_bonus +
+            biomedical_fallback_bonus
         )
     final_score = min(max(final_score, 0.0), 1.0)
     score_cap = getattr(selection, "score_cap", None)

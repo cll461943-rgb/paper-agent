@@ -57,14 +57,22 @@ def test_biomedical_latest_work_routes_pubmed_core_queries():
         "What breakthrough advancements have been made in lung cancer research? "
         "Present the latest developments and challenges in treatment."
     )
+    queries = heuristic_generate_search_queries(plan)
+    texts = [item.query.lower() for item in queries]
+    routes = [item.route for item in queries]
 
     routing = get_routing_config(plan)
 
     assert plan.query_type == "latest_work"
     assert "lung cancer" in plan.entities
     assert "non-small cell lung cancer" in plan.entities
+    assert "biomedical" in routes
+    assert any("molecular testing non-small cell lung cancer" in text for text in texts)
+    assert any("pd-1 blockade resectable lung cancer" in text for text in texts)
+    assert any("rna therapies non-small cell lung cancer" in text for text in texts)
     assert "core_topic" in routing.routes_per_provider["pubmed"]
-    assert routing.caps_per_provider["pubmed"] >= 3
+    assert "biomedical" in routing.routes_per_provider["pubmed"]
+    assert routing.caps_per_provider["pubmed"] >= 6
 
 
 def test_spar_autonomous_driving_question_gets_decision_terms():
