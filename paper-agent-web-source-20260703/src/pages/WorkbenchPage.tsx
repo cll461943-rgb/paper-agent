@@ -25,6 +25,26 @@ function jobTone(status: SearchJob["status"]) {
   return "info";
 }
 
+function describeRunError(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
+function createFailedStartJob(error: unknown, mode: SearchMode): SearchJob {
+  const hint =
+    mode === "local"
+      ? "Local mode still needs the backend service, but it does not spend external LLM quota."
+      : "If the model gateway is out of quota, switch Mode to local and run again.";
+
+  return {
+    job_id: `api_error_${Date.now()}`,
+    status: "failed",
+    stage: "api",
+    progress: 0,
+    elapsed_seconds: 0,
+    error: `${describeRunError(error)} ${hint}`,
+  };
+}
+
 export function WorkbenchPage() {
   const navigate = useNavigate();
   const runtimeConfig = getRuntimeConnectionConfig();
@@ -37,6 +57,8 @@ export function WorkbenchPage() {
     mode: runtimeConfig.defaultSearchMode || mockSearchRequest.mode,
   });
   const [isRunning, setIsRunning] = useState(false);
+  const canOpenResult = job ? !job.job_id.startsWith("api_error_") : false;
+  const resultJobId = canOpenResult ? job?.job_id : null;
 
   useEffect(() => {
     void Promise.all([getConfigs(), getProviders()]).then(([nextConfigs, nextProviders]) => {
@@ -73,8 +95,8 @@ export function WorkbenchPage() {
       const nextJob = await startSearch(request);
       setJob(nextJob);
     } catch (error) {
+      setJob(createFailedStartJob(error, request.mode));
       setIsRunning(false);
-      throw error;
     }
   }
 
@@ -102,8 +124,8 @@ export function WorkbenchPage() {
         title="Research run control"
         description="Compose a query, choose providers, run the pipeline, and keep the result path one click away."
         actions={
-          job ? (
-            <button className="button primary" type="button" onClick={() => navigate(`/results/${job.job_id}`)}>
+          resultJobId ? (
+            <button className="button primary" type="button" onClick={() => navigate(`/results/${resultJobId}`)}>
               <ArrowRight size={16} />
               Open result
             </button>
@@ -129,6 +151,7 @@ export function WorkbenchPage() {
                 <select value={request.mode} onChange={(event) => setRequest((current) => ({ ...current, mode: event.target.value as SearchMode }))}>
                   <option value="research">research</option>
                   <option value="live">live</option>
+                  <option value="local">local</option>
                   <option value="mock">mock</option>
                 </select>
               </label>
@@ -220,10 +243,12 @@ export function WorkbenchPage() {
                   </div>
                 </dl>
                 <div className="job-card-actions">
-                  <button className="button secondary small" type="button" onClick={() => navigate(`/results/${job.job_id}`)}>
-                    <ArrowRight size={12} />
-                    Result
-                  </button>
+                  {canOpenResult ? (
+                    <button className="button secondary small" type="button" onClick={() => navigate(`/results/${job.job_id}`)}>
+                      <ArrowRight size={12} />
+                      Result
+                    </button>
+                  ) : null}
                   {isActiveJob(job) ? (
                     <button className="button danger small" type="button" onClick={() => void handleCancelJob()}>
                       <Square size={12} />
@@ -255,7 +280,7 @@ export function WorkbenchPage() {
       </div>
 
       <div className="metric-grid">
-        <MetricCard label="Providers" value={providers.length || 4} detail="central fallback enabled" />
+        <MetricCard label="Providers" value={providers.length || 4} detail="backend/local routed" />
         <MetricCard label="Query mode" value={request.mode} detail={request.config} />
         <MetricCard label="Selected sources" value={request.providers.length} detail="remote + local" />
         <MetricCard label="Pipeline" value="6 stages" detail="retrieval to synthesis" />

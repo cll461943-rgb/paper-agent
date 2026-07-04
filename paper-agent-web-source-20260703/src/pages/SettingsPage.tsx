@@ -78,7 +78,7 @@ export function SettingsPage() {
                   API base URL
                   <input
                     type="url"
-                    placeholder="http://127.0.0.1:8000"
+                    placeholder="http://127.0.0.1:8080"
                     value={runtimeConfig.apiBaseUrl}
                     onChange={(event) => setRuntimeConfig((current) => ({ ...current, apiBaseUrl: event.target.value }))}
                   />
@@ -194,6 +194,7 @@ export function SettingsPage() {
                   >
                     <option value="research">research</option>
                     <option value="live">live</option>
+                    <option value="local">local</option>
                     <option value="mock">mock</option>
                   </select>
                 </label>
@@ -227,7 +228,7 @@ export function SettingsPage() {
 
         <Panel title="Runtime registry" meta={`${providers.length} sources`}>
           <div className="settings-toolbar">
-            <StatusPill tone={probe?.ok ? "success" : "muted"} label={probe?.ok ? "remote api" : "fallback or unchecked"} />
+            <StatusPill tone={probe?.ok ? "success" : "muted"} label={probe?.ok ? "remote api" : "unchecked"} />
             <button className="button secondary" type="button" onClick={() => void loadRuntimeRegistry()}>
               <RefreshCw size={16} />
               Refresh registry

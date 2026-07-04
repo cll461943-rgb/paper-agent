@@ -591,6 +591,11 @@ JOBS_LOCK = threading.Lock()
 CACHE_DIR = Path("data/cache/web_jobs")
 ROOT_DIR = Path(__file__).parents[2]
 RUN_STORE = RunStore(default_logs_db_path(ROOT_DIR))
+CORS_ALLOW_HEADERS = (
+    "Content-Type, Authorization, "
+    "X-Scholar-LLM-Provider, X-Scholar-LLM-Base-URL, X-Scholar-LLM-API-Key, "
+    "X-Scholar-LLM-Model, X-Scholar-Default-Config, X-Scholar-Default-Mode"
+)
 
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -825,14 +830,32 @@ def run_pipeline_task(job_id: str, job_ref: dict):
         # 1. Load configuration
         root_dir = Path(__file__).parents[2]
         config = load_config(root_dir / config_name)
-        if mode == "mock":
+        normalized_mode = str(mode or "research").lower()
+        if normalized_mode == "mock":
             config.app.mode = "mock"
             config.app.providers = ["mock"]
+        elif normalized_mode == "local":
+            config.app.mode = "local"
+            config.app.providers = ["pasa_local"]
+            if job_ref.get("use_local_index", True):
+                config.app.providers.append("faiss_vector")
+            config.llm.enabled = False
+            config.llm.mode = "off"
+            config.budget.max_llm_calls = 0
         else:
             config.app.mode = "live"
             
         providers_input = job_ref.get("providers", [])
-        if providers_input and mode != "mock":
+        if providers_input and normalized_mode == "local":
+            local_provider_names = []
+            for provider_name in providers_input:
+                if provider_name in ("Local Index", "pasa_local"):
+                    local_provider_names.append("pasa_local")
+                elif provider_name in ("faiss_vector", "Vector Index"):
+                    local_provider_names.append("faiss_vector")
+            if local_provider_names:
+                config.app.providers = list(dict.fromkeys(local_provider_names))
+        elif providers_input and normalized_mode != "mock":
             prov_map = {
                 "Semantic Scholar": "semantic_scholar",
                 "OpenAlex": "openalex",
@@ -859,9 +882,11 @@ def run_pipeline_task(job_id: str, job_ref: dict):
         try:
             # 3. Instantiate pipeline & run
             budget = BudgetManager(config)
-            if mode == "mock":
+            if normalized_mode == "mock":
                 from scholar_agent.infra import MockLLMClient
                 llm_client = MockLLMClient(budget)
+            elif normalized_mode == "local":
+                llm_client = None
             else:
                 llm_client = OpenAICompatibleLLMClient(config.llm, budget)
             providers = build_providers(config, provider_names=config.app.providers)
@@ -1211,7 +1236,7 @@ def send_json(start_response, data, status="200 OK"):
             ("Content-Length", str(len(body))),
             ("Access-Control-Allow-Origin", "*"),
             ("Access-Control-Allow-Methods", "GET, POST, OPTIONS"),
-            ("Access-Control-Allow-Headers", "Content-Type, Authorization"),
+            ("Access-Control-Allow-Headers", CORS_ALLOW_HEADERS),
         ]
     )
     return [body]
@@ -1228,7 +1253,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             [
                 ("Access-Control-Allow-Origin", "*"),
                 ("Access-Control-Allow-Methods", "GET, POST, OPTIONS"),
-                ("Access-Control-Allow-Headers", "Content-Type, Authorization"),
+                ("Access-Control-Allow-Headers", CORS_ALLOW_HEADERS),
                 ("Content-Length", "0"),
             ]
         )
@@ -1252,8 +1277,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 }
             except Exception:
                 status = {
-                    "status": "ok",
-                    "message": "Scholar Agent Fallback Mode",
+                    "status": "degraded",
+                    "message": "Scholar Agent API is reachable, but config status probe failed",
                     "mode": "live",
                     "config": "default.yaml",
                     "cache_hit_rate": 0.0,
@@ -1432,6 +1457,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "config": payload.get("config", "configs/default.yaml"),
                     "providers": payload.get("providers", []),
                     "retrieval_only": payload.get("retrieval_only", False) or path.endswith("/retrieval-only"),
+                    "use_local_index": payload.get("use_local_index", True),
                     "stage_artifacts": {},
                     "is_eval": False,
                     "cancel_requested": False
@@ -1487,6 +1513,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "config": config,
                     "providers": [],
                     "retrieval_only": False,
+                    "use_local_index": True,
                     "stage_artifacts": {},
                     "is_eval": True,
                     "gold": gold,

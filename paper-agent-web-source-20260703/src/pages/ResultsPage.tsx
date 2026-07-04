@@ -25,32 +25,46 @@ function statusTone(status: string | undefined) {
   return "info";
 }
 
+function describeRunError(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
 export function ResultsPage() {
   const { jobId = "search_20260630_1042" } = useParams();
   const [result, setResult] = useState<ResultsResponse | null>(null);
   const [job, setJob] = useState<SearchJob | null>(null);
   const [artifact, setArtifact] = useState<StageArtifactResponse | null>(null);
   const [activeStage, setActiveStage] = useState(stageNames[0]);
+  const [loadError, setLoadError] = useState("");
 
   useEffect(() => {
     let cancelled = false;
     let timer: number | undefined;
 
     async function refreshRun() {
-      const [nextJob, nextResult] = await Promise.all([getSearchJob(jobId).catch(() => null), getResults(jobId).catch(() => null)]);
+      const [jobOutcome, resultOutcome] = await Promise.allSettled([getSearchJob(jobId), getResults(jobId)]);
       if (cancelled) {
         return;
       }
+
+      const nextJob = jobOutcome.status === "fulfilled" ? jobOutcome.value : null;
+      const nextResult = resultOutcome.status === "fulfilled" ? resultOutcome.value : null;
+      const errors = [
+        jobOutcome.status === "rejected" ? describeRunError(jobOutcome.reason) : "",
+        resultOutcome.status === "rejected" ? describeRunError(resultOutcome.reason) : "",
+      ].filter(Boolean);
+
       if (nextJob) {
         setJob(nextJob);
       }
       if (nextResult) {
         setResult(nextResult);
       }
+      setLoadError(errors.length && !nextResult ? errors.join(" / ") : "");
 
       const status = nextJob?.status ?? nextResult?.status;
       const stillRunning = isActiveStatus(status) || (!status && !nextResult?.result);
-      if (stillRunning) {
+      if (stillRunning && !errors.length) {
         timer = window.setTimeout(refreshRun, 5000);
       }
     }
@@ -65,7 +79,16 @@ export function ResultsPage() {
   }, [jobId]);
 
   useEffect(() => {
-    void getStageArtifact(jobId, activeStage).then(setArtifact);
+    setArtifact(null);
+    void getStageArtifact(jobId, activeStage)
+      .then(setArtifact)
+      .catch((error) =>
+        setArtifact({
+          stage: activeStage,
+          job_id: jobId,
+          data: { error: describeRunError(error) },
+        }),
+      );
   }, [activeStage, jobId]);
 
   const papers = useMemo(() => {
@@ -80,7 +103,45 @@ export function ResultsPage() {
   }, [result]);
 
   if (!result) {
-    return <PageHeader eyebrow="Results" title="Loading result" description="Fetching run artifacts from the API fallback layer." />;
+    const terminalStatus = job?.status && !isActiveStatus(job.status);
+    if (loadError || terminalStatus) {
+      return (
+        <>
+          <PageHeader
+            eyebrow="Results"
+            title="Result unavailable"
+            description={loadError || job?.error || `Run ended with status ${job?.status ?? "unknown"}.`}
+            actions={
+              <Link className="button secondary" to="/">
+                Back to workbench
+              </Link>
+            }
+          />
+          <Panel title="Run state" meta={job?.status ?? "api"}>
+            <div className="job-card">
+              <div className="job-card-top">
+                <strong>{jobId}</strong>
+                <StatusPill tone={statusTone(job?.status)} label={job?.status ?? "unavailable"} />
+              </div>
+              <ProgressBar value={job?.progress ?? 0} />
+              <dl className="compact-dl two-col">
+                <div>
+                  <dt>Stage</dt>
+                  <dd>{job?.stage ?? "api"}</dd>
+                </div>
+                <div>
+                  <dt>Elapsed</dt>
+                  <dd>{job?.elapsed_seconds?.toFixed(1) ?? "--"}s</dd>
+                </div>
+              </dl>
+              <p className="graph-empty-note">{loadError || job?.error}</p>
+            </div>
+          </Panel>
+        </>
+      );
+    }
+
+    return <PageHeader eyebrow="Results" title="Loading result" description="Fetching run artifacts from the backend API." />;
   }
 
   if (!result.result) {

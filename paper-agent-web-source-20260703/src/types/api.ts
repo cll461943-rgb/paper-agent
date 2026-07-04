@@ -1,4 +1,4 @@
-export type SearchMode = "live" | "mock" | "research";
+export type SearchMode = "live" | "mock" | "research" | "local";
 export type JobStatus = "queued" | "running" | "succeeded" | "failed" | "cancelled";
 export type RelevanceLevel = "high" | "medium" | "low" | "irrelevant";
 

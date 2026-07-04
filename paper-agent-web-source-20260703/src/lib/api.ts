@@ -17,16 +17,8 @@ import { getRuntimeConnectionConfig } from "./runtimeConfig";
 import {
   mockConfigs,
   mockDatasets,
-  mockEvalCaseResult,
-  mockGraphResponse,
-  mockLogs,
   mockPapers,
   mockProviders,
-  mockRecentRuns,
-  mockResultsResponse,
-  mockSearchJob,
-  mockStageArtifacts,
-  mockSystemStatus,
 } from "./mockData";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "";
@@ -103,25 +95,6 @@ function getLocalSearchJob(jobId: string): LocalSearchJob | undefined {
   return readLocalSearchJobs().find((job) => job.job_id === jobId);
 }
 
-function createLocalSearchJob(payload: SearchRequest): LocalSearchJob {
-  const timestamp = new Date();
-  const suffix = timestamp
-    .toISOString()
-    .replace(/\D/g, "")
-    .slice(0, 14);
-
-  return {
-    ...mockSearchJob,
-    job_id: `search_${suffix}`,
-    status: "succeeded",
-    stage: "synthesis",
-    progress: 100,
-    elapsed_seconds: payload.mode === "mock" ? 3.2 : 18.7,
-    request: payload,
-    created_at: timestamp.toISOString(),
-  };
-}
-
 function mergeRecentRuns(...groups: SearchJob[][]): SearchJob[] {
   const seen = new Set<string>();
   const merged: SearchJob[] = [];
@@ -137,28 +110,6 @@ function mergeRecentRuns(...groups: SearchJob[][]): SearchJob[] {
   }
 
   return merged;
-}
-
-function withLocalQuery<T extends ResultsResponse>(response: T, job: LocalSearchJob): T {
-  if (!response.result) {
-    return {
-      ...response,
-      job_id: job.job_id,
-    };
-  }
-
-  return {
-    ...response,
-    job_id: job.job_id,
-    result: {
-      ...response.result,
-      original_query: job.request.query,
-      query_plan: {
-        ...response.result.query_plan,
-        original_query: job.request.query,
-      },
-    },
-  };
 }
 
 function getApiBaseUrl(): string {
@@ -249,27 +200,80 @@ async function requestJson<T>(path: string, init: RequestInit, fallback: () => T
   }
 }
 
-function randomJob(status: SearchJob["status"] = "running"): SearchJob {
+function describeError(error: unknown): string {
+  if (error instanceof Error) {
+    if (error.name === "AbortError") {
+      return "Request timed out";
+    }
+    return error.message;
+  }
+  return String(error);
+}
+
+async function requestJsonStrict<T>(path: string, init: RequestInit, timeoutMsOverride?: number): Promise<T> {
+  try {
+    const response = await fetchJson(path, init, timeoutMsOverride);
+    if (!response.ok) {
+      let detail = "";
+      try {
+        const body = (await response.json()) as { error?: string; message?: string };
+        detail = body.error || body.message || "";
+      } catch {
+        detail = await response.text().catch(() => "");
+      }
+      throw new Error(`HTTP ${response.status}${detail ? `: ${detail}` : ""}`);
+    }
+    return (await response.json()) as T;
+  } catch (error) {
+    throw new Error(`Backend API request failed for ${path}: ${describeError(error)}`);
+  }
+}
+
+function degradedSystemStatus(error: unknown): SystemStatus {
+  const runtimeConfig = getRuntimeConnectionConfig();
   return {
-    ...mockSearchJob,
-    status,
-    stage: status === "succeeded" ? "synthesis" : "retrieval",
-    progress: status === "succeeded" ? 100 : 42,
-    elapsed_seconds: status === "succeeded" ? 18.7 : 6.1,
+    status: "degraded",
+    message: `Backend API unavailable: ${describeError(error)}`,
+    mode: runtimeConfig.defaultSearchMode,
+    config: runtimeConfig.defaultConfig,
+    cache_hit_rate: 0,
+    local_index_ready: false,
+    vector_index_ready: false,
+    provider_count: {
+      healthy: 0,
+      total: 0,
+    },
+  };
+}
+
+function cancelledFallbackJob(jobId: string, localJob?: LocalSearchJob): SearchJob {
+  return {
+    job_id: jobId,
+    status: "cancelled",
+    stage: localJob?.stage ?? "cancelled",
+    progress: localJob?.progress ?? 0,
+    elapsed_seconds: localJob?.elapsed_seconds ?? 0,
+    error: "Cancelled locally because the backend did not acknowledge the stop request.",
+  };
+}
+
+function failedFallbackJob(jobId: string, error: unknown, localJob?: LocalSearchJob): SearchJob {
+  return {
+    job_id: jobId,
+    status: "failed",
+    stage: localJob?.stage ?? "api",
+    progress: localJob?.progress ?? 0,
+    elapsed_seconds: localJob?.elapsed_seconds ?? 0,
+    error: describeError(error),
   };
 }
 
 export async function startSearch(payload: SearchRequest): Promise<SearchJob> {
-  const job = await requestJson<SearchJob>(
+  const job = await requestJsonStrict<SearchJob>(
     payload.retrieval_only ? "/api/search/retrieval-only" : "/api/search",
     {
       method: "POST",
       body: JSON.stringify(payload),
-    },
-    async () => {
-      const localJob = createLocalSearchJob(payload);
-      writeLocalSearchJob(localJob);
-      return localJob;
     },
   );
 
@@ -302,15 +306,7 @@ export async function cancelSearchJob(jobId: string): Promise<SearchJob> {
     { method: "POST" },
     async () => {
       const localJob = getLocalSearchJob(jobId);
-      const cancelledJob: SearchJob = {
-        ...(localJob ?? mockSearchJob),
-        job_id: jobId,
-        status: "cancelled",
-        stage: localJob?.stage ?? "cancelled",
-        progress: localJob?.progress ?? 0,
-        elapsed_seconds: localJob?.elapsed_seconds ?? 0,
-        error: "Cancelled locally",
-      };
+      const cancelledJob = cancelledFallbackJob(jobId, localJob);
       if (localJob) {
         writeLocalSearchJob({ ...localJob, ...cancelledJob });
       }
@@ -320,37 +316,23 @@ export async function cancelSearchJob(jobId: string): Promise<SearchJob> {
 }
 
 export async function getSearchJob(jobId: string): Promise<SearchJob> {
-  return requestJson<SearchJob>(
-    `/api/search/${jobId}`,
-    { method: "GET" },
-    async () => getLocalSearchJob(jobId) ?? { ...randomJob("succeeded"), job_id: jobId },
-  );
+  try {
+    return await requestJsonStrict<SearchJob>(`/api/search/${jobId}`, { method: "GET" });
+  } catch (error) {
+    const localJob = getLocalSearchJob(jobId);
+    if (localJob) {
+      return failedFallbackJob(jobId, error, localJob);
+    }
+    throw error;
+  }
 }
 
 export async function getResults(jobId: string): Promise<ResultsResponse> {
-  return requestJson<ResultsResponse>(
-    `/api/results/${jobId}`,
-    { method: "GET" },
-    async () => {
-      const localJob = getLocalSearchJob(jobId);
-      return localJob ? withLocalQuery(mockResultsResponse, localJob) : { ...mockResultsResponse, job_id: jobId };
-    },
-  );
+  return requestJsonStrict<ResultsResponse>(`/api/results/${jobId}`, { method: "GET" });
 }
 
 export async function getStageArtifact(jobId: string, stageName: string): Promise<StageArtifactResponse> {
-  return requestJson<StageArtifactResponse>(
-    `/api/results/${jobId}/stage/${stageName}`,
-    { method: "GET" },
-    async () => ({
-      ...(mockStageArtifacts[stageName] ?? {
-        stage: stageName,
-        job_id: jobId,
-        data: {},
-      }),
-      job_id: jobId,
-    }),
-  );
+  return requestJsonStrict<StageArtifactResponse>(`/api/results/${jobId}/stage/${stageName}`, { method: "GET" });
 }
 
 export async function getConfigs(): Promise<string[]> {
@@ -362,7 +344,12 @@ export async function getProviders(): Promise<ProviderStatus[]> {
 }
 
 export async function getSystemStatus(): Promise<SystemStatus> {
-  return requestJson<SystemStatus>("/api/system/status", { method: "GET" }, async () => mockSystemStatus);
+  try {
+    return await requestJsonStrict<SystemStatus>("/api/system/status", { method: "GET" });
+  } catch (error) {
+    console.warn("[Scholar Agent API degraded] /api/system/status", error);
+    return degradedSystemStatus(error);
+  }
 }
 
 export async function getDatabaseStatus(): Promise<DatabaseStatus | null> {
@@ -374,51 +361,31 @@ export async function getDatasets(): Promise<string[]> {
 }
 
 export async function runEvalCase(payload: EvalCaseRequest): Promise<EvalCaseResult> {
-  return requestJson<EvalCaseResult>(
+  return requestJsonStrict<EvalCaseResult>(
     "/api/eval/case",
     {
       method: "POST",
       body: JSON.stringify(payload),
     },
-    async () => ({
-      ...mockEvalCaseResult,
-      dataset: payload.dataset,
-      case_index: payload.case_index,
-    }),
   );
 }
 
 export async function getEvalCaseResult(jobId: string): Promise<EvalCaseResult> {
-  return requestJson<EvalCaseResult>(`/api/search/${jobId}`, { method: "GET" }, async () => ({
-    ...mockEvalCaseResult,
-    job_id: jobId,
-  }));
+  return requestJsonStrict<EvalCaseResult>(`/api/search/${jobId}`, { method: "GET" });
 }
 
 export async function runRandomEvalCase(): Promise<EvalCaseResult> {
-  return requestJson<EvalCaseResult>(
+  return requestJsonStrict<EvalCaseResult>(
     "/api/eval/random-case",
     {
       method: "POST",
       body: JSON.stringify({}),
     },
-    async () => mockEvalCaseResult,
   );
 }
 
 export async function getGraph(jobId: string): Promise<GraphResponse> {
-  return requestJson<GraphResponse>(
-    `/api/graph/${jobId}`,
-    { method: "GET" },
-    async () => {
-      const localJob = getLocalSearchJob(jobId);
-      return {
-        ...mockGraphResponse,
-        job_id: jobId,
-        query: localJob?.request.query ?? mockGraphResponse.query,
-      };
-    },
-  );
+  return requestJsonStrict<GraphResponse>(`/api/graph/${jobId}`, { method: "GET" });
 }
 
 export async function getPaper(paperId: string): Promise<Paper | undefined> {
@@ -430,18 +397,14 @@ export async function getPaper(paperId: string): Promise<Paper | undefined> {
 }
 
 export async function getLogs(jobId: string): Promise<LogEntry[]> {
-  return requestJson<LogEntry[]>(
-    `/api/logs/${jobId}`,
-    { method: "GET" },
-    async () => mockLogs.map((log) => ({ ...log, id: `${jobId}-${log.id}` })),
-  );
+  return requestJsonStrict<LogEntry[]>(`/api/logs/${jobId}`, { method: "GET" });
 }
 
 export async function getRecentRuns(): Promise<SearchJob[]> {
   const dismissedIds = readDismissedRunIds();
   const localRuns = readLocalSearchJobs();
   const backendRuns = await requestJson<SearchJob[]>("/api/recent-runs", { method: "GET" }, async () => []);
-  return mergeRecentRuns(localRuns, backendRuns, mockRecentRuns).filter((run) => !dismissedIds.has(run.job_id));
+  return mergeRecentRuns(localRuns, backendRuns).filter((run) => !dismissedIds.has(run.job_id));
 }
 
 export async function probeBackendConnection(): Promise<BackendProbeResult> {

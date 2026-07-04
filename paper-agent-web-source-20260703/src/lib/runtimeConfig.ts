@@ -9,7 +9,7 @@ function cleanBaseUrl(value: string | undefined): string {
 }
 
 function cleanMode(value: string | undefined): SearchMode {
-  if (value === "live" || value === "mock" || value === "research") {
+  if (value === "live" || value === "mock" || value === "research" || value === "local") {
     return value;
   }
   return "research";
