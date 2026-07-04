@@ -13,7 +13,10 @@ from typing import Any
 from scholar_agent.models.schemas import Paper
 from scholar_agent.retrieval.embedding_service import EmbeddingService
 from scholar_agent.retrieval.rrf_fusion import rrf_fuse
-from scholar_agent.retrieval.vector_rerank import VectorReranker
+try:
+    from scholar_agent.retrieval.vector_rerank import VectorReranker
+except ImportError:  # pragma: no cover - depends on optional faiss runtime.
+    VectorReranker = None
 
 LOGGER = logging.getLogger(__name__)
 
@@ -92,7 +95,7 @@ class SemanticBridge:
         rrf_k: int = 60,
     ) -> None:
         self.embedder = embedding_service
-        self.reranker = VectorReranker(embedding_service)
+        self.reranker = VectorReranker(embedding_service) if VectorReranker is not None else None
         self.keyword_weight = keyword_weight
         self.vector_weight = vector_weight
         self.hyde_weight = hyde_weight
@@ -115,6 +118,9 @@ class SemanticBridge:
         5. Return fused results
         """
         if not candidate_pool:
+            return candidate_pool
+        if self.reranker is None:
+            LOGGER.warning("SemanticBridge: FAISS runtime unavailable, skipping vector bridge")
             return candidate_pool
 
         t0 = time.time()

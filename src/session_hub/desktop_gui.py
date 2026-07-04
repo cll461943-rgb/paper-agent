@@ -34,7 +34,7 @@ class DesktopBatchGui:
         self.root.geometry("1120x720")
         self.dataset_path = tk.StringVar()
         self.api_base = tk.StringVar(value="http://127.0.0.1:8080")
-        self.config = tk.StringVar(value="local_full_pipeline.yaml")
+        self.config = tk.StringVar(value="default.yaml")
         self.mode = tk.StringVar(value="mock")
         self.limit = tk.StringVar(value="20")
         self.timeout_seconds = tk.StringVar(value="60")

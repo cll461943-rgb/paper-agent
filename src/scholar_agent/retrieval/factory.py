@@ -6,7 +6,10 @@ from scholar_agent.infra.cache import JsonFileCache
 from scholar_agent.infra.config import AppConfig
 from scholar_agent.retrieval.arxiv import ArxivProvider
 from scholar_agent.retrieval.base import PaperProvider
-from scholar_agent.retrieval.faiss_vector import FaissVectorProvider
+try:
+    from scholar_agent.retrieval.faiss_vector import FaissVectorProvider
+except ImportError:  # pragma: no cover - depends on optional faiss runtime.
+    FaissVectorProvider = None
 from scholar_agent.retrieval.mock_provider import MockPaperProvider
 from scholar_agent.retrieval.openalex import OpenAlexProvider
 from scholar_agent.retrieval.pasa_local import PasaLocalProvider
@@ -44,9 +47,10 @@ def build_providers(
         "pasa_local": PasaLocalProvider,
         "semantic_scholar": SemanticScholarProvider,
         "pubmed": PubMedProvider,
-        "faiss_vector": FaissVectorProvider,
         "mock": MockPaperProvider,
     }
+    if FaissVectorProvider is not None:
+        provider_map["faiss_vector"] = FaissVectorProvider
 
     # Respect OPENALEX_EMAIL when config file leaves mailto empty.
     if not config.providers.openalex.mailto:
@@ -68,7 +72,7 @@ def build_providers(
             providers.append(builder(config.providers.semantic_scholar, cache))
         elif name == "pubmed" and (explicit_provider_names or config.providers.pubmed.enabled):
             providers.append(builder(config.providers.pubmed, cache))
-        elif name == "faiss_vector":
+        elif name == "faiss_vector" and FaissVectorProvider is not None:
             # FaissVectorProvider uses the same data dir as pasa_local
             providers.append(FaissVectorProvider(config.providers.pasa_local))
 

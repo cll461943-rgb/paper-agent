@@ -219,6 +219,6 @@ def load_config(path: str | Path | None = None) -> AppConfig:
     config_path = Path(path or "configs/default.yaml")
     if not config_path.exists():
         # Fallback to local default configs inside project
-        config_path = Path(__file__).parents[2] / "configs" / "default.yaml"
+        config_path = Path(__file__).parents[3] / "configs" / "default.yaml"
     raw_data = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     return AppConfig.model_validate(raw_data)
