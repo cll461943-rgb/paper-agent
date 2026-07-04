@@ -681,9 +681,37 @@ select:focus {
 
 .progress-track span {
   display: block;
+  position: relative;
+  overflow: hidden;
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #316dff, #16a34a);
+  transition: width 700ms ease;
+}
+
+.progress-track.active span::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.45), transparent);
+  animation: progress-sweep 1.4s linear infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes progress-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-track span {
+    transition: none;
+  }
+
+  .progress-track.active span::after {
+    animation: none;
+  }
 }
 
 .job-card,

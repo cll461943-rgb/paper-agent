@@ -53,10 +53,18 @@ export function StatusPill({ label, tone = "info" }: { label: string; tone?: "su
   return <span className={`status-pill ${tone}`}>{label}</span>;
 }
 
-export function ProgressBar({ value }: { value: number }) {
+export function ProgressBar({ value, active = false }: { value: number; active?: boolean }) {
+  const boundedValue = Math.max(0, Math.min(value, 100));
   return (
-    <div className="progress-track" aria-label={`Progress ${value}%`}>
-      <span style={{ width: `${Math.max(0, Math.min(value, 100))}%` }} />
+    <div
+      className={`progress-track ${active ? "active" : ""}`}
+      role="progressbar"
+      aria-label={`Progress ${boundedValue}%`}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={boundedValue}
+    >
+      <span style={{ width: `${boundedValue}%` }} />
     </div>
   );
 }

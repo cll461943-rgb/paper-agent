@@ -666,6 +666,43 @@ load_jobs_from_cache()
 # Custom logger to capture logs per job and update stage/progress
 import logging
 
+RUNNING_STAGE_PROGRESS = {
+    "planning": (5, 14, 10.0),
+    "query_plan": (15, 34, 30.0),
+    "retrieval": (40, 62, 90.0),
+    "selection": (65, 78, 45.0),
+    "ranking": (80, 91, 35.0),
+    "synthesis": (95, 98, 20.0),
+}
+
+
+def update_job_stage(job: dict, stage: str, progress_floor: int) -> None:
+    now = time.time()
+    if job.get("stage") != stage:
+        job["stage_started_at"] = now
+    job["stage"] = stage
+    job["progress"] = max(int(job.get("progress") or 0), progress_floor)
+
+
+def estimate_running_progress(job: dict, elapsed: float | None = None) -> int:
+    if job.get("status") not in ("running", "eval_running"):
+        return int(job.get("progress") or 0)
+
+    now = time.time()
+    stage = str(job.get("stage") or "planning")
+    start, end, expected_seconds = RUNNING_STAGE_PROGRESS.get(stage, RUNNING_STAGE_PROGRESS["planning"])
+    stage_started_at = float(job.get("stage_started_at") or job.get("start_time") or now)
+    stage_elapsed = max(0.0, now - stage_started_at)
+    stage_fraction = min(stage_elapsed / expected_seconds, 1.0) if expected_seconds > 0 else 1.0
+    estimated = round(start + (end - start) * stage_fraction)
+    progress = min(98, max(int(job.get("progress") or start), estimated))
+
+    job["progress"] = progress
+    if elapsed is not None:
+        job["elapsed_seconds"] = elapsed
+    return progress
+
+
 class JobLoggingHandler(logging.Handler):
     def __init__(self, job_id, logs_list, jobs_lock):
         super().__init__()
@@ -690,21 +727,19 @@ class JobLoggingHandler(logging.Handler):
                 lower_msg = msg.lower()
                 current_job = ACTIVE_JOBS.get(self.job_id)
                 if current_job and current_job["status"] in ("running", "eval_running"):
-                    if "starting paperagentpipeline" in lower_msg or "understand" in lower_msg:
-                        current_job["stage"] = "query_plan"
-                        current_job["progress"] = 15
-                    elif "retriev" in lower_msg or "multirouteretriever" in lower_msg:
-                        current_job["stage"] = "retrieval"
-                        current_job["progress"] = 40
-                    elif "evidence selection" in lower_msg or "evidence_selection" in lower_msg:
-                        current_job["stage"] = "selection"
-                        current_job["progress"] = 65
-                    elif "rerank" in lower_msg or "ranking" in lower_msg:
-                        current_job["stage"] = "ranking"
-                        current_job["progress"] = 80
-                    elif "synthesis" in lower_msg or "synthesisagent" in lower_msg:
-                        current_job["stage"] = "synthesis"
-                        current_job["progress"] = 95
+                    is_prompt_contract_log = "=== prompt contracts" in lower_msg or "stage=stage" in lower_msg
+                    if is_prompt_contract_log:
+                        pass
+                    elif "starting paperagentpipeline" in lower_msg or "query understanding" in lower_msg:
+                        update_job_stage(current_job, "query_plan", 15)
+                    elif "retrieving with" in lower_msg or "multirouteretriever" in lower_msg:
+                        update_job_stage(current_job, "retrieval", 40)
+                    elif "fine-grained evidence selection" in lower_msg or "evidence selection:" in lower_msg or "evidence_selection" in lower_msg:
+                        update_job_stage(current_job, "selection", 65)
+                    elif "listwise" in lower_msg or "rerank" in lower_msg:
+                        update_job_stage(current_job, "ranking", 80)
+                    elif "synthesisagent" in lower_msg or "structured synthesis" in lower_msg:
+                        update_job_stage(current_job, "synthesis", 95)
             persist_job_log(self.job_id, record.levelname, log_entry["stage"], msg)
         except Exception:
             pass
@@ -874,6 +909,7 @@ def run_pipeline_task(job_id: str, job_ref: dict):
 
         # 2. Attach logging handler
         root_logger = logging.getLogger()
+        logging.getLogger("scholar_agent").setLevel(logging.INFO)
         handler = JobLoggingHandler(job_id, job_ref["logs"], JOBS_LOCK)
         formatter = logging.Formatter("%(message)s")
         handler.setFormatter(formatter)
@@ -881,6 +917,9 @@ def run_pipeline_task(job_id: str, job_ref: dict):
         
         try:
             # 3. Instantiate pipeline & run
+            with JOBS_LOCK:
+                if job_ref.get("status") == "running":
+                    update_job_stage(job_ref, "query_plan", 15)
             budget = BudgetManager(config)
             if normalized_mode == "mock":
                 from scholar_agent.infra import MockLLMClient
@@ -1440,6 +1479,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
             job_id = f"search_{timestamp}"
+            now = time.time()
             
             with JOBS_LOCK:
                 ACTIVE_JOBS[job_id] = {
@@ -1451,7 +1491,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "error": None,
                     "result": None,
                     "logs": [],
-                    "start_time": time.time(),
+                    "start_time": now,
+                    "stage_started_at": now,
                     "query": payload.get("query", ""),
                     "mode": payload.get("mode", "research"),
                     "config": payload.get("config", "configs/default.yaml"),
@@ -1496,6 +1537,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
             job_id = f"eval_{timestamp}_case_{case_index}"
+            now = time.time()
             
             with JOBS_LOCK:
                 ACTIVE_JOBS[job_id] = {
@@ -1507,7 +1549,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "error": None,
                     "result": None,
                     "logs": [],
-                    "start_time": time.time(),
+                    "start_time": now,
+                    "stage_started_at": now,
                     "query": query,
                     "mode": mode,
                     "config": config,
@@ -1570,6 +1613,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
             
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
             job_id = f"eval_{timestamp}_case_{case_index}"
+            now = time.time()
             
             with JOBS_LOCK:
                 ACTIVE_JOBS[job_id] = {
@@ -1581,7 +1625,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "error": None,
                     "result": None,
                     "logs": [],
-                    "start_time": time.time(),
+                    "start_time": now,
+                    "stage_started_at": now,
                     "query": query,
                     "mode": "mock",
                     "config": "configs/default.yaml",
@@ -1663,9 +1708,13 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "elapsed_seconds": 5.0
                 })
                 
-            elapsed = job["elapsed_seconds"]
-            if job["status"] == "running":
-                elapsed = time.time() - job["start_time"]
+            with JOBS_LOCK:
+                elapsed = job["elapsed_seconds"]
+                if job["status"] == "running":
+                    elapsed = time.time() - job["start_time"]
+                    progress = estimate_running_progress(job, elapsed)
+                else:
+                    progress = int(job.get("progress") or 0)
                 
             # Evaluation jobs use the same URL for polling but return the eval contract.
             if job.get("is_eval"):
@@ -1695,7 +1744,7 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 "job_id": job_id,
                 "status": job["status"],
                 "stage": job["stage"],
-                "progress": job["progress"],
+                "progress": progress,
                 "elapsed_seconds": round(elapsed, 1),
                 "error": job["error"]
             })

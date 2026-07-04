@@ -65,7 +65,7 @@ export function ResultsPage() {
       const status = nextJob?.status ?? nextResult?.status;
       const stillRunning = isActiveStatus(status) || (!status && !nextResult?.result);
       if (stillRunning && !errors.length) {
-        timer = window.setTimeout(refreshRun, 5000);
+        timer = window.setTimeout(refreshRun, 1500);
       }
     }
 
@@ -122,7 +122,7 @@ export function ResultsPage() {
                 <strong>{jobId}</strong>
                 <StatusPill tone={statusTone(job?.status)} label={job?.status ?? "unavailable"} />
               </div>
-              <ProgressBar value={job?.progress ?? 0} />
+              <ProgressBar value={job?.progress ?? 0} active={isActiveStatus(job?.status)} />
               <dl className="compact-dl two-col">
                 <div>
                   <dt>Stage</dt>
@@ -166,7 +166,7 @@ export function ResultsPage() {
               <strong>{jobId}</strong>
               <StatusPill tone={statusTone(status)} label={status} />
             </div>
-            <ProgressBar value={progress} />
+            <ProgressBar value={progress} active={isActiveStatus(status)} />
             <dl className="compact-dl two-col">
               <div>
                 <dt>Stage</dt>

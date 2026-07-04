@@ -231,7 +231,7 @@ export function WorkbenchPage() {
                   <strong>{job.job_id}</strong>
                   <StatusPill tone={jobTone(job.status)} label={job.status} />
                 </div>
-                <ProgressBar value={job.progress ?? 0} />
+                <ProgressBar value={job.progress ?? 0} active={isActiveJob(job)} />
                 <dl className="compact-dl two-col">
                   <div>
                     <dt>Stage</dt>
