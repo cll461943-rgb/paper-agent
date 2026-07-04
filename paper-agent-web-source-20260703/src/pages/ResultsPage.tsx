@@ -194,6 +194,9 @@ export function ResultsPage() {
   }
 
   const metrics = result.result.run_metrics;
+  const finalPaperCount =
+    result.result.highly_relevant_papers.length +
+    result.result.partially_relevant_papers.length;
 
   return (
     <>
@@ -211,7 +214,7 @@ export function ResultsPage() {
 
       <div className="metric-grid">
         <MetricCard label="Candidates" value={metrics.candidate_pool_size.toLocaleString()} detail="retrieved pool" />
-        <MetricCard label="Final papers" value={metrics.final_papers} detail={`dynamic k=${result.result.dynamic_k_chosen ?? "--"}`} />
+        <MetricCard label="Final papers" value={finalPaperCount || metrics.final_papers} detail={`dynamic k=${result.result.dynamic_k_chosen ?? "--"}`} />
         <MetricCard label="LLM calls" value={metrics.llm_calls_used} detail={`${metrics.token_estimate.toLocaleString()} tokens`} />
         <MetricCard label="Elapsed" value={`${metrics.elapsed_seconds.toFixed(1)}s`} detail={`${metrics.cache_hits} cache hits`} />
       </div>
