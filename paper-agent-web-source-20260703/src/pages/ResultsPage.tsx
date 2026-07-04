@@ -91,14 +91,13 @@ export function ResultsPage() {
       );
   }, [activeStage, jobId]);
 
-  const papers = useMemo(() => {
+  const recommendedPapers = useMemo(() => {
     if (!result?.result) {
       return [];
     }
     return [
       ...result.result.highly_relevant_papers,
       ...result.result.partially_relevant_papers,
-      ...result.result.supporting_papers,
     ];
   }, [result]);
 
@@ -197,6 +196,7 @@ export function ResultsPage() {
   const finalPaperCount =
     result.result.highly_relevant_papers.length +
     result.result.partially_relevant_papers.length;
+  const supportingPaperCount = result.result.supporting_papers.length;
 
   return (
     <>
@@ -214,7 +214,7 @@ export function ResultsPage() {
 
       <div className="metric-grid">
         <MetricCard label="Candidates" value={metrics.candidate_pool_size.toLocaleString()} detail="retrieved pool" />
-        <MetricCard label="Final papers" value={finalPaperCount || metrics.final_papers} detail={`dynamic k=${result.result.dynamic_k_chosen ?? "--"}`} />
+        <MetricCard label="Final papers" value={finalPaperCount} detail={`dynamic k=${result.result.dynamic_k_chosen ?? "--"}`} />
         <MetricCard label="LLM calls" value={metrics.llm_calls_used} detail={`${metrics.token_estimate.toLocaleString()} tokens`} />
         <MetricCard label="Elapsed" value={`${metrics.elapsed_seconds.toFixed(1)}s`} detail={`${metrics.cache_hits} cache hits`} />
       </div>
@@ -222,11 +222,21 @@ export function ResultsPage() {
       <ContestReadiness result={result.result} jobId={result.job_id} />
 
       <div className="results-grid">
-        <Panel title="Ranked papers" meta={`${papers.length} visible`} className="results-list">
+        <Panel title="Recommended papers" meta={`${recommendedPapers.length} visible`} className="results-list">
           <div className="paper-list scrollbar-thin">
-            {papers.map((paper) => (
+            {recommendedPapers.map((paper) => (
               <PaperCard item={paper} key={paper.paper.paper_id} />
             ))}
+            {!recommendedPapers.length ? (
+              <div className="result-empty-state">
+                <strong>No papers reached the recommendation threshold.</strong>
+                <p>
+                  The run retrieved {supportingPaperCount.toLocaleString()} supporting candidates, but none were classified as
+                  high or partial relevance. Use the candidate pool and stage artifacts for diagnosis, then rerun with a more
+                  specific query or adjusted selection thresholds.
+                </p>
+              </div>
+            ) : null}
           </div>
         </Panel>
 

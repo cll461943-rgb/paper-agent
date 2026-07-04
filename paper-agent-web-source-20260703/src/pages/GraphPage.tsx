@@ -85,7 +85,7 @@ function buildLayout(nodes: GraphNode[], clusters: GraphResponse["clusters"]) {
   const topics = visible.filter((node) => node.type === "topic");
   const methods = visible.filter((node) => node.type === "method");
   const datasets = visible.filter((node) => node.type === "dataset");
-  const highlighted = papers.find((node) => node.highlighted) ?? papers[0];
+  const highlightedPaper = papers.find((node) => node.highlighted);
   const map = new Map<string, { x: number; y: number }>();
   const centerX = 520;
   const centerY = 330;
@@ -127,12 +127,25 @@ function buildLayout(nodes: GraphNode[], clusters: GraphResponse["clusters"]) {
     });
   });
 
-  if (highlighted) {
-    map.set(highlighted.id, { x: centerX + 24, y: centerY + 18 });
+  if (highlightedPaper) {
+    map.set(highlightedPaper.id, { x: centerX + 188, y: centerY - 92 });
   }
 
   const clusterOrder = clusters.map((cluster) => cluster.id);
-  const fallbackPapers = papers.filter((paper) => paper.id !== highlighted?.id);
+  const fallbackPapers = papers.filter((paper) => paper.id !== highlightedPaper?.id);
+
+  if (!clusterOrder.length) {
+    fallbackPapers.forEach((paper, index) => {
+      const count = Math.max(fallbackPapers.length - 1, 1);
+      const t = index / count;
+      const lane = (index % 4) - 1.5;
+      map.set(paper.id, {
+        x: centerX - 236 + t * 610 + lane * 26,
+        y: centerY + 204 - t * 368 + Math.sin(index * 1.45) * 34,
+      });
+    });
+    return map;
+  }
 
   clusterOrder.forEach((clusterId, clusterIndex) => {
     const group = fallbackPapers.filter((paper) => paper.clusterId === clusterId);
@@ -177,7 +190,12 @@ export function GraphPage() {
   useEffect(() => {
     void getGraph(jobId).then((nextGraph) => {
       setGraph(nextGraph);
-      setSelectedId(nextGraph.selected_node_id ?? "");
+      setSelectedId(
+        nextGraph.selected_node_id ??
+          nextGraph.nodes.find((node) => node.type === "paper" && node.highlighted)?.id ??
+          nextGraph.nodes.find((node) => node.type === "paper")?.id ??
+          "",
+      );
     });
   }, [jobId]);
 
@@ -188,6 +206,7 @@ export function GraphPage() {
     () => graph?.edges.filter((edge) => visibleIds.has(edge.source) && visibleIds.has(edge.target)) ?? [],
     [graph, visibleIds],
   );
+  const paperNodes = useMemo(() => visibleNodes.filter((node) => node.type === "paper"), [visibleNodes]);
 
   const typeCounts = useMemo(
     () =>
@@ -265,6 +284,7 @@ export function GraphPage() {
           highlighted: node.highlighted,
           linked: hasSelection && isConnected && node.id !== selectedId,
           muted: hasSelection && !isConnected,
+          selected: node.id === selectedId,
           accent,
         },
         sourcePosition: node.type === "method" ? Position.Right : node.type === "dataset" ? Position.Left : Position.Bottom,
@@ -324,16 +344,20 @@ export function GraphPage() {
     [graph, selectedId, visibleEdges],
   );
 
-  const onNodeClick = useMemo<NodeMouseHandler<Node<KnowledgeNodeData>>>(
-    () => (_, node) => {
+  const onNodeClick = useCallback<NodeMouseHandler<Node<KnowledgeNodeData>>>(
+    (_, node) => {
       setSelectedId(node.id);
     },
     [],
   );
 
   const onNodesChange = useCallback((changes: NodeChange<Node<KnowledgeNodeData>>[]) => {
+    const positionChanges = changes.filter((change) => change.type !== "select");
+    if (!positionChanges.length) {
+      return;
+    }
     setFlowNodes((current) => {
-      const next = applyNodeChanges(changes, current);
+      const next = applyNodeChanges(positionChanges, current);
       for (const node of next) {
         draggedPositionsRef.current[node.id] = node.position;
       }
@@ -359,6 +383,29 @@ export function GraphPage() {
       <PageHeader eyebrow="Knowledge Graph" title="Knowledge graph" description={graph.query} />
 
       <div className="graph-grid graph-grid-refined graph-grid-simple">
+        <Panel title="Related papers" meta={`${paperNodes.length} articles`} className="graph-list-panel">
+          <div className="graph-paper-list scrollbar-thin">
+            {paperNodes.map((node, index) => {
+              const paperMeta = (node.meta ?? {}) as Record<string, unknown>;
+              const paperBits = [node.year ? String(node.year) : "", typeof paperMeta.venue === "string" ? paperMeta.venue : ""].filter(Boolean);
+              return (
+                <button
+                  className={node.id === selectedId ? "active" : ""}
+                  key={node.id}
+                  type="button"
+                  onClick={() => setSelectedId(node.id)}
+                >
+                  <span>{index + 1}</span>
+                  <div>
+                    <strong>{formatDisplayLabel(node.label)}</strong>
+                    {paperBits.length ? <small>{paperBits.join(" / ")}</small> : null}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </Panel>
+
         <Panel title="Network graph" meta={`${flowNodes.length} nodes / ${flowEdges.length} links`} className="graph-panel graph-panel-refined kg-panel">
           <div className="kg-flow-wrap kg-flow-wrap-simple">
             <ReactFlow
@@ -375,7 +422,7 @@ export function GraphPage() {
               onPaneClick={() => setSelectedId("")}
               nodesDraggable
               nodesConnectable={false}
-              elementsSelectable
+              elementsSelectable={false}
               onlyRenderVisibleElements
               proOptions={{ hideAttribution: true }}
             >
