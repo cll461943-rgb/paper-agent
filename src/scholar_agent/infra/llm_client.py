@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import time
 from dataclasses import dataclass
 from typing import Any
@@ -9,6 +10,25 @@ from typing import Any
 import requests
 
 LOGGER = logging.getLogger(__name__)
+
+PROVIDER_PREFIXES = {
+    "deepseek": "DEEPSEEK",
+    "gpt55": "GPT55",
+    "openai": "OPENAI",
+    "tokenhub": "TOKENHUB",
+}
+
+PROVIDER_BASE_URL_DEFAULTS = {
+    "deepseek": "https://api.deepseek.com",
+    "gpt55": "https://cdn.coderelay.cn/v1",
+    "openai": "https://api.openai.com/v1",
+    "tokenhub": "https://api.tokenhub.market/v1",
+}
+
+PROVIDER_MODEL_DEFAULTS = {
+    "gpt55": "gpt-5.5",
+    "tokenhub": "kimi-k2.7-code",
+}
 
 from scholar_agent.infra.config import LLMConfig
 from scholar_agent.utils.json_repair import safe_json_loads
@@ -40,6 +60,7 @@ class OpenAICompatibleLLMClient:
         # P2: Dynamic timeout override (set by pipeline Deadline) and circuit breaker
         self._timeout_override: float | None = None
         self._circuit_breaker: LLMCircuitBreaker | None = None
+        self._api_key_index = 0
 
     @property
     def timeout(self) -> float | None:
@@ -54,41 +75,86 @@ class OpenAICompatibleLLMClient:
         """Attach a circuit breaker to track LLM call outcomes."""
         self._circuit_breaker = breaker
 
+    @staticmethod
+    def _active_provider() -> str:
+        return os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
+
+    @staticmethod
+    def _split_api_keys(raw_value: str | None) -> list[str]:
+        if not raw_value:
+            return []
+        normalized = raw_value.replace(";", ",").replace("\n", ",")
+        return [item.strip() for item in normalized.split(",") if item.strip()]
+
+    def _api_key_candidates(self) -> list[str]:
+        provider = self._active_provider()
+        prefix = PROVIDER_PREFIXES.get(provider)
+        env_names: list[str] = []
+        if prefix:
+            env_names.extend([f"{prefix}_API_KEYS", f"{prefix}_API_KEY"])
+        if provider in {"deepseek", ""} or prefix is None:
+            env_names.extend([self.config.api_key_env, "DEEPSEEK_API_KEY"])
+
+        keys: list[str] = []
+        for env_name in dict.fromkeys(env_names):
+            keys.extend(self._split_api_keys(os.getenv(env_name)))
+        return keys
+
+    def _peek_api_key(self) -> str:
+        keys = self._api_key_candidates()
+        return keys[0] if keys else ""
+
+    def _next_api_key(self) -> str:
+        keys = self._api_key_candidates()
+        if not keys:
+            return ""
+        key = keys[self._api_key_index % len(keys)]
+        self._api_key_index += 1
+        return key
+
+    def _model_name_for(self, model_type: str = "flash") -> str:
+        provider = self._active_provider()
+        prefix = PROVIDER_PREFIXES.get(provider)
+        if prefix:
+            specific_name = "MODEL_PRO" if model_type == "pro" else "MODEL_FLASH"
+            configured = os.getenv(f"{prefix}_{specific_name}") or os.getenv(f"{prefix}_MODEL")
+            if configured:
+                return configured
+            if provider == "deepseek":
+                return self.config.model_pro if model_type == "pro" else self.config.model_flash
+            return PROVIDER_MODEL_DEFAULTS.get(provider, "")
+
+        return os.getenv("DEEPSEEK_MODEL", self.config.model)
+
     @property
     def api_key(self) -> str:
-        import os
-        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
-        if provider == "gpt55":
-            return os.getenv("GPT55_API_KEY", "")
-        if provider == "tokenhub":
-            return os.getenv("TOKENHUB_API_KEY", "")
-        return os.getenv(self.config.api_key_env, os.getenv("DEEPSEEK_API_KEY", ""))
+        return self._next_api_key()
 
     @property
     def base_url(self) -> str:
-        import os
-        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
-        if provider == "gpt55":
-            url = os.getenv("GPT55_BASE_URL", "https://cdn.coderelay.cn/v1")
+        provider = self._active_provider()
+        if provider == "deepseek":
+            url = os.getenv(self.config.base_url_env, os.getenv("DEEPSEEK_BASE_URL", self.config.base_url))
             return url.rstrip("/")
-        if provider == "tokenhub":
-            url = os.getenv("TOKENHUB_BASE_URL", "https://api.tokenhub.market/v1")
+        prefix = PROVIDER_PREFIXES.get(provider)
+        if prefix:
+            default_url = PROVIDER_BASE_URL_DEFAULTS.get(provider, self.config.base_url)
+            url = os.getenv(f"{prefix}_BASE_URL", default_url)
             return url.rstrip("/")
         url = os.getenv(self.config.base_url_env, os.getenv("DEEPSEEK_BASE_URL", self.config.base_url))
         return url.rstrip("/")
 
     @property
     def model(self) -> str:
-        import os
-        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
-        if provider == "gpt55":
-            return os.getenv("GPT55_MODEL", "gpt-5.5")
-        if provider == "tokenhub":
-            return os.getenv("TOKENHUB_MODEL", "kimi-k2.7-code")
-        return os.getenv("DEEPSEEK_MODEL", self.config.model)
+        return self._model_name_for("flash")
 
     def is_available(self) -> bool:
-        return self.config.enabled and self.config.mode != "off" and bool(self.api_key)
+        return (
+            self.config.enabled
+            and self.config.mode != "off"
+            and bool(self._peek_api_key())
+            and bool(self.model)
+        )
 
     def _endpoint(self) -> str:
         return self.base_url if self.base_url.endswith("/chat/completions") else f"{self.base_url}/chat/completions"
@@ -102,6 +168,9 @@ class OpenAICompatibleLLMClient:
         )
         max_retries = getattr(self.config, "max_retries", 3)
         last_exc = None
+        api_key = self._next_api_key()
+        if not api_key:
+            raise RuntimeError("LLM API key is not configured")
         for attempt in range(max_retries):
             try:
                 attempt_read_timeout = read_timeout
@@ -115,7 +184,7 @@ class OpenAICompatibleLLMClient:
                 connect_timeout = min(10, attempt_read_timeout)
                 response = self.session.post(
                     self._endpoint(),
-                    headers={"Authorization": f"Bearer {self.api_key}"},
+                    headers={"Authorization": f"Bearer {api_key}"},
                     json=payload,
                     timeout=(connect_timeout, attempt_read_timeout),
                 )
@@ -194,26 +263,7 @@ class OpenAICompatibleLLMClient:
             return None
 
         # 根据 model_type 选择 model，并根据 ACTIVE_LLM_PROVIDER 决定默认配置或覆盖
-        import os
-        provider = os.getenv("ACTIVE_LLM_PROVIDER", "deepseek").strip().lower()
-        if provider == "gpt55":
-            model_name = (
-                os.getenv("GPT55_MODEL_PRO", "gpt-5.5")
-                if model_type == "pro"
-                else os.getenv("GPT55_MODEL_FLASH", "gpt-5.5")
-            )
-        elif provider == "tokenhub":
-            model_name = (
-                os.getenv("TOKENHUB_MODEL_PRO", "kimi-k2.7-code")
-                if model_type == "pro"
-                else os.getenv("TOKENHUB_MODEL_FLASH", "kimi-k2.7-code")
-            )
-        else:
-            model_name = (
-                os.getenv("DEEPSEEK_MODEL_PRO", self.config.model_pro)
-                if model_type == "pro"
-                else os.getenv("DEEPSEEK_MODEL_FLASH", self.config.model_flash)
-            )
+        model_name = self._model_name_for(model_type)
 
         # Effect-first: per-task max_tokens override
         effective_max_tokens = max_tokens if (max_tokens is not None and max_tokens > 0) else self.config.max_tokens
