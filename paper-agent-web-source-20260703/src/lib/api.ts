@@ -296,6 +296,29 @@ export async function deleteSearchJob(jobId: string): Promise<void> {
   }
 }
 
+export async function cancelSearchJob(jobId: string): Promise<SearchJob> {
+  return requestJson<SearchJob>(
+    `/api/search/${jobId}/cancel`,
+    { method: "POST" },
+    async () => {
+      const localJob = getLocalSearchJob(jobId);
+      const cancelledJob: SearchJob = {
+        ...(localJob ?? mockSearchJob),
+        job_id: jobId,
+        status: "cancelled",
+        stage: localJob?.stage ?? "cancelled",
+        progress: localJob?.progress ?? 0,
+        elapsed_seconds: localJob?.elapsed_seconds ?? 0,
+        error: "Cancelled locally",
+      };
+      if (localJob) {
+        writeLocalSearchJob({ ...localJob, ...cancelledJob });
+      }
+      return cancelledJob;
+    },
+  );
+}
+
 export async function getSearchJob(jobId: string): Promise<SearchJob> {
   return requestJson<SearchJob>(
     `/api/search/${jobId}`,

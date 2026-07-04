@@ -1,11 +1,11 @@
 import { useMemo, useRef, useState } from "react";
 import type { ChangeEvent } from "react";
-import { FileUp, ListPlus, Play, RotateCcw, Trash2 } from "lucide-react";
-import { getEvalCaseResult, runEvalCase } from "../lib/api";
+import { FileUp, ListPlus, Play, RotateCcw, Square, Trash2 } from "lucide-react";
+import { cancelSearchJob, getEvalCaseResult, runEvalCase } from "../lib/api";
 import type { EvalCaseResult } from "../types/api";
 import { MetricCard, Panel, StatusPill } from "./Common";
 
-type BatchStatus = "queued" | "running" | "succeeded" | "failed";
+type BatchStatus = "queued" | "running" | "succeeded" | "failed" | "cancelled";
 
 type BatchEvalItem = {
   id: string;
@@ -52,6 +52,9 @@ function statusTone(status: BatchStatus) {
   }
   if (status === "failed") {
     return "danger";
+  }
+  if (status === "cancelled") {
+    return "warning";
   }
   if (status === "running") {
     return "warning";
@@ -166,9 +169,9 @@ function parseBatchInput(text: string, defaultDataset: string) {
   return { items: limitedItems, skipped };
 }
 
-async function waitForEvalCompletion(initialResult: EvalCaseResult) {
+async function waitForEvalCompletion(initialResult: EvalCaseResult, shouldStop: () => boolean) {
   let result = initialResult;
-  for (let attempt = 0; attempt < MAX_POLL_ATTEMPTS && isEvalPending(result); attempt += 1) {
+  for (let attempt = 0; attempt < MAX_POLL_ATTEMPTS && isEvalPending(result) && !shouldStop(); attempt += 1) {
     await sleep(POLL_INTERVAL_MS);
     result = await getEvalCaseResult(result.job_id);
   }
@@ -183,11 +186,14 @@ export function BatchEvaluationPanel({ dataset, config }: { dataset: string; con
   const [batchInput, setBatchInput] = useState("");
   const [batchItems, setBatchItems] = useState<BatchEvalItem[]>([]);
   const [isBatchRunning, setIsBatchRunning] = useState(false);
+  const [isStoppingBatch, setIsStoppingBatch] = useState(false);
   const [parseMessage, setParseMessage] = useState("No batch queued");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const stopBatchRequestedRef = useRef(false);
+  const activeJobIdRef = useRef<string | null>(null);
 
   const completedItems = batchItems.filter((item) => item.status === "succeeded" && item.result?.eval_metrics);
-  const finishedCount = batchItems.filter((item) => item.status === "succeeded" || item.status === "failed").length;
+  const finishedCount = batchItems.filter((item) => item.status === "succeeded" || item.status === "failed" || item.status === "cancelled").length;
   const failedCount = batchItems.filter((item) => item.status === "failed").length;
   const panelMeta = batchItems.length
     ? `${isBatchRunning ? finishedCount : completedItems.length}/${batchItems.length} completed${failedCount ? `, ${failedCount} failed` : ""}`
@@ -271,7 +277,14 @@ export function BatchEvaluationPanel({ dataset, config }: { dataset: string; con
       mode: "research",
       trace_gold: true,
     });
-    const completed = await waitForEvalCompletion(initial);
+    activeJobIdRef.current = initial.job_id;
+    const completed = await waitForEvalCompletion(initial, () => stopBatchRequestedRef.current);
+    activeJobIdRef.current = null;
+    if (stopBatchRequestedRef.current) {
+      await cancelSearchJob(completed.job_id);
+      updateBatchItem(item.id, { status: "cancelled", result: completed, error: "Batch stopped by user" });
+      return;
+    }
     if (isEvalPending(completed)) {
       throw new Error("Timed out while waiting for metrics");
     }
@@ -285,20 +298,36 @@ export function BatchEvaluationPanel({ dataset, config }: { dataset: string; con
 
     const queue = batchItems.map((item) => ({ ...item, status: "queued" as const, result: undefined, error: undefined }));
     setBatchItems(queue);
+    stopBatchRequestedRef.current = false;
+    activeJobIdRef.current = null;
+    setIsStoppingBatch(false);
     setIsBatchRunning(true);
     try {
       for (const item of queue) {
+        if (stopBatchRequestedRef.current) {
+          break;
+        }
         try {
           await runOne(item);
         } catch (error) {
           updateBatchItem(item.id, {
-            status: "failed",
+            status: stopBatchRequestedRef.current ? "cancelled" : "failed",
             error: error instanceof Error ? error.message : "Unknown evaluation error",
           });
         }
       }
     } finally {
+      activeJobIdRef.current = null;
       setIsBatchRunning(false);
+      setIsStoppingBatch(false);
+    }
+  }
+
+  async function handleStopBatch() {
+    stopBatchRequestedRef.current = true;
+    setIsStoppingBatch(true);
+    if (activeJobIdRef.current) {
+      await cancelSearchJob(activeJobIdRef.current);
     }
   }
 
@@ -343,6 +372,12 @@ export function BatchEvaluationPanel({ dataset, config }: { dataset: string; con
               <Play size={16} />
               {isBatchRunning ? "Running" : "Run batch"}
             </button>
+            {isBatchRunning ? (
+              <button className="button danger" type="button" onClick={() => void handleStopBatch()} disabled={isStoppingBatch}>
+                <Square size={16} />
+                {isStoppingBatch ? "Stopping" : "Stop"}
+              </button>
+            ) : null}
             <button className="icon-button danger-hover" type="button" onClick={handleClearBatch} disabled={isBatchRunning} aria-label="Clear batch">
               <Trash2 size={16} />
             </button>

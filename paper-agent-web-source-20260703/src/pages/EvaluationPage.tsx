@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
-import { FlaskConical, Shuffle } from "lucide-react";
-import { getConfigs, getDatasets, getEvalCaseResult, runEvalCase, runRandomEvalCase } from "../lib/api";
+import { FlaskConical, Shuffle, Square } from "lucide-react";
+import { cancelSearchJob, getConfigs, getDatasets, getEvalCaseResult, runEvalCase, runRandomEvalCase } from "../lib/api";
 import type { EvalCaseResult } from "../types/api";
 import { BatchEvaluationPanel } from "../components/BatchEvaluationPanel";
 import { MetricCard, PageHeader, Panel, StatusPill } from "../components/Common";
@@ -15,6 +15,16 @@ function isEvalPending(result: EvalCaseResult | null) {
     return false;
   }
   return !result.eval_metrics && result.progress.some((stage) => stage.status === "queued" || stage.status === "running");
+}
+
+function asCancelledEvalResult(result: EvalCaseResult): EvalCaseResult {
+  return {
+    ...result,
+    progress: result.progress.length
+      ? result.progress.map((stage, index) => (index === result.progress.length - 1 ? { ...stage, status: "cancelled" } : stage))
+      : [{ stage: "cancelled", status: "cancelled", elapsed_seconds: 0 }],
+    warnings: ["Evaluation cancelled by user.", ...result.warnings],
+  };
 }
 
 export function EvaluationPage() {
@@ -60,6 +70,15 @@ export function EvaluationPage() {
     setResult(await runRandomEvalCase());
   }
 
+  async function handleCancel() {
+    if (!result || !isEvalPending(result)) {
+      return;
+    }
+    await cancelSearchJob(result.job_id);
+    setResult(asCancelledEvalResult(result));
+    setIsRunning(false);
+  }
+
   return (
     <>
       <PageHeader eyebrow="Evaluation" title="Reviewer evaluation workbench" description="Import benchmark cases, run deterministic evaluation slices, and inspect final quality and budget signals." />
@@ -102,6 +121,12 @@ export function EvaluationPage() {
                 <FlaskConical size={16} />
                 {isRunning ? "Running" : "Run case"}
               </button>
+              {result && isEvalPending(result) ? (
+                <button className="button danger" type="button" onClick={() => void handleCancel()}>
+                  <Square size={16} />
+                  Stop
+                </button>
+              ) : null}
             </div>
           </form>
         </Panel>

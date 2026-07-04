@@ -1,12 +1,29 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Play, RotateCcw } from "lucide-react";
-import { getConfigs, getProviders, getSearchJob, startSearch } from "../lib/api";
+import { ArrowRight, CheckCircle2, Play, RotateCcw, Square } from "lucide-react";
+import { cancelSearchJob, getConfigs, getProviders, getSearchJob, startSearch } from "../lib/api";
 import { mockSearchRequest, mockWorkflowStages } from "../lib/mockData";
 import { getRuntimeConnectionConfig } from "../lib/runtimeConfig";
 import type { ProviderStatus, SearchJob, SearchMode, SearchRequest } from "../types/api";
 import { MetricCard, PageHeader, Panel, ProgressBar, StatusPill } from "../components/Common";
+
+function isActiveJob(job: SearchJob | null): job is SearchJob {
+  return job?.status === "queued" || job?.status === "running";
+}
+
+function jobTone(status: SearchJob["status"]) {
+  if (status === "succeeded") {
+    return "success";
+  }
+  if (status === "failed") {
+    return "danger";
+  }
+  if (status === "cancelled") {
+    return "warning";
+  }
+  return "info";
+}
 
 export function WorkbenchPage() {
   const navigate = useNavigate();
@@ -36,17 +53,37 @@ export function WorkbenchPage() {
     }));
   }, [runtimeConfig.defaultConfig, runtimeConfig.defaultSearchMode]);
 
+  useEffect(() => {
+    if (!isActiveJob(job)) {
+      setIsRunning(false);
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      void getSearchJob(job.job_id).then(setJob);
+    }, 1500);
+
+    return () => window.clearTimeout(timer);
+  }, [job]);
+
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
     setIsRunning(true);
     try {
       const nextJob = await startSearch(request);
       setJob(nextJob);
-      void getSearchJob(nextJob.job_id).then(setJob);
-      navigate(`/results/${nextJob.job_id}`);
-    } finally {
+    } catch (error) {
       setIsRunning(false);
+      throw error;
     }
+  }
+
+  async function handleCancelJob() {
+    if (!job || !isActiveJob(job)) {
+      return;
+    }
+    setJob(await cancelSearchJob(job.job_id));
+    setIsRunning(false);
   }
 
   function toggleProvider(name: string) {
@@ -169,7 +206,7 @@ export function WorkbenchPage() {
               <div className="job-card">
                 <div className="job-card-top">
                   <strong>{job.job_id}</strong>
-                  <StatusPill tone={job.status === "succeeded" ? "success" : job.status === "failed" ? "danger" : "info"} label={job.status} />
+                  <StatusPill tone={jobTone(job.status)} label={job.status} />
                 </div>
                 <ProgressBar value={job.progress ?? 0} />
                 <dl className="compact-dl two-col">
@@ -182,6 +219,19 @@ export function WorkbenchPage() {
                     <dd>{job.elapsed_seconds?.toFixed(1) ?? "--"}s</dd>
                   </div>
                 </dl>
+                <div className="job-card-actions">
+                  <button className="button secondary small" type="button" onClick={() => navigate(`/results/${job.job_id}`)}>
+                    <ArrowRight size={12} />
+                    Result
+                  </button>
+                  {isActiveJob(job) ? (
+                    <button className="button danger small" type="button" onClick={() => void handleCancelJob()}>
+                      <Square size={12} />
+                      Stop
+                    </button>
+                  ) : null}
+                </div>
+                {job.error ? <p className="graph-empty-note">{job.error}</p> : null}
               </div>
             ) : (
               <div className="empty-state">

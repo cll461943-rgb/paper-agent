@@ -16,6 +16,7 @@ from typing import List, Dict, Any, Optional, Tuple
 from urllib.parse import parse_qs, urlparse
 
 from .index import SessionIndex
+from .run_store import RunStore, default_logs_db_path
 
 DEFAULT_DB = Path(
     os.environ.get(
@@ -587,6 +588,8 @@ except ImportError:
 ACTIVE_JOBS = {}
 JOBS_LOCK = threading.Lock()
 CACHE_DIR = Path("data/cache/web_jobs")
+ROOT_DIR = Path(__file__).parents[2]
+RUN_STORE = RunStore(default_logs_db_path(ROOT_DIR))
 
 class CustomJSONEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -610,6 +613,27 @@ def save_job_to_cache(job_id: str):
             cache_file.write_text(json.dumps(serialized_data, ensure_ascii=False, indent=2, cls=CustomJSONEncoder), encoding="utf-8")
     except Exception as e:
         print(f"Error saving job cache for {job_id}: {e}", file=sys.stderr)
+
+def persist_job_snapshot(job_ref: dict):
+    try:
+        RUN_STORE.upsert_run(job_ref)
+    except Exception as e:
+        print(f"Error persisting job {job_ref.get('job_id')}: {e}", file=sys.stderr)
+
+def persist_job_log(job_id: str, level: str, stage: str, message: str):
+    try:
+        RUN_STORE.add_log(job_id, level, stage, message)
+    except Exception as e:
+        print(f"Error persisting log for {job_id}: {e}", file=sys.stderr)
+
+def mark_job_cancelled(job_ref: dict, reason: str = "Cancelled by user"):
+    job_ref["cancel_requested"] = True
+    job_ref["status"] = "cancelled"
+    job_ref["error"] = reason
+    job_ref["progress"] = min(int(job_ref.get("progress", 0) or 0), 99)
+    job_ref["elapsed_seconds"] = time.time() - job_ref.get("start_time", time.time())
+    persist_job_snapshot(job_ref)
+    save_job_to_cache(job_ref["job_id"])
 
 def load_jobs_from_cache():
     try:
@@ -675,6 +699,7 @@ class JobLoggingHandler(logging.Handler):
                     elif "synthesis" in lower_msg or "synthesisagent" in lower_msg:
                         current_job["stage"] = "synthesis"
                         current_job["progress"] = 95
+            persist_job_log(self.job_id, record.levelname, log_entry["stage"], msg)
         except Exception:
             pass
 
@@ -785,6 +810,10 @@ def run_pipeline_task(job_id: str, job_ref: dict):
     retrieval_only = job_ref.get("retrieval_only", False)
     is_eval = job_ref.get("is_eval", False)
     gold_items = job_ref.get("gold", [])
+
+    if job_ref.get("cancel_requested"):
+        mark_job_cancelled(job_ref)
+        return
     
     if not config_name.endswith(".yaml"):
         config_name += ".yaml"
@@ -838,6 +867,9 @@ def run_pipeline_task(job_id: str, job_ref: dict):
             pipeline = PaperAgentPipeline(config, llm_client, providers)
             
             result = pipeline.run(query, retrieval_only=retrieval_only)
+            if job_ref.get("cancel_requested") or job_ref.get("status") == "cancelled":
+                mark_job_cancelled(job_ref)
+                return
             result_dict = result.model_dump()
             
             # Estimate metric sizes
@@ -949,24 +981,38 @@ def run_pipeline_task(job_id: str, job_ref: dict):
                     "warnings": ["Evaluation completed successfully."]
                 }
             
+            should_cancel = False
             with JOBS_LOCK:
-                job_ref["status"] = "succeeded"
-                job_ref["progress"] = 100
-                job_ref["elapsed_seconds"] = time.time() - job_ref["start_time"]
-                job_ref["result"] = result_dict
-                job_ref["stage_artifacts"] = stage_artifacts
+                if job_ref.get("cancel_requested") or job_ref.get("status") == "cancelled":
+                    should_cancel = True
+                else:
+                    job_ref["status"] = "succeeded"
+                    job_ref["progress"] = 100
+                    job_ref["elapsed_seconds"] = time.time() - job_ref["start_time"]
+                    job_ref["result"] = result_dict
+                    job_ref["stage_artifacts"] = stage_artifacts
+            if should_cancel:
+                mark_job_cancelled(job_ref)
+                return
                 
         finally:
             root_logger.removeHandler(handler)
             
     except Exception as e:
         traceback.print_exc()
+        should_cancel = False
         with JOBS_LOCK:
-            job_ref["status"] = "failed"
-            job_ref["error"] = str(e)
-            job_ref["elapsed_seconds"] = time.time() - job_ref["start_time"]
+            if job_ref.get("cancel_requested") or job_ref.get("status") == "cancelled":
+                should_cancel = True
+            else:
+                job_ref["status"] = "failed"
+                job_ref["error"] = str(e)
+                job_ref["elapsed_seconds"] = time.time() - job_ref["start_time"]
+        if should_cancel:
+            mark_job_cancelled(job_ref)
             
     finally:
+        persist_job_snapshot(job_ref)
         save_job_to_cache(job_id)
 
 def load_eval_case(dataset_name: str, case_idx: int) -> tuple[str, list[dict]]:
@@ -1290,7 +1336,8 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                 
             return send_json(start_response, {
                 "pasa_local_fts": pasa_info,
-                "session_hub_index": session_info
+                "session_hub_index": session_info,
+                "logs_db": RUN_STORE.summary()
             })
             
         # Route: GET /api/configs
@@ -1397,9 +1444,11 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "providers": payload.get("providers", []),
                     "retrieval_only": payload.get("retrieval_only", False) or path.endswith("/retrieval-only"),
                     "stage_artifacts": {},
-                    "is_eval": False
+                    "is_eval": False,
+                    "cancel_requested": False
                 }
                 job_ref = ACTIVE_JOBS[job_id]
+            persist_job_snapshot(job_ref)
                 
             t = threading.Thread(target=run_pipeline_task, args=(job_id, job_ref))
             t.daemon = True
@@ -1454,9 +1503,11 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "gold": gold,
                     "dataset": dataset,
                     "case_index": case_index,
-                    "eval_result": None
+                    "eval_result": None,
+                    "cancel_requested": False
                 }
                 job_ref = ACTIVE_JOBS[job_id]
+            persist_job_snapshot(job_ref)
                 
             t = threading.Thread(target=run_pipeline_task, args=(job_id, job_ref))
             t.daemon = True
@@ -1521,9 +1572,11 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
                     "gold": gold,
                     "dataset": dataset,
                     "case_index": case_index,
-                    "eval_result": None
+                    "eval_result": None,
+                    "cancel_requested": False
                 }
                 job_ref = ACTIVE_JOBS[job_id]
+            persist_job_snapshot(job_ref)
                 
             t = threading.Thread(target=run_pipeline_task, args=(job_id, job_ref))
             t.daemon = True
@@ -1548,6 +1601,24 @@ def handle_api_request(environ: dict, start_response) -> list[bytes]:
         # Route: GET/DELETE /api/search/{jobId}
         if path.startswith("/api/search/"):
             job_id = path[len("/api/search/"):]
+            if job_id.endswith("/cancel"):
+                job_id = job_id[: -len("/cancel")]
+                if method != "POST":
+                    return send_json(start_response, {"error": "Method not allowed"}, "405 Method Not Allowed")
+                with JOBS_LOCK:
+                    job = ACTIVE_JOBS.get(job_id)
+                if not job:
+                    return send_json(start_response, {"job_id": job_id, "status": "failed", "error": "Job not found"}, "404 Not Found")
+                mark_job_cancelled(job)
+                return send_json(start_response, {
+                    "job_id": job_id,
+                    "status": "cancelled",
+                    "stage": job.get("stage", "cancelled"),
+                    "progress": job.get("progress", 0),
+                    "elapsed_seconds": round(job.get("elapsed_seconds", 0.0), 1),
+                    "error": job.get("error")
+                })
+
             if method == "DELETE":
                 with JOBS_LOCK:
                     if job_id in ACTIVE_JOBS:

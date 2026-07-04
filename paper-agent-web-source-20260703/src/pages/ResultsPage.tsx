@@ -1,12 +1,29 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { GitBranch, RefreshCw } from "lucide-react";
-import { getResults, getSearchJob, getStageArtifact } from "../lib/api";
+import { GitBranch, RefreshCw, Square } from "lucide-react";
+import { cancelSearchJob, getResults, getSearchJob, getStageArtifact } from "../lib/api";
 import type { ResultsResponse, SearchJob, StageArtifactResponse } from "../types/api";
 import { ContestReadiness } from "../components/ContestReadiness";
 import { JsonBlock, MetricCard, PageHeader, Panel, PaperCard, ProgressBar, StatusPill } from "../components/Common";
 
 const stageNames = ["query_plan", "retrieval", "selection", "ranking", "synthesis"];
+
+function isActiveStatus(status: string | undefined) {
+  return status === "queued" || status === "running";
+}
+
+function statusTone(status: string | undefined) {
+  if (status === "succeeded") {
+    return "success";
+  }
+  if (status === "failed") {
+    return "danger";
+  }
+  if (status === "cancelled") {
+    return "warning";
+  }
+  return "info";
+}
 
 export function ResultsPage() {
   const { jobId = "search_20260630_1042" } = useParams();
@@ -32,8 +49,8 @@ export function ResultsPage() {
       }
 
       const status = nextJob?.status ?? nextResult?.status;
-      const stillRunning = status === "queued" || status === "running" || !nextResult?.result;
-      if (stillRunning && status !== "failed") {
+      const stillRunning = isActiveStatus(status) || (!status && !nextResult?.result);
+      if (stillRunning) {
         timer = window.setTimeout(refreshRun, 5000);
       }
     }
@@ -69,6 +86,12 @@ export function ResultsPage() {
   if (!result.result) {
     const status = job?.status ?? result.status;
     const progress = job?.progress ?? 0;
+    const canCancel = isActiveStatus(status);
+    const handleCancel = async () => {
+      if (canCancel) {
+        setJob(await cancelSearchJob(jobId));
+      }
+    };
     return (
       <>
         <PageHeader
@@ -81,7 +104,7 @@ export function ResultsPage() {
           <div className="job-card">
             <div className="job-card-top">
               <strong>{jobId}</strong>
-              <StatusPill tone={status === "failed" ? "danger" : status === "succeeded" ? "success" : "info"} label={status} />
+              <StatusPill tone={statusTone(status)} label={status} />
             </div>
             <ProgressBar value={progress} />
             <dl className="compact-dl two-col">
@@ -94,6 +117,14 @@ export function ResultsPage() {
                 <dd>{job?.elapsed_seconds?.toFixed(1) ?? "--"}s</dd>
               </div>
             </dl>
+            {canCancel ? (
+              <div className="job-card-actions">
+                <button className="button danger small" type="button" onClick={() => void handleCancel()}>
+                  <Square size={12} />
+                  Stop
+                </button>
+              </div>
+            ) : null}
             {job?.error ? <p className="graph-empty-note">{job.error}</p> : null}
           </div>
         </Panel>

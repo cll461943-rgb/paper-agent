@@ -363,6 +363,17 @@ a {
   background: #f8fafc;
 }
 
+.button.danger {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: var(--danger);
+}
+
+.button.danger:hover {
+  border-color: #fca5a5;
+  background: #ffe4e6;
+}
+
 .icon-button {
   display: grid;
   width: 28px;
@@ -684,6 +695,12 @@ select:focus {
 .provider-status-list {
   display: grid;
   gap: 12px;
+}
+
+.job-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .empty-state {

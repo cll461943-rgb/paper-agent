@@ -1,5 +1,5 @@
 export type SearchMode = "live" | "mock" | "research";
-export type JobStatus = "queued" | "running" | "succeeded" | "failed";
+export type JobStatus = "queued" | "running" | "succeeded" | "failed" | "cancelled";
 export type RelevanceLevel = "high" | "medium" | "low" | "irrelevant";
 
 export interface RuntimeConnectionConfig {
@@ -232,6 +232,7 @@ export interface DatabaseStoreStatus {
 export interface DatabaseStatus {
   pasa_local_fts: DatabaseStoreStatus;
   session_hub_index: DatabaseStoreStatus;
+  logs_db?: DatabaseStoreStatus;
 }
 
 export interface EvalCaseRequest {

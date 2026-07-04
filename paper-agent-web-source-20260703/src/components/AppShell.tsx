@@ -141,7 +141,7 @@ export function AppShell() {
             <NavLink key={run.job_id} to={`/results/${run.job_id}`} className="run-link">
               <div className="run-link-main">
                 <span>{run.job_id.replace("search_", "")}</span>
-                <StatusPill tone={run.status === "failed" ? "danger" : run.status === "succeeded" ? "success" : "info"} label={run.status} />
+                <StatusPill tone={run.status === "failed" ? "danger" : run.status === "succeeded" ? "success" : run.status === "cancelled" ? "warning" : "info"} label={run.status} />
               </div>
               <button type="button" className="icon-button danger-hover" onClick={(e) => void handleDeleteRun(run.job_id, e)} aria-label={`Delete run ${run.job_id}`}>
                 <Trash2 size={13} />
@@ -174,6 +174,16 @@ export function AppShell() {
                 copiedDbPath={copiedDbPath}
                 onCopyPath={handleCopyDbPath}
               />
+              {dbStatus.logs_db ? (
+                <DatabaseStoreCard
+                  label="Web Logs DB"
+                  metric={`${dbStatus.logs_db.size_mb} MB`}
+                  detail={`${dbStatus.logs_db.run_count ?? 0} web runs`}
+                  store={dbStatus.logs_db}
+                  copiedDbPath={copiedDbPath}
+                  onCopyPath={handleCopyDbPath}
+                />
+              ) : null}
             </div>
           ) : (
             <span className="sidebar-empty-copy">DB metrics unavailable.</span>
